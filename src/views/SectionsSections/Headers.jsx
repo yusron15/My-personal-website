@@ -163,7 +163,7 @@ class Headers extends React.Component {
                     <Row>
                       <Col className="collapse-brand" xs="6">
                         <a href="#pablo" onClick={e => e.preventDefault()}>
-                          BLK• <span>PRO React</span>
+                          UCON <span>PRO React</span>
                         </a>
                       </Col>
                       <Col className="collapse-close text-right" xs="6">
@@ -235,7 +235,7 @@ class Headers extends React.Component {
                   <Col className="mr-auto text-left mt-5" lg="5" md="7">
                     <h6 className="category">BLK Design System</h6>
                     <h1 className="title">
-                      You can build awesome project with this Design System!
+                      <b>PELOPOR</b><br /> ON-TIME <br />SHUTTLE
                     </h1>
                     <br />
                     <div className="buttons">
@@ -471,7 +471,7 @@ class Headers extends React.Component {
                     <Row>
                       <Col className="collapse-brand" xs="6">
                         <a href="#pablo" onClick={e => e.preventDefault()}>
-                          BLK• <span>PRO React</span>
+                          UCON <span>PRO React</span>
                         </a>
                       </Col>
                       <Col className="collapse-close text-right" xs="6">

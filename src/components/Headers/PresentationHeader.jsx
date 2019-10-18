@@ -61,7 +61,8 @@ class PresentationHeader extends React.Component {
           <Container>
             <div className="content-center brand">
               <h1 className="h1-seo">
-                BLK• <small className="text-warning">PRO React</small>
+                {/* UCON• <small className="text-warning">PRO React</small> */}
+                TOPGROWTH
               </h1>
               <h3>
                 Start the Development With this Badass Bootstrap 4 Design

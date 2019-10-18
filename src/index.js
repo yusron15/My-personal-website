@@ -47,10 +47,12 @@ import ResetPage from "views/examples/ResetPage.jsx";
 import InvoicePage from "views/examples/InvoicePage.jsx";
 import CheckoutPage from "views/examples/CheckoutPage.jsx";
 import ChatPage from "views/examples/ChatPage.jsx";
+import Landing from "views/layout/Landing.jsx";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
+    <Route path="/landing" render={props => <Landing {...props} />} />
       <Route path="/index" render={props => <Index {...props} />} />
       <Route
         path="/presentation"
