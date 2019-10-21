@@ -1,412 +1,174 @@
+/*!
 
+=========================================================
+* BLK Design System PRO React - v1.0.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
 import React from "react";
 
 // reactstrap components
-import {
-  Button,
-  Card,
-  CardBody,
-  CardTitle,
-  Container,
-  Row,
-  Col,
-  Carousel,
-  CarouselItem,
-  CarouselIndicators
-} from "reactstrap";
+import { Badge, Button, Container, Row, Col } from "reactstrap";
 
-// core components
-const items1 = [
-  {
-    content: (
-      <Container>
-        <Row>
-          <Col className="mr-auto" md="12">
-            <div className="space-100" />
-            <CardTitle tag="h3">Berita Ekonomi</CardTitle>
-            <h4>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            </h4>
-            <h3 className="text-warning">• • •</h3>
-          </Col>
-        </Row>
-      </Container>
-    ),
-    altText: "",
-    caption: "",
-    src: "0"
-  },
-  {
-    content: (
-        <Container>
-        <Row>
-          <Col className="mr-auto" md="12">
-            <div className="space-100" />
-            <CardTitle tag="h3">Berita Ekonomi</CardTitle>
-            <h4>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            </h4>
-            <h3 className="text-warning">• • •</h3>
-          </Col>
-        </Row>
-      </Container>
-    ),
-    altText: "",
-    caption: "",
-    src: "1"
-  }
-];
-
-const items2 = [
-    {
-      content: (
-        <Container>
-          <Row>
-            <Col className="mr-auto" md="12">
-              <div className="space-100" />
-              <CardTitle tag="h3">Analisa Harian</CardTitle>
-              <h4>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-              </h4>
-              <h3 className="text-warning">• • •</h3>
-            </Col>
-          </Row>
-        </Container>
-      ),
-      altText: "",
-      caption: "",
-      src: "0"
-    },
-    {
-      content: (
-          <Container>
-          <Row>
-            <Col className="mr-auto" md="12">
-              <div className="space-100" />
-              <CardTitle tag="h3">Analisa Harian</CardTitle>
-              <h4>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-              </h4>
-              <h3 className="text-warning">• • •</h3>
-            </Col>
-          </Row>
-        </Container>
-      ),
-      altText: "",
-      caption: "",
-      src: "1"
-    }
-  ];
-
-class News extends React.Component {
-  state = {
-    carousel1Index: 0,
-    carousel2Index: 0
-  };
-  onExiting = carousel => {
-    this["carousel" + carousel + "Animating"] = true;
-  };
-
-  onExited = carousel => {
-    this["carousel" + carousel + "Animating"] = false;
-  };
-  next = (carousel, items) => {
-    if (this["carousel" + carousel + "Animating"]) return;
-    const nextIndex =
-      this.state["carousel" + carousel + "Index"] === items.length - 1
-        ? 0
-        : this.state["carousel" + carousel + "Index"] + 1;
-    this.setState({ ["carousel" + carousel + "Index"]: nextIndex });
-  };
-  previous = (carousel, items) => {
-    if (this["carousel" + carousel + "Animating"]) return;
-    const nextIndex =
-      this.state["carousel" + carousel + "Index"] === 0
-        ? items.length - 1
-        : this.state["carousel" + carousel + "Index"] - 1;
-    this.setState({ ["carousel" + carousel + "Index"]: nextIndex });
-  };
-  goToIndex = (newIndex, carousel) => {
-    if (this["carousel" + carousel + "Animating"]) return;
-    this.setState({ ["carousel" + carousel + "Index"]: newIndex });
-  };
+class Features extends React.Component {
   render() {
     return (
       <>
-        <div className="cd-section" id="testimonials">
-          <div className="testimonials-1" style={{backgroundColor:"white"}}>
-            <Container>
-                <Row>
-                <Col className="ml-auto" md="6">
-                <Container fluid>
-                <Carousel
-                activeIndex={this.state.carousel1Index}
-                next={() => this.next(1, items1)}
-                previous={() => this.previous(1, items1)}
-                className="carousel-team"
-              >
-                {items1.map((item, key) => {
-                  return (
-                    <CarouselItem
-                      onExiting={() => this.onExiting(1)}
-                      onExited={() => this.onExited(1)}
-                      key={key}
-                    >
-                      {item.content}
-                    </CarouselItem>
-                  );
-                })}
-                <a
-                  className="carousel-control-prev"
-                  data-slide="prev"
-                  href="#pablo"
-                  onClick={e => {
-                    e.preventDefault();
-                    this.previous(1, items1);
-                  }}
-                  role="button"
-                >
-                  <i className="tim-icons icon-minimal-left" />
-                  <span className="sr-only">Previous</span>
-                </a>
-                <a
-                  className="carousel-control-next"
-                  data-slide="next"
-                  href="#pablo"
-                  onClick={e => {
-                    e.preventDefault();
-                    this.next(1, items1);
-                  }}
-                  role="button"
-                >
-                  <i className="tim-icons icon-minimal-right" />
-                  <span className="sr-only">Next</span>
-                </a>
-              </Carousel>
-              </Container>
-              </Col>
-              
-                <Col className="ml-auto" md="6">
-                <Container fluid>
-                    <br />
-                    <Row>
-                        <Col lg="6">
-                        <Card
-                            className="card-blog card-background"
-                            data-animation="zooming"
-                        >
-                            <div
-                            className="full-background"
-                            style={{
-                                backgroundImage:
-                                "url(" + require("assets/img/steven-roe.jpg") + ")"
-                            }}
-                            />
-                            <CardBody>
-                            <div className="content-bottom">
-                                <h6 className="card-category">Research Byte</h6>
-                                <a href="#pablo" onClick={e => e.preventDefault()}>
-                                <CardTitle tag="h3">AI at the Edge</CardTitle>
-                                </a>
-                            </div>
-                            </CardBody>
-                        </Card>
-                        </Col>
-                        <Col lg="6">
-                        <Card
-                            className="card-blog card-background"
-                            data-animation="zooming"
-                        >
-                            <div
-                            className="full-background"
-                            style={{
-                                backgroundImage:
-                                "url(" + require("assets/img/noah-wetering.jpg") + ")"
-                            }}
-                            />
-                            <CardBody>
-                            <div className="content-bottom">
-                                <h6 className="card-category">Data Virtualization</h6>
-                                <a href="#pablo" onClick={e => e.preventDefault()}>
-                                <CardTitle tag="h3">
-                                    A Spectrum of Approaches
-                                </CardTitle>
-                                </a>
-                            </div>
-                            </CardBody>
-                        </Card>
-                        </Col>
-                        {/* <Col lg="4">
-                        <Card
-                            className="card-blog card-background"
-                            data-animation="zooming"
-                        >
-                            <div
-                            className="full-background"
-                            style={{
-                                backgroundImage:
-                                "url(" + require("assets/img/matthew-henry.jpg") + ")"
-                            }}
-                            />
-                            <CardBody>
-                            <div className="content-bottom">
-                                <h6 className="card-category">New Challenges</h6>
-                                <a href="#pablo" onClick={e => e.preventDefault()}>
-                                <CardTitle tag="h3">Touch on a trend</CardTitle>
-                                </a>
-                            </div>
-                            </CardBody>
-                        </Card>
-                        </Col> */}
-                    </Row>
-                    </Container>
+        <div className="cd-section" id="features">
+          {/* ********* FEATURES 3 ********* */}
+          <div className="features-3" style={{backgroundColor:"white"}}>
+            <Container fluid>
+              <Row>
+                <Col className="mr-auto ml-auto" md="6">
+                  <h1 className="title" style={{color:"black", textAlign:"left"}}>Trading Forex, Future Index, CFD dan Komoditi Bersama Topgrowth</h1>
+                  <h4 className="description" style={{textAlign:"left"}}>
+                    Trello’s boards, lists, and cards enable you to organize and
+                    prioritize your projects in a fun, flexible and rewarding
+                    way.
+                  </h4>
                 </Col>
-                </Row>
-            </Container>
-
-
-            <Container>
-                <Row>
-                <Col className="ml-auto" md="6">
-                <Container fluid>
-                    <br />
-                    <Row>
-                        <Col lg="6">
-                        <Card
-                            className="card-blog card-background"
-                            data-animation="zooming"
-                        >
-                            <div
-                            className="full-background"
-                            style={{
-                                backgroundImage:
-                                "url(" + require("assets/img/steven-roe.jpg") + ")"
-                            }}
-                            />
-                            <CardBody>
-                            <div className="content-bottom">
-                                <h6 className="card-category">Research Byte</h6>
-                                <a href="#pablo" onClick={e => e.preventDefault()}>
-                                <CardTitle tag="h3">AI at the Edge</CardTitle>
-                                </a>
-                            </div>
-                            </CardBody>
-                        </Card>
-                        </Col>
-                        <Col lg="6">
-                        <Card
-                            className="card-blog card-background"
-                            data-animation="zooming"
-                        >
-                            <div
-                            className="full-background"
-                            style={{
-                                backgroundImage:
-                                "url(" + require("assets/img/noah-wetering.jpg") + ")"
-                            }}
-                            />
-                            <CardBody>
-                            <div className="content-bottom">
-                                <h6 className="card-category">Data Virtualization</h6>
-                                <a href="#pablo" onClick={e => e.preventDefault()}>
-                                <CardTitle tag="h3">
-                                    A Spectrum of Approaches
-                                </CardTitle>
-                                </a>
-                            </div>
-                            </CardBody>
-                        </Card>
-                        </Col>
-                        {/* <Col lg="4">
-                        <Card
-                            className="card-blog card-background"
-                            data-animation="zooming"
-                        >
-                            <div
-                            className="full-background"
-                            style={{
-                                backgroundImage:
-                                "url(" + require("assets/img/matthew-henry.jpg") + ")"
-                            }}
-                            />
-                            <CardBody>
-                            <div className="content-bottom">
-                                <h6 className="card-category">New Challenges</h6>
-                                <a href="#pablo" onClick={e => e.preventDefault()}>
-                                <CardTitle tag="h3">Touch on a trend</CardTitle>
-                                </a>
-                            </div>
-                            </CardBody>
-                        </Card>
-                        </Col> */}
-                    </Row>
-                    </Container>
+              </Row>
+              <Row>
+                <Col className="ml-auto" md="5">
+                  <div className="info info-horizontal">
+                    <div className="icon icon-success">
+                      <img
+                        alt="..."
+                        className="bg-blob"
+                        src={require("assets/img/feature-blob/success.png")}
+                      />
+                      <i className="tim-icons icon-html5" />
+                    </div>
+                    <div className="description">
+                      <h3 className="info-title" style={{color:"black"}}>Foreign Exchange</h3>
+                      <p>
+                        The moment you use Black Kit, you know you’ve never felt
+                        anything like it. With a single use, this powerfull UI
+                        Kit lets you do more than ever before.
+                      </p>
+                      <Button
+                        className="btn-link"
+                        color="info"
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                      >
+                        Explore now{" "}
+                        <i className="tim-icons icon-minimal-right" />
+                      </Button>
+                    </div>
+                  </div>
                 </Col>
-
-                <Col className="ml-auto" md="6">
-                <Container fluid style={{textAlign:"right"}}>
-                <Carousel
-                activeIndex={this.state.carousel1Index}
-                next={() => this.next(1, items2)}
-                previous={() => this.previous(1, items2)}
-                className="carousel-team"
-              >
-                {items2.map((item, key) => {
-                  return (
-                    <CarouselItem
-                      onExiting={() => this.onExiting(1)}
-                      onExited={() => this.onExited(1)}
-                      key={key}
-                    >
-                      {item.content}
-                    </CarouselItem>
-                  );
-                })}
-                <a
-                  className="carousel-control-prev"
-                  data-slide="prev"
-                  href="#pablo"
-                  onClick={e => {
-                    e.preventDefault();
-                    this.previous(1, items2);
-                  }}
-                  role="button"
-                >
-                  <i className="tim-icons icon-minimal-left" />
-                  <span className="sr-only">Previous</span>
-                </a>
-                <a
-                  className="carousel-control-next"
-                  data-slide="next"
-                  href="#pablo"
-                  onClick={e => {
-                    e.preventDefault();
-                    this.next(1, items2);
-                  }}
-                  role="button"
-                >
-                  <i className="tim-icons icon-minimal-right" />
-                  <span className="sr-only">Next</span>
-                </a>
-              </Carousel>
-              </Container>
-              </Col>
-                
-                </Row>
+                <Col className="mr-auto" md="5">
+                  <div className="info info-horizontal">
+                    <div className="icon icon-warning">
+                      <img
+                        alt="..."
+                        className="bg-blob"
+                        src={require("assets/img/feature-blob/warning.png")}
+                      />
+                      <i className="tim-icons icon-heart-2" />
+                    </div>
+                    <div className="description">
+                      <h3 className="info-title" style={{color:"black"}}>CFD</h3>
+                      <p>
+                        The moment you use Black Kit, you know you’ve never felt
+                        anything like it. With a single use, this powerfull UI
+                        Kit lets you do more than ever before.
+                      </p>
+                      <Button
+                        className="btn-link"
+                        color="info"
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                      >
+                        Explore now{" "}
+                        <i className="tim-icons icon-minimal-right" />
+                      </Button>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col className="ml-auto" md="5">
+                  <div className="info info-horizontal">
+                    <div className="icon icon-danger">
+                      <img
+                        alt="..."
+                        className="bg-blob"
+                        src={require("assets/img/feature-blob/danger.png")}
+                      />
+                      <i className="tim-icons icon-chart-bar-32" />
+                    </div>
+                    <div className="description">
+                      <h3 className="info-title" style={{color:"black"}}>Foreign Exchange</h3>
+                      <p>
+                        The moment you use Black Kit, you know you’ve never felt
+                        anything like it. With a single use, this powerfull UI
+                        Kit lets you do more than ever before.
+                      </p>
+                      <Button
+                        className="btn-link"
+                        color="info"
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                      >
+                        Explore now{" "}
+                        <i className="tim-icons icon-minimal-right" />
+                      </Button>
+                    </div>
+                  </div>
+                </Col>
+                <Col className="mr-auto" md="5">
+                  <div className="info info-horizontal">
+                    <div className="icon icon-info">
+                      <img
+                        alt="..."
+                        className="bg-blob"
+                        src={require("assets/img/feature-blob/info.png")}
+                      />
+                      <i className="tim-icons icon-paper" />
+                    </div>
+                    <div className="description">
+                      <h3 className="info-title" style={{color:"black"}}>
+                        Komoditi{" "}
+                        <Badge color="info" pill>
+                          v2.0
+                        </Badge>
+                      </h3>
+                      <p>
+                        The moment you use Black Kit, you know you’ve never felt
+                        anything like it. With a single use, this powerfull UI
+                        Kit lets you do more than ever before.
+                      </p>
+                      <Button
+                        className="btn-link"
+                        color="info"
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                      >
+                        Explore now{" "}
+                        <i className="tim-icons icon-minimal-right" />
+                      </Button>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
             </Container>
           </div>
-        </div>
+          {/* ********* END FEATURES 3 ********* */}
+        </div>{" "}
       </>
     );
   }
 }
 
-export default News;
+export default Features;
