@@ -44,118 +44,58 @@ class Footers extends React.Component {
                   <Row>
                     <Col md="3">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <h5>BLK• Design System PRO React</h5>
+                        <h4><b>PT. Topgrowth Futures</b></h4>
+                        <p>Didirikan sejak tahun 2003, saat ini telah berkembang menjadi perusahaan pialang berjangka terbaik dan terbesar di Indonesia yang menyediakan sarana serta layanan untuk transaksi produk forex, index, dan komoditi dengan spread yang kompetitif.</p>
                       </a>
-                      <p>
-                        Probably the best Design System in the world! We know
-                        you've been waiting for it, so don't be shy!
-                      </p>
-                    </Col>
-                    <Col md="2">
-                      <h5>About</h5>
-                      <ul className="links-vertical">
-                        <li>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            Blog
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            About Us
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            Presentation
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            Contact Us
-                          </a>
-                        </li>
-                      </ul>
-                    </Col>
-                    <Col md="2">
-                      <h5>Market</h5>
-                      <ul className="links-vertical">
-                        <li>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            Sales FAQ
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            How to Register
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            Sell Goods
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            Receive Payment
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            Transactions Issues
-                          </a>
-                        </li>
-                      </ul>
-                    </Col>
-                    <Col md="2">
-                      <h5>Legal</h5>
-                      <ul className="links-vertical">
-                        <li>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            Transactions FAQ
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            Terms &amp; Conditions
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            Licenses
-                          </a>
-                        </li>
-                      </ul>
                     </Col>
                     <Col md="3">
-                      <h5>Subscribe to Newsletter</h5>
-                      <p>
-                        Join our newsletter and get news in your inbox every
-                        week! We hate spam too, so no worries about this.
-                      </p>
-                      <Form
-                        action=""
-                        className="form form-newsletter"
-                        method=""
-                      >
-                        <FormGroup>
-                          <Input placeholder="Your Email..." type="email" />
-                        </FormGroup>
-                        <Button
-                          className="btn-icon btn-round"
-                          color="primary"
-                          name="button"
-                          type="button"
-                        >
-                          <i className="tim-icons icon-email-85" />
-                        </Button>
-                      </Form>
+                      <h5>Tentang Kami</h5>
+                      {/* <ul className="links-vertical"> */}
+                        {/* <li> */}
+                          <a href="#pablo" onClick={e => e.preventDefault()} style={{color:"white"}}>
+                            Tentang Topgrowth Futures 
+                          </a>
+                        {/* </li> */}
+                        {/* <li> */}
+                          <a href="#pablo" onClick={e => e.preventDefault()} style={{color:"white"}}>
+                            Legalitas
+                          </a>
+                        {/* </li> */}
+                        {/* <li> */}
+                          <a href="#pablo" onClick={e => e.preventDefault()} style={{color:"white"}}>
+                            Rekening Terpisah
+                          </a>
+                        {/* </li> */}
+                        {/* <li> */}
+                          <a href="#pablo" onClick={e => e.preventDefault()} style={{color:"white"}}>
+                            Cabang Kami
+                          </a>
+                        {/* </li> */}
+                      {/* </ul> */}
+                    </Col>
+                    <Col md="3">
+                      <h5>Layanan</h5>
+                        <a href="#pablo" onClick={e => e.preventDefault()} style={{color:"white"}}>
+                        Research & Analysis
+                        </a>
+                    </Col>
+                    <Col md="3">
+                      <h5>Hubungi Kami</h5>
+                        <a href="#pablo" onClick={e => e.preventDefault()} style={{color:"white"}}>
+                          Alamat Kantor
+                          Sahid Sudirman Center, lantai 40
+                          Jl. Jend Sudirman Kav 86
+                          Jakarta 10220 Indonesia
+                          Email: customerservices@topgrowthfutures.com
+                          Tel: 021 2788-9366
+                          Fax: 021 2788-9395
+                        </a>
                     </Col>
                   </Row>
                 </div>
                 <hr />
                 <div className="copyright pull-center">
-                  Copyright © {new Date().getFullYear()} Creative Tim All Rights
-                  Reserved.
+                  Copyright © {new Date().getFullYear()} topgrowthfuture.co.id
                 </div>
               </Container>
             {/* </footer> */}

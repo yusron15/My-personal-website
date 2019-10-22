@@ -269,8 +269,8 @@ class Testimonials extends React.Component {
           <div className="testimonials-4" style={{backgroundImage: `url(${Benefit})`, backgroundSize:"cover"}}>
             <Container fluid>
               <Row>
-                <Col className="ml-auto mr-auto text-center" md="6">
-                  <h2 className="title">Join our world</h2>
+                <Col className="ml-auto mr-auto" md="10">
+                  <h2 className="title">Kenapa bertransaksi di Topgrowth Futures.</h2>
                 </Col>
               </Row>
               <Row>
@@ -282,12 +282,13 @@ class Testimonials extends React.Component {
                           {`"Take up one idea. Make that one idea your life"`}
                         </p>
                         <div className="author">
-                          <img
-                            alt="..."
-                            className="avatar img-raised"
-                            src={require("assets/img/olivia.jpg")}
-                          />
-                          <span>Andrew Lino</span>
+                          <Button
+                            className="btn-round ml-1"
+                            color="info"
+                            type="button"
+                          >
+                            Round
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -297,12 +298,13 @@ class Testimonials extends React.Component {
                           {`"Take up one idea. Make that one idea your life"`}
                         </p>
                         <div className="author">
-                          <img
-                            alt="..."
-                            className="avatar img-raised"
-                            src={require("assets/img/olivia.jpg")}
-                          />
-                          <span>Andrew Lino</span>
+                          <Button
+                            className="btn-round ml-1"
+                            color="info"
+                            type="button"
+                          >
+                            Round
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -312,12 +314,13 @@ class Testimonials extends React.Component {
                           {`"Take up one idea. Make that one idea your life"`}
                         </p>
                         <div className="author">
-                          <img
-                            alt="..."
-                            className="avatar img-raised"
-                            src={require("assets/img/olivia.jpg")}
-                          />
-                          <span>Andrew Lino</span>
+                          <Button
+                            className="btn-round ml-1"
+                            color="info"
+                            type="button"
+                          >
+                            Round
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -327,12 +330,13 @@ class Testimonials extends React.Component {
                           {`"Take up one idea. Make that one idea your life"`}
                         </p>
                         <div className="author">
-                          <img
-                            alt="..."
-                            className="avatar img-raised"
-                            src={require("assets/img/olivia.jpg")}
-                          />
-                          <span>Andrew Lino</span>
+                          <Button
+                            className="btn-round ml-1"
+                            color="info"
+                            type="button"
+                          >
+                            Round
+                          </Button>
                         </div>
                       </div>
                     </div>
@@ -342,12 +346,13 @@ class Testimonials extends React.Component {
                           {`"Take up one idea. Make that one idea your life"`}
                         </p>
                         <div className="author">
-                          <img
-                            alt="..."
-                            className="avatar img-raised"
-                            src={require("assets/img/olivia.jpg")}
-                          />
-                          <span>Andrew Lino</span>
+                          <Button
+                            className="btn-round ml-1"
+                            color="info"
+                            type="button"
+                          >
+                            Round
+                          </Button>
                         </div>
                       </div>
                     </div>

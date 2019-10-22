@@ -55,8 +55,11 @@ class Pricing extends React.Component {
           <div className="pricing-3" id="pricing-3" style={{backgroundColor:"black"}}>
             <Container>
               <Row>
-                <Col className="ml-auto mr-auto text-center" md="6">
+                <Col className="ml-auto mr-auto text-center" md="12">
                   <h2 className="title" style={{textAlign:"left"}}>Tipe Akun</h2>
+                  <h4 className="description" style={{textAlign:"left"}}>
+                  Kini Anda dapat memilih tipe akun sesuai dengan karakter trading anda.
+                  </h4>
                 </Col>
               </Row>
               <div className="space-50" />
@@ -93,12 +96,11 @@ class Pricing extends React.Component {
                               </li>
                             </ul>
                             <Button
-                              className="mt-4"
-                              color="primary"
-                              href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              className="btn-round ml-1"
+                              color="info"
+                              type="button"
                             >
-                              Get started
+                              Round
                             </Button>
                           </CardBody>
                         </Card>
@@ -133,12 +135,11 @@ class Pricing extends React.Component {
                               </li>
                             </ul>
                             <Button
-                              className="mt-4"
-                              color="primary"
-                              href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              className="btn-round ml-1"
+                              color="info"
+                              type="button"
                             >
-                              Get started
+                              Round
                             </Button>
                           </CardBody>
                         </Card>
@@ -174,12 +175,11 @@ class Pricing extends React.Component {
                               </li>
                             </ul>
                             <Button
-                              className="mt-4"
-                              color="primary"
-                              href="#pablo"
-                              onClick={e => e.preventDefault()}
+                              className="btn-round ml-1"
+                              color="info"
+                              type="button"
                             >
-                              Get started
+                              Round
                             </Button>
                           </CardBody>
                         </Card>

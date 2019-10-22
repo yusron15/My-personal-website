@@ -44,6 +44,8 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
+import ostrich from "../../assets/img/ostrich.png";
+
 class Projects extends React.Component {
   state = {
     activeTab: "1"
@@ -79,59 +81,28 @@ class Projects extends React.Component {
                 role="tablist"
               >
                 <NavItem className="m-auto">
-                  <NavLink
-                    // className={this.state.activeTab === "1" ? "active" : ""}
-                    // onClick={() => {
-                    //   this.toggle("1");
-                    // }}
+                  {/* <NavLink
+                    className={this.state.activeTab === "1" ? "active" : ""}
+                    onClick={() => {
+                      this.toggle("1");
+                    }}
                   >
                     <i className="tim-icons icon-spaceship" />
                     Project 1
-                  </NavLink>
+                  </NavLink> */}
+                  <img src={ostrich} height="100" width="auto"/>
                 </NavItem>
                 <NavItem className="m-auto">
-                  <NavLink
-                    className={this.state.activeTab === "2" ? "active" : ""}
-                    onClick={() => {
-                      this.toggle("2");
-                    }}
-                  >
-                    <i className="tim-icons icon-bag-16" />
-                    Project 2
-                  </NavLink>
+                <img src={ostrich} height="100" width="auto"/>
                 </NavItem>
                 <NavItem className="m-auto">
-                  <NavLink
-                    className={this.state.activeTab === "3" ? "active" : ""}
-                    onClick={() => {
-                      this.toggle("3");
-                    }}
-                  >
-                    <i className="tim-icons icon-light-3" />
-                    Project 3
-                  </NavLink>
+                <img src={ostrich} height="100" width="auto"/>
                 </NavItem>
                 <NavItem className="m-auto">
-                  <NavLink
-                    className={this.state.activeTab === "4" ? "active" : ""}
-                    onClick={() => {
-                      this.toggle("4");
-                    }}
-                  >
-                    <i className="tim-icons icon-molecule-40" />
-                    Project 4
-                  </NavLink>
+                <img src={ostrich} height="100" width="auto"/>
                 </NavItem>
                 <NavItem className="mx-auto">
-                  <NavLink
-                    className={this.state.activeTab === "5" ? "active" : ""}
-                    onClick={() => {
-                      this.toggle("5");
-                    }}
-                  >
-                    <i className="tim-icons icon-planet" />
-                    Project 5
-                  </NavLink>
+                <img src={ostrich} height="100" width="auto"/>
                 </NavItem>
               </Nav>
             </Container>

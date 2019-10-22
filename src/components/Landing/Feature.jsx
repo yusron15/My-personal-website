@@ -19,6 +19,8 @@ import React from "react";
 // reactstrap components
 import { Badge, Button, Container, Row, Col } from "reactstrap";
 
+import laptop from "../../assets/img/maclanding.jpg";
+
 class Features extends React.Component {
   render() {
     return (
@@ -28,76 +30,132 @@ class Features extends React.Component {
           <div className="features-3" style={{backgroundColor:"white"}}>
             <Container fluid>
               <Row>
-                <Col className="mr-auto ml-auto" md="6">
+                <Col className="mr-auto ml-auto" md="9">
                   <h1 className="title" style={{color:"black", textAlign:"left"}}>Trading Forex, Future Index, CFD dan Komoditi Bersama Topgrowth</h1>
                   <h4 className="description" style={{textAlign:"left"}}>
-                    Trello’s boards, lists, and cards enable you to organize and
-                    prioritize your projects in a fun, flexible and rewarding
-                    way.
+                  Berikut adalah ulasan singkat dari produk - produk yang tersedia untuk Anda.
                   </h4>
                 </Col>
               </Row>
               <Row>
-                <Col className="ml-auto" md="5">
-                  <div className="info info-horizontal">
-                    <div className="icon icon-success">
-                      <img
-                        alt="..."
-                        className="bg-blob"
-                        src={require("assets/img/feature-blob/success.png")}
-                      />
-                      <i className="tim-icons icon-html5" />
+                <Col md="4">
+                  <Col>
+                    <div className="info info-horizontal">
+                      <div className="icon icon-success">
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          src={require("assets/img/feature-blob/success.png")}
+                        />
+                        <i className="tim-icons icon-html5" />
+                      </div>
+                      <div className="description">
+                        <h3 className="info-title" style={{color:"black"}}>Foreign Exchange</h3>
+                        <p>
+                        Forex adalah pasar keuangan yang paling populer di dunia.
+                        </p>
+                        <Button
+                          className="btn-link"
+                          color="info"
+                          href="#pablo"
+                          onClick={e => e.preventDefault()}
+                        >
+                          Explore now{" "}
+                          <i className="tim-icons icon-minimal-right" />
+                        </Button>
+                      </div>
                     </div>
-                    <div className="description">
-                      <h3 className="info-title" style={{color:"black"}}>Foreign Exchange</h3>
-                      <p>
-                        The moment you use Black Kit, you know you’ve never felt
-                        anything like it. With a single use, this powerfull UI
-                        Kit lets you do more than ever before.
-                      </p>
-                      <Button
-                        className="btn-link"
-                        color="info"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                      >
-                        Explore now{" "}
-                        <i className="tim-icons icon-minimal-right" />
-                      </Button>
+                    <div className="info info-horizontal">
+                      <div className="icon icon-warning">
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          src={require("assets/img/feature-blob/warning.png")}
+                        />
+                        <i className="tim-icons icon-heart-2" />
+                      </div>
+                      <div className="description">
+                        <h3 className="info-title" style={{color:"black"}}>CFD</h3>
+                        <p>
+                        CFD menawarkan kesempatan untuk membangun portofolio yang beragam, multiproduk dari satu akun.
+                        </p>
+                        <Button
+                          className="btn-link"
+                          color="info"
+                          href="#pablo"
+                          onClick={e => e.preventDefault()}
+                        >
+                          Explore now{" "}
+                          <i className="tim-icons icon-minimal-right" />
+                        </Button>
+                      </div>
                     </div>
-                  </div>
+                  </Col>
                 </Col>
-                <Col className="mr-auto" md="5">
-                  <div className="info info-horizontal">
-                    <div className="icon icon-warning">
-                      <img
-                        alt="..."
-                        className="bg-blob"
-                        src={require("assets/img/feature-blob/warning.png")}
-                      />
-                      <i className="tim-icons icon-heart-2" />
+
+
+                <Col md="4">
+                  <Col>
+                    <div className="info info-horizontal">
+                      <div className="icon icon-success">
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          src={require("assets/img/feature-blob/success.png")}
+                        />
+                        <i className="tim-icons icon-html5" />
+                      </div>
+                      <div className="description">
+                        <h3 className="info-title" style={{color:"black"}}>Future Index</h3>
+                        <p>
+                        Alternatif investasi di saham perdagangan yang bisa meminimalkan risiko fluktuasi harga.
+                        </p>
+                        <Button
+                          className="btn-link"
+                          color="info"
+                          href="#pablo"
+                          onClick={e => e.preventDefault()}
+                        >
+                          Explore now{" "}
+                          <i className="tim-icons icon-minimal-right" />
+                        </Button>
+                      </div>
                     </div>
-                    <div className="description">
-                      <h3 className="info-title" style={{color:"black"}}>CFD</h3>
-                      <p>
-                        The moment you use Black Kit, you know you’ve never felt
-                        anything like it. With a single use, this powerfull UI
-                        Kit lets you do more than ever before.
-                      </p>
-                      <Button
-                        className="btn-link"
-                        color="info"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                      >
-                        Explore now{" "}
-                        <i className="tim-icons icon-minimal-right" />
-                      </Button>
+                    <div className="info info-horizontal">
+                      <div className="icon icon-warning">
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          src={require("assets/img/feature-blob/warning.png")}
+                        />
+                        <i className="tim-icons icon-heart-2" />
+                      </div>
+                      <div className="description">
+                        <h3 className="info-title" style={{color:"black"}}>Komoditi</h3>
+                        <p>
+                        Komoditi adalah subjek kontrak berjangka yang diperdagangkan di Bursa Berjangka.
+                        </p>
+                        <Button
+                          className="btn-link"
+                          color="info"
+                          href="#pablo"
+                          onClick={e => e.preventDefault()}
+                        >
+                          Explore now{" "}
+                          <i className="tim-icons icon-minimal-right" />
+                        </Button>
+                      </div>
                     </div>
-                  </div>
+                  </Col>
                 </Col>
-              </Row>
-              <Row>
+
+                <Col md="4">
+                  <Col>
+                    <img src={laptop} />
+                  </Col>
+                </Col>
+                </Row>
+              {/* <Row>
                 <Col className="ml-auto" md="5">
                   <div className="info info-horizontal">
                     <div className="icon icon-danger">
@@ -111,9 +169,7 @@ class Features extends React.Component {
                     <div className="description">
                       <h3 className="info-title" style={{color:"black"}}>Foreign Exchange</h3>
                       <p>
-                        The moment you use Black Kit, you know you’ve never felt
-                        anything like it. With a single use, this powerfull UI
-                        Kit lets you do more than ever before.
+                      Alternatif investasi di saham perdagangan yang bisa meminimalkan risiko fluktuasi harga.
                       </p>
                       <Button
                         className="btn-link"
@@ -145,9 +201,7 @@ class Features extends React.Component {
                         </Badge>
                       </h3>
                       <p>
-                        The moment you use Black Kit, you know you’ve never felt
-                        anything like it. With a single use, this powerfull UI
-                        Kit lets you do more than ever before.
+                      Komoditi adalah subjek kontrak berjangka yang diperdagangkan di Bursa Berjangka.
                       </p>
                       <Button
                         className="btn-link"
@@ -161,7 +215,7 @@ class Features extends React.Component {
                     </div>
                   </div>
                 </Col>
-              </Row>
+              </Row> */}
             </Container>
           </div>
           {/* ********* END FEATURES 3 ********* */}
