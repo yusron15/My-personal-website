@@ -33,6 +33,8 @@ import {
   Col
 } from "reactstrap";
 
+import { Link } from 'react-router-dom';
+
 class Navbars extends React.Component {
   render() {
     return (
@@ -65,52 +67,34 @@ class Navbars extends React.Component {
                   >
                     <Nav className="ml-auto" navbar>
                       <NavItem>
-                        <NavLink
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
+                        <Link to="/landing">
                             Home
-                        </NavLink>
+                        </Link>
                       </NavItem>
                       <NavItem>
-                        <NavLink
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
+                        <Link to="/tentangkami">
                             Tentang Kami
-                        </NavLink>
+                        </Link>
                       </NavItem>
                       <NavItem>
-                        <NavLink
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
+                        <Link to="/trading">
                             Trading Online
-                        </NavLink>
+                        </Link>
                       </NavItem>
                       <NavItem>
-                        <NavLink
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
+                        <Link to="/layanan">
                             Layanan
-                        </NavLink>
+                        </Link>
                       </NavItem>
                       <NavItem>
-                        <NavLink
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
+                        <Link to="/karir">
                             Karir
-                        </NavLink>
+                        </Link>
                       </NavItem>
                       <NavItem>
-                        <NavLink
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
+                        <Link to="/hubungikami">
                             Hubungi Kami
-                        </NavLink>
+                        </Link>
                       </NavItem>
                     </Nav>
                   </UncontrolledCollapse>

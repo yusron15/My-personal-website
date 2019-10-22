@@ -49,12 +49,14 @@ import CheckoutPage from "views/examples/CheckoutPage.jsx";
 import ChatPage from "views/examples/ChatPage.jsx";
 import Landing from "views/layout/Landing.jsx";
 import TentangKami from "views/layout/TentangKami.jsx";
+import RekeningTerpisah from "views/layout/RekeningTerpisah.jsx";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/landing" render={props => <Landing {...props} />} />
       <Route path="/tentangkami" render={props => <TentangKami {...props} />} />
+      <Route path="/RekeningTerpisah" render={props => <RekeningTerpisah {...props} />} />
       <Route path="/index" render={props => <Index {...props} />} />
       <Route
         path="/presentation"

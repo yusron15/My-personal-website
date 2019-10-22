@@ -5,7 +5,7 @@ import {
   Row,
   Col
 } from "reactstrap";
-// import Navbar from "../../components/Landing/Navbar.jsx";
+// import Navbar from "../../components/Navbars/Navbar.jsx";
 
 
 class HeaderLanding extends React.Component {
@@ -29,6 +29,7 @@ class HeaderLanding extends React.Component {
               
               <Container>
                 <Row>
+                    {/* <Navbar /> */}
                   <Col className="mr-auto text-left mt-5" lg="5" md="7">
                     <h1 className="title" style={{fontFamily:"Helvetica Bold"}}>
                       <b>TRADING BERSAMA BROKER TERBAIK</b>
