@@ -5,12 +5,15 @@ import {
   Row,
   Col
 } from "reactstrap";
+// import Navbar from "../../components/Landing/Navbar.jsx";
+
 
 class HeaderLanding extends React.Component {
   state = {};
   render() {
     return (
       <>
+      
         <div className="cd-section" id="headers">
           {/* ********* HEADER 1 ********* */}
           <div className="header header-1">
@@ -23,6 +26,7 @@ class HeaderLanding extends React.Component {
                     "url(" + require("assets/img/bglanding.png") + ")"
                 }}
               />
+              
               <Container>
                 <Row>
                   <Col className="mr-auto text-left mt-5" lg="5" md="7">
