@@ -51,6 +51,7 @@ import Landing from "views/layout/Landing.jsx";
 import TentangKami from "views/layout/TentangKami.jsx";
 import RekeningTerpisah from "views/layout/RekeningTerpisah.jsx";
 import Legalitas from "views/layout/Legalitas.jsx";
+import Cabang from "views/layout/Cabang.jsx";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -59,6 +60,7 @@ ReactDOM.render(
       <Route path="/tentangkami" render={props => <TentangKami {...props} />} />
       <Route path="/RekeningTerpisah" render={props => <RekeningTerpisah {...props} />} />
       <Route path="/Legalitas" render={props => <Legalitas {...props} />} />
+      <Route path="/Cabang" render={props => <Cabang {...props} />} />
       <Route path="/index" render={props => <Index {...props} />} />
       <Route
         path="/presentation"
