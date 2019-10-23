@@ -58,7 +58,10 @@ ReactDOM.render(
     <Switch>
       <Route path="/landing" render={props => <Landing {...props} />} />
       <Route path="/tentangkami" render={props => <TentangKami {...props} />} />
-      <Route path="/RekeningTerpisah" render={props => <RekeningTerpisah {...props} />} />
+      <Route
+        path="/RekeningTerpisah"
+        render={props => <RekeningTerpisah {...props} />}
+      />
       <Route path="/Legalitas" render={props => <Legalitas {...props} />} />
       <Route path="/Cabang" render={props => <Cabang {...props} />} />
       <Route path="/index" render={props => <Index {...props} />} />
@@ -106,7 +109,7 @@ ReactDOM.render(
         render={props => <CheckoutPage {...props} />}
       />
       <Route path="/chat-page" render={props => <ChatPage {...props} />} />
-      <Redirect from="/" to="/presentation" />
+      <Redirect from="/" to="/landing" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

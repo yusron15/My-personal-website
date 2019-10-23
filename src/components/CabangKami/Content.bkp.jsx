@@ -1,3 +1,157 @@
+// /*!
+
+// =========================================================
+// * BLK Design System PRO React - v1.0.0
+// =========================================================
+
+// * Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
+// * Copyright 2019 Creative Tim (https://www.creative-tim.com)
+
+// * Coded by Creative Tim
+
+// =========================================================
+
+// * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+// */
+// import React from "react";
+
+// // reactstrap components
+// import {
+//   Button,
+//   Card,
+//   CardBody,
+//   CardFooter,
+//   CardTitle,
+//   Container,
+//   Carousel,
+//   CarouselItem,
+//   Row,
+//   Col
+// } from "reactstrap";
+
+// // core components
+// const cardCabang = [
+//   {
+//     content: (
+//       <Card className="card-blog card-background" data-animation={true}>
+//         <div
+//           className="full-background"
+//           style={{
+//             backgroundImage:
+//               "url(" + require("assets/img/pawel-nolbert.jpg") + ")"
+//           }}
+//         />
+//         <CardBody>
+//           <div className="content-bottom">
+//             <h6 className="card-category">Benchmark Report</h6>
+//             <a href="#pablo" onClick={e => e.preventDefault()}>
+//               <CardTitle tag="h3">API Management</CardTitle>
+//             </a>
+//           </div>
+//         </CardBody>
+//       </Card>
+//     ),
+//     altText: "",
+//     caption: "",
+//     src: "0"
+//   },
+//   {
+//     content: (
+//       <Card className="card-blog card-background" data-animation={true}>
+//         <div
+//           className="full-background"
+//           style={{
+//             backgroundImage:
+//               "url(" + require("assets/img/pawel-nolbert.jpg") + ")"
+//           }}
+//         />
+//         <CardBody>
+//           <div className="content-bottom">
+//             <h6 className="card-category">Benchmark Report</h6>
+//             <a href="#pablo" onClick={e => e.preventDefault()}>
+//               <CardTitle tag="h3">API Management</CardTitle>
+//             </a>
+//           </div>
+//         </CardBody>
+//       </Card>
+//     ),
+//     altText: "",
+//     caption: "",
+//     src: "1"
+//   }
+// ];
+
+// class Blogs extends React.Component {
+//   state = {
+//     carousel1Index: 0,
+//     carousel2Index: 0
+//   };
+//   onExiting = carousel => {
+//     this["carousel" + carousel + "Animating"] = true;
+//   };
+
+//   onExited = carousel => {
+//     this["carousel" + carousel + "Animating"] = false;
+//   };
+//   next = (carousel, items) => {
+//     if (this["carousel" + carousel + "Animating"]) return;
+//     const nextIndex =
+//       this.state["carousel" + carousel + "Index"] === items.length - 1
+//         ? 0
+//         : this.state["carousel" + carousel + "Index"] + 1;
+//     this.setState({ ["carousel" + carousel + "Index"]: nextIndex });
+//   };
+//   previous = (carousel, items) => {
+//     if (this["carousel" + carousel + "Animating"]) return;
+//     const nextIndex =
+//       this.state["carousel" + carousel + "Index"] === 0
+//         ? items.length - 1
+//         : this.state["carousel" + carousel + "Index"] - 1;
+//     this.setState({ ["carousel" + carousel + "Index"]: nextIndex });
+//   };
+//   goToIndex = (newIndex, carousel) => {
+//     if (this["carousel" + carousel + "Animating"]) return;
+//     this.setState({ ["carousel" + carousel + "Index"]: newIndex });
+//   };
+//   render() {
+//     return (
+//       <>
+//         <div className="cd-section" id="blogs">
+//           {/* ********* BLOGS 1 ********* */}
+//           <div className="section blogs-1" id="blogs-1">
+//             <Container>
+//               <Row className="align-items-center">
+//                 <Col lg="6"></Col>
+//                 <Col lg="6">
+//                   {/* {cardCabang.map((item))}
+//                   {cardCabang.map(item => {
+//                     item.content;
+//                   })} */}
+//                   {cardCabang.map((item, key) => {
+//                     return (
+//                       <CarouselItem
+//                         onExiting={() => this.onExiting(1)}
+//                         onExited={() => this.onExited(1)}
+//                         key={key}
+//                       >
+//                         {item.content}
+//                       </CarouselItem>
+//                     );
+//                   })}
+//                 </Col>
+//               </Row>
+//             </Container>
+//           </div>
+//           {/* ********* END BLOGS 1 ********* */}
+//         </div>{" "}
+//       </>
+//     );
+//   }
+// }
+
+// export default Blogs;
+
 import React from "react";
 
 // reactstrap components
