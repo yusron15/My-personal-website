@@ -30,7 +30,7 @@ import {
   InputGroupText,
   InputGroup,
   NavbarBrand,
-  Navbar,
+  // Navbar,
   NavItem,
   NavLink,
   Nav,
@@ -42,6 +42,7 @@ import {
 import "../../../src/App.css";
 
 import tentangkami from "../../assets/img/tentangkami.png";
+import Navbar from "../Navbars/Navbar.jsx";
 
 class HeaderAboutUs extends React.Component {
   state = {};
@@ -50,22 +51,31 @@ class HeaderAboutUs extends React.Component {
       <>
         <div className="cd-section" id="headers">
           {/* ********* HEADER 6 ********* */}
-          <div className="header header-6 image-overlay" style={{backgroundColor:"black"}}>
+          <div
+            className="header header-6 image-overlay"
+            style={{ backgroundColor: "black" }}
+          >
+            <Navbar />
             <div className="page-header">
               <div className="content-center">
                 <Container>
                   <Row className="align-items-center text-left">
                     <Col lg="6" xs="12">
                       <h1 className="title">
-                      Tentang <br /> Topgrowth Future
+                        Tentang <br /> Topgrowth Future
                       </h1>
                       <p className="description">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur.
                       </p>
                     </Col>
                     <Col lg="6" xs="12">
-                      <img src={tentangkami}/>
+                      <img src={tentangkami} />
                     </Col>
                   </Row>
                 </Container>

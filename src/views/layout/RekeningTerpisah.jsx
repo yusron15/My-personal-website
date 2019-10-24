@@ -8,7 +8,7 @@ class RekeningTerpisah extends React.Component {
   render() {
     return (
       <>
-        <Navbar />
+        {/* <Navbar /> */}
         <Content />
         <Footer />
       </>

@@ -13,7 +13,7 @@ class Landing extends React.Component {
   render() {
     return (
       <>
-        <Navbar />
+        {/* <Navbar /> */}
         <HeaderLanding />
         <News />
         <Feature />

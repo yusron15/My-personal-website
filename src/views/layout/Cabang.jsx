@@ -8,7 +8,7 @@ class Cabang extends React.Component {
   render() {
     return (
       <>
-        <Navbar />
+        {/* <Navbar /> */}
         <CabangKami />
         <Footer />
       </>

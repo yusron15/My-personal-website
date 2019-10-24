@@ -43,35 +43,41 @@ class VisiMisi extends React.Component {
     return (
       <>
         <div className="cd-section" id="projects">
-          <div className="projects-3" style={{backgroundImage:"url(" + require("assets/img/visimisi.png") + ")", backgroundSize:"cover",backgroundColor: 'rgba(52, 52, 52, 0.8)'}}>
+          <div
+            className="projects-3 header-filter"
+            style={{
+              backgroundImage:
+                "url(" + require("assets/img/visimisi.png") + ")",
+              backgroundSize: "cover",
+              backgroundColor: "rgba(52, 52, 52, 0.8)"
+            }}
+          >
             <Container>
               <div className="space-50" />
               <Row>
                 <Col md="6">
-                  {/* <Card className="card-blog card-plain"> */}
-                    {/* <CardHeader> */}
-                      <h2 className="title">VISI KAMI</h2>
-                    {/* </CardHeader> */}
-                    {/* <div className="card-image"> */}
-                      <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br/>
-                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                      </p>
-                    {/* </div> */}
-                  {/* </Card> */}
+                  <h2 className="title">VISI KAMI</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                    <br />
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.
+                  </p>
                 </Col>
                 <Col md="6">
-                  {/* <Card className="card-blog card-plain"> */}
-                    {/* <CardHeader> */}
-                      <h2 className="title">MISI KAMI</h2>
-                    {/* </CardHeader> */}
-                    {/* <div className="card-image"> */}
-                    <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br/>
-                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                      </p>
-                    {/* </div> */}
-                  {/* </Card> */}
+                  <h2 className="title">MISI KAMI</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                    <br />
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.
+                  </p>
                 </Col>
               </Row>
               <div className="space-50" />
