@@ -61,7 +61,16 @@ class Content extends React.Component {
               <Col>
                 <Row>
                   <Col md="8">
-                    <h2 className="title">REKENING TERPISAH</h2>
+                    <div
+                      style={{
+                        fontStyle: "Helvetica Bold",
+                        fontSize: "2.5rem",
+                        fontWeight: "bold",
+                        color: "white"
+                      }}
+                    >
+                      REKENING TERPISAH
+                    </div>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna

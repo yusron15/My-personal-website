@@ -30,79 +30,112 @@ import {
   Nav,
   Container,
   Row,
-  Col
+  Col,
+  Dropdown
 } from "reactstrap";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
+import logo from "../../assets/img/logotgf.png";
 
 class Navbars extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dropdownOpen: false
+    };
+  }
+
+  toggle = () => {
+    this.setState(prevState => ({
+      dropdownOpen: !prevState.dropdownOpen
+    }));
+  };
+
+  onMouseEnter = () => {
+    this.setState({ dropdownOpen: true });
+  };
+
+  onMouseLeave = () => {
+    this.setState({ dropdownOpen: false });
+  };
+
   render() {
     return (
       <>
         {/* <div className="section section-navbars"> */}
-          <div id="navbar">
-            {/* <div className="navigation-example"> */}
-              {/* Navbar Transparent */}
-              <Navbar className="navbar-transparent" expand="lg">
-                <Container>
-                  <div className="navbar-translate">
-                    <NavbarBrand
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
+        <div id="navbar">
+          {/* <div className="navigation-example"> */}
+          {/* Navbar Transparent */}
+          <Navbar className="navbar-transparent" expand="lg">
+            <Container>
+              <div className="navbar-translate">
+                <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+                  {/* <img src={logo} /> */}
+                  TGF
+                </NavbarBrand>
+                <button
+                  className="navbar-toggler"
+                  id="example-navbar-transparent"
+                >
+                  <span className="navbar-toggler-bar bar1" />
+                  <span className="navbar-toggler-bar bar2" />
+                  <span className="navbar-toggler-bar bar3" />
+                </button>
+              </div>
+              <UncontrolledCollapse
+                navbar
+                toggler="#example-navbar-transparent"
+              >
+                <Nav className="ml-auto" navbar>
+                  <NavItem>
+                    <Link to="/landing">Home</Link>
+                    {/* <Link to="/landing">
+                      <DropdownToggle>Home</DropdownToggle>
+                    </Link> */}
+                  </NavItem>
+
+                  <NavItem>
+                    <Dropdown
+                      onMouseOver={this.onMouseEnter}
+                      onMouseLeave={this.onMouseLeave}
+                      isOpen={this.state.dropdownOpen}
+                      toggle={this.toggle}
                     >
-                      Transparent
-                    </NavbarBrand>
-                    <button
-                      className="navbar-toggler"
-                      id="example-navbar-transparent"
-                    >
-                      <span className="navbar-toggler-bar bar1" />
-                      <span className="navbar-toggler-bar bar2" />
-                      <span className="navbar-toggler-bar bar3" />
-                    </button>
-                  </div>
-                  <UncontrolledCollapse
-                    navbar
-                    toggler="#example-navbar-transparent"
-                  >
-                    <Nav className="ml-auto" navbar>
-                      <NavItem>
-                        <Link to="/landing">
-                            Home
-                        </Link>
-                      </NavItem>
-                      <NavItem>
+                      <DropdownToggle caret>Tentang Kami</DropdownToggle>
+                      <DropdownMenu>
                         <Link to="/tentangkami">
-                            Tentang Kami
+                          <DropdownItem>Tentang Kami</DropdownItem>
                         </Link>
-                      </NavItem>
-                      <NavItem>
-                        <Link to="/trading">
-                            Trading Online
+                        <Link to="/cabang">
+                          <DropdownItem>Cabang Kami</DropdownItem>
                         </Link>
-                      </NavItem>
-                      <NavItem>
-                        <Link to="/layanan">
-                            Layanan
+                        <Link to="/rekeningterpisah">
+                          <DropdownItem>Rekening Terpisah</DropdownItem>
                         </Link>
-                      </NavItem>
-                      <NavItem>
-                        <Link to="/karir">
-                            Karir
+                        <Link to="/legalitas">
+                          <DropdownItem>Legalitas</DropdownItem>
                         </Link>
-                      </NavItem>
-                      <NavItem>
-                        <Link to="/hubungikami">
-                            Hubungi Kami
-                        </Link>
-                      </NavItem>
-                    </Nav>
-                  </UncontrolledCollapse>
-                </Container>
-              </Navbar>
-              {/* End Navbar Transparent*/}
-            </div>
-          {/* </div> */}
+                      </DropdownMenu>
+                    </Dropdown>
+                  </NavItem>
+
+                  <NavItem>
+                    <Link to="/layanan">Layanan</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link to="/karir">Karir</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link to="/hubungikami">Hubungi Kami</Link>
+                  </NavItem>
+                </Nav>
+              </UncontrolledCollapse>
+            </Container>
+          </Navbar>
+          {/* End Navbar Transparent*/}
+        </div>
+        {/* </div> */}
         {/* </div> */}
       </>
     );

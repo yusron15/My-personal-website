@@ -27,18 +27,25 @@ class Features extends React.Component {
       <>
         <div className="cd-section" id="features">
           {/* ********* FEATURES 3 ********* */}
-          <div className="features-3" style={{backgroundColor:"white"}}>
+          <div className="features-3" style={{ backgroundColor: "white" }}>
             <Container fluid>
               <Row>
                 <Col className="mr-auto ml-auto" md="9">
-                  <h1 className="title" style={{color:"black", textAlign:"left"}}>Trading Forex, Future Index, CFD dan Komoditi Bersama Topgrowth</h1>
-                  <h4 className="description" style={{textAlign:"left"}}>
-                  Berikut adalah ulasan singkat dari produk - produk yang tersedia untuk Anda.
+                  <h1
+                    className="title"
+                    style={{ color: "black", textAlign: "left" }}
+                  >
+                    Trading Forex, Future Index, CFD dan Komoditi Bersama
+                    Topgrowth
+                  </h1>
+                  <h4 className="description" style={{ textAlign: "left" }}>
+                    Berikut adalah ulasan singkat dari produk - produk yang
+                    tersedia untuk Anda.
                   </h4>
                 </Col>
               </Row>
               <Row>
-                <Col md="4">
+                <Col md="4 offset-m-1">
                   <Col>
                     <div className="info info-horizontal">
                       <div className="icon icon-success">
@@ -50,9 +57,12 @@ class Features extends React.Component {
                         <i className="tim-icons icon-html5" />
                       </div>
                       <div className="description">
-                        <h3 className="info-title" style={{color:"black"}}>Foreign Exchange</h3>
+                        <h3 className="info-title" style={{ color: "black" }}>
+                          Foreign Exchange
+                        </h3>
                         <p>
-                        Forex adalah pasar keuangan yang paling populer di dunia.
+                          Forex adalah pasar keuangan yang paling populer di
+                          dunia.
                         </p>
                         <Button
                           className="btn-link"
@@ -75,9 +85,12 @@ class Features extends React.Component {
                         <i className="tim-icons icon-heart-2" />
                       </div>
                       <div className="description">
-                        <h3 className="info-title" style={{color:"black"}}>CFD</h3>
+                        <h3 className="info-title" style={{ color: "black" }}>
+                          CFD
+                        </h3>
                         <p>
-                        CFD menawarkan kesempatan untuk membangun portofolio yang beragam, multiproduk dari satu akun.
+                          CFD menawarkan kesempatan untuk membangun portofolio
+                          yang beragam, multiproduk dari satu akun.
                         </p>
                         <Button
                           className="btn-link"
@@ -93,7 +106,6 @@ class Features extends React.Component {
                   </Col>
                 </Col>
 
-
                 <Col md="4">
                   <Col>
                     <div className="info info-horizontal">
@@ -106,9 +118,12 @@ class Features extends React.Component {
                         <i className="tim-icons icon-html5" />
                       </div>
                       <div className="description">
-                        <h3 className="info-title" style={{color:"black"}}>Future Index</h3>
+                        <h3 className="info-title" style={{ color: "black" }}>
+                          Future Index
+                        </h3>
                         <p>
-                        Alternatif investasi di saham perdagangan yang bisa meminimalkan risiko fluktuasi harga.
+                          Alternatif investasi di saham perdagangan yang bisa
+                          meminimalkan risiko fluktuasi harga.
                         </p>
                         <Button
                           className="btn-link"
@@ -131,9 +146,12 @@ class Features extends React.Component {
                         <i className="tim-icons icon-heart-2" />
                       </div>
                       <div className="description">
-                        <h3 className="info-title" style={{color:"black"}}>Komoditi</h3>
+                        <h3 className="info-title" style={{ color: "black" }}>
+                          Komoditi
+                        </h3>
                         <p>
-                        Komoditi adalah subjek kontrak berjangka yang diperdagangkan di Bursa Berjangka.
+                          Komoditi adalah subjek kontrak berjangka yang
+                          diperdagangkan di Bursa Berjangka.
                         </p>
                         <Button
                           className="btn-link"
@@ -154,7 +172,7 @@ class Features extends React.Component {
                     <img src={laptop} />
                   </Col>
                 </Col>
-                </Row>
+              </Row>
               {/* <Row>
                 <Col className="ml-auto" md="5">
                   <div className="info info-horizontal">

@@ -54,10 +54,11 @@ const PrevButton = props => {
   return (
     <Button
       className="btn-round btn-icon btn-simple slick-prev slick-arrow"
-      color="primary"
+      // color="primary"
       aria-label="Previous"
       type="button"
       onClick={props.onClick}
+      // style={{ backgroundColor: "white" }}
     >
       <i className="tim-icons icon-minimal-left" />
     </Button>
@@ -67,81 +68,105 @@ const PrevButton = props => {
 const NextButton = props => {
   return (
     <Button
-      className="btn-round btn-icon btn-simple slick-next slick-arrow"
-      color="primary"
+      className="btn-round btn-icon btn-simple slick-arrow"
+      // color="primary"
       aria-label="Next"
       type="button"
+      // style={{ backgroundColor: "white" }}
     >
       <i className="tim-icons icon-minimal-right" onClick={props.onClick} />
     </Button>
   );
 };
 
-let slickSettings = {
-  dots: false,
-  infinite: true,
-  centerMode: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  prevArrow: <PrevButton />,
-  nextArrow: <NextButton />,
-  className: "center slider",
-  slide: "section",
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-};
+// onClick={this.toggle("1") + 1}
 
-var NewsContent = [
-  {
-    // id: 1,
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"
-  },
-  {
-    // id: 2,
-    content:
-      "PPabore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea"
-  }
-];
+// let slickSettings = {
+//   dots: false,
+//   infinite: true,
+//   centerMode: true,
+//   slidesToShow: 4,
+//   slidesToScroll: 1,
+//   prevArrow: <PrevButton />,
+//   nextArrow: <NextButton />,
+//   className: "center slider",
+//   slide: "section",
+//   responsive: [
+//     {
+//       breakpoint: 1024,
+//       settings: {
+//         slidesToShow: 3,
+//         slidesToScroll: 1,
+//         infinite: true
+//       }
+//     },
+//     {
+//       breakpoint: 600,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 1
+//       }
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         slidesToShow: 1,
+//         slidesToScroll: 1
+//       }
+//     }
+//     // You can unslick at a given breakpoint now by adding:
+//     // settings: "unslick"
+//     // instead of a settings object
+//   ]
+// };
 
-console.log(NewsContent, "HAHAHAHAHAHA");
+// console.log(NewsContent, "HAHAHAHAHAHA");
 class News extends React.Component {
   state = {
     carousel1Index: 0,
     carousel2Index: 0,
-    activeTab: "1"
-    // textCard: ""
+    activeTab: "1",
+    slickSettings: {
+      dots: false,
+      infinite: true,
+      centerMode: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      beforeChange: (oldSlide, newSlide) => {
+        if (oldSlide !== newSlide) {
+          this.setState({ activeTab: newSlide });
+        }
+      },
+      prevArrow: <PrevButton />,
+      nextArrow: <NextButton />,
+      className: "center slider",
+      slide: "section",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    }
   };
-
-  // handleTextCardChange = (event) => {
-  //   const textCard = event.target.value
-  //   this.setState({ textCard: textCard })
-  // }
 
   toggle = tab => {
     if (this.state.activeTab !== tab) {
@@ -158,44 +183,54 @@ class News extends React.Component {
   onExited = carousel => {
     this["carousel" + carousel + "Animating"] = false;
   };
-  next = (carousel, items) => {
+  next = (carousel, items, tab) => {
+    console.log(this.state["carousel" + carousel + "Index"]);
     if (this["carousel" + carousel + "Animating"]) return;
     const nextIndex =
       this.state["carousel" + carousel + "Index"] === items.length - 1
         ? 0
         : this.state["carousel" + carousel + "Index"] + 1;
-    this.setState({ ["carousel" + carousel + "Index"]: nextIndex });
+    this.setState({
+      ["carousel" + carousel + "Index"]: nextIndex,
+      activeTab: nextIndex
+    });
   };
+
   previous = (carousel, items) => {
+    console.log(this.state["carousel" + carousel + "Index"]);
     if (this["carousel" + carousel + "Animating"]) return;
     const nextIndex =
       this.state["carousel" + carousel + "Index"] === 0
         ? items.length - 1
         : this.state["carousel" + carousel + "Index"] - 1;
-    this.setState({ ["carousel" + carousel + "Index"]: nextIndex });
-  };
-  goToIndex = (newIndex, carousel) => {
-    if (this["carousel" + carousel + "Animating"]) return;
-    this.setState({ ["carousel" + carousel + "Index"]: newIndex });
+    this.setState({
+      ["carousel" + carousel + "Index"]: nextIndex,
+      activeTab: nextIndex
+    });
   };
 
-  // textCard = () => {
-  //   return this.setState({
-  //     textCard: "value"
-  //   });
-  // };
+  goToIndex = (newIndex, carousel) => {
+    console.log(this.state["carousel" + carousel + "Index"]);
+    if (this["carousel" + carousel + "Animating"]) return;
+    this.setState({
+      ["carousel" + carousel + "Index"]: newIndex,
+      activeTab: newIndex
+    });
+  };
 
   render() {
-    // const textNews = NewsContent[0];
     return (
       <>
         <div className="cd-section" id="testimonials">
           {/* ********* TESTIMONIALS 4 ********* */}
-          <div className="testimonials-4" style={{ backgroundColor: "black" }}>
+          <div
+            className="testimonials-4"
+            style={{ backgroundColor: "black", paddingTop: 0 }}
+          >
             <Container fluid>
               <Row>
                 <Col md="12">
-                  <Slick {...slickSettings}>
+                  <Slick {...this.state.slickSettings}>
                     <div>
                       <NavLink
                         className={this.state.activeTab === "1" ? "active" : ""}
@@ -256,7 +291,7 @@ class News extends React.Component {
                   </Slick>
                 </Col>
                 <Col className="positioned" lg="4" md="8" xs="10">
-                  <h1 className="title">Berita Ekonomi</h1>
+                  <h1 className="title">Cabang Kami</h1>
                   <p className="description text-white">
                     <TabContent activeTab={"project" + this.state.activeTab}>
                       <TabPane tabId="project1">
@@ -297,6 +332,20 @@ class News extends React.Component {
                     {/* <NewsContent id={textNews.id} content={textNews.content} /> */}
                   </p>
                 </Col>
+                {/* <Button
+                  className="btn-round btn-icon btn-simple slick-arrow"
+                  // color="primary"
+                  aria-label="Next"
+                  type="button"
+                  // style={{ backgroundColor: "white" }}
+                >
+                  <i
+                    className="tim-icons icon-minimal-right"
+                    onClick={() => {
+                      this.toggle("2");
+                    }}
+                  />
+                </Button> */}
               </Row>
             </Container>
           </div>
