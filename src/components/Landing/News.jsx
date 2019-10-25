@@ -291,7 +291,7 @@ class News extends React.Component {
                   </Slick>
                 </Col>
                 <Col className="positioned" lg="4" md="8" xs="10">
-                  <h1 className="title">Cabang Kami</h1>
+                  <h1 className="title">Berita Ekonomi</h1>
                   <p className="description text-white">
                     <TabContent activeTab={"project" + this.state.activeTab}>
                       <TabPane tabId="project1">
