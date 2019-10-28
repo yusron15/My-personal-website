@@ -9,7 +9,9 @@ class ForexGold extends React.Component {
     return (
       <>
         {/* <Navbar /> */}
+        {/* <div id="navbar" className="ml-auto" style={{ position: "fixed" }}> */}
         <Navbar />
+        {/* </div> */}
         <Content />
         <Footer />
       </>

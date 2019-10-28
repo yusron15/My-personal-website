@@ -38,6 +38,8 @@ import { Link } from "react-router-dom";
 
 import logo from "../../assets/img/logotgf.png";
 
+import "../../assets/css/main.css";
+
 class Navbars extends React.Component {
   constructor(props) {
     super(props);
@@ -67,7 +69,11 @@ class Navbars extends React.Component {
         <div id="navbar">
           {/* <div className="navigation-example"> */}
           {/* Navbar Transparent */}
-          <Navbar className="navbar-transparent" expand="lg">
+          <Navbar
+            className="navbar-transparent"
+            expand="lg"
+            style={{ position: "fixed" }}
+          >
             <Container>
               <div className="navbar-translate">
                 <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
@@ -89,13 +95,24 @@ class Navbars extends React.Component {
               >
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <Link to="/landing">Home</Link>
+                    <button class="dropbtn">
+                      <Link to="/landing">Home</Link>
+                    </button>
                     {/* <Link to="/landing">
                       <DropdownToggle>Home</DropdownToggle>
                     </Link> */}
                   </NavItem>
 
-                  <NavItem>
+                  <div class="dropdown">
+                    <button class="dropbtn">Tentang Kami</button>
+                    <div class="dropdown-content">
+                      <Link to="/tentangkami">Tentang Kami</Link>
+                      <Link to="/cabang">Cabang Kami</Link>
+                      <Link to="/rekeningterpisah">Rekening Terpisah</Link>
+                      <Link to="/legalitas">Legalitas</Link>
+                    </div>
+                  </div>
+                  {/* <NavItem>
                     <Dropdown
                       onMouseOver={this.onMouseEnter}
                       onMouseLeave={this.onMouseLeave}
@@ -118,16 +135,34 @@ class Navbars extends React.Component {
                         </Link>
                       </DropdownMenu>
                     </Dropdown>
-                  </NavItem>
+                  </NavItem> */}
+
+                  <div class="dropdown">
+                    <button class="dropbtn">Trading Online</button>
+                    <div class="dropdown-content">
+                      <Link to="/forexgold">Forex & Gold</Link>
+                      <Link to="/cfd">CFD</Link>
+                      <Link to="/indexfutures">Index Futures</Link>
+                      <Link to="/komoditi">Komoditi</Link>
+                    </div>
+                  </div>
+
+                  <div class="dropdown">
+                    <button class="dropbtn">Layanan</button>
+                    <div class="dropdown-content">
+                      <Link to="/forexgold">Berita dan analisa Market</Link>
+                    </div>
+                  </div>
 
                   <NavItem>
-                    <Link to="/layanan">Layanan</Link>
+                    <button class="dropbtn">
+                      <Link to="/karir">Karir</Link>
+                    </button>
                   </NavItem>
                   <NavItem>
-                    <Link to="/karir">Karir</Link>
-                  </NavItem>
-                  <NavItem>
-                    <Link to="/hubungikami">Hubungi Kami</Link>
+                    <button class="dropbtn">
+                      <Link to="/hubungikami">Hubungi Kami</Link>
+                    </button>
                   </NavItem>
                 </Nav>
               </UncontrolledCollapse>

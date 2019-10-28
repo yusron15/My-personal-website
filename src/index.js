@@ -54,6 +54,8 @@ import Legalitas from "views/layout/Legalitas.jsx";
 import Cabang from "views/layout/Cabang.jsx";
 import Cfd from "views/layout/Cfd.jsx";
 import ForexGold from "views/layout/ForexGold.jsx";
+import Komoditi from "views/layout/Komoditi.jsx";
+import IndexFutures from "views/layout/IndexFutures.jsx";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -68,6 +70,11 @@ ReactDOM.render(
       <Route path="/Cabang" render={props => <Cabang {...props} />} />
       <Route path="/cfd" render={props => <Cfd {...props} />} />
       <Route path="/ForexGold" render={props => <ForexGold {...props} />} />
+      <Route path="/komoditi" render={props => <Komoditi {...props} />} />
+      <Route
+        path="/IndexFutures"
+        render={props => <IndexFutures {...props} />}
+      />
       <Route path="/index" render={props => <Index {...props} />} />
       <Route
         path="/presentation"

@@ -45,7 +45,7 @@ class Features extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col md="4 offset-m-1">
+                <Col md="4">
                   <Col>
                     <div className="info info-horizontal">
                       <div className="icon icon-success">
@@ -121,10 +121,7 @@ class Features extends React.Component {
                         <h3 className="info-title" style={{ color: "black" }}>
                           Future Index
                         </h3>
-                        <p>
-                          Alternatif investasi di saham perdagangan yang bisa
-                          meminimalkan risiko fluktuasi harga.
-                        </p>
+                        <p>Alternatif investasi di saham perdagangan</p>
                         <Button
                           className="btn-link"
                           color="info"

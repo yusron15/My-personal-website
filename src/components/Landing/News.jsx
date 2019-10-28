@@ -17,6 +17,7 @@
 import React from "react";
 // ReactJS plugin for a nice carousel
 import Slick from "react-slick";
+import "../../assets/css/helper.css";
 
 // reactstrap components
 import {
@@ -44,6 +45,8 @@ import work from "assets/img/work.png";
 const styleCard = {
   backgroundImage: "url(" + require("assets/img/work.png") + ")",
   height: "70vh",
+  // width: "25vw",
+  // marginRight: "50px;",
   backgroundSize: "cover"
 };
 
@@ -229,7 +232,55 @@ class News extends React.Component {
           >
             <Container fluid>
               <Row>
-                <Col md="12">
+                <Col md="6" style={{ padding: "15vh 0 0 5vw" }}>
+                  <h1 className="title">Analisa Harian</h1>
+                  <p className="description text-white">
+                    <TabContent activeTab={"project" + this.state.activeTab}>
+                      <TabPane tabId="project1">
+                        <Col>
+                          <p className="description mb-5">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur.
+                          </p>
+                        </Col>
+                      </TabPane>
+                      <TabPane tabId="project2">
+                        <Col>
+                          <p className="description mb-5">
+                            Add your information here for News 2.
+                          </p>
+                        </Col>
+                      </TabPane>
+                      <TabPane tabId="project3">
+                        <Col>
+                          <p className="description mb-5">
+                            Add your information here for News 3.
+                          </p>
+                        </Col>
+                      </TabPane>
+                      <TabPane tabId="project4">
+                        <Col>
+                          <p className="description mb-5">
+                            Add your information here for News 4.
+                          </p>
+                        </Col>
+                      </TabPane>
+                      <TabPane tabId="project5">
+                        <Col>
+                          <p className="description mb-5">
+                            Add your information here for News 5.
+                          </p>
+                        </Col>
+                      </TabPane>
+                    </TabContent>
+                  </p>
+                </Col>
+                <Col md="6">
                   <Slick {...this.state.slickSettings}>
                     <div>
                       <NavLink
@@ -267,31 +318,78 @@ class News extends React.Component {
                         style={styleCard}
                       ></NavLink>
                     </div>
-                    {/* <div> */}
-                    <NavLink
-                      className={this.state.activeTab === "4" ? "active" : ""}
-                      onClick={() => {
-                        this.toggle("4");
-                      }}
-                      style={styleCard}
-                    >
-                      <p className="description text-white">
-                        {/* {`"Artist is a term applied to a person who engages in an activity deemed to be an art. An artist also may be defined unofficially as "a person who expresses him- or herself through a medium". He is a descriptive term applied to a person who engages in an activity deemed to be an art."`} */}
-                      </p>
-                      <div className="author">
-                        {/* <img
-                            alt="..."
-                            className="avatar img-raised"
-                            src={require("assets/img/james.jpg")}
-                          /> */}
-                        {/* <span>Michael Jenos</span> */}
-                      </div>
-                    </NavLink>
-                    {/* </div> */}
+                    <div>
+                      <NavLink
+                        className={this.state.activeTab === "5" ? "active" : ""}
+                        onClick={() => {
+                          this.toggle("5");
+                        }}
+                        style={styleCard}
+                      ></NavLink>
+                    </div>{" "}
                   </Slick>
                 </Col>
-                <Col className="positioned" lg="4" md="8" xs="10">
-                  <h1 className="title">Berita Ekonomi</h1>
+              </Row>
+            </Container>
+          </div>
+
+          <div
+            className="testimonials-4"
+            style={{ backgroundColor: "black", paddingTop: 0 }}
+          >
+            <Container fluid>
+              <Row>
+                <Col md="6">
+                  <Slick {...this.state.slickSettings}>
+                    <div>
+                      <NavLink
+                        className={this.state.activeTab === "1" ? "active" : ""}
+                        onClick={() => {
+                          this.toggle("1");
+                        }}
+                        style={styleCard}
+                      ></NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        className={this.state.activeTab === "2" ? "active" : ""}
+                        onClick={() => {
+                          this.toggle("2");
+                        }}
+                        style={styleCard}
+                      ></NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        className={this.state.activeTab === "3" ? "active" : ""}
+                        onClick={() => {
+                          this.toggle("3");
+                        }}
+                        style={styleCard}
+                      ></NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        className={this.state.activeTab === "4" ? "active" : ""}
+                        onClick={() => {
+                          this.toggle("4");
+                        }}
+                        style={styleCard}
+                      ></NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        className={this.state.activeTab === "5" ? "active" : ""}
+                        onClick={() => {
+                          this.toggle("5");
+                        }}
+                        style={styleCard}
+                      ></NavLink>
+                    </div>{" "}
+                  </Slick>
+                </Col>
+                <Col md="6">
+                  <h1 className="title">Analisa Harian</h1>
                   <p className="description text-white">
                     <TabContent activeTab={"project" + this.state.activeTab}>
                       <TabPane tabId="project1">
@@ -328,24 +426,16 @@ class News extends React.Component {
                           </p>
                         </Col>
                       </TabPane>
+                      <TabPane tabId="project5">
+                        <Col>
+                          <p className="description mb-5">
+                            Add your information here for News 5.
+                          </p>
+                        </Col>
+                      </TabPane>
                     </TabContent>
-                    {/* <NewsContent id={textNews.id} content={textNews.content} /> */}
                   </p>
                 </Col>
-                {/* <Button
-                  className="btn-round btn-icon btn-simple slick-arrow"
-                  // color="primary"
-                  aria-label="Next"
-                  type="button"
-                  // style={{ backgroundColor: "white" }}
-                >
-                  <i
-                    className="tim-icons icon-minimal-right"
-                    onClick={() => {
-                      this.toggle("2");
-                    }}
-                  />
-                </Button> */}
               </Row>
             </Container>
           </div>
