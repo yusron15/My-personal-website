@@ -56,6 +56,11 @@ import Cfd from "views/layout/Cfd.jsx";
 import ForexGold from "views/layout/ForexGold.jsx";
 import Komoditi from "views/layout/Komoditi.jsx";
 import IndexFutures from "views/layout/IndexFutures.jsx";
+import ProTrader from "views/layout/ProTrader.jsx";
+import TopgrowthTrader from "views/layout/TopgrowthTrader.jsx";
+import NewsPage from "views/layout/NewsPage.jsx";
+import Contact from "views/layout/Contact.jsx";
+import Karir from "views/layout/Karir.jsx";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -75,6 +80,14 @@ ReactDOM.render(
         path="/IndexFutures"
         render={props => <IndexFutures {...props} />}
       />
+      <Route path="/ProTrader" render={props => <ProTrader {...props} />} />
+      <Route
+        path="/TopgrowthTrader"
+        render={props => <TopgrowthTrader {...props} />}
+      />
+      <Route path="/NewsPage" render={props => <NewsPage {...props} />} />
+      <Route path="/Contact" render={props => <Contact {...props} />} />
+      <Route path="/Karir" render={props => <Karir {...props} />} />
       <Route path="/index" render={props => <Index {...props} />} />
       <Route
         path="/presentation"

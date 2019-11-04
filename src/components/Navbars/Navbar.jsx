@@ -144,6 +144,8 @@ class Navbars extends React.Component {
                       <Link to="/cfd">CFD</Link>
                       <Link to="/indexfutures">Index Futures</Link>
                       <Link to="/komoditi">Komoditi</Link>
+                      <Link to="/protrader">Pro | Trader</Link>
+                      <Link to="/topgrowthtrader">Topgrowth Trader</Link>
                     </div>
                   </div>
 
@@ -161,7 +163,7 @@ class Navbars extends React.Component {
                   </NavItem>
                   <NavItem>
                     <button class="dropbtn">
-                      <Link to="/hubungikami">Hubungi Kami</Link>
+                      <Link to="/Contact">Hubungi Kami</Link>
                     </button>
                   </NavItem>
                 </Nav>
