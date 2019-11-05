@@ -70,9 +70,17 @@ class Navbars extends React.Component {
           {/* <div className="navigation-example"> */}
           {/* Navbar Transparent */}
           <Navbar
-            className="navbar-transparent"
+            style={{
+              backgroundColor: "black",
+              position: "fixed"
+            }}
+            // className="blur-bg"
             expand="lg"
-            style={{ position: "fixed" }}
+            // style={{ position: "fixed" }}
+            // style={{
+            //   backgroundImage: "url(" + require("assets/img/benefit.png") + ")",
+            //   backgroundSize: "cover"
+            // }}
           >
             <Container>
               <div className="navbar-translate">

@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbars/Navbar.jsx";
+import TopNavbar from "../../components/Navbars/DarkNavbar.jsx";
 import HeaderLanding from "../../components/Landing/HeaderLanding.jsx";
 import News from "../../components/Landing/News.jsx";
 import Feature from "../../components/Landing/Feature.jsx";
@@ -14,6 +15,7 @@ class Landing extends React.Component {
     return (
       <>
         {/* <Navbar /> */}
+        {/* <TopNavbar /> */}
         <HeaderLanding />
         <News />
         <Feature />

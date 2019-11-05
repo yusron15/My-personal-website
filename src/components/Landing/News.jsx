@@ -44,7 +44,9 @@ import work from "assets/img/work.png";
 
 const styleCard = {
   backgroundImage: "url(" + require("assets/img/work.png") + ")",
-  height: "70vh",
+  height: "50vh",
+  width: "auto",
+  // width: "15vw"
   // width: "25vw",
   // marginRight: "50px;",
   backgroundSize: "cover"
@@ -82,48 +84,6 @@ const NextButton = props => {
   );
 };
 
-// onClick={this.toggle("1") + 1}
-
-// let slickSettings = {
-//   dots: false,
-//   infinite: true,
-//   centerMode: true,
-//   slidesToShow: 4,
-//   slidesToScroll: 1,
-//   prevArrow: <PrevButton />,
-//   nextArrow: <NextButton />,
-//   className: "center slider",
-//   slide: "section",
-//   responsive: [
-//     {
-//       breakpoint: 1024,
-//       settings: {
-//         slidesToShow: 3,
-//         slidesToScroll: 1,
-//         infinite: true
-//       }
-//     },
-//     {
-//       breakpoint: 600,
-//       settings: {
-//         slidesToShow: 2,
-//         slidesToScroll: 1
-//       }
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1
-//       }
-//     }
-//     // You can unslick at a given breakpoint now by adding:
-//     // settings: "unslick"
-//     // instead of a settings object
-//   ]
-// };
-
-// console.log(NewsContent, "HAHAHAHAHAHA");
 class News extends React.Component {
   state = {
     carousel1Index: 0,

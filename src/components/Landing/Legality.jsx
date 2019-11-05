@@ -62,11 +62,16 @@ class Projects extends React.Component {
       <>
         <div className="cd-section" id="projects">
           {/* ********* PROJECTS 2 ********* */}
-          <div className="projects-2 project-raised" style={{backgroundColor:"white"}}>
+          <div
+            className="projects-2 project-raised"
+            style={{ backgroundColor: "white" }}
+          >
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto text-center mb-5" lg="8">
-                  <h2 className="title" style={{color:"black"}}>Legalitas</h2>
+                  <h2 className="title" style={{ color: "black" }}>
+                    Legalitas
+                  </h2>
                   <h4 className="description">
                     Trello’s boards, lists, and cards enable you to organize and
                     prioritize your projects in a fun, flexible and rewarding
@@ -90,19 +95,19 @@ class Projects extends React.Component {
                     <i className="tim-icons icon-spaceship" />
                     Project 1
                   </NavLink> */}
-                  <img src={ostrich} height="100" width="auto"/>
+                  <img src={ostrich} height="100" width="auto" />
                 </NavItem>
                 <NavItem className="m-auto">
-                <img src={ostrich} height="100" width="auto"/>
+                  <img src={ostrich} height="100" width="auto" />
                 </NavItem>
                 <NavItem className="m-auto">
-                <img src={ostrich} height="100" width="auto"/>
+                  <img src={ostrich} height="100" width="auto" />
                 </NavItem>
                 <NavItem className="m-auto">
-                <img src={ostrich} height="100" width="auto"/>
+                  <img src={ostrich} height="100" width="auto" />
                 </NavItem>
                 <NavItem className="mx-auto">
-                <img src={ostrich} height="100" width="auto"/>
+                  <img src={ostrich} height="100" width="auto" />
                 </NavItem>
               </Nav>
             </Container>

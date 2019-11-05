@@ -57,7 +57,7 @@ class Content extends React.Component {
           >
             <Navbar />
             <Container>
-              <div className="space-50" />
+              <div className="space-50" style={{ paddingTop: "150px" }} />
               <Col>
                 <Row>
                   <Col md="8">

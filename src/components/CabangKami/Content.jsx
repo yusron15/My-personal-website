@@ -44,7 +44,8 @@ import Navbar from "../../components/Navbars/Navbar.jsx";
 
 const styleCard = {
   backgroundImage: "url(" + require("assets/img/work.png") + ")",
-  height: "70vh",
+  height: "50vh",
+  width: "auto",
   backgroundSize: "cover"
 };
 

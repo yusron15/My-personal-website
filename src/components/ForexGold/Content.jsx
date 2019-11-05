@@ -31,6 +31,8 @@ import fg1 from "../../assets/img/forexgold1.png";
 import fg2 from "../../assets/img/forexgold2.png";
 import fg3 from "../../assets/img/forexgold3.png";
 
+import "../../assets/css/main.css";
+
 const textTitle = {
   textAlign: "left",
   fontStyle: "Helvetica Bold",
@@ -39,16 +41,14 @@ const textTitle = {
   color: "white"
 };
 
-const textTitleContent = {
+const textContent = {
   textAlign: "left",
   fontStyle: "Helvetica Bold",
-  fontSize: "1.5rem",
-  fontWeight: "bold",
-  color: "white"
-};
-
-const textContent = {
-  textAlign: "left"
+  margin: 0,
+  position: "absolute",
+  top: "50%",
+  msTransform: "translateY(-50%)",
+  transform: "translateY(-50%)"
 };
 
 class Features extends React.Component {
@@ -67,7 +67,7 @@ class Features extends React.Component {
                   >
                     FOREX & GOLD
                   </div>
-                  <p style={textContent}>
+                  <p style={{ textAlign: "left" }}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -91,29 +91,31 @@ class Features extends React.Component {
                       </div>
                     </Col>
                     <Col lg="8">
-                      <div style={textTitleContent}>
-                        KEUNTUNGAN TRANSAKSI FOREX
+                      <div style={textContent}>
+                        <div className="title-content">
+                          KEUNTUNGAN TRANSAKSI FOREX
+                        </div>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                          nostrud exercitation ullamco laboris nisi ut aliquip
+                          ex ea commodo consequat. Lorem ipsum dolor sit amet,
+                          consectetur adipiscing elit, sed do eiusmod tempor
+                          incididunt ut labore et dolore magna aliqua. Ut enim
+                          ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat. Lorem
+                          ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud
+                          exercitation ullamco laboris nisi ut aliquip ex ea
+                          commodo consequat. Lorem ipsum dolor sit amet,
+                          consectetur adipiscing elit, sed do eiusmod tempor
+                          incididunt ut labore et dolore magna aliqua. Ut enim
+                          ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>{" "}
                       </div>
-                      <p style={textContent}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat.
-                      </p>
                     </Col>
                   </Row>
                 </Col>
@@ -126,29 +128,31 @@ class Features extends React.Component {
                 >
                   <Row>
                     <Col lg="8">
-                      <div style={textTitleContent}>
-                        KEUNGGULAN TRANSAKSI FOREX BERSAMA TOPGROWTH
+                      <div style={textContent}>
+                        <div className="title-content">
+                          KEUNGGULAN TRANSAKSI FOREX BERSAMA TOPGROWTH
+                        </div>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                          nostrud exercitation ullamco laboris nisi ut aliquip
+                          ex ea commodo consequat. Lorem ipsum dolor sit amet,
+                          consectetur adipiscing elit, sed do eiusmod tempor
+                          incididunt ut labore et dolore magna aliqua. Ut enim
+                          ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat. Lorem
+                          ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud
+                          exercitation ullamco laboris nisi ut aliquip ex ea
+                          commodo consequat. Lorem ipsum dolor sit amet,
+                          consectetur adipiscing elit, sed do eiusmod tempor
+                          incididunt ut labore et dolore magna aliqua. Ut enim
+                          ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>{" "}
                       </div>
-                      <p style={textContent}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat.
-                      </p>
                     </Col>
                     <Col lg="4">
                       <div className="card-image">
@@ -175,27 +179,29 @@ class Features extends React.Component {
                       </div>
                     </Col>
                     <Col lg="8">
-                      <div style={textTitleContent}>GOLD</div>
-                      <p style={textContent}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat.
-                      </p>
+                      <div style={textContent}>
+                        <div className="title-content">GOLD</div>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                          nostrud exercitation ullamco laboris nisi ut aliquip
+                          ex ea commodo consequat. Lorem ipsum dolor sit amet,
+                          consectetur adipiscing elit, sed do eiusmod tempor
+                          incididunt ut labore et dolore magna aliqua. Ut enim
+                          ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat. Lorem
+                          ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud
+                          exercitation ullamco laboris nisi ut aliquip ex ea
+                          commodo consequat. Lorem ipsum dolor sit amet,
+                          consectetur adipiscing elit, sed do eiusmod tempor
+                          incididunt ut labore et dolore magna aliqua. Ut enim
+                          ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>{" "}
+                      </div>
                     </Col>
                   </Row>
                 </Col>
