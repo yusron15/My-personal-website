@@ -6,6 +6,9 @@ import Footer from "../../components/Footers/Footer.jsx";
 
 class TopgrowthTrader extends React.Component {
   state = {};
+  componentDidMount = () => {
+    window.scroll(0, 0);
+  };
   render() {
     return (
       <>

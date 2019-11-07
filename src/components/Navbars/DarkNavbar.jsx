@@ -36,7 +36,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-import logo from "../../assets/img/logotgf.png";
+import logo from "../../assets/img/Bitmap.png";
 
 import "../../assets/css/main.css";
 
@@ -85,8 +85,8 @@ class Navbars extends React.Component {
             <Container>
               <div className="navbar-translate">
                 <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                  {/* <img src={logo} /> */}
-                  TGF
+                  <img src={logo} />
+                  {/* TGF */}
                 </NavbarBrand>
                 <button
                   className="navbar-toggler"

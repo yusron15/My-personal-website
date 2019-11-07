@@ -28,7 +28,7 @@ import {
   Col
 } from "reactstrap";
 
-import Navbar from "../../components/Navbars/Navbar";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar";
 
 import "../../assets/css/main.css";
 
@@ -38,16 +38,24 @@ class Blogs extends React.Component {
       <>
         <div className="cd-section" id="blogs">
           {/* ********* END BLOGS 5 ********* */}
-          <Navbar />
+          <ColoredNavbar />
           <div className="blogs-5 black-news">
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto" md="10">
-                  <h2 className="title text-center">Karir</h2>
-                  <p className="description">
+                  <h2
+                    className="title text-center"
+                    style={{ paddingTop: "5rem" }}
+                  >
+                    Karir
+                  </h2>
+                  <p className="description font-white">
                     Kami sedang mencari posisi dibawah ini. Apabila lowongan
-                    dibawah ini sesuai dengan keahlian anda, silakan kirim
-                    resume anda ke hrd@topgrowthfutures.com{" "}
+                    dibawah ini sesuai dengan <br /> keahlian anda, silakan
+                    kirim resume anda ke{" "}
+                    <b>
+                      <i>hrd@topgrowthfutures.com</i>
+                    </b>{" "}
                   </p>
                   <Row>
                     <Col lg="4" md="6">

@@ -21,6 +21,8 @@ import { Badge, Button, Container, Row, Col } from "reactstrap";
 
 import laptop from "../../assets/img/maclanding.jpg";
 
+import "../../assets/css/main.css";
+
 class Features extends React.Component {
   render() {
     return (
@@ -44,132 +46,103 @@ class Features extends React.Component {
                   </h4>
                 </Col>
               </Row>
-              <Row>
-                <Col md="4">
-                  <Col>
-                    <div className="info info-horizontal">
-                      <div className="icon icon-success">
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          src={require("assets/img/feature-blob/success.png")}
-                        />
-                        <i className="tim-icons icon-html5" />
+              <Col className="ml-auto mr-auto" md="9">
+                <Row>
+                  <Col md="4">
+                    <Col>
+                      <div className="info info-horizontal">
+                        <div className="icon icon-success">
+                          <img
+                            alt="..."
+                            src={require("assets/img/foreign.png")}
+                          />
+                        </div>
+                        <div className="description">
+                          <h3
+                            className="info-title"
+                            style={{ color: "black", fontSize: "1.2rem" }}
+                          >
+                            Foreign Exchange
+                          </h3>
+                          <p style={{ textAlign: "left", fontSize: "0.8rem" }}>
+                            Forex pasar keuangan populer di dunia.
+                          </p>
+                        </div>
                       </div>
-                      <div className="description">
-                        <h3 className="info-title" style={{ color: "black" }}>
-                          Foreign Exchange
-                        </h3>
-                        <p>
-                          Forex adalah pasar keuangan yang paling populer di
-                          dunia.
-                        </p>
-                        <Button
-                          className="btn-link"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          Explore now{" "}
-                          <i className="tim-icons icon-minimal-right" />
-                        </Button>
+                      <div className="info info-horizontal">
+                        <div className="icon icon-warning">
+                          <img
+                            alt="..."
+                            src={require("assets/img/cfdicon.png")}
+                          />
+                        </div>
+                        <div className="description">
+                          <h3
+                            className="info-title"
+                            style={{ color: "black", fontSize: "1.2rem" }}
+                          >
+                            CFD
+                          </h3>
+                          <p style={{ textAlign: "left", fontSize: "0.8rem" }}>
+                            CFD menawarkan kesempatan untuk membangun portofolio
+                            yang beragam, multiproduk dari satu akun.
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="info info-horizontal">
-                      <div className="icon icon-warning">
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          src={require("assets/img/feature-blob/warning.png")}
-                        />
-                        <i className="tim-icons icon-heart-2" />
-                      </div>
-                      <div className="description">
-                        <h3 className="info-title" style={{ color: "black" }}>
-                          CFD
-                        </h3>
-                        <p>
-                          CFD menawarkan kesempatan untuk membangun portofolio
-                          yang beragam, multiproduk dari satu akun.
-                        </p>
-                        <Button
-                          className="btn-link"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          Explore now{" "}
-                          <i className="tim-icons icon-minimal-right" />
-                        </Button>
-                      </div>
-                    </div>
+                    </Col>
                   </Col>
-                </Col>
 
-                <Col md="4">
-                  <Col>
-                    <div className="info info-horizontal">
-                      <div className="icon icon-success">
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          src={require("assets/img/feature-blob/success.png")}
-                        />
-                        <i className="tim-icons icon-html5" />
+                  <Col md="4">
+                    <Col>
+                      <div className="info info-horizontal">
+                        <div className="icon icon-success">
+                          <img
+                            alt="..."
+                            src={require("assets/img/futureicon.png")}
+                          />
+                        </div>
+                        <div className="description">
+                          <h3
+                            className="info-title"
+                            style={{ color: "black", fontSize: "1.2rem" }}
+                          >
+                            Future Index
+                          </h3>
+                          <p style={{ textAlign: "left", fontSize: "0.8rem" }}>
+                            Alternatif investasi di saham perdagangan
+                          </p>
+                        </div>
                       </div>
-                      <div className="description">
-                        <h3 className="info-title" style={{ color: "black" }}>
-                          Future Index
-                        </h3>
-                        <p>Alternatif investasi di saham perdagangan</p>
-                        <Button
-                          className="btn-link"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          Explore now{" "}
-                          <i className="tim-icons icon-minimal-right" />
-                        </Button>
+                      <div className="info info-horizontal">
+                        <div className="icon icon-warning">
+                          <img
+                            alt="..."
+                            src={require("assets/img/komoditiicon.png")}
+                          />
+                        </div>
+                        <div className="description">
+                          <h3
+                            className="info-title"
+                            style={{ color: "black", fontSize: "1.2rem" }}
+                          >
+                            Komoditi
+                          </h3>
+                          <p style={{ textAlign: "left", fontSize: "0.8rem" }}>
+                            Komoditi adalah subjek kontrak berjangka yang
+                            diperdagangkan di Bursa Berjangka.
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="info info-horizontal">
-                      <div className="icon icon-warning">
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          src={require("assets/img/feature-blob/warning.png")}
-                        />
-                        <i className="tim-icons icon-heart-2" />
-                      </div>
-                      <div className="description">
-                        <h3 className="info-title" style={{ color: "black" }}>
-                          Komoditi
-                        </h3>
-                        <p>
-                          Komoditi adalah subjek kontrak berjangka yang
-                          diperdagangkan di Bursa Berjangka.
-                        </p>
-                        <Button
-                          className="btn-link"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          Explore now{" "}
-                          <i className="tim-icons icon-minimal-right" />
-                        </Button>
-                      </div>
-                    </div>
+                    </Col>
                   </Col>
-                </Col>
 
-                <Col md="4">
-                  <Col>
-                    <img src={laptop} />
+                  <Col md="4">
+                    <Col>
+                      <img src={laptop} />
+                    </Col>
                   </Col>
-                </Col>
-              </Row>
+                </Row>
+              </Col>
               {/* <Row>
                 <Col className="ml-auto" md="5">
                   <div className="info info-horizontal">

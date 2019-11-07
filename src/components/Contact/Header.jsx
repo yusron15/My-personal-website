@@ -42,7 +42,7 @@ import {
 } from "reactstrap";
 
 // core components
-import Navbar from "../../components/Navbars/Navbar.jsx";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 
 import "../../assets/css/main.css";
 
@@ -50,9 +50,9 @@ class ContactUs extends React.Component {
   render() {
     return (
       <>
-        <Navbar />
+        <ColoredNavbar />
         <div className="wrapper" ref="wrapper">
-          <div className="page-header header-filter contactus-3">
+          <div className="page-header header-filter">
             <div
               className="page-header-image"
               style={{
@@ -62,12 +62,12 @@ class ContactUs extends React.Component {
             />
             <Container>
               <Row>
-                <Col className="text-center" md="12">
-                  <h1>Ada pertanyaan?</h1>
-                  <h5>
+                <Col className="text-center vertical-center" md="12">
+                  <h1 className="title">Ada pertanyaan?</h1>
+                  <h4 className="desc">
                     Kami mengharapkan anda untuk ikut membicarakan apa yang anda
                     inginkan.
-                  </h5>
+                  </h4>
                 </Col>
               </Row>
             </Container>

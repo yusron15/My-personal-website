@@ -83,6 +83,7 @@ class Projects extends React.Component {
     }
   };
   render() {
+    console.log(this.state.content[2].kbi);
     return (
       <>
         <div className="cd-section" id="projects">
@@ -109,45 +110,35 @@ class Projects extends React.Component {
                 <TabPane tabId="project1">
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                      condimentum nibh, ut fermentum massa justo sit amet risus
-                      montes, nascetur ridiculus mus. Fusce dapibus, tellus ac
-                      cursus commodo, tortor mauris condimentum nibh, ut
-                      fermentum massa justo sit amet risus montes, nascetur
-                      ridiculus mus.Fusce dapibus, tellus ac cursus commodo,
-                      tortor mauris condimentum nibh, ut fermentum massa justo
-                      sit amet risus montes, nascetur ridiculus mus.Fusce
-                      dapibus, tellus ac cursus commodo, tortor mauris
-                      condimentum nibh, ut fermentum massa justo sit amet risus
-                      montes, nascetur ridiculus mus.
+                      {this.state.content[0].bappebti}
                     </p>
                   </Col>
                 </TabPane>
                 <TabPane tabId="project2">
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
-                      Add your information here for Project2.
+                      {this.state.content[1].jfx}
                     </p>
                   </Col>
                 </TabPane>
                 <TabPane tabId="project3">
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
-                      Add your information here for Project3.
+                    {this.state.content[2].kbi}
                     </p>
                   </Col>
                 </TabPane>
                 <TabPane tabId="project4">
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
-                      Add your information here for Project4.
+                    {this.state.content[3].ich}
                     </p>
                   </Col>
                 </TabPane>
                 <TabPane tabId="project5">
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
-                      Add your information here for Project5.
+                    {this.state.content[4].icdx}
                     </p>
                   </Col>
                 </TabPane>

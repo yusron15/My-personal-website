@@ -167,7 +167,10 @@ const PrevButton = props => {
       color="primary"
       aria-label="Previous"
       type="button"
-      onClick={props.onClick}
+      onClick={some => {
+        console.log(some);
+        props.onClick();
+      }}
     >
       <i className="tim-icons icon-minimal-left" />
     </Button>
@@ -181,6 +184,10 @@ const NextButton = props => {
       color="primary"
       aria-label="Next"
       type="button"
+      onClick={some => {
+        console.log(some);
+        // props.onClick();
+      }}
     >
       <i className="tim-icons icon-minimal-right" onClick={props.onClick} />
     </Button>
@@ -197,6 +204,9 @@ let slickSettings = {
   nextArrow: <NextButton />,
   className: "center slider",
   slide: "section",
+  // beforeChange: (current, next) =>
+  //   this.setState({ oldSlide: current, activeSlide: next }),
+  // afterChange: current => this.setState({ activeSlide2: current }),
   responsive: [
     {
       breakpoint: 1024,

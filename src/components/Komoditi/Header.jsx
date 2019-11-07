@@ -38,7 +38,7 @@ import {
   Row,
   Col
 } from "reactstrap";
-import Navbar from "../../components/Navbars/Navbar.jsx";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 class Headers extends React.Component {
   state = {};
   render() {
@@ -54,7 +54,7 @@ class Headers extends React.Component {
               backgroundSize: "cover"
             }}
           >
-            <Navbar />
+            <ColoredNavbar />
             <div className="header-wrapper">
               <div className="page-header">
                 <Container>

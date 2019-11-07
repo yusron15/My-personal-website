@@ -171,7 +171,8 @@ class Content extends React.Component {
                         <Col className="ml-auto" md="6">
                           <Button
                             className="btn-round pull-right"
-                            color="primary"
+                            color="info"
+                            // style={{ backgroundColor: "#3467D6" }}
                           >
                             Send Message
                           </Button>

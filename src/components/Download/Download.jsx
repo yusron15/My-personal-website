@@ -19,7 +19,7 @@ import React from "react";
 // reactstrap components
 import { Badge, Button, Container, Row, Col } from "reactstrap";
 
-import laptop from "../../assets/img/platform.jpg";
+import laptop from "../../assets/img/download.png";
 import android from "../../assets/img/downloadandroid.png";
 
 class Features extends React.Component {
@@ -43,7 +43,7 @@ class Features extends React.Component {
               <Row>
                 <Col md="6">
                   <Col>
-                    <img src={laptop} height="500" width="auto" />
+                    <img src={laptop} height="250" width="auto" />
                   </Col>
                 </Col>
                 <Col md="6">

@@ -194,7 +194,7 @@ class Content extends React.Component {
           {/* ********* TESTIMONIALS 4 ********* */}
           <div
             className="testimonials-4"
-            style={{ backgroundColor: "black", paddingTop: 0 }}
+            style={{ backgroundColor: "#1D1E1F", paddingTop: 0 }}
           >
             <Navbar />
             <Container fluid>

@@ -166,10 +166,11 @@ const items2 = [
 const PrevButton = props => {
   return (
     <Button
-      className="btn-round btn-icon btn-simple slick-prev slick-arrow"
+      className="btn-round btn-icon btn-simple slick-prev slick-arrow bg-white"
       color="primary"
       aria-label="Previous"
       type="button"
+      style={{ backgroundColor: "white" }}
       onClick={props.onClick}
     >
       <i className="tim-icons icon-minimal-left" />
@@ -180,10 +181,11 @@ const PrevButton = props => {
 const NextButton = props => {
   return (
     <Button
-      className="btn-round btn-icon btn-simple slick-next slick-arrow"
+      className="btn-round btn-icon btn-simple slick-next slick-arrow bg-white"
       color="primary"
       aria-label="Next"
       type="button"
+      style={{ backgroundColor: "white" }}
     >
       <i className="tim-icons icon-minimal-right" onClick={props.onClick} />
     </Button>
@@ -266,94 +268,87 @@ class Testimonials extends React.Component {
       <>
         <div className="cd-section" id="testimonials">
           {/* ********* TESTIMONIALS 4 ********* */}
-          <div className="testimonials-4" style={{backgroundImage: `url(${Benefit})`, backgroundSize:"cover"}}>
+          <div
+            className="testimonials-4"
+            style={{
+              backgroundImage: `url(${Benefit})`,
+              backgroundSize: "cover"
+            }}
+          >
             <Container fluid>
               <Row>
-                <Col className="ml-auto mr-auto" md="10">
-                  <h2 className="title">Kenapa bertransaksi di Topgrowth Futures.</h2>
+                <Col className="ml-auto mr-auto" md="9">
+                  <h2 className="title">
+                    Kenapa bertransaksi di Topgrowth Futures.
+                  </h2>
                 </Col>
               </Row>
               <Row>
                 <Col md="12">
                   <Slick {...slickSettings}>
                     <div>
-                      <div className="info text-left">
-                        <p className="description text-white">
-                          {`"Take up one idea. Make that one idea your life"`}
+                      <div
+                        className="info text-left"
+                        style={{ backgroundColor: "rgba(112, 112, 112, 0.19)" }}
+                      >
+                        <p className="title text-white">{`"Biaya Rendah"`}</p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor
                         </p>
-                        <div className="author">
-                          <Button
-                            className="btn-round ml-1"
-                            color="info"
-                            type="button"
-                          >
-                            Round
-                          </Button>
-                        </div>
+                        <div className="author"></div>
                       </div>
                     </div>
                     <div>
-                      <div className="info text-left">
-                        <p className="description text-white">
-                          {`"Take up one idea. Make that one idea your life"`}
+                      <div
+                        className="info text-left"
+                        style={{ backgroundColor: "rgba(112, 112, 112, 0.19)" }}
+                      >
+                        <p className="title text-white">{`"Legalitas Terjamin"`}</p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor
                         </p>
-                        <div className="author">
-                          <Button
-                            className="btn-round ml-1"
-                            color="info"
-                            type="button"
-                          >
-                            Round
-                          </Button>
-                        </div>
+                        <div className="author"></div>
                       </div>
                     </div>
                     <div>
-                      <div className="info text-left">
-                        <p className="description text-white">
-                          {`"Take up one idea. Make that one idea your life"`}
+                      <div
+                        className="info text-left"
+                        style={{ backgroundColor: "rgba(112, 112, 112, 0.19)" }}
+                      >
+                        <p className="title text-white">{`"Layanan Prima"`}</p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor
                         </p>
-                        <div className="author">
-                          <Button
-                            className="btn-round ml-1"
-                            color="info"
-                            type="button"
-                          >
-                            Round
-                          </Button>
-                        </div>
+                        <div className="author"></div>
                       </div>
                     </div>
                     <div>
-                      <div className="info text-left">
-                        <p className="description text-white">
-                          {`"Take up one idea. Make that one idea your life"`}
+                      <div
+                        className="info text-left"
+                        style={{ backgroundColor: "rgba(112, 112, 112, 0.19)" }}
+                      >
+                        <p className="title text-white">{`"Layanan Prima"`}</p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor
                         </p>
-                        <div className="author">
-                          <Button
-                            className="btn-round ml-1"
-                            color="info"
-                            type="button"
-                          >
-                            Round
-                          </Button>
-                        </div>
+                        <div className="author"></div>
                       </div>
                     </div>
                     <div>
-                      <div className="info text-left">
-                        <p className="description text-white">
-                          {`"Take up one idea. Make that one idea your life"`}
+                      <div
+                        className="info text-left"
+                        style={{ backgroundColor: "rgba(112, 112, 112, 0.19)" }}
+                      >
+                        <p className="title text-white">{`"Layanan Prima"`}</p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor
                         </p>
-                        <div className="author">
-                          <Button
-                            className="btn-round ml-1"
-                            color="info"
-                            type="button"
-                          >
-                            Round
-                          </Button>
-                        </div>
+                        <div className="author"></div>
                       </div>
                     </div>
                   </Slick>

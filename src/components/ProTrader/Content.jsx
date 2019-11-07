@@ -36,7 +36,7 @@ import {
   Carousel,
   CarouselItem
 } from "reactstrap";
-import Navbar from "../../components/Navbars/Navbar.jsx";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import bg1 from "../../assets/img/indexfutures1.png";
 
 import "../../assets/css/main.css";
@@ -206,7 +206,7 @@ class Content extends React.Component {
       <>
         <div className="cd-section" id="teams">
           {/* ********* TEAM 1 ********* */}
-          <Navbar />
+          <ColoredNavbar />
           <div className="team-1" style={{ backgroundColor: "black" }}>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="9">

@@ -52,23 +52,30 @@ class Pricing extends React.Component {
       <>
         <div className="cd-section" id="pricing">
           {/* ********* PRICING 3 ********* */}
-          <div className="pricing-3" id="pricing-3" style={{backgroundColor:"black"}}>
+          <div
+            className="pricing-3"
+            id="pricing-3"
+            style={{ backgroundColor: "black" }}
+          >
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="12">
-                  <h2 className="title" style={{textAlign:"left"}}>Tipe Akun</h2>
-                  <h4 className="description" style={{textAlign:"left"}}>
-                  Kini Anda dapat memilih tipe akun sesuai dengan karakter trading anda.
+                  <h2 className="title" style={{ textAlign: "left" }}>
+                    Tipe Akun
+                  </h2>
+                  <h4 className="description" style={{ textAlign: "left" }}>
+                    Kini Anda dapat memilih tipe akun sesuai dengan karakter
+                    trading anda.
                   </h4>
                 </Col>
               </Row>
               <div className="space-50" />
               <Row>
                 <Container>
-                  <Card style={{backgroundColor:"black"}}>
+                  <Card style={{ backgroundColor: "black" }}>
                     <Row>
                       <Col className="pr-0" md="4">
-                        <Card className="card-pricing card-plain" >
+                        <Card className="card-pricing card-plain">
                           <CardHeader>
                             <h4 className="title">Team</h4>
                             <p className="description">
@@ -80,19 +87,28 @@ class Pricing extends React.Component {
                           <CardBody>
                             <ul>
                               <li>
-                                <i className="tim-icons icon-check-2" /> 1000 MB
+                                <div style={{ textAlign: "center" }}>
+                                  <i className="tim-icons icon-check-2" /> 1000
+                                  MB
+                                </div>
                               </li>
                               <li>
-                                <i className="tim-icons icon-email-85" /> 5
-                                emails
+                                <div style={{ textAlign: "center" }}>
+                                  <i className="tim-icons icon-email-85" /> 5
+                                  emails
+                                </div>
                               </li>
                               <li>
-                                <i className="tim-icons icon-chart-bar-32" /> 5
-                                Databases
+                                <div style={{ textAlign: "center" }}>
+                                  <i className="tim-icons icon-chart-bar-32" />{" "}
+                                  5 Databases
+                                </div>
                               </li>
                               <li>
-                                <i className="tim-icons icon-alert-circle-exc" />{" "}
-                                No Support
+                                <div style={{ textAlign: "center" }}>
+                                  <i className="tim-icons icon-alert-circle-exc" />{" "}
+                                  No Support
+                                </div>
                               </li>
                             </ul>
                             <Button
@@ -119,19 +135,28 @@ class Pricing extends React.Component {
                           <CardBody>
                             <ul>
                               <li>
-                                <i className="tim-icons icon-check-2" /> 5000 MB
+                                <div style={{ textAlign: "center" }}>
+                                  <i className="tim-icons icon-check-2" /> 1000
+                                  MB
+                                </div>
                               </li>
                               <li>
-                                <i className="tim-icons icon-email-85" /> 50
-                                emails
+                                <div style={{ textAlign: "center" }}>
+                                  <i className="tim-icons icon-email-85" /> 5
+                                  emails
+                                </div>
                               </li>
                               <li>
-                                <i className="tim-icons icon-chart-bar-32" /> 10
-                                Databases
+                                <div style={{ textAlign: "center" }}>
+                                  <i className="tim-icons icon-chart-bar-32" />{" "}
+                                  5 Databases
+                                </div>
                               </li>
                               <li>
-                                <i className="tim-icons icon-alert-circle-exc" />{" "}
-                                Premium Support
+                                <div style={{ textAlign: "center" }}>
+                                  <i className="tim-icons icon-alert-circle-exc" />{" "}
+                                  No Support
+                                </div>
                               </li>
                             </ul>
                             <Button
@@ -158,20 +183,28 @@ class Pricing extends React.Component {
                           <CardBody>
                             <ul>
                               <li>
-                                <i className="tim-icons icon-check-2" /> 10.000
-                                MB
+                                <div style={{ textAlign: "center" }}>
+                                  <i className="tim-icons icon-check-2" /> 1000
+                                  MB
+                                </div>
                               </li>
                               <li>
-                                <i className="tim-icons icon-email-85" />{" "}
-                                Unlimited emails
+                                <div style={{ textAlign: "center" }}>
+                                  <i className="tim-icons icon-email-85" /> 5
+                                  emails
+                                </div>
                               </li>
                               <li>
-                                <i className="tim-icons icon-chart-bar-32" /> 50
-                                Databases
+                                <div style={{ textAlign: "center" }}>
+                                  <i className="tim-icons icon-chart-bar-32" />{" "}
+                                  5 Databases
+                                </div>
                               </li>
                               <li>
-                                <i className="tim-icons icon-alert-circle-exc" />{" "}
-                                Premium Support
+                                <div style={{ textAlign: "center" }}>
+                                  <i className="tim-icons icon-alert-circle-exc" />{" "}
+                                  No Support
+                                </div>
                               </li>
                             </ul>
                             <Button

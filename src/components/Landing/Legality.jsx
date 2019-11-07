@@ -44,11 +44,36 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
-import ostrich from "../../assets/img/ostrich.png";
+import bappebti from "../../assets/img/legalitas1.png";
+import jfx from "../../assets/img/legalitas2.png";
+import icdx from "../../assets/img/legalitas3.png";
+import kbi from "../../assets/img/legalitas4.png";
+import ich from "../../assets/img/legalitas5.png";
+
+import DarkNavbar from "../../components/Navbars/DarkNavbar.jsx";
+
+import "../../assets/css/main.css";
 
 class Projects extends React.Component {
   state = {
-    activeTab: "1"
+    activeTab: "1",
+    content: [
+      {
+        bappebti: "bappebti"
+      },
+      {
+        jfx: "jfx"
+      },
+      {
+        kbi: "kbi"
+      },
+      {
+        ich: "ich"
+      },
+      {
+        icdx: "icdx"
+      }
+    ]
   };
   toggle = tab => {
     if (this.state.activeTab !== tab) {
@@ -58,56 +83,121 @@ class Projects extends React.Component {
     }
   };
   render() {
+    console.log(this.state.content[2].kbi);
     return (
       <>
         <div className="cd-section" id="projects">
           {/* ********* PROJECTS 2 ********* */}
-          <div
-            className="projects-2 project-raised"
-            style={{ backgroundColor: "white" }}
-          >
+          <div className="project-raised bg-white">
+            <DarkNavbar />
             <Container>
               <Row>
-                <Col className="ml-auto mr-auto text-center mb-5" lg="8">
-                  <h2 className="title" style={{ color: "black" }}>
-                    Legalitas
-                  </h2>
-                  <h4 className="description">
-                    Trello’s boards, lists, and cards enable you to organize and
-                    prioritize your projects in a fun, flexible and rewarding
-                    way.
-                  </h4>
+                <Col className="ml-auto mr-auto text-center" lg="8">
+                  <h2 className="title font-black">Legalitas</h2>
                   <div className="section-space" />
                 </Col>
               </Row>
+
+              <TabContent
+                className="tab-space"
+                activeTab={"project" + this.state.activeTab}
+              >
+                <TabPane tabId="project1">
+                  <Col className="ml-auto mr-auto text-center mt-4" md="8">
+                    <p className="description mb-5">
+                      {this.state.content[0].bappebti}
+                    </p>
+                  </Col>
+                </TabPane>
+                <TabPane tabId="project2">
+                  <Col className="ml-auto mr-auto text-center mt-4" md="8">
+                    <p className="description mb-5">
+                      {this.state.content[1].jfx}
+                    </p>
+                  </Col>
+                </TabPane>
+                <TabPane tabId="project3">
+                  <Col className="ml-auto mr-auto text-center mt-4" md="8">
+                    <p className="description mb-5">
+                      {this.state.content[2].kbi}
+                    </p>
+                  </Col>
+                </TabPane>
+                <TabPane tabId="project4">
+                  <Col className="ml-auto mr-auto text-center mt-4" md="8">
+                    <p className="description mb-5">
+                      {this.state.content[3].ich}
+                    </p>
+                  </Col>
+                </TabPane>
+                <TabPane tabId="project5">
+                  <Col className="ml-auto mr-auto text-center mt-4" md="8">
+                    <p className="description mb-5">
+                      {this.state.content[4].icdx}
+                    </p>
+                  </Col>
+                </TabPane>
+              </TabContent>
+
               <Nav
                 className="nav-pills-info nav-pills-icons nav-pills-lg"
                 pills
                 role="tablist"
               >
                 <NavItem className="m-auto">
-                  {/* <NavLink
+                  <img
+                    src={bappebti}
+                    width="150"
+                    auto="auto"
                     className={this.state.activeTab === "1" ? "active" : ""}
                     onClick={() => {
                       this.toggle("1");
                     }}
-                  >
-                    <i className="tim-icons icon-spaceship" />
-                    Project 1
-                  </NavLink> */}
-                  <img src={ostrich} height="100" width="auto" />
+                  />
                 </NavItem>
                 <NavItem className="m-auto">
-                  <img src={ostrich} height="100" width="auto" />
+                  <img
+                    src={jfx}
+                    width="150"
+                    auto="auto"
+                    className={this.state.activeTab === "2" ? "active" : ""}
+                    onClick={() => {
+                      this.toggle("2");
+                    }}
+                  />
                 </NavItem>
                 <NavItem className="m-auto">
-                  <img src={ostrich} height="100" width="auto" />
+                  <img
+                    src={kbi}
+                    width="150"
+                    auto="auto"
+                    className={this.state.activeTab === "3" ? "active" : ""}
+                    onClick={() => {
+                      this.toggle("3");
+                    }}
+                  />
                 </NavItem>
                 <NavItem className="m-auto">
-                  <img src={ostrich} height="100" width="auto" />
+                  <img
+                    src={ich}
+                    width="150"
+                    auto="auto"
+                    className={this.state.activeTab === "4" ? "active" : ""}
+                    onClick={() => {
+                      this.toggle("4");
+                    }}
+                  />
                 </NavItem>
-                <NavItem className="mx-auto">
-                  <img src={ostrich} height="100" width="auto" />
+                <NavItem className="m-auto">
+                  <img
+                    src={icdx}
+                    width="150"
+                    auto="auto"
+                    className={this.state.activeTab === "5" ? "active" : ""}
+                    onClick={() => {
+                      this.toggle("5");
+                    }}
+                  />
                 </NavItem>
               </Nav>
             </Container>

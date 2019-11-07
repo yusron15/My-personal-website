@@ -57,7 +57,7 @@ class Features extends React.Component {
       <>
         <div className="cd-section" id="features">
           {/* ********* FEATURES 3 ********* */}
-          <div className="features-3" style={{ backgroundColor: "black" }}>
+          <div className="features-3" style={{ backgroundColor: "#1D1E1F" }}>
             <Container fluid>
               <Row>
                 <Col sm={{ size: 6, order: 2, offset: 1 }}>
@@ -207,7 +207,17 @@ class Features extends React.Component {
                 </Col>
               </Row>
             </Container>
+            <hr
+              style={{
+                color: "grey",
+                backgroundColor: "grey",
+                height: 0.5,
+                width: "100vw",
+                borderColor: "grey"
+              }}
+            />
           </div>
+
           {/* ********* END FEATURES 3 ********* */}
         </div>{" "}
       </>

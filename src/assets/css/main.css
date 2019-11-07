@@ -47,6 +47,10 @@
   color: black;
 }
 
+.font-white {
+  color: white;
+}
+
 .bg-white{
   background-color: "white";
 }
@@ -62,6 +66,18 @@
 .black-news{
   background-color: #1D1E1F;
 }
+
+.positioned-left {
+  position: absolute;
+  left: 10%;}
+
+.positioned-right {
+  /* position: absolute; */
+  right: 30%;}
+
+.positioned-text-right {
+  position: absolute;
+  right: 2%;}
 
 .title-content{
   text-align: left;
@@ -80,3 +96,31 @@
 
 .dropdown:hover .dropbtn {background-color: transparent;}
 
+.vertical-center{
+    text-align: left;
+    font-style: Helvetica Bold;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+.scaled {
+  transform: scale(1.2); /* Equal to scaleX(0.7) scaleY(0.7) */
+  /* background-color: pink; */
+}
+
+hr.grey {
+  border-top: 1px solid grey;
+}
+.slick-arrow {
+}
+
+.slick-prev{
+  /* position: absolute;
+  left: calc(100% - 65% - #{$icon-size-regular}); */
+    /* margin-left: 0;
+  left: calc(100% - 65% - 3rem) !important; */
+}

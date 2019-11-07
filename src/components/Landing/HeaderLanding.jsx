@@ -17,7 +17,7 @@ class HeaderLanding extends React.Component {
               backgroundSize: "cover"
             }}
           >
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="page-header">
               {/* <div className="page-header-image" /> */}
 

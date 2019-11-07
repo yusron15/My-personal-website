@@ -36,7 +36,7 @@ import {
   Carousel,
   CarouselItem
 } from "reactstrap";
-import Navbar from "../../components/Navbars/Navbar.jsx";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import bg1 from "../../assets/img/indexfutures1.png";
 
 const textTitle = {
@@ -233,29 +233,31 @@ class Content extends React.Component {
       <>
         <div className="cd-section" id="teams">
           {/* ********* TEAM 1 ********* */}
-          <Navbar />
+          <ColoredNavbar />
           <div className="team-1" style={{ backgroundColor: "black" }}>
-            {/* <Row> */}
-            <Col className="ml-auto mr-auto" md="9">
-              <h1 className="title" style={font}>
-                INDEX FUTURES
-              </h1>
-              <p className="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.{" "}
-              </p>
-            </Col>
-            {/* </Row> */}
+            <Container>
+              <Row>
+                <Col className="ml-auto mr-auto" md="12">
+                  <h1 className="title" style={font}>
+                    INDEX FUTURES
+                  </h1>
+                  <p className="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                  </p>
+                </Col>
+              </Row>
+            </Container>
           </div>
           <div>
             <Carousel

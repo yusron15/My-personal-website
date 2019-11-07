@@ -17,6 +17,7 @@
 import React from "react";
 // ReactJS plugin for a nice carousel
 import Slick from "react-slick";
+import { useSpring, animated } from "react-spring";
 import "../../assets/css/helper.css";
 
 // reactstrap components
@@ -40,7 +41,7 @@ import {
 
 // import { NewsContent } from "./NewsContent";
 
-import work from "assets/img/work.png";
+import work from "assets/img/news1.png";
 
 import "../../assets/css/main.css";
 
@@ -50,39 +51,7 @@ const styleCard = {
   backgroundSize: "cover"
 };
 
-// core components
-
-// custom previous button for the slick component
-// const PrevButton = props => {
-//   return (
-//     <Button
-//       className="btn-round btn-icon btn-simple slick-prev slick-arrow bg-white"
-//       // color="primary"
-//       aria-label="Previous"
-//       type="button"
-//       onClick={props.onClick}
-//       style={{ marginTop: "35px" }}
-//     >
-//       <i className="tim-icons icon-minimal-left" />
-//     </Button>
-//   );
-// };
-// // custom next button for the slick component
-// const NextButton = props => {
-//   return (
-//     <Button
-//       className="btn-round btn-icon btn-simple slick-arrow bg-white"
-//       // color="primary"
-//       aria-label="Next"
-//       type="button"
-//       style={{ marginTop: "35px" }}
-//     >
-//       <i className="tim-icons icon-minimal-right" onClick={props.onClick} />
-//     </Button>
-//   );
-// };
-
-class News extends React.Component {
+class NewsInverted extends React.Component {
   state = {
     carousel1Index: 0,
     carousel2Index: 0,
@@ -91,101 +60,6 @@ class News extends React.Component {
     oldSlide: 0,
     activeSlide: 0,
     activeSlide2: 0
-  };
-
-  // carousel1Index: 0,
-  // carousel2Index: 0,
-  // activeTab: "1",
-  // slickSettings: {
-  //   dots: false,
-  //   infinite: true,
-  //   centerMode: true,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   beforeChange: (oldSlide, newSlide) => {
-  //     if (oldSlide !== newSlide) {
-  //       this.setState({ activeTab: newSlide });
-  //     }
-  //   },
-  //   prevArrow: <PrevButton />,
-  //   nextArrow: <NextButton />,
-  //   className: "center slider",
-  //   slide: "section",
-  //   responsive: [
-  //     {
-  //       breakpoint: 1024,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 1,
-  //         infinite: true
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1
-  //       }
-  //     }
-  //   ]
-  // }
-  // };
-
-  toggle = tab => {
-    if (this.state.activeTab !== tab) {
-      this.setState({
-        activeTab: tab
-      });
-    }
-  };
-
-  onExiting = carousel => {
-    this["carousel" + carousel + "Animating"] = true;
-  };
-
-  onExited = carousel => {
-    this["carousel" + carousel + "Animating"] = false;
-  };
-  next = (carousel, items, tab) => {
-    console.log(this.state["carousel" + carousel + "Index"]);
-    if (this["carousel" + carousel + "Animating"]) return;
-    const nextIndex =
-      this.state["carousel" + carousel + "Index"] === items.length - 1
-        ? 0
-        : this.state["carousel" + carousel + "Index"] + 1;
-    this.setState({
-      ["carousel" + carousel + "Index"]: nextIndex,
-      activeTab: nextIndex
-    });
-  };
-
-  previous = (carousel, items) => {
-    console.log(this.state["carousel" + carousel + "Index"]);
-    if (this["carousel" + carousel + "Animating"]) return;
-    const nextIndex =
-      this.state["carousel" + carousel + "Index"] === 0
-        ? items.length - 1
-        : this.state["carousel" + carousel + "Index"] - 1;
-    this.setState({
-      ["carousel" + carousel + "Index"]: nextIndex,
-      activeTab: nextIndex
-    });
-  };
-
-  goToIndex = (newIndex, carousel) => {
-    console.log(this.state["carousel" + carousel + "Index"]);
-    if (this["carousel" + carousel + "Animating"]) return;
-    this.setState({
-      ["carousel" + carousel + "Index"]: newIndex,
-      activeTab: newIndex
-    });
   };
 
   render() {
@@ -227,29 +101,23 @@ class News extends React.Component {
         }
       ]
     };
+
     return (
       <>
         <div className="cd-section" id="testimonials">
           <div
             className="testimonials-4"
-            style={{ backgroundColor: "#1D1E1F", padding: "0" }}
+            style={{ backgroundColor: "#1D1E1F", padding: "20px" }}
           >
             <Container>
               <Row>
-                <Col
-                  md="12"
-                  // style={{ paddingTop: "15vh" }}
-                >
+                <Col md="12" className="positioned-right">
                   <Slick {...slickSettings}>
                     <div>
                       <NavLink
                         className={this.state.activeSlide === 0 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("1");
-                        // }}
                         style={{
                           ...styleCard
-                          // height: this.state.activeSlide === 0 ? "35vh" : "30vh"
                         }}
                       ></NavLink>
                     </div>
@@ -257,21 +125,14 @@ class News extends React.Component {
                     <div>
                       <NavLink
                         className={this.state.activeSlide === 1 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("2");
-                        // }}
                         style={{
                           ...styleCard
-                          // height: this.state.activeSlide === 1 ? "35vh" : "30vh"
                         }}
                       ></NavLink>
                     </div>
                     <div>
                       <NavLink
                         className={this.state.activeSlide === 2 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("3");
-                        // }}
                         style={styleCard}
                       ></NavLink>
                     </div>
@@ -280,9 +141,6 @@ class News extends React.Component {
                         className={
                           this.state.activeSlide === "4" ? "scaled" : ""
                         }
-                        // onClick={() => {
-                        //   this.toggle("4");
-                        // }}
                         style={styleCard}
                       ></NavLink>
                     </div>
@@ -291,22 +149,17 @@ class News extends React.Component {
                         className={
                           this.state.activeSlide === "5" ? "scaled" : ""
                         }
-                        // onClick={() => {
-                        //   this.toggle("5");
-                        // }}
                         style={styleCard}
                       ></NavLink>
                     </div>
                   </Slick>
                 </Col>
                 <Col
-                  className="positioned"
-                  style={{ marginTop: "60px" }}
-                  lg="4"
-                  md="8"
-                  xs="10"
+                  md="6"
+                  className="positioned-text-right"
+                  style={{ padding: "10vh 15vw 0 0" }}
                 >
-                  <h1 className="title">Berita Ekonomi</h1>
+                  <h1 className="title">Analisa Harian</h1>
                   <p className="description text-white">
                     <TabContent activeTab={"project" + this.state.activeSlide}>
                       <TabPane tabId="project0">
@@ -362,7 +215,7 @@ class News extends React.Component {
   }
 }
 
-export default News;
+export default NewsInverted;
 
 const PrevButton = props => {
   return (

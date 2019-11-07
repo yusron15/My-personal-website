@@ -29,7 +29,7 @@ import {
 } from "reactstrap";
 
 import check from "../../assets/img/Check.png";
-import Navbar from "../../components/Navbars/Navbar.jsx";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 
 class Content extends React.Component {
   state = {
@@ -55,22 +55,23 @@ class Content extends React.Component {
               minHeight: "80vh"
             }}
           >
-            <Navbar />
+            <ColoredNavbar />
             <Container>
               <div className="space-50" style={{ paddingTop: "150px" }} />
               <Col>
                 <Row>
                   <Col md="8">
-                    <div
+                    <h1
+                      className="title"
                       style={{
                         fontStyle: "Helvetica Bold",
-                        fontSize: "2.5rem",
+                        // fontSize: "2.5rem",
                         fontWeight: "bold",
                         color: "white"
                       }}
                     >
-                      REKENING TERPISAH
-                    </div>
+                      Rekening Terpisah
+                    </h1>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
