@@ -35,6 +35,7 @@ import {
 } from "reactstrap";
 import logo from "../../assets/img/Bitmap.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import "../../assets/css/main.css";
 
 class ColorNavbar extends React.Component {
   constructor(props) {
@@ -58,7 +59,7 @@ class ColorNavbar extends React.Component {
       document.body.scrollTop > 50
     ) {
       this.setState({
-        navbarColor: "bg-darker",
+        navbarColor: "black-news",
         marginTop: "0px"
       });
     } else if (
