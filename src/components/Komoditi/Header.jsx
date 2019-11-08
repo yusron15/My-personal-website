@@ -54,7 +54,7 @@ class Headers extends React.Component {
               backgroundSize: "cover"
             }}
           >
-            <ColoredNavbar />
+            {/* <ColoredNavbar /> */}
             <div className="header-wrapper">
               <div className="page-header">
                 <Container>

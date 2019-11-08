@@ -38,6 +38,8 @@ import {
 } from "reactstrap";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import bg1 from "../../assets/img/indexfutures1.png";
+import prevButton from "../../assets/img/prevbutton.png";
+import nextButton from "../../assets/img/nextbutton.png";
 
 const textTitle = {
   fontWeight: "bold",
@@ -234,7 +236,7 @@ class Content extends React.Component {
         <div className="cd-section" id="teams">
           {/* ********* TEAM 1 ********* */}
           <ColoredNavbar />
-          <div className="team-1" style={{ backgroundColor: "black" }}>
+          <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto" md="12">
@@ -278,8 +280,12 @@ class Content extends React.Component {
                 );
               })}
 
-              <Col sm="12" md={{ size: 6, offset: 10 }}>
-                <Button
+              {/* <Col
+                sm="12"
+                //  md={{ size: 6, offset: 10 }}
+              > */}
+              <div style={{ position: "absolute", left: "80%", top: "350px" }}>
+                {/* <Button
                   className="btn-round btn-icon btn-simple slick-prev slick-arrow"
                   data-slide="prev"
                   href="#pablo"
@@ -289,8 +295,28 @@ class Content extends React.Component {
                   }}
                 >
                   <i className="tim-icons icon-minimal-left" />
-                </Button>
-                <Button
+                </Button> */}
+
+                <img
+                  className="slick-prev slick-arrow"
+                  data-slide="prev"
+                  src={prevButton}
+                  onClick={e => {
+                    e.preventDefault();
+                    this.previous();
+                  }}
+                  style={{ height: "30px", width: "auto" }}
+                />
+                <img
+                  className="slick-arrow"
+                  src={nextButton}
+                  onClick={e => {
+                    e.preventDefault();
+                    this.next();
+                  }}
+                  style={{ height: "30px", width: "auto" }}
+                />
+                {/* <Button
                   className="btn-round btn-icon btn-simple slick-arrow"
                   data-slide="next"
                   href="#pablo"
@@ -301,8 +327,9 @@ class Content extends React.Component {
                   role="button"
                 >
                   <i className="tim-icons icon-minimal-right" />
-                </Button>
-              </Col>
+                </Button> */}
+              </div>
+              {/* </Col> */}
             </Carousel>
           </div>
           {/* ********* END TEAM 1 ********* */}

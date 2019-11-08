@@ -53,7 +53,7 @@ class HeaderAboutUs extends React.Component {
           {/* ********* HEADER 6 ********* */}
           <div
             className="header header-6 image-overlay"
-            style={{ backgroundColor: "black" }}
+            style={{ backgroundColor: "#1D1E1F" }}
           >
             <ColoredNavbar />
             <div className="page-header">

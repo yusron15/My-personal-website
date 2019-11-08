@@ -207,7 +207,7 @@ class Content extends React.Component {
         <div className="cd-section" id="teams">
           {/* ********* TEAM 1 ********* */}
           <ColoredNavbar />
-          <div className="team-1" style={{ backgroundColor: "black" }}>
+          <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="9">
                 <h1 className="title">Pro | Trader</h1>
@@ -252,7 +252,7 @@ class Content extends React.Component {
               </Row>
             </Container>
           </div>
-          <div className="team-1" style={{ backgroundColor: "black" }}>
+          <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="9">
                 <h1 className="title">Fitur Utama Pro-iTrading</h1>

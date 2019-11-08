@@ -1,4 +1,5 @@
 import React from "react";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import Footer from "../../components/Footers/Footer.jsx";
 import Content from "../../components/Komoditi/Content.jsx";
 import Header from "../../components/Komoditi/Header.jsx";
@@ -10,6 +11,7 @@ class Komoditi extends React.Component {
   render() {
     return (
       <>
+        <ColoredNavbar />
         <Header />
         <Content />
         <Footer />

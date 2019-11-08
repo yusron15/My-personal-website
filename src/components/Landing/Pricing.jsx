@@ -34,6 +34,8 @@ import {
   Col
 } from "reactstrap";
 
+import "../../assets/css/main.css";
+
 class Pricing extends React.Component {
   state = {
     firstTabs: "1",
@@ -55,7 +57,7 @@ class Pricing extends React.Component {
           <div
             className="pricing-3"
             id="pricing-3"
-            style={{ backgroundColor: "black" }}
+            style={{ backgroundColor: "#1D1E1F" }}
           >
             <Container>
               <Row>
@@ -72,10 +74,10 @@ class Pricing extends React.Component {
               <div className="space-50" />
               <Row>
                 <Container>
-                  <Card style={{ backgroundColor: "black" }}>
+                  <Card style={{ backgroundColor: "#1D1E1F" }}>
                     <Row>
                       <Col className="pr-0" md="4">
-                        <Card className="card-pricing card-plain">
+                        <Card className="card-pricing card-plain zoom">
                           <CardHeader>
                             <h4 className="title">Team</h4>
                             <p className="description">
@@ -122,7 +124,7 @@ class Pricing extends React.Component {
                         </Card>
                       </Col>
                       <Col className="p-0" md="4">
-                        <Card className="card-pricing card-plain">
+                        <Card className="card-pricing card-plain zoom">
                           <CardHeader>
                             <h4 className="title">Growth</h4>
                             <p className="description">
@@ -170,7 +172,7 @@ class Pricing extends React.Component {
                         </Card>
                       </Col>
                       <Col className="pl-0" md="4">
-                        <Card className="card-pricing card-plain">
+                        <Card className="card-pricing card-plain zoom">
                           <CardHeader>
                             <h4 className="title">Enterprises</h4>
                             <p className="description">

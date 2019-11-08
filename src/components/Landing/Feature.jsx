@@ -46,7 +46,7 @@ class Features extends React.Component {
                   </h4>
                 </Col>
               </Row>
-              <Col className="ml-auto mr-auto" md="9">
+              <Col className="ml-auto mr-auto" md="10">
                 <Row>
                   <Col md="4">
                     <Col>
@@ -54,7 +54,9 @@ class Features extends React.Component {
                         <div className="icon icon-success">
                           <img
                             alt="..."
-                            src={require("assets/img/foreign.png")}
+                            src={require("assets/img/cfdicon.png")}
+                            // height="70"
+                            // width="70"
                           />
                         </div>
                         <div className="description">

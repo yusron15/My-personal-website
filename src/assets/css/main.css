@@ -109,6 +109,7 @@
 
 .scaled {
   transform: scale(1.2); /* Equal to scaleX(0.7) scaleY(0.7) */
+  /* border-radius:30px; */
   /* background-color: pink; */
 }
 
@@ -123,4 +124,19 @@ hr.grey {
   left: calc(100% - 65% - #{$icon-size-regular}); */
     /* margin-left: 0;
   left: calc(100% - 65% - 3rem) !important; */
+}
+
+.prev-btn{
+  margin-top:50px;
+  margin-right: 60px !important;
+}
+
+.next-btn{
+  margin-top:50px;
+}
+
+.zoom:hover{
+  transform: scale(1.1);
+  border-style: solid;
+  border-color: white;
 }

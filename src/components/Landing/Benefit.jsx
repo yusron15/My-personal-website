@@ -34,6 +34,8 @@ import {
 
 // images
 import Benefit from "../../assets/img/benefit.png";
+import nextButton from "../../assets/img/nextbutton.png";
+import prevButton from "../../assets/img/prevbutton.png";
 
 // core components
 const items1 = [
@@ -163,32 +165,56 @@ const items2 = [
 ];
 
 // custom previous button for the slick component
+// const PrevButton = props => {
+//   return (
+//     <Button
+//       className="btn-round btn-icon btn-simple slick-prev slick-arrow bg-white"
+//       color="primary"
+//       aria-label="Previous"
+//       type="button"
+//       style={{ backgroundColor: "white" }}
+//       onClick={props.onClick}
+//     >
+//       <i className="tim-icons icon-minimal-left" />
+//     </Button>
+//   );
+// };
+// // custom next button for the slick component
+// const NextButton = props => {
+//   return (
+//     <Button
+//       className="btn-round btn-icon btn-simple slick-next slick-arrow bg-white"
+//       color="primary"
+//       aria-label="Next"
+//       type="button"
+//       style={{ backgroundColor: "white" }}
+//     >
+//       <i className="tim-icons icon-minimal-right" onClick={props.onClick} />
+//     </Button>
+//   );
+// };
+
 const PrevButton = props => {
   return (
-    <Button
-      className="btn-round btn-icon btn-simple slick-prev slick-arrow bg-white"
-      color="primary"
+    <img
+      className="btn-round slick-prev slick-arrow prev-btn"
       aria-label="Previous"
-      type="button"
-      style={{ backgroundColor: "white" }}
       onClick={props.onClick}
-    >
-      <i className="tim-icons icon-minimal-left" />
-    </Button>
+      src={prevButton}
+      style={{ height: "30px", width: "zuto" }}
+    />
   );
 };
 // custom next button for the slick component
 const NextButton = props => {
   return (
-    <Button
-      className="btn-round btn-icon btn-simple slick-next slick-arrow bg-white"
-      color="primary"
-      aria-label="Next"
-      type="button"
-      style={{ backgroundColor: "white" }}
-    >
-      <i className="tim-icons icon-minimal-right" onClick={props.onClick} />
-    </Button>
+    <img
+      className="btn-round slick-arrow next-btn"
+      // aria-label="Next"
+      onClick={props.onClick}
+      src={nextButton}
+      style={{ height: "30px", width: "zuto" }}
+    />
   );
 };
 

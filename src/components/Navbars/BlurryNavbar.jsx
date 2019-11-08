@@ -34,94 +34,40 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 import logo from "../../assets/img/Bitmap.png";
-import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
-
-class ColorNavbar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      navbarColor: "navbar-transparent"
-      // marginTop: "0px"
-      // backgroundColor: "black"
-    };
-  }
-  componentDidMount() {
-    window.addEventListener("scroll", this.changeNavbarColor);
-  }
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.changeNavbarTop);
-  }
-  // componentDidMount() {
-  //   const headerElement = this.refs.header;
-  //   // const sticky = headerElement.offsetTop;
-  //   // window.addEventListener("scroll", () => this.handleScroll(sticky));
-  // }
-  changeNavbarColor = () => {
-    if (
-      document.documentElement.scrollTop > 299 ||
-      document.body.scrollTop > 299
-    ) {
-      this.setState({
-        navbarColor: "bg-darker"
-        // navbarTop: ""
-      });
-    } else if (
-      document.documentElement.scrollTop < 300 ||
-      document.body.scrollTop < 300
-    ) {
-      this.setState({
-        navbarColor: "navbar-transparent"
-        // marginTop: "30px"
-      });
-    }
+class BlurryNavbar extends React.Component {
+  state = {
+    navbarPosition: "bg-darker"
   };
-  // handleScroll = () => {
-  //   if (window.pageYOffset >= 100) {
-  //     this.setState({
-  //       backgroundColor: "yellow"
-  //     });
-  //   }
-  // };
-  // changeNavbarTop = () => {
+  // componentDidMount() {
+  //   window.addEventListener("scroll", this.changenavbarPosition);
+  // }
+  // componentWillUnmount() {
+  //   window.removeEventListener("scroll", this.changenavbarPosition);
+  // }
+  // changenavbarPosition = () => {
   //   if (
   //     document.documentElement.scrollTop > 299 ||
   //     document.body.scrollTop > 299
   //   ) {
   //     this.setState({
-  //       marginTop: "0"
-  //       // marginTop: "0"
+  //       navbarPosition: "bg-darker"
   //     });
   //   } else if (
   //     document.documentElement.scrollTop < 300 ||
   //     document.body.scrollTop < 300
   //   ) {
   //     this.setState({
-  //       marginTop: "100px"
-  //       // marginTop: "30px"
+  //       navbarPosition: "navbar-transparent fixed-top "
   //     });
   //   }
   // };
   render() {
-    // const styles = {
-    //   containerStyle: {
-    //     backgroundColor: this.state.backgroundColor
-    //   }
-    // };
-    // const { containerStyle } = styles;
-    // const styles = {
-    //   containerStyle: {
-    //     marginTop: this.state.marginTop
-    //   }
-    // };
-    // const { containerStyle } = styles;
     return (
       <>
-        {/* <BlurryNavbar /> */}
         <Navbar
-          className={"fixed-top " + this.state.navbarColor}
+          className={this.state.navbarPosition}
           expand="lg"
-          // style={containerStyle}
-          // ref="header"
+          // style={{ marginBottom: "30px" }}
         >
           <Container>
             <div className="navbar-translate">
@@ -227,4 +173,4 @@ class ColorNavbar extends React.Component {
   }
 }
 
-export default ColorNavbar;
+export default BlurryNavbar;

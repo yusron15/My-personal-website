@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbars/Navbar.jsx";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
-import TopNavbar from "../../components/Navbars/DarkNavbar.jsx";
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import HeaderLanding from "../../components/Landing/HeaderLanding.jsx";
 import News from "../../components/Landing/News.jsx";
 import NewsInverted from "../../components/Landing/NewsInverted.jsx";
@@ -20,7 +20,7 @@ class Landing extends React.Component {
     return (
       <>
         {/* <Navbar /> */}
-        {/* <TopNavbar /> */}
+        {/* <BlurryNavbar /> */}
         <ColoredNavbar />
         <HeaderLanding />
         <News />

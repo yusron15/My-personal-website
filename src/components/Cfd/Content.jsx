@@ -219,7 +219,7 @@ class Content extends React.Component {
       <>
         <div className="cd-section" id="teams">
           {/* ********* TEAM 1 ********* */}
-          <div className="team-1" style={{ backgroundColor: "black" }}>
+          <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
             <div
               className="title"
               style={{
