@@ -51,6 +51,7 @@ import kbi from "../../assets/img/legalitas4.png";
 import ich from "../../assets/img/legalitas5.png";
 
 import DarkNavbar from "../../components/Navbars/DarkNavbar.jsx";
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 
 import "../../assets/css/main.css";
 
@@ -89,6 +90,7 @@ class Projects extends React.Component {
         <div className="cd-section" id="projects">
           {/* ********* PROJECTS 2 ********* */}
           <div className="project-raised bg-white">
+            {/* <BlurryNavbar /> */}
             <DarkNavbar />
             <Container>
               <Row>
@@ -124,21 +126,21 @@ class Projects extends React.Component {
                 <TabPane tabId="project3">
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
-                    {this.state.content[2].kbi}
+                      {this.state.content[2].kbi}
                     </p>
                   </Col>
                 </TabPane>
                 <TabPane tabId="project4">
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
-                    {this.state.content[3].ich}
+                      {this.state.content[3].ich}
                     </p>
                   </Col>
                 </TabPane>
                 <TabPane tabId="project5">
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
-                    {this.state.content[4].icdx}
+                      {this.state.content[4].icdx}
                     </p>
                   </Col>
                 </TabPane>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Container, Row, Col } from "reactstrap";
 import Navbar from "../../components/Navbars/Navbar.jsx";
-
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 class HeaderLanding extends React.Component {
   state = {};
   render() {
@@ -17,7 +17,7 @@ class HeaderLanding extends React.Component {
               backgroundSize: "cover"
             }}
           >
-            {/* <Navbar /> */}
+            <BlurryNavbar />
             <div className="page-header">
               {/* <div className="page-header-image" /> */}
 

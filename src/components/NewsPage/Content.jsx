@@ -41,7 +41,9 @@ import "../../assets/css/main.css";
 import pc from "../../assets/img/preparing-cash.png";
 import pc2 from "../../assets/img/preparing-cash2.png";
 import pc3 from "../../assets/img/preparing-cash3.png";
-
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import prevButton from "../../assets/img/prevbutton.png";
+import nextButton from "../../assets/img/nextbutton.png";
 import CardNews from "./CardNews";
 
 const textTitle = {
@@ -195,9 +197,14 @@ class Carding extends React.Component {
   render() {
     return (
       <>
-        <div className="cd-section" id="teams">
+        <div
+          className="cd-section"
+          id="teams"
+          style={{ backgroundColor: "#1D1E1F" }}
+        >
           {/* ********* TEAM 2 ********* */}
-          <div className="team-2" style={{ backgroundColor: "#1D1E1F" }}>
+          <BlurryNavbar />
+          <div className="team-2">
             <div>
               <Container>
                 <Row>
@@ -219,20 +226,30 @@ class Carding extends React.Component {
                       );
                     })}
 
-                    <Col sm="12" md={{ size: 6, offset: 10 }}>
-                      <Button
-                        className="btn-round btn-icon btn-simple slick-prev slick-arrow"
+                    <Col
+                      sm="12"
+                      style={{
+                        position: "absolute",
+                        paddingLeft: "80%",
+                        bottom: "8%"
+                      }}
+                    >
+                      <img
+                        src={prevButton}
+                        className="slick-prev slick-arrow"
                         data-slide="prev"
                         href="#pablo"
                         onClick={e => {
                           e.preventDefault();
                           this.previous();
                         }}
-                      >
-                        <i className="tim-icons icon-minimal-left" />
-                      </Button>
-                      <Button
-                        className="btn-round btn-icon btn-simple slick-arrow"
+                        // style={{ backgroundColor: "white" }}
+
+                        // <i className="tim-icons icon-minimal-left" />
+                      />
+                      <img
+                        src={nextButton}
+                        className="slick-arrow"
                         data-slide="next"
                         href="#pablo"
                         onClick={e => {
@@ -240,9 +257,10 @@ class Carding extends React.Component {
                           this.next();
                         }}
                         role="button"
-                      >
-                        <i className="tim-icons icon-minimal-right" />
-                      </Button>
+                        // style={{ backgroundColor: "white" }}
+
+                        // <i className="tim-icons icon-minimal-right" />
+                      />
                     </Col>
                   </Carousel>
                 </Row>

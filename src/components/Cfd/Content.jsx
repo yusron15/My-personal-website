@@ -36,6 +36,9 @@ import {
   Carousel,
   CarouselItem
 } from "reactstrap";
+import prevButton from "../../assets/img/prevbutton.png";
+import nextButton from "../../assets/img/nextbutton.png";
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 
 const textTitle = {
   fontWeight: "bold",
@@ -217,9 +220,14 @@ class Content extends React.Component {
   render() {
     return (
       <>
-        <div className="cd-section" id="teams">
+        <div
+          className="cd-section"
+          id="teams"
+          style={{ backgroundColor: "#1D1E1F" }}
+        >
           {/* ********* TEAM 1 ********* */}
-          <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
+          <BlurryNavbar />
+          <div className="team-1">
             <div
               className="title"
               style={{
@@ -254,9 +262,15 @@ class Content extends React.Component {
                   <Row>
                     <Col
                       sm="12"
-                      md={{ size: 6, offset: 10 }}
-                      style={{ marginTop: "70px" }}
+                      // md={{ size: 6, offset: 10 }}
+                      style={{
+                        position: "absolute",
+                        paddingLeft: "80%"
+                      }}
                     >
+                      {/* <div
+                    style={{ position: "absolute", left: "80%", top: "350px" }}
+                  > */}
                       <Button
                         className="btn-round btn-icon btn-simple slick-prev slick-arrow"
                         data-slide="prev"
@@ -280,6 +294,7 @@ class Content extends React.Component {
                       >
                         <i className="tim-icons icon-minimal-right" />
                       </Button>
+                      {/* </div> */}
                     </Col>
                   </Row>
 

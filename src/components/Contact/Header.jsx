@@ -43,6 +43,7 @@ import {
 
 // core components
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 
 import "../../assets/css/main.css";
 
@@ -50,6 +51,7 @@ class ContactUs extends React.Component {
   render() {
     return (
       <>
+        {/* <BlurryNavbar /> */}
         <ColoredNavbar />
         <div className="wrapper" ref="wrapper">
           <div className="page-header header-filter">

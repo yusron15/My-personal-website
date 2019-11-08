@@ -34,10 +34,23 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 import logo from "../../assets/img/Bitmap.png";
+import twitter from "../../assets/img/twitter.png";
+import facebook from "../../assets/img/facebook.png";
+import instagram from "../../assets/img/instagram.png";
+import vimeo from "../../assets/img/vimeo.png";
+import subscribe from "../../assets/img/subscribe.png";
+import flag from "../../assets/img/flag-uk.png";
+
+import "../../assets/css/main.css";
+
+const font = {
+  color: "#7F7C7C"
+};
+
 class BlurryNavbar extends React.Component {
-  state = {
-    navbarPosition: "bg-darker"
-  };
+  // state = {
+  //   navbarPosition: "bg-darker"
+  // };
   // componentDidMount() {
   //   window.addEventListener("scroll", this.changenavbarPosition);
   // }
@@ -65,109 +78,90 @@ class BlurryNavbar extends React.Component {
     return (
       <>
         <Navbar
-          className={this.state.navbarPosition}
+          // className={this.state.navbarPosition}
           expand="lg"
-          // style={{ marginBottom: "30px" }}
+          style={{
+            backgroundColor: "rgba(112, 112, 112, 0.19)",
+            height: "50px"
+          }}
         >
           <Container>
             <div className="navbar-translate">
               <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                <img src={logo} />
-                {/* TGF */}
+                <p style={font}>Call Us : 021 2278-9393</p>
               </NavbarBrand>
-              <button
+              {/* <button
                 className="navbar-toggler"
                 id="example-navbar-transparent"
               >
                 <span className="navbar-toggler-bar bar1" />
                 <span className="navbar-toggler-bar bar2" />
                 <span className="navbar-toggler-bar bar3" />
-              </button>
+              </button> */}
             </div>
             <UncontrolledCollapse navbar toggler="#example-navbar-transparent">
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <button class="dropbtn">
-                    <Link to="/landing">Home</Link>
-                  </button>
-                  {/* <Link to="/landing">
-                      <DropdownToggle>Home</DropdownToggle>
-                    </Link> */}
+                  <Link to="/#" className="vertical-center-nav">
+                    <img
+                      src={flag}
+                      style={{
+                        paddingRight: "10px",
+                        height: "10px",
+                        width: "auto"
+                      }}
+                    />
+                    <text style={font}>ENG</text>
+                  </Link>
                 </NavItem>
-
-                <div class="dropdown">
-                  <button class="dropbtn">Tentang Kami</button>
-                  <div class="dropdown-content">
-                    <Link to="/tentangkami">Tentang Kami</Link>
-                    <Link to="/cabang">Cabang Kami</Link>
-                    <Link to="/rekeningterpisah">Rekening Terpisah</Link>
-                    <Link to="/legalitas">Legalitas</Link>
-                  </div>
-                </div>
-                {/* <NavItem>
-                    <Dropdown
-                      onMouseOver={this.onMouseEnter}
-                      onMouseLeave={this.onMouseLeave}
-                      isOpen={this.state.dropdownOpen}
-                      toggle={this.toggle}
-                    >
-                      <DropdownToggle caret>Tentang Kami</DropdownToggle>
-                      <DropdownMenu>
-                        <Link to="/tentangkami">
-                          <DropdownItem>Tentang Kami</DropdownItem>
-                        </Link>
-                        <Link to="/cabang">
-                          <DropdownItem>Cabang Kami</DropdownItem>
-                        </Link>
-                        <Link to="/rekeningterpisah">
-                          <DropdownItem>Rekening Terpisah</DropdownItem>
-                        </Link>
-                        <Link to="/legalitas">
-                          <DropdownItem>Legalitas</DropdownItem>
-                        </Link>
-                      </DropdownMenu>
-                    </Dropdown>
-                  </NavItem> */}
-
-                <div class="dropdown">
-                  <button class="dropbtn">Trading Online</button>
-                  <div class="dropdown-content-trading">
-                    <Row>
-                      <Col md="6">
-                        <Link to="/forexgold">Forex & Gold</Link>
-                        <Link to="/cfd">CFD</Link>
-                        <Link to="/indexfutures">Index Futures</Link>
-                        <Link to="/komoditi">Komoditi</Link>
-                      </Col>
-                      <Col md="6">
-                        <Link to="/protrader">Pro | Trader</Link>
-                        <Link to="/topgrowthtrader">Topgrowth Trader</Link>
-                      </Col>
-                    </Row>
-                  </div>
-                </div>
-
-                <div class="dropdown">
-                  <button class="dropbtn">Layanan</button>
-                  <div class="dropdown-content">
-                    <Link to="/newspage">Berita dan analisa Market</Link>
-                  </div>
-                </div>
-
+                <div class="vl"></div>
                 <NavItem>
-                  <button class="dropbtn">
-                    <Link to="/karir">Karir</Link>
-                  </button>
+                  <Link to="/#" className="vertical-center-nav">
+                    <img
+                      src={subscribe}
+                      style={{
+                        paddingRight: "10px",
+                        height: "10px",
+                        width: "auto"
+                      }}
+                    />
+                    <text style={font}>Subscribe</text>
+                  </Link>
+                </NavItem>
+                <div class="vl"></div>
+                <NavItem>
+                  <Link to="/#">
+                    <img src={facebook} />
+                  </Link>
                 </NavItem>
                 <NavItem>
-                  <button class="dropbtn">
-                    <Link to="/Contact">Hubungi Kami</Link>
-                  </button>
+                  <Link to="/#">
+                    <img src={twitter} />
+                  </Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/#">
+                    <img src={instagram} />
+                  </Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/#">
+                    <img src={vimeo} />
+                  </Link>
                 </NavItem>
               </Nav>
             </UncontrolledCollapse>
           </Container>
         </Navbar>
+        {/* <hr
+          style={{
+            color: "grey",
+            backgroundColor: "grey",
+            height: 0.5,
+            width: "100vw",
+            borderColor: "grey"
+          }}
+        /> */}
       </>
     );
   }

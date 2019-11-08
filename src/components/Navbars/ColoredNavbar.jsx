@@ -40,8 +40,8 @@ class ColorNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      navbarColor: "navbar-transparent"
-      // marginTop: "0px"
+      navbarColor: "navbar-transparent",
+      marginTop: "0px"
       // backgroundColor: "black"
     };
   }
@@ -51,77 +51,41 @@ class ColorNavbar extends React.Component {
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeNavbarTop);
   }
-  // componentDidMount() {
-  //   const headerElement = this.refs.header;
-  //   // const sticky = headerElement.offsetTop;
-  //   // window.addEventListener("scroll", () => this.handleScroll(sticky));
-  // }
+
   changeNavbarColor = () => {
     if (
-      document.documentElement.scrollTop > 299 ||
-      document.body.scrollTop > 299
+      document.documentElement.scrollTop > 50 ||
+      document.body.scrollTop > 50
     ) {
       this.setState({
-        navbarColor: "bg-darker"
-        // navbarTop: ""
+        navbarColor: "bg-darker",
+        marginTop: "0px"
       });
     } else if (
       document.documentElement.scrollTop < 300 ||
       document.body.scrollTop < 300
     ) {
       this.setState({
-        navbarColor: "navbar-transparent"
-        // marginTop: "30px"
+        navbarColor: "navbar-transparent",
+        marginTop: "30px"
       });
     }
   };
-  // handleScroll = () => {
-  //   if (window.pageYOffset >= 100) {
-  //     this.setState({
-  //       backgroundColor: "yellow"
-  //     });
-  //   }
-  // };
-  // changeNavbarTop = () => {
-  //   if (
-  //     document.documentElement.scrollTop > 299 ||
-  //     document.body.scrollTop > 299
-  //   ) {
-  //     this.setState({
-  //       marginTop: "0"
-  //       // marginTop: "0"
-  //     });
-  //   } else if (
-  //     document.documentElement.scrollTop < 300 ||
-  //     document.body.scrollTop < 300
-  //   ) {
-  //     this.setState({
-  //       marginTop: "100px"
-  //       // marginTop: "30px"
-  //     });
-  //   }
-  // };
+  // }
   render() {
-    // const styles = {
-    //   containerStyle: {
-    //     backgroundColor: this.state.backgroundColor
-    //   }
-    // };
-    // const { containerStyle } = styles;
-    // const styles = {
-    //   containerStyle: {
-    //     marginTop: this.state.marginTop
-    //   }
-    // };
-    // const { containerStyle } = styles;
+    const styles = {
+      containerStyle: {
+        marginTop: this.state.marginTop
+      }
+    };
+    const { containerStyle } = styles;
     return (
       <>
         {/* <BlurryNavbar /> */}
         <Navbar
           className={"fixed-top " + this.state.navbarColor}
           expand="lg"
-          // style={containerStyle}
-          // ref="header"
+          style={containerStyle}
         >
           <Container>
             <div className="navbar-translate">

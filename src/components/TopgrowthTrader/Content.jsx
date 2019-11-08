@@ -37,6 +37,7 @@ import {
   CarouselItem
 } from "reactstrap";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg1 from "../../assets/img/indexfutures1.png";
 
 import "../../assets/css/main.css";
@@ -204,10 +205,15 @@ class Content extends React.Component {
   render() {
     return (
       <>
-        <div className="cd-section" id="teams">
+        <div
+          className="cd-section"
+          id="teams"
+          style={{ backgroundColor: "#1D1E1F" }}
+        >
           {/* ********* TEAM 1 ********* */}
+          <BlurryNavbar />
           <ColoredNavbar />
-          <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
+          <div className="team-1">
             <Row>
               <Col className="ml-auto mr-auto text-center" md="9">
                 <h1 className="title">Topgrowth Trader</h1>

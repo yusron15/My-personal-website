@@ -39,21 +39,24 @@ import {
   Col
 } from "reactstrap";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 class Headers extends React.Component {
   state = {};
   render() {
     return (
       <>
-        <div className="cd-section" id="headers">
+        <div
+          className="cd-section"
+          id="headers"
+          style={{
+            backgroundImage:
+              "url(" + require("assets/img/headerkomoditi.png") + ")",
+            backgroundSize: "cover"
+          }}
+        >
           {/* ********* HEADER 4 w/ VIDEO ********* */}
-          <div
-            className="header header-4"
-            style={{
-              backgroundImage:
-                "url(" + require("assets/img/headerkomoditi.png") + ")",
-              backgroundSize: "cover"
-            }}
-          >
+          <BlurryNavbar />
+          <div className="header header-4">
             {/* <ColoredNavbar /> */}
             <div className="header-wrapper">
               <div className="page-header">

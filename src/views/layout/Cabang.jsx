@@ -1,5 +1,6 @@
 import React from "react";
-import Navbar from "../../components/Navbars/Navbar.jsx";
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import CabangKami from "../../components/CabangKami/Content.jsx";
 import Footer from "../../components/Footers/Footer.jsx";
 
@@ -12,6 +13,7 @@ class Cabang extends React.Component {
     return (
       <>
         {/* <Navbar /> */}
+        <ColoredNavbar />
         <CabangKami />
         <Footer />
       </>

@@ -42,8 +42,34 @@ import {
 
 import work from "assets/img/work.png";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
-
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import prevButton from "../../assets/img/prevbutton.png";
+import nextButton from "../../assets/img/nextbutton.png";
 import "../../assets/css/main.css";
+
+const PrevButton = props => {
+  return (
+    <img
+      className="btn-round slick-prev slick-arrow prev-btn"
+      aria-label="Previous"
+      onClick={props.onClick}
+      src={prevButton}
+      style={{ height: "30px", width: "auto" }}
+    />
+  );
+};
+// custom next button for the slick component
+const NextButton = props => {
+  return (
+    <img
+      className="btn-round slick-arrow next-btn"
+      // aria-label="Next"
+      onClick={props.onClick}
+      src={nextButton}
+      style={{ height: "30px", width: "auto" }}
+    />
+  );
+};
 
 const styleCard = {
   backgroundImage: "url(" + require("assets/img/news1.png") + ")",
@@ -230,12 +256,15 @@ class News extends React.Component {
     };
     return (
       <>
-        <div className="cd-section" id="testimonials">
-          <div
-            className="testimonials-4"
-            style={{ backgroundColor: "#1D1E1F", padding: "5rem 0 0 0 " }}
-          >
-            <ColoredNavbar />
+        <div
+          className="cd-section"
+          id="testimonials"
+          style={{ backgroundColor: "#1D1E1F" }}
+        >
+          <BlurryNavbar />
+
+          <div className="testimonials-4">
+            {/* <ColoredNavbar /> */}
             <Container>
               <Row>
                 <Col
@@ -363,34 +392,3 @@ class News extends React.Component {
 }
 
 export default News;
-
-const PrevButton = props => {
-  return (
-    <Button
-      className="btn-round btn-icon btn-simple slick-prev slick-arrow bg-white"
-      // color="primary"
-      aria-label="Previous"
-      type="button"
-      // md={{ size: 6, offset: 10 }}
-      onClick={props.onClick}
-      style={{ marginTop: "50px " }}
-    >
-      <i className="tim-icons icon-minimal-left" />
-    </Button>
-  );
-};
-// custom next button for the slick component
-const NextButton = props => {
-  return (
-    <Button
-      className="btn-round btn-icon btn-simple slick-arrow bg-white"
-      // color="primary"
-      // md={{ size: 6, offset: 10 }}
-      aria-label="Next"
-      type="button"
-      style={{ marginTop: "50px" }}
-    >
-      <i className="tim-icons icon-minimal-right" onClick={props.onClick} />
-    </Button>
-  );
-};

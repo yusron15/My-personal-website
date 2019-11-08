@@ -30,7 +30,7 @@ import {
 
 import check from "../../assets/img/Check.png";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
-
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 class Content extends React.Component {
   state = {
     activeTab: "1"
@@ -55,6 +55,7 @@ class Content extends React.Component {
               minHeight: "80vh"
             }}
           >
+            <BlurryNavbar />
             <ColoredNavbar />
             <Container>
               <div className="space-50" style={{ paddingTop: "150px" }} />

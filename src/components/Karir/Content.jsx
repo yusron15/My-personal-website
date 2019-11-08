@@ -29,6 +29,7 @@ import {
 } from "reactstrap";
 
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar";
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
 
 import "../../assets/css/main.css";
 
@@ -36,16 +37,17 @@ class Blogs extends React.Component {
   render() {
     return (
       <>
-        <div className="cd-section" id="blogs">
+        <div className="cd-section black-news" id="blogs">
           {/* ********* END BLOGS 5 ********* */}
+          <BlurryNavbar />
           <ColoredNavbar />
-          <div className="blogs-5 black-news">
+          <div className="blogs-5">
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto" md="10">
                   <h2
                     className="title text-center"
-                    style={{ paddingTop: "5rem" }}
+                    // style={{ paddingTop: "5rem" }}
                   >
                     Karir
                   </h2>
@@ -65,7 +67,7 @@ class Blogs extends React.Component {
                             <img
                               alt="..."
                               className="img rounded"
-                              src={require("assets/img/steven-roe.jpg")}
+                              src={require("assets/img/newscard.png")}
                             />
                           </a>
                         </div>
@@ -78,7 +80,7 @@ class Blogs extends React.Component {
                             <img
                               alt="..."
                               className="img rounded"
-                              src={require("assets/img/noah-wetering.jpg")}
+                              src={require("assets/img/newscard.png")}
                             />
                           </a>
                         </div>
@@ -91,7 +93,7 @@ class Blogs extends React.Component {
                             <img
                               alt="..."
                               className="img rounded"
-                              src={require("assets/img/mark-harrison.jpg")}
+                              src={require("assets/img/newscard.png")}
                             />
                           </a>
                         </div>

@@ -43,6 +43,7 @@ import "../../../src/App.css";
 
 import tentangkami from "../../assets/img/tentangkamiheader.png";
 import ColoredNavbar from "../Navbars/ColoredNavbar.jsx";
+import BlurryNavbar from "components/Navbars/BlurryNavbar";
 
 class HeaderAboutUs extends React.Component {
   state = {};
@@ -55,6 +56,7 @@ class HeaderAboutUs extends React.Component {
             className="header header-6 image-overlay"
             style={{ backgroundColor: "#1D1E1F" }}
           >
+            <BlurryNavbar />
             <ColoredNavbar />
             <div className="page-header">
               <div className="content-center">

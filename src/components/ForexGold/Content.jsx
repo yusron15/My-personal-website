@@ -30,7 +30,7 @@ import {
 import fg1 from "../../assets/img/forexgold1.png";
 import fg2 from "../../assets/img/forexgold2.png";
 import fg3 from "../../assets/img/forexgold3.png";
-
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 
 const textTitle = {
@@ -55,9 +55,14 @@ class Features extends React.Component {
   render() {
     return (
       <>
-        <div className="cd-section" id="features">
+        <div
+          className="cd-section"
+          id="features"
+          style={{ backgroundColor: "#1D1E1F" }}
+        >
           {/* ********* FEATURES 3 ********* */}
-          <div className="features-3" style={{ backgroundColor: "#1D1E1F" }}>
+          <BlurryNavbar />
+          <div className="features-3">
             <Container fluid>
               <Row>
                 <Col sm={{ size: 6, order: 2, offset: 1 }}>

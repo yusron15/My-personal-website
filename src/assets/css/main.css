@@ -106,6 +106,14 @@
     transform: translateY(-50%);
 }
 
+.vertical-center-nav{
+  text-align: left;
+  font-style: Helvetica Bold;
+  margin: 0;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
 .scaled {
   transform: scale(1.2); /* Equal to scaleX(0.7) scaleY(0.7) */
@@ -139,4 +147,12 @@ hr.grey {
   transform: scale(1.1);
   border-style: solid;
   border-color: white;
+}
+
+.vl {
+  border-left: 1px solid grey;
+  height: 30px;
+  /* position: absolute; */
+  margin-right: 5px;
+  top: 25%;
 }
