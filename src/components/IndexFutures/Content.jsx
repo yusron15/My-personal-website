@@ -45,13 +45,13 @@ import nextButton from "../../assets/img/nextbutton.png";
 const textTitle = {
   fontWeight: "bold",
   color: "white",
-  fontSize: "2.5rem"
+  fontSize: "1.7rem"
 };
 
 const textSubtitle = {
   fontWeight: "bold",
   color: "white",
-  fontSize: "1.5rem"
+  fontSize: "1rem"
 };
 
 const textDesc = {
@@ -82,18 +82,23 @@ const items = [
             </Col>
             <Col md="12">
               <div className="description" style={textDesc}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.{" "}
+                Indeks Nikkei 225, yang sering disebut sebagai Nikkei, indeks
+                Nikkei, atau Nikkei Stock Average, merupakan indeks pasar saham
+                untuk Bursa Saham Tokyo (TSE) yang dihitung setiap hari
+                menggunakan metode perhitungan rata-rata harga tertimbang dalam
+                yen dan ditinjau setahun sekali oleh surat kabar Nihon Keizai
+                Shimbun (Nikkei) sejak tahun 1950.
+                <br />
+                Saat ini, indeks Nikkei paling banyak digunakan untuk
+                menggambarkan kondisi dari saham Jepang; mirip dengan Dow Jones
+                Industrial Average hingga bahkan sempat dijuluki sebagai “Indeks
+                Nikkei Dow Jones” pada era 1975-1985. Nikkei 225 Futures
+                diperkenalkan di Singapore Exchange (SGX) pada tahun 1986, di
+                Osaka Securities Exchange (OSE) pada tahun 1988, dan di Chicago
+                Mercantile Exchange (CME) pada tahun 1990. Hari ini, indeks
+                Nikkei telah menjadi indeks berjangka yang diakui secara
+                internasional dan diperbarui setiap 15 detik selama sesi
+                perdagangan sejak tahun 2010.
               </div>
             </Col>
           </Row>
@@ -125,18 +130,26 @@ const items = [
             </Col>
             <Col md="12">
               <div className="description" style={textDesc}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.{" "}
+                Indeks Hang Seng (HSI) adalah indeks saham pada bursa Hong Kong
+                yang dihitung menggunakan metode freefloat-adjusted market
+                capitalization-weighted. Indeks ini digunakan untuk mencatat dan
+                memonitor perubahan harian dari perusahaan-perusahaan terbesar
+                di pasar saham Hong Kong dan merupakan indikator utama dari
+                kinerja pasar secara keseluruhan di area tersebut. Sebanyak 45
+                perusahaan yang ada pada indeks Hang Seng mewakili sekitar 60%
+                dari kapitalisasi Hong Kong Stock Exchange.
+                <br />
+                Sejak 7 Maret 2011, HKEx memperpanjang jam perdagangan menjadi
+                09.30-12.00 dan 13.30-16.00. Selanjutnya, sejak 5 Maret 2012,
+                jam perdagangan diubah kembali menjadi 09.15-12.00 dan
+                13.00-16.15, disesuaikan dengan waktu perdagangan di daratan
+                Cina.
+                <br />
+                Indeks Hang Seng memulai perdagangannya pada tanggal 24 November
+                1969. Saat ini penyusunan dan pengelolaannya dilaksanakan oleh
+                Hang Seng Indeks Limited yang merupakan anak perusahaan dari
+                Hang Seng Bank, salah satu bank terbesar dalam kapitalisasi
+                pasar.
               </div>
             </Col>
           </Row>
@@ -168,18 +181,22 @@ const items = [
             </Col>
             <Col md="12">
               <div className="description" style={textDesc}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat.{" "}
+                Indeks Harga Saham Gabungan Korea atau KOSPI adalah indeks dari
+                semua saham yang diperdagangkan di Stock Market Division yang
+                sebelumnya dikenal dengan nama Korea Stock Exchange. KOSPI
+                merupakan indeks pasar saham yang mewakili Korea Selatan,
+                seperti Dow Jones Industrial Average atau S&P 500 di AS.
+                <br />
+                KOSPI diperkenalkan pada tahun 1983 dengan nilai dasar 100. Pada
+                tahun 2007, volume harian KOSPI adalah ratusan juta saham atau
+                setara dengan triliunan won.
+                <br />
+                Indeks KOSPI 200 terdiri dari 200 perusahaan besar dari Stock
+                Market Division. KOSPI 200 memiliki nilai pasar lebih dari 70%
+                dari KOSPI, dan bergerak bersama dengan indeks KOSPI. Indeks
+                KOSPI 200 dinilai penting karena diperdagangkan juga di bursa
+                berjangka dan bursa option, serta merupakan salah satu indeks
+                yang paling aktif diperdagangkan di dunia.
               </div>
             </Col>
           </Row>
@@ -250,18 +267,17 @@ class Content extends React.Component {
                     INDEX FUTURES
                   </h1>
                   <p className="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                    KONTRAK BERJANGKA atau INDEX FUTURES adalah alternatif
+                    investasi dalam perdagangan saham yang dapat meminimalkan
+                    risiko dan akan melindungi investor dari fluktuasi harga
+                    yang merugikan. Kontrak berjangka adalah suatu kewajiban
+                    untuk menerima atau untuk menyerahkan suatu instrumen
+                    keuangan atau kontrak di masa depan dengan menggunakan harga
+                    yang telah disepakati pada hari ini. Di dalam perdagangan
+                    kontrak berjangka, investor diberikan peluang untuk
+                    mengambil posisi open sell kontrak dengan harapan harga akan
+                    turun dan posisi open buy kontrak dengan harapan harga akan
+                    naik.
                   </p>
                 </Col>
               </Row>

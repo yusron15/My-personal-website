@@ -59,7 +59,7 @@ const PrevButton = props => {
         height: "30px",
         width: "auto",
         justifyContent: "right",
-        paddingLeft: "520px"
+        paddingLeft: "200px"
       }}
     />
   );
@@ -75,7 +75,7 @@ const NextButton = props => {
       style={{
         height: "30px",
         width: "auto" /* left: 30px; */,
-        paddingLeft: "520px",
+        paddingLeft: "200px",
         justifyContent: "right",
         zIndex: "999"
       }}

@@ -63,30 +63,34 @@ class Headers extends React.Component {
                 <Container>
                   <h1 className="title text-center">KOMODITI</h1>
                   <p className="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                    Sebagai salah satu instrumen yang paling populer bagi
+                    sebagian besar manajer investasi global, transaksi komoditi
+                    mengakibatkan perputaran uang di pasar komoditas menjadi
+                    cukup tinggi.
+                    <br />
+                    Komoditas dapat diinterpretasikan sebagai sesuatu dari
+                    substansi fisik dan dibagi menjadi dua, yaitu komoditi hasil
+                    pertambangan, seperti emas, perak, minyak dan lainnya, dan
+                    komoditi hasil pertanian, seperti gula, beras, kakao, kopi
+                    dan lainnya.
+                    <br />
+                    Komoditas lebih mudah dipahami karena banyak bergantung pada
+                    kondisi fundamental permintaan dan penawaran. Volatilitas
+                    harga komoditas lebih kecil dibandingkan saham dan obligasi
+                    sehingga menyediakan pilihan diversifikasi portofolio yang
+                    efisien untuk pelaku pasar. Yang membuat komoditas lebih
+                    menarik dan lebih berisiko dalam transaksi dibandingkan
+                    saham adalah jumlah leverage atau daya ungkit. Akan tetapi
+                    pada kenyataannya, risiko perdagangan di pasar komoditas
+                    tidak akan lebih dari risiko yang ditentukan pengguna.
+                    <br />
+                    JFX (Jakarta Futures Exchange) dan ICDX (Indonesia Commodity
+                    & Derivatives Exchange) sebagai bursa berjangka di Indonesia
+                    berfungsi untuk mengembangkan pasar berjangka melalui sistem
+                    yang lebih dinamis, transparan, dan likuid. Transaksi
+                    multilateral memungkinkan banyak pihak untuk membeli dan
+                    menjual instrumen keuangan di bursa melalui sarana
+                    elektronik.
                   </p>
                 </Container>
               </div>

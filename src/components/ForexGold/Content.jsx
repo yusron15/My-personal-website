@@ -73,10 +73,15 @@ class Features extends React.Component {
                     FOREX & GOLD
                   </div>
                   <p style={{ textAlign: "left" }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea
+                    Saat ini, Foreign Exchange (Forex) merupakan pasar terbesar
+                    dan paling likuid di dunia dengan perputaran nilai transaksi
+                    yang tiga kali lipat lebih besar dari jumlah gabungan pasar
+                    saham dan obligasi. Pasar forex atau valuta asing ini
+                    beroperasi selama 24 jam penuh melalui jaringan bank global,
+                    dari kawasan Asia, Eropa, hingga Amerika, tanpa bursa
+                    terpusat sehingga disebut sebagai produk OTC (Over the
+                    Counter). Transaksi ini dilakukan dengan cara membeli atau
+                    menjual mata uang dengan memanfaatkan fluktuasi harga.
                   </p>
                   {/* <Col className="mr-auto ml-auto" md="5"> */}
                   {/* </Col> */}
@@ -101,24 +106,17 @@ class Features extends React.Component {
                           KEUNTUNGAN TRANSAKSI FOREX
                         </div>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Lorem ipsum dolor sit amet,
-                          consectetur adipiscing elit, sed do eiusmod tempor
-                          incididunt ut labore et dolore magna aliqua. Ut enim
-                          ad minim veniam, quis nostrud exercitation ullamco
-                          laboris nisi ut aliquip ex ea commodo consequat. Lorem
-                          ipsum dolor sit amet, consectetur adipiscing elit, sed
-                          do eiusmod tempor incididunt ut labore et dolore magna
-                          aliqua. Ut enim ad minim veniam, quis nostrud
-                          exercitation ullamco laboris nisi ut aliquip ex ea
-                          commodo consequat. Lorem ipsum dolor sit amet,
-                          consectetur adipiscing elit, sed do eiusmod tempor
-                          incididunt ut labore et dolore magna aliqua. Ut enim
-                          ad minim veniam, quis nostrud exercitation ullamco
-                          laboris nisi ut aliquip ex ea commodo consequat.
+                          Likuiditas tinggi karena selalu adanya penawaran dan
+                          permintaan Potensi keuntungan dua arah yang didapatkan
+                          pada saat harga naik maupun turun karena tidak adanya
+                          batasan untuk perdagangan terarah Biaya investasi awal
+                          yang relatif rendah karena forex diperdagangkan dengan
+                          leverage Transparansi akibat berdagang secara langsung
+                          dengan pasar yang bertanggung jawab atas harga
+                          pasangan mata uang Biaya perdagangan yang rendah
+                          karena biaya tersebut dihitung ke dalam spread Dapat
+                          dilakukan di manapun dan kapanpun selama ada koneksi
+                          internet
                         </p>{" "}
                       </div>
                     </Col>
@@ -138,24 +136,16 @@ class Features extends React.Component {
                           KEUNGGULAN TRANSAKSI FOREX BERSAMA TOPGROWTH
                         </div>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Lorem ipsum dolor sit amet,
-                          consectetur adipiscing elit, sed do eiusmod tempor
-                          incididunt ut labore et dolore magna aliqua. Ut enim
-                          ad minim veniam, quis nostrud exercitation ullamco
-                          laboris nisi ut aliquip ex ea commodo consequat. Lorem
-                          ipsum dolor sit amet, consectetur adipiscing elit, sed
-                          do eiusmod tempor incididunt ut labore et dolore magna
-                          aliqua. Ut enim ad minim veniam, quis nostrud
-                          exercitation ullamco laboris nisi ut aliquip ex ea
-                          commodo consequat. Lorem ipsum dolor sit amet,
-                          consectetur adipiscing elit, sed do eiusmod tempor
-                          incididunt ut labore et dolore magna aliqua. Ut enim
-                          ad minim veniam, quis nostrud exercitation ullamco
-                          laboris nisi ut aliquip ex ea commodo consequat.
+                          Transaksi bisa dilakukan kapan dan dimana saja Data
+                          dan informasi terbuka untuk seluruh nasabah Didukung
+                          oleh tim Research dan Development, baik online maupun
+                          offline Adanya modul pelatihan untuk meningkatkan
+                          kemampuan sebagai trader profesional Keamanan dana
+                          investasi terjamin dengan adanya Segregated Account
+                          Proses penarikan dana (withdrawal) yang cepat dan
+                          efisien Eksekusi instan order yang superior Spread
+                          yang tetap pada segala kondisi Teknologi trading yang
+                          unggul dan terpercaya
                         </p>{" "}
                       </div>
                     </Col>

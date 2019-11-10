@@ -45,6 +45,8 @@ import {
 import ColorNavbar from "components/Navbars/ColorNavbar.jsx";
 import DemoFooter from "components/Footers/DemoFooter.jsx";
 
+import map from "../../assets/img/map-contact.png";
+
 import "../../assets/css/main.css";
 
 class Content extends React.Component {
@@ -76,115 +78,161 @@ class Content extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col className="mx-auto" md="10">
-                  <Form
-                    className="p-3"
-                    id="contact-form"
-                    method="post"
-                    role="form"
-                  >
-                    <CardBody>
-                      <Row>
-                        <Col md="6">
-                          <label>First name</label>
-                          <InputGroup
-                            className={classnames({
-                              "input-group-focus": this.state.firstNameFocus
-                            })}
-                          >
-                            <InputGroupAddon addonType="prepend">
-                              <InputGroupText>
-                                <i className="tim-icons icon-single-02" />
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <Input
-                              aria-label="First Name..."
-                              placeholder="First Name..."
-                              type="text"
-                              onFocus={e =>
-                                this.setState({ firstNameFocus: true })
-                              }
-                              onBlur={e =>
-                                this.setState({ firstNameFocus: false })
-                              }
-                            />
-                          </InputGroup>
-                        </Col>
-                        <Col md="6">
+                <Col className="ml-auto mr-auto" md="8">
+                  <Row>
+                    <Col className="ml-auto" md="6">
+                      <Container>
+                        <div
+                          className="title font-white"
+                          style={{ fontSize: "1.5rem" }}
+                        >
+                          Kontak & Informasi
+                        </div>
+                        <Row>
+                          <Col md="4">
+                            <div className="description">
+                              Address: Sahid Sudirman Center, Lantai 40 Jl. Jend
+                              Sudirman Kav 86 Jakarta 10220 Indonesia
+                            </div>
+                          </Col>
+                          <Col md="4">
+                            <div className="description">
+                              Phone: (+62)21 2788-9393 Fax: (+62)21 2788-9395
+                            </div>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Col>
+                    <Col className="ml-auto" md="6">
+                      <Form
+                        className="p-3"
+                        id="contact-form"
+                        method="post"
+                        role="form"
+                      >
+                        <CardBody>
+                          <Row>
+                            <Col md="6">
+                              <label>First name</label>
+                              <InputGroup
+                                className={classnames({
+                                  "input-group-focus": this.state.firstNameFocus
+                                })}
+                              >
+                                <InputGroupAddon addonType="prepend">
+                                  <InputGroupText>
+                                    <i className="tim-icons icon-single-02" />
+                                  </InputGroupText>
+                                </InputGroupAddon>
+                                <Input
+                                  aria-label="First Name..."
+                                  placeholder="First Name..."
+                                  type="text"
+                                  onFocus={e =>
+                                    this.setState({ firstNameFocus: true })
+                                  }
+                                  onBlur={e =>
+                                    this.setState({ firstNameFocus: false })
+                                  }
+                                />
+                              </InputGroup>
+                            </Col>
+                            <Col md="6">
+                              <FormGroup>
+                                <label>Last name</label>
+                                <InputGroup
+                                  className={classnames({
+                                    "input-group-focus": this.state
+                                      .lastNameFocus
+                                  })}
+                                >
+                                  <InputGroupAddon addonType="prepend">
+                                    <InputGroupText>
+                                      <i className="tim-icons icon-caps-small" />
+                                    </InputGroupText>
+                                  </InputGroupAddon>
+                                  <Input
+                                    aria-label="Last Name..."
+                                    placeholder="Last Name..."
+                                    type="text"
+                                    onFocus={e =>
+                                      this.setState({ lastNameFocus: true })
+                                    }
+                                    onBlur={e =>
+                                      this.setState({ lastNameFocus: false })
+                                    }
+                                  />
+                                </InputGroup>
+                              </FormGroup>
+                            </Col>
+                          </Row>
                           <FormGroup>
-                            <label>Last name</label>
+                            <label>Email address</label>
                             <InputGroup
                               className={classnames({
-                                "input-group-focus": this.state.lastNameFocus
+                                "input-group-focus": this.state.emailFocus
                               })}
                             >
                               <InputGroupAddon addonType="prepend">
                                 <InputGroupText>
-                                  <i className="tim-icons icon-caps-small" />
+                                  <i className="tim-icons icon-email-85" />
                                 </InputGroupText>
                               </InputGroupAddon>
                               <Input
-                                aria-label="Last Name..."
-                                placeholder="Last Name..."
+                                placeholder="Email Here..."
                                 type="text"
                                 onFocus={e =>
-                                  this.setState({ lastNameFocus: true })
+                                  this.setState({ emailFocus: true })
                                 }
                                 onBlur={e =>
-                                  this.setState({ lastNameFocus: false })
+                                  this.setState({ emailFocus: false })
                                 }
                               />
                             </InputGroup>
                           </FormGroup>
-                        </Col>
-                      </Row>
-                      <FormGroup>
-                        <label>Email address</label>
-                        <InputGroup
-                          className={classnames({
-                            "input-group-focus": this.state.emailFocus
-                          })}
-                        >
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="tim-icons icon-email-85" />
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            placeholder="Email Here..."
-                            type="text"
-                            onFocus={e => this.setState({ emailFocus: true })}
-                            onBlur={e => this.setState({ emailFocus: false })}
-                          />
-                        </InputGroup>
-                      </FormGroup>
-                      <FormGroup>
-                        <label>Your message</label>
-                        <Input
-                          id="message"
-                          name="message"
-                          rows="6"
-                          type="textarea"
-                        />
-                      </FormGroup>
-                      <Row>
-                        <Col className="ml-auto" md="6">
-                          <Button
-                            className="btn-round pull-right"
-                            color="info"
-                            // style={{ backgroundColor: "#3467D6" }}
-                          >
-                            Send Message
-                          </Button>
-                        </Col>
-                      </Row>
-                    </CardBody>
-                  </Form>
+                          <FormGroup>
+                            <label>Your message</label>
+                            <Input
+                              id="message"
+                              name="message"
+                              rows="6"
+                              type="textarea"
+                            />
+                          </FormGroup>
+                          <Row>
+                            <Col className="ml-auto" md="6">
+                              <Button
+                                className="btn-round pull-right"
+                                color="info"
+                                // style={{ backgroundColor: "#3467D6" }}
+                              >
+                                Send Message
+                              </Button>
+                            </Col>
+                          </Row>
+                        </CardBody>
+                      </Form>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+              {/* <hr
+                style={{
+                  color: "grey",
+                  backgroundColor: "grey",
+                  height: 0.5,
+                  width: "100vw",
+                  borderColor: "grey"
+                }}
+              /> */}
+              <Row>
+                <Col md="12" className="header-filter">
+                  <img src={map} />
                 </Col>
               </Row>
             </Container>
           </div>
-          <div className="team-1" style={{ backgroundColor: "white" }}>
+          {/* <div className="team-1" style={{ backgroundColor: "white" }}>
             <Container>
               <div
                 className="title"
@@ -206,7 +254,7 @@ class Content extends React.Component {
                 </Col>
               </Row>
             </Container>
-          </div>
+          </div> */}
         </div>
       </>
     );

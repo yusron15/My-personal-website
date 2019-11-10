@@ -58,25 +58,29 @@ class VisiMisi extends React.Component {
                 <Col md="6">
                   <h2 className="title">VISI KAMI</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
-                    <br />
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    Menjadi perusahaan yang unggul dalam industri perdagangan
+                    berjangka melalui pelayanan berkualitas dan program kerja
+                    yang inovatif demi menciptakan hubungan kerjasama yang ideal
+                    dengan para nasabah, baik dalam lingkup lokal maupun global.
                   </p>
                 </Col>
                 <Col md="6">
                   <h2 className="title">MISI KAMI</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                    Menyediakan fasilitas transaksi terbaik dengan beragam
+                    produk investasi serta layanan informasi pasar keuangan
+                    terkini dan terpercaya
                     <br />
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    Menyediakan fasilitas perdagangan online bagi investor dalam
+                    lingkup lokal maupun global melalui teknologi online trading
+                    yang inovatif
+                    <br />
+                    Aktif berpartisipasi dalam membangun industri perdagangan
+                    berjangka yang transparan melalui program edukasi
+                    berkesinambungan
+                    <br />
+                    Senantiasa meningkatkan dan mengembangkan kualitas sumber
+                    daya manusia yang profesional
                   </p>
                 </Col>
               </Row>

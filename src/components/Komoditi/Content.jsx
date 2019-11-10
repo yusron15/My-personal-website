@@ -21,6 +21,10 @@ import { Badge, Button, Container, Row, Col } from "reactstrap";
 
 import "../../assets/css/main.css";
 
+import increase from "../../assets/img/increase.png";
+import money from "../../assets/img/money.png";
+import shield from "../../assets/img/shield.png";
+
 const font = {
   color: "black",
   textAlign: "left"
@@ -44,14 +48,9 @@ class Features extends React.Component {
               <Row>
                 <Col md="4">
                   <div className="info info-hover">
-                    <div className="icon icon-primary">
-                      <img
-                        alt="..."
-                        className="bg-blob"
-                        src={require("assets/img/feature-blob/primary.png")}
-                      />
-                      <i className="tim-icons icon-user-run" />
-                    </div>
+                    {/* <div className="icon icon-primary"> */}
+                    <img alt="..." className="bg-blob" src={increase} />
+                    {/* </div> */}
                     <h4 className="info-title" style={font}>
                       Permintaan Akan Komoditas Terus Meningkat
                     </h4>
@@ -64,39 +63,27 @@ class Features extends React.Component {
                 </Col>
                 <Col md="4">
                   <div className="info info-hover">
-                    <div className="icon icon-success">
-                      <img
-                        alt="..."
-                        className="bg-blob"
-                        src={require("assets/img/feature-blob/success.png")}
-                      />
-                      <i className="tim-icons icon-atom" />
-                    </div>
+                    <img alt="..." className="bg-blob" src={money} />
+
                     <h4 className="info-title" style={font}>
                       Analyze Performance
                     </h4>
                     <p className="description" style={font}>
-                      Unify data from Facebook, Instagram, Twitter, LinkedIn,
-                      and Youtube to gain rich insights.
+                      Sejalan dengan laju inflasi, harga komoditas akan terus
+                      meningkat; para pelaku pasar dapat melindungi harga
+                      tersebut terhadap inflasi melalui Bursa Berjangka.
                     </p>
                   </div>
                 </Col>
                 <Col md="4">
                   <div className="info info-hover">
-                    <div className="icon icon-warning">
-                      <img
-                        alt="..."
-                        className="bg-blob"
-                        src={require("assets/img/feature-blob/warning.png")}
-                      />
-                      <i className="tim-icons icon-gift-2" />
-                    </div>
+                    <img alt="..." className="bg-blob" src={shield} />
                     <h4 className="info-title" style={font}>
                       Measure Conversions
                     </h4>
                     <p className="description" style={font}>
-                      Track actions taken on your website, understand the impact
-                      on your bottom line.
+                      Di antaranya adalah perkiraan cuaca, faktor ekonomi,
+                      faktor politik, tekanan internasional, dan spekulasi
                     </p>
                   </div>
                 </Col>

@@ -34,7 +34,12 @@ import {
   Col,
   UncontrolledTooltip,
   Carousel,
-  CarouselItem
+  CarouselItem,
+  Form,
+  Input,
+  InputGroupAddon,
+  InputGroupText,
+  InputGroup
 } from "reactstrap";
 
 import "../../assets/css/main.css";
@@ -275,45 +280,106 @@ class Carding extends React.Component {
               <Row>
                 <Col md="4">
                   <CardNews
-                    title="title"
-                    description="description"
+                    title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
                     image={pc}
+                    person="person"
+                    date="dd/mm/yyyy"
                   />
                 </Col>
                 <Col md="4">
                   <CardNews
-                    title="title"
-                    description="description"
+                    title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
                     image={pc2}
+                    person="person"
+                    date="dd/mm/yyyy"
                   />
                 </Col>
                 <Col md="4">
                   <CardNews
-                    title="title"
-                    description="description"
+                    title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
                     image={pc3}
+                    person="person"
+                    date="dd/mm/yyyy"
                   />
                 </Col>
                 <Col md="4">
                   <CardNews
-                    title="title"
-                    description="description"
+                    title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
                     image={pc}
+                    person="person"
+                    date="dd/mm/yyyy"
                   />
                 </Col>
                 <Col md="4">
                   <CardNews
-                    title="title"
-                    description="description"
+                    title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
                     image={pc2}
+                    person="person"
+                    date="dd/mm/yyyy"
                   />
                 </Col>
                 <Col md="4">
                   <CardNews
-                    title="title"
-                    description="description"
+                    title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
                     image={pc3}
+                    person="person"
+                    date="dd/mm/yyyy"
                   />
+                </Col>
+              </Row>
+            </Container>
+            <Container>
+              <Row>
+                <Col className="ml-auto mr-auto" lg="8" xs="10">
+                  <div className="text-center">
+                    <h4 className="title">Subscribe to our Newsletter</h4>
+                    <p className="description">
+                      Join our newsletter and get news in your inbox every week!
+                      We hate spam too, so no worries about this.
+                    </p>
+                  </div>
+                  <Card className="card-raised card-form-horizontal black-newsletter">
+                    <CardBody>
+                      <Form action="" method="">
+                        <Row>
+                          <Col sm="8">
+                            <InputGroup
+                            // className={classnames({
+                            //   "input-group-focus": this.state.emailFocus
+                            // })}
+                            >
+                              <InputGroupAddon addonType="prepend">
+                                <InputGroupText>
+                                  <i className="tim-icons icon-email-85" />
+                                </InputGroupText>
+                              </InputGroupAddon>
+                              <Input
+                                placeholder="Your Email..."
+                                type="email"
+                                onFocus={e =>
+                                  this.setState({ emailFocus: true })
+                                }
+                                onBlur={e =>
+                                  this.setState({ emailFocus: false })
+                                }
+                              />
+                            </InputGroup>
+                          </Col>
+                          <Col sm="4">
+                            <Button block color="info" type="button">
+                              Subscribe
+                            </Button>
+                          </Col>
+                        </Row>
+                      </Form>
+                    </CardBody>
+                  </Card>
                 </Col>
               </Row>
             </Container>

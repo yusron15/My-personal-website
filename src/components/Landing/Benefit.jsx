@@ -201,7 +201,7 @@ const PrevButton = props => {
       aria-label="Previous"
       onClick={props.onClick}
       src={prevButton}
-      style={{ height: "30px", width: "zuto" }}
+      style={{ height: "30px", width: "auto", paddingLeft: "470px" }}
     />
   );
 };
@@ -213,7 +213,7 @@ const NextButton = props => {
       // aria-label="Next"
       onClick={props.onClick}
       src={nextButton}
-      style={{ height: "30px", width: "zuto" }}
+      style={{ height: "30px", width: "auto", paddingLeft: "470px" }}
     />
   );
 };

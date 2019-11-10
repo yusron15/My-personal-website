@@ -67,13 +67,28 @@ class HeaderAboutUs extends React.Component {
                         Tentang <br /> Topgrowth Future
                       </h1>
                       <p className="description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur.
+                        Didirikan sejak tahun 2003, Topgrowth Futures telah
+                        berkembang menjadi perusahaan pialang terbaik dan
+                        terbesar di Indonesia yang menyediakan layanan transaksi
+                        produk forex, index, dan komoditi dengan ekspansi yang
+                        kompetitif.
+                        <br />
+                        Topgrowth Futures merupakan perusahaan yang telah diakui
+                        secara hukum dan mendapat penghargaan, baik dari sisi
+                        kepatuhan hukum maupun kinerja keuangan, serta
+                        beroperasi atas izin resmi dan berada di bawah
+                        pengawasan BAPPEBTI.
+                        <br />
+                        Topgrowth Futures menyediakan fasilitas online trading
+                        di pasar valuta asing dan derivatif dunia serta
+                        berencana untuk memanfaatkan potensi pasar komoditi
+                        Indonesia yang sudah terkenal sejak dahulu.
+                        <br />
+                        Bagi masyarakat Indonesia yang sudah terbiasa
+                        bertransaksi dengan teknologi trading online,
+                        kecanggihan platform Topgrowth Online Trading akan
+                        menjadi tempat yang tepat bagi para investor maupun
+                        nasabah.
                       </p>
                     </Col>
                     <Col lg="6" xs="12">

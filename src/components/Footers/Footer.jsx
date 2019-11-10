@@ -40,7 +40,6 @@ class Footers extends React.Component {
           className="section section-footers"
           style={{ backgroundColor: "#1D1E1F" }}
         >
-          
           {/* ********* BIG WHITE FOOTER V2 ********* */}
           {/* <footer className="footer footer-white footer-big"> */}
           <Container>
@@ -119,9 +118,9 @@ class Footers extends React.Component {
                     style={{ color: "white" }}
                   >
                     Alamat Kantor Sahid Sudirman Center, lantai 40 Jl. Jend
-                    Sudirman Kav 86 Jakarta 10220 Indonesia Email:
+                    {/* Sudirman Kav 86 Jakarta 10220 Indonesia Email:
                     customerservices@topgrowthfutures.com Tel: 021 2788-9366
-                    Fax: 021 2788-9395
+                    Fax: 021 2788-9395 */}
                   </a>
                 </Col>
               </Row>
