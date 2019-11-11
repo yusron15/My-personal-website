@@ -19,7 +19,7 @@ import React from "react";
 // reactstrap components
 import { Badge, Button, Container, Row, Col } from "reactstrap";
 
-import laptop from "../../assets/img/maclanding.jpg";
+import laptop from "../../assets/img/macbook.png";
 
 import "../../assets/css/main.css";
 
@@ -46,9 +46,14 @@ class Features extends React.Component {
                   </h4>
                 </Col>
               </Row>
-              <Col className="ml-auto mr-auto" md="10">
-                <Row>
-                  <Col md="4">
+              <Row>
+                <Col
+                  className="ml-auto mr-auto"
+                  md="6"
+                  // md={{ size: 12, order: 2, offset: 2 }}
+                >
+                  <Row>
+                    {/* <Col> */}
                     <Col>
                       <div className="info info-horizontal">
                         <div className="icon icon-success">
@@ -92,9 +97,9 @@ class Features extends React.Component {
                         </div>
                       </div>
                     </Col>
-                  </Col>
+                    {/* </Col> */}
 
-                  <Col md="4">
+                    {/* <Col> */}
                     <Col>
                       <div className="info info-horizontal">
                         <div className="icon icon-success">
@@ -136,15 +141,19 @@ class Features extends React.Component {
                         </div>
                       </div>
                     </Col>
-                  </Col>
+                    {/* </Col> */}
 
-                  <Col md="4">
-                    <Col>
-                      <img src={laptop} />
-                    </Col>
-                  </Col>
-                </Row>
-              </Col>
+                    {/* <Col> */}
+                    {/* <Col>
+                    <img src={laptop} />
+                  </Col> */}
+                    {/* </Col> */}
+                  </Row>
+                </Col>
+                <Col md="3" style={{ paddingRight: 0, paddingTop: "50px" }}>
+                  <img src={laptop} />
+                </Col>
+              </Row>
               {/* <Row>
                 <Col className="ml-auto" md="5">
                   <div className="info info-horizontal">

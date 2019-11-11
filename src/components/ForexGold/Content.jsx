@@ -202,7 +202,7 @@ class Features extends React.Component {
                 </Col>
               </Row>
             </Container>
-            <hr
+            {/* <hr
               style={{
                 color: "grey",
                 backgroundColor: "grey",
@@ -210,7 +210,7 @@ class Features extends React.Component {
                 width: "100vw",
                 borderColor: "grey"
               }}
-            />
+            /> */}
           </div>
 
           {/* ********* END FEATURES 3 ********* */}

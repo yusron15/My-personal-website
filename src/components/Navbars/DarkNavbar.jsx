@@ -71,10 +71,10 @@ class Navbars extends React.Component {
           {/* Navbar Transparent */}
           <Navbar
             style={{
-              backgroundColor: "black",
+              // backgroundColor: "black",
               position: "fixed"
             }}
-            // className="blur-bg"
+            className="black-news"
             expand="lg"
             // style={{ position: "fixed" }}
             // style={{

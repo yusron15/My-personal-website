@@ -38,6 +38,8 @@ import {
 } from "reactstrap";
 import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
+import rightButton from "../../assets/img/right-blue-arrow.png";
+import leftButton from "../../assets/img/left-blue-arrow.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 
 const textTitle = {
@@ -273,13 +275,15 @@ class Content extends React.Component {
                       // md={{ size: 6, offset: 10 }}
                       style={{
                         position: "absolute",
-                        paddingLeft: "80%"
+                        paddingLeft: "80%",
+                        paddingTop: "20px"
+                        // paddingBottom: "50px"
                       }}
                     >
                       {/* <div
                     style={{ position: "absolute", left: "80%", top: "350px" }}
                   > */}
-                      <Button
+                      {/* <Button
                         className="btn-round btn-icon btn-simple slick-prev slick-arrow"
                         data-slide="prev"
                         href="#pablo"
@@ -301,8 +305,35 @@ class Content extends React.Component {
                         role="button"
                       >
                         <i className="tim-icons icon-minimal-right" />
-                      </Button>
+                      </Button> */}
                       {/* </div> */}
+                      <img
+                        src={leftButton}
+                        className="slick-prev slick-arrow"
+                        data-slide="prev"
+                        href="#pablo"
+                        onClick={e => {
+                          e.preventDefault();
+                          this.previous();
+                        }}
+                        style={{ height: "50px", width: "auto" }}
+
+                        // <i className="tim-icons icon-minimal-left" />
+                      />
+                      <img
+                        src={rightButton}
+                        className="slick-arrow"
+                        data-slide="next"
+                        href="#pablo"
+                        onClick={e => {
+                          e.preventDefault();
+                          this.next();
+                        }}
+                        role="button"
+                        style={{ height: "50px", width: "auto" }}
+
+                        // <i className="tim-icons icon-minimal-right" />
+                      />
                     </Col>
                   </Row>
 

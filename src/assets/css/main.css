@@ -121,6 +121,13 @@
   transform: translateY(-50%);
 }
 
+.vertical-center-img{
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .scaled {
   transform: scale(1.2); /* Equal to scaleX(0.7) scaleY(0.7) */
   /* border-radius:30px; */
