@@ -36,15 +36,17 @@ import {
 } from "reactstrap";
 
 // core components
-import Navbar from "../../components/Navbars/Navbar.jsx";
-import Footer from "../../components/Footers/Footer.jsx";
+import ColorNavbar from "components/Navbars/ColorNavbar.jsx";
+import DemoFooter from "../../components/Footers/Footer.jsx";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 
-class Login extends React.Component {
+class LoginPage extends React.Component {
   state = {};
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
-    window.scroll(0, 0);
+    document.body.classList.add("login-page");
   }
   componentWillUnmount() {
     document.body.classList.remove("login-page");
@@ -52,7 +54,8 @@ class Login extends React.Component {
   render() {
     return (
       <>
-        <Navbar />
+        <BlurryNavbar />
+        <ColoredNavbar />
         <div className="page-header">
           <div className="squares square1" />
           <div className="squares square2" />
@@ -68,9 +71,11 @@ class Login extends React.Component {
                   <CardHeader>
                     <CardImg
                       alt="..."
-                      src={require("assets/img/square2.png")}
+                      src={require("assets/img/square1.png")}
                     />
-                    <CardTitle tag="h4">Login</CardTitle>
+                    <CardTitle tag="h4" style={{ paddingLeft: "25px" }}>
+                      Login
+                    </CardTitle>
                   </CardHeader>
                   <CardBody>
                     <InputGroup
@@ -126,6 +131,7 @@ class Login extends React.Component {
                         className="link footer-link"
                         href="#pablo"
                         onClick={e => e.preventDefault()}
+                        style={{ color: "white" }}
                       >
                         Create Account
                       </a>
@@ -137,6 +143,7 @@ class Login extends React.Component {
                         className="link footer-link"
                         href="#pablo"
                         onClick={e => e.preventDefault()}
+                        style={{ color: "white" }}
                       >
                         Need Help?
                       </a>
@@ -147,10 +154,10 @@ class Login extends React.Component {
             </Col>
           </Container>
         </div>
-        <Footer />
+        <DemoFooter />
       </>
     );
   }
 }
 
-export default Login;
+export default LoginPage;

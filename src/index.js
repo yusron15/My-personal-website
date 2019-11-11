@@ -62,6 +62,7 @@ import NewsPage from "views/layout/NewsPage.jsx";
 import Contact from "views/layout/Contact.jsx";
 import Karir from "views/layout/Karir.jsx";
 import Login from "views/layout/Login.jsx";
+import Register from "views/layout/Register.jsx";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -90,6 +91,7 @@ ReactDOM.render(
       <Route path="/Contact" render={props => <Contact {...props} />} />
       <Route path="/Karir" render={props => <Karir {...props} />} />
       <Route path="/Login" render={props => <Login {...props} />} />
+      <Route path="/Register" render={props => <Register {...props} />} />
       <Route path="/index" render={props => <Index {...props} />} />
       <Route
         path="/presentation"

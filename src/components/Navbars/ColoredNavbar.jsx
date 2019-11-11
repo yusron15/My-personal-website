@@ -42,7 +42,7 @@ class ColorNavbar extends React.Component {
     super(props);
     this.state = {
       navbarColor: "navbar-transparent",
-      marginTop: "0px"
+      marginTop: "30px"
       // backgroundColor: "black"
     };
   }
