@@ -60,7 +60,8 @@ class Projects extends React.Component {
     activeTab: "1",
     content: [
       {
-        bappebti: "bappebti"
+        bappebti:
+          "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus montes, nascetur ridiculus mus.Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus montes, nascetur ridiculus mus.Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus montes, nascetur ridiculus mus."
       },
       {
         jfx: "jfx"

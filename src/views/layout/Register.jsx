@@ -107,7 +107,9 @@ class RegisterPage extends React.Component {
                         alt="..."
                         src={require("assets/img/square1.png")}
                       />
-                      <CardTitle tag="h4">Register</CardTitle>
+                      <CardTitle tag="h4" style={{ paddingLeft: "15px" }}>
+                        Register
+                      </CardTitle>
                     </CardHeader>
                     <CardBody>
                       <Form className="form">

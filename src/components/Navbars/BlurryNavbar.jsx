@@ -100,7 +100,7 @@ class BlurryNavbar extends React.Component {
               </button> */}
             </div>
             <UncontrolledCollapse navbar toggler="#example-navbar-transparent">
-              <Nav className="ml-auto" md="10" navbar>
+              <Nav className="ml-auto" style={{ marginRight: "25px" }} navbar>
                 <NavItem>
                   <Link to="/#" className="vertical-center-nav">
                     <img

@@ -249,13 +249,17 @@ class Content extends React.Component {
               CONTRACT FOR DIFFERENCE
             </div>
           </div>
-          <div className="team-1" style={{ backgroundColor: "white" }}>
-            <Container>
+          <div
+            className="team-1"
+            style={{ backgroundColor: "white", height: "70vh" }}
+          >
+            <Container style={{ minHeight: "45vh" }}>
               <Row>
                 <Carousel
                   activeIndex={this.state.activeIndex}
                   next={this.next}
                   previous={this.previous}
+
                   //   className="carousel-team"
                 >
                   {items.map((item, key) => {
@@ -269,104 +273,51 @@ class Content extends React.Component {
                       </CarouselItem>
                     );
                   })}
-                  <Row>
-                    <Col
-                      sm="12"
-                      // md={{ size: 6, offset: 10 }}
-                      style={{
-                        position: "absolute",
-                        paddingLeft: "80%",
-                        paddingTop: "20px"
-                        // paddingBottom: "50px"
-                      }}
-                    >
-                      {/* <div
-                    style={{ position: "absolute", left: "80%", top: "350px" }}
-                  > */}
-                      {/* <Button
-                        className="btn-round btn-icon btn-simple slick-prev slick-arrow"
-                        data-slide="prev"
-                        href="#pablo"
-                        onClick={e => {
-                          e.preventDefault();
-                          this.previous();
-                        }}
-                      >
-                        <i className="tim-icons icon-minimal-left" />
-                      </Button>
-                      <Button
-                        className="btn-round btn-icon btn-simple slick-arrow"
-                        data-slide="next"
-                        href="#pablo"
-                        onClick={e => {
-                          e.preventDefault();
-                          this.next();
-                        }}
-                        role="button"
-                      >
-                        <i className="tim-icons icon-minimal-right" />
-                      </Button> */}
-                      {/* </div> */}
-                      <img
-                        src={leftButton}
-                        className="slick-prev slick-arrow"
-                        data-slide="prev"
-                        href="#pablo"
-                        onClick={e => {
-                          e.preventDefault();
-                          this.previous();
-                        }}
-                        style={{ height: "50px", width: "auto" }}
-
-                        // <i className="tim-icons icon-minimal-left" />
-                      />
-                      <img
-                        src={rightButton}
-                        className="slick-arrow"
-                        data-slide="next"
-                        href="#pablo"
-                        onClick={e => {
-                          e.preventDefault();
-                          this.next();
-                        }}
-                        role="button"
-                        style={{ height: "50px", width: "auto" }}
-
-                        // <i className="tim-icons icon-minimal-right" />
-                      />
-                    </Col>
-                  </Row>
-
-                  {/* <a
-                    className="carousel-control-prev"
-                    data-slide="prev"
-                    href="#pablo"
-                    onClick={e => {
-                      e.preventDefault();
-                      this.previous();
-                    }}
-                    role="button"
-                  >
-                    <i className="tim-icons icon-minimal-left" />
-                    <span className="sr-only">Previous</span>
-                  </a>
-                  <a
-                    className="carousel-control-next"
-                    data-slide="next"
-                    href="#pablo"
-                    onClick={e => {
-                      e.preventDefault();
-                      this.next();
-                    }}
-                    role="button"
-                  >
-                    <i className="tim-icons icon-minimal-right" />
-                    <span className="sr-only">Next</span>
-                  </a> */}
                 </Carousel>
               </Row>
             </Container>
+            <Row>
+              <Col
+                sm="12"
+                // md={{ size: 6, offset: 10 }}
+                style={{
+                  position: "absolute",
+                  paddingLeft: "80%",
+                  marginTop: "20px"
+                  // paddingBottom: "50px"
+                }}
+              >
+                <img
+                  src={leftButton}
+                  className="slick-prev slick-arrow"
+                  data-slide="prev"
+                  href="#pablo"
+                  onClick={e => {
+                    e.preventDefault();
+                    this.previous();
+                  }}
+                  style={{ height: "50px", width: "auto" }}
+
+                  // <i className="tim-icons icon-minimal-left" />
+                />
+                <img
+                  src={rightButton}
+                  className="slick-arrow"
+                  data-slide="next"
+                  href="#pablo"
+                  onClick={e => {
+                    e.preventDefault();
+                    this.next();
+                  }}
+                  role="button"
+                  style={{ height: "50px", width: "auto" }}
+
+                  // <i className="tim-icons icon-minimal-right" />
+                />
+              </Col>
+            </Row>
           </div>
+
           {/* ********* END TEAM 1 ********* */}
         </div>{" "}
       </>

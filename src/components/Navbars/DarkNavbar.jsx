@@ -149,15 +149,23 @@ class Navbars extends React.Component {
                     <button class="dropbtn">Trading Online</button>
                     <div class="dropdown-content-trading">
                       <Row>
-                        <Col md="6">
+                        <Col md="3">
+                          {/* <div className="title">Produk</div> */}
                           <Link to="/forexgold">Forex & Gold</Link>
                           <Link to="/cfd">CFD</Link>
                           <Link to="/indexfutures">Index Futures</Link>
                           <Link to="/komoditi">Komoditi</Link>
                         </Col>
-                        <Col md="6">
+                        <Col md="3">
+                          <Link to="/jamperdagangan">Jam Perdagangan</Link>
+                        </Col>
+                        <Col md="3">
                           <Link to="/protrader">Pro | Trader</Link>
                           <Link to="/topgrowthtrader">Topgrowth Trader</Link>
+                        </Col>
+                        <Col md="3">
+                          <Link to="/login">Login</Link>
+                          <Link to="/register">Register</Link>
                         </Col>
                       </Row>
                     </div>

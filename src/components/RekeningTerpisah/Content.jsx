@@ -74,13 +74,17 @@ class Content extends React.Component {
                       Rekening Terpisah
                     </h1>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                      Rekening Terpisah (Segregated Account) adalah sebuah
+                      rekening bank atas nama perusahaan pialang berjangka yang
+                      difungsikan khusus untuk menampung dana kolektif semua
+                      nasabah dalam suatu perusahaan pialang berjangka dan hanya
+                      digunakan untuk keperluan transaksi nasabah yang terpisah
+                      dari rekening operasional perusahaan. Rekening ini diawasi
+                      secara ketat dan berkala oleh Badan Pengawas Perdagangan
+                      Berjangka Komoditi (BAPPEBTI).
                       <br />
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur.
+                      Berikut ini adalah rekening terpisah resmi yang dimiliki
+                      oleh PT. Topgrowth Futures:
                     </p>
                   </Col>
                 </Row>
@@ -92,9 +96,9 @@ class Content extends React.Component {
                       </Col>
                       <Col>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
+                          BCA RUPIAH Nomor Akun // Account Number: 035.311.8568
+                          Swiftcode: CENAIDJA a.n. // Account Name: PT.
+                          Topgrowth Futures
                         </p>
                       </Col>
                     </Row>
@@ -106,9 +110,9 @@ class Content extends React.Component {
                       </Col>
                       <Col>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
+                          BCA Dollar Nomor Akun: // Account Number: 035.317.7718
+                          Swiftcode: CENAIDJA a.n. // Account Name: PT.
+                          Topgrowth Futures
                         </p>
                       </Col>
                     </Row>

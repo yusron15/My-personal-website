@@ -4,6 +4,7 @@ import React from "react";
 import { Card, CardBody, Container, Row, Col } from "reactstrap";
 
 import user from "../../assets/img/user.png";
+import calendar from "../../assets/img/calendar.png";
 import "../../assets/css/main.css";
 
 class CardNews extends React.Component {
@@ -33,7 +34,7 @@ class CardNews extends React.Component {
                 </Col>
                 <Col md="6">
                   <Row>
-                    <img src={user} />
+                    <img src={calendar} />
                     <p
                       className="vertical-center"
                       style={{ paddingLeft: "30px" }}
