@@ -4,9 +4,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Navbar from "../../components/Navbars/Navbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
-import HeaaderContent from "./HeaderContent.jsx";
+
 import image from "../../assets/img/bglanding.png";
-class HeaderLanding extends React.Component {
+class HeaderContent extends React.Component {
   state = {};
   render() {
     return (
@@ -65,6 +65,7 @@ class HeaderLanding extends React.Component {
               </Container>
             </div>
           </div>
+
           {/* ********* END HEADER 1 ********* */}
           {/* </Carousel> */}
         </div>{" "}
@@ -73,4 +74,4 @@ class HeaderLanding extends React.Component {
   }
 }
 
-export default HeaderLanding;
+export default HeaderContent;

@@ -151,7 +151,9 @@ class Navbars extends React.Component {
                       <Row>
                         <Col md="3">
                           {/* <div className="title">Produk</div> */}
-                          <Link to="/forexgold">Forex & Gold</Link>
+                          {/* <Link to="/forexgold">Forex & Gold</Link> */}
+                          <Link to="/forex">Forex</Link>
+                          <Link to="/gold">Gold</Link>
                           <Link to="/cfd">CFD</Link>
                           <Link to="/indexfutures">Index Futures</Link>
                           <Link to="/komoditi">Komoditi</Link>

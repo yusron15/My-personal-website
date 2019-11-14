@@ -225,34 +225,25 @@ class Content extends React.Component {
               <Row>
                 <Col md="12">
                   <div className="description" style={textDesc}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                    Online Trading di pasar keuangan adalah sebuah keharusan.
+                    Bertrading secara online merupakan pengalaman tersendiri
+                    karena transaksi dapat dilakukan dengan mudah dan cepat.
+                    Karena persaingan ketat, platform online trading menjadi
+                    semakin user friendly dan bisa dipadukan dalam semua lingkup
+                    teknologi informasi.
                   </div>
                 </Col>
                 <Col md="12">
                   <div className="description" style={textDesc}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                    Topgrowth adalah salah satu yang terdepan dalam
+                    mengembangkan teknologi online trading yang canggih.
+                    Platform Online Trading Topgrowth disebut Pro-iTrading.
+                    Platform Pro-iTrading memungkinkan Anda untuk bertransaksi
+                    real time produk-produk Forex dan Komoditi sepanjang waktu.
+                    Dengan menggunakan platform trading unggul yang menyediakan
+                    berbagai alat bantu yang Anda tidak pernah bayangkan
+                    sebelumnya serta menyajikan berita real-time, Anda dapat
+                    berkonsentrasi pada transaksi Anda.
                   </div>
                 </Col>
               </Row>

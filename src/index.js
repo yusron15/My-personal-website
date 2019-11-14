@@ -28,6 +28,7 @@ import "assets/demo/react-demo.css";
 import Index from "views/Index.jsx";
 import Presentation from "views/Presentation.jsx";
 import Sections from "views/Sections.jsx";
+
 // example pages
 import AboutUs from "views/examples/AboutUs.jsx";
 import BlogPost from "views/examples/BlogPost.jsx";
@@ -47,6 +48,8 @@ import ResetPage from "views/examples/ResetPage.jsx";
 import InvoicePage from "views/examples/InvoicePage.jsx";
 import CheckoutPage from "views/examples/CheckoutPage.jsx";
 import ChatPage from "views/examples/ChatPage.jsx";
+
+//TopgrowthPages
 import Landing from "views/layout/Landing.jsx";
 import TentangKami from "views/layout/TentangKami.jsx";
 import RekeningTerpisah from "views/layout/RekeningTerpisah.jsx";
@@ -61,6 +64,8 @@ import TopgrowthTrader from "views/layout/TopgrowthTrader.jsx";
 import NewsPage from "views/layout/NewsPage.jsx";
 import Contact from "views/layout/Contact.jsx";
 import Karir from "views/layout/Karir.jsx";
+import Forex from "views/layout/Forex.jsx";
+import Gold from "views/layout/Gold.jsx";
 import JamPerdagangan from "views/layout/JamPerdagangan.jsx";
 import Login from "views/layout/Login.jsx";
 import Register from "views/layout/Register.jsx";
@@ -78,6 +83,8 @@ ReactDOM.render(
       <Route path="/Cabang" render={props => <Cabang {...props} />} />
       <Route path="/cfd" render={props => <Cfd {...props} />} />
       <Route path="/ForexGold" render={props => <ForexGold {...props} />} />
+      <Route path="/Forex" render={props => <Forex {...props} />} />
+      <Route path="/Gold" render={props => <Gold {...props} />} />
       <Route path="/komoditi" render={props => <Komoditi {...props} />} />
       <Route
         path="/IndexFutures"

@@ -50,6 +50,7 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
 import CardNews from "./CardNews";
+import NewsLetter from "../NewsLetter/NewsLetter.jsx";
 
 const textTitle = {
   fontWeight: "bold",
@@ -248,6 +249,7 @@ class Carding extends React.Component {
                           e.preventDefault();
                           this.previous();
                         }}
+                        style={{ height: "30px", width: "auto" }}
                         // style={{ backgroundColor: "white" }}
 
                         // <i className="tim-icons icon-minimal-left" />
@@ -261,6 +263,7 @@ class Carding extends React.Component {
                           e.preventDefault();
                           this.next();
                         }}
+                        style={{ height: "30px", width: "auto" }}
                         role="button"
                         // style={{ backgroundColor: "white" }}
 
@@ -344,45 +347,10 @@ class Carding extends React.Component {
                       We hate spam too, so no worries about this.
                     </p>
                   </div>
-                  <Card className="card-raised card-form-horizontal black-newsletter">
-                    <CardBody>
-                      <Form action="" method="">
-                        <Row>
-                          <Col sm="8">
-                            <InputGroup
-                            // className={classnames({
-                            //   "input-group-focus": this.state.emailFocus
-                            // })}
-                            >
-                              <InputGroupAddon addonType="prepend">
-                                <InputGroupText>
-                                  <i className="tim-icons icon-email-85" />
-                                </InputGroupText>
-                              </InputGroupAddon>
-                              <Input
-                                placeholder="Your Email..."
-                                type="email"
-                                onFocus={e =>
-                                  this.setState({ emailFocus: true })
-                                }
-                                onBlur={e =>
-                                  this.setState({ emailFocus: false })
-                                }
-                              />
-                            </InputGroup>
-                          </Col>
-                          <Col sm="4">
-                            <Button block color="info" type="button">
-                              Subscribe
-                            </Button>
-                          </Col>
-                        </Row>
-                      </Form>
-                    </CardBody>
-                  </Card>
                 </Col>
               </Row>
             </Container>
+            <NewsLetter />
           </div>
           {/* ********* END TEAM 2 ********* */}
         </div>{" "}

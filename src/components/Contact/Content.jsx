@@ -49,6 +49,15 @@ import map from "../../assets/img/map-contact.png";
 
 import "../../assets/css/main.css";
 
+const MapWithAMarker = withGoogleMap(props => (
+  <GoogleMap
+    defaultZoom={17}
+    defaultCenter={{ lat: -6.210741, lng: 106.81889 }}
+  >
+    <Marker position={{ lat: -6.210741, lng: 106.81889 }} />
+  </GoogleMap>
+));
+
 class Content extends React.Component {
   state = {};
   componentDidMount() {
@@ -227,7 +236,11 @@ class Content extends React.Component {
               /> */}
               <Row>
                 <Col md="12" className="header-filter">
-                  <img src={map} />
+                  {/* <img src={map} /> */}
+                  <MapWithAMarker
+                    containerElement={<div style={{ height: `400px` }} />}
+                    mapElement={<div style={{ height: `100%` }} />}
+                  />
                 </Col>
               </Row>
             </Container>
