@@ -1,16 +1,162 @@
 import React from "react";
-import { Button, Container, Row, Col } from "reactstrap";
+import {
+  Button,
+  Container,
+  Row,
+  Col,
+  CarouselItem,
+  UncontrolledCarousel
+} from "reactstrap";
+import Carousel from "nuka-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
 import Navbar from "../../components/Navbars/Navbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import HeaaderContent from "./HeaderContent.jsx";
 import image from "../../assets/img/bglanding.png";
+import best17 from "../../assets/img/best2017.png";
+import best18 from "../../assets/img/best2018.png";
+import phoneHeader from "../../assets/img/phone-header.png";
+import phoneHeader2 from "../../assets/img/phoneHeader2.png";
+import appstore from "../../assets/img/appstore.png";
+import playstore from "../../assets/img/playstore.png";
+
+const carouselItems = [
+  {
+    content: (
+      <CarouselItem>
+        <Container style={{ paddingTop: 0 }}>
+          <Row>
+            {/* <Navbar /> */}
+            <Col className="mr-auto text-left" lg="5" md="7">
+              <div
+                style={{
+                  fontStyle: "Helvetica Bold",
+                  fontSize: "2rem",
+                  fontWeight: "bold"
+                }}
+
+                // className="title"
+              >
+                TRADING BERSAMA BROKER TERBAIK
+              </div>
+
+              <h6 className="category">
+                Didirikan sejak tahun 2003, saat ini telah berkembang menjadi
+                Perusahaan Pialang Berjangka Terbaik dan Terbesar di Indonesia.
+              </h6>
+              <br />
+              <Button
+                className="btn-round"
+                style={{
+                  margin: "0.3rem",
+                  backgroundColor: "#5420D8"
+                }}
+              >
+                Buat demo Akun
+              </Button>
+              <Button
+                className="btn-round"
+                style={{
+                  margin: "0.3rem",
+                  backgroundColor: "#5420D8"
+                }}
+              >
+                Buat real Akun
+              </Button>
+            </Col>
+            <Col md="5">
+              <Row>
+                <Col>
+                  <img src={best17} />
+                </Col>
+                <Col>
+                  <img src={best18} />
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
+      </CarouselItem>
+    ),
+    altText: "",
+    caption: "",
+    src: "0"
+  },
+  {
+    content: (
+      <CarouselItem>
+        <Container style={{ paddingTop: 0 }}>
+          <Row>
+            {/* <Navbar /> */}
+            <Col className="mr-auto text-left" lg="5" md="7">
+              <div
+                style={{
+                  fontStyle: "Helvetica Bold",
+                  fontSize: "2rem",
+                  fontWeight: "bold"
+                }}
+
+                // className="title"
+              >
+                TRADING BERSAMA BROKER TERBAIK
+              </div>
+
+              <h6 className="category">
+                Didirikan sejak tahun 2003, saat ini telah berkembang menjadi
+                Perusahaan Pialang Berjangka Terbaik dan Terbesar di Indonesia.
+              </h6>
+              <br />
+              <Button
+                className="btn-round"
+                style={{
+                  margin: "0.3rem",
+                  backgroundColor: "#5420D8"
+                }}
+              >
+                Buat demo Akun
+              </Button>
+              <Button
+                className="btn-round"
+                style={{
+                  margin: "0.3rem",
+                  backgroundColor: "#5420D8"
+                }}
+              >
+                Buat real Akun
+              </Button>
+            </Col>
+            <Col md="5">
+              <Row>
+                <Col>
+                  <img src={best17} />
+                </Col>
+                <Col>
+                  <img src={best18} />
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
+      </CarouselItem>
+    ),
+    altText: "",
+    caption: "",
+    src: "0"
+  }
+];
+
 class HeaderLanding extends React.Component {
-  state = {};
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     activeIndex: 0
+  //   };
+  // }
   render() {
     return (
       <>
+        {/* {carouselItems.map(item => item.content)} */}
         <div className="cd-section" id="headers">
           {/* ********* HEADER 1 ********* */}
           {/* <Carousel> */}
@@ -23,51 +169,141 @@ class HeaderLanding extends React.Component {
             }}
           >
             <BlurryNavbar />
-            <div className="page-header">
-              {/* <div className="page-header-image" /> */}
 
-              <Container style={{ paddingTop: 0 }}>
-                <Row>
-                  {/* <Navbar /> */}
-                  <Col className="mr-auto text-left" lg="5" md="7">
-                    <div
-                      style={{
-                        fontStyle: "Helvetica Bold",
-                        fontSize: "2rem",
-                        fontWeight: "bold"
-                      }}
+            <Carousel>
+              <div className="page-header">
+                {/* here */}
+                <Container style={{ paddingTop: 0 }}>
+                  <Row>
+                    {/* <Navbar /> */}
+                    <Col className="mr-auto text-left" lg="5" md="7">
+                      <div
+                        style={{
+                          fontStyle: "Helvetica Bold",
+                          fontSize: "2rem",
+                          fontWeight: "bold"
+                        }}
 
-                      // className="title"
-                    >
-                      TRADING BERSAMA BROKER TERBAIK
-                    </div>
+                        // className="title"
+                      >
+                        TRADING BERSAMA BROKER TERBAIK
+                      </div>
 
-                    <h6 className="category">
-                      Didirikan sejak tahun 2003, saat ini telah berkembang
-                      menjadi Perusahaan Pialang Berjangka Terbaik dan Terbesar
-                      di Indonesia.
-                    </h6>
-                    <br />
-                    <Button
-                      className="btn-round"
-                      style={{ margin: "0.3rem", backgroundColor: "#5420D8" }}
-                    >
-                      Buat demo Akun
-                    </Button>
-                    <Button
-                      className="btn-round"
-                      style={{ margin: "0.3rem", backgroundColor: "#5420D8" }}
-                    >
-                      Buat real Akun
-                    </Button>
-                  </Col>
-                </Row>
-              </Container>
-            </div>
+                      <h6 className="category">
+                        Didirikan sejak tahun 2003, saat ini telah berkembang
+                        menjadi Perusahaan Pialang Berjangka Terbaik dan
+                        Terbesar di Indonesia.
+                      </h6>
+                      <br />
+                      <Button
+                        className="btn-round"
+                        style={{
+                          margin: "0.3rem",
+                          backgroundColor: "#5420D8"
+                        }}
+                      >
+                        Buat demo Akun
+                      </Button>
+                      <Button
+                        className="btn-round"
+                        style={{
+                          margin: "0.3rem",
+                          backgroundColor: "#5420D8"
+                        }}
+                      >
+                        Buat real Akun
+                      </Button>
+                    </Col>
+                    <Col md="5">
+                      <Row>
+                        <Col>
+                          <img src={best17} />
+                        </Col>
+                        <Col>
+                          <img src={best18} />
+                        </Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Container>
+              </div>
+
+              <div className="page-header">
+                <Container style={{ paddingTop: 0 }}>
+                  <Row>
+                    {/* <Navbar /> */}
+                    <Col className="mr-auto text-left" lg="5" md="7">
+                      <img src={phoneHeader} style={{ paddingBottom: "0" }} />
+                    </Col>
+                    <Col md="5">
+                      <Row className="vertical-center">
+                        <div
+                          style={{
+                            fontStyle: "Helvetica Bold",
+                            fontSize: "2rem",
+                            fontWeight: "bold"
+                          }}
+
+                          // className="title"
+                        >
+                          Platform Unggulan Pro I Trader
+                        </div>
+
+                        <h4>
+                          Proses Eksekusi Order yang SEDERHANA dan CEPAT LIVE
+                          QUOTES dalam bentuk Summary maupun Advance Mode
+                          CHARTING dilengkapi dengan TOOLS untuk bertrading
+                          secara TEKNIKAL BERITA REAL-TIME untuk bertrading
+                          secara fundamental
+                        </h4>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Container>
+              </div>
+
+              <div className="page-header">
+                <Container style={{ paddingTop: 0 }}>
+                  <Row>
+                    {/* <Navbar /> */}
+                    <Col className="mr-auto text-left" lg="5" md="7">
+                      <img
+                        src={phoneHeader2}
+                        style={{
+                          height: "400px",
+                          width: "950px"
+                        }}
+                      />
+                    </Col>
+                    <Col md="5">
+                      <Row className="vertical-center">
+                        <div
+                          style={{
+                            fontStyle: "Helvetica Bold",
+                            fontSize: "2rem",
+                            fontWeight: "bold"
+                          }}
+
+                          // className="title"
+                        >
+                          Topgrowth Futures Mobile
+                        </div>
+
+                        <h4>
+                          Untuk Berita Pasar Keuangan Ter-UPDATE, Rekomendasi
+                          TRADING, Ulasan Pasar & SIGNAL TRADING REAL TIME
+                        </h4>
+                        <br />
+                        <img src={appstore} />
+                        <img src={playstore} style={{ marginLeft: "20px" }} />
+                      </Row>
+                    </Col>
+                  </Row>
+                </Container>
+              </div>
+            </Carousel>
           </div>
-          {/* ********* END HEADER 1 ********* */}
-          {/* </Carousel> */}
-        </div>{" "}
+        </div>
       </>
     );
   }

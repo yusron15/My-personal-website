@@ -339,7 +339,6 @@ class Content extends React.Component {
                   style={{ height: "30px", width: "auto" }}
                 />
 
-                
                 {/* <Button
                   className="btn-round btn-icon btn-simple slick-arrow"
                   data-slide="next"

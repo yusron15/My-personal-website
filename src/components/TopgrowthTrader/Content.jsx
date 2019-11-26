@@ -39,6 +39,12 @@ import {
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg1 from "../../assets/img/indexfutures1.png";
+import rating from "../../assets/img/rating.png";
+import report from "../../assets/img/report.png";
+import list from "../../assets/img/list.png";
+import submit from "../../assets/img/submit.png";
+import demand from "../../assets/img/demand.png";
+import sorting from "../../assets/img/sorting.png";
 
 import "../../assets/css/main.css";
 
@@ -252,17 +258,47 @@ class Content extends React.Component {
             <Row>
               <Col className="ml-auto mr-auto text-center" md="9">
                 <h1 className="title">Kelebihan Topgrowth Trader</h1>
-                <h4>Proses eksekusi Order yang Sederhana dan Cepat.</h4>
-                <h4>Life Quotes dalam bentuk Summary maupun Advance mode.</h4>
-                <h4>
-                  Charting dilengkapi dengan tools untuk bertrading secara
-                  teknikal.
-                </h4>
-                <h4>Berita real-time untuk bertrading secara fundamental.</h4>
-                <h4>Bisa disesuaikan dengan kebutuhan anda.</h4>
-                <h4>Catatan Trading Anda dapat diakses dengan cepat.</h4>
               </Col>
             </Row>
+            <div style={{ marginTop: "50px" }}>
+              <Row>
+                <Col className="ml-auto mr-auto text-center" md="3">
+                  <img src={rating} />
+                  <h4>
+                    Charting dilengkapi dengan tools untuk bertrading secara
+                    teknikal.
+                  </h4>
+                </Col>
+                <Col className="ml-auto mr-auto text-center" md="3">
+                  <img src={report} />
+                  <h4>Catatan Trading Anda dapat diakses dengan cepat.</h4>
+                </Col>
+                <Col className="ml-auto mr-auto text-center" md="3">
+                  <img src={demand} />
+                  <h4>Bisa disesuaikan dengan kebutuhan anda.</h4>
+                </Col>
+              </Row>
+              <Row
+                className="ml-auto mr-auto text-center"
+                md="9"
+                style={{ marginTop: "30px" }}
+              >
+                <Col className="ml-auto mr-auto text-center" md="3">
+                  <img src={list} />
+                  <h4>Life Quotes dalam bentuk Summary maupun Advance mode.</h4>
+                </Col>
+                <Col className="ml-auto mr-auto text-center" md="3">
+                  <img src={sorting} />
+                  <h4 style={{ marginTop: "35px" }}>
+                    Proses eksekusi Order yang Sederhana dan Cepat.
+                  </h4>
+                </Col>
+                <Col className="ml-auto mr-auto text-center" md="3">
+                  <img src={submit} />
+                  <h4>Berita real-time untuk bertrading secara fundamental.</h4>
+                </Col>
+              </Row>
+            </div>
           </div>
           {/* ********* END TEAM 1 ********* */}
         </div>{" "}
