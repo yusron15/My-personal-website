@@ -82,7 +82,7 @@ class Pricing extends React.Component {
                   </h4>
                 </Col>
               </Row>
-              <div className="space-50" />
+              <div className="space-30" />
               <Row>
                 <Container>
                   {/* <Card style={{ backgroundColor: "#1D1E1F" }}> */}
