@@ -1,5 +1,17 @@
 .image-overlay {
-    background: rgba(0, 0, 0, 0.5);
-  
-    z-index: 2;
-  }
+  background: rgba(0, 0, 0, 0.5);
+
+  z-index: 2;
+}
+
+.item-stripped {
+  text-align: center;
+  font-size: 14px;
+  border-radius: 4px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.opacity {
+  background-color: rgba(255, 255, 255, 0.1);
+}
