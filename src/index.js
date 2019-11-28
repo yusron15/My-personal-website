@@ -69,6 +69,7 @@ import Gold from "views/layout/Gold.jsx";
 import JamPerdagangan from "views/layout/JamPerdagangan.jsx";
 import Login from "views/layout/Login.jsx";
 import Register from "views/layout/Register.jsx";
+import News from "views/layout/News.jsx";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -96,6 +97,7 @@ ReactDOM.render(
         render={props => <TopgrowthTrader {...props} />}
       />
       <Route path="/NewsPage" render={props => <NewsPage {...props} />} />
+      <Route path="/News" render={props => <News {...props} />} />
       <Route path="/Contact" render={props => <Contact {...props} />} />
       <Route path="/Karir" render={props => <Karir {...props} />} />
       <Route path="/Login" render={props => <Login {...props} />} />
@@ -105,6 +107,7 @@ ReactDOM.render(
         render={props => <JamPerdagangan {...props} />}
       />
       <Route path="/index" render={props => <Index {...props} />} />
+
       <Route
         path="/presentation"
         render={props => <Presentation {...props} />}

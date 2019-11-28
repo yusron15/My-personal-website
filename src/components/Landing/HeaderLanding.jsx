@@ -163,10 +163,10 @@ class HeaderLanding extends React.Component {
           {/* ********* HEADER 1 ********* */}
           {/* <Carousel> */}
           <div
-            // className="header-filter"
+            className="header-filter"
             style={{
               backgroundImage:
-                "url(" + require("assets/img/bglanding.png") + ")",
+                "url(" + require("assets/img/header-image.png") + ")",
               backgroundSize: "cover"
             }}
           >

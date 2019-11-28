@@ -28,6 +28,19 @@ class NewsLetter extends Component {
     return (
       <div style={{ backgroundColor: "#1D1E1F" }}>
         <Container>
+          <Container>
+            <Row>
+              <Col className="ml-auto mr-auto" lg="8" xs="10">
+                <div className="text-center">
+                  <h4 className="title">Subscribe to our Newsletter</h4>
+                  <p className="description">
+                    Join our newsletter and get news in your inbox every week!
+                    We hate spam too, so no worries about this.
+                  </p>
+                </div>
+              </Col>
+            </Row>
+          </Container>
           <Row>
             <Col className="ml-auto mr-auto" lg="8" xs="10">
               <Card className="card-raised card-form-horizontal black-newsletter">

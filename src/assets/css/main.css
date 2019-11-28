@@ -97,6 +97,21 @@
   font-weight: bold;
   color: white;
 }
+
+.title-post{
+  text-align: left;
+  font-style: Helvetica Bold;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.text-posted{
+  text-align: left;
+  font-size: 0.8rem;
+  color: white;
+}
+
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}

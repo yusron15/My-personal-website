@@ -84,7 +84,7 @@ class Projects extends React.Component {
     }
   };
   render() {
-    console.log(this.state.content[2].kbi);
+    // console.log(this.state.content[2].kbi);
     return (
       <>
         <div className="cd-section" id="projects">
