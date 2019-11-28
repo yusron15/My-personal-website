@@ -315,7 +315,10 @@ class Testimonials extends React.Component {
                     <div>
                       <div
                         className="info text-left"
-                        style={{ backgroundColor: "rgba(112, 112, 112, 0.19)" }}
+                        style={{
+                          backgroundColor: "rgba(112, 112, 112, 0.19)",
+                          minHeight: "250px"
+                        }}
                       >
                         <p className="title text-white">{`"Biaya Rendah"`}</p>
                         <p>
@@ -328,7 +331,9 @@ class Testimonials extends React.Component {
                     <div>
                       <div
                         className="info text-left"
-                        style={{ backgroundColor: "rgba(112, 112, 112, 0.19)" }}
+                        style={{
+                          minHeight: "250px"
+                        }}
                       >
                         <p className="title text-white">{`"Legalitas Terjamin"`}</p>
                         <p>
@@ -342,7 +347,10 @@ class Testimonials extends React.Component {
                     <div>
                       <div
                         className="info text-left"
-                        style={{ backgroundColor: "rgba(112, 112, 112, 0.19)" }}
+                        style={{
+                          backgroundColor: "rgba(112, 112, 112, 0.19)",
+                          minHeight: "250px"
+                        }}
                       >
                         <p className="title text-white">{`"Layanan Prima"`}</p>
                         <p>
@@ -355,9 +363,12 @@ class Testimonials extends React.Component {
                     <div>
                       <div
                         className="info text-left"
-                        style={{ backgroundColor: "rgba(112, 112, 112, 0.19)" }}
+                        style={{
+                          backgroundColor: "rgba(112, 112, 112, 0.19)",
+                          minHeight: "250px"
+                        }}
                       >
-                        <p className="title text-white">{`"Layanan Prima"`}</p>
+                        <p className="title text-white">{`"Tanpa Requote"`}</p>
                         <p>
                           Dapatkan pengalaman bertransaksi tanpa requote dengan
                           platform unggulan Pro-I Trading
@@ -368,9 +379,12 @@ class Testimonials extends React.Component {
                     <div>
                       <div
                         className="info text-left"
-                        style={{ backgroundColor: "rgba(112, 112, 112, 0.19)" }}
+                        style={{
+                          backgroundColor: "rgba(112, 112, 112, 0.19)",
+                          minHeight: "250px"
+                        }}
                       >
-                        <p className="title text-white">{`"Layanan Prima"`}</p>
+                        <p className="title text-white">{`"Riset & Berita"`}</p>
                         <p>
                           Dapatkan informasi berita terkini serta analisa
                           komprehensif setiap harinya di email Anda

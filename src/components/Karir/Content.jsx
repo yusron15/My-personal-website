@@ -67,7 +67,7 @@ class Blogs extends React.Component {
                             <img
                               alt="..."
                               className="img rounded"
-                              src={require("assets/img/newscard.png")}
+                              src={require("assets/img/karir1.jpg")}
                             />
                           </a>
                         </div>
@@ -80,14 +80,14 @@ class Blogs extends React.Component {
                             <img
                               alt="..."
                               className="img rounded"
-                              src={require("assets/img/newscard.png")}
+                              src={require("assets/img/karir2.jpg")}
                             />
                           </a>
                         </div>
                       </Card>
                     </Col>
                     <Col lg="4" xs="12">
-                      <Card className="card-blog card-plain">
+                      {/* <Card className="card-blog card-plain">
                         <div className="card-image">
                           <a href="#pablo" onClick={e => e.preventDefault()}>
                             <img
@@ -97,7 +97,7 @@ class Blogs extends React.Component {
                             />
                           </a>
                         </div>
-                      </Card>
+                      </Card> */}
                     </Col>
                   </Row>
                 </Col>

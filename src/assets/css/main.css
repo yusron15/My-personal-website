@@ -17,7 +17,7 @@
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-radius: 10px;
+  
   z-index: 1;
 }
 
@@ -25,10 +25,10 @@
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 500px;
+  min-width: 580px;
   justify-content: center;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-radius: 10px;
+  
   z-index: 1;
 }
 
@@ -52,6 +52,10 @@
 
 .font-white {
   color: white;
+}
+
+.font-black {
+  color: black;
 }
 
 .bg-white{
@@ -93,11 +97,11 @@
   font-weight: bold;
   color: white;
 }
-.dropdown-content a:hover {background-color: #ddd;border-radius: 10px;}
+.dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown-content-trading a:hover {background-color: #ddd;border-radius: 10px;}
+.dropdown-content-trading a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content-trading {display: block;}
 
@@ -174,4 +178,12 @@ hr.grey {
 
 .blue-tgf{
   background-color: #2BB3E1;
+}
+
+.legality {
+  width:150px;
+}
+
+.legality:hover {
+  transform: scale(1.5); 
 }

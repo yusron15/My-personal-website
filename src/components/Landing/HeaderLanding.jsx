@@ -7,8 +7,10 @@ import {
   CarouselItem,
   UncontrolledCarousel
 } from "reactstrap";
-import Carousel from "nuka-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import Carousel from "nuka-carousel";
+// import { Carousel } from "react-responsive-carousel";
+import "../../assets/css/main.css";
+import { Carousel } from "react-bootstrap";
 // import { Carousel } from "react-responsive-carousel";
 import Navbar from "../../components/Navbars/Navbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
@@ -170,73 +172,20 @@ class HeaderLanding extends React.Component {
           >
             <BlurryNavbar />
 
-            <Carousel>
-              <div className="page-header">
-                {/* here */}
-                <Container style={{ paddingTop: 0 }}>
-                  <Row>
-                    {/* <Navbar /> */}
-                    <Col className="mr-auto text-left" lg="5" md="7">
-                      <div
-                        style={{
-                          fontStyle: "Helvetica Bold",
-                          fontSize: "2rem",
-                          fontWeight: "bold"
-                        }}
-
-                        // className="title"
-                      >
-                        TRADING BERSAMA BROKER TERBAIK
-                      </div>
-
-                      <h6 className="category">
-                        Didirikan sejak tahun 2003, saat ini telah berkembang
-                        menjadi Perusahaan Pialang Berjangka Terbaik dan
-                        Terbesar di Indonesia.
-                      </h6>
-                      <br />
-                      <Button
-                        className="btn-round"
-                        style={{
-                          margin: "0.3rem",
-                          backgroundColor: "#5420D8"
-                        }}
-                      >
-                        Buat demo Akun
-                      </Button>
-                      <Button
-                        className="btn-round"
-                        style={{
-                          margin: "0.3rem",
-                          backgroundColor: "#5420D8"
-                        }}
-                      >
-                        Buat real Akun
-                      </Button>
-                    </Col>
-                    <Col md="5">
-                      <Row>
-                        <Col>
-                          <img src={best17} />
-                        </Col>
-                        <Col>
-                          <img src={best18} />
-                        </Col>
-                      </Row>
-                    </Col>
-                  </Row>
-                </Container>
-              </div>
-
-              <div className="page-header">
-                <Container style={{ paddingTop: 0 }}>
-                  <Row>
-                    {/* <Navbar /> */}
-                    <Col className="mr-auto text-left" lg="5" md="7">
-                      <img src={phoneHeader} style={{ paddingBottom: "0" }} />
-                    </Col>
-                    <Col md="5">
-                      <Row className="vertical-center">
+            <Carousel
+              controls={false}
+              slide={true}
+              touch={true}
+              interval="2000"
+              pauseOnHover={false}
+            >
+              <Carousel.Item>
+                <div className="page-header">
+                  {/* here */}
+                  <Container style={{ paddingTop: 0 }}>
+                    <Row>
+                      {/* <Navbar /> */}
+                      <Col className="mr-auto text-left" lg="5" md="7">
                         <div
                           style={{
                             fontStyle: "Helvetica Bold",
@@ -246,61 +195,133 @@ class HeaderLanding extends React.Component {
 
                           // className="title"
                         >
-                          Platform Unggulan Pro I Trader
+                          TRADING BERSAMA BROKER TERBAIK
                         </div>
 
-                        <h4>
-                          Proses Eksekusi Order yang SEDERHANA dan CEPAT LIVE
-                          QUOTES dalam bentuk Summary maupun Advance Mode
-                          CHARTING dilengkapi dengan TOOLS untuk bertrading
-                          secara TEKNIKAL BERITA REAL-TIME untuk bertrading
-                          secara fundamental
-                        </h4>
-                      </Row>
-                    </Col>
-                  </Row>
-                </Container>
-              </div>
-
-              <div className="page-header">
-                <Container style={{ paddingTop: 0 }}>
-                  <Row>
-                    {/* <Navbar /> */}
-                    <Col className="mr-auto text-left" lg="5" md="7">
-                      <img
-                        src={phoneHeader2}
-                        style={{
-                          height: "400px",
-                          width: "950px"
-                        }}
-                      />
-                    </Col>
-                    <Col md="5">
-                      <Row className="vertical-center">
-                        <div
-                          style={{
-                            fontStyle: "Helvetica Bold",
-                            fontSize: "2rem",
-                            fontWeight: "bold"
-                          }}
-
-                          // className="title"
-                        >
-                          Topgrowth Futures Mobile
-                        </div>
-
-                        <h4>
-                          Untuk Berita Pasar Keuangan Ter-UPDATE, Rekomendasi
-                          TRADING, Ulasan Pasar & SIGNAL TRADING REAL TIME
-                        </h4>
+                        <h6 className="category">
+                          Didirikan sejak tahun 2003, saat ini telah berkembang
+                          menjadi Perusahaan Pialang Berjangka Terbaik dan
+                          Terbesar di Indonesia.
+                        </h6>
                         <br />
-                        <img src={appstore} />
-                        <img src={playstore} style={{ marginLeft: "20px" }} />
-                      </Row>
-                    </Col>
-                  </Row>
-                </Container>
-              </div>
+                        <Button
+                          className="btn-round"
+                          style={{
+                            margin: "0.3rem",
+                            backgroundColor: "#5420D8"
+                          }}
+                        >
+                          Buat demo Akun
+                        </Button>
+                        <Button
+                          className="btn-round"
+                          style={{
+                            margin: "0.3rem",
+                            backgroundColor: "#5420D8"
+                          }}
+                        >
+                          Buat real Akun
+                        </Button>
+                      </Col>
+                      <Col md="5">
+                        <Row>
+                          <Col>
+                            <img src={best17} />
+                          </Col>
+                          <Col>
+                            <img src={best18} />
+                          </Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </Container>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="page-header">
+                  <Container style={{ paddingTop: 0 }}>
+                    <Row>
+                      {/* <Navbar /> */}
+                      <Col className="mr-auto text-left" lg="5" md="7">
+                        <img src={phoneHeader} style={{ paddingBottom: "0" }} />
+                      </Col>
+                      <Col md="5">
+                        <Row className="vertical-center">
+                          <div
+                            style={{
+                              fontStyle: "Helvetica Bold",
+                              fontSize: "2rem",
+                              fontWeight: "bold"
+                            }}
+
+                            // className="title"
+                          >
+                            Platform Unggulan Pro I Trader
+                          </div>
+
+                          <h4>
+                            Proses Eksekusi Order yang SEDERHANA dan CEPAT LIVE
+                            QUOTES dalam bentuk Summary maupun Advance Mode
+                            CHARTING dilengkapi dengan TOOLS untuk bertrading
+                            secara TEKNIKAL BERITA REAL-TIME untuk bertrading
+                            secara fundamental
+                          </h4>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </Container>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="page-header">
+                  <Container style={{ paddingTop: 0 }}>
+                    <Row>
+                      {/* <Navbar /> */}
+                      <Col className="mr-auto text-left" lg="5" md="7">
+                        <img
+                          src={phoneHeader2}
+                          style={{
+                            height: "400px",
+                            width: "1200px"
+                          }}
+                        />
+                      </Col>
+                      <Col md="5">
+                        <Row className="vertical-center">
+                          <div
+                            style={{
+                              fontStyle: "Helvetica Bold",
+                              fontSize: "2rem",
+                              fontWeight: "bold"
+                            }}
+
+                            // className="title"
+                          >
+                            Topgrowth Futures Mobile
+                          </div>
+
+                          <h4>
+                            Untuk Berita Pasar Keuangan Ter-UPDATE, Rekomendasi
+                            TRADING, Ulasan Pasar & SIGNAL TRADING REAL TIME
+                          </h4>
+                          <br />
+                          <Row>
+                            <Col>
+                              <img src={appstore} />
+                            </Col>
+                            <Col>
+                              <img
+                                src={playstore}
+                                style={{ marginLeft: "20px" }}
+                              />
+                            </Col>
+                          </Row>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </Container>
+                </div>
+              </Carousel.Item>
             </Carousel>
           </div>
         </div>

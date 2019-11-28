@@ -59,7 +59,8 @@ class Projects extends React.Component {
     activeTab: "1",
     content: [
       {
-        bappebti: "bappebti"
+        bappebti:
+          "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus montes, nascetur ridiculus mus.Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus montes, nascetur ridiculus mus.Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus montes, nascetur ridiculus mus."
       },
       {
         jfx: "jfx"
@@ -147,7 +148,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <img
                     src={bappebti}
-                    width="150"
+                    className="legality"
                     auto="auto"
                     className={this.state.activeTab === "1" ? "active" : ""}
                     onClick={() => {
