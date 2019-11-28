@@ -103,35 +103,35 @@ class Projects extends React.Component {
                 className="tab-space"
                 activeTab={"project" + this.state.activeTab}
               >
-                <TabPane tabId="project1">
+                <TabPane tabId="project1" style={{ height: "200px" }}>
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
                       {this.state.content[0].bappebti}
                     </p>
                   </Col>
                 </TabPane>
-                <TabPane tabId="project2">
+                <TabPane tabId="project2" style={{ height: "200px" }}>
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
                       {this.state.content[1].jfx}
                     </p>
                   </Col>
                 </TabPane>
-                <TabPane tabId="project3">
+                <TabPane tabId="project3" style={{ height: "200px" }}>
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
                       {this.state.content[2].kbi}
                     </p>
                   </Col>
                 </TabPane>
-                <TabPane tabId="project4">
+                <TabPane tabId="project4" style={{ height: "200px" }}>
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
                       {this.state.content[3].ich}
                     </p>
                   </Col>
                 </TabPane>
-                <TabPane tabId="project5">
+                <TabPane tabId="project5" style={{ height: "200px" }}>
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
                     <p className="description mb-5">
                       {this.state.content[4].icdx}
