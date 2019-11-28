@@ -26,12 +26,16 @@ import {
   CardBody,
   CardTitle,
   Card,
-  Table
+  Table,
+  Input,
+  Media,
+  UncontrolledTooltip
 } from "reactstrap";
 
 import NewsLetter from "../NewsLetter/NewsLetter";
 import RelatedPost from "../RelatedPost/Content";
 import Content from "../RelatedPost/Layout";
+import Comment from "../Comments/Comment";
 
 import news1 from "../../assets/img/newscontent1.png";
 import news2 from "../../assets/img/newscontent2.png";
@@ -59,7 +63,7 @@ const textContent = {
   transform: "translateY(-50%)"
 };
 
-class StockIndex extends React.Component {
+class NewsStockIndex extends React.Component {
   render() {
     return (
       <>
@@ -69,7 +73,6 @@ class StockIndex extends React.Component {
           style={{ backgroundColor: "#1D1E1F" }}
         >
           {/* ********* FEATURES 3 ********* */}
-          <BlurryNavbar />
           <div className="features-3">
             <Container fluid>
               <Row>
@@ -121,6 +124,7 @@ class StockIndex extends React.Component {
                 </Col>
               </Row>
             </Container>
+
             <div style={{ marginTop: "150px" }}>
               <Content
                 image={news2}
@@ -153,4 +157,4 @@ class StockIndex extends React.Component {
   }
 }
 
-export default StockIndex;
+export default NewsStockIndex;

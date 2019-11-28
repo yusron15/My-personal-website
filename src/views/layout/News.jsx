@@ -1,8 +1,4 @@
 import React from "react";
-import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
-import NewsStockIndex from "../../components/NewsContent/NewsStockIndex.jsx";
-import ForexCommodity from "../../components/NewsContent/ForexCommodity";
-import Footer from "../../components/Footers/Footer.jsx";
 import {
   Badge,
   Button,
@@ -29,15 +25,20 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
+import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import NewsStockIndex from "../../components/NewsContent/NewsStockIndex.jsx";
+import NewsForexCommodity from "../../components/NewsContent/NewsForexCommodity";
+import StockIndex from "../../components/NewsContent/StockIndex.jsx";
+import ForexCommodity from "../../components/NewsContent/ForexCommodity";
+import Footer from "../../components/Footers/Footer.jsx";
+import "../../assets/css/main.css";
 
 class NewsPage extends React.Component {
-  state = { activeTab: "1" };
-  componentDidMount = () => {
-    window.scroll(0, 0);
-  };
   state = {
     activeTab: "1"
   };
+
   toggle = tab => {
     if (this.state.activeTab !== tab) {
       this.setState({
@@ -45,12 +46,85 @@ class NewsPage extends React.Component {
       });
     }
   };
+
+  componentDidMount = () => {
+    window.scroll(0, 0);
+  };
+
   render() {
     return (
       <>
-        <ColoredNavbar />
-        <ForexCommodity />
-        <Footer />
+        <div style={{ backgroundColor: "#1D1E1F" }}>
+          <BlurryNavbar />
+          <ColoredNavbar />
+
+          <Nav
+            className="nav-pills-info nav-pills-icons nav-pills-lg"
+            pills
+            role="tablist"
+            style={{ backgroundColor: "#1D1E1F", paddingTop: "100px" }}
+          >
+            <NavItem clssName="black-newsletter">
+              <div
+                style={{ backgroundColor: "#1D1E1F", margin: "0 15px 0 15px" }}
+                className={this.state.activeTab === "1" ? "active" : ""}
+                onClick={() => {
+                  this.toggle("1");
+                }}
+              >
+                News Stock Index
+              </div>
+            </NavItem>
+            <NavItem clssName="black-newsletter">
+              <div
+                style={{ backgroundColor: "#1D1E1F", margin: "0 15px 0 15px" }}
+                className={this.state.activeTab === "2" ? "active" : ""}
+                onClick={() => {
+                  this.toggle("2");
+                }}
+              >
+                News Forex & Commodity
+              </div>
+            </NavItem>
+            <NavItem clssName="black-newsletter">
+              <div
+                style={{ backgroundColor: "#1D1E1F", margin: "0 15px 0 15px" }}
+                className={this.state.activeTab === "3" ? "active" : ""}
+                onClick={() => {
+                  this.toggle("3");
+                }}
+              >
+                Stock Index
+              </div>
+            </NavItem>
+            <NavItem clssName="black-newsletter">
+              <div
+                style={{ backgroundColor: "#1D1E1F", margin: "0 15px 0 15px" }}
+                className={this.state.activeTab === "4" ? "active" : ""}
+                onClick={() => {
+                  this.toggle("4");
+                }}
+              >
+                Forex Commodity
+              </div>
+            </NavItem>
+          </Nav>
+          <TabContent activeTab={"project" + this.state.activeTab}>
+            <TabPane tabId="project1">
+              <NewsStockIndex />
+            </TabPane>
+            <TabPane tabId="project2">
+              <NewsForexCommodity />
+            </TabPane>
+            <TabPane tabId="project3">
+              <StockIndex />
+            </TabPane>
+            <TabPane tabId="project4">
+              <ForexCommodity />
+            </TabPane>
+          </TabContent>
+          <Footer />
+        </div>
       </>
     );
   }

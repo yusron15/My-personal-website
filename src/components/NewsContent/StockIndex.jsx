@@ -28,7 +28,7 @@ import news4 from "../../assets/img/newscontent4.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 
-class ForexCommodity extends React.Component {
+class StockIndex extends React.Component {
   render() {
     return (
       <>
@@ -82,4 +82,4 @@ class ForexCommodity extends React.Component {
   }
 }
 
-export default ForexCommodity;
+export default StockIndex;
