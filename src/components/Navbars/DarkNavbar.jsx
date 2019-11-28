@@ -152,6 +152,19 @@ class Navbars extends React.Component {
                         <Col md="3">
                           {/* <div className="title">Produk</div> */}
                           {/* <Link to="/forexgold">Forex & Gold</Link> */}
+                          <div
+                            style={{
+                              marginLeft: "10px",
+                              fontSize: "15px",
+                              fontWeight: "bold",
+                              color: "black",
+                              marginTop: "20px",
+                              marginBottom: "10px"
+                            }}
+                          >
+                            Produk
+                          </div>
+
                           <Link to="/forex">Forex</Link>
                           <Link to="/gold">Gold</Link>
                           <Link to="/cfd">CFD</Link>
@@ -159,20 +172,55 @@ class Navbars extends React.Component {
                           <Link to="/komoditi">Komoditi</Link>
                         </Col>
                         <Col md="3">
+                          <div
+                            style={{
+                              marginLeft: "10px",
+                              fontSize: "15px",
+                              fontWeight: "bold",
+                              color: "black",
+                              marginTop: "20px",
+                              marginBottom: "10px"
+                            }}
+                          >
+                            Informasi
+                          </div>
                           <Link to="/jamperdagangan">Jam Perdagangan</Link>
                         </Col>
                         <Col md="3">
-                          <Link to="/protrader">Pro | Trader</Link>
+                          <div
+                            style={{
+                              marginLeft: "10px",
+                              fontSize: "15px",
+                              fontWeight: "bold",
+                              color: "black",
+                              marginTop: "20px",
+                              marginBottom: "10px"
+                            }}
+                          >
+                            Trading Platform
+                          </div>
+                          <Link to="/protrader">Pro I Trader</Link>
                           <Link to="/topgrowthtrader">Topgrowth Trader</Link>
                         </Col>
                         <Col md="3">
+                          <div
+                            style={{
+                              marginLeft: "10px",
+                              fontSize: "15px",
+                              fontWeight: "bold",
+                              color: "black",
+                              marginTop: "20px",
+                              marginBottom: "10px"
+                            }}
+                          >
+                            Buka Akun
+                          </div>
                           <Link to="/login">Login</Link>
                           <Link to="/register">Register</Link>
                         </Col>
                       </Row>
                     </div>
                   </div>
-
                   <div class="dropdown">
                     <button class="dropbtn">Layanan</button>
                     <div class="dropdown-content">

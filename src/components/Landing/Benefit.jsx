@@ -332,6 +332,7 @@ class Testimonials extends React.Component {
                       <div
                         className="info text-left"
                         style={{
+                          backgroundColor: "rgba(112, 112, 112, 0.19)",
                           minHeight: "250px"
                         }}
                       >

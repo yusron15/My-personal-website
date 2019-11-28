@@ -155,7 +155,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <img
                     src={bappebti}
-                    width="150"
+                    width={this.state.activeTab === "1" ? "200" : "150"}
                     auto="auto"
                     className={this.state.activeTab === "1" ? "active" : ""}
                     onClick={() => {
@@ -166,7 +166,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <img
                     src={jfx}
-                    width="150"
+                    width={this.state.activeTab === "2" ? "200" : "150"}
                     auto="auto"
                     className={this.state.activeTab === "2" ? "active" : ""}
                     onClick={() => {
@@ -177,7 +177,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <img
                     src={kbi}
-                    width="150"
+                    width={this.state.activeTab === "3" ? "200" : "150"}
                     auto="auto"
                     className={this.state.activeTab === "3" ? "active" : ""}
                     onClick={() => {
@@ -188,7 +188,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <img
                     src={ich}
-                    width="150"
+                    width={this.state.activeTab === "4" ? "200" : "150"}
                     auto="auto"
                     className={this.state.activeTab === "4" ? "active" : ""}
                     onClick={() => {
@@ -199,7 +199,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <img
                     src={icdx}
-                    width="150"
+                    width={this.state.activeTab === "5" ? "200" : "150"}
                     auto="auto"
                     className={this.state.activeTab === "5" ? "active" : ""}
                     onClick={() => {
