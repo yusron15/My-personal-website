@@ -38,7 +38,7 @@ import "../../assets/css/main.css";
 
 class NewsPage extends React.Component {
   state = {
-    activeTab: "6"
+    activeTab: "1"
   };
 
   toggle = tab => {

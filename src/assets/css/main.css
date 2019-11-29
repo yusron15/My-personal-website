@@ -209,4 +209,7 @@ hr.grey {
   border-color: #FFFFFF
 }
 
-.even {background-color: #2C2F31;}
+.title-table {
+  color: "#FFFFFF";
+  font-size: 18px;
+}
