@@ -21,10 +21,11 @@ import RelatedPost from "../RelatedPost/Content";
 import Content from "../RelatedPost/Layout";
 import Comment from "../Comments/Comment";
 
-import news1 from "../../assets/img/newscontent1.png";
-import news2 from "../../assets/img/newscontent2.png";
-import news3 from "../../assets/img/newscontent3.png";
-import news4 from "../../assets/img/newscontent4.png";
+import fc1 from "../../assets/img/fc1.png";
+import fc2 from "../../assets/img/fc2.png";
+import fc5 from "../../assets/img/fc5.png";
+import fc3 from "../../assets/img/fc3.png";
+import fc4 from "../../assets/img/fc4.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 
@@ -40,38 +41,38 @@ class ForexCommodity extends React.Component {
           <div className="features-3">
             <div>
               <Content
-                image={news2}
-                title="SoftBank Lanjutkan Penawaran Tender Saham WeWork"
+                image={fc1}
+                title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
                 posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
-                description="SoftBank Group Corp minggu ini akan meluncurkan penawaran tender yang telah disepakati sebelumnya sebanyak $ 3 miliar saham WeWork, termasuk hingga $ 970 juta yang dimili..."
+                description="Cina ingin membuat perjanjian perdagangan awal dengan Amerika Serikat dan berusaha menghindari perang dagang, tetapi tidak takut untuk membalas jika perlu, kata Presiden..."
               />
 
               <Content
-                image={news3}
-                title="Pasar Saham Asia Pulih Dari Level Rendah"
+                image={fc4}
+                title="Dolar Masih Bergerak Sempit Pertahankan Penguatan"
+                posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
+                description="Dolar mempertahankan kenaikan semalam pada hari Jumat ini, karena investor berpegang teguh pada safe-haven menunggu perkembangan dalam negosiasi perdagangan China –..."
+              />
+
+              <Content
+                image={fc5}
+                title="PMI: Aktivitas Manufaktur Jepang Menyusut Untuk Bulan Ketujuh, Meningkatkan Kekhawatiran Ekonomi"
                 posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
                 description="Aktivitas pabrik Jepang menyusut untuk bulan ketujuh berturut-turut pada bulan November, karena permintaan domestik dan ekspor tetap dalam lesu sehingga memperkuat tantan..."
               />
 
               <Content
-                image={news4}
-                title="China Undang AS Untuk Bicara di Beijing"
+                image={fc3}
+                title="Inflasi Konsumen Jepang Tumbuh Moderat Meskipun Ada Kenaikan Pajak"
                 posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
-                description="Kontrak Futures AS turun sedikit karena ketegangan perdagangan tetap menjadi fokus setelah laporan bahwa China telah mengundang Washington untuk melakukan pembicaraan tat.."
+                description="Inflasi konsumen inti tahunan Jepang naik tipis hanya pada bulan Oktober meskipun ada dorongan dari kenaikan pajak penjualan selama bulan tersebut, menunjukkan sentimen r..."
               />
 
               <Content
-                image={news2}
-                title="SoftBank Lanjutkan Penawaran Tender Saham WeWork"
+                image={fc2}
+                title="Yen Menguat Seiring Permintaan Safe Haven Atas Kekhawatiran Hubungan AS dan China"
                 posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
-                description="SoftBank Group Corp minggu ini akan meluncurkan penawaran tender yang telah disepakati sebelumnya sebanyak $ 3 miliar saham WeWork, termasuk hingga $ 970 juta yang dimili..."
-              />
-
-              <Content
-                image={news3}
-                title="Pasar Saham Asia Pulih Dari Level Rendah"
-                posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
-                description="Aktivitas pabrik Jepang menyusut untuk bulan ketujuh berturut-turut pada bulan November, karena permintaan domestik dan ekspor tetap dalam lesu sehingga memperkuat tantan..."
+                description="Mata uang yen Jepang menguat terhadap dolar pada hari Kamis setelah sumber yang dekat dengan Gedung Putih mengatakan kepada Reuters bahwa kesepakatan perdagangan AS-China..."
               />
             </div>
           </div>

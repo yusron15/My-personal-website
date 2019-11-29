@@ -202,3 +202,11 @@ hr.grey {
 .legality:hover {
   transform: scale(1.5); 
 }
+
+.line {
+  height: 0.2;
+  width: 75vw;
+  border-color: #FFFFFF
+}
+
+.even {background-color: #2C2F31;}
