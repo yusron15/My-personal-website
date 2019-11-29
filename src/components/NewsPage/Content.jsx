@@ -209,7 +209,7 @@ class Carding extends React.Component {
           style={{ backgroundColor: "#1D1E1F" }}
         >
           {/* ********* TEAM 2 ********* */}
-          <BlurryNavbar />
+          {/* <BlurryNavbar /> */}
           <div className="team-2">
             <div>
               <Container>
