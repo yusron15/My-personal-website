@@ -47,6 +47,8 @@ import "../../assets/css/main.css";
 
 import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
+import leftButton from "../../assets/img/blue-right.png";
+import rightButton from "../../assets/img/blue-left.png";
 
 const PrevButton = props => {
   return (
@@ -54,12 +56,13 @@ const PrevButton = props => {
       className="btn-round slick-prev slick-arrow prev-btn"
       aria-label="Previous"
       onClick={props.onClick}
-      src={prevButton}
+      src={rightButton}
       style={{
-        height: "30px",
+        height: "50px",
         width: "auto",
         justifyContent: "right",
-        paddingLeft: "200px"
+        paddingLeft: "180px",
+        marginBottom: "20px"
       }}
     />
   );
@@ -71,13 +74,14 @@ const NextButton = props => {
       className="btn-round slick-arrow next-btn"
       // aria-label="Next"
       onClick={props.onClick}
-      src={nextButton}
+      src={leftButton}
       style={{
-        height: "30px",
+        height: "50px",
         width: "auto" /* left: 30px; */,
         paddingLeft: "200px",
         justifyContent: "right",
-        zIndex: "999"
+        zIndex: "999",
+        marginBottom: "20px"
       }}
     />
   );

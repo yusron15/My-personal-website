@@ -36,163 +36,14 @@ import {
 import Benefit from "../../assets/img/benefit.png";
 import nextButton from "../../assets/img/nextbutton.png";
 import prevButton from "../../assets/img/prevbutton.png";
+import biaya from "../../assets/img/biaya.png";
+import berita from "../../assets/img/berita.png";
+import legalitas from "../../assets/img/legalitas.png";
+import layanan from "../../assets/img/layanan.png";
+import requote from "../../assets/img/requote.png";
+import support from "../../assets/img/support.png";
 
 // core components
-const items1 = [
-  {
-    content: (
-      <Container>
-        <Row>
-          <Col className="mr-auto" md="5">
-            <div className="space-100" />
-            <CardTitle tag="h3">Isaac Hunter</CardTitle>
-            <h3 className="text-warning">• • •</h3>
-            <h4 className="description">
-              Take up one idea. Make that one idea your life - think of it,
-              dream of it, live on that idea. Let the brain, muscles, nerves,
-              every part of your body, be full of that idea, and just leave
-              every other idea alone. This is the way to success. A single rose
-              can be my garden... a single friend, my world.
-            </h4>
-            <Button
-              color="warning"
-              href="#pablo"
-              onClick={e => e.preventDefault()}
-            >
-              Read more
-            </Button>
-          </Col>
-          <Col className="ml-auto" md="6">
-            <img
-              alt="..."
-              className="d-block"
-              src={require("assets/img/lucy.jpg")}
-            />
-          </Col>
-        </Row>
-      </Container>
-    ),
-    altText: "",
-    caption: "",
-    src: "0"
-  },
-  {
-    content: (
-      <Container>
-        <Row>
-          <Col className="mr-auto" md="5">
-            <div className="space-100" />
-            <CardTitle tag="h3">Isaac Hunter</CardTitle>
-            <h3 className="text-warning">• • •</h3>
-            <h4 className="description">
-              Take up one idea. Make that one idea your life - think of it,
-              dream of it, live on that idea. Let the brain, muscles, nerves,
-              every part of your body, be full of that idea, and just leave
-              every other idea alone. This is the way to success. A single rose
-              can be my garden... a single friend, my world.
-            </h4>
-            <Button
-              color="warning"
-              href="#pablo"
-              onClick={e => e.preventDefault()}
-            >
-              Read more
-            </Button>
-          </Col>
-          <Col className="ml-auto" md="6">
-            <img
-              alt="..."
-              className="d-block"
-              src={require("assets/img/tom-klein.jpg")}
-            />
-          </Col>
-        </Row>
-      </Container>
-    ),
-    altText: "",
-    caption: "",
-    src: "1"
-  }
-];
-
-const items2 = [
-  {
-    content: (
-      <div className="info info-primary">
-        <div className="card-avatar">
-          <a href="#pablo" onClick={e => e.preventDefault()}>
-            <img
-              alt="..."
-              className="img img-raised rounded"
-              src={require("assets/img/michael.jpg")}
-            />
-          </a>
-        </div>
-        <h4 className="info-title">Best Quality</h4>
-        <p className="description">
-          Gain access to the demographics, psychographics, and location of
-          unique people.
-        </p>
-      </div>
-    ),
-    altText: "",
-    caption: "",
-    src: "0"
-  },
-  {
-    content: (
-      <div className="info info-warning">
-        <div className="card-avatar">
-          <a href="#pablo" onClick={e => e.preventDefault()}>
-            <img
-              alt="..."
-              className="img img-raised rounded"
-              src={require("assets/img/olivia.jpg")}
-            />
-          </a>
-        </div>
-        <h4 className="info-title">Best Quality</h4>
-        <p className="description">
-          Gain access to the demographics, psychographics, and location of
-          unique people.
-        </p>
-      </div>
-    ),
-    altText: "",
-    caption: "",
-    src: "1"
-  }
-];
-
-// custom previous button for the slick component
-// const PrevButton = props => {
-//   return (
-//     <Button
-//       className="btn-round btn-icon btn-simple slick-prev slick-arrow bg-white"
-//       color="primary"
-//       aria-label="Previous"
-//       type="button"
-//       style={{ backgroundColor: "white" }}
-//       onClick={props.onClick}
-//     >
-//       <i className="tim-icons icon-minimal-left" />
-//     </Button>
-//   );
-// };
-// // custom next button for the slick component
-// const NextButton = props => {
-//   return (
-//     <Button
-//       className="btn-round btn-icon btn-simple slick-next slick-arrow bg-white"
-//       color="primary"
-//       aria-label="Next"
-//       type="button"
-//       style={{ backgroundColor: "white" }}
-//     >
-//       <i className="tim-icons icon-minimal-right" onClick={props.onClick} />
-//     </Button>
-//   );
-// };
 
 const PrevButton = props => {
   return (
@@ -309,91 +160,149 @@ class Testimonials extends React.Component {
                   </h2>
                 </Col>
               </Row>
-              <Row>
-                <Col md="12">
-                  <Slick {...slickSettings}>
-                    <div>
-                      <div
-                        className="info text-left"
-                        style={{
-                          backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          minHeight: "250px"
-                        }}
-                      >
-                        <p className="title text-white">{`"Biaya Rendah"`}</p>
-                        <p>
-                          Memungkinkan nasabah untuk memaksimalkan keuntungan
-                          serta menerapkan money management
-                        </p>
-                        <div className="author"></div>
-                      </div>
+              <Row md="12" className="justify-content-center">
+                <Col md="3">
+                  <div className="card-benefit">
+                    <div
+                      className="info text-left"
+                      style={{
+                        backgroundColor: "rgba(112, 112, 112, 0.19)",
+                        minHeight: "270px",
+                        minWidth: "200px"
+                      }}
+                    >
+                      <p className="title text-white">
+                        {" "}
+                        <img 
+                         src={biaya} style={{ marginRight: "5%" }}
+                         />
+                        {`"Biaya Rendah"`}
+                      </p>
+                      <p className="text-white">
+                        Memungkinkan nasabah untuk memaksimalkan keuntungan
+                        serta menerapkan money management
+                      </p>
+                      <div className="author"></div>
                     </div>
-                    <div>
-                      <div
-                        className="info text-left"
-                        style={{
-                          backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          minHeight: "250px"
-                        }}
-                      >
-                        <p className="title text-white">{`"Legalitas Terjamin"`}</p>
-                        <p>
-                          Perusahaan pialang berjangka berstandar internasional
-                          yang memiliki izin di Bappebti serta terdaftar sebagai
-                          anggota BBJ, ICDX, KBI, dan ICH
-                        </p>
-                        <div className="author"></div>
-                      </div>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div>
+                    <div
+                      className="info text-left"
+                      style={{
+                        backgroundColor: "rgba(112, 112, 112, 0.19)",
+                        minHeight: "270px",
+                        minWidth: "200px"
+                      }}
+                    >
+                      <p className="title text-white">
+                        <img src={legalitas} style={{ marginRight: "5%" }} />
+                        {`"Legalitas Terjamin"`}
+                      </p>
+                      <p className="text-white">
+                        Perusahaan pialang berjangka berstandar internasional
+                        yang memiliki izin di Bappebti serta terdaftar sebagai
+                        anggota BBJ, ICDX, KBI, dan ICH
+                      </p>
+                      <div className="author"></div>
                     </div>
-                    <div>
-                      <div
-                        className="info text-left"
-                        style={{
-                          backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          minHeight: "250px"
-                        }}
-                      >
-                        <p className="title text-white">{`"Layanan Prima"`}</p>
-                        <p>
-                          Memberikan pelayanan terbaik kepada para nasabah,
-                          mulai dari pendidikan nasabah hingga penarikan dana
-                        </p>
-                        <div className="author"></div>
-                      </div>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div>
+                    <div
+                      className="info text-left"
+                      style={{
+                        backgroundColor: "rgba(112, 112, 112, 0.19)",
+                        minHeight: "270px",
+                        minWidth: "200px"
+                      }}
+                    >
+                      <p className="title text-white">
+                        <img src={layanan} style={{ marginRight: "5%" }} />
+                        {`"Layanan Prima"`}
+                      </p>
+                      <p className="text-white">
+                        Memberikan pelayanan terbaik kepada para nasabah, mulai
+                        dari pendidikan nasabah hingga penarikan dana
+                      </p>
+                      <div className="author"></div>
                     </div>
-                    <div>
-                      <div
-                        className="info text-left"
-                        style={{
-                          backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          minHeight: "250px"
-                        }}
-                      >
-                        <p className="title text-white">{`"Tanpa Requote"`}</p>
-                        <p>
-                          Dapatkan pengalaman bertransaksi tanpa requote dengan
-                          platform unggulan Pro-I Trading
-                        </p>
-                        <div className="author"></div>
-                      </div>
+                  </div>
+                </Col>
+              </Row>
+              <Row
+                md="12"
+                className="justify-content-center"
+                style={{ marginTop: "20px" }}
+              >
+                <Col md="3">
+                  <div>
+                    <div
+                      className="info text-left"
+                      style={{
+                        backgroundColor: "rgba(112, 112, 112, 0.19)",
+                        minHeight: "270px",
+                        minWidth: "200px"
+                      }}
+                    >
+                      <p className="title text-white">
+                        <img src={berita} style={{ marginRight: "5%" }} />
+                        {`"Riset & Berita"`}
+                      </p>
+                      <p className="text-white">
+                        Dapatkan informasi berita terkini serta analisa
+                        komprehensif setiap harinya di email Anda
+                      </p>
+                      <div className="author"></div>
                     </div>
-                    <div>
-                      <div
-                        className="info text-left"
-                        style={{
-                          backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          minHeight: "250px"
-                        }}
-                      >
-                        <p className="title text-white">{`"Riset & Berita"`}</p>
-                        <p>
-                          Dapatkan informasi berita terkini serta analisa
-                          komprehensif setiap harinya di email Anda
-                        </p>
-                        <div className="author"></div>
-                      </div>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div>
+                    <div
+                      className="info text-left"
+                      style={{
+                        backgroundColor: "rgba(112, 112, 112, 0.19)",
+                        minHeight: "270px",
+                        minWidth: "200px"
+                      }}
+                    >
+                      <p className="title text-white">
+                        <img src={requote} style={{ marginRight: "5%" }} />
+                        {`"Tanpa Requote"`}
+                      </p>
+                      <p className="text-white">
+                        Dapatkan pengalaman bertransaksi tanpa requote dengan
+                        platform unggulan Pro-I Trading
+                      </p>
+                      <div className="author"></div>
                     </div>
-                  </Slick>
+                  </div>
+                </Col>
+                <Col md="3">
+                  <div>
+                    <div
+                      className="info text-left"
+                      style={{
+                        backgroundColor: "rgba(112, 112, 112, 0.19)",
+                        minHeight: "270px",
+                        minWidth: "200px"
+                      }}
+                    >
+                      <p className="title text-white">
+                        <img src={support} style={{ marginRight: "5%" }} />
+                        {`"Support 24 Jam"`}
+                      </p>
+                      <p className="text-white">
+                        Kami berkomitmen untuk memberikan pelayanan terbaik
+                        kepada para nasabah mulai dari edukasi nasabah sampai
+                        dengan mudahnya penarikan dana.
+                      </p>
+                      <div className="author"></div>
+                    </div>
+                  </div>
                 </Col>
               </Row>
             </Container>

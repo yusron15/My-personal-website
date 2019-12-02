@@ -114,9 +114,9 @@
 
 .dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {display:block;}
 
-.dropdown-content-trading a:hover {background-color: #ddd;}
+.dropdown-content-trading a:hover {background-color: #ddd; display: block;}
 
 .dropdown:hover .dropdown-content-trading {display: block;}
 
@@ -178,11 +178,16 @@ hr.grey {
 
 .zoom:hover{
   transform: scale(1.05);
-  border: 1px groove;
+  /* border: 1px groove; */
+  /* border-color:white; */
+  /* border-radius:10px; */
+}
+
+.free{
+  border: 0.5px groove;
   border-color:white;
   border-radius:10px;
 }
-
 .vl {
   border-left: 1px solid grey;
   height: 30px;
@@ -212,4 +217,28 @@ hr.grey {
 .title-table {
   color: "#FFFFFF";
   font-size: 18px;
+}
+
+.icon-benefit {
+  height:"20%";
+  width:"50%";
+  margin-left: "20%";
+}
+
+
+.card-benefit {
+  background-color: "transparent";
+  color:"white"
+ }
+
+.card-benefit a:hover {
+ background-color: "#FFFFFF";
+ color:"black"
+}
+
+.icon-biaya {
+  background: url("../img//biaya.png") no-repeat;
+}
+.icon-biaya:hover {
+  background: url("../img//biaya-black.png") no-repeat;
 }

@@ -46,6 +46,8 @@ import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import "../../assets/css/main.css";
 import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
+import leftButton from "../../assets/img/blue-right.png";
+import rightButton from "../../assets/img/blue-left.png";
 
 const PrevButton = props => {
   return (
@@ -53,8 +55,13 @@ const PrevButton = props => {
       className="btn-round slick-prev slick-arrow prev-btn"
       aria-label="Previous"
       onClick={props.onClick}
-      src={prevButton}
-      style={{ height: "30px", width: "auto", paddingLeft: "400px" }}
+      src={rightButton}
+      style={{
+        height: "50px",
+        width: "auto",
+        paddingLeft: "380px",
+        marginBottom: "20px"
+      }}
     />
   );
 };
@@ -65,8 +72,13 @@ const NextButton = props => {
       className="btn-round slick-arrow next-btn"
       // aria-label="Next"
       onClick={props.onClick}
-      src={nextButton}
-      style={{ height: "30px", width: "auto", paddingLeft: "400px" }}
+      src={leftButton}
+      style={{
+        height: "50px",
+        width: "auto",
+        paddingLeft: "400px",
+        marginBottom: "20px"
+      }}
     />
   );
 };
@@ -258,7 +270,7 @@ class News extends React.Component {
         <div className="cd-section" id="testimonials">
           <div
             className="testimonials-4"
-            style={{ backgroundColor: "#1D1E1F", padding: "5rem 0 0 0 " }}
+            style={{ backgroundColor: "#FFFFFF", padding: "5rem 0 0 0 " }}
           >
             {/* <ColoredNavbar /> */}
             <Container>
@@ -337,12 +349,12 @@ class News extends React.Component {
                   md="8"
                   xs="10"
                 >
-                  <h1 className="title">Berita Ekonomi</h1>
+                  <h1 className="title font-black">Berita Ekonomi</h1>
                   <p className="description text-white">
                     <TabContent activeTab={"project" + this.state.activeSlide}>
                       <TabPane tabId="project0">
                         {/* <Col> */}
-                        <p className="description mb-5">
+                        <p className="description mb-5 font-black">
                           Pesanan industri Jerman naik melebihi dari yang
                           diperkirakan pada bulan September, dibantu oleh
                           permintaan domestik yang kuat, data yang dirilis
@@ -351,22 +363,22 @@ class News extends React.Component {
                         {/* </Col> */}
                       </TabPane>
                       <TabPane tabId="project1">
-                        <p className="description mb-5">
+                        <p className="description mb-5 font-black">
                           Add your information here for News 2.
                         </p>
                       </TabPane>
                       <TabPane tabId="project2">
-                        <p className="description mb-5">
+                        <p className="description mb-5 font-black">
                           Add your information here for News 3.
                         </p>
                       </TabPane>
                       <TabPane tabId="project3">
-                        <p className="description mb-5">
+                        <p className="description mb-5 font-black">
                           Add your information here for News 4.
                         </p>
                       </TabPane>
                       <TabPane tabId="project4">
-                        <p className="description mb-5">
+                        <p className="description mb-5 font-black">
                           Add your information here for News 5.
                         </p>
                       </TabPane>

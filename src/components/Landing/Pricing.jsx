@@ -87,15 +87,24 @@ class Pricing extends React.Component {
                 <Container>
                   {/* <Card style={{ backgroundColor: "#1D1E1F" }}> */}
                   <Row>
-                    <Col className="pr-0" md="4">
+                    <Col className="pl-0" md="4">
                       <Card
-                        className="card-pricing card-plain zoom"
-                        style={{ textAlign: "left" }}
+                        className="card-pricing card-plain zoom free"
+                        style={{
+                          textAlign: "left",
+                          // backgroundColor: "#323436",
+                          borderRadius: "10px"
+                        }}
                       >
                         <CardHeader>
                           <CardTitle
                             tag="h1"
-                            style={{ textAlign: "left", fontSize: 24 }}
+                            style={{
+                              textAlign: "left",
+                              fontSize: 24,
+                              fontWeight: "bold",
+                              color: "white"
+                            }}
                           >
                             Akun Demo
                           </CardTitle>
@@ -116,31 +125,53 @@ class Pricing extends React.Component {
                           </div>
                         </CardHeader>
                         <CardBody>
-                          <div className="item-stripped opacity">
+                          <div
+                            className="item-stripped opacity"
+                            style={{
+                              justifyContent: "center",
+                              alignItems: "center",
+                              display: "flex"
+                            }}
+                          >
                             <span
                               style={{
                                 color: "white",
-                                fontSize: 30
+                                fontSize: 20,
+                                opacity: "none"
                               }}
                             >
                               -
                             </span>
                           </div>
-                          <div className="item-stripped">
+                          <div
+                            className="item-stripped"
+                            style={{
+                              justifyContent: "center",
+                              alignItems: "center",
+                              display: "flex"
+                            }}
+                          >
                             <span
                               style={{
                                 color: "white",
-                                fontSize: 30
+                                fontSize: 20
                               }}
                             >
                               -
                             </span>
                           </div>
-                          <div className="item-stripped opacity">
+                          <div
+                            className="item-stripped opacity"
+                            style={{
+                              justifyContent: "center",
+                              alignItems: "center",
+                              display: "flex"
+                            }}
+                          >
                             <span
                               style={{
                                 color: "white",
-                                fontSize: 30
+                                fontSize: 20
                               }}
                             >
                               -
@@ -170,10 +201,15 @@ class Pricing extends React.Component {
                         </CardBody>
                       </Card>
                     </Col>
+
                     <Col className="pl-0" md="4">
                       <Card
                         className="card-pricing card-plain zoom"
-                        style={{ textAlign: "left" }}
+                        style={{
+                          textAlign: "left",
+                          backgroundColor: "#323436",
+                          borderRadius: "10px"
+                        }}
                       >
                         <CardHeader>
                           <CardTitle
@@ -181,7 +217,8 @@ class Pricing extends React.Component {
                             style={{
                               textAlign: "left",
                               fontSize: 24,
-                              color: "#1d8cf8"
+                              fontWeight: "bold",
+                              color: "white"
                             }}
                           >
                             Akun Mini
@@ -282,7 +319,11 @@ class Pricing extends React.Component {
                     <Col className="pl-0" md="4">
                       <Card
                         className="card-pricing card-plain zoom"
-                        style={{ textAlign: "left" }}
+                        style={{
+                          textAlign: "left",
+                          backgroundColor: "#063980",
+                          borderRadius: "10px"
+                        }}
                       >
                         <CardHeader>
                           <CardTitle
@@ -290,7 +331,7 @@ class Pricing extends React.Component {
                             style={{
                               textAlign: "left",
                               fontSize: 24,
-                              // color: "#1d8cf8"
+                              fontWeight: "bold",
                               color: "white"
                             }}
                           >

@@ -22,6 +22,7 @@ import phoneHeader from "../../assets/img/phone-header.png";
 import phoneHeader2 from "../../assets/img/phoneHeader2.png";
 import appstore from "../../assets/img/appstore.png";
 import playstore from "../../assets/img/playstore.png";
+import iphone3 from "../../assets/img/iphone3.png";
 
 const carouselItems = [
   {
@@ -189,7 +190,7 @@ class HeaderLanding extends React.Component {
                         <div
                           style={{
                             fontStyle: "Helvetica Bold",
-                            fontSize: "2rem",
+                            fontSize: "3rem",
                             fontWeight: "bold"
                           }}
 
@@ -198,13 +199,13 @@ class HeaderLanding extends React.Component {
                           TRADING BERSAMA BROKER TERBAIK
                         </div>
 
-                        <h6 className="category">
+                        <h4>
                           Didirikan sejak tahun 2003, saat ini telah berkembang
                           menjadi Perusahaan Pialang Berjangka Terbaik dan
                           Terbesar di Indonesia.
-                        </h6>
+                        </h4>
                         <br />
-                        <Button
+                        {/* <Button
                           className="btn-round"
                           style={{
                             margin: "0.3rem",
@@ -221,10 +222,34 @@ class HeaderLanding extends React.Component {
                           }}
                         >
                           Buat real Akun
-                        </Button>
+                        </Button> */}
+                        <Row>
+                          <Col>
+                            <Button
+                              className="btn-round"
+                              color="info"
+                              type="button"
+                              block
+                              style={{ height: 50, fontSize: 18 }}
+                            >
+                              Buat demo Akun
+                            </Button>
+                          </Col>
+                          <Col>
+                            <Button
+                              className="btn-round"
+                              color="info"
+                              type="button"
+                              block
+                              style={{ height: 50, fontSize: 18 }}
+                            >
+                              Buat real Akun
+                            </Button>
+                          </Col>
+                        </Row>
                       </Col>
                       <Col md="5">
-                        <Row>
+                        <Row className="vertical-center">
                           <Col>
                             <img src={best17} />
                           </Col>
@@ -250,7 +275,7 @@ class HeaderLanding extends React.Component {
                           <div
                             style={{
                               fontStyle: "Helvetica Bold",
-                              fontSize: "2rem",
+                              fontSize: "3rem",
                               fontWeight: "bold"
                             }}
 
@@ -279,10 +304,10 @@ class HeaderLanding extends React.Component {
                       {/* <Navbar /> */}
                       <Col className="mr-auto text-left" lg="5" md="7">
                         <img
-                          src={phoneHeader2}
+                          src={iphone3}
                           style={{
-                            height: "400px",
-                            width: "1200px"
+                            height: "50vh",
+                            width: "100vw"
                           }}
                         />
                       </Col>
@@ -291,7 +316,7 @@ class HeaderLanding extends React.Component {
                           <div
                             style={{
                               fontStyle: "Helvetica Bold",
-                              fontSize: "2rem",
+                              fontSize: "3rem",
                               fontWeight: "bold"
                             }}
 

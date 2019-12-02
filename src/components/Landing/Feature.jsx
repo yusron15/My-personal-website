@@ -81,6 +81,7 @@ class Features extends React.Component {
                           <img
                             alt="..."
                             src={require("assets/img/cfdicon.png")}
+                            // style={{ height: "150%", width: "150%" }}
                           />
                         </div>
                         <div className="description">

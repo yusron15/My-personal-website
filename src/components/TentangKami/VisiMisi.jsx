@@ -70,15 +70,15 @@ class VisiMisi extends React.Component {
                     Menyediakan fasilitas transaksi terbaik dengan beragam
                     produk investasi serta layanan informasi pasar keuangan
                     terkini dan terpercaya
-                    <br />
+                    <br /> <br />
                     Menyediakan fasilitas perdagangan online bagi investor dalam
                     lingkup lokal maupun global melalui teknologi online trading
                     yang inovatif
-                    <br />
+                    <br /> <br />
                     Aktif berpartisipasi dalam membangun industri perdagangan
                     berjangka yang transparan melalui program edukasi
                     berkesinambungan
-                    <br />
+                    <br /> <br />
                     Senantiasa meningkatkan dan mengembangkan kualitas sumber
                     daya manusia yang profesional
                   </p>
