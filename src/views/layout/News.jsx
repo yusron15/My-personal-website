@@ -66,7 +66,8 @@ class NewsPage extends React.Component {
             role="tablist"
             style={{
               backgroundColor: "#1D1E1F",
-              paddingTop: "70px",
+              // paddingTop: "150px",
+              marginTop: "450px",
               justifyContent: "center"
             }}
           >

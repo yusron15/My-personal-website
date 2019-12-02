@@ -41,8 +41,8 @@ class ColorNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      navbarColor: "navbar-transparent",
-      marginTop: "30px"
+      navbarColor: "black-news",
+      marginTop: "50px"
       // backgroundColor: "black"
     };
   }
@@ -55,8 +55,8 @@ class ColorNavbar extends React.Component {
 
   changeNavbarColor = () => {
     if (
-      document.documentElement.scrollTop > 50 ||
-      document.body.scrollTop > 50
+      document.documentElement.scrollTop > 30 ||
+      document.body.scrollTop > 30
     ) {
       this.setState({
         navbarColor: "black-news",
@@ -67,8 +67,8 @@ class ColorNavbar extends React.Component {
       document.body.scrollTop < 300
     ) {
       this.setState({
-        navbarColor: "navbar-transparent",
-        marginTop: "30px"
+        navbarColor: "black-news",
+        marginTop: "50px"
       });
     }
   };

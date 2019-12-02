@@ -43,6 +43,8 @@ import layanan from "../../assets/img/layanan.png";
 import requote from "../../assets/img/requote.png";
 import support from "../../assets/img/support.png";
 
+import "../../assets/css/main.css";
+
 // core components
 
 const PrevButton = props => {
@@ -111,8 +113,76 @@ let slickSettings = {
 class Testimonials extends React.Component {
   state = {
     carousel1Index: 0,
-    carousel2Index: 0
+    carousel2Index: 0,
+    color: "#FFFFFF",
+    biayaImg: require('"../../assets/img/biaya.png'),
+    legalitasImg: require('"../../assets/img/legalitas.png'),
+    layananImg: require('"../../assets/img/layanan.png'),
+    beritaImg: require('"../../assets/img/berita.png'),
+    requoteImg: require('"../../assets/img/requote.png'),
+    supportImg: require('"../../assets/img/support.png')
   };
+
+  handleBiayaEnter = () => {
+    this.setState({ biayaImg: require('"../../assets/img/biaya-black.png') });
+    this.setState({ color: "black" });
+  };
+
+  handleBiayaLeave = () => {
+    this.setState({ biayaImg: require('"../../assets/img/biaya.png') });
+    this.setState({ color: "#FFFFFF" });
+  };
+
+  handleLegalitasEnter = () => {
+    this.setState({
+      legalitasImg: require('"../../assets/img/legalitas-black.png')
+    });
+  };
+
+  handleLegalitasLeave = () => {
+    this.setState({ legalitasImg: require('"../../assets/img/legalitas.png') });
+  };
+
+  handleLayananEnter = () => {
+    this.setState({
+      layananImg: require('"../../assets/img/layanan-black.png')
+    });
+  };
+
+  handleLayananLeave = () => {
+    this.setState({ layananImg: require('"../../assets/img/layanan.png') });
+  };
+
+  handleBeritaEnter = () => {
+    this.setState({
+      beritaImg: require('"../../assets/img/berita-black.png')
+    });
+  };
+
+  handleBeritaLeave = () => {
+    this.setState({ beritaImg: require('"../../assets/img/berita.png') });
+  };
+
+  handleRequoteEnter = () => {
+    this.setState({
+      requoteImg: require('"../../assets/img/requote-black.png')
+    });
+  };
+
+  handleRequoteLeave = () => {
+    this.setState({ requoteImg: require('"../../assets/img/requote.png') });
+  };
+
+  handleSupportEnter = () => {
+    this.setState({
+      supportImg: require('"../../assets/img/support-black.png')
+    });
+  };
+
+  handleSupportLeave = () => {
+    this.setState({ supportImg: require('"../../assets/img/support.png') });
+  };
+
   onExiting = carousel => {
     this["carousel" + carousel + "Animating"] = true;
   };
@@ -162,71 +232,118 @@ class Testimonials extends React.Component {
               </Row>
               <Row md="12" className="justify-content-center">
                 <Col md="3">
-                  <div className="card-benefit">
+                  <div
+                    className="card-benefit text-benefit"
+                    onMouseEnter={this.handleBiayaEnter}
+                    onMouseLeave={this.handleBiayaLeave}
+                  >
                     <div
                       className="info text-left"
                       style={{
                         backgroundColor: "rgba(112, 112, 112, 0.19)",
                         minHeight: "270px",
-                        minWidth: "200px"
+                        minWidth: "200px",
+                        borderRadius: "10px"
                       }}
                     >
-                      <p className="title text-white">
-                        {" "}
-                        <img 
-                         src={biaya} style={{ marginRight: "5%" }}
-                         />
-                        {`"Biaya Rendah"`}
-                      </p>
-                      <p className="text-white">
+                      {/* <p className="title text-benefit" style={{ fontSize: "1.4rem" }}> */}
+                      {/* <img onMouseEnter style={{ marginRight: "5%" }} />
+                       */}
+                      <div
+                        style={{
+                          fontSize: "1.4rem",
+                          fontWeight: "bold",
+                          margin: "30px 0 30px 10px"
+                        }}
+                      >
+                        <img
+                          src={this.state.biayaImg}
+                          style={{ marginRight: "10px" }}
+                        />
+                        Biaya Rendah
+                      </div>
+                      <div style={{ marginLeft: "10px" }}>
+                        {/* </p> */}
+                        {/* <p className="text-benefit"> */}
                         Memungkinkan nasabah untuk memaksimalkan keuntungan
                         serta menerapkan money management
-                      </p>
+                        {/* </p> */}
+                      </div>
                       <div className="author"></div>
                     </div>
                   </div>
                 </Col>
                 <Col md="3">
-                  <div>
+                  <div
+                    className="card-benefit text-benefit"
+                    onMouseEnter={this.handleLegalitasEnter}
+                    onMouseLeave={this.handleLegalitasLeave}
+                  >
                     <div
                       className="info text-left"
                       style={{
                         backgroundColor: "rgba(112, 112, 112, 0.19)",
                         minHeight: "270px",
-                        minWidth: "200px"
+                        minWidth: "200px",
+                        borderRadius: "10px"
                       }}
                     >
-                      <p className="title text-white">
-                        <img src={legalitas} style={{ marginRight: "5%" }} />
-                        {`"Legalitas Terjamin"`}
-                      </p>
-                      <p className="text-white">
+                      <div
+                        style={{
+                          fontSize: "1.4rem",
+                          fontWeight: "bold",
+                          margin: "30px 0 30px 10px"
+                        }}
+                      >
+                        <img
+                          src={this.state.legalitasImg}
+                          style={{ marginRight: "5%" }}
+                        />
+                        Legalitas Terjamin
+                      </div>
+
+                      <div style={{ marginLeft: "10px" }}>
                         Perusahaan pialang berjangka berstandar internasional
                         yang memiliki izin di Bappebti serta terdaftar sebagai
                         anggota BBJ, ICDX, KBI, dan ICH
-                      </p>
+                      </div>
                       <div className="author"></div>
                     </div>
                   </div>
                 </Col>
                 <Col md="3">
-                  <div>
+                  <div
+                    className="card-benefit text-benefit"
+                    onMouseEnter={this.handleLayananEnter}
+                    onMouseLeave={this.handleLayananLeave}
+                  >
                     <div
                       className="info text-left"
                       style={{
                         backgroundColor: "rgba(112, 112, 112, 0.19)",
                         minHeight: "270px",
-                        minWidth: "200px"
+                        minWidth: "200px",
+                        borderRadius: "10px"
                       }}
                     >
-                      <p className="title text-white">
-                        <img src={layanan} style={{ marginRight: "5%" }} />
-                        {`"Layanan Prima"`}
-                      </p>
-                      <p className="text-white">
+                      <div
+                        style={{
+                          fontSize: "1.4rem",
+                          fontWeight: "bold",
+                          margin: "30px 0 30px 10px"
+                        }}
+                      >
+                        <img
+                          src={this.state.layananImg}
+                          style={{ marginRight: "5%" }}
+                        />
+                        Layanan Prima
+                      </div>
+
+                      <div style={{ marginLeft: "10px" }}>
                         Memberikan pelayanan terbaik kepada para nasabah, mulai
                         dari pendidikan nasabah hingga penarikan dana
-                      </p>
+                      </div>
                       <div className="author"></div>
                     </div>
                   </div>
@@ -238,68 +355,113 @@ class Testimonials extends React.Component {
                 style={{ marginTop: "20px" }}
               >
                 <Col md="3">
-                  <div>
+                  <div
+                    className="card-benefit text-benefit"
+                    onMouseEnter={this.handleBeritaEnter}
+                    onMouseLeave={this.handleBeritaLeave}
+                  >
                     <div
                       className="info text-left"
                       style={{
                         backgroundColor: "rgba(112, 112, 112, 0.19)",
                         minHeight: "270px",
-                        minWidth: "200px"
+                        minWidth: "200px",
+                        borderRadius: "10px"
                       }}
                     >
-                      <p className="title text-white">
-                        <img src={berita} style={{ marginRight: "5%" }} />
-                        {`"Riset & Berita"`}
-                      </p>
-                      <p className="text-white">
+                      <div
+                        style={{
+                          fontSize: "1.4rem",
+                          fontWeight: "bold",
+                          margin: "30px 0 30px 10px"
+                        }}
+                      >
+                        <img
+                          src={this.state.beritaImg}
+                          style={{ marginRight: "5%" }}
+                        />
+                        Riset & Berita
+                      </div>
+
+                      <div style={{ marginkeft: "10px" }}>
                         Dapatkan informasi berita terkini serta analisa
                         komprehensif setiap harinya di email Anda
-                      </p>
+                      </div>
                       <div className="author"></div>
                     </div>
                   </div>
                 </Col>
                 <Col md="3">
-                  <div>
+                  <div
+                    className="card-benefit text-benefit"
+                    onMouseEnter={this.handleRequoteEnter}
+                    onMouseLeave={this.handleRequoteLeave}
+                  >
                     <div
                       className="info text-left"
                       style={{
                         backgroundColor: "rgba(112, 112, 112, 0.19)",
                         minHeight: "270px",
-                        minWidth: "200px"
+                        minWidth: "200px",
+                        borderRadius: "10px"
                       }}
                     >
-                      <p className="title text-white">
-                        <img src={requote} style={{ marginRight: "5%" }} />
-                        {`"Tanpa Requote"`}
-                      </p>
-                      <p className="text-white">
+                      <div
+                        style={{
+                          fontSize: "1.4rem",
+                          fontWeight: "bold",
+                          margin: "30px 0 30px 10px"
+                        }}
+                      >
+                        <img
+                          src={this.state.requoteImg}
+                          style={{ marginRight: "5%" }}
+                        />
+                        Tanpa Requote
+                      </div>
+
+                      <div style={{ marginLeft: "10px" }}>
                         Dapatkan pengalaman bertransaksi tanpa requote dengan
                         platform unggulan Pro-I Trading
-                      </p>
+                      </div>
                       <div className="author"></div>
                     </div>
                   </div>
                 </Col>
                 <Col md="3">
-                  <div>
+                  <div
+                    className="card-benefit text-benefit"
+                    onMouseEnter={this.handleSupportEnter}
+                    onMouseLeave={this.handleSupportLeave}
+                  >
                     <div
                       className="info text-left"
                       style={{
                         backgroundColor: "rgba(112, 112, 112, 0.19)",
                         minHeight: "270px",
-                        minWidth: "200px"
+                        minWidth: "200px",
+                        borderRadius: "10px"
                       }}
                     >
-                      <p className="title text-white">
-                        <img src={support} style={{ marginRight: "5%" }} />
-                        {`"Support 24 Jam"`}
-                      </p>
-                      <p className="text-white">
+                      <div
+                        style={{
+                          fontSize: "1.4rem",
+                          fontWeight: "bold",
+                          margin: "30px 0 30px 10px"
+                        }}
+                      >
+                        <img
+                          src={this.state.supportImg}
+                          style={{ marginRight: "5%" }}
+                        />
+                        Support 24 Jam
+                      </div>
+
+                      <div style={{ marginLeft: "10px" }}>
                         Kami berkomitmen untuk memberikan pelayanan terbaik
                         kepada para nasabah mulai dari edukasi nasabah sampai
                         dengan mudahnya penarikan dana.
-                      </p>
+                      </div>
                       <div className="author"></div>
                     </div>
                   </div>

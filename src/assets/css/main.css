@@ -225,20 +225,39 @@ hr.grey {
   margin-left: "20%";
 }
 
-
 .card-benefit {
-  background-color: "transparent";
-  color:"white"
+  background-color: transparent;
  }
 
-.card-benefit a:hover {
- background-color: "#FFFFFF";
- color:"black"
+ .text-benefit {
+  color:white
+ }
+
+ .title-benefit{
+  font-size: 12em;
+  color: white;
+  letter-spacing: 14px;
+  font-weight: bold;
+ }
+
+ .text-benefit:hover {
+  color:black
+ }
+
+.card-benefit:hover {
+ background-color: white;
+ border-radius: 10px;
+ color:black
 }
 
 .icon-biaya {
-  background: url("../img//biaya.png") no-repeat;
+  background-image: url("../img/biaya.png") no-repeat;
 }
 .icon-biaya:hover {
-  background: url("../img//biaya-black.png") no-repeat;
+  background-image: url("../img/biaya-black.png") no-repeat;
 }
+
+.helvetica {
+  font-family: "Helvetica reguler";
+}
+
