@@ -41,6 +41,7 @@ import nextButton from "../../assets/img/nextbutton.png";
 import rightButton from "../../assets/img/right-blue-arrow.png";
 import leftButton from "../../assets/img/left-blue-arrow.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import bg from "../../assets/img/bg-cfd.png";
 
 const textTitle = {
   fontWeight: "bold",
@@ -237,7 +238,11 @@ class Content extends React.Component {
         >
           {/* ********* TEAM 1 ********* */}
           <BlurryNavbar />
-          <div className="team-1">
+          <div className="space-50" />
+          <div
+            className="team-1"
+            style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
+          >
             <div
               className="title"
               style={{

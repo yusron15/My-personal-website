@@ -57,70 +57,80 @@ class Content extends React.Component {
           >
             <BlurryNavbar />
             <ColoredNavbar />
-            <Container>
-              <div className="space-50" style={{ paddingTop: "150px" }} />
-              <Col>
-                <Row>
-                  <Col md="8">
-                    <h1
-                      className="title"
-                      style={{
-                        fontStyle: "Helvetica Bold",
-                        // fontSize: "2.5rem",
-                        fontWeight: "bold",
-                        color: "white"
-                      }}
-                    >
-                      Rekening Terpisah
-                    </h1>
-                    <p>
-                      Rekening Terpisah (Segregated Account) adalah sebuah
-                      rekening bank atas nama perusahaan pialang berjangka yang
-                      difungsikan khusus untuk menampung dana kolektif semua
-                      nasabah dalam suatu perusahaan pialang berjangka dan hanya
-                      digunakan untuk keperluan transaksi nasabah yang terpisah
-                      dari rekening operasional perusahaan. Rekening ini diawasi
-                      secara ketat dan berkala oleh Badan Pengawas Perdagangan
-                      Berjangka Komoditi (BAPPEBTI).
-                      <br />
-                      Berikut ini adalah rekening terpisah resmi yang dimiliki
-                      oleh PT. Topgrowth Futures:
-                    </p>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col md="4">
-                    <Row>
-                      <Col md="2">
-                        <img src={check} />
-                      </Col>
-                      <Col>
+            <Row>
+              <Col md="11">
+                <div
+                  style={{
+                    backgroundColor: "rgba(179, 172, 172, 0.39)",
+                    marginTop: "12%"
+                  }}
+                >
+                  {/* <div className="space-50" style={{ paddingTop: "150px" }} /> */}
+                  <Col>
+                    <Row style={{ marginLeft: "10%" }}>
+                      <Col md="8">
+                        <h1
+                          className="title"
+                          style={{
+                            fontStyle: "Helvetica Bold",
+                            // fontSize: "2.5rem",
+                            fontWeight: "bold",
+                            color: "white"
+                          }}
+                        >
+                          Rekening Terpisah
+                        </h1>
                         <p>
-                          BCA RUPIAH Nomor Akun // Account Number: 035.311.8568
-                          Swiftcode: CENAIDJA a.n. // Account Name: PT.
-                          Topgrowth Futures
+                          Rekening Terpisah (Segregated Account) adalah sebuah
+                          rekening bank atas nama perusahaan pialang berjangka
+                          yang difungsikan khusus untuk menampung dana kolektif
+                          semua nasabah dalam suatu perusahaan pialang berjangka
+                          dan hanya digunakan untuk keperluan transaksi nasabah
+                          yang terpisah dari rekening operasional perusahaan.
+                          Rekening ini diawasi secara ketat dan berkala oleh
+                          Badan Pengawas Perdagangan Berjangka Komoditi
+                          (BAPPEBTI).
+                          <br />
+                          Berikut ini adalah rekening terpisah resmi yang
+                          dimiliki oleh PT. Topgrowth Futures:
                         </p>
                       </Col>
                     </Row>
-                  </Col>
-                  <Col md="4">
-                    <Row>
-                      <Col md="2">
-                        <img src={check} />
+                    <Row style={{ marginLeft: "10%" }}>
+                      <Col md="4">
+                        <Row>
+                          <Col md="2">
+                            <img src={check} />
+                          </Col>
+                          <Col>
+                            <p>
+                              BCA RUPIAH Nomor Akun // Account Number:
+                              035.311.8568 Swiftcode: CENAIDJA a.n. // Account
+                              Name: PT. Topgrowth Futures
+                            </p>
+                          </Col>
+                        </Row>
                       </Col>
-                      <Col>
-                        <p>
-                          BCA Dollar Nomor Akun: // Account Number: 035.317.7718
-                          Swiftcode: CENAIDJA a.n. // Account Name: PT.
-                          Topgrowth Futures
-                        </p>
+                      <Col md="4">
+                        <Row>
+                          <Col md="2">
+                            <img src={check} />
+                          </Col>
+                          <Col>
+                            <p>
+                              BCA Dollar Nomor Akun: // Account Number:
+                              035.317.7718 Swiftcode: CENAIDJA a.n. // Account
+                              Name: PT. Topgrowth Futures
+                            </p>
+                          </Col>
+                        </Row>
                       </Col>
                     </Row>
                   </Col>
-                </Row>
+                  <div className="space-50" />
+                </div>
               </Col>
-              <div className="space-50" />
-            </Container>
+            </Row>
           </div>
         </div>{" "}
       </>

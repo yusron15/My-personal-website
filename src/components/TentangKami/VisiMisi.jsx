@@ -52,40 +52,44 @@ class VisiMisi extends React.Component {
               backgroundColor: "rgba(52, 52, 52, 0.8)"
             }}
           >
-            <Container>
-              <div className="space-50" />
-              <Row>
-                <Col md="6">
-                  <h2 className="title">VISI KAMI</h2>
-                  <p>
-                    Menjadi perusahaan yang unggul dalam industri perdagangan
-                    berjangka melalui pelayanan berkualitas dan program kerja
-                    yang inovatif demi menciptakan hubungan kerjasama yang ideal
-                    dengan para nasabah, baik dalam lingkup lokal maupun global.
-                  </p>
-                </Col>
-                <Col md="6">
-                  <h2 className="title">MISI KAMI</h2>
-                  <p>
-                    Menyediakan fasilitas transaksi terbaik dengan beragam
-                    produk investasi serta layanan informasi pasar keuangan
-                    terkini dan terpercaya
-                    <br /> <br />
-                    Menyediakan fasilitas perdagangan online bagi investor dalam
-                    lingkup lokal maupun global melalui teknologi online trading
-                    yang inovatif
-                    <br /> <br />
-                    Aktif berpartisipasi dalam membangun industri perdagangan
-                    berjangka yang transparan melalui program edukasi
-                    berkesinambungan
-                    <br /> <br />
-                    Senantiasa meningkatkan dan mengembangkan kualitas sumber
-                    daya manusia yang profesional
-                  </p>
-                </Col>
-              </Row>
-              <div className="space-50" />
-            </Container>
+            <div style={{ backgroundColor: "rgba(179, 172, 172, 0.57)" }}>
+              <Container>
+                <div className="space-50" />
+                <Row>
+                  <Col md="6">
+                    <h2 className="title">VISI KAMI</h2>
+                    <p>
+                      Menjadi perusahaan yang unggul dalam industri perdagangan
+                      berjangka melalui pelayanan berkualitas dan program kerja
+                      yang inovatif demi menciptakan hubungan kerjasama yang
+                      ideal dengan para nasabah, baik dalam lingkup lokal maupun
+                      global.
+                    </p>
+                  </Col>
+                  <Col md="6">
+                    <h2 className="title">MISI KAMI</h2>
+                    <p>
+                      Menyediakan fasilitas transaksi terbaik dengan beragam
+                      produk investasi serta layanan informasi pasar keuangan
+                      terkini dan terpercaya
+                      <br /> <br />
+                      Menyediakan fasilitas perdagangan online bagi investor
+                      dalam lingkup lokal maupun global melalui teknologi online
+                      trading yang inovatif
+                      <br /> <br />
+                      Aktif berpartisipasi dalam membangun industri perdagangan
+                      berjangka yang transparan melalui program edukasi
+                      berkesinambungan
+                      <br /> <br />
+                      Senantiasa meningkatkan dan mengembangkan kualitas sumber
+                      daya manusia yang profesional
+                    </p>
+                  </Col>
+                </Row>
+
+                <div className="space-50" />
+              </Container>
+            </div>
           </div>
         </div>{" "}
       </>

@@ -177,7 +177,7 @@ class HeaderLanding extends React.Component {
               controls={false}
               slide={true}
               touch={true}
-              interval="2000"
+              interval="5000"
               pauseOnHover={false}
             >
               <Carousel.Item>

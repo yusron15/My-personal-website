@@ -61,7 +61,7 @@ const PrevButton = props => {
         height: "50px",
         width: "auto",
         justifyContent: "right",
-        paddingLeft: "180px",
+        paddingLeft: "18%",
         marginBottom: "20px"
       }}
     />
@@ -78,7 +78,7 @@ const NextButton = props => {
       style={{
         height: "50px",
         width: "auto" /* left: 30px; */,
-        paddingLeft: "200px",
+        paddingLeft: "20%",
         justifyContent: "right",
         zIndex: "999",
         marginBottom: "20px"

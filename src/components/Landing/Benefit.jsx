@@ -383,7 +383,7 @@ class Testimonials extends React.Component {
                         Riset & Berita
                       </div>
 
-                      <div style={{ marginkeft: "10px" }}>
+                      <div style={{ marginLeft: "10px" }}>
                         Dapatkan informasi berita terkini serta analisa
                         komprehensif setiap harinya di email Anda
                       </div>
