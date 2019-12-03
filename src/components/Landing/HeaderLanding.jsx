@@ -163,6 +163,7 @@ class HeaderLanding extends React.Component {
         <div className="cd-section" id="headers">
           {/* ********* HEADER 1 ********* */}
           {/* <Carousel> */}
+
           <div
             className="header-filter"
             style={{
@@ -172,6 +173,7 @@ class HeaderLanding extends React.Component {
             }}
           >
             <BlurryNavbar />
+            <div className="space-50" />
 
             <Carousel
               controls={false}
@@ -190,7 +192,7 @@ class HeaderLanding extends React.Component {
                         <div
                           style={{
                             fontStyle: "Helvetica Bold",
-                            fontSize: "3rem",
+                            fontSize: "2.7rem",
                             fontWeight: "bold"
                           }}
 
@@ -275,7 +277,7 @@ class HeaderLanding extends React.Component {
                           <div
                             style={{
                               fontStyle: "Helvetica Bold",
-                              fontSize: "3rem",
+                              fontSize: "2.7rem",
                               fontWeight: "bold"
                             }}
 
@@ -316,7 +318,7 @@ class HeaderLanding extends React.Component {
                           <div
                             style={{
                               fontStyle: "Helvetica Bold",
-                              fontSize: "3rem",
+                              fontSize: "2.7rem",
                               fontWeight: "bold"
                             }}
 

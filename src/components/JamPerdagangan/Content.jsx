@@ -58,159 +58,170 @@ class Tables extends React.Component {
                   style={{ borderRadius: "20px" }}
                 >
                   <div>
-                    <Card>
+                    {/* <Card>
                       <CardBody>
-                        <div className="table-responsive mb-0">
-                          <Table className="table-pricing">
-                            <tbody>
-                              <tr style={{ backgroundColor: "#2BB3E1" }}>
-                                <td className="text-white">
-                                  <b>Product</b>
-                                </td>
-                                <td className="text-white">
-                                  <b>Summer</b>
-                                </td>
-                                <td className="text-white">
-                                  <b>Winter</b>
-                                </td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td>FOREX</td>
-                                <td>
-                                  Monday 05.00am – Saturday 04:00am Market Close
-                                  at 04.00am (Tuesday – Saturday) (all time is
-                                  Jakarta time)
-                                </td>
-                                <td>
-                                  Monday 05.30am – Saturday 05:00am Market Close
-                                  at 05.00am (Tuesday – Saturday) (all time is
-                                  Jakarta time)
-                                </td>
-                              </tr>
+                        <div className="table-responsive mb-0"> */}
+                    {/* <Table className="table-pricing"> */}
+                    <Table
+                      style={{
+                        borderCollapse: "collapse",
+                        borderRadius: "10px"
+                      }}
+                    >
+                      <tbody>
+                        <tr style={{ backgroundColor: "#224377" }}>
+                          <td className="text-white text-center">
+                            <b>Product</b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>Summer</b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>Winter</b>
+                          </td>
+                        </tr>
+                        <tr className="black-newsletter">
+                          <td className="text-center">FOREX</td>
+                          <td>
+                            Monday 05.00am – Saturday 04:00am Market Close at
+                            04.00am (Tuesday – Saturday) (all time is Jakarta
+                            time)
+                          </td>
+                          <td>
+                            Monday 05.30am – Saturday 05:00am Market Close at
+                            05.00am (Tuesday – Saturday) (all time is Jakarta
+                            time)
+                          </td>
+                        </tr>
 
-                              <tr className="black-newsletter">
-                                <td>LLG & SILVER</td>
-                                <td>
-                                  Monday Open at 06.00am Tuesday – Friday Open
-                                  at 05.00am Market Close at 04.00am (Tuesday –
-                                  Saturday) (all time is Jakarta time)
-                                </td>
-                                <td>
-                                  Monday – Friday Open at 06.00am Market Close
-                                  at 05.00am (Tuesday – Saturday) (all time is
-                                  Jakarta time)
-                                </td>
-                              </tr>
+                        <tr className="black-newsletter">
+                          <td className="text-center">LLG & SILVER</td>
+                          <td>
+                            Monday Open at 06.00am Tuesday – Friday Open at
+                            05.00am Market Close at 04.00am (Tuesday – Saturday)
+                            (all time is Jakarta time)
+                          </td>
+                          <td>
+                            Monday – Friday Open at 06.00am Market Close at
+                            05.00am (Tuesday – Saturday) (all time is Jakarta
+                            time)
+                          </td>
+                        </tr>
 
-                              <tr className="black-newsletter">
-                                <td>DOW JONES, S&P500, NASDAQ</td>
-                                <td>
-                                  05.00am – 03.15am next day (all time is
-                                  Jakarta time)
-                                </td>
-                                <td>
-                                  06.00am – 04.15am next day (all time is
-                                  Jakarta time)
-                                </td>
-                              </tr>
+                        <tr className="black-newsletter">
+                          <td className="text-center">
+                            DOW JONES, S&P500, NASDAQ
+                          </td>
+                          <td>
+                            05.00am – 03.15am next day (all time is Jakarta
+                            time)
+                          </td>
+                          <td>
+                            06.00am – 04.15am next day (all time is Jakarta
+                            time)
+                          </td>
+                        </tr>
 
-                              <tr className="black-newsletter">
-                                <td>FOREX</td>
-                                <td>
-                                  Monday 05.00am – Saturday 04:00am Market Close
-                                  at 04.00am (Tuesday – Saturday) (all time is
-                                  Jakarta time)
-                                </td>
-                                <td>
-                                  Monday 05.30am – Saturday 05:00am Market Close
-                                  at 05.00am (Tuesday – Saturday) (all time is
-                                  Jakarta time)
-                                </td>
-                              </tr>
+                        <tr className="black-newsletter">
+                          <td className="text-center">FOREX</td>
+                          <td>
+                            Monday 05.00am – Saturday 04:00am Market Close at
+                            04.00am (Tuesday – Saturday) (all time is Jakarta
+                            time)
+                          </td>
+                          <td>
+                            Monday 05.30am – Saturday 05:00am Market Close at
+                            05.00am (Tuesday – Saturday) (all time is Jakarta
+                            time)
+                          </td>
+                        </tr>
 
-                              <tr className="black-newsletter">
-                                <td>FTSE</td>
-                                <td>
-                                  07:00am – 03:00am next day (all time is
-                                  Jakarta time)
-                                </td>
-                                <td>
-                                  08:00am – 04:00am next day (all time is
-                                  Jakarta time)
-                                </td>
-                              </tr>
+                        <tr className="black-newsletter">
+                          <td className="text-center">FTSE</td>
+                          <td>
+                            07:00am – 03:00am next day (all time is Jakarta
+                            time)
+                          </td>
+                          <td>
+                            08:00am – 04:00am next day (all time is Jakarta
+                            time)
+                          </td>
+                        </tr>
 
-                              <tr className="black-newsletter">
-                                <td>DAX</td>
-                                <td>
-                                  07:15am – 03:00am next day (all time is
-                                  Jakarta time)
-                                </td>
-                                <td>
-                                  07:15am – 04:00am next day (all time is
-                                  Jakarta time)
-                                </td>
-                              </tr>
+                        <tr className="black-newsletter">
+                          <td className="text-center">DAX</td>
+                          <td>
+                            07:15am – 03:00am next day (all time is Jakarta
+                            time)
+                          </td>
+                          <td>
+                            07:15am – 04:00am next day (all time is Jakarta
+                            time)
+                          </td>
+                        </tr>
 
-                              <tr className="black-newsletter">
-                                <td>CRUDE OIL</td>
-                                <td>
-                                  05.00am – 04.00am next day (all time is
-                                  Jakarta time)
-                                </td>
-                                <td>
-                                  06.00pm – 05.00am next day (all time is
-                                  Jakarta time)
-                                </td>
-                              </tr>
-                            </tbody>
-                          </Table>
-                        </div>
+                        <tr className="black-newsletter">
+                          <td className="text-center">CRUDE OIL</td>
+                          <td>
+                            05.00am – 04.00am next day (all time is Jakarta
+                            time)
+                          </td>
+                          <td>
+                            06.00pm – 05.00am next day (all time is Jakarta
+                            time)
+                          </td>
+                        </tr>
+                      </tbody>
+                    </Table>
+                    {/* </div>
                       </CardBody>
-                    </Card>
+                    </Card> */}
 
-                    <Card>
+                    {/* <Card>
                       <CardBody>
-                        <div className="table-responsive mb-0">
-                          <Table className="table-pricing black-newsletter">
-                            <tbody>
-                              <tr style={{ backgroundColor: "#2BB3E1" }}>
-                                <td className="text-white">
-                                  <b>Product</b>
-                                </td>
-                                <td className="text-white">
-                                  <b>Session 1</b>
-                                </td>
-                                <td className="text-white">
-                                  <b>Session 2</b>
-                                </td>
-                                <td />
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td>KOSPI200</td>
-                                <td>07.00am – 01.35pm</td>
-                                <td />
-                                <td>01.20pm</td>
-                              </tr>
+                        <div className="table-responsive mb-0"> */}
+                    {/* <Table className="table-pricing black-newsletter"> */}
+                    <Table>
+                      <tbody>
+                        <tr style={{ backgroundColor: "#224377" }}>
+                          <td className="text-white text-center">
+                            <b>Product</b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>Session 1</b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>Session 2</b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>Last Trading Day Closing</b>
+                          </td>
+                        </tr>
+                        <tr className="black-newsletter text-center">
+                          <td>KOSPI200</td>
+                          <td>07.00am – 01.35pm</td>
+                          <td />
+                          <td>01.20pm</td>
+                        </tr>
 
-                              <tr className="black-newsletter">
-                                <td>NIKKEI225</td>
-                                <td>06.30am – 01.25pm</td>
-                                <td>001.55pm – 03.45am next day</td>
-                                <td>01.25pm</td>
-                              </tr>
+                        <tr className="black-newsletter text-center">
+                          <td>NIKKEI225</td>
+                          <td>06.30am – 01.25pm</td>
+                          <td>001.55pm – 03.45am next day</td>
+                          <td>01.25pm</td>
+                        </tr>
 
-                              <tr className="black-newsletter">
-                                <td>HANGSENG</td>
-                                <td>08.15am – 11.00am</td>
-                                <td>12.00pm – 03.30pm</td>
-                                <td>03.00pm</td>
-                              </tr>
-                            </tbody>
-                          </Table>
-                        </div>
+                        <tr className="black-newsletter text-center">
+                          <td>HANGSENG</td>
+                          <td>08.15am – 11.00am</td>
+                          <td>12.00pm – 03.30pm</td>
+                          <td>03.00pm</td>
+                        </tr>
+                      </tbody>
+                    </Table>
+                    {/* </div>
                       </CardBody>
-                    </Card>
+                    </Card> */}
                   </div>
                 </Col>
               </Row>

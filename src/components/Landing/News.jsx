@@ -240,6 +240,7 @@ class News extends React.Component {
       },
       className: "center slider",
       slide: "section",
+
       responsive: [
         {
           breakpoint: 1024,

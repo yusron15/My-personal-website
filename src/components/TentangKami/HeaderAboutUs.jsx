@@ -45,6 +45,8 @@ import tentangkami from "../../assets/img/tentangkamiheader.png";
 import ColoredNavbar from "../Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "components/Navbars/BlurryNavbar";
 
+import "../../assets/css/main.css";
+
 class HeaderAboutUs extends React.Component {
   state = {};
   render() {
@@ -54,7 +56,8 @@ class HeaderAboutUs extends React.Component {
           {/* ********* HEADER 6 ********* */}
           <div
             className="header header-6 image-overlay"
-            style={{ backgroundColor: "#1D1E1F" }}
+            // style={{ backgroundColor: "#1D1E1F" }}
+            style={{ backgroundColor: "#FFFFFF" }}
           >
             <BlurryNavbar />
             <ColoredNavbar />
@@ -63,10 +66,16 @@ class HeaderAboutUs extends React.Component {
                 <Container>
                   <Row className="align-items-center text-left">
                     <Col lg="6" xs="12">
-                      <h1 className="title">
+                      <h1
+                        className="title font-black"
+                        style={{ color: "black" }}
+                      >
                         Tentang <br /> Topgrowth Future
                       </h1>
-                      <p className="description">
+                      <p
+                        className="description font-black"
+                        style={{ color: "black" }}
+                      >
                         Didirikan sejak tahun 2003, Topgrowth Futures telah
                         berkembang menjadi perusahaan pialang terbaik dan
                         terbesar di Indonesia yang menyediakan layanan transaksi

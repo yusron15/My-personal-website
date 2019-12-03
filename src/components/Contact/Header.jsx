@@ -51,8 +51,9 @@ class ContactUs extends React.Component {
   render() {
     return (
       <>
-        {/* <BlurryNavbar /> */}
+        <BlurryNavbar />
         <ColoredNavbar />
+        <div className="space-50" />
         <div className="wrapper" ref="wrapper">
           <div className="page-header header-filter">
             <div

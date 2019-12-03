@@ -41,13 +41,15 @@ class ColorNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      navbarColor: "black-news",
-      marginTop: "50px"
+      navbarColor: "bg-white",
+      marginTop: "50px",
+      textColor: "black"
       // backgroundColor: "black"
     };
   }
   componentDidMount() {
     window.addEventListener("scroll", this.changeNavbarColor);
+    // window.addEventListener("scroll", this.changeNavbarMargin);
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeNavbarTop);
@@ -59,7 +61,34 @@ class ColorNavbar extends React.Component {
       document.body.scrollTop > 30
     ) {
       this.setState({
-        navbarColor: "black-news",
+        // navbarColor: "black-newsletter",
+        marginTop: "0px",
+        textColor: "white"
+      });
+    } else if (
+      document.documentElement.scrollTop > 50 ||
+      document.body.scrollTop > 50
+    ) {
+      this.setState({
+        navbarColor: "black-newsletter"
+      });
+    } else if (
+      document.documentElement.scrollTop < 300 ||
+      document.body.scrollTop < 300
+    ) {
+      this.setState({
+        navbarColor: "bg-white",
+        marginTop: "50px"
+      });
+    }
+  };
+
+  changeNavbarMargin = () => {
+    if (
+      document.documentElement.scrollTop > 30 ||
+      document.body.scrollTop > 30
+    ) {
+      this.setState({
         marginTop: "0px"
       });
     } else if (
@@ -67,12 +96,11 @@ class ColorNavbar extends React.Component {
       document.body.scrollTop < 300
     ) {
       this.setState({
-        navbarColor: "black-news",
         marginTop: "50px"
       });
     }
   };
-  // }
+
   render() {
     const styles = {
       containerStyle: {
@@ -107,7 +135,9 @@ class ColorNavbar extends React.Component {
               <Nav className="ml-auto" navbar>
                 <NavItem>
                   <button class="dropbtn">
-                    <Link to="/landing">Home</Link>
+                    <Link to="/landing" style={{ color: "black" }}>
+                      Home
+                    </Link>
                   </button>
                   {/* <Link to="/landing">
                       <DropdownToggle>Home</DropdownToggle>
@@ -115,7 +145,9 @@ class ColorNavbar extends React.Component {
                 </NavItem>
 
                 <div class="dropdown">
-                  <button class="dropbtn">Tentang Kami</button>
+                  <button class="dropbtn" style={{ color: "black" }}>
+                    Tentang Kami
+                  </button>
                   <div class="dropdown-content">
                     <Link to="/tentangkami">Tentang Kami</Link>
                     <Link to="/cabang">Cabang Kami</Link>
@@ -125,8 +157,13 @@ class ColorNavbar extends React.Component {
                 </div>
 
                 <div class="dropdown">
-                  <button class="dropbtn">Trading Online</button>
-                  <div class="dropdown-content-trading">
+                  <button class="dropbtn" style={{ color: "black" }}>
+                    Trading Online
+                  </button>
+                  <div
+                    class="dropdown-content-trading"
+                    // style={{ width: "100vw" }}
+                  >
                     <Row>
                       <Col md="3">
                         {/* <div className="title">Produk</div> */}
@@ -202,7 +239,9 @@ class ColorNavbar extends React.Component {
                 </div>
 
                 <div class="dropdown">
-                  <button class="dropbtn">Layanan</button>
+                  <button class="dropbtn" style={{ color: "black" }}>
+                    Layanan
+                  </button>
                   <div class="dropdown-content">
                     <Link to="/newspage">Berita dan analisa Market</Link>
                   </div>
@@ -210,12 +249,16 @@ class ColorNavbar extends React.Component {
 
                 <NavItem>
                   <button class="dropbtn">
-                    <Link to="/karir">Karir</Link>
+                    <Link to="/karir" style={{ color: "black" }}>
+                      Karir
+                    </Link>
                   </button>
                 </NavItem>
                 <NavItem>
                   <button class="dropbtn">
-                    <Link to="/Contact">Hubungi Kami</Link>
+                    <Link to="/Contact" style={{ color: "black" }}>
+                      Hubungi Kami
+                    </Link>
                   </button>
                 </NavItem>
               </Nav>

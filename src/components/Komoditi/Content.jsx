@@ -31,6 +31,45 @@ const font = {
 };
 
 class Features extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     increase: require('"../../assets/img/increase.png"'),
+  //     money: require('"./../assets/img/money.png"'),
+  //     shield: require('"../../assets/img/shield.png"')
+  //   };
+  // }
+
+  // handleIncreaseEnter = () => {
+  //   this.setState({
+  //     increase: require('"../../assets/img/increase.png"')
+  //   });
+  // };
+
+  // handleIncreaseLeave = () => {
+  //   this.setState({ increase: require('"../../assets/img/increase.png"') });
+  // };
+
+  // handleMoneyEnter = () => {
+  //   this.setState({
+  //     money: require('"../../assets/img/legalitas.png"')
+  //   });
+  // };
+
+  // handleMoneyLeave = () => {
+  //   this.setState({ money: require('"../../assets/img/money.png"') });
+  // };
+
+  // handleShieldEnter = () => {
+  //   this.setState({
+  //     shield: require('"../../assets/img/legalitas.png"')
+  //   });
+  // };
+
+  // handleShieldLeave = () => {
+  //   this.setState({ shield: require('"../../assets/img/shield.png"') });
+  // };
+
   render() {
     return (
       <>
@@ -47,14 +86,29 @@ class Features extends React.Component {
               </Row>
               <Row>
                 <Col md="4">
-                  <div className="info info-hover">
+                  <div
+                    // onMouseEnter={this.handleIncreaseEnter}
+                    // onMouseLeave={this.handleIncreaseLeave}
+                    className="info info-hover"
+                    style={{
+                      backgroundColor: "rgba(6,57,128,1)",
+                      borderRadius: "10px",
+                      height: "400px"
+                    }}
+                  >
                     {/* <div className="icon icon-primary"> */}
                     <img alt="..." className="bg-blob" src={increase} />
                     {/* </div> */}
-                    <h4 className="info-title" style={font}>
+                    <h4
+                      className="info-title text-white text-center"
+                      style={font}
+                    >
                       Permintaan Akan Komoditas Terus Meningkat
                     </h4>
-                    <p className="description" style={font}>
+                    <p
+                      className="description text-white text-center"
+                      style={font}
+                    >
                       Semakin berkembangnya dunia, maka permintaan atas
                       komoditas akan terus meningkat yang mengakibatkan kenaikan
                       harga komoditas tersebut.
@@ -62,13 +116,26 @@ class Features extends React.Component {
                   </div>
                 </Col>
                 <Col md="4">
-                  <div className="info info-hover">
+                  <div
+                    className="info info-hover"
+                    style={{
+                      backgroundColor: "rgba(6,57,128,1)",
+                      borderRadius: "10px",
+                      height: "400px"
+                    }}
+                  >
                     <img alt="..." className="bg-blob" src={money} />
 
-                    <h4 className="info-title" style={font}>
+                    <h4
+                      className="info-title text-white text-center"
+                      style={font}
+                    >
                       Analyze Performance
                     </h4>
-                    <p className="description" style={font}>
+                    <p
+                      className="description text-white text-center"
+                      style={font}
+                    >
                       Sejalan dengan laju inflasi, harga komoditas akan terus
                       meningkat; para pelaku pasar dapat melindungi harga
                       tersebut terhadap inflasi melalui Bursa Berjangka.
@@ -76,12 +143,25 @@ class Features extends React.Component {
                   </div>
                 </Col>
                 <Col md="4">
-                  <div className="info info-hover">
+                  <div
+                    className="info info-hover"
+                    style={{
+                      backgroundColor: "rgba(6,57,128,1)",
+                      borderRadius: "10px",
+                      height: "400px"
+                    }}
+                  >
                     <img alt="..." className="bg-blob" src={shield} />
-                    <h4 className="info-title" style={font}>
+                    <h4
+                      className="info-title text-white text-center"
+                      style={font}
+                    >
                       Measure Conversions
                     </h4>
-                    <p className="description" style={font}>
+                    <p
+                      className="description text-white text-center"
+                      style={font}
+                    >
                       Di antaranya adalah perkiraan cuaca, faktor ekonomi,
                       faktor politik, tekanan internasional, dan spekulasi
                     </p>

@@ -43,8 +43,8 @@ import {
 import work from "assets/img/work.png";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
-import prevButton from "../../assets/img/prevbutton.png";
-import nextButton from "../../assets/img/nextbutton.png";
+import prevButton from "../../assets/img/blue-left.png";
+import nextButton from "../../assets/img/blue-right.png";
 import "../../assets/css/main.css";
 
 const PrevButton = props => {
@@ -259,7 +259,7 @@ class News extends React.Component {
         <div
           className="cd-section"
           id="testimonials"
-          style={{ backgroundColor: "#1D1E1F" }}
+          style={{ backgroundColor: "#FFFFFF" }}
         >
           <BlurryNavbar />
 
@@ -345,37 +345,39 @@ class News extends React.Component {
                   md="8"
                   xs="10"
                 >
-                  <h1 className="title">Cabang Kami</h1>
+                  <h1 className="title font-black">Cabang Kami</h1>
                   <p className="description text-white">
                     <TabContent activeTab={"project" + this.state.activeSlide}>
                       <TabPane tabId="project0">
                         {/* <Col> */}
-                        <div className="title">Kantor Pusat</div>
-                        <p className="description mb-5">
+                        <div className="title font-black">Kantor Pusat</div>
+                        <p className="description font-black mb-5">
                           Sahid Sudirman Center, Lantai 40 Jl. Jend Sudirman Kav
                           86 Jakarta 10220 Indonesia +62.21. 2788 9393
                         </p>
                         {/* </Col> */}
                       </TabPane>
                       <TabPane tabId="project1">
-                        <div className="title">Kantor Cabang Sungai Gerong</div>
-                        <p className="description mb-5">
+                        <div className="title font-black">
+                          Kantor Cabang Sungai Gerong
+                        </div>
+                        <p className="description font-black mb-5">
                           Sahid Sudirman Center, Lantai 40 Jl. Jend Sudirman Kav
                           86 Jakarta 10220 Indonesia +62.21. 2788 9393
                         </p>
                       </TabPane>
                       <TabPane tabId="project2">
-                        <p className="description mb-5">
+                        <p className="description font-black mb-5">
                           Add your information here for News 3.
                         </p>
                       </TabPane>
                       <TabPane tabId="project3">
-                        <p className="description mb-5">
+                        <p className="description font-black mb-5">
                           Add your information here for News 4.
                         </p>
                       </TabPane>
                       <TabPane tabId="project4">
-                        <p className="description mb-5">
+                        <p className="description font-black mb-5">
                           Add your information here for News 5.
                         </p>
                       </TabPane>

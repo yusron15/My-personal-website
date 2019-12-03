@@ -99,7 +99,12 @@ class EconomicCalendar extends React.Component {
             <Table
               responsive
               className="table-shopping"
-              style={{ backgroundColor: "#2C2F31", borderRadius: "5px" }}
+              style={{
+                backgroundColor: "#2C2F31",
+                borderRadius: "5px",
+                borderCollapse: "inherit"
+                // borderWidth: "0.2px"
+              }}
             >
               <thead>
                 <tr>

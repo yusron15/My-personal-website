@@ -65,7 +65,7 @@ class Headers extends React.Component {
                     backgroundColor: "rgba(179, 172, 172, 0.39)"
                   }}
                 >
-                  <Container>
+                  <Container style={{ paddingTop: 0 }}>
                     <h1 className="title text-center">KOMODITI</h1>
                     <p className="description">
                       Sebagai salah satu instrumen yang paling populer bagi

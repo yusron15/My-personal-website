@@ -20,6 +20,7 @@ import React from "react";
 import { Badge, Button, Container, Row, Col } from "reactstrap";
 
 import laptop from "../../assets/img/macbook.png";
+import feature from "../../assets/img/feature-img.png";
 
 import "../../assets/css/main.css";
 
@@ -59,7 +60,7 @@ class Features extends React.Component {
                         <div className="icon icon-success">
                           <img
                             alt="..."
-                            src={require("assets/img/cfdicon.png")}
+                            src={require("assets/img/blue-foreign.png")}
                             // height="70"
                             // width="70"
                           />
@@ -80,7 +81,7 @@ class Features extends React.Component {
                         <div className="icon icon-warning">
                           <img
                             alt="..."
-                            src={require("assets/img/cfdicon.png")}
+                            src={require("assets/img/blue-cfd.png")}
                             // style={{ height: "150%", width: "150%" }}
                           />
                         </div>
@@ -106,7 +107,7 @@ class Features extends React.Component {
                         <div className="icon icon-success">
                           <img
                             alt="..."
-                            src={require("assets/img/futureicon.png")}
+                            src={require("assets/img/blue-future.png")}
                           />
                         </div>
                         <div className="description">
@@ -125,7 +126,7 @@ class Features extends React.Component {
                         <div className="icon icon-warning">
                           <img
                             alt="..."
-                            src={require("assets/img/komoditiicon.png")}
+                            src={require("assets/img/blue-komoditi.png")}
                           />
                         </div>
                         <div className="description">
@@ -152,7 +153,10 @@ class Features extends React.Component {
                   </Row>
                 </Col>
                 <Col md="3" style={{ paddingRight: 0, paddingTop: "50px" }}>
-                  <img src={laptop} />
+                  <img
+                    src={feature}
+                    style={{ width: "100%", height: "auto" }}
+                  />
                 </Col>
               </Row>
               {/* <Row>

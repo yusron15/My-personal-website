@@ -57,14 +57,14 @@ class Pricing extends React.Component {
           <div
             className="pricing-3"
             id="pricing-3"
-            style={{ backgroundColor: "#151618" }}
+            style={{ backgroundColor: "#FFFFFF" }}
           >
             <Container>
               <Row>
                 <Col className="" md="6">
                   <h2
                     className="title"
-                    style={{ textAlign: "left", fontSize: 42 }}
+                    style={{ textAlign: "left", fontSize: 42, color: "black" }}
                   >
                     Tipe Akun
                   </h2>
@@ -75,7 +75,7 @@ class Pricing extends React.Component {
                       fontSize: 24,
                       color: "#81878D"
                     }}
-                    style={{ padding: "0 20px 0 0" }}
+                    style={{ padding: "0 20px 0 0", color: "black" }}
                   >
                     Kini Anda dapat memilih tipe akun sesuai dengan karakter
                     trading anda.
@@ -92,7 +92,7 @@ class Pricing extends React.Component {
                         className="card-pricing card-plain zoom free"
                         style={{
                           textAlign: "left",
-                          // backgroundColor: "#323436",
+                          backgroundColor: "#1D1E1F",
                           borderRadius: "10px"
                         }}
                       >
