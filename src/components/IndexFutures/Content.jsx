@@ -39,6 +39,7 @@ import {
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg1 from "../../assets/img/indexfutures1.png";
+import bg from "../../assets/img/header-indexfutures.png";
 import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
 
@@ -292,33 +293,58 @@ class Content extends React.Component {
   render() {
     return (
       <>
+        {" "}
+        <BlurryNavbar />
+        <ColoredNavbar />
+        <div className="space-50" />
+        <div
+          className="team-1"
+          style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
+        >
+          <div
+            className="title"
+            style={{
+              textAlign: "center",
+              fontStyle: "Helvetica Bold",
+              fontSize: "2rem"
+            }}
+          >
+            INDEX FUTURES
+          </div>
+        </div>
         <div
           className="cd-section"
           id="teams"
-          style={{ backgroundColor: "#1D1E1F" }}
+          style={{ backgroundColor: "#FFFFFF" }}
         >
-          {/* ********* TEAM 1 ********* */}
-          <BlurryNavbar />
-          <ColoredNavbar />
           <div className="team-1">
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto" md="12">
-                  <h1 className="title" style={font}>
+                  {/* <h1 className="title" style={font}>
                     INDEX FUTURES
-                  </h1>
-                  <p className="description">
+                  </h1> */}
+                  <p className="description font-black">
                     KONTRAK BERJANGKA atau INDEX FUTURES adalah alternatif
                     investasi dalam perdagangan saham yang dapat meminimalkan
                     risiko dan akan melindungi investor dari fluktuasi harga
                     yang merugikan. Kontrak berjangka adalah suatu kewajiban
                     untuk menerima atau untuk menyerahkan suatu instrumen
                     keuangan atau kontrak di masa depan dengan menggunakan harga
-                    yang telah disepakati pada hari ini. Di dalam perdagangan
-                    kontrak berjangka, investor diberikan peluang untuk
-                    mengambil posisi open sell kontrak dengan harapan harga akan
-                    turun dan posisi open buy kontrak dengan harapan harga akan
-                    naik.
+                    yang telah disepakati pada hari ini.
+                    <br />
+                    <br />
+                    Di dalam perdagangan kontrak berjangka, investor diberikan
+                    peluang untuk mengambil posisi open sell kontrak dengan
+                    harapan harga akan turun dan posisi open buy kontrak dengan
+                    harapan harga akan naik.
+                    <br />
+                    <br />
+                    Topgrowth Futures menawarkan investasi pada kontrak
+                    berjangka untuk mencari keuntungan dari fluktuasi harga
+                    indeks dengan merekomendasikan Kontrak Berjangka Jepang
+                    (Nikkei 225), Kontrak Berjangka Hong Kong (Hang Seng) dan
+                    Kontrak Berjangka Korea (Kospi 200).
                   </p>
                 </Col>
               </Row>

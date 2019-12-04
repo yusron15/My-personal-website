@@ -43,13 +43,11 @@ class ColorNavbar extends React.Component {
     this.state = {
       navbarColor: "bg-white",
       marginTop: "50px",
-      textColor: "black"
-      // backgroundColor: "black"
+      color: "black"
     };
   }
   componentDidMount() {
     window.addEventListener("scroll", this.changeNavbarColor);
-    // window.addEventListener("scroll", this.changeNavbarMargin);
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeNavbarTop);
@@ -57,20 +55,19 @@ class ColorNavbar extends React.Component {
 
   changeNavbarColor = () => {
     if (
-      document.documentElement.scrollTop > 30 ||
-      document.body.scrollTop > 30
+      document.documentElement.scrollTop > 700 ||
+      document.body.scrollTop > 700
     ) {
       this.setState({
-        // navbarColor: "black-newsletter",
-        marginTop: "0px",
-        textColor: "white"
+        navbarColor: "black-newsletter",
+        color: "white"
       });
     } else if (
-      document.documentElement.scrollTop > 50 ||
-      document.body.scrollTop > 50
+      document.documentElement.scrollTop > 10 ||
+      document.body.scrollTop > 10
     ) {
       this.setState({
-        navbarColor: "black-newsletter"
+        marginTop: "0px"
       });
     } else if (
       document.documentElement.scrollTop < 300 ||
@@ -78,7 +75,8 @@ class ColorNavbar extends React.Component {
     ) {
       this.setState({
         navbarColor: "bg-white",
-        marginTop: "50px"
+        marginTop: "50px",
+        color: "black"
       });
     }
   };
@@ -105,9 +103,12 @@ class ColorNavbar extends React.Component {
     const styles = {
       containerStyle: {
         marginTop: this.state.marginTop
+      },
+      colorStyle: {
+        color: this.state.color
       }
     };
-    const { containerStyle } = styles;
+    const { containerStyle, colorStyle } = styles;
     return (
       <>
         {/* <BlurryNavbar /> */}
@@ -135,7 +136,7 @@ class ColorNavbar extends React.Component {
               <Nav className="ml-auto" navbar>
                 <NavItem>
                   <button class="dropbtn">
-                    <Link to="/landing" style={{ color: "black" }}>
+                    <Link to="/landing" style={colorStyle}>
                       Home
                     </Link>
                   </button>
@@ -145,7 +146,7 @@ class ColorNavbar extends React.Component {
                 </NavItem>
 
                 <div class="dropdown">
-                  <button class="dropbtn" style={{ color: "black" }}>
+                  <button class="dropbtn" style={colorStyle}>
                     Tentang Kami
                   </button>
                   <div class="dropdown-content">
@@ -157,7 +158,7 @@ class ColorNavbar extends React.Component {
                 </div>
 
                 <div class="dropdown">
-                  <button class="dropbtn" style={{ color: "black" }}>
+                  <button class="dropbtn" style={colorStyle}>
                     Trading Online
                   </button>
                   <div
@@ -239,7 +240,7 @@ class ColorNavbar extends React.Component {
                 </div>
 
                 <div class="dropdown">
-                  <button class="dropbtn" style={{ color: "black" }}>
+                  <button class="dropbtn" style={colorStyle}>
                     Layanan
                   </button>
                   <div class="dropdown-content">
@@ -249,14 +250,14 @@ class ColorNavbar extends React.Component {
 
                 <NavItem>
                   <button class="dropbtn">
-                    <Link to="/karir" style={{ color: "black" }}>
+                    <Link to="/karir" style={colorStyle}>
                       Karir
                     </Link>
                   </button>
                 </NavItem>
                 <NavItem>
                   <button class="dropbtn">
-                    <Link to="/Contact" style={{ color: "black" }}>
+                    <Link to="/Contact" style={colorStyle}>
                       Hubungi Kami
                     </Link>
                   </button>

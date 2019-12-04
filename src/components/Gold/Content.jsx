@@ -65,6 +65,7 @@ class Features extends React.Component {
         >
           {/* ********* FEATURES 3 ********* */}
           <BlurryNavbar />
+          <div className="space-50" />
           <div className="features-3">
             <Container fluid>
               <Row>
