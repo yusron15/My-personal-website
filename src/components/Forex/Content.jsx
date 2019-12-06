@@ -32,6 +32,7 @@ import {
 import fg1 from "../../assets/img/forex.png";
 import fg2 from "../../assets/img/forex2.png";
 import fg3 from "../../assets/img/forexgold3.png";
+import bg from "../../assets/img/bg-forex.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 
@@ -40,7 +41,7 @@ const textTitle = {
   fontStyle: "Helvetica Bold",
   fontSize: "1.8rem",
   fontWeight: "bold",
-  color: "white"
+  color: "black"
 };
 
 const textContent = {
@@ -51,7 +52,8 @@ const textContent = {
   top: "50%",
   fontSize: "1rem",
   msTransform: "translateY(-50%)",
-  transform: "translateY(-50%)"
+  transform: "translateY(-50%)",
+  color: "black"
 };
 
 class Features extends React.Component {
@@ -61,22 +63,39 @@ class Features extends React.Component {
         <div
           className="cd-section"
           id="features"
-          style={{ backgroundColor: "#1D1E1F" }}
+          style={{ backgroundColor: "#FFFFFF" }}
         >
           {/* ********* FEATURES 3 ********* */}
           <BlurryNavbar />
+          <div className="space-50" />
+
           <div className="features-3">
-            <div className="space-50" />
+            <div
+              className="team-1"
+              style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
+            >
+              <div
+                className="title"
+                style={{
+                  textAlign: "center",
+                  fontStyle: "Helvetica Bold",
+                  fontSize: "2rem"
+                }}
+              >
+                FOREX
+              </div>
+            </div>
             <Container fluid>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
-                  <div
+                  {/* <div
                     // className="title"
                     style={textTitle}
                   >
                     FOREX
-                  </div>
-                  <p style={{ textAlign: "center" }}>
+                  </div> */}
+                  <div className="space-50" />
+                  <p style={{ textAlign: "center", color: "black" }}>
                     Saat ini, Foreign Exchange (Forex) merupakan pasar terbesar
                     dan paling likuid di dunia dengan perputaran nilai transaksi
                     yang tiga kali lipat lebih besar dari jumlah gabungan pasar
@@ -106,10 +125,13 @@ class Features extends React.Component {
                     </Col>
                     <Col lg="8">
                       <div style={textContent}>
-                        <div className="title-content">
+                        <div
+                          className="title-content"
+                          style={{ color: "black" }}
+                        >
                           KEUNTUNGAN TRANSAKSI FOREX
                         </div>
-                        <p>
+                        <p style={{ color: "black" }}>
                           Likuiditas tinggi karena selalu adanya penawaran dan
                           permintaan, Potensi keuntungan dua arah yang
                           didapatkan pada saat harga naik maupun turun karena
@@ -129,10 +151,13 @@ class Features extends React.Component {
                   <Row style={{ marginTop: "50px" }}>
                     <Col lg="8">
                       <div style={textContent}>
-                        <div className="title-content">
+                        <div
+                          className="title-content"
+                          style={{ color: "black" }}
+                        >
                           KEUNTUNGAN TRANSAKSI FOREX
                         </div>
-                        <p>
+                        <p style={{ color: "black" }}>
                           Likuiditas tinggi karena selalu adanya penawaran dan
                           permintaan, Potensi keuntungan dua arah yang
                           didapatkan pada saat harga naik maupun turun karena
@@ -166,8 +191,8 @@ class Features extends React.Component {
                   <Row style={{ marginTop: "50px" }}>
                     <Col lg="12">
                       <div>
-                        <div style={textTitle}>Tagam Produk Forex</div>
-                        <p>
+                        <div style={textTitle}>Ragam Produk Forex</div>
+                        <p style={{ color: "black" }}>
                           Trading forex dengan TOPGROWTH memberi Anda akses
                           untuk bertransaksi ke banyak produk valuta asing,
                           terlepas dari apakah Anda mengunduh Pro-I Trading pada

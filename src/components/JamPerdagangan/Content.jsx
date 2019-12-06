@@ -30,27 +30,51 @@ import {
 
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
-
+import bg from "../../assets/img/jamperdagangan.png";
 import "../../assets/css/main.css";
 
 class Tables extends React.Component {
   render() {
     return (
       <>
-        <div className="cd-section black-news" id="tables">
+        <div
+          className="cd-section "
+          style={{ backgroundColor: "#FFFFFF" }}
+          id="tables"
+        >
           {/* ********* Table 2 ********* */}
           <div className="tables-2">
             <BlurryNavbar />
             <ColoredNavbar />
-            <Container>
-              <Row>
+            <div className="space-50" />
+
+            <div
+              className="team-1"
+              style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
+            >
+              <div
+                className="title"
+                style={{
+                  textAlign: "center",
+                  fontStyle: "Helvetica Bold",
+                  fontSize: "2rem"
+                }}
+              >
+                Jam Perdagangan
+              </div>
+            </div>
+            <Container style={{ marginTop: "50px" }}>
+              {/* <Row>
                 <Col className="ml-auto mr-auto text-center" md="6">
-                  <h2 className="title mb-4" style={{ paddingTop: "50px" }}>
+                  <h2
+                    className="title mb-4"
+                    style={{ paddingTop: "50px", color: "black" }}
+                  >
                     Jam Perdagangan
                   </h2>
                   <div className="section-space" />
                 </Col>
-              </Row>
+              </Row> */}
               <Row>
                 <Col
                   className="mx-auto"

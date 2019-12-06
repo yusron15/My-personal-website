@@ -42,6 +42,7 @@ import {
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColorNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import DemoFooter from "../../components/Footers/Footer.jsx";
+import bg from "../../assets/img/bg-register.png";
 
 class RegisterPage extends React.Component {
   state = {
@@ -86,12 +87,16 @@ class RegisterPage extends React.Component {
         <BlurryNavbar />
         <ColorNavbar />
         <div className="wrapper" ref="wrapper">
-          <div className="page-header">
-            <div className="page-header-image" />
-            <Container>
-              <Row>
-                <Col className="mx-auto" lg="5" md="12">
-                  <div
+          <div
+            className="team-1"
+            style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
+          >
+            <div className="page-header">
+              {/* <div className="page-header-image" /> */}
+              <Container>
+                <Row>
+                  <Col className="mx-auto" lg="5" md="12">
+                    {/* <div
                     className="square square-7"
                     id="square7"
                     style={{ transform: this.state.squares7and8 }}
@@ -100,138 +105,251 @@ class RegisterPage extends React.Component {
                     className="square square-8"
                     id="square8"
                     style={{ transform: this.state.squares7and8 }}
-                  />
-                  <Card className="card-register">
-                    <CardHeader>
-                      <CardImg
-                        alt="..."
-                        src={require("assets/img/square1.png")}
-                      />
-                      <CardTitle tag="h4" style={{ paddingLeft: "15px" }}>
-                        Register
-                      </CardTitle>
-                    </CardHeader>
-                    <CardBody>
-                      <Form className="form">
-                        <InputGroup
-                          className={classnames({
-                            "input-group-focus": this.state.fullNamefocus
-                          })}
-                        >
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="tim-icons icon-single-02" />
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            placeholder="Full Name"
-                            type="text"
-                            onFocus={e =>
-                              this.setState({ fullNamefocus: true })
-                            }
-                            onBlur={e =>
-                              this.setState({ fullNamefocus: false })
-                            }
-                          />
-                        </InputGroup>
-                        <InputGroup
-                          className={classnames({
-                            "input-group-focus": this.state.emailFocus
-                          })}
-                        >
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="tim-icons icon-email-85" />
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            placeholder="Email"
-                            type="text"
-                            onFocus={e => this.setState({ emailFocus: true })}
-                            onBlur={e => this.setState({ emailFocus: false })}
-                          />
-                        </InputGroup>
-                        <InputGroup
-                          className={classnames({
-                            "input-group-focus": this.state.passwordFocus
-                          })}
-                        >
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="tim-icons icon-lock-circle" />
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            placeholder="Password"
-                            type="text"
-                            onFocus={e =>
-                              this.setState({ passwordFocus: true })
-                            }
-                            onBlur={e =>
-                              this.setState({ passwordFocus: false })
-                            }
-                          />
-                        </InputGroup>
-                        <FormGroup check className="text-left">
-                          <Label check>
-                            <Input type="checkbox" />
-                            <span className="form-check-sign" />I agree to the{" "}
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
-                              terms and conditions
+                  /> */}
+                    <Card
+                      className="card-login"
+                      style={{ backgroundColor: "rgba(14,14,14,0.7)" }}
+                    >
+                      <Form action="" className="form" method="">
+                        <CardHeader>
+                          {/* <CardImg
+                            alt="..."
+                            src={require("assets/img/square1.png")}
+                          /> */}
+                          <CardTitle
+                            style={{
+                              textAlign: "center",
+                              color: "white",
+                              fontSize: "3rem"
+                            }}
+                          >
+                            register
+                          </CardTitle>
+                        </CardHeader>
+                        <CardBody>
+                          <InputGroup
+                            className={classnames("input-lg", {
+                              "input-group-focus": this.state.firstNameFocus
+                            })}
+                          >
+                            <InputGroupAddon addonType="prepend">
+                              <InputGroupText
+                                style={{ borderColor: "#FFFFFF" }}
+                              >
+                                <i className="tim-icons icon-single-02" />
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <Input
+                              style={{ borderColor: "#FFFFFF" }}
+                              placeholder="First Name..."
+                              type="text"
+                              onFocus={e =>
+                                this.setState({ firstNameFocus: true })
+                              }
+                              onBlur={e =>
+                                this.setState({ firstNameFocus: false })
+                              }
+                            />
+                          </InputGroup>
+                          <Row>
+                            <Col md="6">
+                              <label>First name</label>
+                              <InputGroup
+                                className={classnames({
+                                  "input-group-focus": this.state.firstNameFocus
+                                })}
+                              >
+                                <InputGroupAddon addonType="prepend">
+                                  <InputGroupText
+                                    style={{ borderColor: "#FFFFFF" }}
+                                  >
+                                    <i className="tim-icons icon-single-02" />
+                                  </InputGroupText>
+                                </InputGroupAddon>
+                                <Input
+                                  style={{ borderColor: "#FFFFFF" }}
+                                  aria-label="First Name..."
+                                  placeholder="First Name..."
+                                  type="text"
+                                  onFocus={e =>
+                                    this.setState({ firstNameFocus: true })
+                                  }
+                                  onBlur={e =>
+                                    this.setState({ firstNameFocus: false })
+                                  }
+                                />
+                              </InputGroup>
+                            </Col>
+                            <Col md="6">
+                              <FormGroup>
+                                <label>Last name</label>
+                                <InputGroup
+                                  className={classnames({
+                                    "input-group-focus": this.state
+                                      .lastNameFocus
+                                  })}
+                                >
+                                  <InputGroupAddon addonType="prepend">
+                                    <InputGroupText
+                                      style={{ borderColor: "#FFFFFF" }}
+                                    >
+                                      <i className="tim-icons icon-caps-small" />
+                                    </InputGroupText>
+                                  </InputGroupAddon>
+                                  <Input
+                                    style={{ borderColor: "#FFFFFF" }}
+                                    aria-label="Last Name..."
+                                    placeholder="Last Name..."
+                                    type="text"
+                                    onFocus={e =>
+                                      this.setState({ lastNameFocus: true })
+                                    }
+                                    onBlur={e =>
+                                      this.setState({ lastNameFocus: false })
+                                    }
+                                  />
+                                </InputGroup>
+                              </FormGroup>
+                            </Col>
+                          </Row>
+                          <Row>
+                            <Col md="6">
+                              <label>First name</label>
+                              <InputGroup
+                                className={classnames({
+                                  "input-group-focus": this.state.firstNameFocus
+                                })}
+                              >
+                                <InputGroupAddon addonType="prepend">
+                                  <InputGroupText
+                                    style={{ borderColor: "#FFFFFF" }}
+                                  >
+                                    <i className="tim-icons icon-single-02" />
+                                  </InputGroupText>
+                                </InputGroupAddon>
+                                <Input
+                                  style={{ borderColor: "#FFFFFF" }}
+                                  aria-label="First Name..."
+                                  placeholder="First Name..."
+                                  type="text"
+                                  onFocus={e =>
+                                    this.setState({ firstNameFocus: true })
+                                  }
+                                  onBlur={e =>
+                                    this.setState({ firstNameFocus: false })
+                                  }
+                                />
+                              </InputGroup>
+                            </Col>
+                            <Col md="6">
+                              <FormGroup>
+                                <label>Last name</label>
+                                <InputGroup
+                                  className={classnames({
+                                    "input-group-focus": this.state
+                                      .lastNameFocus
+                                  })}
+                                >
+                                  <InputGroupAddon addonType="prepend">
+                                    <InputGroupText
+                                      style={{ borderColor: "#FFFFFF" }}
+                                    >
+                                      <i className="tim-icons icon-caps-small" />
+                                    </InputGroupText>
+                                  </InputGroupAddon>
+                                  <Input
+                                    style={{ borderColor: "#FFFFFF" }}
+                                    aria-label="Last Name..."
+                                    placeholder="Last Name..."
+                                    type="text"
+                                    onFocus={e =>
+                                      this.setState({ lastNameFocus: true })
+                                    }
+                                    onBlur={e =>
+                                      this.setState({ lastNameFocus: false })
+                                    }
+                                  />
+                                </InputGroup>
+                              </FormGroup>
+                            </Col>
+                          </Row>
+                        </CardBody>
+                        <CardFooter className="text-center">
+                          <Button
+                            block
+                            className="btn-round"
+                            color="info"
+                            href="#pablo"
+                            onClick={e => e.preventDefault()}
+                            size="lg"
+                            // style={{backgroundColor:"#3467D6"}}
+                          >
+                            Get Started
+                          </Button>
+                        </CardFooter>
+                        <div className="pull-left ml-3 mb-3">
+                          <h6>
+                            <a
+                              className="link footer-link"
+                              href="#pablo"
+                              onClick={e => e.preventDefault()}
+                              style={{ color: "white" }}
+                            >
+                              Create Account
                             </a>
-                            .
-                          </Label>
-                        </FormGroup>
+                          </h6>
+                        </div>
+                        <div className="pull-right mr-3 mb-3">
+                          <h6>
+                            <a
+                              className="link footer-link"
+                              href="#pablo"
+                              onClick={e => e.preventDefault()}
+                              style={{ color: "white" }}
+                            >
+                              Need Help?
+                            </a>
+                          </h6>
+                        </div>
                       </Form>
-                    </CardBody>
-                    <CardFooter>
-                      <Button
-                        className="btn-round"
-                        color="info"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                        size="lg"
-                      >
-                        Get Started
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </Col>
-              </Row>
-            </Container>
-            <div className="register-bg" />
-            <div
-              className="square square-1"
-              id="square1"
-              style={{ transform: this.state.squares1to6 }}
-            />
-            <div
-              className="square square-2"
-              id="square2"
-              style={{ transform: this.state.squares1to6 }}
-            />
-            <div
-              className="square square-3"
-              id="square3"
-              style={{ transform: this.state.squares1to6 }}
-            />
-            <div
-              className="square square-4"
-              id="square4"
-              style={{ transform: this.state.squares1to6 }}
-            />
-            <div
-              className="square square-5"
-              id="square5"
-              style={{ transform: this.state.squares1to6 }}
-            />
-            <div
-              className="square square-6"
-              id="square6"
-              style={{ transform: this.state.squares1to6 }}
-            />
+                    </Card>
+                  </Col>
+                </Row>
+              </Container>
+              {/* <div className="register-bg" />
+              <div
+                className="square square-1"
+                id="square1"
+                style={{ transform: this.state.squares1to6 }}
+              />
+              <div
+                className="square square-2"
+                id="square2"
+                style={{ transform: this.state.squares1to6 }}
+              />
+              <div
+                className="square square-3"
+                id="square3"
+                style={{ transform: this.state.squares1to6 }}
+              />
+              <div
+                className="square square-4"
+                id="square4"
+                style={{ transform: this.state.squares1to6 }}
+              />
+              <div
+                className="square square-5"
+                id="square5"
+                style={{ transform: this.state.squares1to6 }}
+              />
+              <div
+                className="square square-6"
+                id="square6"
+                style={{ transform: this.state.squares1to6 }}
+              /> */}
+            </div>
+            <DemoFooter />
           </div>
-          <DemoFooter />
         </div>
       </>
     );

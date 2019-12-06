@@ -32,6 +32,8 @@ import {
 import fg1 from "../../assets/img/gold.png";
 import fg2 from "../../assets/img/forexgold2.png";
 import fg3 from "../../assets/img/forexgold3.png";
+
+import bg from "../../assets/img/bg-gold.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 
@@ -61,22 +63,38 @@ class Features extends React.Component {
         <div
           className="cd-section"
           id="features"
-          style={{ backgroundColor: "#1D1E1F" }}
+          style={{ backgroundColor: "#FFFFFF" }}
         >
           {/* ********* FEATURES 3 ********* */}
           <BlurryNavbar />
+          <div className="space-50" />
+          <div
+            className="team-1"
+            style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
+          >
+            <div
+              className="title"
+              style={{
+                textAlign: "center",
+                fontStyle: "Helvetica Bold",
+                fontSize: "2rem"
+              }}
+            >
+              GOLD
+            </div>
+          </div>
           <div className="space-50" />
           <div className="features-3">
             <Container fluid>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
-                  <div
+                  {/* <div
                     // className="title"
                     style={textTitle}
                   >
                     GOLD
-                  </div>
-                  <p style={{ textAlign: "center" }}>
+                  </div> */}
+                  <p style={{ textAlign: "center", color: "black" }}>
                     London Bullion Market adalah grosir pasar over-the-counter
                     untuk perdagangan emas dan perak. Perdagangan dilakukan di
                     antara anggota Asosiasi Pasar Bullion London (LBMA), diawasi
@@ -133,10 +151,13 @@ class Features extends React.Component {
                     </Col>
                     <Col lg="8">
                       <div style={textContent}>
-                        <div className="title-content">
+                        <div
+                          className="title-content"
+                          style={{ color: "black" }}
+                        >
                           KEUNTUNGAN TRANSAKSI FOREX
                         </div>
-                        <p>
+                        <p style={{ color: "black" }}>
                           Secara internasional, emas diperdagangkan terutama
                           melalui transaksi over-the-counter (OTC) dengan
                           perdagangan dalam jumlah terbatas di New York
@@ -183,8 +204,13 @@ class Features extends React.Component {
                   <Row>
                     <Col lg="12">
                       <div style={{ marginTop: "50px" }}>
-                        <div className="title-content">Market Size</div>
-                        <p style={{ textAlign: "left" }}>
+                        <div
+                          className="title-content"
+                          style={{ color: "black" }}
+                        >
+                          Market Size
+                        </div>
+                        <p style={{ textAlign: "left", color: "black" }}>
                           Sebagian besar perdagangan global dalam emas dan perak
                           dilakukan di pasar over-the-counter (OTC). London
                           sejauh ini merupakan pusat global terbesar untuk
