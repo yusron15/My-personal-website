@@ -40,12 +40,15 @@ import {
 } from "reactstrap";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import bg from "../../assets/img/headerkomoditi.png";
+import "../../assets/css/main.css";
+
 class Headers extends React.Component {
   state = {};
   render() {
     return (
       <>
-        <div
+        {/* <div
           className="cd-section"
           id="headers"
           style={{
@@ -53,61 +56,78 @@ class Headers extends React.Component {
               "url(" + require("assets/img/headerkomoditi.png") + ")",
             backgroundSize: "cover"
           }}
+        > */}
+        {/* ********* HEADER 4 w/ VIDEO ********* */}
+        <BlurryNavbar />
+        <div className="space-50" />
+        <div
+          className="team-1"
+          style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
         >
-          {/* ********* HEADER 4 w/ VIDEO ********* */}
-          <BlurryNavbar />
-          <div className="header header-4">
-            {/* <ColoredNavbar /> */}
-            <div className="header-wrapper">
-              <div className="page-header" style={{ justifyContent: "center" }}>
-                <div
-                  style={{
-                    backgroundColor: "rgba(179, 172, 172, 0.39)"
-                  }}
-                >
-                  <Container style={{ paddingTop: 0 }}>
-                    <h1 className="title text-center">KOMODITI</h1>
-                    <p className="description">
-                      Sebagai salah satu instrumen yang paling populer bagi
-                      sebagian besar manajer investasi global, transaksi
-                      komoditi mengakibatkan perputaran uang di pasar komoditas
-                      menjadi cukup tinggi.
-                      <br />
-                      <br />
-                      Komoditas dapat diinterpretasikan sebagai sesuatu dari
-                      substansi fisik dan dibagi menjadi dua, yaitu komoditi
-                      hasil pertambangan, seperti emas, perak, minyak dan
-                      lainnya, dan komoditi hasil pertanian, seperti gula,
-                      beras, kakao, kopi dan lainnya.
-                      <br />
-                      <br />
-                      Komoditas lebih mudah dipahami karena banyak bergantung
-                      pada kondisi fundamental permintaan dan penawaran.
-                      Volatilitas harga komoditas lebih kecil dibandingkan saham
-                      dan obligasi sehingga menyediakan pilihan diversifikasi
-                      portofolio yang efisien untuk pelaku pasar. Yang membuat
-                      komoditas lebih menarik dan lebih berisiko dalam transaksi
-                      dibandingkan saham adalah jumlah leverage atau daya
-                      ungkit. Akan tetapi pada kenyataannya, risiko perdagangan
-                      di pasar komoditas tidak akan lebih dari risiko yang
-                      ditentukan pengguna.
-                      <br />
-                      <br />
-                      JFX (Jakarta Futures Exchange) dan ICDX (Indonesia
-                      Commodity & Derivatives Exchange) sebagai bursa berjangka
-                      di Indonesia berfungsi untuk mengembangkan pasar berjangka
-                      melalui sistem yang lebih dinamis, transparan, dan likuid.
-                      Transaksi multilateral memungkinkan banyak pihak untuk
-                      membeli dan menjual instrumen keuangan di bursa melalui
-                      sarana elektronik.
-                    </p>
-                  </Container>
-                </div>
-              </div>
+          <div
+            className="title"
+            style={{
+              textAlign: "center",
+              fontStyle: "Helvetica Bold",
+              fontSize: "2rem"
+            }}
+          >
+            KOMODITI
+          </div>
+        </div>
+        <div className="header header-4" style={{ backgroundColor: "#FFFFFF" }}>
+          {/* <ColoredNavbar /> */}
+          <div className="header-wrapper">
+            <div
+              className="page-header"
+              style={{ justifyContent: "center", minHeight: "60vh" }}
+            >
+              {/* <div
+                style={{
+                  backgroundColor: "rgba(179, 172, 172, 0.39)"
+                }}
+              > */}
+              <Container style={{ paddingTop: 0 }}>
+                {/* <h1 className="title text-center">KOMODITI</h1> */}
+                <p className="description" style={{ color: "black" }}>
+                  Sebagai salah satu instrumen yang paling populer bagi sebagian
+                  besar manajer investasi global, transaksi komoditi
+                  mengakibatkan perputaran uang di pasar komoditas menjadi cukup
+                  tinggi.
+                  <br />
+                  <br />
+                  Komoditas dapat diinterpretasikan sebagai sesuatu dari
+                  substansi fisik dan dibagi menjadi dua, yaitu komoditi hasil
+                  pertambangan, seperti emas, perak, minyak dan lainnya, dan
+                  komoditi hasil pertanian, seperti gula, beras, kakao, kopi dan
+                  lainnya.
+                  <br />
+                  <br />
+                  Komoditas lebih mudah dipahami karena banyak bergantung pada
+                  kondisi fundamental permintaan dan penawaran. Volatilitas
+                  harga komoditas lebih kecil dibandingkan saham dan obligasi
+                  sehingga menyediakan pilihan diversifikasi portofolio yang
+                  efisien untuk pelaku pasar. Yang membuat komoditas lebih
+                  menarik dan lebih berisiko dalam transaksi dibandingkan saham
+                  adalah jumlah leverage atau daya ungkit. Akan tetapi pada
+                  kenyataannya, risiko perdagangan di pasar komoditas tidak akan
+                  lebih dari risiko yang ditentukan pengguna.
+                  <br />
+                  <br />
+                  JFX (Jakarta Futures Exchange) dan ICDX (Indonesia Commodity &
+                  Derivatives Exchange) sebagai bursa berjangka di Indonesia
+                  berfungsi untuk mengembangkan pasar berjangka melalui sistem
+                  yang lebih dinamis, transparan, dan likuid. Transaksi
+                  multilateral memungkinkan banyak pihak untuk membeli dan
+                  menjual instrumen keuangan di bursa melalui sarana elektronik.
+                </p>
+              </Container>
+              {/* </div> */}
             </div>
           </div>
-          {/* ********* END HEADER 4 ********* */}
-        </div>{" "}
+        </div>
+        {/* ********* END HEADER 4 ********* */}
+        {/* </div>{" "} */}
       </>
     );
   }

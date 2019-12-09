@@ -18,7 +18,7 @@
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  
+  transition: all .5s ease;
   z-index: 1;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .bg-white{
-  background-color: "white";
+  background-color: "#D4D4D4";
 }
 
 .background-black{
@@ -114,7 +114,7 @@
 
 .dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display:block;}
+.dropdown:hover .dropdown-content {display:block;transform: translateY(0);}
 
 .dropdown-content-trading a:hover {background-color: #ddd; }
 
@@ -230,7 +230,21 @@ hr.grey {
  }
 
  .text-benefit {
-  color:white
+  color:white;
+  /* background: linear-gradient(to right, black 50%, white 50%); */
+  transition: all .5s ease-out;
+ }
+
+ .card-komoditi {
+  transition: all .5s ease-out;
+  color:black;
+  background-color: transparent;
+  min-height: "270px";
+  min-width: "200px";
+  border-radius: "10px";
+  justify-content: "center";
+  border: 0.5px solid;
+  border-color:black;
  }
 
  .title-benefit{
@@ -241,7 +255,17 @@ hr.grey {
  }
 
  .text-benefit:hover {
-  color:black
+  color:black;
+ }
+
+ .card-komoditi:hover {
+  color:white;
+  background-color: #2F5D9E;
+  min-height: "270px";
+  min-width: "200px";
+  border-radius: "10px";
+  justify-content: "center";
+  /* transform: scale(1.1);  */
  }
 
 .card-benefit:hover {
@@ -260,4 +284,3 @@ hr.grey {
 .helvetica {
   font-family: "Helvetica reguler";
 }
-

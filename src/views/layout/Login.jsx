@@ -92,30 +92,15 @@ class RegisterPage extends React.Component {
             style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
           >
             <div className="page-header">
-              {/* <div className="page-header-image" /> */}
               <Container>
                 <Row>
                   <Col className="mx-auto" lg="5" md="12">
-                    {/* <div
-                    className="square square-7"
-                    id="square7"
-                    style={{ transform: this.state.squares7and8 }}
-                  />
-                  <div
-                    className="square square-8"
-                    id="square8"
-                    style={{ transform: this.state.squares7and8 }}
-                  /> */}
                     <Card
                       className="card-login"
                       style={{ backgroundColor: "rgba(14,14,14,0.7)" }}
                     >
                       <Form action="" className="form" method="">
                         <CardHeader>
-                          {/* <CardImg
-                            alt="..."
-                            src={require("assets/img/square1.png")}
-                          /> */}
                           <CardTitle
                             style={{
                               textAlign: "center",
@@ -184,7 +169,6 @@ class RegisterPage extends React.Component {
                             href="#pablo"
                             onClick={e => e.preventDefault()}
                             size="lg"
-                            // style={{backgroundColor:"#3467D6"}}
                           >
                             Get Started
                           </Button>
@@ -218,37 +202,6 @@ class RegisterPage extends React.Component {
                   </Col>
                 </Row>
               </Container>
-              {/* <div className="register-bg" />
-              <div
-                className="square square-1"
-                id="square1"
-                style={{ transform: this.state.squares1to6 }}
-              />
-              <div
-                className="square square-2"
-                id="square2"
-                style={{ transform: this.state.squares1to6 }}
-              />
-              <div
-                className="square square-3"
-                id="square3"
-                style={{ transform: this.state.squares1to6 }}
-              />
-              <div
-                className="square square-4"
-                id="square4"
-                style={{ transform: this.state.squares1to6 }}
-              />
-              <div
-                className="square square-5"
-                id="square5"
-                style={{ transform: this.state.squares1to6 }}
-              />
-              <div
-                className="square square-6"
-                id="square6"
-                style={{ transform: this.state.squares1to6 }}
-              /> */}
             </div>
             <DemoFooter />
           </div>

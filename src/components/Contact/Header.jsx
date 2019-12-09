@@ -60,7 +60,7 @@ class ContactUs extends React.Component {
               className="page-header-image"
               style={{
                 backgroundImage:
-                  "url(" + require("assets/img/andre-benz.jpg") + ")"
+                  "url(" + require("assets/img/header-contact.png") + ")"
               }}
             />
             <Container>

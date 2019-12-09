@@ -73,14 +73,14 @@ class Content extends React.Component {
     return (
       <>
         <div className="wrapper" ref="wrapper">
-          <div className="main black-news">
+          <div className="main" style={{ backgroundColor: "#FFFFFF" }}>
             <Container fluid>
               <Row>
                 <Col className="ml-auto mr-auto text-center mt-5" md="6">
-                  <h1 className="title">
+                  <h1 className="title font-black">
                     Kami sangat menanti pertanyaan, saran, dan kritik dari Anda.
                   </h1>
-                  <h4 className="desc">
+                  <h4 className="desc font-black">
                     Silakan hubungi atau kirimkan email ke formulir kontak dan
                     kami akan dengan senang hati membantu Anda.
                   </h4>
@@ -92,20 +92,20 @@ class Content extends React.Component {
                     <Col className="ml-auto" md="6">
                       <Container>
                         <div
-                          className="title font-white"
+                          className="title font-black"
                           style={{ fontSize: "1.5rem" }}
                         >
                           Kontak & Informasi
                         </div>
                         <Row>
                           <Col md="4">
-                            <div className="description">
+                            <div className="description font-black">
                               Address: Sahid Sudirman Center, Lantai 40 Jl. Jend
                               Sudirman Kav 86 Jakarta 10220 Indonesia
                             </div>
                           </Col>
                           <Col md="4">
-                            <div className="description">
+                            <div className="descriptio font-blackn">
                               Phone: (+62)21 2788-9393 Fax: (+62)21 2788-9395
                             </div>
                           </Col>

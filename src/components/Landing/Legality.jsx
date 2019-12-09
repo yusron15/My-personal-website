@@ -91,7 +91,7 @@ class Projects extends React.Component {
           {/* ********* PROJECTS 2 ********* */}
           <div className="project-raised bg-white">
             <DarkNavbar />
-            <Container>
+            <Container style={{ height: "70vh" }}>
               <Row>
                 <Col className="ml-auto mr-auto text-center" lg="8">
                   <h2 className="title font-black">Legalitas</h2>
@@ -147,7 +147,11 @@ class Projects extends React.Component {
               >
                 <NavItem className="m-auto">
                   <img
-                    src={bappebti}
+                    src={
+                      this.state.activeTab === "1"
+                        ? require('"../../assets/img/colored-bappebti.png')
+                        : require('"../../assets/img/grey-bappebti.png')
+                    }
                     width={this.state.activeTab === "1" ? "200" : "150"}
                     auto="auto"
                     className={this.state.activeTab === "1" ? "active" : ""}
@@ -158,7 +162,11 @@ class Projects extends React.Component {
                 </NavItem>
                 <NavItem className="m-auto">
                   <img
-                    src={jfx}
+                    src={
+                      this.state.activeTab === "2"
+                        ? require('"../../assets/img/colored-jfx.png')
+                        : require('"../../assets/img/grey-jfx.png')
+                    }
                     width={this.state.activeTab === "2" ? "200" : "150"}
                     auto="auto"
                     className={this.state.activeTab === "2" ? "active" : ""}
@@ -169,7 +177,11 @@ class Projects extends React.Component {
                 </NavItem>
                 <NavItem className="m-auto">
                   <img
-                    src={kbi}
+                    src={
+                      this.state.activeTab === "3"
+                        ? require('"../../assets/img/colored-kbi.png')
+                        : require('"../../assets/img/grey-kbi.png')
+                    }
                     width={this.state.activeTab === "3" ? "200" : "150"}
                     auto="auto"
                     className={this.state.activeTab === "3" ? "active" : ""}
@@ -180,7 +192,11 @@ class Projects extends React.Component {
                 </NavItem>
                 <NavItem className="m-auto">
                   <img
-                    src={ich}
+                    src={
+                      this.state.activeTab === "4"
+                        ? require('"../../assets/img/colored-ich.png')
+                        : require('"../../assets/img/grey-ich.png')
+                    }
                     width={this.state.activeTab === "4" ? "200" : "150"}
                     auto="auto"
                     className={this.state.activeTab === "4" ? "active" : ""}
@@ -191,7 +207,11 @@ class Projects extends React.Component {
                 </NavItem>
                 <NavItem className="m-auto">
                   <img
-                    src={icdx}
+                    src={
+                      this.state.activeTab === "5"
+                        ? require('"../../assets/img/colored-icdx.png')
+                        : require('"../../assets/img/grey-icdx.png')
+                    }
                     width={this.state.activeTab === "5" ? "200" : "150"}
                     auto="auto"
                     className={this.state.activeTab === "5" ? "active" : ""}

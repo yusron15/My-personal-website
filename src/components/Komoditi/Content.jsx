@@ -1,180 +1,194 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
-
-// reactstrap components
-import { Badge, Button, Container, Row, Col } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 
 import "../../assets/css/main.css";
 
-import increase from "../../assets/img/increase.png";
-import money from "../../assets/img/money.png";
-import shield from "../../assets/img/shield.png";
+class Content extends React.Component {
+  state = {
+    carousel1Index: 0,
+    carousel2Index: 0,
+    color: "#FFFFFF",
+    komoditi: require('"../../assets/img/komoditi-black.png'),
+    money: require('"../../assets/img/money-black.png'),
+    shield: require('"../../assets/img/shield-black.png')
+  };
 
-const font = {
-  color: "black",
-  textAlign: "left"
-};
+  handleIncreaseEnter = () => {
+    this.setState({
+      komoditi: require('"../../assets/img/komoditi-white.png')
+    });
+  };
 
-class Features extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     increase: require('"../../assets/img/increase.png"'),
-  //     money: require('"./../assets/img/money.png"'),
-  //     shield: require('"../../assets/img/shield.png"')
-  //   };
-  // }
+  handleIncreaseLeave = () => {
+    this.setState({
+      komoditi: require('"../../assets/img/komoditi-black.png')
+    });
+  };
 
-  // handleIncreaseEnter = () => {
-  //   this.setState({
-  //     increase: require('"../../assets/img/increase.png"')
-  //   });
-  // };
+  handleMoneyEnter = () => {
+    this.setState({
+      money: require('"../../assets/img/money-white.png')
+    });
+  };
 
-  // handleIncreaseLeave = () => {
-  //   this.setState({ increase: require('"../../assets/img/increase.png"') });
-  // };
+  handleMoneyLeave = () => {
+    this.setState({ money: require('"../../assets/img/money-black.png') });
+  };
 
-  // handleMoneyEnter = () => {
-  //   this.setState({
-  //     money: require('"../../assets/img/legalitas.png"')
-  //   });
-  // };
+  handleShieldEnter = () => {
+    this.setState({
+      shield: require('"../../assets/img/shield-white.png')
+    });
+  };
 
-  // handleMoneyLeave = () => {
-  //   this.setState({ money: require('"../../assets/img/money.png"') });
-  // };
-
-  // handleShieldEnter = () => {
-  //   this.setState({
-  //     shield: require('"../../assets/img/legalitas.png"')
-  //   });
-  // };
-
-  // handleShieldLeave = () => {
-  //   this.setState({ shield: require('"../../assets/img/shield.png"') });
-  // };
+  handleShieldLeave = () => {
+    this.setState({ shield: require('"../../assets/img/shield-black.png') });
+  };
 
   render() {
     return (
       <>
-        <div className="cd-section" id="features">
-          {/* ********* FEATURES 1 ********* */}
-          <div className="features-1 bg-white">
-            <Container>
-              <Row>
-                <Col className="ml-auto mr-auto" md="11">
-                  <h1 className="title" style={font}>
-                    Mengapa Memperdagangkan Komoditi ?
-                  </h1>
-                </Col>
-              </Row>
-              <Row>
-                <Col md="4">
+        <div className="cd-section" id="testimonials">
+          <div
+            className="testimonials-4"
+            style={{
+              backgroundColor: "#FFFFFF",
+              backgroundSize: "cover",
+              paddingTop: 0
+            }}
+          >
+            <Container fluid>
+              <Row md="12" className="justify-content-center">
+                <Col md="3">
                   <div
-                    // onMouseEnter={this.handleIncreaseEnter}
-                    // onMouseLeave={this.handleIncreaseLeave}
-                    className="info info-hover"
-                    style={{
-                      backgroundColor: "rgba(6,57,128,1)",
-                      borderRadius: "10px",
-                      height: "400px"
-                    }}
+                    className="card-benefit "
+                    onMouseEnter={this.handleIncreaseEnter}
+                    onMouseLeave={this.handleIncreaseLeave}
                   >
-                    {/* <div className="icon icon-primary"> */}
-                    <img alt="..." className="bg-blob" src={increase} />
-                    {/* </div> */}
-                    <h4
-                      className="info-title text-white text-center"
-                      style={font}
+                    <div
+                      className="info card-komoditi"
+                      style={{
+                        minHeight: "400px",
+                        maxWidth: "300px",
+                        borderRadius: "10px",
+                        justifyContent: "center"
+                      }}
                     >
-                      Permintaan Akan Komoditas Terus Meningkat
-                    </h4>
-                    <p
-                      className="description text-white text-center"
-                      style={font}
-                    >
-                      Semakin berkembangnya dunia, maka permintaan atas
-                      komoditas akan terus meningkat yang mengakibatkan kenaikan
-                      harga komoditas tersebut.
-                    </p>
+                      <div style={{ alignSelf: "center" }}>
+                        <img
+                          src={this.state.komoditi}
+                          style={{ marginTop: "50px" }}
+                        />
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "1.4rem",
+                          fontWeight: "bold",
+                          margin: "30px 0 30px 10px"
+                        }}
+                      >
+                        Biaya Rendah
+                      </div>
+                      <div style={{ marginLeft: "50px" }}>
+                        {/* </p> */}
+                        {/* <p className="text-benefit"> */}
+                        Memungkinkan nasabah untuk memaksimalkan keuntungan
+                        serta menerapkan money management
+                        {/* </p> */}
+                      </div>
+                      <div className="author"></div>
+                    </div>
                   </div>
                 </Col>
-                <Col md="4">
+                <Col md="3">
                   <div
-                    className="info info-hover"
-                    style={{
-                      backgroundColor: "rgba(6,57,128,1)",
-                      borderRadius: "10px",
-                      height: "400px"
-                    }}
+                    className="card-benefit"
+                    onMouseEnter={this.handleMoneyEnter}
+                    onMouseLeave={this.handleMoneyLeave}
                   >
-                    <img alt="..." className="bg-blob" src={money} />
-
-                    <h4
-                      className="info-title text-white text-center"
-                      style={font}
+                    <div
+                      className="info card-komoditi"
+                      style={{
+                        minHeight: "400px",
+                        maxWidth: "300px",
+                        borderRadius: "10px",
+                        justifyContent: "center"
+                      }}
                     >
-                      Analyze Performance
-                    </h4>
-                    <p
-                      className="description text-white text-center"
-                      style={font}
-                    >
-                      Sejalan dengan laju inflasi, harga komoditas akan terus
-                      meningkat; para pelaku pasar dapat melindungi harga
-                      tersebut terhadap inflasi melalui Bursa Berjangka.
-                    </p>
+                      {/* <p className="title text-benefit" style={{ fontSize: "1.4rem" }}> */}
+                      {/* <img onMouseEnter style={{ marginRight: "5%" }} />
+                       */}
+                      <div style={{ alignSelf: "center" }}>
+                        <img
+                          src={this.state.money}
+                          style={{ marginTop: "50px" }}
+                        />
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "1.4rem",
+                          fontWeight: "bold",
+                          margin: "30px 0 30px 10px"
+                        }}
+                      >
+                        Biaya Rendah
+                      </div>
+                      <div style={{ marginLeft: "10px" }}>
+                        {/* </p> */}
+                        {/* <p className="text-benefit"> */}
+                        Memungkinkan nasabah untuk memaksimalkan keuntungan
+                        serta menerapkan money management
+                        {/* </p> */}
+                      </div>
+                      <div className="author"></div>
+                    </div>
                   </div>
                 </Col>
-                <Col md="4">
+                <Col md="3">
                   <div
-                    className="info info-hover"
-                    style={{
-                      backgroundColor: "rgba(6,57,128,1)",
-                      borderRadius: "10px",
-                      height: "400px"
-                    }}
+                    className="card-benefit text-benefit"
+                    onMouseEnter={this.handleShieldEnter}
+                    onMouseLeave={this.handleShieldLeave}
                   >
-                    <img alt="..." className="bg-blob" src={shield} />
-                    <h4
-                      className="info-title text-white text-center"
-                      style={font}
+                    <div
+                      className="info card-komoditi"
+                      style={{
+                        minHeight: "400px",
+                        maxWidth: "300px",
+                        borderRadius: "10px",
+                        justifyContent: "center"
+                      }}
                     >
-                      Measure Conversions
-                    </h4>
-                    <p
-                      className="description text-white text-center"
-                      style={font}
-                    >
-                      Di antaranya adalah perkiraan cuaca, faktor ekonomi,
-                      faktor politik, tekanan internasional, dan spekulasi
-                    </p>
+                      <div style={{ alignSelf: "center" }}>
+                        <img
+                          src={this.state.shield}
+                          style={{ marginTop: "50px" }}
+                        />
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "1.4rem",
+                          fontWeight: "bold",
+                          margin: "30px 0 30px 10px"
+                        }}
+                      >
+                        Biaya Rendah
+                      </div>
+                      <div style={{ marginLeft: "10px" }}>
+                        Memungkinkan nasabah untuk memaksimalkan keuntungan
+                        serta menerapkan money management
+                      </div>
+                      <div className="author"></div>
+                    </div>
                   </div>
                 </Col>
               </Row>
             </Container>
           </div>
-          {/* ********* END FEATURES 1 ********* */}
-        </div>{" "}
+        </div>
       </>
     );
   }
 }
 
-export default Features;
+export default Content;
