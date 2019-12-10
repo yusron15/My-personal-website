@@ -63,11 +63,10 @@ class Features extends React.Component {
         <div
           className="cd-section"
           id="features"
-          style={{ backgroundColor: "#FFFFFF" }}
+          style={{ backgroundColor: "#D4D4D4" }}
         >
           {/* ********* FEATURES 3 ********* */}
           <BlurryNavbar />
-          <div className="space-50" />
 
           <div className="features-3">
             <div

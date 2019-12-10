@@ -15,6 +15,7 @@
 
 */
 import React from "react";
+import { slideInDown } from "react-animations";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -36,12 +37,20 @@ import {
 import logo from "../../assets/img/Bitmap.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
+import Radium, { StyleRoot } from "radium";
+
+const stylesAnimation = {
+  slideInDown: {
+    animation: "x 1s",
+    animationName: Radium.keyframes(slideInDown, "bounce")
+  }
+};
 
 class ColorNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      navbarColor: "bg-white",
+      navbarColor: "broken-white",
       marginTop: "50px",
       color: "black"
     };
@@ -74,7 +83,7 @@ class ColorNavbar extends React.Component {
       document.body.scrollTop < 300
     ) {
       this.setState({
-        navbarColor: "bg-white",
+        navbarColor: "broken-white",
         marginTop: "50px",
         color: "black"
       });
@@ -145,7 +154,7 @@ class ColorNavbar extends React.Component {
                     </Link> */}
                 </NavItem>
 
-                <div class="dropdown">
+                <div class="dropdown" style={stylesAnimation.slideInDown}>
                   <button class="dropbtn" style={colorStyle}>
                     Tentang Kami
                   </button>

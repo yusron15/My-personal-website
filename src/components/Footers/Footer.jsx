@@ -61,44 +61,42 @@ class Footers extends React.Component {
                 </Col>
                 <Col md="3">
                   <h5>Tentang Kami</h5>
-                  {/* <ul className="links-vertical"> */}
-                  {/* <li> */}
-                  <a
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                    style={{ color: "white" }}
-                  >
-                    Tentang Topgrowth Futures
-                  </a>
-                  {/* </li> */}
-                  {/* <li> */}
-                  <a
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                    style={{ color: "white" }}
-                  >
-                    Legalitas
-                  </a>
-                  {/* </li> */}
-                  {/* <li> */}
-                  <a
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                    style={{ color: "white" }}
-                  >
-                    Rekening Terpisah
-                  </a>
-                  {/* </li> */}
-                  {/* <li> */}
-                  <a
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                    style={{ color: "white" }}
-                  >
-                    Cabang Kami
-                  </a>
-                  {/* </li> */}
-                  {/* </ul> */}
+                  <p>
+                    <a
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                      style={{ color: "white" }}
+                    >
+                      Tentang Topgrowth Futures
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                      style={{ color: "white" }}
+                    >
+                      Legalitas
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                      style={{ color: "white" }}
+                    >
+                      Rekening Terpisah
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                      style={{ color: "white" }}
+                    >
+                      Cabang Kami
+                    </a>
+                  </p>
                 </Col>
                 <Col md="3">
                   <h5>Layanan</h5>
@@ -117,7 +115,15 @@ class Footers extends React.Component {
                     onClick={e => e.preventDefault()}
                     style={{ color: "white" }}
                   >
-                    Alamat Kantor Sahid Sudirman Center, lantai 40 Jl. Jend
+                    <p>Alamat Kantor</p>
+                    <p> Sahid Sudirman Center, lantai 40</p>
+                    <p>Blok F &/ G</p>
+                    <p>Jakarta 10220 Indonesia</p>
+                    <p>Jakarta 10220 Indonesia</p>
+                    <p>Email: customerservices@topgrowthfutures.com</p>
+                    <p>Tel: 021 2788-9366</p>
+                    <p>Fax: 021 2788-9395</p>
+
                     {/* Sudirman Kav 86 Jakarta 10220 Indonesia Email:
                     customerservices@topgrowthfutures.com Tel: 021 2788-9366
                     Fax: 021 2788-9395 */}

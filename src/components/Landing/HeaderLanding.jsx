@@ -20,6 +20,8 @@ import {
   InputGroupText,
   InputGroup
 } from "reactstrap";
+
+import TextField from "@material-ui/core/TextField";
 // import Carousel from "nuka-carousel";
 // import { Carousel } from "react-responsive-carousel";
 import classnames from "classnames";
@@ -28,6 +30,7 @@ import { Carousel } from "react-bootstrap";
 // import { Carousel } from "react-responsive-carousel";
 import Navbar from "../../components/Navbars/Navbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import CardRegister from "../../components/Register/CardRegister.jsx";
 import HeaaderContent from "./HeaderContent.jsx";
 import image from "../../assets/img/bglanding.png";
 import best17 from "../../assets/img/best2017.png";
@@ -38,159 +41,25 @@ import appstore from "../../assets/img/appstore.png";
 import playstore from "../../assets/img/playstore.png";
 import iphone3 from "../../assets/img/iphone3.png";
 
-const carouselItems = [
-  {
-    content: (
-      <CarouselItem>
-        <Container style={{ paddingTop: 0 }}>
-          <Row>
-            {/* <Navbar /> */}
-            <Col className="mr-auto text-left" lg="5" md="7">
-              <div
-                style={{
-                  fontStyle: "Helvetica Bold",
-                  fontSize: "2rem",
-                  fontWeight: "bold"
-                }}
-
-                // className="title"
-              >
-                TRADING BERSAMA BROKER TERBAIK
-              </div>
-
-              <h6 className="category">
-                Didirikan sejak tahun 2003, saat ini telah berkembang menjadi
-                Perusahaan Pialang Berjangka Terbaik dan Terbesar di Indonesia.
-              </h6>
-              <br />
-              <Button
-                className="btn-round"
-                style={{
-                  margin: "0.3rem",
-                  backgroundColor: "#5420D8"
-                }}
-              >
-                Buat demo Akun
-              </Button>
-              <Button
-                className="btn-round"
-                style={{
-                  margin: "0.3rem",
-                  backgroundColor: "#5420D8"
-                }}
-              >
-                Buat real Akun
-              </Button>
-            </Col>
-            <Col md="5">
-              <Row>
-                <Col>
-                  <img src={best17} />
-                </Col>
-                <Col>
-                  <img src={best18} />
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Container>
-      </CarouselItem>
-    ),
-    altText: "",
-    caption: "",
-    src: "0"
-  },
-  {
-    content: (
-      <CarouselItem>
-        <Container style={{ paddingTop: 0 }}>
-          <Row>
-            {/* <Navbar /> */}
-            <Col className="mr-auto text-left" lg="5" md="7">
-              <div
-                style={{
-                  fontStyle: "Helvetica Bold",
-                  fontSize: "2rem",
-                  fontWeight: "bold"
-                }}
-
-                // className="title"
-              >
-                TRADING BERSAMA BROKER TERBAIK
-              </div>
-
-              <h6 className="category">
-                Didirikan sejak tahun 2003, saat ini telah berkembang menjadi
-                Perusahaan Pialang Berjangka Terbaik dan Terbesar di Indonesia.
-              </h6>
-              <br />
-              <Button
-                className="btn-round"
-                style={{
-                  margin: "0.3rem",
-                  backgroundColor: "#5420D8"
-                }}
-              >
-                Buat demo Akun
-              </Button>
-              <Button
-                className="btn-round"
-                style={{
-                  margin: "0.3rem",
-                  backgroundColor: "#5420D8"
-                }}
-              >
-                Buat real Akun
-              </Button>
-            </Col>
-            <Col md="5">
-              <Row>
-                <Col>
-                  <img src={best17} />
-                </Col>
-                <Col>
-                  <img src={best18} />
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Container>
-      </CarouselItem>
-    ),
-    altText: "",
-    caption: "",
-    src: "0"
-  }
-];
-
 class HeaderLanding extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     activeIndex: 0
-  //   };
-  // }
   render() {
     return (
       <>
-        {/* {carouselItems.map(item => item.content)} */}
         <div className="cd-section" id="headers">
-          {/* ********* HEADER 1 ********* */}
-          {/* <Carousel> */}
-
-          <div
-            className="header-filter"
-            style={{
-              backgroundImage:
-                "url(" + require("assets/img/header-image.png") + ")",
-              backgroundSize: "cover"
-            }}
-          >
+          <div>
             <BlurryNavbar />
             <div className="space-50" />
-            <Row>
-              <Col md="6">
+            <Row
+              className="header-filter"
+              style={{
+                backgroundImage:
+                  "url(" + require("assets/img/header-image.png") + ")",
+                backgroundSize: "cover"
+              }}
+            >
+              <Col md={{ size: 5, offset: 1 }}>
                 <Carousel
+                  indicators={true}
                   controls={false}
                   slide={true}
                   touch={true}
@@ -198,7 +67,7 @@ class HeaderLanding extends React.Component {
                   pauseOnHover={false}
                 >
                   <Carousel.Item>
-                    <div className="page-header">
+                    <div className="page-header minHeight">
                       {/* here */}
                       <Container style={{ paddingTop: 0 }}>
                         <Row>
@@ -213,7 +82,7 @@ class HeaderLanding extends React.Component {
 
                               // className="title"
                             >
-                              TRADING BERSAMA BROKER TERBAIK
+                              Trading Bersama Broker Terbaik
                             </div>
 
                             <h4>
@@ -222,48 +91,6 @@ class HeaderLanding extends React.Component {
                               Terbaik dan Terbesar di Indonesia.
                             </h4>
                             <br />
-                            {/* <Button
-                          className="btn-round"
-                          style={{
-                            margin: "0.3rem",
-                            backgroundColor: "#5420D8"
-                          }}
-                        >
-                          Buat demo Akun
-                        </Button>
-                        <Button
-                          className="btn-round"
-                          style={{
-                            margin: "0.3rem",
-                            backgroundColor: "#5420D8"
-                          }}
-                        >
-                          Buat real Akun
-                        </Button> */}
-                            <Row>
-                              <Col>
-                                <Button
-                                  className="btn-round"
-                                  color="info"
-                                  type="button"
-                                  block
-                                  style={{ height: 50, fontSize: 18 }}
-                                >
-                                  Buat demo Akun
-                                </Button>
-                              </Col>
-                              <Col>
-                                <Button
-                                  className="btn-round"
-                                  color="info"
-                                  type="button"
-                                  block
-                                  style={{ height: 50, fontSize: 18 }}
-                                >
-                                  Buat real Akun
-                                </Button>
-                              </Col>
-                            </Row>
                           </Col>
                           {/* <Col md="5">
                             <Row className="vertical-center">
@@ -280,7 +107,7 @@ class HeaderLanding extends React.Component {
                     </div>
                   </Carousel.Item>
                   <Carousel.Item>
-                    <div className="page-header">
+                    <div className="page-header minHeight">
                       <Container style={{ paddingTop: 0 }}>
                         <Row>
                           {/* <Navbar /> */}
@@ -318,7 +145,7 @@ class HeaderLanding extends React.Component {
                     </div>
                   </Carousel.Item>
                   <Carousel.Item>
-                    <div className="page-header">
+                    <div className="page-header minHeight">
                       <Container style={{ paddingTop: 0 }}>
                         <Row>
                           {/* <Navbar /> */}
@@ -370,167 +197,12 @@ class HeaderLanding extends React.Component {
                   </Carousel.Item>
                 </Carousel>
               </Col>
-              <Col md="6">
-                <Card
-                  className="card-login"
-                  style={{
-                    backgroundColor: "rgba(14,14,14,0.7)",
-                    height: "96%"
-                  }}
-                >
-                  <Form action="" className="form" method="">
-                    <CardHeader>
-                      {/* <CardImg
-                            alt="..."
-                            src={require("assets/img/square1.png")}
-                          /> */}
-                      <CardTitle
-                        style={{
-                          textAlign: "center",
-                          color: "white",
-                          fontSize: "3rem",
-                          marginTop: "10%"
-                        }}
-                      >
-                        register
-                      </CardTitle>
-                    </CardHeader>
-                    <CardBody>
-                      <InputGroup>
-                        <InputGroupAddon addonType="prepend">
-                          <InputGroupText style={{ borderColor: "#FFFFFF" }}>
-                            <i className="tim-icons icon-single-02" />
-                          </InputGroupText>
-                        </InputGroupAddon>
-                        <Input
-                          style={{ borderColor: "#FFFFFF" }}
-                          placeholder="First Name..."
-                          type="text"
-                        />
-                      </InputGroup>
-                      <Row>
-                        <Col md="6">
-                          <label>First name</label>
-                          <InputGroup>
-                            <InputGroupAddon addonType="prepend">
-                              <InputGroupText
-                                style={{ borderColor: "#FFFFFF" }}
-                              >
-                                <i className="tim-icons icon-single-02" />
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <Input
-                              style={{ borderColor: "#FFFFFF" }}
-                              aria-label="First Name..."
-                              placeholder="First Name..."
-                              type="text"
-                            />
-                          </InputGroup>
-                        </Col>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>Last name</label>
-                            <InputGroup>
-                              <InputGroupAddon addonType="prepend">
-                                <InputGroupText
-                                  style={{ borderColor: "#FFFFFF" }}
-                                >
-                                  <i className="tim-icons icon-caps-small" />
-                                </InputGroupText>
-                              </InputGroupAddon>
-                              <Input
-                                style={{ borderColor: "#FFFFFF" }}
-                                aria-label="Last Name..."
-                                placeholder="Last Name..."
-                                type="text"
-                              />
-                            </InputGroup>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col md="6">
-                          <label>First name</label>
-                          <InputGroup>
-                            <InputGroupAddon addonType="prepend">
-                              <InputGroupText
-                                style={{ borderColor: "#FFFFFF" }}
-                              >
-                                <i className="tim-icons icon-single-02" />
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <Input
-                              style={{ borderColor: "#FFFFFF" }}
-                              aria-label="First Name..."
-                              placeholder="First Name..."
-                              type="text"
-                            />
-                          </InputGroup>
-                        </Col>
-                        <Col md="6">
-                          <FormGroup>
-                            <label>Last name</label>
-                            <InputGroup>
-                              <InputGroupAddon addonType="prepend">
-                                <InputGroupText
-                                  style={{ borderColor: "#FFFFFF" }}
-                                >
-                                  <i className="tim-icons icon-caps-small" />
-                                </InputGroupText>
-                              </InputGroupAddon>
-                              <Input
-                                style={{ borderColor: "#FFFFFF" }}
-                                aria-label="Last Name..."
-                                placeholder="Last Name..."
-                                type="text"
-                              />
-                            </InputGroup>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </CardBody>
-                    <CardFooter className="text-center">
-                      <Button
-                        center
-                        className="btn-round center"
-                        color="info"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                        size="lg"
-                        style={{
-                          width: "60%",
-                          marginTop: "12%"
-                        }}
-                      >
-                        Get Started
-                      </Button>
-                    </CardFooter>
-                    <div className="pull-left ml-3 mb-3">
-                      <h6>
-                        <a
-                          className="link footer-link"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                          style={{ color: "white" }}
-                        >
-                          Create Account
-                        </a>
-                      </h6>
-                    </div>
-                    <div className="pull-right mr-3 mb-3">
-                      <h6>
-                        <a
-                          className="link footer-link"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                          style={{ color: "white" }}
-                        >
-                          Need Help?
-                        </a>
-                      </h6>
-                    </div>
-                  </Form>
-                </Card>
+              <Col
+                // md=""
+                md={{ size: 5, offset: 1 }}
+                // style={{ padding: "2% 5% 5% 0" }}
+              >
+                <CardRegister />
               </Col>
             </Row>
           </div>

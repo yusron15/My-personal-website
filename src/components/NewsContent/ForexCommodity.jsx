@@ -44,7 +44,9 @@ class ForexCommodity extends React.Component {
                 image={fc1}
                 title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
                 posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
-                description="Cina ingin membuat perjanjian perdagangan awal dengan Amerika Serikat dan berusaha menghindari perang dagang, tetapi tidak takut untuk membalas jika perlu, kata Presiden..."
+                description="Presiden Bank Sentral Eropa Christine Lagarde menyerukan bauran kebijakan baru. Ia mengatakan investasi publik harus ditingkatkan untuk meringankan beban pada stimulus moneter dan memastikan kawasan itu dapat berkembang di dunia yang tidak pasti.
+
+                Dalam pidatonya yang pertama, tiga minggu setelah menjabat, kepala ECB yang baru mengatakan lembaganya akan terus mendukung ekonomi zona euro. Tetapi dia juga mengatakan kebijakan fiskal adalah elemen kunci untuk mengatasi dua tantangan utama yang dihadapi blok euro: perubahan sifat perdagangan global, dan penurunan pertumbuhan domestik. Beberapa menit setelah dia selesai, data baru menunjukkan pelambatan saat ini memburuk."
               />
 
               <Content

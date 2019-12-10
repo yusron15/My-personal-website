@@ -59,8 +59,9 @@
 }
 
 .bg-white{
-  background-color: "#D4D4D4";
+  background-color: #D4D4D4;
 }
+
 
 .background-black{
   background-color: "black";
@@ -239,8 +240,8 @@ hr.grey {
   transition: all .5s ease-out;
   color:black;
   background-color: transparent;
-  min-height: "270px";
-  min-width: "200px";
+  /* min-height: "270px";
+  min-width: "200px"; */
   border-radius: "10px";
   justify-content: "center";
   border: 0.5px solid;
@@ -261,8 +262,8 @@ hr.grey {
  .card-komoditi:hover {
   color:white;
   background-color: #2F5D9E;
-  min-height: "270px";
-  min-width: "200px";
+  /* min-height: "270px"; */
+  min-width: "100%";
   border-radius: "10px";
   justify-content: "center";
   /* transform: scale(1.1);  */
@@ -271,7 +272,11 @@ hr.grey {
 .card-benefit:hover {
  background-color: white;
  border-radius: 10px;
- color:black
+ color:black;
+}
+
+.broken-white {
+  background-color: #D4D4D4;
 }
 
 .icon-biaya {
@@ -283,4 +288,38 @@ hr.grey {
 
 .helvetica {
   font-family: "Helvetica reguler";
+}
+
+
+.minHeight {
+  min-height: 86vh;
+}
+
+.navbar-bottom {
+  z-index: 99;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.navbar-bottom a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar-bottom a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar-bottom a.active {
+  background-color: #4CAF50;
+  color: white;
 }

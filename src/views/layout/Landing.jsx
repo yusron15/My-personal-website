@@ -11,6 +11,7 @@ import Pricing from "../../components/Landing/Pricing.jsx";
 import Legality from "../../components/Landing/Legality.jsx";
 import Footer from "../../components/Footers/Footer.jsx";
 import NewsLetter from "../../components/NewsLetter/NewsLetter.jsx";
+import BottomNavbar from "../../components/Navbars/BottomNavbar.jsx";
 
 class Landing extends React.Component {
   state = {};
@@ -32,6 +33,7 @@ class Landing extends React.Component {
         <Legality />
         <NewsLetter />
         <Footer />
+        <BottomNavbar />
       </>
     );
   }

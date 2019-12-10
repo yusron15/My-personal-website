@@ -37,7 +37,7 @@ class Blogs extends React.Component {
   render() {
     return (
       <>
-        <div className="cd-section black-news" id="blogs">
+        <div className="cd-section bg-white" id="blogs">
           {/* ********* END BLOGS 5 ********* */}
           <BlurryNavbar />
           <ColoredNavbar />
@@ -46,12 +46,12 @@ class Blogs extends React.Component {
               <Row>
                 <Col className="ml-auto mr-auto" md="10">
                   <h2
-                    className="title text-center"
-                    // style={{ paddingTop: "5rem" }}
+                    className="title text-center font-black"
+                    style={{ paddingTop: "2rem" }}
                   >
                     Karir
                   </h2>
-                  <p className="description font-white">
+                  <p className="description font-black">
                     Kami sedang mencari posisi dibawah ini. Apabila lowongan
                     dibawah ini sesuai dengan <br /> keahlian anda, silakan
                     kirim resume anda ke{" "}

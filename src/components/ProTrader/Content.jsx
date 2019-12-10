@@ -219,18 +219,19 @@ class Content extends React.Component {
           {/* ********* TEAM 1 ********* */}
           <BlurryNavbar />
           <ColoredNavbar />
+          <div className="space-50" />
           <div className="team-1">
             <Row>
               <Col className="ml-auto mr-auto text-center" md="9">
-                <h1 className="title">Pro | Trader</h1>
+                <h1 className="title">Pro I Trader</h1>
               </Col>
             </Row>
           </div>
-          <div className="team-1" style={{ backgroundColor: "white" }}>
+          <div className="team-1" style={{ backgroundColor: "#D4D4D4" }}>
             <Container>
               <Row>
                 <Col md="12">
-                  <div className="description" style={textDesc}>
+                  <div className="description font-black" style={textDesc}>
                     Online Trading di pasar keuangan adalah sebuah keharusan.
                     Bertrading secara online merupakan pengalaman tersendiri
                     karena transaksi dapat dilakukan dengan mudah dan cepat.
@@ -240,7 +241,7 @@ class Content extends React.Component {
                   </div>
                 </Col>
                 <Col md="12">
-                  <div className="description" style={textDesc}>
+                  <div className="description font-black" style={textDesc}>
                     Topgrowth adalah salah satu yang terdepan dalam
                     mengembangkan teknologi online trading yang canggih.
                     Platform Online Trading Topgrowth disebut Pro-iTrading.

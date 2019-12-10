@@ -75,7 +75,7 @@ class Headers extends React.Component {
             KOMODITI
           </div>
         </div>
-        <div className="header header-4" style={{ backgroundColor: "#FFFFFF" }}>
+        <div className="header header-4" style={{ backgroundColor: "#D4D4D4" }}>
           {/* <ColoredNavbar /> */}
           <div className="header-wrapper">
             <div

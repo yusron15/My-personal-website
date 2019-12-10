@@ -13,7 +13,9 @@
     "nouislider": "13.1.5",
     "nuka-carousel": "^4.5.13",
     "prop-types": "^15.7.2",
+    "radium": "^0.26.0",
     "react": "^16.12.0",
+    "react-animations": "^1.0.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-bootstrap-switch": "15.5.3",
     "react-chartjs-2": "2.7.6",
@@ -27,10 +29,12 @@
     "react-router-dom": "5.0.0",
     "react-scripts": "3.0.1",
     "react-select": "2.4.3",
+    "react-show-more-text": "^1.2.3",
     "react-slick": "0.24.0",
     "react-spring": "^8.0.27",
     "react-tagsinput": "3.19.0",
     "reactstrap": "8.0.0",
+    "read-more-react": "^1.0.9",
     "redux": "^4.0.4"
   },
   "devDependencies": {

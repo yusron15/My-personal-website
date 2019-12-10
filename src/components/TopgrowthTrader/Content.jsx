@@ -226,11 +226,11 @@ class Content extends React.Component {
               </Col>
             </Row>
           </div>
-          <div className="team-1" style={{ backgroundColor: "white" }}>
+          <div className="team-1" style={{ backgroundColor: "#D4D4D4" }}>
             <Container>
               <Row>
                 <Col md="12">
-                  <div className="description" style={textDesc}>
+                  <div className="description font-black" style={textDesc}>
                     Metatrader dikenal sebagai platform yang paling efisien dan
                     paling banyak digunakan oleh para trader. Topgrowth Futures
                     memberikan Anda akses untuk tetap terhubung dengan market
@@ -239,7 +239,7 @@ class Content extends React.Component {
                   </div>
                 </Col>
                 <Col md="12">
-                  <div className="description" style={textDesc}>
+                  <div className="description font-black" style={textDesc}>
                     Topgrowth adalah salah satu yang terdepan dalam
                     mengembangkan teknologi online trading yang canggih.
                     Platform Online Trading Topgrowth disebut Pro-iTrading.

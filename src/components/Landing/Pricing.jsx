@@ -57,7 +57,7 @@ class Pricing extends React.Component {
           <div
             className="pricing-3"
             id="pricing-3"
-            style={{ backgroundColor: "#FFFFFF" }}
+            style={{ backgroundColor: "#D4D4D4" }}
           >
             <Container>
               <Row>

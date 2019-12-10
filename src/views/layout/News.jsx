@@ -88,7 +88,7 @@ class NewsPage extends React.Component {
                   this.toggle("1");
                 }}
               >
-                News Stock Index
+                Stock Index
               </div>
             </NavItem>
             <NavItem clssName="black-newsletter">
@@ -107,7 +107,7 @@ class NewsPage extends React.Component {
                   this.toggle("2");
                 }}
               >
-                News Forex & Commodity
+                Forex & Commodity
               </div>
             </NavItem>
             <NavItem clssName="black-newsletter">
@@ -126,7 +126,7 @@ class NewsPage extends React.Component {
                   this.toggle("3");
                 }}
               >
-                Stock Index
+                Economic Calendar Inside
               </div>
             </NavItem>
             <NavItem clssName="black-newsletter">
@@ -145,10 +145,10 @@ class NewsPage extends React.Component {
                   this.toggle("4");
                 }}
               >
-                Forex Commodity
+                Economic Calendar
               </div>
             </NavItem>
-            <NavItem clssName="black-newsletter">
+            {/* <NavItem clssName="black-newsletter">
               <div
                 style={{
                   backgroundColor: "#1D1E1F",
@@ -186,25 +186,25 @@ class NewsPage extends React.Component {
               >
                 Economic Calendar
               </div>
-            </NavItem>
+            </NavItem> */}
           </Nav>
           <TabContent activeTab={"project" + this.state.activeTab}>
-            <TabPane tabId="project1">
+            {/* <TabPane tabId="project1">
               <NewsStockIndex />
             </TabPane>
             <TabPane tabId="project2">
               <NewsForexCommodity />
-            </TabPane>
-            <TabPane tabId="project3">
+            </TabPane> */}
+            <TabPane tabId="project1">
               <StockIndex />
             </TabPane>
-            <TabPane tabId="project4">
+            <TabPane tabId="project2">
               <ForexCommodity />
             </TabPane>
-            <TabPane tabId="project5">
+            <TabPane tabId="project3">
               <EconomicCalendarInside />
             </TabPane>
-            <TabPane tabId="project6">
+            <TabPane tabId="project4">
               <EconomicCalendar />
             </TabPane>
           </TabContent>

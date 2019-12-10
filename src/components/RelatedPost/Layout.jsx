@@ -30,7 +30,8 @@ import {
 } from "reactstrap";
 
 import "../../assets/css/main.css";
-
+import ShowMoreText from "react-show-more-text";
+import ReadMoreReact from "read-more-react";
 const textTitle = {
   textAlign: "center",
   fontStyle: "Helvetica Bold",
@@ -73,7 +74,25 @@ class Content extends React.Component {
                   <div style={textContent}>
                     <div className="title-post">{title}</div>
                     <div className="text-posted">{posted}</div>
-                    <p>{description}</p>{" "}
+                    <p>
+                      {" "}
+                      <ShowMoreText
+                        style={{ color: "blue" }}
+                        lines={3}
+                        more="Show more"
+                        less="Show less"
+                        anchorClass=""
+                        onClick={this.executeOnClick}
+                        expanded={false}
+                      >
+                        {description}
+                      </ShowMoreText>
+                      {/* <ReadMoreReact
+                        style={{ marginTop: "50px" }}
+                        text={description}
+                        readMoreText="click here to read more"
+                      /> */}
+                    </p>
                   </div>
                 </Col>
               </Row>

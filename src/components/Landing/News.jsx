@@ -271,7 +271,7 @@ class News extends React.Component {
         <div className="cd-section" id="testimonials">
           <div
             className="testimonials-4"
-            style={{ backgroundColor: "#FFFFFF", padding: "5rem 0 0 0 " }}
+            style={{ backgroundColor: "#D4D4D4", padding: "5rem 0 0 0 " }}
           >
             {/* <ColoredNavbar /> */}
             <Container>

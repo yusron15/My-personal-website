@@ -57,7 +57,7 @@ class HeaderAboutUs extends React.Component {
           <div
             className="header header-6 image-overlay"
             // style={{ backgroundColor: "#1D1E1F" }}
-            style={{ backgroundColor: "#FFFFFF" }}
+            style={{ backgroundColor: "#D4D4D4" }}
           >
             <BlurryNavbar />
             <ColoredNavbar />

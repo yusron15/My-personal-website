@@ -256,7 +256,7 @@ class Content extends React.Component {
           </div>
           <div
             className="team-1"
-            style={{ backgroundColor: "white", height: "70vh" }}
+            style={{ backgroundColor: "#D4D4D4", height: "70vh" }}
           >
             <Container style={{ minHeight: "45vh" }}>
               <Row>

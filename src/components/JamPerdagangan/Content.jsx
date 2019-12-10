@@ -39,7 +39,7 @@ class Tables extends React.Component {
       <>
         <div
           className="cd-section "
-          style={{ backgroundColor: "#FFFFFF" }}
+          style={{ backgroundColor: "#D4D4D4" }}
           id="tables"
         >
           {/* ********* Table 2 ********* */}

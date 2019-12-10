@@ -60,19 +60,23 @@ class Projects extends React.Component {
     content: [
       {
         bappebti:
-          "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus montes, nascetur ridiculus mus.Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus montes, nascetur ridiculus mus.Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus montes, nascetur ridiculus mus."
+          "BAPPEBTI (Badan Pengawas Perdagangan Berjangka Komoditi) merupakan institusi pemerintah yang berada di bawah naungan Kementerian Perdagangan Republik Indonesia dan bertugas untuk menerbitkan izin usaha baik bagi perusahaan maupun perorangan, membuat peraturan dan tata tertib, melakukan inspeksi dan kontrol terhadap seluruh aktivitas dalam industri pialang berjangka. PT. Topgrowth Futures beroperasi berdasarkan izin dan berada di bawah pengawasan BAPPEBTI, dengan Nomor Izin: No. 300/BAPPEBTI/SI/III/2004."
       },
       {
-        jfx: "jfx"
+        jfx:
+          "PT. Bursa Berjangka Jakarta (BBJ) merupakan bursa berjangka komoditi pertama di Indonesia yang bertugas menyediakan fasilitas bagi anggota untuk melaksanakan transaksi kontrak-kontrak berjangka. BBJ didirikan pada tanggal 19 Agustus 1999 di Jakarta oleh 29 perusahaan berbentuk Perseroan Terbatas (PT) sesuai PP No 9/99, dan telah memulai perdagangan perdana sejak 15 Desember 2000. PT. Topgrowth Futures merupakan perusahaan pialang berjangka dengan nomor keanggotaan BBJ: SPAB-059/BBJ/01/04."
       },
       {
-        kbi: "kbi"
+        kbi:
+          "PT. Kliring Berjangka Indonesia (KBI) adalah perusahaan Badan Usaha Milik Pemerintah (BUMN) yang berfungsi sebagai lembaga Kliring dan Penjaminan berdasarkan keputusan BAPPEBTI dengan nomor No.128/BAPPEBTI/IX/2001. Seluruh penyelesaian transaksi kontrak berjangka yang didaftarkan oleh anggota kliring dilaksanakan oleh KBI. Selain sebagai pialang anggota bursa, PT. Topgrowth Futures juga merupakan anggota dari Kliring Berjangka Indonesia dengan nomor: 21/AK-KBI/III/2004"
       },
       {
-        ich: "ich"
+        ich:
+          "PT. Kliring Berjangka Indonesia (KBI) adalah perusahaan Badan Usaha Milik Pemerintah (BUMN) yang berfungsi sebagai lembaga Kliring dan Penjaminan berdasarkan keputusan BAPPEBTI dengan nomor No.128/BAPPEBTI/IX/2001. Seluruh penyelesaian transaksi kontrak berjangka yang didaftarkan oleh anggota kliring dilaksanakan oleh KBI. Selain sebagai pialang anggota bursa, PT. Topgrowth Futures juga merupakan anggota dari Kliring Berjangka Indonesia dengan nomor: 21/AK-KBI/III/2004"
       },
       {
-        icdx: "icdx"
+        icdx:
+          "PT. Bursa Komoditi dan Derivatif Indonesia merupakan bursa berjangka kedua berdiri di Indonesia dan memiliki fungsi menjadi penyedia sarana bagi anggotanya untuk melaksanakan transaksi kontrak berjangka. BKDI mendapatkan izin sebagai bursa dengan No. 26/BAPPEBTI/KP/6/2009, dan telah memulai perdagangan perdana sejak 30 November 2009. PT. Topgrowth Futures adalah perusahaan pialang berjangka anggota dari Bursa Komoditi dan Derivatif Indonesia (BKDI) dengan nomor: 047/SPKB/ICDX/Dir/IX/2010."
       }
     ]
   };
@@ -89,7 +93,10 @@ class Projects extends React.Component {
       <>
         <div className="cd-section" id="projects">
           {/* ********* PROJECTS 2 ********* */}
-          <div className="project-raised bg-white">
+          <div
+            className="project-raised"
+            style={{ backgroundColor: "#D4D4D4" }}
+          >
             <DarkNavbar />
             <Container style={{ height: "70vh" }}>
               <Row>
@@ -105,35 +112,48 @@ class Projects extends React.Component {
               >
                 <TabPane tabId="project1" style={{ height: "200px" }}>
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
-                    <p className="description mb-5">
+                    <h2 className="title font-black">BAPPEBTI</h2>
+                    <p className="description mb-5 font-black">
                       {this.state.content[0].bappebti}
                     </p>
                   </Col>
                 </TabPane>
                 <TabPane tabId="project2" style={{ height: "200px" }}>
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
-                    <p className="description mb-5">
+                    <p className="description mb-5 font-black">
+                      <h2 className="title font-black">
+                        Bursa Berjangka Jakarta ( BBJ )
+                      </h2>
                       {this.state.content[1].jfx}
                     </p>
                   </Col>
                 </TabPane>
                 <TabPane tabId="project3" style={{ height: "200px" }}>
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
-                    <p className="description mb-5">
+                    <p className="description mb-5 font-black">
+                      <h2 className="title font-black">
+                        Kliring Berjangka Indonesia ( KBI )
+                      </h2>
                       {this.state.content[2].kbi}
                     </p>
                   </Col>
                 </TabPane>
                 <TabPane tabId="project4" style={{ height: "200px" }}>
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
-                    <p className="description mb-5">
+                    <h2 className="title font-black">
+                      ICH (Indonesia Clearing House)
+                    </h2>
+                    <p className="description mb-5 font-black">
                       {this.state.content[3].ich}
                     </p>
                   </Col>
                 </TabPane>
                 <TabPane tabId="project5" style={{ height: "200px" }}>
                   <Col className="ml-auto mr-auto text-center mt-4" md="8">
-                    <p className="description mb-5">
+                    <h2 className="title font-black">
+                      Bursa Komoditi dan Derivatif Indonesia (BKDI)/ (ICDX)
+                    </h2>
+                    <p className="description mb-5 font-black">
                       {this.state.content[4].icdx}
                     </p>
                   </Col>

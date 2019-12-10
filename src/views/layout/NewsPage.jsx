@@ -93,7 +93,7 @@ class NewsPage extends React.Component {
                 Home
               </div>
             </NavItem>
-            <NavItem clssName="black-newsletter">
+            {/* <NavItem clssName="black-newsletter">
               <div
                 style={{
                   backgroundColor: "#1D1E1F",
@@ -130,6 +130,44 @@ class NewsPage extends React.Component {
               >
                 News Forex & Commodity
               </div>
+            </NavItem> */}
+            <NavItem clssName="black-newsletter">
+              <div
+                style={{
+                  backgroundColor: "#1D1E1F",
+                  margin: "0 15px 0 15px",
+                  cursor: "pointer",
+                  color: "#B3B3B3",
+                  ...(this.state.activeTab === "2"
+                    ? { color: "#B3B3B3" }
+                    : { color: "#585858" })
+                }}
+                className={this.state.activeTab === "2" ? "active" : ""}
+                onClick={() => {
+                  this.toggle("2");
+                }}
+              >
+                Stock Index
+              </div>
+            </NavItem>
+            <NavItem clssName="black-newsletter">
+              <div
+                style={{
+                  backgroundColor: "#1D1E1F",
+                  margin: "0 15px 0 15px",
+                  cursor: "pointer",
+                  color: "#B3B3B3",
+                  ...(this.state.activeTab === "3"
+                    ? { color: "#B3B3B3" }
+                    : { color: "#585858" })
+                }}
+                className={this.state.activeTab === "3" ? "active" : ""}
+                onClick={() => {
+                  this.toggle("3");
+                }}
+              >
+                Forex Commodity
+              </div>
             </NavItem>
             <NavItem clssName="black-newsletter">
               <div
@@ -147,7 +185,7 @@ class NewsPage extends React.Component {
                   this.toggle("4");
                 }}
               >
-                Stock Index
+                Economic Calendar Inside
               </div>
             </NavItem>
             <NavItem clssName="black-newsletter">
@@ -161,48 +199,10 @@ class NewsPage extends React.Component {
                     ? { color: "#B3B3B3" }
                     : { color: "#585858" })
                 }}
+                color={this.state.activeTab === "5" ? "#B3B3B3" : "#585858"}
                 className={this.state.activeTab === "5" ? "active" : ""}
                 onClick={() => {
                   this.toggle("5");
-                }}
-              >
-                Forex Commodity
-              </div>
-            </NavItem>
-            <NavItem clssName="black-newsletter">
-              <div
-                style={{
-                  backgroundColor: "#1D1E1F",
-                  margin: "0 15px 0 15px",
-                  cursor: "pointer",
-                  color: "#B3B3B3",
-                  ...(this.state.activeTab === "6"
-                    ? { color: "#B3B3B3" }
-                    : { color: "#585858" })
-                }}
-                className={this.state.activeTab === "6" ? "active" : ""}
-                onClick={() => {
-                  this.toggle("6");
-                }}
-              >
-                Economic Calendar Inside
-              </div>
-            </NavItem>
-            <NavItem clssName="black-newsletter">
-              <div
-                style={{
-                  backgroundColor: "#1D1E1F",
-                  margin: "0 15px 0 15px",
-                  cursor: "pointer",
-                  color: "#B3B3B3",
-                  ...(this.state.activeTab === "7"
-                    ? { color: "#B3B3B3" }
-                    : { color: "#585858" })
-                }}
-                color={this.state.activeTab === "7" ? "#B3B3B3" : "#585858"}
-                className={this.state.activeTab === "7" ? "active" : ""}
-                onClick={() => {
-                  this.toggle("7");
                 }}
               >
                 Economic Calendar
@@ -213,22 +213,22 @@ class NewsPage extends React.Component {
             <TabPane tabId="project1">
               <Content />
             </TabPane>
-            <TabPane tabId="project2">
+            {/* <TabPane tabId="project2">
               <NewsStockIndex />
             </TabPane>
             <TabPane tabId="project3">
               <NewsForexCommodity />
-            </TabPane>
-            <TabPane tabId="project4">
+            </TabPane> */}
+            <TabPane tabId="project2">
               <StockIndex />
             </TabPane>
-            <TabPane tabId="project5">
+            <TabPane tabId="project3">
               <ForexCommodity />
             </TabPane>
-            <TabPane tabId="project6">
+            <TabPane tabId="project4">
               <EconomicCalendarInside />
             </TabPane>
-            <TabPane tabId="project7">
+            <TabPane tabId="project5">
               <EconomicCalendar />
             </TabPane>
           </TabContent>

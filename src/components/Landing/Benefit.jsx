@@ -31,7 +31,8 @@ import {
   CarouselItem,
   CarouselIndicators
 } from "reactstrap";
-
+import { fadeInUp } from "react-animations";
+import Radium, { StyleRoot } from "radium";
 // images
 import Benefit from "../../assets/img/benefit.png";
 import nextButton from "../../assets/img/nextbutton.png";
@@ -46,6 +47,13 @@ import support from "../../assets/img/support.png";
 import "../../assets/css/main.css";
 
 // core components
+
+const styles = {
+  fadeInUp: {
+    animation: "x 1s",
+    animationName: Radium.keyframes(fadeInUp, "fadeInUp")
+  }
+};
 
 const PrevButton = props => {
   return (
@@ -239,6 +247,7 @@ class Testimonials extends React.Component {
                   >
                     <div
                       className="info text-left"
+                      // style={styles.fadeInUp}
                       style={{
                         backgroundColor: "rgba(112, 112, 112, 0.19)",
                         minHeight: "270px",
@@ -263,11 +272,8 @@ class Testimonials extends React.Component {
                         Biaya Rendah
                       </div>
                       <div style={{ marginLeft: "10px" }}>
-                        {/* </p> */}
-                        {/* <p className="text-benefit"> */}
                         Memungkinkan nasabah untuk memaksimalkan keuntungan
                         serta menerapkan money management
-                        {/* </p> */}
                       </div>
                       <div className="author"></div>
                     </div>

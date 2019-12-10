@@ -16,6 +16,8 @@
 */
 import React from "react";
 
+import ReadMoreReact from "read-more-react";
+
 import NewsLetter from "../NewsLetter/NewsLetter";
 import RelatedPost from "../RelatedPost/Content";
 import Content from "../RelatedPost/Layout";
@@ -44,7 +46,15 @@ class StockIndex extends React.Component {
                 image={news1}
                 title="Pasar Saham Asia Tunggu Komentar Terkait Trade War"
                 posted="Posted by Ronald Pardede | Jum’at 22 November 2019 | 0 comments | 3 views"
-                description="Pasar Saham Asia membuat kenaikan pada hari Senin karena investor bersiap di minggu ini untuk kemungkinan komentar yang saling bertentangan mengenai perang perdagangan Ch..."
+                description="Pasar Saham Asia membuat kenaikan pada hari Senin karena investor bersiap di minggu ini untuk kemungkinan komentar yang saling bertentangan mengenai perang perdagangan China-AS, sementara kinerja yang unggul dari data ekonomi AS baru-baru ini membuat dolar menguat terhadap rekan-rekannya.
+
+                Indeks MSCI dari saham Asia Pasifik di luar Jepang melambung 0,26%, setelah kehilangan 0,4% minggu lalu.
+                
+                Nikkei Jepang menguat 0,8% di awal perdagangan, sementara saham Australia naik 0,5%. Kontrak berjangka E-Mini untuk S&P 500 bertambah 0,2%.
+                
+                Pada hari Sabtu, penasihat keamanan nasional AS Robert O’Brien mengatakan perjanjian perdagangan awal dengan China masih mungkin dilakukan pada akhir tahun ini, tetapi memperingatkan Washington tidak akan menutup mata terhadap apa yang terjadi di Hong Kong.
+                
+                Komentar itu menambah kekhawatiran bahwa tindakan keras China terhadap protes anti-pemerintah di Hong Kong dapat semakin memperumit pembicaraan."
               />
 
               <Content

@@ -315,7 +315,7 @@ class Content extends React.Component {
         <div
           className="cd-section"
           id="teams"
-          style={{ backgroundColor: "#FFFFFF" }}
+          style={{ backgroundColor: "#D4D4D4" }}
         >
           <div className="team-1">
             <Container>

@@ -52,7 +52,7 @@ class Content extends React.Component {
           <div
             className="testimonials-4"
             style={{
-              backgroundColor: "#FFFFFF",
+              backgroundColor: "#D4D4D4",
               backgroundSize: "cover",
               paddingTop: 0
             }}
@@ -61,7 +61,7 @@ class Content extends React.Component {
               <Row md="12" className="justify-content-center">
                 <Col md="3">
                   <div
-                    className="card-benefit "
+                    // className="card-benefit "
                     onMouseEnter={this.handleIncreaseEnter}
                     onMouseLeave={this.handleIncreaseLeave}
                   >
@@ -89,7 +89,7 @@ class Content extends React.Component {
                       >
                         Biaya Rendah
                       </div>
-                      <div style={{ marginLeft: "50px" }}>
+                      <div>
                         {/* </p> */}
                         {/* <p className="text-benefit"> */}
                         Memungkinkan nasabah untuk memaksimalkan keuntungan
@@ -102,7 +102,6 @@ class Content extends React.Component {
                 </Col>
                 <Col md="3">
                   <div
-                    className="card-benefit"
                     onMouseEnter={this.handleMoneyEnter}
                     onMouseLeave={this.handleMoneyLeave}
                   >
@@ -146,7 +145,6 @@ class Content extends React.Component {
                 </Col>
                 <Col md="3">
                   <div
-                    className="card-benefit text-benefit"
                     onMouseEnter={this.handleShieldEnter}
                     onMouseLeave={this.handleShieldLeave}
                   >
@@ -185,6 +183,70 @@ class Content extends React.Component {
               </Row>
             </Container>
           </div>
+        </div>
+        <div
+          className="section section-footers"
+          style={{ backgroundColor: "#1D1E1F" }}
+        >
+          {/* ********* BIG WHITE FOOTER V2 ********* */}
+          {/* <footer className="footer footer-white footer-big"> */}
+          <Container>
+            <div className="content">
+              <h2>
+                <b>Keuntungan Bertransaksi Kontrak Berjangka</b>
+              </h2>
+              <Row>
+                <Col md="4">
+                  <p>
+                    <b>MARGIN/ LEVERAGE</b>
+                  </p>
+                  <p>
+                    {" "}
+                    Semua kontrak berjangka di perdagangkan dengan margin Margin
+                    ranges 2%-10%
+                  </p>
+                  <p>Contoh :</p>
+                  <p>Kontrak : GOLDGR</p>
+                  <p>Ukuran Kontrak : 1 Lot = 100 gram</p>
+                  <p>Misalnya harga emas adalahRp. 495.000.</p>
+                  <p>
+                    Nilai dari 1 Lot GOLDGR = 100 gram x Rp. 495.000 = Rp.
+                    49.500.000
+                  </p>
+                  <p>
+                    Margin per lot 4% = 4% x Rp. 49.500.000 = Rp. 1.980.000,
+                  </p>
+                  <p>dibulatkan menjadi Rp 2.000.000,-</p>
+                </Col>
+                <Col md="4">
+                  <p>
+                    <b>2WAYS OPPORTUNITY</b>
+                  </p>
+                  <p>
+                    BUY position – buying a contract (Investor menginginkan
+                    harga terus meningkat
+                  </p>
+                  <p>
+                    SHORT position — selling a contract (Investor menginginkan
+                    harga terus menurun)
+                  </p>
+                </Col>
+                <Col md="4">
+                  <p>
+                    <b> LINDUNG NILAI (HEDGING)</b>
+                  </p>
+                  <p>
+                    Memberi kesempatan pada produsen untuk melakukan lindung
+                    nilai, sehingga tidak perlu menjual saat harga rendah.
+                    Komoditas bisa menjadi pilihan lindung nilai asset lainnya
+                    pada saat inflasi.
+                  </p>
+                </Col>
+              </Row>
+            </div>
+          </Container>
+          {/* </footer> */}
+          {/* ********* END BIG WHITE FOOTER v2 ********* */}
         </div>
       </>
     );

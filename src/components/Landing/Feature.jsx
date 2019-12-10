@@ -30,7 +30,7 @@ class Features extends React.Component {
       <>
         <div className="cd-section" id="features">
           {/* ********* FEATURES 3 ********* */}
-          <div className="features-3" style={{ backgroundColor: "white" }}>
+          <div className="features-3" style={{ backgroundColor: "#D4D4D4" }}>
             <Container fluid>
               <Row>
                 <Col className="mr-auto ml-auto" md="9">
@@ -143,13 +143,6 @@ class Features extends React.Component {
                         </div>
                       </div>
                     </Col>
-                    {/* </Col> */}
-
-                    {/* <Col> */}
-                    {/* <Col>
-                    <img src={laptop} />
-                  </Col> */}
-                    {/* </Col> */}
                   </Row>
                 </Col>
                 <Col md="3" style={{ paddingRight: 0, paddingTop: "50px" }}>
@@ -159,67 +152,6 @@ class Features extends React.Component {
                   />
                 </Col>
               </Row>
-              {/* <Row>
-                <Col className="ml-auto" md="5">
-                  <div className="info info-horizontal">
-                    <div className="icon icon-danger">
-                      <img
-                        alt="..."
-                        className="bg-blob"
-                        src={require("assets/img/feature-blob/danger.png")}
-                      />
-                      <i className="tim-icons icon-chart-bar-32" />
-                    </div>
-                    <div className="description">
-                      <h3 className="info-title" style={{color:"black"}}>Foreign Exchange</h3>
-                      <p>
-                      Alternatif investasi di saham perdagangan yang bisa meminimalkan risiko fluktuasi harga.
-                      </p>
-                      <Button
-                        className="btn-link"
-                        color="info"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                      >
-                        Explore now{" "}
-                        <i className="tim-icons icon-minimal-right" />
-                      </Button>
-                    </div>
-                  </div>
-                </Col>
-                <Col className="mr-auto" md="5">
-                  <div className="info info-horizontal">
-                    <div className="icon icon-info">
-                      <img
-                        alt="..."
-                        className="bg-blob"
-                        src={require("assets/img/feature-blob/info.png")}
-                      />
-                      <i className="tim-icons icon-paper" />
-                    </div>
-                    <div className="description">
-                      <h3 className="info-title" style={{color:"black"}}>
-                        Komoditi{" "}
-                        <Badge color="info" pill>
-                          v2.0
-                        </Badge>
-                      </h3>
-                      <p>
-                      Komoditi adalah subjek kontrak berjangka yang diperdagangkan di Bursa Berjangka.
-                      </p>
-                      <Button
-                        className="btn-link"
-                        color="info"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                      >
-                        Explore now{" "}
-                        <i className="tim-icons icon-minimal-right" />
-                      </Button>
-                    </div>
-                  </div>
-                </Col>
-              </Row> */}
             </Container>
           </div>
           {/* ********* END FEATURES 3 ********* */}

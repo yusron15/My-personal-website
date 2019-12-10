@@ -259,7 +259,7 @@ class News extends React.Component {
         <div
           className="cd-section"
           id="testimonials"
-          style={{ backgroundColor: "#FFFFFF" }}
+          style={{ backgroundColor: "#D4D4D4" }}
         >
           <BlurryNavbar />
 
