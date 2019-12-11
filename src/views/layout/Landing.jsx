@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbars/Navbar.jsx";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import HeaderLanding from "../../components/Landing/HeaderLanding.jsx";
+import BreakingNews from "../../components/Landing/BreakingNews.jsx";
 import News from "../../components/Landing/News.jsx";
 import NewsInverted from "../../components/Landing/NewsInverted.jsx";
 import Feature from "../../components/Landing/Feature.jsx";
@@ -25,8 +26,9 @@ class Landing extends React.Component {
         {/* <BlurryNavbar /> */}
         <ColoredNavbar />
         <HeaderLanding />
+        <BreakingNews />
         <News />
-        <NewsInverted />
+        {/* <NewsInverted /> */}
         <Feature />
         <Benefit />
         <Pricing />

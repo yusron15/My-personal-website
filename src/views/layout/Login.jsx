@@ -37,12 +37,20 @@ import {
   Row,
   Col
 } from "reactstrap";
-
+import Radium, { StyleRoot } from "radium";
+import { fadeInUp } from "react-animations";
 // core components.
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColorNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import DemoFooter from "../../components/Footers/Footer.jsx";
 import bg from "../../assets/img/bg-login.png";
+
+const styles = {
+  fadeInUp: {
+    animation: "x 1s",
+    animationName: Radium.keyframes(fadeInUp, "fadeInUp")
+  }
+};
 
 class RegisterPage extends React.Component {
   state = {
@@ -92,113 +100,117 @@ class RegisterPage extends React.Component {
             style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
           >
             <div className="page-header">
-              <Container>
+              <Container style={{paddingTop:0}}>
                 <Row>
                   <Col className="mx-auto" lg="5" md="12">
-                    <Card
-                      className="card-login"
-                      style={{ backgroundColor: "rgba(14,14,14,0.7)" }}
-                    >
-                      <Form action="" className="form" method="">
-                        <CardHeader>
-                          <CardTitle
-                            style={{
-                              textAlign: "center",
-                              color: "white",
-                              fontSize: "3rem"
-                            }}
-                          >
-                            Login
-                          </CardTitle>
-                        </CardHeader>
-                        <CardBody>
-                          <InputGroup
-                            className={classnames("input-lg", {
-                              "input-group-focus": this.state.firstNameFocus
-                            })}
-                          >
-                            <InputGroupAddon addonType="prepend">
-                              <InputGroupText
-                                style={{ borderColor: "#FFFFFF" }}
+                    <StyleRoot>
+                      <div className="test" style={styles.fadeInUp}>
+                        <Card
+                          className="card-login"
+                          style={{ backgroundColor: "rgba(14,14,14,0.7)" }}
+                        >
+                          <Form action="" className="form" method="">
+                            <CardHeader>
+                              <CardTitle
+                                style={{
+                                  textAlign: "center",
+                                  color: "white",
+                                  fontSize: "3rem"
+                                }}
                               >
-                                <i className="tim-icons icon-single-02" />
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <Input
-                              style={{ borderColor: "#FFFFFF" }}
-                              placeholder="First Name..."
-                              type="text"
-                              onFocus={e =>
-                                this.setState({ firstNameFocus: true })
-                              }
-                              onBlur={e =>
-                                this.setState({ firstNameFocus: false })
-                              }
-                            />
-                          </InputGroup>
-                          <InputGroup
-                            className={classnames("input-lg", {
-                              "input-group-focus": this.state.lastNameFocus
-                            })}
-                          >
-                            <InputGroupAddon addonType="prepend">
-                              <InputGroupText
-                                style={{ borderColor: "#FFFFFF" }}
+                                Login
+                              </CardTitle>
+                            </CardHeader>
+                            <CardBody>
+                              <InputGroup
+                                className={classnames("input-lg", {
+                                  "input-group-focus": this.state.firstNameFocus
+                                })}
                               >
-                                <i className="tim-icons icon-caps-small" />
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <Input
-                              style={{ borderColor: "#FFFFFF" }}
-                              placeholder="Last Name..."
-                              type="text"
-                              onFocus={e =>
-                                this.setState({ lastNameFocus: true })
-                              }
-                              onBlur={e =>
-                                this.setState({ lastNameFocus: false })
-                              }
-                            />
-                          </InputGroup>
-                        </CardBody>
-                        <CardFooter className="text-center">
-                          <Button
-                            block
-                            className="btn-round"
-                            color="info"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                            size="lg"
-                          >
-                            Get Started
-                          </Button>
-                        </CardFooter>
-                        <div className="pull-left ml-3 mb-3">
-                          <h6>
-                            <a
-                              className="link footer-link"
-                              href="#pablo"
-                              onClick={e => e.preventDefault()}
-                              style={{ color: "white" }}
-                            >
-                              Create Account
-                            </a>
-                          </h6>
-                        </div>
-                        <div className="pull-right mr-3 mb-3">
-                          <h6>
-                            <a
-                              className="link footer-link"
-                              href="#pablo"
-                              onClick={e => e.preventDefault()}
-                              style={{ color: "white" }}
-                            >
-                              Need Help?
-                            </a>
-                          </h6>
-                        </div>
-                      </Form>
-                    </Card>
+                                <InputGroupAddon addonType="prepend">
+                                  <InputGroupText
+                                    style={{ borderColor: "#FFFFFF" }}
+                                  >
+                                    <i className="tim-icons icon-single-02" />
+                                  </InputGroupText>
+                                </InputGroupAddon>
+                                <Input
+                                  style={{ borderColor: "#FFFFFF" }}
+                                  placeholder="First Name..."
+                                  type="text"
+                                  onFocus={e =>
+                                    this.setState({ firstNameFocus: true })
+                                  }
+                                  onBlur={e =>
+                                    this.setState({ firstNameFocus: false })
+                                  }
+                                />
+                              </InputGroup>
+                              <InputGroup
+                                className={classnames("input-lg", {
+                                  "input-group-focus": this.state.lastNameFocus
+                                })}
+                              >
+                                <InputGroupAddon addonType="prepend">
+                                  <InputGroupText
+                                    style={{ borderColor: "#FFFFFF" }}
+                                  >
+                                    <i className="tim-icons icon-caps-small" />
+                                  </InputGroupText>
+                                </InputGroupAddon>
+                                <Input
+                                  style={{ borderColor: "#FFFFFF" }}
+                                  placeholder="Last Name..."
+                                  type="text"
+                                  onFocus={e =>
+                                    this.setState({ lastNameFocus: true })
+                                  }
+                                  onBlur={e =>
+                                    this.setState({ lastNameFocus: false })
+                                  }
+                                />
+                              </InputGroup>
+                            </CardBody>
+                            <CardFooter className="text-center">
+                              <Button
+                                block
+                                className="btn-round"
+                                color="info"
+                                href="#pablo"
+                                onClick={e => e.preventDefault()}
+                                size="lg"
+                              >
+                                Get Started
+                              </Button>
+                            </CardFooter>
+                            <div className="pull-left ml-3 mb-3">
+                              <h6>
+                                <a
+                                  className="link footer-link"
+                                  href="#pablo"
+                                  onClick={e => e.preventDefault()}
+                                  style={{ color: "white" }}
+                                >
+                                  Create Account
+                                </a>
+                              </h6>
+                            </div>
+                            <div className="pull-right mr-3 mb-3">
+                              <h6>
+                                <a
+                                  className="link footer-link"
+                                  href="#pablo"
+                                  onClick={e => e.preventDefault()}
+                                  style={{ color: "white" }}
+                                >
+                                  Need Help?
+                                </a>
+                              </h6>
+                            </div>
+                          </Form>
+                        </Card>
+                      </div>
+                    </StyleRoot>
                   </Col>
                 </Row>
               </Container>

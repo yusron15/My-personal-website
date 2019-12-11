@@ -17,6 +17,7 @@
 import React from "react";
 // ReactJS plugin for a nice carousel
 import Slick from "react-slick";
+import "../../assets/css/helper.css";
 
 // reactstrap components
 import {
@@ -40,133 +41,140 @@ import {
 // import { NewsContent } from "./NewsContent";
 
 import work from "assets/img/work.png";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 
+import "../../assets/css/main.css";
+import prevButton from "../../assets/img/prevbutton.png";
+import nextButton from "../../assets/img/nextbutton.png";
+import leftButton from "../../assets/img/blue-right.png";
+import rightButton from "../../assets/img/blue-left.png";
+
+const PrevButton = props => {
+  return (
+    <img
+      className="btn-round slick-prev slick-arrow prev-btn"
+      aria-label="Previous"
+      onClick={props.onClick}
+      src={rightButton}
+      style={{
+        height: "50px",
+        width: "auto",
+        paddingLeft: "33%",
+        marginBottom: "20px"
+      }}
+    />
+  );
+};
+// custom next button for the slick component
+const NextButton = props => {
+  return (
+    <img
+      className="btn-round slick-arrow next-btn"
+      // aria-label="Next"
+      onClick={props.onClick}
+      src={leftButton}
+      style={{
+        height: "50px",
+        width: "auto",
+        paddingLeft: "35%",
+        marginBottom: "20px"
+      }}
+    />
+  );
+};
 const styleCard = {
-  backgroundImage: "url(" + require("assets/img/work.png") + ")",
-  height: "70vh",
+  backgroundImage: "url(" + require("assets/img/news1.png") + ")",
+  height: "30vh",
   backgroundSize: "cover"
 };
 
 // core components
 
 // custom previous button for the slick component
-const PrevButton = props => {
-  return (
-    <Button
-      className="btn-round btn-icon btn-simple slick-prev slick-arrow"
-      // color="primary"
-      aria-label="Previous"
-      type="button"
-      onClick={props.onClick}
-      // style={{ backgroundColor: "white" }}
-    >
-      <i className="tim-icons icon-minimal-left" />
-    </Button>
-  );
-};
-// custom next button for the slick component
-const NextButton = props => {
-  return (
-    <Button
-      className="btn-round btn-icon btn-simple slick-arrow"
-      // color="primary"
-      aria-label="Next"
-      type="button"
-      // style={{ backgroundColor: "white" }}
-    >
-      <i className="tim-icons icon-minimal-right" onClick={props.onClick} />
-    </Button>
-  );
-};
-
-// onClick={this.toggle("1") + 1}
-
-// let slickSettings = {
-//   dots: false,
-//   infinite: true,
-//   centerMode: true,
-//   slidesToShow: 4,
-//   slidesToScroll: 1,
-//   prevArrow: <PrevButton />,
-//   nextArrow: <NextButton />,
-//   className: "center slider",
-//   slide: "section",
-//   responsive: [
-//     {
-//       breakpoint: 1024,
-//       settings: {
-//         slidesToShow: 3,
-//         slidesToScroll: 1,
-//         infinite: true
-//       }
-//     },
-//     {
-//       breakpoint: 600,
-//       settings: {
-//         slidesToShow: 2,
-//         slidesToScroll: 1
-//       }
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1
-//       }
-//     }
-//     // You can unslick at a given breakpoint now by adding:
-//     // settings: "unslick"
-//     // instead of a settings object
-//   ]
+// const PrevButton = props => {
+//   return (
+//     <Button
+//       className="btn-round btn-icon btn-simple slick-prev slick-arrow bg-white"
+//       // color="primary"
+//       aria-label="Previous"
+//       type="button"
+//       onClick={props.onClick}
+//       style={{ marginTop: "35px" }}
+//     >
+//       <i className="tim-icons icon-minimal-left" />
+//     </Button>
+//   );
+// };
+// // custom next button for the slick component
+// const NextButton = props => {
+//   return (
+//     <Button
+//       className="btn-round btn-icon btn-simple slick-arrow bg-white"
+//       // color="primary"
+//       aria-label="Next"
+//       type="button"
+//       style={{ marginTop: "35px" }}
+//     >
+//       <i className="tim-icons icon-minimal-right" onClick={props.onClick} />
+//     </Button>
+//   );
 // };
 
-// console.log(NewsContent, "HAHAHAHAHAHA");
 class News extends React.Component {
   state = {
     carousel1Index: 0,
     carousel2Index: 0,
-    activeTab: "1",
-    slickSettings: {
-      dots: false,
-      infinite: true,
-      centerMode: true,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      beforeChange: (oldSlide, newSlide) => {
-        if (oldSlide !== newSlide) {
-          this.setState({ activeTab: newSlide });
-        }
-      },
-      prevArrow: <PrevButton />,
-      nextArrow: <NextButton />,
-      className: "center slider",
-      slide: "section",
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    }
+    // activeTab: "1,
+
+    oldSlide: 0,
+    activeSlide: 0,
+    activeSlide2: 0
   };
+
+  // carousel1Index: 0,
+  // carousel2Index: 0,
+  // activeTab: "1",
+  // slickSettings: {
+  //   dots: false,
+  //   infinite: true,
+  //   centerMode: true,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   beforeChange: (oldSlide, newSlide) => {
+  //     if (oldSlide !== newSlide) {
+  //       this.setState({ activeTab: newSlide });
+  //     }
+  //   },
+  //   prevArrow: <PrevButton />,
+  //   nextArrow: <NextButton />,
+  //   className: "center slider",
+  //   slide: "section",
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //         infinite: true
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 600,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1
+  //       }
+  //     }
+  //   ]
+  // }
+  // };
 
   toggle = tab => {
     if (this.state.activeTab !== tab) {
@@ -219,137 +227,172 @@ class News extends React.Component {
   };
 
   render() {
+    let slickSettings = {
+      dots: false,
+      infinite: true,
+      centerMode: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      prevArrow: <PrevButton />,
+      nextArrow: <NextButton />,
+      afterChange: current => {
+        this.setState({ activeSlide: current });
+      },
+      className: "center slider",
+      slide: "section",
+
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
     return (
       <>
         <div className="cd-section" id="testimonials">
-          {/* ********* TESTIMONIALS 4 ********* */}
           <div
             className="testimonials-4"
-            style={{ backgroundColor: "black", paddingTop: 0 }}
+            style={{ backgroundColor: "#D4D4D4", padding: "5rem 0 0 0 " }}
           >
-            <Container fluid>
+            {/* <ColoredNavbar /> */}
+            <Container>
               <Row>
-                <Col md="12">
-                  <Slick {...this.state.slickSettings}>
+                <Col
+                  md="12"
+                  // style={{ paddingTop: "15vh" }}
+                >
+                  <Slick {...slickSettings}>
                     <div>
                       <NavLink
-                        className={this.state.activeTab === "1" ? "active" : ""}
-                        onClick={() => {
-                          this.toggle("1");
+                        className={this.state.activeSlide === 0 ? "scaled" : ""}
+                        // onClick={() => {
+                        //   this.toggle("1");
+                        // }}
+                        style={{
+                          backgroundImage:
+                            "url(" +
+                            require("assets/img/kantorpusat.png") +
+                            ")",
+                          height: "30vh",
+                          backgroundSize: "cover"
                         }}
+                      ></NavLink>
+                    </div>
+
+                    <div>
+                      <NavLink
+                        className={this.state.activeSlide === 1 ? "scaled" : ""}
+                        // onClick={() => {
+                        //   this.toggle("2");
+                        // }}
+                        style={{
+                          backgroundImage:
+                            "url(" +
+                            require("assets/img/sumgaigerong.png") +
+                            ")",
+                          height: "30vh",
+                          backgroundSize: "cover"
+                        }}
+                      ></NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        className={this.state.activeSlide === 2 ? "scaled" : ""}
+                        // onClick={() => {
+                        //   this.toggle("3");
+                        // }}
                         style={styleCard}
                       ></NavLink>
                     </div>
                     <div>
                       <NavLink
-                        className={this.state.activeTab === "2" ? "active" : ""}
-                        onClick={() => {
-                          this.toggle("2");
-                        }}
+                        className={this.state.activeSlide === 3 ? "scaled" : ""}
+                        // onClick={() => {
+                        //   this.toggle("4");
+                        // }}
                         style={styleCard}
                       ></NavLink>
                     </div>
                     <div>
                       <NavLink
-                        className={this.state.activeTab === "3" ? "active" : ""}
-                        onClick={() => {
-                          this.toggle("3");
-                        }}
+                        className={this.state.activeSlide === 4 ? "scaled" : ""}
+                        // onClick={() => {
+                        //   this.toggle("5");
+                        // }}
                         style={styleCard}
                       ></NavLink>
                     </div>
-                    <div>
-                      <NavLink
-                        className={this.state.activeTab === "4" ? "active" : ""}
-                        onClick={() => {
-                          this.toggle("4");
-                        }}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
-                    {/* <div> */}
-                    <NavLink
-                      className={this.state.activeTab === "4" ? "active" : ""}
-                      onClick={() => {
-                        this.toggle("4");
-                      }}
-                      style={styleCard}
-                    >
-                      <p className="description text-white">
-                        {/* {`"Artist is a term applied to a person who engages in an activity deemed to be an art. An artist also may be defined unofficially as "a person who expresses him- or herself through a medium". He is a descriptive term applied to a person who engages in an activity deemed to be an art."`} */}
-                      </p>
-                      <div className="author">
-                        {/* <img
-                            alt="..."
-                            className="avatar img-raised"
-                            src={require("assets/img/james.jpg")}
-                          /> */}
-                        {/* <span>Michael Jenos</span> */}
-                      </div>
-                    </NavLink>
-                    {/* </div> */}
                   </Slick>
                 </Col>
-                <Col className="positioned" lg="4" md="8" xs="10">
-                  <h1 className="title">Berita Ekonomi</h1>
+                <Col
+                  className="positioned"
+                  style={{
+                    backgroundColor: "#FFFFFF",
+                    minHeight: "50vh",
+                    marginTop: 0
+                  }}
+                  lg="4"
+                  md="8"
+                  xs="10"
+                >
+                  <h1 className="title font-black">Berita Ekonomi</h1>
                   <p className="description text-white">
-                    <TabContent activeTab={"project" + this.state.activeTab}>
+                    <TabContent activeTab={"project" + this.state.activeSlide}>
+                      <TabPane tabId="project0">
+                        {/* <Col> */}
+                        <p className="description mb-5 font-black">
+                          Pesanan industri Jerman naik melebihi dari yang
+                          diperkirakan pada bulan September, dibantu oleh
+                          permintaan domestik yang kuat, data yang dirilis
+                          pada...
+                        </p>
+                        {/* </Col> */}
+                      </TabPane>
                       <TabPane tabId="project1">
-                        <Col>
-                          <p className="description mb-5">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur.
-                          </p>
-                        </Col>
+                        <p className="description mb-5 font-black">
+                          Add your information here for News 2.
+                        </p>
                       </TabPane>
                       <TabPane tabId="project2">
-                        <Col>
-                          <p className="description mb-5">
-                            Add your information here for News 2.
-                          </p>
-                        </Col>
+                        <p className="description mb-5 font-black">
+                          Add your information here for News 3.
+                        </p>
                       </TabPane>
                       <TabPane tabId="project3">
-                        <Col>
-                          <p className="description mb-5">
-                            Add your information here for News 3.
-                          </p>
-                        </Col>
+                        <p className="description mb-5 font-black">
+                          Add your information here for News 4.
+                        </p>
                       </TabPane>
                       <TabPane tabId="project4">
-                        <Col>
-                          <p className="description mb-5">
-                            Add your information here for News 4.
-                          </p>
-                        </Col>
+                        <p className="description mb-5 font-black">
+                          Add your information here for News 5.
+                        </p>
                       </TabPane>
                     </TabContent>
-                    {/* <NewsContent id={textNews.id} content={textNews.content} /> */}
                   </p>
                 </Col>
-                {/* <Button
-                  className="btn-round btn-icon btn-simple slick-arrow"
-                  // color="primary"
-                  aria-label="Next"
-                  type="button"
-                  // style={{ backgroundColor: "white" }}
-                >
-                  <i
-                    className="tim-icons icon-minimal-right"
-                    onClick={() => {
-                      this.toggle("2");
-                    }}
-                  />
-                </Button> */}
               </Row>
             </Container>
           </div>
-          {/* ********* END TESTIMONIALS 4 ********* */}
         </div>
       </>
     );
@@ -357,3 +400,34 @@ class News extends React.Component {
 }
 
 export default News;
+
+// const PrevButton = props => {
+//   return (
+//     <Button
+//       className="btn-round btn-icon btn-simple slick-prev slick-arrow bg-white"
+//       // color="primary"
+//       aria-label="Previous"
+//       type="button"
+//       // md={{ size: 6, offset: 10 }}
+//       onClick={props.onClick}
+//       style={{ marginTop: "50px " }}
+//     >
+//       <i className="tim-icons icon-minimal-left" />
+//     </Button>
+//   );
+// };
+// // custom next button for the slick component
+// const NextButton = props => {
+//   return (
+//     <Button
+//       className="btn-round btn-icon btn-simple slick-arrow bg-white"
+//       // color="primary"
+//       // md={{ size: 6, offset: 10 }}
+//       aria-label="Next"
+//       type="button"
+//       style={{ marginTop: "50px" }}
+//     >
+//       <i className="tim-icons icon-minimal-right" onClick={props.onClick} />
+//     </Button>
+//   );
+// };

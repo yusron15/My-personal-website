@@ -30,9 +30,10 @@ class CardRegister extends React.Component {
     return (
       <>
         <Card
-          // className="card-login"
           style={{
-            backgroundColor: "rgba(14,14,14,0.7)"
+            backgroundColor: "rgba(14,14,14,0.7)",
+            minHeight: "100%",
+            marginTop: "20%"
           }}
         >
           <Form
@@ -63,8 +64,30 @@ class CardRegister extends React.Component {
                         id="test-small"
                         fullWidth
                         variant="outlined"
-                        label="First Name"
+                        label="Full Name"
                         size="small"
+                        inputProps={{
+                          style: { color: "white" }
+                        }}
+                        inputProps={{
+                          style: { color: "white" }
+                        }}
+                      />
+                    </InputGroup>
+                  </FormGroup>
+                </Col>
+                <Col md="12">
+                  <FormGroup>
+                    <InputGroup>
+                      <TextField
+                        id="outlined-multiline-static"
+                        fullWidth
+                        variant="outlined"
+                        label="Handphone Number"
+                        size="small"
+                        inputProps={{
+                          style: { color: "white" }
+                        }}
                       />
                     </InputGroup>
                   </FormGroup>
@@ -76,8 +99,11 @@ class CardRegister extends React.Component {
                         id="test-small"
                         fullWidth
                         variant="outlined"
-                        label="First Name"
+                        label="Email address"
                         size="small"
+                        inputProps={{
+                          style: { color: "white" }
+                        }}
                       />
                     </InputGroup>
                   </FormGroup>
@@ -89,64 +115,45 @@ class CardRegister extends React.Component {
                         id="test-small"
                         fullWidth
                         variant="outlined"
-                        label="First Name"
+                        label="Password"
                         size="small"
-                      />
-                    </InputGroup>
-                  </FormGroup>
-                </Col>
-                <Col md="12">
-                  <FormGroup>
-                    <InputGroup>
-                      <TextField
-                        id="test-small"
-                        fullWidth
-                        variant="outlined"
-                        label="First Name"
-                        size="small"
+                        inputProps={{
+                          style: { color: "white" }
+                        }}
                       />
                     </InputGroup>
                   </FormGroup>
                 </Col>
               </Row>
               {/* <CardFooter className="text-center"> */}
-              <Row>
-                <Button
-                  className="btn-round"
-                  color="info"
-                  type="button"
-                  block
-                  style={{ height: 50, fontSize: 18 }}
-                >
-                  Buat demo Akun
-                </Button>
-
-                <Button
-                  className="btn-round"
-                  color="info"
-                  type="button"
-                  block
-                  style={{ height: 50, fontSize: 18 }}
-                >
-                  Buat real Akun
-                </Button>
-              </Row>
               {/* </CardFooter> */}
+              <Row>
+                <Col md="6">
+                  <Button block color="info" type="button">
+                    Buat demo Akun
+                  </Button>
+                </Col>
+                <Col md="6">
+                  <Button block color="info" type="button">
+                    Buat real Akun
+                  </Button>
+                </Col>
+              </Row>
             </CardBody>
 
             <div className="pull-left ml-3 mb-3">
               <h6>
                 <a
-                  className="link footer-link"
+                  // className="link footer-link"
                   href="#pablo"
                   onClick={e => e.preventDefault()}
                   style={{ color: "white" }}
                 >
-                  Create Account
+                  Have an account? Sign In
                 </a>
               </h6>
             </div>
-            <div className="pull-right mr-3 mb-3">
+            {/* <div className="pull-right mr-3 mb-3">
               <h6>
                 <a
                   className="link footer-link"
@@ -157,7 +164,7 @@ class CardRegister extends React.Component {
                   Need Help?
                 </a>
               </h6>
-            </div>
+            // </div> */}
           </Form>
         </Card>
       </>

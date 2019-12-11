@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.7.0",
+    "animate.css": "^3.7.2",
     "bootstrap": "^4.4.0",
     "chart.js": "2.8.0",
     "headroom.js": "0.9.4",
@@ -15,6 +16,7 @@
     "prop-types": "^15.7.2",
     "radium": "^0.26.0",
     "react": "^16.12.0",
+    "react-animate-on-scroll": "^2.1.5",
     "react-animations": "^1.0.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-bootstrap-switch": "15.5.3",
@@ -31,8 +33,10 @@
     "react-select": "2.4.3",
     "react-show-more-text": "^1.2.3",
     "react-slick": "0.24.0",
+    "react-smooth-marquee": "^1.0.0",
     "react-spring": "^8.0.27",
     "react-tagsinput": "3.19.0",
+    "react-ticker": "^1.2.1",
     "reactstrap": "8.0.0",
     "read-more-react": "^1.0.9",
     "redux": "^4.0.4"

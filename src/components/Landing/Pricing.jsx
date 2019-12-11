@@ -33,7 +33,7 @@ import {
   Row,
   Col
 } from "reactstrap";
-
+import ScrollAnimation from "react-animate-on-scroll";
 import "../../assets/css/main.css";
 
 class Pricing extends React.Component {
@@ -57,14 +57,14 @@ class Pricing extends React.Component {
           <div
             className="pricing-3"
             id="pricing-3"
-            style={{ backgroundColor: "#D4D4D4" }}
+            style={{ backgroundColor: "#1D1E1F" }}
           >
             <Container>
               <Row>
                 <Col className="" md="6">
                   <h2
                     className="title"
-                    style={{ textAlign: "left", fontSize: 42, color: "black" }}
+                    style={{ textAlign: "left", fontSize: 42, color: "white" }}
                   >
                     Tipe Akun
                   </h2>
@@ -75,7 +75,7 @@ class Pricing extends React.Component {
                       fontSize: 24,
                       color: "#81878D"
                     }}
-                    style={{ padding: "0 20px 0 0", color: "black" }}
+                    style={{ padding: "0 20px 0 0", color: "white" }}
                   >
                     Kini Anda dapat memilih tipe akun sesuai dengan karakter
                     trading anda.
@@ -88,346 +88,367 @@ class Pricing extends React.Component {
                   {/* <Card style={{ backgroundColor: "#1D1E1F" }}> */}
                   <Row>
                     <Col className="pl-0" md="4">
-                      <Card
-                        className="card-pricing card-plain zoom free"
-                        style={{
-                          textAlign: "left",
-                          backgroundColor: "#1D1E1F",
-                          borderRadius: "10px"
-                        }}
+                      <ScrollAnimation
+                        delay={100}
+                        offset={100}
+                        animateIn="fadeIn"
+                        animateOut="fadeOut"
                       >
-                        <CardHeader>
-                          <CardTitle
-                            tag="h1"
-                            style={{
-                              textAlign: "left",
-                              fontSize: 24,
-                              fontWeight: "bold",
-                              color: "white"
-                            }}
-                          >
-                            Akun Demo
-                          </CardTitle>
-                          <CardTitle
-                            tag="h1"
-                            style={{
-                              textAlign: "left",
-                              fontWeight: "bold",
-                              fontSize: 50
-                            }}
-                          >
-                            FREE
-                          </CardTitle>
-                          <div style={{ marginTop: 10 }}>
-                            <span style={{ color: "#81878D" }}>
-                              Tidak Ada Deposit
-                            </span>
-                          </div>
-                        </CardHeader>
-                        <CardBody>
-                          <div
-                            className="item-stripped opacity"
-                            style={{
-                              justifyContent: "center",
-                              alignItems: "center",
-                              display: "flex"
-                            }}
-                          >
-                            <span
+                        <Card
+                          className="card-pricing card-plain zoom free"
+                          style={{
+                            textAlign: "left",
+                            backgroundColor: "#1D1E1F",
+                            borderRadius: "10px"
+                          }}
+                        >
+                          <CardHeader>
+                            <CardTitle
+                              tag="h1"
                               style={{
-                                color: "white",
-                                fontSize: 20,
-                                opacity: "none"
+                                textAlign: "left",
+                                fontSize: 24,
+                                fontWeight: "bold",
+                                color: "white"
                               }}
                             >
-                              -
-                            </span>
-                          </div>
-                          <div
-                            className="item-stripped"
-                            style={{
-                              justifyContent: "center",
-                              alignItems: "center",
-                              display: "flex"
-                            }}
-                          >
-                            <span
+                              Akun Demo
+                            </CardTitle>
+                            <CardTitle
+                              tag="h1"
                               style={{
-                                color: "white",
-                                fontSize: 20
+                                textAlign: "left",
+                                fontWeight: "bold",
+                                fontSize: 50
                               }}
                             >
-                              -
-                            </span>
-                          </div>
-                          <div
-                            className="item-stripped opacity"
-                            style={{
-                              justifyContent: "center",
-                              alignItems: "center",
-                              display: "flex"
-                            }}
-                          >
-                            <span
+                              FREE
+                            </CardTitle>
+                            <div style={{ marginTop: 10 }}>
+                              <span style={{ color: "#81878D" }}>
+                                Tidak Ada Deposit
+                              </span>
+                            </div>
+                          </CardHeader>
+                          <CardBody>
+                            <div
+                              className="item-stripped opacity"
                               style={{
-                                color: "white",
-                                fontSize: 20
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex"
                               }}
                             >
-                              -
-                            </span>
-                          </div>
-                          <div
-                            style={{
-                              textAlign: "center",
-                              fontSize: 16,
+                              <span
+                                style={{
+                                  color: "white",
+                                  fontSize: 20,
+                                  opacity: "none"
+                                }}
+                              >
+                                -
+                              </span>
+                            </div>
+                            <div
+                              className="item-stripped"
+                              style={{
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex"
+                              }}
+                            >
+                              <span
+                                style={{
+                                  color: "white",
+                                  fontSize: 20
+                                }}
+                              >
+                                -
+                              </span>
+                            </div>
+                            <div
+                              className="item-stripped opacity"
+                              style={{
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex"
+                              }}
+                            >
+                              <span
+                                style={{
+                                  color: "white",
+                                  fontSize: 20
+                                }}
+                              >
+                                -
+                              </span>
+                            </div>
+                            <div
+                              style={{
+                                textAlign: "center",
+                                fontSize: 16,
 
-                              color: "white",
-                              margin: "20px 0 27px 0"
-                            }}
-                          >
-                            Pro I Trader & Topgrowth Trader (MT4)
-                          </div>
+                                color: "white",
+                                margin: "20px 0 27px 0"
+                              }}
+                            >
+                              Pro I Trader & Topgrowth Trader (MT4)
+                            </div>
 
-                          <Button
-                            className="btn-round"
-                            color="info"
-                            type="button"
-                            block
-                            style={{ height: 50, fontSize: 18 }}
-                          >
-                            Daftar
-                          </Button>
-                        </CardBody>
-                      </Card>
+                            <Button
+                              className="btn-round"
+                              color="info"
+                              type="button"
+                              block
+                              style={{ height: 50, fontSize: 18 }}
+                            >
+                              Daftar
+                            </Button>
+                          </CardBody>
+                        </Card>
+                      </ScrollAnimation>
                     </Col>
 
                     <Col className="pl-0" md="4">
-                      <Card
-                        className="card-pricing card-plain zoom"
-                        style={{
-                          textAlign: "left",
-                          backgroundColor: "#323436",
-                          borderRadius: "10px"
-                        }}
+                      <ScrollAnimation
+                        delay={200}
+                        offset={100}
+                        animateIn="fadeIn"
+                        animateOut="fadeOut"
                       >
-                        <CardHeader>
-                          <CardTitle
-                            tag="h1"
-                            style={{
-                              textAlign: "left",
-                              fontSize: 24,
-                              fontWeight: "bold",
-                              color: "white"
-                            }}
-                          >
-                            Akun Mini
-                          </CardTitle>
-                          <CardTitle
-                            tag="h1"
-                            style={{
-                              textAlign: "left",
-                              fontWeight: "bold",
-                              fontSize: 50
-                            }}
-                          >
-                            $500
-                          </CardTitle>
-                          <div style={{ marginTop: 10 }}>
-                            <span style={{ color: "#81878D" }}>
-                              / initial deposit
-                            </span>
-                          </div>
-                        </CardHeader>
-                        <CardBody>
-                          <div
-                            className="item-stripped opacity"
-                            style={{
-                              justifyContent: "center",
-                              alignItems: "center",
-                              display: "flex"
-                            }}
-                          >
-                            <span
+                        <Card
+                          className="card-pricing card-plain zoom"
+                          style={{
+                            textAlign: "left",
+                            backgroundColor: "#323436",
+                            borderRadius: "10px"
+                          }}
+                        >
+                          <CardHeader>
+                            <CardTitle
+                              tag="h1"
                               style={{
-                                color: "white",
-                                fontSize: 20,
-                                opacity: "none"
+                                textAlign: "left",
+                                fontSize: 24,
+                                fontWeight: "bold",
+                                color: "white"
                               }}
                             >
-                              $ 5
-                            </span>
-                          </div>
-                          <div
-                            className="item-stripped"
-                            style={{
-                              justifyContent: "center",
-                              alignItems: "center",
-                              display: "flex"
-                            }}
-                          >
-                            <span
+                              Akun Mini
+                            </CardTitle>
+                            <CardTitle
+                              tag="h1"
                               style={{
-                                color: "white",
-                                fontSize: 20
+                                textAlign: "left",
+                                fontWeight: "bold",
+                                fontSize: 50
                               }}
                             >
-                              0.1 Lot
-                            </span>
-                          </div>
-                          <div
-                            className="item-stripped opacity"
-                            style={{
-                              justifyContent: "center",
-                              alignItems: "center",
-                              display: "flex"
-                            }}
-                          >
-                            <span
+                              $500
+                            </CardTitle>
+                            <div style={{ marginTop: 10 }}>
+                              <span style={{ color: "#81878D" }}>
+                                / initial deposit
+                              </span>
+                            </div>
+                          </CardHeader>
+                          <CardBody>
+                            <div
+                              className="item-stripped opacity"
                               style={{
-                                color: "white",
-                                fontSize: 20
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex"
                               }}
                             >
-                              1.0 Lot
-                            </span>
-                          </div>
-                          <div
-                            style={{
-                              textAlign: "center",
-                              fontSize: 16,
+                              <span
+                                style={{
+                                  color: "white",
+                                  fontSize: 20,
+                                  opacity: "none"
+                                }}
+                              >
+                                $ 5
+                              </span>
+                            </div>
+                            <div
+                              className="item-stripped"
+                              style={{
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex"
+                              }}
+                            >
+                              <span
+                                style={{
+                                  color: "white",
+                                  fontSize: 20
+                                }}
+                              >
+                                0.1 Lot
+                              </span>
+                            </div>
+                            <div
+                              className="item-stripped opacity"
+                              style={{
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex"
+                              }}
+                            >
+                              <span
+                                style={{
+                                  color: "white",
+                                  fontSize: 20
+                                }}
+                              >
+                                1.0 Lot
+                              </span>
+                            </div>
+                            <div
+                              style={{
+                                textAlign: "center",
+                                fontSize: 16,
 
-                              color: "white",
-                              margin: "20px 0 27px 0"
-                            }}
-                          >
-                            Topgrowth Trader (MT4)
-                          </div>
+                                color: "white",
+                                margin: "20px 0 27px 0"
+                              }}
+                            >
+                              Topgrowth Trader (MT4)
+                            </div>
 
-                          <Button
-                            className="btn-round"
-                            color="info"
-                            type="button"
-                            block
-                            style={{ height: 50, fontSize: 18 }}
-                          >
-                            Daftar
-                          </Button>
-                        </CardBody>
-                      </Card>
+                            <Button
+                              className="btn-round"
+                              color="info"
+                              type="button"
+                              block
+                              style={{ height: 50, fontSize: 18 }}
+                            >
+                              Daftar
+                            </Button>
+                          </CardBody>
+                        </Card>
+                      </ScrollAnimation>
                     </Col>
                     <Col className="pl-0" md="4">
-                      <Card
-                        className="card-pricing card-plain zoom"
-                        style={{
-                          textAlign: "left",
-                          backgroundColor: "#063980",
-                          borderRadius: "10px"
-                        }}
+                      <ScrollAnimation
+                        delay={300}
+                        offset={100}
+                        animateIn="fadeIn"
+                        animateOut="fadeOut"
                       >
-                        <CardHeader>
-                          <CardTitle
-                            tag="h1"
-                            style={{
-                              textAlign: "left",
-                              fontSize: 24,
-                              fontWeight: "bold",
-                              color: "white"
-                            }}
-                          >
-                            Akun Reguler
-                          </CardTitle>
-                          <CardTitle
-                            tag="h1"
-                            style={{
-                              textAlign: "left",
-                              fontWeight: "bold",
-                              fontSize: 50
-                            }}
-                          >
-                            $10000
-                          </CardTitle>
-                          <div style={{ marginTop: 10 }}>
-                            <span style={{ color: "#81878D" }}>
-                              / initial deposit
-                            </span>
-                          </div>
-                        </CardHeader>
-                        <CardBody>
-                          <div
-                            className="item-stripped opacity"
-                            style={{
-                              justifyContent: "center",
-                              alignItems: "center",
-                              display: "flex"
-                            }}
-                          >
-                            <span
+                        <Card
+                          className="card-pricing card-plain zoom"
+                          style={{
+                            textAlign: "left",
+                            backgroundColor: "#063980",
+                            borderRadius: "10px"
+                          }}
+                        >
+                          <CardHeader>
+                            <CardTitle
+                              tag="h1"
                               style={{
-                                color: "white",
-                                fontSize: 20,
-                                opacity: "none"
+                                textAlign: "left",
+                                fontSize: 24,
+                                fontWeight: "bold",
+                                color: "white"
                               }}
                             >
-                              $ 50
-                            </span>
-                          </div>
-                          <div
-                            className="item-stripped"
-                            style={{
-                              justifyContent: "center",
-                              alignItems: "center",
-                              display: "flex"
-                            }}
-                          >
-                            <span
+                              Akun Reguler
+                            </CardTitle>
+                            <CardTitle
+                              tag="h1"
                               style={{
-                                color: "white",
-                                fontSize: 20
+                                textAlign: "left",
+                                fontWeight: "bold",
+                                fontSize: 50
                               }}
                             >
-                              1.0 Lot
-                            </span>
-                          </div>
-                          <div
-                            className="item-stripped opacity"
-                            style={{
-                              justifyContent: "center",
-                              alignItems: "center",
-                              display: "flex"
-                            }}
-                          >
-                            <span
+                              $10000
+                            </CardTitle>
+                            <div style={{ marginTop: 10 }}>
+                              <span style={{ color: "#81878D" }}>
+                                / initial deposit
+                              </span>
+                            </div>
+                          </CardHeader>
+                          <CardBody>
+                            <div
+                              className="item-stripped opacity"
                               style={{
-                                color: "white",
-                                fontSize: 20
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex"
                               }}
                             >
-                              20.0 Lot
-                            </span>
-                          </div>
-                          <div
-                            style={{
-                              textAlign: "center",
-                              fontSize: 16,
-                              color: "white",
-                              margin: "20px 0 27px 0"
-                            }}
-                          >
-                            Pro I Trader & Topgrowth Trader (MT4)
-                          </div>
+                              <span
+                                style={{
+                                  color: "white",
+                                  fontSize: 20,
+                                  opacity: "none"
+                                }}
+                              >
+                                $ 50
+                              </span>
+                            </div>
+                            <div
+                              className="item-stripped"
+                              style={{
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex"
+                              }}
+                            >
+                              <span
+                                style={{
+                                  color: "white",
+                                  fontSize: 20
+                                }}
+                              >
+                                1.0 Lot
+                              </span>
+                            </div>
+                            <div
+                              className="item-stripped opacity"
+                              style={{
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex"
+                              }}
+                            >
+                              <span
+                                style={{
+                                  color: "white",
+                                  fontSize: 20
+                                }}
+                              >
+                                20.0 Lot
+                              </span>
+                            </div>
+                            <div
+                              style={{
+                                textAlign: "center",
+                                fontSize: 16,
+                                color: "white",
+                                margin: "20px 0 27px 0"
+                              }}
+                            >
+                              Pro I Trader & Topgrowth Trader (MT4)
+                            </div>
 
-                          <Button
-                            className="btn-round"
-                            color="info"
-                            type="button"
-                            block
-                            style={{ height: 50, fontSize: 18 }}
-                          >
-                            Daftar
-                          </Button>
-                        </CardBody>
-                      </Card>
+                            <Button
+                              className="btn-round"
+                              color="info"
+                              type="button"
+                              block
+                              style={{ height: 50, fontSize: 18 }}
+                            >
+                              Daftar
+                            </Button>
+                          </CardBody>
+                        </Card>
+                      </ScrollAnimation>
                     </Col>
                   </Row>
                   {/* </Card> */}

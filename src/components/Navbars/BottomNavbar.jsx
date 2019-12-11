@@ -32,9 +32,15 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
+  InputGroupAddon,
+  InputGroupText,
+  InputGroup,
+  Input
 } from "reactstrap";
+import ScrollAnimation from "react-animate-on-scroll";
 import logo from "../../assets/img/Bitmap.png";
+import bg from "../../assets/img/bg-bottom-navbar.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import Radium, { StyleRoot } from "radium";
@@ -50,60 +56,30 @@ class BottomNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      navbarColor: "broken-white",
-      marginTop: "50px",
-      color: "black"
+      position: "relative"
     };
   }
   componentDidMount() {
-    window.addEventListener("scroll", this.changeNavbarColor);
+    window.addEventListener("scroll", this.changeNavbarPosition);
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeNavbarTop);
   }
 
-  changeNavbarColor = () => {
+  changeNavbarPosition = () => {
     if (
-      document.documentElement.scrollTop > 700 ||
-      document.body.scrollTop > 700
+      document.documentElement.scrollTop > 3000 ||
+      document.body.scrollTop > 3000
     ) {
       this.setState({
-        navbarColor: "black-newsletter",
-        color: "white"
-      });
-    } else if (
-      document.documentElement.scrollTop > 10 ||
-      document.body.scrollTop > 10
-    ) {
-      this.setState({
-        marginTop: "0px"
+        position: "fixed"
       });
     } else if (
       document.documentElement.scrollTop < 300 ||
       document.body.scrollTop < 300
     ) {
       this.setState({
-        navbarColor: "broken-white",
-        marginTop: "50px",
-        color: "black"
-      });
-    }
-  };
-
-  changeNavbarMargin = () => {
-    if (
-      document.documentElement.scrollTop > 30 ||
-      document.body.scrollTop > 30
-    ) {
-      this.setState({
-        marginTop: "0px"
-      });
-    } else if (
-      document.documentElement.scrollTop < 300 ||
-      document.body.scrollTop < 300
-    ) {
-      this.setState({
-        marginTop: "50px"
+        position: "relative"
       });
     }
   };
@@ -111,23 +87,95 @@ class BottomNavbar extends React.Component {
   render() {
     const styles = {
       containerStyle: {
-        marginTop: this.state.marginTop
-      },
-      colorStyle: {
-        color: this.state.color
+        position: this.state.position,
+        backgroundImage:
+          "url(" + require("assets/img/bg-bottom-navbar.png") + ")"
       }
     };
-    const { containerStyle, colorStyle } = styles;
+    const { containerStyle } = styles;
     return (
       <>
-        <div class="navbar-bottom">
-          <a href="#home" class="active">
-            Home
-          </a>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
+        <div class="navbar-bottom" style={containerStyle}>
+          {/* <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut"> */}
+          <h4
+            className="title"
+            style={{
+              textAlign: "center",
+              fontSize: "1.5rem",
+              color: "white"
+            }}
+          >
+            Download E-Book Now
+          </h4>
+          <div style={{ margin: "0 20px 20px 20px" }}>
+            <Row>
+              <Col md="3">
+                <Input
+                  style={{
+                    backgroundColor: "rgba(114, 114, 114, 0.65)",
+                    border: "none"
+                  }}
+                  placeholder="Full Name"
+                  type="text"
+                  onFocus={e => this.setState({ emailFocus: true })}
+                  onBlur={e => this.setState({ emailFocus: false })}
+                />
+              </Col>
+              <Col md="3">
+                <Input
+                  style={{
+                    backgroundColor: "rgba(114, 114, 114, 0.65)",
+                    border: "none"
+                  }}
+                  placeholder="Email"
+                  type="text"
+                  onFocus={e => this.setState({ emailFocus: true })}
+                  onBlur={e => this.setState({ emailFocus: false })}
+                />
+              </Col>
+              <Col md="1">
+                <Input
+                  style={{
+                    backgroundColor: "rgba(114, 114, 114, 0.65)",
+                    border: "none"
+                  }}
+                  placeholder="Kode"
+                  type="text"
+                  onFocus={e => this.setState({ emailFocus: true })}
+                  onBlur={e => this.setState({ emailFocus: false })}
+                />
+              </Col>
+              <Col md="3">
+                <Input
+                  style={{
+                    backgroundColor: "rgba(114, 114, 114, 0.65)",
+                    border: "none"
+                  }}
+                  placeholder="Telepon"
+                  type="text"
+                  onFocus={e => this.setState({ emailFocus: true })}
+                  onBlur={e => this.setState({ emailFocus: false })}
+                />
+              </Col>
+              <Col md="2">
+                <Button block color="info" type="button">
+                  Download EBook
+                </Button>
+              </Col>
+            </Row>
+            <Row style={{ marginLeft: "20px" }}>
+              <Col style={{ color: "#FFFFFF" }}>
+                <Input type="checkbox" /> Saya setuju untuk menerima berita dan
+                email promosi dari Topgrowth Futures
+              </Col>
+              <Col style={{ color: "#FFFFFF" }}>
+                <Input type="checkbox" /> Saya telah membaca dan setuju
+                kebijakan privasi kebijakan privasi
+              </Col>
+            </Row>
+          </div>
+          {/* </ScrollAnimation> */}
         </div>
-        {/* </Navbar> */}
       </>
     );
   }

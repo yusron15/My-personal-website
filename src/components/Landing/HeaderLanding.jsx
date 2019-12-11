@@ -20,7 +20,9 @@ import {
   InputGroupText,
   InputGroup
 } from "reactstrap";
-
+import { fadeInRight } from "react-animations";
+import Radium, { StyleRoot } from "radium";
+import ScrollAnimation from "react-animate-on-scroll";
 import TextField from "@material-ui/core/TextField";
 // import Carousel from "nuka-carousel";
 // import { Carousel } from "react-responsive-carousel";
@@ -41,6 +43,13 @@ import appstore from "../../assets/img/appstore.png";
 import playstore from "../../assets/img/playstore.png";
 import iphone3 from "../../assets/img/iphone3.png";
 
+const styles = {
+  fadeInRight: {
+    animation: "x 1s",
+    animationName: Radium.keyframes(fadeInRight, "fadeInRight")
+  }
+};
+
 class HeaderLanding extends React.Component {
   render() {
     return (
@@ -57,7 +66,7 @@ class HeaderLanding extends React.Component {
                 backgroundSize: "cover"
               }}
             >
-              <Col md={{ size: 5, offset: 1 }}>
+              <Col md="5 offset-md-1">
                 <Carousel
                   indicators={true}
                   controls={false}
@@ -199,10 +208,18 @@ class HeaderLanding extends React.Component {
               </Col>
               <Col
                 // md=""
-                md={{ size: 5, offset: 1 }}
+                md="4 offset-md-2"
                 // style={{ padding: "2% 5% 5% 0" }}
               >
-                <CardRegister />
+                <StyleRoot>
+                  <ScrollAnimation
+                    delay={100}
+                    animateIn="fadeInRight"
+                    animateOut="fadeOut"
+                  >
+                    <CardRegister />
+                  </ScrollAnimation>
+                </StyleRoot>
               </Col>
             </Row>
           </div>

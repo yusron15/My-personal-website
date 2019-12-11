@@ -71,6 +71,9 @@ import Login from "views/layout/Login.jsx";
 import Register from "views/layout/Register.jsx";
 import News from "views/layout/News.jsx";
 
+//
+import "animate.css/animate.min.css";
+
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
@@ -83,6 +86,9 @@ const theme = createMuiTheme({
         // borderWidth: "1px",
         // maxHeight: "40px"
         borderWidth: "0.5px",
+        input: {
+          color: "white"
+        },
         "& input:valid + fieldset": {
           borderColor: "white",
           borderWidth: 2,

@@ -37,13 +37,21 @@ import {
   Row,
   Col
 } from "reactstrap";
-
+import Radium, { StyleRoot } from "radium";
+import { fadeInUp } from "react-animations";
 // core components.
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColorNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import CardRegister from "../../components/Register/CardRegister.jsx";
 import DemoFooter from "../../components/Footers/Footer.jsx";
 import bg from "../../assets/img/bg-register.png";
+
+const styles = {
+  fadeInUp: {
+    animation: "x 1s",
+    animationName: Radium.keyframes(fadeInUp, "fadeInUp")
+  }
+};
 
 class RegisterPage extends React.Component {
   state = {
@@ -93,10 +101,14 @@ class RegisterPage extends React.Component {
             style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
           >
             <div className="page-header">
-              <Container>
+              <Container style={{ paddingTop: 0 }}>
                 <Row>
                   <Col className="mx-auto" lg="5" md="12">
-                    <CardRegister />
+                    <StyleRoot>
+                      <div className="test" style={styles.fadeInUp}>
+                        <CardRegister />
+                      </div>
+                    </StyleRoot>
                   </Col>
                 </Row>
               </Container>

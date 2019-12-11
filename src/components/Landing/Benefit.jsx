@@ -33,6 +33,8 @@ import {
 } from "reactstrap";
 import { fadeInUp } from "react-animations";
 import Radium, { StyleRoot } from "radium";
+import { bounce } from "react-animations";
+import ScrollAnimation from "react-animate-on-scroll";
 // images
 import Benefit from "../../assets/img/benefit.png";
 import nextButton from "../../assets/img/nextbutton.png";
@@ -48,10 +50,17 @@ import "../../assets/css/main.css";
 
 // core components
 
+// const styles = {
+//   fadeInUp: {
+//     animation: "x 1s",
+//     animationName: Radium.keyframes(fadeInUp, "fadeInUp")
+//   }
+// };
+
 const styles = {
-  fadeInUp: {
+  bounce: {
     animation: "x 1s",
-    animationName: Radium.keyframes(fadeInUp, "fadeInUp")
+    animationName: Radium.keyframes(bounce, "bounce")
   }
 };
 
@@ -128,7 +137,11 @@ class Testimonials extends React.Component {
     layananImg: require('"../../assets/img/layanan.png'),
     beritaImg: require('"../../assets/img/berita.png'),
     requoteImg: require('"../../assets/img/requote.png'),
-    supportImg: require('"../../assets/img/support.png')
+    supportImg: require('"../../assets/img/support.png'),
+    bounce: {
+      animation: "x 1s",
+      animationName: Radium.keyframes(bounce, "bounce")
+    }
   };
 
   handleBiayaEnter = () => {
@@ -240,119 +253,142 @@ class Testimonials extends React.Component {
               </Row>
               <Row md="12" className="justify-content-center">
                 <Col md="3">
-                  <div
-                    className="card-benefit text-benefit"
-                    onMouseEnter={this.handleBiayaEnter}
-                    onMouseLeave={this.handleBiayaLeave}
+                  <ScrollAnimation
+                    delay={100}
+                    offset={200}
+                    animateIn="fadeInUp"
+                    animateOut="fadeOut"
                   >
-                    <div
-                      className="info text-left"
-                      // style={styles.fadeInUp}
-                      style={{
-                        backgroundColor: "rgba(112, 112, 112, 0.19)",
-                        minHeight: "270px",
-                        minWidth: "200px",
-                        borderRadius: "10px"
-                      }}
-                    >
-                      {/* <p className="title text-benefit" style={{ fontSize: "1.4rem" }}> */}
-                      {/* <img onMouseEnter style={{ marginRight: "5%" }} />
-                       */}
+                    <div onMouseEnter={() => this.state.bounce}>
                       <div
-                        style={{
-                          fontSize: "1.4rem",
-                          fontWeight: "bold",
-                          margin: "30px 0 30px 10px"
-                        }}
+                        className="card-benefit text-benefit"
+                        onMouseEnter={this.handleBiayaEnter}
+                        onMouseLeave={this.handleBiayaLeave}
                       >
-                        <img
-                          src={this.state.biayaImg}
-                          style={{ marginRight: "10px" }}
-                        />
-                        Biaya Rendah
+                        <div
+                          className="info text-left"
+                          // style={styles.fadeInUp}
+                          style={{
+                            backgroundColor: "rgba(112, 112, 112, 0.19)",
+                            minHeight: "270px",
+                            minWidth: "200px",
+                            borderRadius: "10px"
+                          }}
+                        >
+                          {/* <p className="title text-benefit" style={{ fontSize: "1.4rem" }}> */}
+                          {/* <img onMouseEnter style={{ marginRight: "5%" }} />
+                           */}
+                          <div
+                            style={{
+                              fontSize: "1.4rem",
+                              fontWeight: "bold",
+                              margin: "30px 0 30px 10px"
+                            }}
+                          >
+                            <img
+                              src={this.state.biayaImg}
+                              style={{ marginRight: "10px" }}
+                            />
+                            Biaya Rendah
+                          </div>
+                          <div style={{ marginLeft: "10px" }}>
+                            Memungkinkan nasabah untuk memaksimalkan keuntungan
+                            serta menerapkan money management
+                          </div>
+                          <div className="author"></div>
+                        </div>
                       </div>
-                      <div style={{ marginLeft: "10px" }}>
-                        Memungkinkan nasabah untuk memaksimalkan keuntungan
-                        serta menerapkan money management
-                      </div>
-                      <div className="author"></div>
                     </div>
-                  </div>
+                  </ScrollAnimation>
                 </Col>
                 <Col md="3">
-                  <div
-                    className="card-benefit text-benefit"
-                    onMouseEnter={this.handleLegalitasEnter}
-                    onMouseLeave={this.handleLegalitasLeave}
+                  <ScrollAnimation
+                    delay={200}
+                    offset={200}
+                    animateIn="fadeInUp"
+                    animateOut="fadeOut"
                   >
                     <div
-                      className="info text-left"
-                      style={{
-                        backgroundColor: "rgba(112, 112, 112, 0.19)",
-                        minHeight: "270px",
-                        minWidth: "200px",
-                        borderRadius: "10px"
-                      }}
+                      className="card-benefit text-benefit"
+                      onMouseEnter={this.handleLegalitasEnter}
+                      onMouseLeave={this.handleLegalitasLeave}
                     >
                       <div
+                        className="info text-left"
                         style={{
-                          fontSize: "1.4rem",
-                          fontWeight: "bold",
-                          margin: "30px 0 30px 10px"
+                          backgroundColor: "rgba(112, 112, 112, 0.19)",
+                          minHeight: "270px",
+                          minWidth: "200px",
+                          borderRadius: "10px"
                         }}
                       >
-                        <img
-                          src={this.state.legalitasImg}
-                          style={{ marginRight: "5%" }}
-                        />
-                        Legalitas Terjamin
-                      </div>
+                        <div
+                          style={{
+                            fontSize: "1.4rem",
+                            fontWeight: "bold",
+                            margin: "30px 0 30px 10px"
+                          }}
+                        >
+                          <img
+                            src={this.state.legalitasImg}
+                            style={{ marginRight: "5%" }}
+                          />
+                          Legalitas Terjamin
+                        </div>
 
-                      <div style={{ marginLeft: "10px" }}>
-                        Perusahaan pialang berjangka berstandar internasional
-                        yang memiliki izin di Bappebti serta terdaftar sebagai
-                        anggota BBJ, ICDX, KBI, dan ICH
+                        <div style={{ marginLeft: "10px" }}>
+                          Perusahaan pialang berjangka berstandar internasional
+                          yang memiliki izin di Bappebti serta terdaftar sebagai
+                          anggota BBJ, ICDX, KBI, dan ICH
+                        </div>
+                        <div className="author"></div>
                       </div>
-                      <div className="author"></div>
                     </div>
-                  </div>
+                  </ScrollAnimation>
                 </Col>
                 <Col md="3">
-                  <div
-                    className="card-benefit text-benefit"
-                    onMouseEnter={this.handleLayananEnter}
-                    onMouseLeave={this.handleLayananLeave}
+                  <ScrollAnimation
+                    delay={300}
+                    offset={200}
+                    animateIn="fadeInUp"
+                    animateOut="fadeOut"
                   >
                     <div
-                      className="info text-left"
-                      style={{
-                        backgroundColor: "rgba(112, 112, 112, 0.19)",
-                        minHeight: "270px",
-                        minWidth: "200px",
-                        borderRadius: "10px"
-                      }}
+                      className="card-benefit text-benefit"
+                      onMouseEnter={this.handleLayananEnter}
+                      onMouseLeave={this.handleLayananLeave}
                     >
                       <div
+                        className="info text-left"
                         style={{
-                          fontSize: "1.4rem",
-                          fontWeight: "bold",
-                          margin: "30px 0 30px 10px"
+                          backgroundColor: "rgba(112, 112, 112, 0.19)",
+                          minHeight: "270px",
+                          minWidth: "200px",
+                          borderRadius: "10px"
                         }}
                       >
-                        <img
-                          src={this.state.layananImg}
-                          style={{ marginRight: "5%" }}
-                        />
-                        Layanan Prima
-                      </div>
+                        <div
+                          style={{
+                            fontSize: "1.4rem",
+                            fontWeight: "bold",
+                            margin: "30px 0 30px 10px"
+                          }}
+                        >
+                          <img
+                            src={this.state.layananImg}
+                            style={{ marginRight: "5%" }}
+                          />
+                          Layanan Prima
+                        </div>
 
-                      <div style={{ marginLeft: "10px" }}>
-                        Memberikan pelayanan terbaik kepada para nasabah, mulai
-                        dari pendidikan nasabah hingga penarikan dana
+                        <div style={{ marginLeft: "10px" }}>
+                          Memberikan pelayanan terbaik kepada para nasabah,
+                          mulai dari pendidikan nasabah hingga penarikan dana
+                        </div>
+                        <div className="author"></div>
                       </div>
-                      <div className="author"></div>
                     </div>
-                  </div>
+                  </ScrollAnimation>
                 </Col>
               </Row>
               <Row
@@ -361,116 +397,137 @@ class Testimonials extends React.Component {
                 style={{ marginTop: "20px" }}
               >
                 <Col md="3">
-                  <div
-                    className="card-benefit text-benefit"
-                    onMouseEnter={this.handleBeritaEnter}
-                    onMouseLeave={this.handleBeritaLeave}
+                  <ScrollAnimation
+                    delay={100}
+                    offset={200}
+                    animateIn="fadeInUp"
+                    animateOut="fadeOut"
                   >
                     <div
-                      className="info text-left"
-                      style={{
-                        backgroundColor: "rgba(112, 112, 112, 0.19)",
-                        minHeight: "270px",
-                        minWidth: "200px",
-                        borderRadius: "10px"
-                      }}
+                      className="card-benefit text-benefit"
+                      onMouseEnter={this.handleBeritaEnter}
+                      onMouseLeave={this.handleBeritaLeave}
                     >
                       <div
+                        className="info text-left"
                         style={{
-                          fontSize: "1.4rem",
-                          fontWeight: "bold",
-                          margin: "30px 0 30px 10px"
+                          backgroundColor: "rgba(112, 112, 112, 0.19)",
+                          minHeight: "270px",
+                          minWidth: "200px",
+                          borderRadius: "10px"
                         }}
                       >
-                        <img
-                          src={this.state.beritaImg}
-                          style={{ marginRight: "5%" }}
-                        />
-                        Riset & Berita
-                      </div>
+                        <div
+                          style={{
+                            fontSize: "1.4rem",
+                            fontWeight: "bold",
+                            margin: "30px 0 30px 10px"
+                          }}
+                        >
+                          <img
+                            src={this.state.beritaImg}
+                            style={{ marginRight: "5%" }}
+                          />
+                          Riset & Berita
+                        </div>
 
-                      <div style={{ marginLeft: "10px" }}>
-                        Dapatkan informasi berita terkini serta analisa
-                        komprehensif setiap harinya di email Anda
+                        <div style={{ marginLeft: "10px" }}>
+                          Dapatkan informasi berita terkini serta analisa
+                          komprehensif setiap harinya di email Anda
+                        </div>
+                        <div className="author"></div>
                       </div>
-                      <div className="author"></div>
                     </div>
-                  </div>
+                  </ScrollAnimation>
                 </Col>
                 <Col md="3">
-                  <div
-                    className="card-benefit text-benefit"
-                    onMouseEnter={this.handleRequoteEnter}
-                    onMouseLeave={this.handleRequoteLeave}
+                  <ScrollAnimation
+                    delay={200}
+                    offset={200}
+                    animateIn="fadeInUp"
+                    animateOut="fadeOut"
                   >
                     <div
-                      className="info text-left"
-                      style={{
-                        backgroundColor: "rgba(112, 112, 112, 0.19)",
-                        minHeight: "270px",
-                        minWidth: "200px",
-                        borderRadius: "10px"
-                      }}
+                      className="card-benefit text-benefit"
+                      onMouseEnter={this.handleRequoteEnter}
+                      onMouseLeave={this.handleRequoteLeave}
                     >
                       <div
+                        className="info text-left"
                         style={{
-                          fontSize: "1.4rem",
-                          fontWeight: "bold",
-                          margin: "30px 0 30px 10px"
+                          backgroundColor: "rgba(112, 112, 112, 0.19)",
+                          minHeight: "270px",
+                          minWidth: "200px",
+                          borderRadius: "10px"
                         }}
                       >
-                        <img
-                          src={this.state.requoteImg}
-                          style={{ marginRight: "5%" }}
-                        />
-                        Tanpa Requote
-                      </div>
+                        <div
+                          style={{
+                            fontSize: "1.4rem",
+                            fontWeight: "bold",
+                            margin: "30px 0 30px 10px"
+                          }}
+                        >
+                          <img
+                            src={this.state.requoteImg}
+                            style={{ marginRight: "5%" }}
+                          />
+                          Tanpa Requote
+                        </div>
 
-                      <div style={{ marginLeft: "10px" }}>
-                        Dapatkan pengalaman bertransaksi tanpa requote dengan
-                        platform unggulan Pro-I Trading
+                        <div style={{ marginLeft: "10px" }}>
+                          Dapatkan pengalaman bertransaksi tanpa requote dengan
+                          platform unggulan Pro-I Trading
+                        </div>
+                        <div className="author"></div>
                       </div>
-                      <div className="author"></div>
                     </div>
-                  </div>
+                  </ScrollAnimation>
                 </Col>
                 <Col md="3">
-                  <div
-                    className="card-benefit text-benefit"
-                    onMouseEnter={this.handleSupportEnter}
-                    onMouseLeave={this.handleSupportLeave}
+                  <ScrollAnimation
+                    delay={300}
+                    offset={200}
+                    animateIn="fadeInUp"
+                    animateOut="fadeOut"
                   >
                     <div
-                      className="info text-left"
-                      style={{
-                        backgroundColor: "rgba(112, 112, 112, 0.19)",
-                        minHeight: "270px",
-                        minWidth: "200px",
-                        borderRadius: "10px"
-                      }}
+                      className="card-benefit text-benefit"
+                      onMouseEnter={this.handleSupportEnter}
+                      onMouseLeave={this.handleSupportLeave}
                     >
                       <div
+                        className="info text-left"
                         style={{
-                          fontSize: "1.4rem",
-                          fontWeight: "bold",
-                          margin: "30px 0 30px 10px"
+                          backgroundColor: "rgba(112, 112, 112, 0.19)",
+                          minHeight: "270px",
+                          minWidth: "200px",
+                          borderRadius: "10px"
                         }}
                       >
-                        <img
-                          src={this.state.supportImg}
-                          style={{ marginRight: "5%" }}
-                        />
-                        Support 24 Jam
-                      </div>
+                        <div
+                          style={{
+                            fontSize: "1.4rem",
+                            fontWeight: "bold",
+                            margin: "30px 0 30px 10px"
+                          }}
+                        >
+                          <img
+                            src={this.state.supportImg}
+                            style={{ marginRight: "5%" }}
+                          />
+                          Support 24 Jam
+                        </div>
 
-                      <div style={{ marginLeft: "10px" }}>
-                        Kami berkomitmen untuk memberikan pelayanan terbaik
-                        kepada para nasabah mulai dari edukasi nasabah sampai
-                        dengan mudahnya penarikan dana.
+                        <div style={{ marginLeft: "10px" }}>
+                          Kami berkomitmen untuk memberikan pelayanan terbaik
+                          kepada para nasabah mulai dari edukasi nasabah sampai
+                          dengan mudahnya penarikan dana.
+                        </div>
+                        <div className="author"></div>
                       </div>
-                      <div className="author"></div>
                     </div>
-                  </div>
+                  </ScrollAnimation>
                 </Col>
               </Row>
             </Container>

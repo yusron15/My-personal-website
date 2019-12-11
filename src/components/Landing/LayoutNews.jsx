@@ -60,21 +60,30 @@ class Content extends React.Component {
           <Row>
             <Col
               sm={{ size: 10, order: 2, offset: 1 }}
-              style={{ marginTop: "50px" }}
+              style={{ marginTop: "70px" }}
             >
               <Row>
                 <Col lg="4">
                   <div className="card-image">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img alt="..." className="img rounded" src={image} />
+                      <img
+                        alt="..."
+                        className="img rounded"
+                        src={image}
+                        style={{ height: "100%%", width: "100%" }}
+                      />
                     </a>
                   </div>
                 </Col>
                 <Col lg="8">
                   <div style={textContent}>
-                    <div className="title-post">{title}</div>
-                    <div className="text-posted">{posted}</div>
-                    <p>
+                    <div style={{ color: "black", fontSize: "1rem" }}>
+                      {title}
+                    </div>
+                    <div className="text-posted" style={{ color: "black" }}>
+                      {posted}
+                    </div>
+                    <p style={{ color: "black", fontSize: "0.7rem" }}>
                       {/* <ShowMoreText
                         style={{ color: "blue" }}
                         lines={3}
@@ -87,9 +96,9 @@ class Content extends React.Component {
                         {description}
                       </ShowMoreText> */}
                       <ReadMoreReact
-                        style={{ marginTop: "50px" }}
+                        style={{ marginTop: "50px", color: "blue" }}
                         text={description}
-                        readMoreText="click here to read more"
+                        readMoreText="read more"
                       />
                     </p>
                   </div>

@@ -18,6 +18,7 @@ import React from "react";
 
 // reactstrap components
 import { Badge, Button, Container, Row, Col } from "reactstrap";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import laptop from "../../assets/img/macbook.png";
 import feature from "../../assets/img/feature-img.png";
@@ -49,107 +50,222 @@ class Features extends React.Component {
               </Row>
               <Row>
                 <Col
-                  className="ml-auto mr-auto"
-                  md="6"
+                  // className="ml-auto mr-auto"
+                  md={{ size: 7, offset: 1 }}
                   // md={{ size: 12, order: 2, offset: 2 }}
+                  style={{ left: "3%" }}
                 >
                   <Row>
                     {/* <Col> */}
                     <Col>
-                      <div className="info info-horizontal">
-                        <div className="icon icon-success">
-                          <img
-                            alt="..."
-                            src={require("assets/img/blue-foreign.png")}
-                            // height="70"
-                            // width="70"
-                          />
-                        </div>
-                        <div className="description">
-                          <h3
-                            className="info-title"
-                            style={{ color: "black", fontSize: "1.2rem" }}
+                      <div className="info">
+                        <Row>
+                          <Col
+                            md="3"
+                            style={{ paddingLeft: 0, paddingRight: 0 }}
                           >
-                            Foreign Exchange
-                          </h3>
-                          <p style={{ textAlign: "left", fontSize: "0.8rem" }}>
-                            Forex pasar keuangan populer di dunia.
-                          </p>
-                        </div>
+                            <div className="icon icon-success">
+                              <img
+                                alt="..."
+                                src={require("assets/img/blue-foreign.png")}
+                                height="60"
+                                width="60"
+                              />
+                            </div>
+                          </Col>
+                          <Col
+                            md="9"
+                            style={{ paddingLeft: 0, paddingRight: 0 }}
+                          >
+                            <div className="description">
+                              <h3
+                                // className="info-title"
+                                style={{
+                                  color: "black",
+                                  fontSize: "1.2rem",
+                                  marginBottom: 0,
+                                  textAlign: "left"
+                                }}
+                              >
+                                Foreign Exchange
+                              </h3>
+                              <p
+                                style={{
+                                  textAlign: "left",
+                                  fontSize: "0.8rem",
+                                  padding: 0,
+                                  paddingRight: "10px"
+                                }}
+                              >
+                                Forex pasar keuangan yang paling populer di
+                                dunia.
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
                       </div>
-                      <div className="info info-horizontal">
-                        <div className="icon icon-warning">
-                          <img
-                            alt="..."
-                            src={require("assets/img/blue-cfd.png")}
-                            // style={{ height: "150%", width: "150%" }}
-                          />
-                        </div>
-                        <div className="description">
-                          <h3
-                            className="info-title"
-                            style={{ color: "black", fontSize: "1.2rem" }}
+                      <div className="info">
+                        <Row>
+                          <Col
+                            md="3"
+                            style={{ paddingLeft: 0, paddingRight: 0 }}
                           >
-                            CFD
-                          </h3>
-                          <p style={{ textAlign: "left", fontSize: "0.8rem" }}>
-                            CFD menawarkan kesempatan untuk membangun portofolio
-                            yang beragam, multiproduk dari satu akun.
-                          </p>
-                        </div>
+                            <div className="icon icon-success">
+                              <img
+                                alt="..."
+                                src={require("assets/img/blue-cfd.png")}
+                                height="60"
+                                width="60"
+                              />
+                            </div>
+                          </Col>
+                          <Col
+                            md="9"
+                            style={{ paddingLeft: 0, paddingRight: 0 }}
+                          >
+                            <div className="description">
+                              <h3
+                                // className="info-title"
+                                style={{
+                                  color: "black",
+                                  fontSize: "1.2rem",
+                                  marginBottom: 0,
+                                  textAlign: "left"
+                                }}
+                              >
+                                CFD
+                              </h3>
+                              <p
+                                style={{
+                                  textAlign: "left",
+                                  fontSize: "0.8rem",
+                                  padding: 0,
+                                  paddingRight: "10px"
+                                }}
+                              >
+                                CFD menawarkan kesempatan untuk membangun
+                                portofolio yang beragam, multiproduk dari satu
+                                akun.
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
                       </div>
                     </Col>
                     {/* </Col> */}
 
                     {/* <Col> */}
                     <Col>
-                      <div className="info info-horizontal">
-                        <div className="icon icon-success">
-                          <img
-                            alt="..."
-                            src={require("assets/img/blue-future.png")}
-                          />
-                        </div>
-                        <div className="description">
-                          <h3
-                            className="info-title"
-                            style={{ color: "black", fontSize: "1.2rem" }}
+                      <div className="info">
+                        <Row>
+                          <Col
+                            md="3"
+                            style={{ paddingLeft: 0, paddingRight: 0 }}
                           >
-                            Future Index
-                          </h3>
-                          <p style={{ textAlign: "left", fontSize: "0.8rem" }}>
-                            Alternatif investasi di saham perdagangan
-                          </p>
-                        </div>
+                            <div className="icon icon-success">
+                              <img
+                                alt="..."
+                                src={require("assets/img/blue-komoditi.png")}
+                                height="60"
+                                width="60"
+                              />
+                            </div>
+                          </Col>
+                          <Col
+                            md="9"
+                            style={{ paddingLeft: 0, paddingRight: 0 }}
+                          >
+                            <div className="description">
+                              <h3
+                                // className="info-title"
+                                style={{
+                                  color: "black",
+                                  fontSize: "1.2rem",
+                                  marginBottom: 0,
+                                  textAlign: "left"
+                                }}
+                              >
+                                Komoditi
+                              </h3>
+                              <p
+                                style={{
+                                  textAlign: "left",
+                                  fontSize: "0.8rem",
+                                  padding: 0,
+                                  paddingRight: "10px"
+                                }}
+                              >
+                                Komoditi adalah subjek kontrak berjangka yang
+                                diperdagangkan di Bursa Berjangka.
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
                       </div>
-                      <div className="info info-horizontal">
-                        <div className="icon icon-warning">
-                          <img
-                            alt="..."
-                            src={require("assets/img/blue-komoditi.png")}
-                          />
-                        </div>
-                        <div className="description">
-                          <h3
-                            className="info-title"
-                            style={{ color: "black", fontSize: "1.2rem" }}
+                      <div className="info">
+                        <Row>
+                          <Col
+                            md="3"
+                            style={{ paddingLeft: 0, paddingRight: 0 }}
                           >
-                            Komoditi
-                          </h3>
-                          <p style={{ textAlign: "left", fontSize: "0.8rem" }}>
-                            Komoditi adalah subjek kontrak berjangka yang
-                            diperdagangkan di Bursa Berjangka.
-                          </p>
-                        </div>
+                            <div className="icon icon-success">
+                              <img
+                                alt="..."
+                                src={require("assets/img/blue-future.png")}
+                                height="60"
+                                width="60"
+                              />
+                            </div>
+                          </Col>
+                          <Col
+                            md="9"
+                            style={{ paddingLeft: 0, paddingRight: 0 }}
+                          >
+                            <div className="description">
+                              <h3
+                                // className="info-title"
+                                style={{
+                                  color: "black",
+                                  fontSize: "1.2rem",
+                                  marginBottom: 0,
+                                  textAlign: "left"
+                                }}
+                              >
+                                Future Index
+                              </h3>
+                              <p
+                                style={{
+                                  textAlign: "left",
+                                  fontSize: "0.8rem",
+                                  padding: 0,
+                                  paddingRight: "10px"
+                                }}
+                              >
+                                Alternatif investasi di saham perdagangan yang
+                                bisa meminimalkan risiko fluktuasi harga.
+                              </p>
+                            </div>
+                          </Col>
+                        </Row>
                       </div>
                     </Col>
                   </Row>
                 </Col>
-                <Col md="3" style={{ paddingRight: 0, paddingTop: "50px" }}>
-                  <img
-                    src={feature}
-                    style={{ width: "100%", height: "auto" }}
-                  />
+                <Col md="4" style={{ paddingRight: 0, paddingTop: "50px" }}>
+                  <ScrollAnimation
+                    offset={100}
+                    animateIn="fadeInRight"
+                    animateOut="fadeOut"
+                  >
+                    <img
+                      src={feature}
+                      style={{
+                        width: "100%",
+                        height: "auto"
+                        // marginLeft: "10%"
+                      }}
+                    />
+                  </ScrollAnimation>
                 </Col>
               </Row>
             </Container>

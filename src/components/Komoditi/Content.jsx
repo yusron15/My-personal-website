@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-
+import ScrollAnimation from "react-animate-on-scroll";
 import "../../assets/css/main.css";
 
 class Content extends React.Component {
@@ -60,6 +60,12 @@ class Content extends React.Component {
             <Container fluid>
               <Row md="12" className="justify-content-center">
                 <Col md="3">
+                <ScrollAnimation
+                    delay={100}
+                    offset={200}
+                    animateIn="fadeInUp"
+                    animateOut="fadeOut"
+                  >
                   <div
                     // className="card-benefit "
                     onMouseEnter={this.handleIncreaseEnter}
@@ -99,8 +105,15 @@ class Content extends React.Component {
                       <div className="author"></div>
                     </div>
                   </div>
+                  </ScrollAnimation>
                 </Col>
                 <Col md="3">
+                <ScrollAnimation
+                    delay={200}
+                    offset={200}
+                    animateIn="fadeInUp"
+                    animateOut="fadeOut"
+                  >
                   <div
                     onMouseEnter={this.handleMoneyEnter}
                     onMouseLeave={this.handleMoneyLeave}
@@ -142,8 +155,15 @@ class Content extends React.Component {
                       <div className="author"></div>
                     </div>
                   </div>
+                  </ScrollAnimation>
                 </Col>
                 <Col md="3">
+                <ScrollAnimation
+                    delay={300}
+                    offset={200}
+                    animateIn="fadeInUp"
+                    animateOut="fadeOut"
+                  >
                   <div
                     onMouseEnter={this.handleShieldEnter}
                     onMouseLeave={this.handleShieldLeave}
@@ -179,6 +199,7 @@ class Content extends React.Component {
                       <div className="author"></div>
                     </div>
                   </div>
+                  </ScrollAnimation>
                 </Col>
               </Row>
             </Container>
