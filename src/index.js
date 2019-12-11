@@ -70,6 +70,7 @@ import JamPerdagangan from "views/layout/JamPerdagangan.jsx";
 import Login from "views/layout/Login.jsx";
 import Register from "views/layout/Register.jsx";
 import News from "views/layout/News.jsx";
+import Edukasi from "views/layout/Edukasi.jsx";
 
 //
 import "animate.css/animate.min.css";
@@ -80,11 +81,6 @@ const theme = createMuiTheme({
   overrides: {
     MuiOutlinedInput: {
       root: {
-        // backgroundColor: "red"
-        // borderColor: "white",
-        // border: "1px solid",
-        // borderWidth: "1px",
-        // maxHeight: "40px"
         borderWidth: "0.5px",
         input: {
           color: "white"
@@ -96,27 +92,7 @@ const theme = createMuiTheme({
         },
         "&:hover fieldset": {
           borderColor: "white"
-
-          // "& .MuiOutlinedInput-root": {
-          //   "& fieldset": {
-          //     borderColor: "red"
-          //   },
-          //   "&:hover fieldset": {
-          //     borderColor: "yellow"
-          //   },
-          //   "&.Mui-focused fieldset": {
-          //     borderColor: "green"
-          //   }
-          // }
         }
-        // "& input:invalid + fieldset": {
-        //   borderColor: "red",
-        //   borderWidth: 2
-        // }
-        // "& input:valid:focus + fieldset": {
-        //   borderLeftWidth: 6,
-        //   padding: "4px !important" // override inline-style
-        // }
       }
     }
   }
@@ -161,6 +137,7 @@ ReactDOM.render(
           path="/JamPerdagangan"
           render={props => <JamPerdagangan {...props} />}
         />
+        <Route path="/Edukasi" render={props => <Edukasi {...props} />} />
         <Route path="/index" render={props => <Index {...props} />} />
 
         <Route

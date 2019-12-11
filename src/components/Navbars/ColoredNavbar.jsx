@@ -28,6 +28,7 @@ import {
   NavbarBrand,
   Navbar,
   NavItem,
+  NavLink,
   Nav,
   Container,
   Row,
@@ -159,103 +160,121 @@ class ColorNavbar extends React.Component {
                     Tentang Kami
                   </button>
                   <div class="dropdown-content">
-                    <Link to="/tentangkami">Tentang Kami</Link>
+                    <Link as={NavLink} to="/tentangkami">
+                      Topgrowth Futures
+                    </Link>
                     <Link to="/cabang">Cabang Kami</Link>
                     <Link to="/rekeningterpisah">Rekening Terpisah</Link>
                     <Link to="/legalitas">Legalitas</Link>
                   </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown ">
                   <button class="dropbtn" style={colorStyle}>
                     Trading Online
                   </button>
                   <div
-                    class="dropdown-content-trading"
+                    class="dropdown-content-trading trading-online"
                     // style={{ width: "100vw" }}
                   >
-                    <Row>
-                      <Col md="3">
-                        {/* <div className="title">Produk</div> */}
-                        {/* <Link to="/forexgold">Forex & Gold</Link> */}
-                        <div
-                          style={{
-                            marginLeft: "10px",
-                            fontSize: "15px",
-                            fontWeight: "bold",
-                            color: "black",
-                            marginTop: "20px",
-                            marginBottom: "10px"
-                          }}
-                        >
-                          Produk
-                        </div>
+                    <Container>
+                      <Row>
+                        <Col md="3">
+                          {/* <div className="title">Produk</div> */}
+                          {/* <Link to="/forexgold">Forex & Gold</Link> */}
+                          <div
+                            style={{
+                              marginLeft: "10px",
+                              fontSize: "15px",
+                              fontWeight: "bold",
+                              color: "black",
+                              marginTop: "20px",
+                              marginBottom: "10px"
+                            }}
+                          >
+                            Produk
+                          </div>
+                          <Row>
+                            <Col md="6">
+                              <Link to="/forex">Forex</Link>
+                              <Link to="/gold">Gold</Link>
+                              <Link to="/indexfutures">Index Futures</Link>
+                            </Col>
+                            <Col md="6">
+                              <Link to="/cfd">CFD</Link>
 
-                        <Link to="/forex">Forex</Link>
-                        <Link to="/gold">Gold</Link>
-                        <Link to="/cfd">CFD</Link>
-                        <Link to="/indexfutures">Index Futures</Link>
-                        <Link to="/komoditi">Komoditi</Link>
-                      </Col>
-                      <Col md="3">
-                        <div
-                          style={{
-                            marginLeft: "10px",
-                            fontSize: "15px",
-                            fontWeight: "bold",
-                            color: "black",
-                            marginTop: "20px",
-                            marginBottom: "10px"
-                          }}
-                        >
-                          Informasi
-                        </div>
-                        <Link to="/jamperdagangan">Jam Perdagangan</Link>
-                      </Col>
-                      <Col md="3">
-                        <div
-                          style={{
-                            marginLeft: "10px",
-                            fontSize: "15px",
-                            fontWeight: "bold",
-                            color: "black",
-                            marginTop: "20px",
-                            marginBottom: "10px"
-                          }}
-                        >
-                          Trading Platform
-                        </div>
-                        <Link to="/protrader">Pro I Trader</Link>
-                        <Link to="/topgrowthtrader">Topgrowth Trader</Link>
-                      </Col>
-                      <Col md="3">
-                        <div
-                          style={{
-                            marginLeft: "10px",
-                            fontSize: "15px",
-                            fontWeight: "bold",
-                            color: "black",
-                            marginTop: "20px",
-                            marginBottom: "10px"
-                          }}
-                        >
-                          Buka Akun
-                        </div>
-                        <Link to="/login">Login</Link>
-                        <Link to="/register">Register</Link>
-                      </Col>
-                    </Row>
+                              <Link to="/komoditi">Komoditi</Link>
+                            </Col>
+                          </Row>
+                        </Col>
+                        <Col md="3">
+                          <div
+                            style={{
+                              marginLeft: "10px",
+                              fontSize: "15px",
+                              fontWeight: "bold",
+                              color: "black",
+                              marginTop: "20px",
+                              marginBottom: "10px"
+                            }}
+                          >
+                            Informasi
+                          </div>
+                          <Link to="/jamperdagangan">Jam Perdagangan</Link>
+                        </Col>
+                        <Col md="3">
+                          <div
+                            style={{
+                              marginLeft: "10px",
+                              fontSize: "15px",
+                              fontWeight: "bold",
+                              color: "black",
+                              marginTop: "20px",
+                              marginBottom: "10px"
+                            }}
+                          >
+                            Trading Platform
+                          </div>
+                          <Link to="/protrader">Pro I Trader</Link>
+                          <Link to="/topgrowthtrader">Topgrowth Trader</Link>
+                        </Col>
+                        <Col md="3">
+                          <div
+                            style={{
+                              marginLeft: "10px",
+                              fontSize: "15px",
+                              fontWeight: "bold",
+                              color: "black",
+                              marginTop: "20px",
+                              marginBottom: "10px"
+                            }}
+                          >
+                            Buka Akun
+                          </div>
+                          <Link to="/login">Login</Link>
+                          <Link to="/register">Register</Link>
+                        </Col>
+                      </Row>
+                    </Container>
                   </div>
                 </div>
 
-                <div class="dropdown">
+                <div class="dropdown ">
                   <button class="dropbtn" style={colorStyle}>
                     Layanan
                   </button>
-                  <div class="dropdown-content">
+                  <div class="dropdown-content layanan">
                     <Link to="/newspage">Berita dan analisa Market</Link>
                   </div>
                 </div>
+
+                <NavItem>
+                  <button class="dropbtn">
+                    <Link to="/edukasi" style={colorStyle}>
+                      Edukasi
+                    </Link>
+                  </button>
+                </NavItem>
 
                 <NavItem>
                   <button class="dropbtn">

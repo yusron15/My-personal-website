@@ -71,7 +71,7 @@ class Navbars extends React.Component {
           {/* Navbar Transparent */}
           <Navbar
             className="navbar-transparent"
-            expand="lg"
+            expand={true}
             style={{ position: "fixed" }}
           >
             <Container>
@@ -91,7 +91,8 @@ class Navbars extends React.Component {
               </div>
               <UncontrolledCollapse
                 navbar
-                toggler="#example-navbar-transparent"
+                // toggler="#example-navbar-transparent"
+                style={{ width: "100%" }}
               >
                 <Nav className="ml-auto" navbar>
                   <NavItem>
@@ -103,9 +104,9 @@ class Navbars extends React.Component {
                     </Link> */}
                   </NavItem>
 
-                  <div class="dropdown">
+                  <div class="dropdown" style={{ width: "100%" }}>
                     <button class="dropbtn">Tentang Kami</button>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content w-100">
                       <Link to="/tentangkami">Tentang Kami</Link>
                       <Link to="/cabang">Cabang Kami</Link>
                       <Link to="/rekeningterpisah">Rekening Terpisah</Link>
