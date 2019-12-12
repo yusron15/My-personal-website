@@ -18,7 +18,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   transition: all .5s ease;
   z-index: 1;
-  left: -36vw;
+  left: -38vw;
   width: 101vw;
   display: none;
   justify-content: space-around;
@@ -28,11 +28,11 @@
 }
 
 .trading-online {
-  left: -46vw;
+  left: -48vw;
 }
 
 .layanan {
-  left: -56vw;
+  left: -58vw;
 }
 
 

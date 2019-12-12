@@ -65,12 +65,18 @@ class Features extends React.Component {
                             style={{ paddingLeft: 0, paddingRight: 0 }}
                           >
                             <div className="icon icon-success">
-                              <img
-                                alt="..."
-                                src={require("assets/img/blue-foreign.png")}
-                                height="60"
-                                width="60"
-                              />
+                              <ScrollAnimation
+                                delay={100}
+                                animateIn="fadeInUp"
+                                animateOut="fadeOut"
+                              >
+                                <img
+                                  alt="..."
+                                  src={require("assets/img/blue-foreign.png")}
+                                  height="60"
+                                  width="60"
+                                />
+                              </ScrollAnimation>
                             </div>
                           </Col>
                           <Col
@@ -111,12 +117,18 @@ class Features extends React.Component {
                             style={{ paddingLeft: 0, paddingRight: 0 }}
                           >
                             <div className="icon icon-success">
-                              <img
-                                alt="..."
-                                src={require("assets/img/blue-cfd.png")}
-                                height="60"
-                                width="60"
-                              />
+                              <ScrollAnimation
+                                delay={300}
+                                animateIn="fadeInUp"
+                                animateOut="fadeOut"
+                              >
+                                <img
+                                  alt="..."
+                                  src={require("assets/img/blue-cfd.png")}
+                                  height="60"
+                                  width="60"
+                                />
+                              </ScrollAnimation>
                             </div>
                           </Col>
                           <Col
@@ -163,12 +175,18 @@ class Features extends React.Component {
                             style={{ paddingLeft: 0, paddingRight: 0 }}
                           >
                             <div className="icon icon-success">
-                              <img
-                                alt="..."
-                                src={require("assets/img/blue-komoditi.png")}
-                                height="60"
-                                width="60"
-                              />
+                              <ScrollAnimation
+                                delay={200}
+                                animateIn="fadeInUp"
+                                animateOut="fadeOut"
+                              >
+                                <img
+                                  alt="..."
+                                  src={require("assets/img/blue-komoditi.png")}
+                                  height="60"
+                                  width="60"
+                                />
+                              </ScrollAnimation>
                             </div>
                           </Col>
                           <Col
@@ -209,12 +227,18 @@ class Features extends React.Component {
                             style={{ paddingLeft: 0, paddingRight: 0 }}
                           >
                             <div className="icon icon-success">
-                              <img
-                                alt="..."
-                                src={require("assets/img/blue-future.png")}
-                                height="60"
-                                width="60"
-                              />
+                              <ScrollAnimation
+                                delay={400}
+                                animateIn="fadeInUp"
+                                animateOut="fadeOut"
+                              >
+                                <img
+                                  alt="..."
+                                  src={require("assets/img/blue-future.png")}
+                                  height="60"
+                                  width="60"
+                                />
+                              </ScrollAnimation>
                             </div>
                           </Col>
                           <Col

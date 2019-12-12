@@ -36,6 +36,7 @@ import {
   CarouselItem,
   CarouselIndicators
 } from "reactstrap";
+import ScrollAnimation from "react-animate-on-scroll";
 import news1 from "../../assets/img/newscontent1.png";
 import news2 from "../../assets/img/newscontent2.png";
 import news3 from "../../assets/img/newscontent3.png";
@@ -67,23 +68,37 @@ class News extends React.Component {
                       Berita Ekonomi
                     </div>
                     <div>
-                      <BeritaEkonomi
-                        image={news1}
-                        title="Pasar Saham Asia Tunggu Komentar Terkait Trade War"
-                        description="Cina ingin membuat perjanjian perdagangan awal dengan Amerika Serikat dan berusaha menghindari perang dagang, tetapi tidak takut untuk membalas jika perlu, kata Presiden..."
-                      />
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <BeritaEkonomi
+                          image={news1}
+                          title="Pasar Saham Asia Tunggu Komentar Terkait Trade War"
+                          description="Cina ingin membuat perjanjian perdagangan awal dengan Amerika Serikat dan berusaha menghindari perang dagang, tetapi tidak takut untuk membalas jika perlu, kata Presiden..."
+                        />
+                      </ScrollAnimation>
 
-                      <BeritaEkonomi
-                        image={news2}
-                        title="SoftBank Lanjutkan Penawaran Tender Saham WeWork"
-                        description="Cina ingin membuat perjanjian perdagangan awal dengan Amerika Serikat dan berusaha menghindari perang dagang, tetapi tidak takut untuk membalas jika perlu, kata Presiden..."
-                      />
-
-                      <BeritaEkonomi
-                        image={news3}
-                        title="Pasar Saham Asia Pulih Dari Level Rendah"
-                        description="Kontrak Futures AS turun sedikit karena ketegangan perdagangan tetap menjadi fokus setelah laporan bahwa China telah mengundang Washington untuk melakukan pembicaraan tat.."
-                      />
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <BeritaEkonomi
+                          image={news2}
+                          title="SoftBank Lanjutkan Penawaran Tender Saham WeWork"
+                          description="Cina ingin membuat perjanjian perdagangan awal dengan Amerika Serikat dan berusaha menghindari perang dagang, tetapi tidak takut untuk membalas jika perlu, kata Presiden..."
+                        />
+                      </ScrollAnimation>
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <BeritaEkonomi
+                          image={news3}
+                          title="Pasar Saham Asia Pulih Dari Level Rendah"
+                          description="Kontrak Futures AS turun sedikit karena ketegangan perdagangan tetap menjadi fokus setelah laporan bahwa China telah mengundang Washington untuk melakukan pembicaraan tat.."
+                        />
+                      </ScrollAnimation>
                     </div>
                   </div>
                 </div>
@@ -108,23 +123,38 @@ class News extends React.Component {
                       Analisa Harian
                     </div>
                     <div>
-                      <BeritaEkonomi
-                        image={news1}
-                        title="Pasar Saham Asia Tunggu Komentar Terkait Trade War"
-                        description="Cina ingin membuat perjanjian perdagangan awal dengan Amerika Serikat dan berusaha menghindari perang dagang, tetapi tidak takut untuk membalas jika perlu, kata Presiden..."
-                      />
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <BeritaEkonomi
+                          image={news1}
+                          title="Pasar Saham Asia Tunggu Komentar Terkait Trade War"
+                          description="Cina ingin membuat perjanjian perdagangan awal dengan Amerika Serikat dan berusaha menghindari perang dagang, tetapi tidak takut untuk membalas jika perlu, kata Presiden..."
+                        />
+                      </ScrollAnimation>
 
-                      <BeritaEkonomi
-                        image={news2}
-                        title="SoftBank Lanjutkan Penawaran Tender Saham WeWork"
-                        description="Cina ingin membuat perjanjian perdagangan awal dengan Amerika Serikat dan berusaha menghindari perang dagang, tetapi tidak takut untuk membalas jika perlu, kata Presiden..."
-                      />
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <BeritaEkonomi
+                          image={news2}
+                          title="SoftBank Lanjutkan Penawaran Tender Saham WeWork"
+                          description="Cina ingin membuat perjanjian perdagangan awal dengan Amerika Serikat dan berusaha menghindari perang dagang, tetapi tidak takut untuk membalas jika perlu, kata Presiden..."
+                        />
+                      </ScrollAnimation>
 
-                      <BeritaEkonomi
-                        image={news3}
-                        title="Pasar Saham Asia Pulih Dari Level Rendah"
-                        description="Kontrak Futures AS turun sedikit karena ketegangan perdagangan tetap menjadi fokus setelah laporan bahwa China telah mengundang Washington untuk melakukan pembicaraan tat.."
-                      />
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <BeritaEkonomi
+                          image={news3}
+                          title="Pasar Saham Asia Pulih Dari Level Rendah"
+                          description="Kontrak Futures AS turun sedikit karena ketegangan perdagangan tetap menjadi fokus setelah laporan bahwa China telah mengundang Washington untuk melakukan pembicaraan tat.."
+                        />
+                      </ScrollAnimation>
                     </div>
                   </div>
                 </div>

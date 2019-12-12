@@ -40,7 +40,7 @@ import {
 } from "reactstrap";
 
 import "../../../src/App.css";
-
+import ScrollAnimation from "react-animate-on-scroll";
 import tentangkami from "../../assets/img/tentangkamiheader.png";
 import ColoredNavbar from "../Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "components/Navbars/BlurryNavbar";
@@ -101,7 +101,9 @@ class HeaderAboutUs extends React.Component {
                       </p>
                     </Col>
                     <Col lg="6" xs="12">
-                      <img src={tentangkami} />
+                      <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                        <img src={tentangkami} />
+                      </ScrollAnimation>
                     </Col>
                   </Row>
                 </Container>

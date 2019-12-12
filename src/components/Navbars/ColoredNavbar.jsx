@@ -261,7 +261,7 @@ class ColorNavbar extends React.Component {
 
                 <div class="dropdown ">
                   <button class="dropbtn" style={colorStyle}>
-                    Layanan
+                    Berita
                   </button>
                   <div class="dropdown-content layanan">
                     <Link to="/newspage">Berita dan analisa Market</Link>
