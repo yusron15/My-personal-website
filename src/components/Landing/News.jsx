@@ -42,14 +42,14 @@ import news2 from "../../assets/img/newscontent2.png";
 import news3 from "../../assets/img/newscontent3.png";
 import news4 from "../../assets/img/newscontent4.png";
 import news5 from "../../assets/img/newscontent5.png";
-
+import "../../assets/css/main.css";
 import BeritaEkonomi from "./LayoutNews.jsx";
 
 class News extends React.Component {
   render() {
     return (
       <>
-        <div style={{ backgroundColor: "#D4D4D4" }}>
+        <div className="broken-white">
           <Container>
             <Row>
               <Col style={{ padding: 0 }}>
@@ -105,9 +105,9 @@ class News extends React.Component {
               </Col>
               <Col style={{ padding: 0 }}>
                 <div
-                  className="cd-section"
+                  className="cd-section broken-white"
                   id="features"
-                  style={{ backgroundColor: "#D4D4D4" }}
+                  // style={{ backgroundColor: "#D4D4D4" }}
                 >
                   <div className="features-3">
                     <div

@@ -36,12 +36,14 @@ import {
   Carousel,
   CarouselItem
 } from "reactstrap";
+import ScrollAnimation from "react-animate-on-scroll";
 import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
 import rightButton from "../../assets/img/right-blue-arrow.png";
 import leftButton from "../../assets/img/left-blue-arrow.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg from "../../assets/img/bg-cfd.png";
+import "../../assets/css/main.css";
 
 const textTitle = {
   fontWeight: "bold",
@@ -232,9 +234,9 @@ class Content extends React.Component {
     return (
       <>
         <div
-          className="cd-section"
+          className="cd-section broken-white"
           id="teams"
-          style={{ backgroundColor: "#1D1E1F" }}
+          // style={{ backgroundColor: "#1D1E1F" }}
         >
           {/* ********* TEAM 1 ********* */}
           <BlurryNavbar />
@@ -254,31 +256,30 @@ class Content extends React.Component {
               CONTRACT FOR DIFFERENCE
             </div>
           </div>
-          <div
-            className="team-1"
-            style={{ backgroundColor: "#D4D4D4", height: "70vh" }}
-          >
+          <div className="team-1 broken-white" style={{ height: "70vh" }}>
             <Container style={{ minHeight: "45vh" }}>
               <Row>
-                <Carousel
-                  activeIndex={this.state.activeIndex}
-                  next={this.next}
-                  previous={this.previous}
+                <ScrollAnimation animateIn="fadeInRight" animateOut="fadeOut">
+                  <Carousel
+                    activeIndex={this.state.activeIndex}
+                    next={this.next}
+                    previous={this.previous}
 
-                  //   className="carousel-team"
-                >
-                  {items.map((item, key) => {
-                    return (
-                      <CarouselItem
-                        onExiting={this.onExiting}
-                        onExited={this.onExited}
-                        key={key}
-                      >
-                        {item.content}
-                      </CarouselItem>
-                    );
-                  })}
-                </Carousel>
+                    //   className="carousel-team"
+                  >
+                    {items.map((item, key) => {
+                      return (
+                        <CarouselItem
+                          onExiting={this.onExiting}
+                          onExited={this.onExited}
+                          key={key}
+                        >
+                          {item.content}
+                        </CarouselItem>
+                      );
+                    })}
+                  </Carousel>
+                </ScrollAnimation>
               </Row>
             </Container>
             <Row>

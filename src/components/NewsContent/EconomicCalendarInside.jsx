@@ -35,15 +35,18 @@ import NewsLetter from "../NewsLetter/NewsLetter";
 import canada from "../../assets/img/icon-canada.png";
 
 import "../../assets/css/main.css";
+const font = {
+  color: "black"
+};
 
 class EconomicCalendarInside extends React.Component {
   render() {
     return (
       <>
         <div
-          className="cd-section"
+          className="cd-section broken-white"
           id="features"
-          style={{ backgroundColor: "#1D1E1F" }}
+          // style={{ backgroundColor: "#D4D4D4" }}
         >
           <Row>
             <Col className="ml-auto mr-auto text-center" md="6">
@@ -58,28 +61,35 @@ class EconomicCalendarInside extends React.Component {
               style={{
                 backgroundColor: "transparent",
                 borderStyle: "solid",
-                borderColor: "#FFFFFF",
-                borderWidth: "0.8px"
+                borderColor: "black",
+                borderWidth: "0.8px",
+                marginBottom: "50px"
               }}
             >
               <CardBody>
-                <CardText style={{ fontWeight: "bold", fontSize: "20px" }}>
+                <CardText
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: "20px",
+                    color: "black"
+                  }}
+                >
                   Bank of Canada (BoC) Governor Poloz Speech
                 </CardText>
-                <CardTitle>
+                <CardTitle style={font}>
                   <img src={canada} style={{ marginRight: "10px" }} />
                   Canada, CAD
                 </CardTitle>
                 <hr className="line" />
-                <CardText>Sector: Money</CardText>
-                <CardText>Source: Bank of Canada</CardText>
+                <CardText style={font}>Sector: Money</CardText>
+                <CardText style={font}>Source: Bank of Canada</CardText>
                 <hr className="line" />
-                <CardText style={{ fontSize: "17px" }}>
+                <CardText style={{ fontSize: "17px", color: "black" }}>
                   12 Dec 2019 17:30 GMT
                 </CardText>
-                <CardText>Next release</CardText>
+                <CardText style={font}>Next release</CardText>
                 <hr className="line" />
-                <CardText style={{ fontSize: "17px" }}>
+                <CardText style={{ fontSize: "17px", color: "black" }}>
                   Bank of Canada's (BoC) Governor Speech has the greatest impact
                   on the national currency among all official speeches. As head
                   of the BoC's Governing Council, the governor can provide clues

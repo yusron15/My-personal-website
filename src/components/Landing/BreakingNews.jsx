@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Marquee from "react-smooth-marquee";
+import { Input } from "reactstrap";
 import { Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import Up from "../../assets/img/green-triangle.png";
@@ -28,7 +29,7 @@ class BreakingNews extends Component {
                 backgroundColor: "rgba(29,30,31,1)",
                 zIndex: 9,
                 paddingLeft: "6%",
-                paddingTop: "1%"
+                paddingTop: "5px"
               }}
             >
               {/* <div class="dropdown">
@@ -38,10 +39,20 @@ class BreakingNews extends Component {
                   <Link to="#">FX</Link>
                 </div>
               </div> */}
-              KOMODITI
+              <Input
+                type="select"
+                name="select"
+                id="exampleSelect"
+                style={{ border: "none" }}
+              >
+                <option>KOMODITI</option>
+                <option>INDEX</option>
+                <option>FX</option>
+              </Input>
+              {/* KOMODITI */}
             </Col>
-            <Col md="8 offset-md-2">
-              <Marquee>
+            <Col md="10">
+              <marquee>
                 <Row
                   style={{
                     paddingTop: "1%"
@@ -57,7 +68,7 @@ class BreakingNews extends Component {
                     ipsum dolor sit amet, consectetur adipiscing elit
                   </div>
                 </Row>
-              </Marquee>
+              </marquee>
             </Col>
           </Row>
         </div>

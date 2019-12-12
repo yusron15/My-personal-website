@@ -226,7 +226,7 @@ class Content extends React.Component {
               </Col>
             </Row>
           </div>
-          <div className="team-1" style={{ backgroundColor: "#D4D4D4" }}>
+          <div className="team-1 broken-white">
             <Container>
               <Row>
                 <Col md="12">

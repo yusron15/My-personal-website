@@ -68,8 +68,8 @@ class Content extends React.Component {
         <div className="cd-section" id="projects">
           <BlurryNavbar />
           <div
-            className="project-raised"
-            style={{ backgroundColor: "#D4D4D4" }}
+            className="project-raised broken-white"
+            // style={{ backgroundColor: "#D4D4D4" }}
           >
             <div className="space-50" />
             <div
@@ -88,8 +88,10 @@ class Content extends React.Component {
               </div>
             </div>
             <div
+              className="broken-white"
               style={{
-                backgroundColor: "#D4D4D4"
+                // backgroundColor: "#D4D4D4",
+                padding: "0 15% 2% 15%"
               }}
             >
               <ReactPlayer
@@ -100,9 +102,9 @@ class Content extends React.Component {
                 style={{ marginTop: "20px" }}
               />
               <div
-                style={{
-                  padding: "0 15% 2% 15%"
-                }}
+              // style={{
+              //   padding: "0 15% 2% 15%"
+              // }}
               >
                 <div
                   className="title"

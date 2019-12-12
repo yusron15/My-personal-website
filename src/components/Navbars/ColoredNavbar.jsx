@@ -47,6 +47,23 @@ const stylesAnimation = {
   }
 };
 
+const title = {
+  marginLeft: "10px",
+  fontSize: "15px",
+  fontWeight: "bold",
+  color: "black",
+  marginTop: "20px",
+  marginBottom: "10px"
+};
+const tentangkami = {
+  fontSize: "15px",
+  fontWeight: "bold",
+  color: "black",
+  // marginTop: "20px",
+  marginBottom: "10px",
+  textAlign: "left"
+};
+
 class ColorNavbar extends React.Component {
   constructor(props) {
     super(props);
@@ -112,7 +129,8 @@ class ColorNavbar extends React.Component {
   render() {
     const styles = {
       containerStyle: {
-        marginTop: this.state.marginTop
+        marginTop: this.state.marginTop,
+        zIndex: 999
       },
       colorStyle: {
         color: this.state.color
@@ -161,11 +179,24 @@ class ColorNavbar extends React.Component {
                   </button>
                   <div class="dropdown-content">
                     <Link as={NavLink} to="/tentangkami">
-                      Topgrowth Futures
+                      <div style={tentangkami}>Topgrowth Futures</div>
+                      <div>Topgrowth Futures Lorem Ipsum</div>
                     </Link>
-                    <Link to="/cabang">Cabang Kami</Link>
-                    <Link to="/rekeningterpisah">Rekening Terpisah</Link>
-                    <Link to="/legalitas">Legalitas</Link>
+                    <div class="vl-navbar"></div>
+                    <Link to="/cabang">
+                      <div style={tentangkami}>Cabang Kami</div>
+                      <div>Topgrowth Futures Lorem Ipsum</div>
+                    </Link>
+                    <div class="vl-navbar"></div>
+                    <Link to="/rekeningterpisah">
+                      <div style={tentangkami}> Rekening Terpisah </div>
+                      <div>Topgrowth Futures Lorem Ipsum</div>
+                    </Link>
+                    <div class="vl-navbar"></div>
+                    <Link to="/legalitas">
+                      <div style={tentangkami}> Legalitas </div>
+                      <div>Topgrowth Futures Lorem Ipsum</div>
+                    </Link>
                   </div>
                 </div>
 
@@ -182,18 +213,7 @@ class ColorNavbar extends React.Component {
                         <Col md="3">
                           {/* <div className="title">Produk</div> */}
                           {/* <Link to="/forexgold">Forex & Gold</Link> */}
-                          <div
-                            style={{
-                              marginLeft: "10px",
-                              fontSize: "15px",
-                              fontWeight: "bold",
-                              color: "black",
-                              marginTop: "20px",
-                              marginBottom: "10px"
-                            }}
-                          >
-                            Produk
-                          </div>
+                          <div style={title}>Produk</div>
                           <Row>
                             <Col md="6">
                               <Link to="/forex">Forex</Link>
@@ -208,49 +228,16 @@ class ColorNavbar extends React.Component {
                           </Row>
                         </Col>
                         <Col md="3">
-                          <div
-                            style={{
-                              marginLeft: "10px",
-                              fontSize: "15px",
-                              fontWeight: "bold",
-                              color: "black",
-                              marginTop: "20px",
-                              marginBottom: "10px"
-                            }}
-                          >
-                            Informasi
-                          </div>
+                          <div style={title}>Informasi</div>
                           <Link to="/jamperdagangan">Jam Perdagangan</Link>
                         </Col>
                         <Col md="3">
-                          <div
-                            style={{
-                              marginLeft: "10px",
-                              fontSize: "15px",
-                              fontWeight: "bold",
-                              color: "black",
-                              marginTop: "20px",
-                              marginBottom: "10px"
-                            }}
-                          >
-                            Trading Platform
-                          </div>
+                          <div style={title}>Trading Platform</div>
                           <Link to="/protrader">Pro I Trader</Link>
                           <Link to="/topgrowthtrader">Topgrowth Trader</Link>
                         </Col>
                         <Col md="3">
-                          <div
-                            style={{
-                              marginLeft: "10px",
-                              fontSize: "15px",
-                              fontWeight: "bold",
-                              color: "black",
-                              marginTop: "20px",
-                              marginBottom: "10px"
-                            }}
-                          >
-                            Buka Akun
-                          </div>
+                          <div style={title}>Buka Akun</div>
                           <Link to="/login">Login</Link>
                           <Link to="/register">Register</Link>
                         </Col>
@@ -261,11 +248,14 @@ class ColorNavbar extends React.Component {
 
                 <div class="dropdown ">
                   <button class="dropbtn" style={colorStyle}>
-                    Berita
+                    <Link to="/newspage" style={colorStyle}>
+                      {" "}
+                      Berita
+                    </Link>
                   </button>
-                  <div class="dropdown-content layanan">
+                  {/* <div class="dropdown-content layanan">
                     <Link to="/newspage">Berita dan analisa Market</Link>
-                  </div>
+                  </div> */}
                 </div>
 
                 <NavItem>

@@ -50,9 +50,9 @@ class Content extends React.Component {
       <>
         <div className="cd-section" id="testimonials">
           <div
-            className="testimonials-4"
+            className="testimonials-4 broken-white"
             style={{
-              backgroundColor: "#D4D4D4",
+              // backgroundColor: "#D4D4D4",
               backgroundSize: "cover",
               paddingTop: 0
             }}
@@ -60,145 +60,145 @@ class Content extends React.Component {
             <Container fluid>
               <Row md="12" className="justify-content-center">
                 <Col md="3">
-                <ScrollAnimation
+                  <ScrollAnimation
                     delay={100}
                     offset={200}
                     animateIn="fadeInUp"
                     animateOut="fadeOut"
                   >
-                  <div
-                    // className="card-benefit "
-                    onMouseEnter={this.handleIncreaseEnter}
-                    onMouseLeave={this.handleIncreaseLeave}
-                  >
                     <div
-                      className="info card-komoditi"
-                      style={{
-                        minHeight: "400px",
-                        maxWidth: "300px",
-                        borderRadius: "10px",
-                        justifyContent: "center"
-                      }}
+                      // className="card-benefit "
+                      onMouseEnter={this.handleIncreaseEnter}
+                      onMouseLeave={this.handleIncreaseLeave}
                     >
-                      <div style={{ alignSelf: "center" }}>
-                        <img
-                          src={this.state.komoditi}
-                          style={{ marginTop: "50px" }}
-                        />
-                      </div>
                       <div
+                        className="info card-komoditi"
                         style={{
-                          fontSize: "1.4rem",
-                          fontWeight: "bold",
-                          margin: "30px 0 30px 10px"
+                          minHeight: "400px",
+                          maxWidth: "300px",
+                          borderRadius: "10px",
+                          justifyContent: "center"
                         }}
                       >
-                        Biaya Rendah
+                        <div style={{ alignSelf: "center" }}>
+                          <img
+                            src={this.state.komoditi}
+                            style={{ marginTop: "50px" }}
+                          />
+                        </div>
+                        <div
+                          style={{
+                            fontSize: "1.4rem",
+                            fontWeight: "bold",
+                            margin: "30px 0 30px 10px"
+                          }}
+                        >
+                          Biaya Rendah
+                        </div>
+                        <div>
+                          {/* </p> */}
+                          {/* <p className="text-benefit"> */}
+                          Memungkinkan nasabah untuk memaksimalkan keuntungan
+                          serta menerapkan money management
+                          {/* </p> */}
+                        </div>
+                        <div className="author"></div>
                       </div>
-                      <div>
-                        {/* </p> */}
-                        {/* <p className="text-benefit"> */}
-                        Memungkinkan nasabah untuk memaksimalkan keuntungan
-                        serta menerapkan money management
-                        {/* </p> */}
-                      </div>
-                      <div className="author"></div>
                     </div>
-                  </div>
                   </ScrollAnimation>
                 </Col>
                 <Col md="3">
-                <ScrollAnimation
+                  <ScrollAnimation
                     delay={200}
                     offset={200}
                     animateIn="fadeInUp"
                     animateOut="fadeOut"
                   >
-                  <div
-                    onMouseEnter={this.handleMoneyEnter}
-                    onMouseLeave={this.handleMoneyLeave}
-                  >
                     <div
-                      className="info card-komoditi"
-                      style={{
-                        minHeight: "400px",
-                        maxWidth: "300px",
-                        borderRadius: "10px",
-                        justifyContent: "center"
-                      }}
+                      onMouseEnter={this.handleMoneyEnter}
+                      onMouseLeave={this.handleMoneyLeave}
                     >
-                      {/* <p className="title text-benefit" style={{ fontSize: "1.4rem" }}> */}
-                      {/* <img onMouseEnter style={{ marginRight: "5%" }} />
-                       */}
-                      <div style={{ alignSelf: "center" }}>
-                        <img
-                          src={this.state.money}
-                          style={{ marginTop: "50px" }}
-                        />
-                      </div>
                       <div
+                        className="info card-komoditi"
                         style={{
-                          fontSize: "1.4rem",
-                          fontWeight: "bold",
-                          margin: "30px 0 30px 10px"
+                          minHeight: "400px",
+                          maxWidth: "300px",
+                          borderRadius: "10px",
+                          justifyContent: "center"
                         }}
                       >
-                        Biaya Rendah
+                        {/* <p className="title text-benefit" style={{ fontSize: "1.4rem" }}> */}
+                        {/* <img onMouseEnter style={{ marginRight: "5%" }} />
+                         */}
+                        <div style={{ alignSelf: "center" }}>
+                          <img
+                            src={this.state.money}
+                            style={{ marginTop: "50px" }}
+                          />
+                        </div>
+                        <div
+                          style={{
+                            fontSize: "1.4rem",
+                            fontWeight: "bold",
+                            margin: "30px 0 30px 10px"
+                          }}
+                        >
+                          Biaya Rendah
+                        </div>
+                        <div style={{ marginLeft: "10px" }}>
+                          {/* </p> */}
+                          {/* <p className="text-benefit"> */}
+                          Memungkinkan nasabah untuk memaksimalkan keuntungan
+                          serta menerapkan money management
+                          {/* </p> */}
+                        </div>
+                        <div className="author"></div>
                       </div>
-                      <div style={{ marginLeft: "10px" }}>
-                        {/* </p> */}
-                        {/* <p className="text-benefit"> */}
-                        Memungkinkan nasabah untuk memaksimalkan keuntungan
-                        serta menerapkan money management
-                        {/* </p> */}
-                      </div>
-                      <div className="author"></div>
                     </div>
-                  </div>
                   </ScrollAnimation>
                 </Col>
                 <Col md="3">
-                <ScrollAnimation
+                  <ScrollAnimation
                     delay={300}
                     offset={200}
                     animateIn="fadeInUp"
                     animateOut="fadeOut"
                   >
-                  <div
-                    onMouseEnter={this.handleShieldEnter}
-                    onMouseLeave={this.handleShieldLeave}
-                  >
                     <div
-                      className="info card-komoditi"
-                      style={{
-                        minHeight: "400px",
-                        maxWidth: "300px",
-                        borderRadius: "10px",
-                        justifyContent: "center"
-                      }}
+                      onMouseEnter={this.handleShieldEnter}
+                      onMouseLeave={this.handleShieldLeave}
                     >
-                      <div style={{ alignSelf: "center" }}>
-                        <img
-                          src={this.state.shield}
-                          style={{ marginTop: "50px" }}
-                        />
-                      </div>
                       <div
+                        className="info card-komoditi"
                         style={{
-                          fontSize: "1.4rem",
-                          fontWeight: "bold",
-                          margin: "30px 0 30px 10px"
+                          minHeight: "400px",
+                          maxWidth: "300px",
+                          borderRadius: "10px",
+                          justifyContent: "center"
                         }}
                       >
-                        Biaya Rendah
+                        <div style={{ alignSelf: "center" }}>
+                          <img
+                            src={this.state.shield}
+                            style={{ marginTop: "50px" }}
+                          />
+                        </div>
+                        <div
+                          style={{
+                            fontSize: "1.4rem",
+                            fontWeight: "bold",
+                            margin: "30px 0 30px 10px"
+                          }}
+                        >
+                          Biaya Rendah
+                        </div>
+                        <div style={{ marginLeft: "10px" }}>
+                          Memungkinkan nasabah untuk memaksimalkan keuntungan
+                          serta menerapkan money management
+                        </div>
+                        <div className="author"></div>
                       </div>
-                      <div style={{ marginLeft: "10px" }}>
-                        Memungkinkan nasabah untuk memaksimalkan keuntungan
-                        serta menerapkan money management
-                      </div>
-                      <div className="author"></div>
                     </div>
-                  </div>
                   </ScrollAnimation>
                 </Col>
               </Row>

@@ -37,7 +37,7 @@ class Blogs extends React.Component {
   render() {
     return (
       <>
-        <div className="cd-section bg-white" id="blogs">
+        <div className="cd-section broken-white" id="blogs">
           {/* ********* END BLOGS 5 ********* */}
           <BlurryNavbar />
           <ColoredNavbar />

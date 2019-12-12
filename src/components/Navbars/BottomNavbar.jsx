@@ -95,7 +95,116 @@ class BottomNavbar extends React.Component {
           "url(" + require("assets/img/bg-bottom-navbar.png") + ")"
       }
     };
+    const EbookShow = this.state.position;
     return (
+      // <div>
+      //   {EbookShow ? (
+      //     <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
+      //       <div
+      //         class="navbar-bottom"
+      //         style={{
+      //           backgroundImage:
+      //             "url(" + require("assets/img/bg-bottom-navbar.png") + ")",
+      //           position: "fixed"
+      //         }}
+      //       >
+      //         {/* <Fade> */}
+      //         <div
+      //         // style={{
+      //         //   backgroundImage:
+      //         //     "url(" + require("assets/img/bg-bottom-navbar.png") + ")"
+      //         // }}
+      //         >
+      //           <h4
+      //             className="title"
+      //             style={{
+      //               textAlign: "center",
+      //               fontSize: "1.5rem",
+      //               color: "white"
+      //             }}
+      //           >
+      //             Download E-Book Now
+      //           </h4>
+      //           <div
+      //             style={{
+      //               margin: "0 20px 20px 20px"
+      //             }}
+      //           >
+      //             <Row>
+      //               <Col md="3">
+      //                 <Input
+      //                   style={{
+      //                     backgroundColor: "rgba(114, 114, 114, 0.65)",
+      //                     border: "none"
+      //                   }}
+      //                   placeholder="Full Name"
+      //                   type="text"
+      //                   onFocus={e => this.setState({ emailFocus: true })}
+      //                   onBlur={e => this.setState({ emailFocus: false })}
+      //                 />
+      //               </Col>
+      //               <Col md="3">
+      //                 <Input
+      //                   style={{
+      //                     backgroundColor: "rgba(114, 114, 114, 0.65)",
+      //                     border: "none"
+      //                   }}
+      //                   placeholder="Email"
+      //                   type="text"
+      //                   onFocus={e => this.setState({ emailFocus: true })}
+      //                   onBlur={e => this.setState({ emailFocus: false })}
+      //                 />
+      //               </Col>
+      //               <Col md="1">
+      //                 <Input
+      //                   style={{
+      //                     backgroundColor: "rgba(114, 114, 114, 0.65)",
+      //                     border: "none"
+      //                   }}
+      //                   placeholder="Kode"
+      //                   type="text"
+      //                   onFocus={e => this.setState({ emailFocus: true })}
+      //                   onBlur={e => this.setState({ emailFocus: false })}
+      //                 />
+      //               </Col>
+      //               <Col md="3">
+      //                 <Input
+      //                   style={{
+      //                     backgroundColor: "rgba(114, 114, 114, 0.65)",
+      //                     border: "none"
+      //                   }}
+      //                   placeholder="Telepon"
+      //                   type="text"
+      //                   onFocus={e => this.setState({ emailFocus: true })}
+      //                   onBlur={e => this.setState({ emailFocus: false })}
+      //                 />
+      //               </Col>
+      //               <Col md="2">
+      //                 <Button block color="info" type="button">
+      //                   Download EBook
+      //                 </Button>
+      //               </Col>
+      //             </Row>
+      //             <Row style={{ marginLeft: "20px" }}>
+      //               <Col style={{ color: "#FFFFFF" }}>
+      //                 <Input type="checkbox" /> Saya setuju untuk menerima
+      //                 berita dan email promosi dari Topgrowth Futures
+      //               </Col>
+      //               <Col style={{ color: "#FFFFFF" }}>
+      //                 <Input type="checkbox" /> Saya telah membaca dan setuju
+      //                 kebijakan privasi kebijakan privasi
+      //               </Col>
+      //             </Row>
+      //           </div>
+      //         </div>
+      //         {/* </Fade> */}
+      //       </div>
+      //     </ScrollAnimation>
+      //   ) : null}
+      // </div>
+      // <>
+
+      // </>
       <>
         <div class="navbar-bottom" style={styles.containerStyle}>
           {/* <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut"> */}

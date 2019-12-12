@@ -76,9 +76,10 @@ const items = [
       <div
         className="team-1"
         style={{
-          backgroundImage: "url(" + require("assets/img/scaffolding.png") + ")",
+          backgroundImage:
+            "url(" + require("assets/img/header-berita.png") + ")",
           backgroundSize: "cover",
-          height: "80vh"
+          height: "70vh"
         }}
       >
         <Container>
@@ -107,9 +108,10 @@ const items = [
       <div
         className="team-1"
         style={{
-          backgroundImage: "url(" + require("assets/img/scaffolding.png") + ")",
+          backgroundImage:
+            "url(" + require("assets/img/header-berita.png") + ")",
           backgroundSize: "cover",
-          height: "80vh"
+          height: "70vh"
         }}
       >
         <Container>
@@ -138,9 +140,10 @@ const items = [
       <div
         className="team-1"
         style={{
-          backgroundImage: "url(" + require("assets/img/scaffolding.png") + ")",
+          backgroundImage:
+            "url(" + require("assets/img/header-berita.png") + ")",
           backgroundSize: "cover",
-          height: "80vh"
+          height: "70vh"
         }}
       >
         <Container>
@@ -204,9 +207,9 @@ class Carding extends React.Component {
     return (
       <>
         <div
-          className="cd-section"
+          className="cd-section broken-white"
           id="teams"
-          style={{ backgroundColor: "#1D1E1F" }}
+          // style={{ backgroundColor: "#D4D4D4" }}
         >
           {/* ********* TEAM 2 ********* */}
           {/* <BlurryNavbar /> */}
@@ -277,7 +280,7 @@ class Carding extends React.Component {
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
-                  <h2 className="title">Market Outlook</h2>
+                  <h2 className="title font-black">Market Outlook</h2>
                 </Col>
               </Row>
               <Row>
@@ -337,9 +340,8 @@ class Carding extends React.Component {
                 </Col>
               </Row>
             </Container>
-
-            <NewsLetter />
           </div>
+          <NewsLetter />
           {/* ********* END TEAM 2 ********* */}
         </div>{" "}
       </>

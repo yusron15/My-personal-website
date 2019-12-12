@@ -73,7 +73,7 @@ class Content extends React.Component {
     return (
       <>
         <div className="wrapper" ref="wrapper">
-          <div className="main" style={{ backgroundColor: "#D4D4D4" }}>
+          <div className="main broken-white">
             <Container fluid>
               <Row>
                 <Col className="ml-auto mr-auto text-center mt-5" md="6">

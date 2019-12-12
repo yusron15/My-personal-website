@@ -31,7 +31,7 @@ class Features extends React.Component {
       <>
         <div className="cd-section" id="features">
           {/* ********* FEATURES 3 ********* */}
-          <div className="features-3" style={{ backgroundColor: "#D4D4D4" }}>
+          <div className="features-3 broken-white">
             <Container fluid>
               <Row>
                 <Col className="mr-auto ml-auto" md="9">

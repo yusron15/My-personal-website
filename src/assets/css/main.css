@@ -14,7 +14,8 @@
 
 .dropdown-content {
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #fff7f7;
+  opacity: 0.98;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   transition: all .5s ease;
   z-index: 1;
@@ -24,7 +25,9 @@
   justify-content: space-around;
   height: 120px;
   align-items: center;
-  background-color: #D4D4D4;
+  z-index: -1;
+  /* top:9.5vh */
+  /* background-color: #D4D4D4; */
 }
 
 .trading-online {
@@ -77,7 +80,7 @@
 }
 
 .bg-white{
-  background-color: #D4D4D4;
+  background-color: #F3F3F3;
 }
 
 
@@ -215,6 +218,24 @@ hr.grey {
   top: 25%;
 }
 
+
+.vl-navbar {
+  border-left: 1px solid grey;
+  height: 10vh;
+  /* position: absolute; */
+  /* margin-right: 5px; */
+  top: 25%;
+}
+
+.title-navbar {
+  margin-left: "10px";
+  font-size: "15px";
+  font-weight: "bold";
+  color: "black";
+  margin-top: "20px";
+  margin-bottom: "10px";
+}
+
 .blue-tgf{
   background-color: #2BB3E1;
 }
@@ -230,7 +251,7 @@ hr.grey {
 .line {
   height: 0.2;
   width: 75vw;
-  border-color: #FFFFFF
+  border-color: black
 }
 
 .title-table {
@@ -294,7 +315,7 @@ hr.grey {
 }
 
 .broken-white {
-  background-color: #D4D4D4;
+  background-color: #fff7f7;
 }
 
 .icon-biaya {
@@ -315,7 +336,6 @@ hr.grey {
 
 .navbar-bottom {
   z-index: 99;
-  overflow: hidden;
   /* position: fixed; */
   bottom: 0;
   width: 100vw;

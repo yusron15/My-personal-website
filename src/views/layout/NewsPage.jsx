@@ -30,9 +30,11 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import Content from "../../components/NewsPage/Content.jsx";
 import NewsStockIndex from "../../components/NewsContent/NewsStockIndex.jsx";
 import NewsForexCommodity from "../../components/NewsContent/NewsForexCommodity";
+import NewsMarketOutlook from "../../components/NewsContent/NewsMarketOutlook";
 import EconomicCalendar from "../../components/NewsContent/EconomicCalendar";
 import EconomicCalendarInside from "../../components/NewsContent/EconomicCalendarInside";
 import StockIndex from "../../components/NewsContent/StockIndex.jsx";
+import MarketOutlook from "../../components/NewsContent/MarketOutlook.jsx";
 import ForexCommodity from "../../components/NewsContent/ForexCommodity";
 import Footer from "../../components/Footers/Footer.jsx";
 
@@ -70,8 +72,9 @@ class NewsPage extends React.Component {
             role="tablist"
             style={{
               backgroundColor: "#1D1E1F",
-              paddingTop: "70px",
-              justifyContent: "center"
+              paddingTop: "60px",
+              justifyContent: "center",
+              paddingBottom: "20px"
             }}
           >
             <NavItem clssName="black-newsletter">
@@ -208,6 +211,26 @@ class NewsPage extends React.Component {
                 Economic Calendar
               </div>
             </NavItem>
+            <NavItem clssName="black-newsletter">
+              <div
+                style={{
+                  backgroundColor: "#1D1E1F",
+                  margin: "0 15px 0 15px",
+                  cursor: "pointer",
+                  color: "#B3B3B3",
+                  ...(this.state.activeTab === "6"
+                    ? { color: "#B3B3B3" }
+                    : { color: "#585858" })
+                }}
+                color={this.state.activeTab === "6" ? "#B3B3B3" : "#585858"}
+                className={this.state.activeTab === "6" ? "active" : ""}
+                onClick={() => {
+                  this.toggle("6");
+                }}
+              >
+                Market Outlook
+              </div>
+            </NavItem>
           </Nav>
           <TabContent activeTab={"project" + this.state.activeTab}>
             <TabPane tabId="project1">
@@ -230,6 +253,9 @@ class NewsPage extends React.Component {
             </TabPane>
             <TabPane tabId="project5">
               <EconomicCalendar />
+            </TabPane>
+            <TabPane tabId="project6">
+              <NewsMarketOutlook />
             </TabPane>
           </TabContent>
           <Footer />

@@ -78,12 +78,13 @@ class BlurryNavbar extends React.Component {
     return (
       <>
         <Navbar
+          className="broken-white"
           // className={this.state.navbarPosition}
           expand="lg"
           style={{
             // backgroundColor: "rgba(112, 112, 112, 0.19)",
             // backgroundColor: "#343435",
-            backgroundColor: "#D4D4D4",
+            // backgroundColor: "#D4D4D4",
             height: "50px"
           }}
         >

@@ -37,7 +37,7 @@ const textTitle = {
   fontStyle: "Helvetica Bold",
   fontSize: "1.8rem",
   fontWeight: "bold",
-  color: "white"
+  color: "black"
 };
 
 const textContent = {
@@ -47,6 +47,7 @@ const textContent = {
   position: "absolute",
   top: "50%",
   fontSize: "1rem",
+  color: "black",
   msTransform: "translateY(-50%)",
   transform: "translateY(-50%)"
 };
@@ -72,9 +73,19 @@ class Content extends React.Component {
                 </Col>
                 <Col lg="8">
                   <div style={textContent}>
-                    <div className="title-post">{title}</div>
-                    <div className="text-posted">{posted}</div>
-                    <p>
+                    <div
+                      className="title-post font-black"
+                      style={{ color: "black" }}
+                    >
+                      {title}
+                    </div>
+                    <div
+                      className="text-posted font-black"
+                      style={{ color: "black" }}
+                    >
+                      {posted}
+                    </div>
+                    <p className="font-black">
                       {/* <ShowMoreText
                         style={{ color: "blue" }}
                         lines={3}

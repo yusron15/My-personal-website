@@ -211,15 +211,13 @@ class HeaderLanding extends React.Component {
                 md="4 offset-md-2"
                 // style={{ padding: "2% 5% 5% 0" }}
               >
-                <StyleRoot>
-                  <ScrollAnimation
-                    delay={100}
-                    animateIn="fadeInRight"
-                    animateOut="fadeOut"
-                  >
-                    <CardRegister />
-                  </ScrollAnimation>
-                </StyleRoot>
+                <ScrollAnimation
+                  delay={100}
+                  animateIn="fadeInRight"
+                  animateOut="fadeOut"
+                >
+                  <CardRegister />
+                </ScrollAnimation>
               </Col>
             </Row>
           </div>

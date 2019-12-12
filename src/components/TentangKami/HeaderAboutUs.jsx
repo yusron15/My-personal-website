@@ -38,6 +38,8 @@ import {
   Row,
   Col
 } from "reactstrap";
+import Radium, { StyleRoot } from "radium";
+import { fadeIn } from "react-animations";
 
 import "../../../src/App.css";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -47,6 +49,13 @@ import BlurryNavbar from "components/Navbars/BlurryNavbar";
 
 import "../../assets/css/main.css";
 
+const styles = {
+  fadeIn: {
+    animation: "x 1s",
+    animationName: Radium.keyframes(fadeIn, "fadeIn")
+  }
+};
+
 class HeaderAboutUs extends React.Component {
   state = {};
   render() {
@@ -55,9 +64,9 @@ class HeaderAboutUs extends React.Component {
         <div className="cd-section" id="headers">
           {/* ********* HEADER 6 ********* */}
           <div
-            className="header header-6 image-overlay"
+            className="header header-6  broken-white"
             // style={{ backgroundColor: "#1D1E1F" }}
-            style={{ backgroundColor: "#D4D4D4" }}
+            // style={{ backgroundColor: "#D4D4D4" }}
           >
             <BlurryNavbar />
             <ColoredNavbar />
@@ -66,44 +75,52 @@ class HeaderAboutUs extends React.Component {
                 <Container>
                   <Row className="align-items-center text-left">
                     <Col lg="6" xs="12">
-                      <h1
-                        className="title font-black"
-                        style={{ color: "black" }}
+                      <ScrollAnimation
+                        animateIn="fadeInDown"
+                        delay={300}
+                        animateOut="fadeOut"
                       >
-                        Tentang <br /> Topgrowth Future
-                      </h1>
-                      <p
-                        className="description font-black"
-                        style={{ color: "black" }}
-                      >
-                        Didirikan sejak tahun 2003, Topgrowth Futures telah
-                        berkembang menjadi perusahaan pialang terbaik dan
-                        terbesar di Indonesia yang menyediakan layanan transaksi
-                        produk forex, index, dan komoditi dengan ekspansi yang
-                        kompetitif.
-                        <br />
-                        Topgrowth Futures merupakan perusahaan yang telah diakui
-                        secara hukum dan mendapat penghargaan, baik dari sisi
-                        kepatuhan hukum maupun kinerja keuangan, serta
-                        beroperasi atas izin resmi dan berada di bawah
-                        pengawasan BAPPEBTI.
-                        <br />
-                        Topgrowth Futures menyediakan fasilitas online trading
-                        di pasar valuta asing dan derivatif dunia serta
-                        berencana untuk memanfaatkan potensi pasar komoditi
-                        Indonesia yang sudah terkenal sejak dahulu.
-                        <br />
-                        Bagi masyarakat Indonesia yang sudah terbiasa
-                        bertransaksi dengan teknologi trading online,
-                        kecanggihan platform Topgrowth Online Trading akan
-                        menjadi tempat yang tepat bagi para investor maupun
-                        nasabah.
-                      </p>
+                        <h1
+                          className="title font-black"
+                          style={{ color: "black" }}
+                        >
+                          Tentang <br /> Topgrowth Future
+                        </h1>
+                        <p
+                          className="description font-black"
+                          style={{ color: "black" }}
+                        >
+                          Didirikan sejak tahun 2003, Topgrowth Futures telah
+                          berkembang menjadi perusahaan pialang terbaik dan
+                          terbesar di Indonesia yang menyediakan layanan
+                          transaksi produk forex, index, dan komoditi dengan
+                          ekspansi yang kompetitif.
+                          <br />
+                          Topgrowth Futures merupakan perusahaan yang telah
+                          diakui secara hukum dan mendapat penghargaan, baik
+                          dari sisi kepatuhan hukum maupun kinerja keuangan,
+                          serta beroperasi atas izin resmi dan berada di bawah
+                          pengawasan BAPPEBTI.
+                          <br />
+                          Topgrowth Futures menyediakan fasilitas online trading
+                          di pasar valuta asing dan derivatif dunia serta
+                          berencana untuk memanfaatkan potensi pasar komoditi
+                          Indonesia yang sudah terkenal sejak dahulu.
+                          <br />
+                          Bagi masyarakat Indonesia yang sudah terbiasa
+                          bertransaksi dengan teknologi trading online,
+                          kecanggihan platform Topgrowth Online Trading akan
+                          menjadi tempat yang tepat bagi para investor maupun
+                          nasabah.
+                        </p>
+                      </ScrollAnimation>
                     </Col>
                     <Col lg="6" xs="12">
-                      <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
-                        <img src={tentangkami} />
-                      </ScrollAnimation>
+                      <StyleRoot>
+                        <div style={styles.fadeIn}>
+                          <img src={tentangkami} />
+                        </div>
+                      </StyleRoot>
                     </Col>
                   </Row>
                 </Container>

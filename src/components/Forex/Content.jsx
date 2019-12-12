@@ -28,7 +28,7 @@ import {
   Card,
   Table
 } from "reactstrap";
-
+import ScrollAnimation from "react-animate-on-scroll";
 import fg1 from "../../assets/img/forex.png";
 import fg2 from "../../assets/img/forex2.png";
 import fg3 from "../../assets/img/forexgold3.png";
@@ -61,9 +61,9 @@ class Features extends React.Component {
     return (
       <>
         <div
-          className="cd-section"
+          className="cd-section broken-white"
           id="features"
-          style={{ backgroundColor: "#D4D4D4" }}
+          // style={{ backgroundColor: "#D4D4D4" }}
         >
           {/* ********* FEATURES 3 ********* */}
           <BlurryNavbar />
@@ -116,33 +116,43 @@ class Features extends React.Component {
                 >
                   <Row>
                     <Col lg="4">
-                      <div className="card-image">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img alt="..." className="img rounded" src={fg1} />
-                        </a>
-                      </div>
+                      <ScrollAnimation
+                        animateIn="fadeInLeft"
+                        animateOut="fadeOut"
+                      >
+                        <div className="card-image">
+                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <img alt="..." className="img rounded" src={fg1} />
+                          </a>
+                        </div>
+                      </ScrollAnimation>
                     </Col>
                     <Col lg="8">
                       <div style={textContent}>
-                        <div
-                          className="title-content"
-                          style={{ color: "black" }}
+                        <ScrollAnimation
+                          animateIn="fadeInRight"
+                          animateOut="fadeOut"
                         >
-                          KEUNTUNGAN TRANSAKSI FOREX
-                        </div>
-                        <p style={{ color: "black" }}>
-                          Likuiditas tinggi karena selalu adanya penawaran dan
-                          permintaan, Potensi keuntungan dua arah yang
-                          didapatkan pada saat harga naik maupun turun karena
-                          tidak adanya batasan untuk perdagangan terarah, Biaya
-                          investasi awal yang relatif rendah karena forex
-                          diperdagangkan dengan leverage, Transparansi akibat
-                          berdagang secara langsung dengan pasar yang
-                          bertanggung jawab atas harga pasangan mata uang, Biaya
-                          perdagangan yang rendah karena biaya tersebut dihitung
-                          ke dalam spread, Dapat dilakukan di manapun dan
-                          kapanpun selama ada koneksi internet.
-                        </p>{" "}
+                          <div
+                            className="title-content"
+                            style={{ color: "black" }}
+                          >
+                            KEUNTUNGAN TRANSAKSI FOREX
+                          </div>
+                          <p style={{ color: "black" }}>
+                            Likuiditas tinggi karena selalu adanya penawaran dan
+                            permintaan, Potensi keuntungan dua arah yang
+                            didapatkan pada saat harga naik maupun turun karena
+                            tidak adanya batasan untuk perdagangan terarah,
+                            Biaya investasi awal yang relatif rendah karena
+                            forex diperdagangkan dengan leverage, Transparansi
+                            akibat berdagang secara langsung dengan pasar yang
+                            bertanggung jawab atas harga pasangan mata uang,
+                            Biaya perdagangan yang rendah karena biaya tersebut
+                            dihitung ke dalam spread, Dapat dilakukan di manapun
+                            dan kapanpun selama ada koneksi internet.
+                          </p>{" "}
+                        </ScrollAnimation>
                       </div>
                     </Col>
                   </Row>
@@ -150,33 +160,43 @@ class Features extends React.Component {
                   <Row style={{ marginTop: "50px" }}>
                     <Col lg="8">
                       <div style={textContent}>
-                        <div
-                          className="title-content"
-                          style={{ color: "black" }}
+                        <ScrollAnimation
+                          animateIn="fadeInLeft"
+                          animateOut="fadeOut"
                         >
-                          KEUNTUNGAN TRANSAKSI FOREX
-                        </div>
-                        <p style={{ color: "black" }}>
-                          Likuiditas tinggi karena selalu adanya penawaran dan
-                          permintaan, Potensi keuntungan dua arah yang
-                          didapatkan pada saat harga naik maupun turun karena
-                          tidak adanya batasan untuk perdagangan terarah, Biaya
-                          investasi awal yang relatif rendah karena forex
-                          diperdagangkan dengan leverage, Transparansi akibat
-                          berdagang secara langsung dengan pasar yang
-                          bertanggung jawab atas harga pasangan mata uang, Biaya
-                          perdagangan yang rendah karena biaya tersebut dihitung
-                          ke dalam spread, Dapat dilakukan di manapun dan
-                          kapanpun selama ada koneksi internet.
-                        </p>{" "}
+                          <div
+                            className="title-content"
+                            style={{ color: "black" }}
+                          >
+                            KEUNTUNGAN TRANSAKSI FOREX
+                          </div>
+                          <p style={{ color: "black" }}>
+                            Likuiditas tinggi karena selalu adanya penawaran dan
+                            permintaan, Potensi keuntungan dua arah yang
+                            didapatkan pada saat harga naik maupun turun karena
+                            tidak adanya batasan untuk perdagangan terarah,
+                            Biaya investasi awal yang relatif rendah karena
+                            forex diperdagangkan dengan leverage, Transparansi
+                            akibat berdagang secara langsung dengan pasar yang
+                            bertanggung jawab atas harga pasangan mata uang,
+                            Biaya perdagangan yang rendah karena biaya tersebut
+                            dihitung ke dalam spread, Dapat dilakukan di manapun
+                            dan kapanpun selama ada koneksi internet.
+                          </p>{" "}
+                        </ScrollAnimation>
                       </div>
                     </Col>
                     <Col lg="4">
-                      <div className="card-image">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img alt="..." className="img rounded" src={fg2} />
-                        </a>
-                      </div>
+                      <ScrollAnimation
+                        animateIn="fadeInRight"
+                        animateOut="fadeOut"
+                      >
+                        <div className="card-image">
+                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <img alt="..." className="img rounded" src={fg2} />
+                          </a>
+                        </div>
+                      </ScrollAnimation>
                     </Col>
                   </Row>
                 </Col>
@@ -190,118 +210,134 @@ class Features extends React.Component {
                   <Row style={{ marginTop: "50px" }}>
                     <Col lg="12">
                       <div>
-                        <div style={textTitle}>Ragam Produk Forex</div>
-                        <p style={{ color: "black" }}>
-                          Trading forex dengan TOPGROWTH memberi Anda akses
-                          untuk bertransaksi ke banyak produk valuta asing,
-                          terlepas dari apakah Anda mengunduh Pro-I Trading pada
-                          PC atau Mac Anda, bertransaksi menggunakan gadget Anda
-                          melalui Pro-I Trader yang tersedia untuk Android
-                          maupun iOS, atau melakukan transaksi melalui telepon.
-                          <br />
-                          <br />
-                          Di bawah ini adalah ragam pasangan mata uang yang
-                          dapat Anda perdagangkan.
-                        </p>{" "}
+                        <ScrollAnimation
+                          animateIn="fadeInUp"
+                          animateOut="fadeOut"
+                        >
+                          <div style={textTitle}>Ragam Produk Forex</div>
+                          <p style={{ color: "black" }}>
+                            Trading forex dengan TOPGROWTH memberi Anda akses
+                            untuk bertransaksi ke banyak produk valuta asing,
+                            terlepas dari apakah Anda mengunduh Pro-I Trading
+                            pada PC atau Mac Anda, bertransaksi menggunakan
+                            gadget Anda melalui Pro-I Trader yang tersedia untuk
+                            Android maupun iOS, atau melakukan transaksi melalui
+                            telepon.
+                            <br />
+                            <br />
+                            Di bawah ini adalah ragam pasangan mata uang yang
+                            dapat Anda perdagangkan.
+                          </p>{" "}
+                        </ScrollAnimation>
                       </div>
-                      <div style={{ marginTop: "30px" }}>
-                        <div style={textTitle}>Major Pairs</div>
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <div style={{ marginTop: "30px" }}>
+                          <div style={textTitle}>Major Pairs</div>
 
-                        <Table style={{ marginTop: "20px" }}>
-                          <tbody>
-                            <tr style={{ backgroundColor: "#224377" }}>
-                              <td className="text-white">
-                                <b>Cross Currency Pairs </b>
-                              </td>
-                              <td className="text-white">
-                                <b>Nickname</b>
-                              </td>
-                              <td className="text-white">
-                                <b>Contract Size </b>
-                              </td>
-                            </tr>
-                            <tr className="black-newsletter">
-                              <td>EUR / USD</td>
-                              <td>Euro</td>
-                              <td>EUR 100,000</td>
-                            </tr>
-                            <tr className="black-newsletter">
-                              <td>USD / JPY </td>
-                              <td> Japanese Yen</td>
-                              <td>USD 100,000 </td>
-                            </tr>
-                            <tr className="black-newsletter">
-                              <td> GBP / USD</td>
-                              <td> Poundsterling</td>
-                              <td> GBP 100,000</td>
-                            </tr>
-                            <tr className="black-newsletter">
-                              <td> USD / CHF</td>
-                              <td> Swiss Franc</td>
-                              <td> USD 100,000</td>
-                            </tr>
-                            <tr className="black-newsletter">
-                              <td> AUD / USD</td>
-                              <td> Australian Dollar</td>
-                              <td> AUD 100,000</td>
-                            </tr>
-                            <tr className="black-newsletter">
-                              <td> NZD / USD</td>
-                              <td> New Zealand Dollar</td>
-                              <td> NZD 100,000</td>
-                            </tr>
-                            <tr className="black-newsletter">
-                              <td>USD / CAD </td>
-                              <td> Canadian Dollar</td>
-                              <td>USD 100,000 </td>
-                            </tr>
-                          </tbody>
-                        </Table>
-                      </div>
-                      <div style={{ marginTop: "50px" }}>
-                        <div style={textTitle}>Cross Pairs</div>
+                          <Table style={{ marginTop: "20px" }}>
+                            <tbody>
+                              <tr style={{ backgroundColor: "#224377" }}>
+                                <td className="text-white">
+                                  <b>Cross Currency Pairs </b>
+                                </td>
+                                <td className="text-white">
+                                  <b>Nickname</b>
+                                </td>
+                                <td className="text-white">
+                                  <b>Contract Size </b>
+                                </td>
+                              </tr>
+                              <tr className="black-newsletter">
+                                <td>EUR / USD</td>
+                                <td>Euro</td>
+                                <td>EUR 100,000</td>
+                              </tr>
+                              <tr className="black-newsletter">
+                                <td>USD / JPY </td>
+                                <td> Japanese Yen</td>
+                                <td>USD 100,000 </td>
+                              </tr>
+                              <tr className="black-newsletter">
+                                <td> GBP / USD</td>
+                                <td> Poundsterling</td>
+                                <td> GBP 100,000</td>
+                              </tr>
+                              <tr className="black-newsletter">
+                                <td> USD / CHF</td>
+                                <td> Swiss Franc</td>
+                                <td> USD 100,000</td>
+                              </tr>
+                              <tr className="black-newsletter">
+                                <td> AUD / USD</td>
+                                <td> Australian Dollar</td>
+                                <td> AUD 100,000</td>
+                              </tr>
+                              <tr className="black-newsletter">
+                                <td> NZD / USD</td>
+                                <td> New Zealand Dollar</td>
+                                <td> NZD 100,000</td>
+                              </tr>
+                              <tr className="black-newsletter">
+                                <td>USD / CAD </td>
+                                <td> Canadian Dollar</td>
+                                <td>USD 100,000 </td>
+                              </tr>
+                            </tbody>
+                          </Table>
+                        </div>
+                      </ScrollAnimation>
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <div style={{ marginTop: "50px" }}>
+                          <div style={textTitle}>Cross Pairs</div>
 
-                        <Table style={{ marginTop: "20px" }}>
-                          <tbody>
-                            <tr style={{ backgroundColor: "#224377" }}>
-                              <td className="text-white">
-                                <b>Cross Currency Pairs </b>
-                              </td>
-                              <td className="text-white">
-                                <b>Nickname</b>
-                              </td>
-                              <td className="text-white">
-                                <b>Contract Size </b>
-                              </td>
-                            </tr>
-                            <tr className="black-newsletter">
-                              <td>EURGBP</td>
-                              <td>Euro / British Pound </td>
-                              <td>EUR 100,000</td>
-                            </tr>
-                            <tr className="black-newsletter">
-                              <td>EURJPY</td>
-                              <td>Euro / Japanese Yen </td>
-                              <td>EUR 100,000</td>
-                            </tr>
-                            <tr className="black-newsletter">
-                              <td>GBPJPY</td>
-                              <td>British Pound / Japanese Yen</td>
-                              <td>GBP 100,000</td>
-                            </tr>
-                            <tr className="black-newsletter">
-                              <td>CHFJPY</td>
-                              <td>Swiss Franc / Japanese Yen</td>
-                              <td>CHF 100,000</td>
-                            </tr>
-                            <tr className="black-newsletter">
-                              <td>AUDJPY</td>
-                              <td>Australian Dollar / Japanese Yen</td>
-                              <td>AUD 100,000</td>
-                            </tr>
-                          </tbody>
-                        </Table>
-                      </div>
+                          <Table style={{ marginTop: "20px" }}>
+                            <tbody>
+                              <tr style={{ backgroundColor: "#224377" }}>
+                                <td className="text-white">
+                                  <b>Cross Currency Pairs </b>
+                                </td>
+                                <td className="text-white">
+                                  <b>Nickname</b>
+                                </td>
+                                <td className="text-white">
+                                  <b>Contract Size </b>
+                                </td>
+                              </tr>
+                              <tr className="black-newsletter">
+                                <td>EURGBP</td>
+                                <td>Euro / British Pound </td>
+                                <td>EUR 100,000</td>
+                              </tr>
+                              <tr className="black-newsletter">
+                                <td>EURJPY</td>
+                                <td>Euro / Japanese Yen </td>
+                                <td>EUR 100,000</td>
+                              </tr>
+                              <tr className="black-newsletter">
+                                <td>GBPJPY</td>
+                                <td>British Pound / Japanese Yen</td>
+                                <td>GBP 100,000</td>
+                              </tr>
+                              <tr className="black-newsletter">
+                                <td>CHFJPY</td>
+                                <td>Swiss Franc / Japanese Yen</td>
+                                <td>CHF 100,000</td>
+                              </tr>
+                              <tr className="black-newsletter">
+                                <td>AUDJPY</td>
+                                <td>Australian Dollar / Japanese Yen</td>
+                                <td>AUD 100,000</td>
+                              </tr>
+                            </tbody>
+                          </Table>
+                        </div>
+                      </ScrollAnimation>
                     </Col>
                   </Row>
                 </Col>

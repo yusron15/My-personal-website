@@ -36,6 +36,7 @@ import {
   Carousel,
   CarouselItem
 } from "reactstrap";
+import ScrollAnimation from "react-animate-on-scroll";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg1 from "../../assets/img/indexfutures1.png";
@@ -227,7 +228,7 @@ class Content extends React.Component {
               </Col>
             </Row>
           </div>
-          <div className="team-1" style={{ backgroundColor: "#D4D4D4" }}>
+          <div className="team-1 broken-white">
             <Container>
               <Row>
                 <Col md="12">

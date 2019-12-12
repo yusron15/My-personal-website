@@ -34,9 +34,9 @@ class ForexCommodity extends React.Component {
     return (
       <>
         <div
-          className="cd-section"
+          className="cd-section broken-white"
           id="features"
-          style={{ backgroundColor: "#1D1E1F" }}
+          // style={{ backgroundColor: "#D4D4D4" }}
         >
           <div className="features-3">
             <div>
