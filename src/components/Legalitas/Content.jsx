@@ -105,11 +105,16 @@ class Projects extends React.Component {
             <div className="space-50" />
             <div
               className="team-1"
-              style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
+              style={{
+                backgroundImage: `url(${bg})`,
+                backgroundSize: "cover",
+                maxHeight: "200px"
+              }}
             >
               <div
                 className="title"
                 style={{
+                  marginTop: 0,
                   textAlign: "center",
                   fontStyle: "Helvetica Bold",
                   fontSize: "2rem"
@@ -190,11 +195,12 @@ class Projects extends React.Component {
                 className="nav-pills-info nav-pills-icons nav-pills-lg"
                 pills
                 role="tablist"
+                // style={{marginTop:"50px"}}
               >
                 <NavItem className="m-auto">
                   <ScrollAnimation
                     animateIn="fadeInUp"
-                    offset={150}
+                    offset={100}
                     delay={500}
                     animateOut="fadeOutDown"
                   >
@@ -216,7 +222,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <ScrollAnimation
                     animateIn="fadeInUp"
-                    offset={150}
+                    offset={100}
                     delay={300}
                     animateOut="fadeOutDown"
                   >
@@ -238,7 +244,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <ScrollAnimation
                     animateIn="fadeInUp"
-                    offset={150}
+                    offset={100}
                     delay={100}
                     animateOut="fadeOutDown"
                   >
@@ -260,7 +266,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <ScrollAnimation
                     animateIn="fadeInUp"
-                    offset={150}
+                    offset={100}
                     delay={300}
                     animateOut="fadeOutDown"
                   >
@@ -282,7 +288,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <ScrollAnimation
                     animateIn="fadeInUp"
-                    offset={150}
+                    offset={100}
                     delay={500}
                     animateOut="fadeOutDown"
                   >

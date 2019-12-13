@@ -74,12 +74,13 @@ const items = [
   {
     content: (
       <div
-        className="team-1"
+        className="team-1 header-filter"
         style={{
           backgroundImage:
             "url(" + require("assets/img/header-berita.png") + ")",
           backgroundSize: "cover",
-          height: "70vh"
+          height: "70vh",
+          borderRadius: "20px"
         }}
       >
         <Container>
@@ -106,12 +107,13 @@ const items = [
   {
     content: (
       <div
-        className="team-1"
+        className="team-1 header-filter"
         style={{
           backgroundImage:
             "url(" + require("assets/img/header-berita.png") + ")",
           backgroundSize: "cover",
-          height: "70vh"
+          height: "70vh",
+          borderRadius: "20px"
         }}
       >
         <Container>
@@ -138,12 +140,13 @@ const items = [
   {
     content: (
       <div
-        className="team-1"
+        className="team-1 header-filter"
         style={{
           backgroundImage:
             "url(" + require("assets/img/header-berita.png") + ")",
           backgroundSize: "cover",
-          height: "70vh"
+          height: "70vh",
+          borderRadius: "20px"
         }}
       >
         <Container>
@@ -222,6 +225,10 @@ class Carding extends React.Component {
                     next={this.next}
                     previous={this.previous}
                     //   className="carousel-team"
+                    style={{
+                      borderRadius: "20px",
+                      backgroundColor: "transparent"
+                    }}
                   >
                     {items.map((item, key) => {
                       return (

@@ -71,11 +71,16 @@ class Features extends React.Component {
           <div className="features-3">
             <div
               className="team-1"
-              style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
+              style={{
+                backgroundImage: `url(${bg})`,
+                backgroundSize: "cover",
+                maxHeight: "200px"
+              }}
             >
               <div
                 className="title"
                 style={{
+                  marginTop: 0,
                   textAlign: "center",
                   fontStyle: "Helvetica Bold",
                   fontSize: "2rem"

@@ -25,6 +25,7 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import Content from "../../components/NewsPage/Content.jsx";
@@ -35,6 +36,7 @@ import EconomicCalendar from "../../components/NewsContent/EconomicCalendar";
 import EconomicCalendarInside from "../../components/NewsContent/EconomicCalendarInside";
 import StockIndex from "../../components/NewsContent/StockIndex.jsx";
 import MarketOutlook from "../../components/NewsContent/MarketOutlook.jsx";
+import BreakingNews from "../../components/Landing/BreakingNews.jsx";
 import ForexCommodity from "../../components/NewsContent/ForexCommodity";
 import Footer from "../../components/Footers/Footer.jsx";
 
@@ -231,7 +233,28 @@ class NewsPage extends React.Component {
                 Market Outlook
               </div>
             </NavItem>
+            <NavItem clssName="black-newsletter">
+              <div className={this.state.activeTab === "7" ? "active" : ""}>
+                <Link
+                  style={{
+                    backgroundColor: "#1D1E1F",
+                    margin: "0 15px 0 15px",
+                    cursor: "pointer",
+                    color: "#B3B3B3",
+                    ...(this.state.activeTab === "7"
+                      ? { color: "#B3B3B3" }
+                      : { color: "#585858" })
+                  }}
+                  color={this.state.activeTab === "7" ? "#B3B3B3" : "#585858"}
+                  to="/edukasi"
+                >
+                  Video
+                </Link>
+              </div>
+            </NavItem>
           </Nav>
+          <BreakingNews />
+
           <TabContent activeTab={"project" + this.state.activeTab}>
             <TabPane tabId="project1">
               <Content />
@@ -255,7 +278,8 @@ class NewsPage extends React.Component {
               <EconomicCalendar />
             </TabPane>
             <TabPane tabId="project6">
-              <NewsMarketOutlook />
+              {/* <NewsMarketOutlook /> */}
+              <MarketOutlook />
             </TabPane>
           </TabContent>
           <Footer />

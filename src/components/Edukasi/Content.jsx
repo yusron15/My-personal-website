@@ -74,11 +74,16 @@ class Content extends React.Component {
             <div className="space-50" />
             <div
               className="team-1"
-              style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
+              style={{
+                backgroundImage: `url(${bg})`,
+                backgroundSize: "cover",
+                maxHeight: "200px"
+              }}
             >
               <div
                 className="title"
                 style={{
+                  marginTop: 0,
                   textAlign: "center",
                   fontStyle: "Helvetica Bold",
                   fontSize: "2rem"
@@ -87,20 +92,20 @@ class Content extends React.Component {
                 Edukasi
               </div>
             </div>
+            <ReactPlayer
+              url={videos}
+              controls={true}
+              height="300"
+              width="100%"
+              style={{ margin: "20px 0 20px 0" }}
+            />
             <div
               className="broken-white"
               style={{
                 // backgroundColor: "#D4D4D4",
-                padding: "0 15% 2% 15%"
+                padding: "0 12% 2% 12%"
               }}
             >
-              <ReactPlayer
-                url={videos}
-                controls={true}
-                height="300"
-                width="100%"
-                style={{ marginTop: "20px" }}
-              />
               <div
               // style={{
               //   padding: "0 15% 2% 15%"
@@ -114,7 +119,6 @@ class Content extends React.Component {
                     fontWeight: "bold"
                   }}
                 >
-                  {" "}
                   Belajar Forex untuk Pemula
                 </div>
 

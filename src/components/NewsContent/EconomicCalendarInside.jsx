@@ -50,7 +50,10 @@ class EconomicCalendarInside extends React.Component {
         >
           <Row>
             <Col className="ml-auto mr-auto text-center" md="6">
-              <h2 className="title mb-4" style={{ paddingTop: "50px" }}>
+              <h2
+                className="title mb-4 font-black"
+                style={{ paddingTop: "50px" }}
+              >
                 Economic Calendar Inside
               </h2>
               <div className="section-space" />

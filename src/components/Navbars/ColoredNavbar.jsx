@@ -48,11 +48,10 @@ const stylesAnimation = {
 };
 
 const title = {
-  marginLeft: "10px",
   fontSize: "15px",
   fontWeight: "bold",
   color: "black",
-  marginTop: "20px",
+  marginTop: "40px",
   marginBottom: "10px"
 };
 const tentangkami = {
@@ -215,28 +214,37 @@ class ColorNavbar extends React.Component {
                           {/* <Link to="/forexgold">Forex & Gold</Link> */}
                           <div style={title}>Produk</div>
                           <Row>
-                            <Col md="6">
+                            <Col>
                               <Link to="/forex">Forex</Link>
                               <Link to="/gold">Gold</Link>
                               <Link to="/indexfutures">Index Futures</Link>
                             </Col>
-                            <Col md="6">
+                            <Col>
                               <Link to="/cfd">CFD</Link>
 
                               <Link to="/komoditi">Komoditi</Link>
                             </Col>
                           </Row>
                         </Col>
-                        <Col md="3">
+                        <Col md="1">
+                          <div class="vl-navbar-trading"></div>
+                        </Col>
+                        <Col md="2">
                           <div style={title}>Informasi</div>
                           <Link to="/jamperdagangan">Jam Perdagangan</Link>
                         </Col>
-                        <Col md="3">
+                        <Col md="1">
+                          <div class="vl-navbar-trading"></div>
+                        </Col>
+                        <Col md="2">
                           <div style={title}>Trading Platform</div>
                           <Link to="/protrader">Pro I Trader</Link>
                           <Link to="/topgrowthtrader">Topgrowth Trader</Link>
                         </Col>
-                        <Col md="3">
+                        <Col md="1">
+                          <div class="vl-navbar-trading"></div>
+                        </Col>
+                        <Col md="2">
                           <div style={title}>Buka Akun</div>
                           <Link to="/login">Login</Link>
                           <Link to="/register">Register</Link>

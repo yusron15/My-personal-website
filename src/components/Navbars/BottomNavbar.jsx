@@ -57,7 +57,7 @@ class BottomNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      position: "relative",
+      position: "",
       display: "none"
     };
   }
@@ -82,7 +82,7 @@ class BottomNavbar extends React.Component {
       document.body.scrollTop < 300
     ) {
       this.setState({
-        position: "relative"
+        position: ""
       });
     }
   };

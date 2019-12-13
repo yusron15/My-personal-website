@@ -64,12 +64,14 @@ class Content extends React.Component {
               className="team-1"
               style={{
                 backgroundImage: `url(${dollar})`,
-                backgroundSize: "cover"
+                backgroundSize: "cover",
+                maxHeight: "200px"
               }}
             >
               <div
                 className="title"
                 style={{
+                  marginTop: 0,
                   textAlign: "center",
                   fontStyle: "Helvetica Bold",
                   fontSize: "2rem"

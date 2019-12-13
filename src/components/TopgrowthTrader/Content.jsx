@@ -36,9 +36,10 @@ import {
   Carousel,
   CarouselItem
 } from "reactstrap";
+import ScrollAnimation from "react-animate-on-scroll";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
-import bg1 from "../../assets/img/indexfutures1.png";
+import bg from "../../assets/img/headerprotrader.png";
 import rating from "../../assets/img/rating.png";
 import report from "../../assets/img/report.png";
 import list from "../../assets/img/list.png";
@@ -219,12 +220,26 @@ class Content extends React.Component {
           {/* ********* TEAM 1 ********* */}
           <BlurryNavbar />
           <ColoredNavbar />
-          <div className="team-1">
-            <Row>
-              <Col className="ml-auto mr-auto text-center" md="9">
-                <h1 className="title">Topgrowth Trader</h1>
-              </Col>
-            </Row>
+          <div className="space-50" />
+          <div
+            className="team-1"
+            style={{
+              backgroundImage: `url(${bg})`,
+              backgroundSize: "cover",
+              maxHeight: "200px"
+            }}
+          >
+            <div
+              className="title"
+              style={{
+                marginTop: 0,
+                textAlign: "center",
+                fontStyle: "Helvetica Bold",
+                fontSize: "2rem"
+              }}
+            >
+              Topgrowth Trader
+            </div>
           </div>
           <div className="team-1 broken-white">
             <Container>
@@ -261,7 +276,7 @@ class Content extends React.Component {
               </Col>
             </Row>
             <div style={{ marginTop: "50px" }}>
-              <Row>
+              {/* <Row>
                 <Col className="ml-auto mr-auto text-center" md="3">
                   <img src={rating} />
                   <h4>
@@ -296,6 +311,61 @@ class Content extends React.Component {
                 <Col className="ml-auto mr-auto text-center" md="3">
                   <img src={submit} />
                   <h4>Berita real-time untuk bertrading secara fundamental.</h4>
+                </Col>
+              </Row> */}
+              <Row>
+                <Col className="ml-auto mr-auto text-center" md="3">
+                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
+                    <img style={{ marginBottom: "20px" }} src={rating} />
+                    <h4>
+                      {" "}
+                      Charting dilengkapi dengan tools untuk bertrading secara
+                      teknikal.
+                    </h4>
+                  </ScrollAnimation>
+                </Col>
+                <Col className="ml-auto mr-auto text-center" md="3">
+                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
+                    <img style={{ marginBottom: "20px" }} src={report} />
+                    <h4>Catatan Trading Anda dapat diakses dengan cepat.</h4>
+                  </ScrollAnimation>
+                </Col>
+                <Col className="ml-auto mr-auto text-center" md="3">
+                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
+                    <img style={{ marginBottom: "20px" }} src={demand} />
+                    <h4>Bisa disesuaikan dengan kebutuhan anda.</h4>
+                  </ScrollAnimation>
+                </Col>
+              </Row>
+              <Row
+                className="ml-auto mr-auto text-center"
+                md="9"
+                style={{ marginTop: "30px" }}
+              >
+                <Col className="ml-auto mr-auto text-center" md="3">
+                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
+                    <img style={{ marginBottom: "20px" }} src={list} />
+                    <h4>
+                      Life Quotes dalam bentuk Summary maupun Advance mode.
+                      Proses eksekusi Order yang Sederhana dan Cepat.
+                    </h4>
+                  </ScrollAnimation>
+                </Col>
+                <Col className="ml-auto mr-auto text-center" md="3">
+                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
+                    <img style={{ marginBottom: "20px" }} src={sorting} />
+                    <h4 style={{ marginTop: "35px" }}>
+                      Proses eksekusi Order yang Sederhana dan Cepat.
+                    </h4>
+                  </ScrollAnimation>
+                </Col>
+                <Col className="ml-auto mr-auto text-center" md="3">
+                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
+                    <img style={{ marginBottom: "20px" }} src={submit} />
+                    <h4>
+                      Berita real-time untuk bertrading secara fundamental.
+                    </h4>
+                  </ScrollAnimation>
                 </Col>
               </Row>
             </div>

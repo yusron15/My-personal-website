@@ -51,7 +51,8 @@ import "../../assets/css/main.css";
 
 const styles = {
   fadeIn: {
-    animation: "x 1s",
+    animation: "x 3s",
+    // animationDuration: "2s",
     animationName: Radium.keyframes(fadeIn, "fadeIn")
   }
 };
