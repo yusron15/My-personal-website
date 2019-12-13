@@ -67,28 +67,28 @@ class Features extends React.Component {
         >
           {/* ********* FEATURES 3 ********* */}
           <BlurryNavbar />
-
-          <div className="features-3">
+          <div className="space-50" />
+          <div
+            className="team-1"
+            style={{
+              backgroundImage: `url(${bg})`,
+              backgroundSize: "cover",
+              maxHeight: "180px"
+            }}
+          >
             <div
-              className="team-1"
+              className="title"
               style={{
-                backgroundImage: `url(${bg})`,
-                backgroundSize: "cover",
-                maxHeight: "200px"
+                marginTop: "5px",
+                textAlign: "center",
+                fontStyle: "Helvetica Bold",
+                fontSize: "2.25rem"
               }}
             >
-              <div
-                className="title"
-                style={{
-                  marginTop: 0,
-                  textAlign: "center",
-                  fontStyle: "Helvetica Bold",
-                  fontSize: "2rem"
-                }}
-              >
-                FOREX
-              </div>
+              FOREX
             </div>
+          </div>
+          <div className="features-3">
             <Container fluid>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">

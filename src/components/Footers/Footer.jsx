@@ -120,7 +120,7 @@ class Footers extends React.Component {
                     <p>Blok F &/ G</p>
                     <p>Jakarta 10220 Indonesia</p>
                     <p>Jakarta 10220 Indonesia</p>
-                    <p>Email: customerservices@topgrowthfutures.com</p>
+                    {/* <p>Email: customerservices@topgrowthfutures.com</p> */}
                     <p>Tel: 021 2788-9366</p>
                     <p>Fax: 021 2788-9395</p>
 

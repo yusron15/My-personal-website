@@ -380,11 +380,23 @@ hr.grey {
 }
 
 .navbar-bottom a:hover {
-  background: #f1f1f1;
+background: #f1f1f1;
   color: black;
 }
 
 .navbar-bottom a.active {
   background-color: #f1f1f1;
   color: white;
+}
+
+.text-header {
+  margin-top: "10px";
+  text-align: "center";
+  font-style: "Helvetica Bold";
+  font-size: "2.25rem";
+}
+
+.bg-header {
+  background-size: "cover";
+  max-height: "180px";
 }

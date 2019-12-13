@@ -65,16 +65,16 @@ class Content extends React.Component {
               style={{
                 backgroundImage: `url(${dollar})`,
                 backgroundSize: "cover",
-                maxHeight: "200px"
+                maxHeight: "180px"
               }}
             >
               <div
                 className="title"
                 style={{
-                  marginTop: 0,
+                  marginTop: "5px",
                   textAlign: "center",
                   fontStyle: "Helvetica Bold",
-                  fontSize: "2rem"
+                  fontSize: "2.25rem"
                 }}
               >
                 Rekening Terpisah
