@@ -26,10 +26,10 @@ class BreakingNews extends Component {
             <Col
               md="2"
               style={{
-                backgroundColor: "rgba(29,30,31,1)",
+                backgroundColor: "white",
                 zIndex: 9,
                 paddingLeft: "6%",
-                paddingTop: "5px"
+                paddingTop: "12px"
               }}
             >
               {/* <div class="dropdown">
@@ -43,7 +43,11 @@ class BreakingNews extends Component {
                 type="select"
                 name="select"
                 id="exampleSelect"
-                style={{ border: "none" }}
+                style={{
+                  border: "none",
+                  backgroundColor: "white",
+                  color: "black"
+                }}
               >
                 <option>KOMODITI</option>
                 <option>INDEX</option>
