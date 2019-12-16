@@ -63,3 +63,7 @@ export default async function fetchJson(
     // console.log('errror tes ', error);
   }
 }
+
+// export default async function fetchNews(
+
+// );
