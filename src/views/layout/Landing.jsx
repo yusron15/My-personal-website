@@ -28,11 +28,11 @@ class Landing extends React.Component {
         <ColoredNavbar />
         <HeaderLanding />
         <BreakingNews />
-        <News />
-        {/* <NewsInverted /> */}
-        <Feature />
-        <Benefit />
         <Pricing />
+        <Feature />
+        <News />
+        <NewsInverted />
+        <Benefit />
         <Legality />
         <NewsLetter />
         <Footer />

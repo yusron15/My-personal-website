@@ -1,4 +1,4 @@
-import AsyncStorage from "@react-native-community/async-storage";
+import axios from "axios";
 
 type Method = "GET" | "POST" | "PUT" | "PATCH";
 
@@ -8,29 +8,14 @@ export default async function fetchJson(
   data: any
 ): any {
   try {
-    const token = await AsyncStorage.getItem("@token");
-    console.log("token", token);
-    if (method === "GET") {
-      const response = await fetch(`http://134.209.101.189/api/${path}`, {
+    const token = await localStorage.getItem("@token");
+    if (token != undefined) {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}${path}`, {
         method,
         headers: {
           Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
           Authorization: token,
-          "Content-Type": "application/json"
-        }
-      });
-      const result = await response.json();
-      if (result.error != null) {
-        throw result.error;
-      } else {
-        return result;
-      }
-    } else if (method === "POST") {
-      console.log("aaaaaaaa");
-      const response = await fetch(`http://134.209.101.189/api/${path}`, {
-        method,
-        headers: {
-          Accept: "application/json",
           "Content-Type": "application/json"
         },
         body: JSON.stringify(data)
@@ -42,11 +27,11 @@ export default async function fetchJson(
         return result;
       }
     } else {
-      const response = await fetch(`http://134.209.101.189:3000/api/${path}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}${path}`, {
         method,
         headers: {
           Accept: "application/json",
-          Authorization: token,
+          "Access-Control-Allow-Origin": "*",
           "Content-Type": "application/json"
         },
         body: JSON.stringify(data)
@@ -60,10 +45,32 @@ export default async function fetchJson(
     }
   } catch (error) {
     throw error;
-    // console.log('errror tes ', error);
   }
 }
 
-// export default async function fetchNews(
+export async function fetchFormData(path, imageFile) {
+  // console.log(imageFile);
+  const url = `${process.env.REACT_APP_API_URL}${path}`;
+  try {
+    const formData = new FormData();
+    if (imageFile instanceof Array) {
+      await imageFile.map(item => {
+        formData.append("image", item);
+      });
+    } else {
+      formData.append("image", imageFile);
+    }
 
-// );
+    const config = {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        "Access-Control-Allow-Origin": "*"
+      }
+    };
+    const response = await axios.post(url, formData, config);
+    const result = await response.data;
+    return result;
+  } catch (error) {
+    throw error;
+  }
+}

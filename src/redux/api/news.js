@@ -1,12 +1,12 @@
-import fetchJson, { fetchNews } from "../../utils/fetchJson";
-import axios from "axios";
+import fetchJson from "../../utils/fetchJson";
 
+let url = "http://rest.learncode.academy/api/ucon/news/";
 export async function GetNews() {
   try {
     const result = await fetchJson(
       // contoh api
       "GET",
-      `http://rest.learncode.academy/api/ucon/news/`
+      url
     );
     return result;
   } catch (error) {
