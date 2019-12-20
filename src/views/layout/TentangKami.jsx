@@ -14,7 +14,7 @@ class TentangKami extends React.Component {
     return (
       <>
         {/* <Navbar /> */}
-        <HeaderAboutUs />
+        <HeaderAboutUs location={{ ...this.props.location }} />
         <VisiMisi />
         <Footer />
       </>

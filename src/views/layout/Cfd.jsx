@@ -11,7 +11,7 @@ class Cfd extends React.Component {
   render() {
     return (
       <>
-        <ColoredNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
         <Content />
         <Footer />
       </>

@@ -12,7 +12,7 @@ class RekeningTerpisah extends React.Component {
     return (
       <>
         {/* <Navbar /> */}
-        <Content />
+        <Content location={{ ...this.props.location }} />
         <Footer />
       </>
     );

@@ -53,7 +53,7 @@ class Pricing extends React.Component {
     return (
       <>
         <div className="cd-section" id="pricing">
-          {/* ********* PRICING 3 ********* */}
+          {/* *** PRICING 3 *** */}
           <div
             className="pricing-3"
             id="pricing-3"
@@ -102,7 +102,7 @@ class Pricing extends React.Component {
                             borderRadius: "10px"
                           }}
                         >
-                          <CardHeader style={{ textAlign: "center" }}>
+                          <CardHeader>
                             <CardTitle
                               tag="h1"
                               style={{
@@ -126,14 +126,19 @@ class Pricing extends React.Component {
                             >
                               FREE
                             </CardTitle>
-                            <div style={{ marginTop: 10 }}>
-                              <span style={{ color: "#81878D" }}>
+                            <div style={{ marginTop: 10, textAlign: "center" }}>
+                              <span
+                                style={{
+                                  color: "#81878D",
+                                  textAlign: "center"
+                                }}
+                              >
                                 Tidak Ada Deposit
                               </span>
                             </div>
                           </CardHeader>
                           <CardBody>
-                            <div
+                            {/* <div
                               className="item-stripped opacity"
                               style={{
                                 justifyContent: "center",
@@ -150,7 +155,7 @@ class Pricing extends React.Component {
                               >
                                 -
                               </span>
-                            </div>
+                            </div> */}
                             <div
                               className="item-stripped"
                               style={{
@@ -223,19 +228,17 @@ class Pricing extends React.Component {
                           style={{
                             textAlign: "left",
                             backgroundColor: "#323436",
-                            borderRadius: "10px",
-                            textAlign: "center"
+                            borderRadius: "10px"
                           }}
                         >
                           <CardHeader>
                             <CardTitle
                               tag="h1"
                               style={{
-                                textAlign: "left",
+                                textAlign: "center",
                                 fontSize: 24,
                                 fontWeight: "bold",
-                                color: "white",
-                                textAlign: "center"
+                                color: "white"
                               }}
                             >
                               Akun Mini
@@ -243,22 +246,26 @@ class Pricing extends React.Component {
                             <CardTitle
                               tag="h1"
                               style={{
-                                textAlign: "left",
+                                textAlign: "center",
                                 fontWeight: "bold",
-                                fontSize: 50,
-                                textAlign: "center"
+                                fontSize: 50
                               }}
                             >
                               $500
                             </CardTitle>
-                            <div style={{ marginTop: 10 }}>
-                              <span style={{ color: "#81878D" }}>
-                                / initial deposit
+                            <div style={{ marginTop: 10, textAlign: "center" }}>
+                              <span
+                                style={{
+                                  color: "#81878D",
+                                  textAlign: "center"
+                                }}
+                              >
+                                initial deposit
                               </span>
                             </div>
                           </CardHeader>
                           <CardBody>
-                            <div
+                            {/* <div
                               className="item-stripped opacity"
                               style={{
                                 justifyContent: "center",
@@ -275,7 +282,7 @@ class Pricing extends React.Component {
                               >
                                 $ 5
                               </span>
-                            </div>
+                            </div> */}
                             <div
                               className="item-stripped"
                               style={{
@@ -284,6 +291,16 @@ class Pricing extends React.Component {
                                 display: "flex"
                               }}
                             >
+                              <div>
+                                <span
+                                  style={{
+                                    color: "white",
+                                    fontSize: 14
+                                  }}
+                                >
+                                  Minimum &nbsp;
+                                </span>
+                              </div>
                               <span
                                 style={{
                                   color: "white",
@@ -301,13 +318,23 @@ class Pricing extends React.Component {
                                 display: "flex"
                               }}
                             >
+                              <div>
+                                <span
+                                  style={{
+                                    color: "white",
+                                    fontSize: 14
+                                  }}
+                                >
+                                  Maximum &nbsp;
+                                </span>
+                              </div>
                               <span
                                 style={{
                                   color: "white",
                                   fontSize: 20
                                 }}
                               >
-                                1.0 Lot
+                                {` 5.0 Lot`}
                               </span>
                             </div>
                             <div
@@ -347,8 +374,7 @@ class Pricing extends React.Component {
                           style={{
                             textAlign: "left",
                             backgroundColor: "#063980",
-                            borderRadius: "10px",
-                            textAlign: "center"
+                            borderRadius: "10px"
                           }}
                         >
                           <CardHeader>
@@ -373,16 +399,21 @@ class Pricing extends React.Component {
                                 textAlign: "center"
                               }}
                             >
-                              $10000
+                              $ 10,000
                             </CardTitle>
-                            <div style={{ marginTop: 10 }}>
-                              <span style={{ color: "#81878D" }}>
-                                / initial deposit
+                            <div style={{ marginTop: 10, textAlign: "center" }}>
+                              <span
+                                style={{
+                                  color: "#81878D",
+                                  textAlign: "center"
+                                }}
+                              >
+                                initial deposit
                               </span>
                             </div>
                           </CardHeader>
                           <CardBody>
-                            <div
+                            {/* <div
                               className="item-stripped opacity"
                               style={{
                                 justifyContent: "center",
@@ -397,9 +428,9 @@ class Pricing extends React.Component {
                                   opacity: "none"
                                 }}
                               >
-                                Minimum 10 Lot
+                                $ 50
                               </span>
-                            </div>
+                            </div> */}
                             <div
                               className="item-stripped"
                               style={{
@@ -431,7 +462,7 @@ class Pricing extends React.Component {
                                   fontSize: 20
                                 }}
                               >
-                                Maksimum 50.0 Lot
+                                50.0 Lot
                               </span>
                             </div>
                             <div
@@ -464,7 +495,7 @@ class Pricing extends React.Component {
               </Row>
             </Container>
           </div>
-          {/* ********* END PRICING 3 ********* */}
+          {/* *** END PRICING 3 *** */}
         </div>
       </>
     );

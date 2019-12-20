@@ -45,7 +45,7 @@ class Tables extends React.Component {
           {/* ********* Table 2 ********* */}
           <div className="tables-2">
             <BlurryNavbar />
-            <ColoredNavbar />
+            <ColoredNavbar location={{ ...this.props.location }} />
             <div className="space-50" />
 
             <div

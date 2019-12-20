@@ -12,7 +12,7 @@ class ProTrader extends React.Component {
     return (
       <>
         {/* <Navbar /> */}
-        <Content />
+        <Content location={{ ...this.props.location }} />
         <Download />
         <Footer />
       </>

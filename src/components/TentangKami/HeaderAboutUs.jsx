@@ -70,7 +70,7 @@ class HeaderAboutUs extends React.Component {
             // style={{ backgroundColor: "#D4D4D4" }}
           >
             <BlurryNavbar />
-            <ColoredNavbar />
+            <ColoredNavbar location={{ ...this.props.location }} />
             <div className="page-header">
               <div className="content-center">
                 <Container>

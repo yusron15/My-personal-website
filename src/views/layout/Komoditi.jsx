@@ -11,7 +11,7 @@ class Komoditi extends React.Component {
   render() {
     return (
       <>
-        <ColoredNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
         <Header />
         <Content />
         <Footer />

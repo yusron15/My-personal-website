@@ -93,14 +93,14 @@ class RegisterPage extends React.Component {
     return (
       <>
         <BlurryNavbar />
-        <ColorNavbar />
+        <ColorNavbar location={{ ...this.props.location }} />
         <div className="wrapper" ref="wrapper">
           <div
             className="team-1"
             style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
           >
             <div className="page-header">
-              <Container style={{paddingTop:0}}>
+              <Container style={{ paddingTop: 0 }}>
                 <Row>
                   <Col className="mx-auto" lg="5" md="12">
                     <StyleRoot>

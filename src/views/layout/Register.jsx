@@ -94,7 +94,7 @@ class RegisterPage extends React.Component {
     return (
       <>
         <BlurryNavbar />
-        <ColorNavbar />
+        <ColorNavbar location={{ ...this.props.location }} />
         <div className="wrapper" ref="wrapper">
           <div
             className="team-1"

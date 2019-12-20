@@ -297,7 +297,7 @@ class Content extends React.Component {
       <>
         {" "}
         <BlurryNavbar />
-        <ColoredNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
         <div className="space-50" />
         <div
           className="team-1"

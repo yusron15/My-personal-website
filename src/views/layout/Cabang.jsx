@@ -13,7 +13,7 @@ class Cabang extends React.Component {
     return (
       <>
         {/* <Navbar /> */}
-        <ColoredNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
         <CabangKami />
         <Footer />
       </>
