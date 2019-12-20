@@ -52,7 +52,7 @@ class ContactUs extends React.Component {
     return (
       <>
         <BlurryNavbar />
-        <ColoredNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
         <div className="space-50" />
         <div className="wrapper" ref="wrapper">
           <div className="page-header header-filter">

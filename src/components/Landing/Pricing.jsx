@@ -102,14 +102,15 @@ class Pricing extends React.Component {
                             borderRadius: "10px"
                           }}
                         >
-                          <CardHeader>
+                          <CardHeader style={{ textAlign: "center" }}>
                             <CardTitle
                               tag="h1"
                               style={{
                                 textAlign: "left",
                                 fontSize: 24,
                                 fontWeight: "bold",
-                                color: "white"
+                                color: "white",
+                                textAlign: "center"
                               }}
                             >
                               Akun Demo
@@ -119,7 +120,8 @@ class Pricing extends React.Component {
                               style={{
                                 textAlign: "left",
                                 fontWeight: "bold",
-                                fontSize: 50
+                                fontSize: 50,
+                                textAlign: "center"
                               }}
                             >
                               FREE
@@ -221,7 +223,8 @@ class Pricing extends React.Component {
                           style={{
                             textAlign: "left",
                             backgroundColor: "#323436",
-                            borderRadius: "10px"
+                            borderRadius: "10px",
+                            textAlign: "center"
                           }}
                         >
                           <CardHeader>
@@ -231,7 +234,8 @@ class Pricing extends React.Component {
                                 textAlign: "left",
                                 fontSize: 24,
                                 fontWeight: "bold",
-                                color: "white"
+                                color: "white",
+                                textAlign: "center"
                               }}
                             >
                               Akun Mini
@@ -241,7 +245,8 @@ class Pricing extends React.Component {
                               style={{
                                 textAlign: "left",
                                 fontWeight: "bold",
-                                fontSize: 50
+                                fontSize: 50,
+                                textAlign: "center"
                               }}
                             >
                               $500
@@ -342,7 +347,8 @@ class Pricing extends React.Component {
                           style={{
                             textAlign: "left",
                             backgroundColor: "#063980",
-                            borderRadius: "10px"
+                            borderRadius: "10px",
+                            textAlign: "center"
                           }}
                         >
                           <CardHeader>
@@ -352,7 +358,8 @@ class Pricing extends React.Component {
                                 textAlign: "left",
                                 fontSize: 24,
                                 fontWeight: "bold",
-                                color: "white"
+                                color: "white",
+                                textAlign: "center"
                               }}
                             >
                               Akun Reguler
@@ -362,7 +369,8 @@ class Pricing extends React.Component {
                               style={{
                                 textAlign: "left",
                                 fontWeight: "bold",
-                                fontSize: 50
+                                fontSize: 50,
+                                textAlign: "center"
                               }}
                             >
                               $10000
@@ -389,7 +397,7 @@ class Pricing extends React.Component {
                                   opacity: "none"
                                 }}
                               >
-                                $ 50
+                                Minimum 10 Lot
                               </span>
                             </div>
                             <div
@@ -423,7 +431,7 @@ class Pricing extends React.Component {
                                   fontSize: 20
                                 }}
                               >
-                                20.0 Lot
+                                Maksimum 50.0 Lot
                               </span>
                             </div>
                             <div

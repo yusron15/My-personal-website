@@ -60,7 +60,7 @@ class Footers extends React.Component {
                   </a>
                 </Col>
                 <Col md="3">
-                  <h5>Tentang Kami</h5>
+                  <h4>Tentang Kami</h4>
                   <p>
                     <a
                       href="#pablo"
@@ -98,8 +98,8 @@ class Footers extends React.Component {
                     </a>
                   </p>
                 </Col>
-                <Col md="3">
-                  <h5>Layanan</h5>
+                <Col md="2">
+                  <h4>Layanan</h4>
                   <a
                     href="#pablo"
                     onClick={e => e.preventDefault()}
@@ -108,19 +108,17 @@ class Footers extends React.Component {
                     Research & Analysis
                   </a>
                 </Col>
-                <Col md="3">
-                  <h5>Hubungi Kami</h5>
+                <Col md="4">
+                  <h4>Hubungi Kami</h4>
                   <a
                     href="#pablo"
                     onClick={e => e.preventDefault()}
                     style={{ color: "white" }}
                   >
-                    <p>Alamat Kantor</p>
                     <p> Sahid Sudirman Center, lantai 40</p>
                     <p>Blok F &/ G</p>
                     <p>Jakarta 10220 Indonesia</p>
-                    <p>Jakarta 10220 Indonesia</p>
-                    {/* <p>Email: customerservices@topgrowthfutures.com</p> */}
+                    <p>Email: customerservices@topgrowthfutures.com</p>
                     <p>Tel: 021 2788-9366</p>
                     <p>Fax: 021 2788-9395</p>
 

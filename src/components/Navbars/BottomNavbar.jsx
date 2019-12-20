@@ -70,8 +70,8 @@ class BottomNavbar extends React.Component {
 
   changeNavbarPosition = () => {
     if (
-      document.documentElement.scrollTop > 3000 ||
-      document.body.scrollTop > 3000
+      document.documentElement.scrollTop > 4000 ||
+      document.body.scrollTop > 4000
     ) {
       this.setState({
         position: "fixed"

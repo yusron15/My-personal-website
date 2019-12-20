@@ -12,7 +12,7 @@ class BreakingNews extends Component {
       <div
         style={{
           height: "50px",
-          backgroundColor: "rgba(29,30,31,1)"
+          backgroundColor: "transparent"
         }}
       >
         <div
@@ -29,7 +29,7 @@ class BreakingNews extends Component {
                 backgroundColor: "white",
                 zIndex: 9,
                 paddingLeft: "6%",
-                paddingTop: "12px"
+                paddingTop: "8px"
               }}
             >
               {/* <div class="dropdown">
@@ -56,7 +56,7 @@ class BreakingNews extends Component {
               {/* KOMODITI */}
             </Col>
             <Col md="10">
-              <marquee>
+              <marquee scrollamount="5">
                 <Row
                   style={{
                     paddingTop: "1%"

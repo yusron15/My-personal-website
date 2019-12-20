@@ -80,7 +80,10 @@ class Content extends React.Component {
                 Rekening Terpisah
               </div>
             </div>
-            <div className="team-1 broken-white" style={{ height: "70vh" }}>
+            <div
+              className="team-1 broken-white"
+              style={{ height: "70vh", padding: 0 }}
+            >
               <Col>
                 <Row style={{ marginLeft: "10%" }}>
                   <Col md="8">
@@ -96,7 +99,7 @@ class Content extends React.Component {
                       >
                         Rekening Terpisah
                       </h1>
-                      <p className="font-black">
+                      <p className="font-black" style={{ lineHeight: "25px" }}>
                         Rekening Terpisah (Segregated Account) adalah sebuah
                         rekening bank atas nama perusahaan pialang berjangka
                         yang difungsikan khusus untuk menampung dana kolektif
@@ -120,7 +123,10 @@ class Content extends React.Component {
                           <img src={check} />
                         </Col>
                         <Col>
-                          <p className="font-black">
+                          <p
+                            className="font-black"
+                            style={{ lineHeight: "25px" }}
+                          >
                             BCA RUPIAH Nomor Akun // Account Number:
                             035.311.8568 Swiftcode: CENAIDJA a.n. // Account
                             Name: PT. Topgrowth Futures
@@ -136,7 +142,10 @@ class Content extends React.Component {
                           <img src={check} />
                         </Col>
                         <Col>
-                          <p className="font-black">
+                          <p
+                            className="font-black"
+                            style={{ lineHeight: "25px" }}
+                          >
                             BCA Dollar Nomor Akun: // Account Number:
                             035.317.7718 Swiftcode: CENAIDJA a.n. // Account
                             Name: PT. Topgrowth Futures

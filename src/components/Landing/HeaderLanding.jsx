@@ -30,6 +30,7 @@ import classnames from "classnames";
 import "../../assets/css/main.css";
 import { Carousel } from "react-bootstrap";
 // import { Carousel } from "react-responsive-carousel";
+import BreakingNews from "../../components/Landing/BreakingNews.jsx";
 import Navbar from "../../components/Navbars/Navbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import CardRegister from "../../components/Register/CardRegister.jsx";
@@ -54,21 +55,29 @@ class HeaderLanding extends React.Component {
   render() {
     return (
       <>
-        <div className="cd-section" id="headers">
+        <div
+          className="cd-section header-filter"
+          id="headers"
+          style={{
+            backgroundImage:
+              "url(" + require("assets/img/header-image.png") + ")",
+            backgroundSize: "cover"
+          }}
+        >
           <div>
             <BlurryNavbar />
             <div className="space-50" />
             <Row
-              className="header-filter"
-              style={{
-                backgroundImage:
-                  "url(" + require("assets/img/header-image.png") + ")",
-                backgroundSize: "cover"
-              }}
+            // className="header-filter"
+            // style={{
+            //   backgroundImage:
+            //     "url(" + require("assets/img/header-image.png") + ")",
+            //   backgroundSize: "cover"
+            // }}
             >
               <Col md="5 offset-md-1">
                 <Carousel
-                  indicators={true}
+                  indicators={false}
                   controls={false}
                   slide={true}
                   touch={true}
@@ -168,7 +177,7 @@ class HeaderLanding extends React.Component {
                             />
                           </Col> */}
                           <Col md="12">
-                            <Row className="vertical-center">
+                            <Row>
                               <div
                                 style={{
                                   fontStyle: "Helvetica Bold",
@@ -221,6 +230,7 @@ class HeaderLanding extends React.Component {
               </Col>
             </Row>
           </div>
+          <BreakingNews />
         </div>
       </>
     );

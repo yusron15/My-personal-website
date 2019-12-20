@@ -19,11 +19,12 @@ import React from "react";
 // reactstrap components
 import { Badge, Button, Container, Row, Col } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
-import laptop from "../../assets/img/download.png";
+import laptop from "../../assets/img/computer-download.png";
 import android from "../../assets/img/download-android.png";
 import mac from "../../assets/img/download-mac.png";
 import ios from "../../assets/img/download-ios.png";
 import windows from "../../assets/img/download-windows.png";
+import world from "../../assets/img/world.png";
 import "../../assets/css/main.css";
 class Features extends React.Component {
   render() {

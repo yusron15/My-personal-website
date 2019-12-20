@@ -49,10 +49,10 @@ const textContent = {
   fontStyle: "Helvetica Bold",
   margin: 0,
   position: "absolute",
-  top: "50%",
+  // top: "50%",
   fontSize: "1rem",
-  msTransform: "translateY(-50%)",
-  transform: "translateY(-50%)",
+  // msTransform: "translateY(-50%)",
+  // transform: "translateY(-50%)",
   color: "black"
 };
 
@@ -235,114 +235,106 @@ class Features extends React.Component {
                           </p>{" "}
                         </ScrollAnimation>
                       </div>
-                      <ScrollAnimation
-                        animateIn="fadeInUp"
-                        animateOut="fadeOut"
-                      >
-                        <div style={{ marginTop: "30px" }}>
-                          <div style={textTitle}>Major Pairs</div>
 
-                          <Table style={{ marginTop: "20px" }}>
-                            <tbody>
-                              <tr style={{ backgroundColor: "#224377" }}>
-                                <td className="text-white">
-                                  <b>Cross Currency Pairs </b>
-                                </td>
-                                <td className="text-white">
-                                  <b>Nickname</b>
-                                </td>
-                                <td className="text-white">
-                                  <b>Contract Size </b>
-                                </td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td>EUR / USD</td>
-                                <td>Euro</td>
-                                <td>EUR 100,000</td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td>USD / JPY </td>
-                                <td> Japanese Yen</td>
-                                <td>USD 100,000 </td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td> GBP / USD</td>
-                                <td> Poundsterling</td>
-                                <td> GBP 100,000</td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td> USD / CHF</td>
-                                <td> Swiss Franc</td>
-                                <td> USD 100,000</td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td> AUD / USD</td>
-                                <td> Australian Dollar</td>
-                                <td> AUD 100,000</td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td> NZD / USD</td>
-                                <td> New Zealand Dollar</td>
-                                <td> NZD 100,000</td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td>USD / CAD </td>
-                                <td> Canadian Dollar</td>
-                                <td>USD 100,000 </td>
-                              </tr>
-                            </tbody>
-                          </Table>
-                        </div>
-                      </ScrollAnimation>
-                      <ScrollAnimation
-                        animateIn="fadeInUp"
-                        animateOut="fadeOut"
-                      >
-                        <div style={{ marginTop: "50px" }}>
-                          <div style={textTitle}>Cross Pairs</div>
+                      <div style={{ marginTop: "30px" }}>
+                        <div style={textTitle}>Major Pairs</div>
 
-                          <Table style={{ marginTop: "20px" }}>
-                            <tbody>
-                              <tr style={{ backgroundColor: "#224377" }}>
-                                <td className="text-white">
-                                  <b>Cross Currency Pairs </b>
-                                </td>
-                                <td className="text-white">
-                                  <b>Nickname</b>
-                                </td>
-                                <td className="text-white">
-                                  <b>Contract Size </b>
-                                </td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td>EURGBP</td>
-                                <td>Euro / British Pound </td>
-                                <td>EUR 100,000</td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td>EURJPY</td>
-                                <td>Euro / Japanese Yen </td>
-                                <td>EUR 100,000</td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td>GBPJPY</td>
-                                <td>British Pound / Japanese Yen</td>
-                                <td>GBP 100,000</td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td>CHFJPY</td>
-                                <td>Swiss Franc / Japanese Yen</td>
-                                <td>CHF 100,000</td>
-                              </tr>
-                              <tr className="black-newsletter">
-                                <td>AUDJPY</td>
-                                <td>Australian Dollar / Japanese Yen</td>
-                                <td>AUD 100,000</td>
-                              </tr>
-                            </tbody>
-                          </Table>
-                        </div>
-                      </ScrollAnimation>
+                        <Table style={{ marginTop: "20px" }}>
+                          <tbody>
+                            <tr style={{ backgroundColor: "#224377" }}>
+                              <td className="text-white">
+                                <b>Cross Currency Pairs </b>
+                              </td>
+                              <td className="text-white">
+                                <b>Nickname</b>
+                              </td>
+                              <td className="text-white">
+                                <b>Contract Size </b>
+                              </td>
+                            </tr>
+                            <tr className="black-newsletter">
+                              <td>EUR / USD</td>
+                              <td>Euro</td>
+                              <td>EUR 100,000</td>
+                            </tr>
+                            <tr className="black-newsletter">
+                              <td>USD / JPY </td>
+                              <td> Japanese Yen</td>
+                              <td>USD 100,000 </td>
+                            </tr>
+                            <tr className="black-newsletter">
+                              <td> GBP / USD</td>
+                              <td> Poundsterling</td>
+                              <td> GBP 100,000</td>
+                            </tr>
+                            <tr className="black-newsletter">
+                              <td> USD / CHF</td>
+                              <td> Swiss Franc</td>
+                              <td> USD 100,000</td>
+                            </tr>
+                            <tr className="black-newsletter">
+                              <td> AUD / USD</td>
+                              <td> Australian Dollar</td>
+                              <td> AUD 100,000</td>
+                            </tr>
+                            <tr className="black-newsletter">
+                              <td> NZD / USD</td>
+                              <td> New Zealand Dollar</td>
+                              <td> NZD 100,000</td>
+                            </tr>
+                            <tr className="black-newsletter">
+                              <td>USD / CAD </td>
+                              <td> Canadian Dollar</td>
+                              <td>USD 100,000 </td>
+                            </tr>
+                          </tbody>
+                        </Table>
+                      </div>
+
+                      <div style={{ marginTop: "50px" }}>
+                        <div style={textTitle}>Cross Pairs</div>
+
+                        <Table style={{ marginTop: "20px" }}>
+                          <tbody>
+                            <tr style={{ backgroundColor: "#224377" }}>
+                              <td className="text-white">
+                                <b>Cross Currency Pairs </b>
+                              </td>
+                              <td className="text-white">
+                                <b>Nickname</b>
+                              </td>
+                              <td className="text-white">
+                                <b>Contract Size </b>
+                              </td>
+                            </tr>
+                            <tr className="black-newsletter">
+                              <td>EURGBP</td>
+                              <td>Euro / British Pound </td>
+                              <td>EUR 100,000</td>
+                            </tr>
+                            <tr className="black-newsletter">
+                              <td>EURJPY</td>
+                              <td>Euro / Japanese Yen </td>
+                              <td>EUR 100,000</td>
+                            </tr>
+                            <tr className="black-newsletter">
+                              <td>GBPJPY</td>
+                              <td>British Pound / Japanese Yen</td>
+                              <td>GBP 100,000</td>
+                            </tr>
+                            <tr className="black-newsletter">
+                              <td>CHFJPY</td>
+                              <td>Swiss Franc / Japanese Yen</td>
+                              <td>CHF 100,000</td>
+                            </tr>
+                            <tr className="black-newsletter">
+                              <td>AUDJPY</td>
+                              <td>Australian Dollar / Japanese Yen</td>
+                              <td>AUD 100,000</td>
+                            </tr>
+                          </tbody>
+                        </Table>
+                      </div>
                     </Col>
                   </Row>
                 </Col>

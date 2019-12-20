@@ -58,7 +58,7 @@ class VisiMisi extends React.Component {
               delay={300}
               animateOut="fadeOut"
             >
-              <div style={{ backgroundColor: "rgba(165, 165, 165, 0.33)" }}>
+              <div style={{ backgroundColor: "rgba(0, 0, 0, 0.66)" }}>
                 <Container>
                   <div className="space-50" />
                   <Row>

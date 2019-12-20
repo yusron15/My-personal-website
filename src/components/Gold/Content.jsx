@@ -50,10 +50,10 @@ const textContent = {
   fontStyle: "Helvetica Bold",
   margin: 0,
   position: "absolute",
-  top: "50%",
-  fontSize: "1rem",
-  msTransform: "translateY(-50%)",
-  transform: "translateY(-50%)"
+  // top: "50%",
+  fontSize: "1rem"
+  // msTransform: "translateY(-50%)",
+  // transform: "translateY(-50%)"
 };
 
 class Features extends React.Component {
@@ -85,7 +85,7 @@ class Features extends React.Component {
             </div>
           </div>
           <div className="space-50" />
-          <div className="features-3">
+          <div className="features-3" style={{ paddingTop: 0 }}>
             <Container fluid>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
@@ -95,7 +95,13 @@ class Features extends React.Component {
                   >
                     GOLD
                   </div> */}
-                  <p style={{ textAlign: "center", color: "black" }}>
+                  <p
+                    style={{
+                      textAlign: "center",
+                      color: "black",
+                      marginBottom: "50px"
+                    }}
+                  >
                     London Bullion Market adalah grosir pasar over-the-counter
                     untuk perdagangan emas dan perak. Perdagangan dilakukan di
                     antara anggota Asosiasi Pasar Bullion London (LBMA), diawasi
@@ -110,7 +116,7 @@ class Features extends React.Component {
               <Row>
                 <Col
                   sm={{ size: 10, order: 2, offset: 1 }}
-                  style={{ marginTop: "50px" }}
+                  style={{ marginTop: 0 }}
                 >
                   <Row>
                     <Col lg="4">

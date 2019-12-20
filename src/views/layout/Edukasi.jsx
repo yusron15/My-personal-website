@@ -10,7 +10,7 @@ class Edukasi extends React.Component {
   render() {
     return (
       <>
-        <ColoredNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
         <Content />
         <Footer />
       </>

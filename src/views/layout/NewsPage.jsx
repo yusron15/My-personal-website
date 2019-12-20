@@ -66,7 +66,7 @@ class NewsPage extends React.Component {
       <>
         <div style={{ backgroundColor: "#1D1E1F" }}>
           <BlurryNavbar />
-          <ColoredNavbar />
+          <ColoredNavbar location={{ ...this.props.location }}/>
           <div className="space-50" />
           <Nav
             className="nav-pills-info nav-pills-icons nav-pills-lg"

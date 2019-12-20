@@ -20,7 +20,7 @@
   transition: all .5s ease;
   z-index: 1;
   left: -38vw;
-  width: 101vw;
+  width: 102vw;
   display: none;
   justify-content: space-around;
   height: 120px;
@@ -155,7 +155,7 @@
 
 .dropdown:hover .dropdown-content-trading {display: block;}
 
-.dropdown:hover .dropbtn {background-color: transparent;}
+.dropdown:hover .dropbtn:hover {background-color: transparent; color:"#2AB4E7"}
 
 .vertical-center{
     text-align: left;
@@ -184,7 +184,9 @@
 }
 
 .scaled {
-  transform: scale(1.2); /* Equal to scaleX(0.7) scaleY(0.7) */
+  transform: scale(1.1);
+  width:20vw; /* Equal to scaleX(0.7) scaleY(0.7) */
+  transition: all .20s ease-out;
   /* border-radius:30px; */
   /* background-color: pink; */
 }
@@ -322,7 +324,8 @@ hr.grey {
  }
 
  .text-benefit:hover {
-  color:black;
+  /* color:black; */
+  color:white;
  }
 
  .card-komoditi:hover {
@@ -336,7 +339,7 @@ hr.grey {
  }
 
 .card-benefit:hover {
- background-color: white;
+ background-color: #063980;
  border-radius: 10px;
  color:black;
 }

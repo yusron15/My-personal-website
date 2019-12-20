@@ -25,9 +25,9 @@ class Landing extends React.Component {
       <>
         {/* <Navbar /> */}
         {/* <BlurryNavbar /> */}
-        <ColoredNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
         <HeaderLanding />
-        <BreakingNews />
+        {/* <BreakingNews /> */}
         <Pricing />
         <Feature />
         <News />

@@ -169,8 +169,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <ScrollAnimation
                     animateIn="fadeInUp"
-                    offset={150}
-                    delay={500}
+                    offset={100}
                     animateOut="fadeOutDown"
                   >
                     <img
@@ -191,8 +190,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <ScrollAnimation
                     animateIn="fadeInUp"
-                    offset={150}
-                    delay={300}
+                    offset={100}
                     animateOut="fadeOutDown"
                   >
                     <img
@@ -213,8 +211,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <ScrollAnimation
                     animateIn="fadeInUp"
-                    offset={150}
-                    delay={100}
+                    offset={100}
                     animateOut="fadeOutDown"
                   >
                     <img
@@ -235,8 +232,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <ScrollAnimation
                     animateIn="fadeInUp"
-                    offset={150}
-                    delay={300}
+                    offset={100}
                     animateOut="fadeOutDown"
                   >
                     <img
@@ -257,8 +253,7 @@ class Projects extends React.Component {
                 <NavItem className="m-auto">
                   <ScrollAnimation
                     animateIn="fadeInUp"
-                    offset={150}
-                    delay={500}
+                    offset={100}
                     animateOut="fadeOutDown"
                   >
                     <img

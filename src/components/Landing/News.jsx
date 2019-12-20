@@ -48,6 +48,7 @@ import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
 import leftButton from "../../assets/img/blue-right.png";
 import rightButton from "../../assets/img/blue-left.png";
+import { Link } from "react-router-dom";
 
 const PrevButton = props => {
   return (
@@ -389,6 +390,11 @@ class News extends React.Component {
                       </TabPane>
                     </TabContent>
                   </p>
+                  <Link to="/newspage">
+                    <Button block color="info" type="button">
+                      Explore
+                    </Button>
+                  </Link>
                 </Col>
               </Row>
             </Container>

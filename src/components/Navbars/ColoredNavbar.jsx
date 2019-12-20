@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { slideInDown } from "react-animations";
 import { Link } from "react-router-dom";
@@ -35,7 +19,7 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
-import logo from "../../assets/img/Bitmap.png";
+import logo from "../../assets/img/logo-topgrowth.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import Radium, { StyleRoot } from "radium";
@@ -69,9 +53,19 @@ class ColorNavbar extends React.Component {
     this.state = {
       navbarColor: "broken-white",
       marginTop: "50px",
-      color: "black"
+      color: "black",
+      activeTab: "1"
     };
   }
+
+  toggle = tab => {
+    if (this.state.activeTab !== tab) {
+      this.setState({
+        activeTab: tab
+      });
+    }
+  };
+
   componentDidMount() {
     window.addEventListener("scroll", this.changeNavbarColor);
   }
@@ -81,12 +75,20 @@ class ColorNavbar extends React.Component {
 
   changeNavbarColor = () => {
     if (
-      document.documentElement.scrollTop > 700 ||
-      document.body.scrollTop > 700
+      document.documentElement.scrollTop > 1500 ||
+      document.body.scrollTop > 1500
     ) {
       this.setState({
         navbarColor: "black-newsletter",
         color: "white"
+      });
+    } else if (
+      document.documentElement.scrollTop > 2000 ||
+      document.body.scrollTop > 2000
+    ) {
+      this.setState({
+        navbarColor: "broken-white",
+        color: "black"
       });
     } else if (
       document.documentElement.scrollTop > 10 ||
@@ -125,7 +127,17 @@ class ColorNavbar extends React.Component {
     }
   };
 
+  coloringNav = pathLink => {
+    const currentPath = this.props.location.pathname;
+
+    console.log(currentPath, pathLink, "adasdadas");
+
+    return currentPath === pathLink ? "#2AB4E7" : this.state.color;
+  };
+
   render() {
+    console.log(this.props.location, "locationlocation");
+
     const styles = {
       containerStyle: {
         marginTop: this.state.marginTop,
@@ -147,7 +159,7 @@ class ColorNavbar extends React.Component {
           <Container>
             <div className="navbar-translate">
               <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                <img src={logo} />
+                <img src={logo} style={{ height: "5vh", width: "auto" }} />
                 {/* TGF */}
               </NavbarBrand>
               <button
@@ -160,16 +172,30 @@ class ColorNavbar extends React.Component {
               </button>
             </div>
             <UncontrolledCollapse navbar toggler="#example-navbar-transparent">
-              <Nav className="ml-auto" navbar>
+              <Nav
+                className="nav-pills-info nav-pills-icons nav-pills-lg ml-auto"
+                pills
+                role="tablist"
+                navbar
+              >
                 <NavItem>
                   <button class="dropbtn">
-                    <Link to="/landing" style={colorStyle}>
+                    <Link
+                      to="/landing"
+                      style={{
+                        color: this.coloringNav("/landing")
+                        // color: "black",
+                        // ...(this.state.activeTab === "1"
+                        //   ? { color: "#2AB4E7" }
+                        //   : { color: this.state.color })
+                      }}
+                      // onClick={() => {
+                      //   this.toggle("1");
+                      // }}
+                    >
                       Home
                     </Link>
                   </button>
-                  {/* <Link to="/landing">
-                      <DropdownToggle>Home</DropdownToggle>
-                    </Link> */}
                 </NavItem>
 
                 <div class="dropdown" style={stylesAnimation.slideInDown}>
@@ -203,15 +229,10 @@ class ColorNavbar extends React.Component {
                   <button class="dropbtn" style={colorStyle}>
                     Trading Online
                   </button>
-                  <div
-                    class="dropdown-content-trading trading-online"
-                    // style={{ width: "100vw" }}
-                  >
+                  <div class="dropdown-content-trading trading-online">
                     <Container>
                       <Row>
                         <Col md="3">
-                          {/* <div className="title">Produk</div> */}
-                          {/* <Link to="/forexgold">Forex & Gold</Link> */}
                           <div style={title}>Produk</div>
                           <Row>
                             <Col>
@@ -221,7 +242,6 @@ class ColorNavbar extends React.Component {
                             </Col>
                             <Col>
                               <Link to="/cfd">CFD</Link>
-
                               <Link to="/komoditi">Komoditi</Link>
                             </Col>
                           </Row>
@@ -256,19 +276,39 @@ class ColorNavbar extends React.Component {
 
                 <div class="dropdown ">
                   <button class="dropbtn" style={colorStyle}>
-                    <Link to="/newspage" style={colorStyle}>
-                      {" "}
+                    <Link
+                      to="/newspage"
+                      style={{
+                        color: this.coloringNav("/newspage")
+                        // color: "black",
+                        // ...(this.state.activeTab === "2"
+                        //   ? { color: "#2AB4E7" }
+                        //   : { color: this.state.color })
+                      }}
+                      // onClick={() => {
+                      //   this.toggle("2");
+                      // }}
+                    >
                       Berita
                     </Link>
                   </button>
-                  {/* <div class="dropdown-content layanan">
-                    <Link to="/newspage">Berita dan analisa Market</Link>
-                  </div> */}
                 </div>
 
                 <NavItem>
                   <button class="dropbtn">
-                    <Link to="/edukasi" style={colorStyle}>
+                    <Link
+                      to="/edukasi"
+                      style={{
+                        color: this.coloringNav("/edukasi")
+                        // color: "black",
+                        // ...(this.state.activeTab === "3"
+                        //   ? { color: "#2AB4E7" }
+                        //   : { color: this.state.color })
+                      }}
+                      // onClick={() => {
+                      //   this.toggle("3");
+                      // }}
+                    >
                       Edukasi
                     </Link>
                   </button>
@@ -276,14 +316,40 @@ class ColorNavbar extends React.Component {
 
                 <NavItem>
                   <button class="dropbtn">
-                    <Link to="/karir" style={colorStyle}>
+                    <Link
+                      to="/karir"
+                      style={colorStyle}
+                      style={{
+                        color: this.coloringNav("/karir")
+                        // color: this.state.color,
+                        // ...(this.state.activeTab === "4"
+                        //   ? { color: "#2AB4E7" }
+                        //   : { color: this.state.color })
+                      }}
+                      // onClick={() => {
+                      //   this.toggle("4");
+                      // }}
+                    >
                       Karir
                     </Link>
                   </button>
                 </NavItem>
+
                 <NavItem>
                   <button class="dropbtn">
-                    <Link to="/Contact" style={colorStyle}>
+                    <Link
+                      to="/Contact"
+                      style={{
+                        color: this.coloringNav("/Contact")
+                        // color: this.state.color,
+                        // ...(this.state.activeTab === "5"
+                        //   ? { color: "#2AB4E7" }
+                        //   : { color: this.state.color })
+                      }}
+                      // onClick={() => {
+                      //   this.toggle("5");
+                      // }}
+                    >
                       Hubungi Kami
                     </Link>
                   </button>

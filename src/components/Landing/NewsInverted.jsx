@@ -39,6 +39,8 @@ import {
   CarouselIndicators
 } from "reactstrap";
 
+import { Link } from "react-router-dom";
+
 // import { NewsContent } from "./NewsContent";
 
 import work from "assets/img/news1.png";
@@ -149,7 +151,7 @@ class NewsInverted extends React.Component {
         <div className="cd-section" id="testimonials">
           <div
             className="testimonials-4"
-            style={{ backgroundColor: "#1D1E1F", padding: "20px" }}
+            style={{ backgroundColor: "#1D1E1F", padding: "20px 15vw 0 0" }}
           >
             <Container>
               <Row>
@@ -195,7 +197,7 @@ class NewsInverted extends React.Component {
                 <Col
                   md="6"
                   className="positioned-text-right"
-                  style={{ padding: "10vh 15vw 0 0" }}
+                  style={{ padding: "10vh 20vw 0 0" }}
                 >
                   <h1 className="title">Analisa Harian</h1>
                   <p className="description text-white">
@@ -239,6 +241,11 @@ class NewsInverted extends React.Component {
                       </TabPane>
                     </TabContent>
                   </p>
+                  <Link to="/newspage">
+                    <Button block color="info" type="button">
+                      Explore
+                    </Button>
+                  </Link>
                 </Col>
               </Row>
             </Container>

@@ -16,8 +16,16 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect,
+  Router
+} from "react-router-dom";
 import { Provider } from "react-redux";
+
+import { createBrowserHistory } from "history";
 
 import store from "./redux/ducks/store";
 
@@ -80,6 +88,8 @@ import "animate.css/animate.min.css";
 
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 
+const hist = createBrowserHistory();
+
 const theme = createMuiTheme({
   overrides: {
     MuiOutlinedInput: {
@@ -102,7 +112,7 @@ const theme = createMuiTheme({
 });
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router history={hist}>
     <MuiThemeProvider theme={theme}>
       <Provider store={store}>
         <Switch>
@@ -204,6 +214,6 @@ ReactDOM.render(
         </Switch>
       </Provider>
     </MuiThemeProvider>
-  </BrowserRouter>,
+  </Router>,
   document.getElementById("root")
 );

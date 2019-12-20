@@ -270,7 +270,6 @@ class Testimonials extends React.Component {
                           // style={styles.fadeInUp}
                           style={{
                             backgroundColor: "rgba(112, 112, 112, 0.19)",
-                            color: "white",
                             minHeight: "270px",
                             minWidth: "200px",
                             borderRadius: "10px"
@@ -311,14 +310,13 @@ class Testimonials extends React.Component {
                   >
                     <div
                       className="card-benefit text-benefit"
-                      // onMouseEnter={this.handleLegalitasEnter}
-                      // onMouseLeave={this.handleLegalitasLeave}
+                      onMouseEnter={this.handleLegalitasEnter}
+                      onMouseLeave={this.handleLegalitasLeave}
                     >
                       <div
                         className="info text-left"
                         style={{
                           backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          color: "white",
                           minHeight: "270px",
                           minWidth: "200px",
                           borderRadius: "10px"
@@ -357,14 +355,13 @@ class Testimonials extends React.Component {
                   >
                     <div
                       className="card-benefit text-benefit"
-                      // onMouseEnter={this.handleLayananEnter}
-                      // onMouseLeave={this.handleLayananLeave}
+                      onMouseEnter={this.handleLayananEnter}
+                      onMouseLeave={this.handleLayananLeave}
                     >
                       <div
                         className="info text-left"
                         style={{
                           backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          color: "white",
                           minHeight: "270px",
                           minWidth: "200px",
                           borderRadius: "10px"
@@ -408,14 +405,13 @@ class Testimonials extends React.Component {
                   >
                     <div
                       className="card-benefit text-benefit"
-                      // onMouseEnter={this.handleBeritaEnter}
-                      // onMouseLeave={this.handleBeritaLeave}
+                      onMouseEnter={this.handleBeritaEnter}
+                      onMouseLeave={this.handleBeritaLeave}
                     >
                       <div
                         className="info text-left"
                         style={{
                           backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          color: "white",
                           minHeight: "270px",
                           minWidth: "200px",
                           borderRadius: "10px"
@@ -453,14 +449,13 @@ class Testimonials extends React.Component {
                   >
                     <div
                       className="card-benefit text-benefit"
-                      // onMouseEnter={this.handleRequoteEnter}
-                      // onMouseLeave={this.handleRequoteLeave}
+                      onMouseEnter={this.handleRequoteEnter}
+                      onMouseLeave={this.handleRequoteLeave}
                     >
                       <div
                         className="info text-left"
                         style={{
                           backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          color: "white",
                           minHeight: "270px",
                           minWidth: "200px",
                           borderRadius: "10px"
@@ -498,14 +493,13 @@ class Testimonials extends React.Component {
                   >
                     <div
                       className="card-benefit text-benefit"
-                      // onMouseEnter={this.handleSupportEnter}
-                      // onMouseLeave={this.handleSupportLeave}
+                      onMouseEnter={this.handleSupportEnter}
+                      onMouseLeave={this.handleSupportLeave}
                     >
                       <div
                         className="info text-left"
                         style={{
                           backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          color: "white",
                           minHeight: "270px",
                           minWidth: "200px",
                           borderRadius: "10px"

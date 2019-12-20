@@ -40,7 +40,7 @@ class Blogs extends React.Component {
         <div className="cd-section broken-white" id="blogs">
           {/* ********* END BLOGS 5 ********* */}
           <BlurryNavbar />
-          <ColoredNavbar />
+          <ColoredNavbar location={{ ...this.props.location }} />
           <div className="blogs-5">
             <Container>
               <Row>

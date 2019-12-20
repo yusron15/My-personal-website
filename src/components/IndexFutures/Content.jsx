@@ -77,7 +77,7 @@ const items = [
           <Col md="11" className="offset-md-1">
             <div
               style={{
-                backgroundColor: "rgba(179, 172, 172, 0.39)"
+                backgroundColor: "rgba(0, 0, 0, 0.66)"
               }}
             >
               <div className="space-50" />
@@ -139,7 +139,7 @@ const items = [
           <Col md="11" className="offset-md-1">
             <div
               style={{
-                backgroundColor: "rgba(179, 172, 172, 0.39)"
+                backgroundColor: "rgba(0, 0, 0, 0.66)"
               }}
             >
               <div className="space-50" />
@@ -203,7 +203,7 @@ const items = [
           <Col md="11" className="offset-md-1">
             <div
               style={{
-                backgroundColor: "rgba(179, 172, 172, 0.39)"
+                backgroundColor: "rgba(0, 0, 0, 0.66)"
               }}
             >
               <div className="space-50" />

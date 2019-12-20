@@ -85,11 +85,15 @@ class HeaderAboutUs extends React.Component {
                           className="title font-black"
                           style={{ color: "black" }}
                         >
-                          Tentang <br /> Topgrowth Future
+                          Tentang Topgrowth Future
                         </h1>
                         <p
                           className="description font-black"
-                          style={{ color: "black" }}
+                          style={{
+                            color: "black",
+                            textAlign: "justify",
+                            lineHeight: "30px"
+                          }}
                         >
                           Didirikan sejak tahun 2003, Topgrowth Futures telah
                           berkembang menjadi perusahaan pialang terbaik dan

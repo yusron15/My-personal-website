@@ -201,7 +201,6 @@ class Projects extends React.Component {
                   <ScrollAnimation
                     animateIn="fadeInUp"
                     offset={100}
-                    delay={500}
                     animateOut="fadeOutDown"
                   >
                     <img
@@ -223,7 +222,6 @@ class Projects extends React.Component {
                   <ScrollAnimation
                     animateIn="fadeInUp"
                     offset={100}
-                    delay={300}
                     animateOut="fadeOutDown"
                   >
                     <img
@@ -245,7 +243,6 @@ class Projects extends React.Component {
                   <ScrollAnimation
                     animateIn="fadeInUp"
                     offset={100}
-                    delay={100}
                     animateOut="fadeOutDown"
                   >
                     <img
@@ -267,7 +264,6 @@ class Projects extends React.Component {
                   <ScrollAnimation
                     animateIn="fadeInUp"
                     offset={100}
-                    delay={300}
                     animateOut="fadeOutDown"
                   >
                     <img
@@ -289,7 +285,6 @@ class Projects extends React.Component {
                   <ScrollAnimation
                     animateIn="fadeInUp"
                     offset={100}
-                    delay={500}
                     animateOut="fadeOutDown"
                   >
                     <img
