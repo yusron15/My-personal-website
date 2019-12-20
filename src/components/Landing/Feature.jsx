@@ -21,7 +21,7 @@ import { Badge, Button, Container, Row, Col } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import laptop from "../../assets/img/macbook.png";
-import feature from "../../assets/img/feature-img.png";
+import feature from "../../assets/img/all-device.png";
 
 import "../../assets/css/main.css";
 

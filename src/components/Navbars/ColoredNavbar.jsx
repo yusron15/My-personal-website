@@ -199,7 +199,17 @@ class ColorNavbar extends React.Component {
                 </NavItem>
 
                 <div class="dropdown" style={stylesAnimation.slideInDown}>
-                  <button class="dropbtn" style={colorStyle}>
+                  <button
+                    class="dropbtn"
+                    style={{
+                      color: this.coloringNav(
+                        "/tentangkami" ||
+                          "/cabang" ||
+                          "/rekeningterpisah" ||
+                          "/legalitas"
+                      )
+                    }}
+                  >
                     Tentang Kami
                   </button>
                   <div class="dropdown-content">
@@ -226,7 +236,23 @@ class ColorNavbar extends React.Component {
                 </div>
 
                 <div class="dropdown ">
-                  <button class="dropbtn" style={colorStyle}>
+                  <button
+                    class="dropbtn"
+                    style={{
+                      color: this.coloringNav(
+                        "/forex" ||
+                          "/gold" ||
+                          "/indexfutures" ||
+                          "/cfd" ||
+                          "/komoditi" ||
+                          "/jamperdagangan" ||
+                          "/protrader" ||
+                          "/topgrowthtrader" ||
+                          "/login" ||
+                          "/register"
+                      )
+                    }}
+                  >
                     Trading Online
                   </button>
                   <div class="dropdown-content-trading trading-online">

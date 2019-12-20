@@ -99,7 +99,7 @@ class Projects extends React.Component {
             // style={{ backgroundColor: "#D4D4D4" }}
           >
             <DarkNavbar />
-            <Container style={{ height: "70vh" }}>
+            <Container style={{ height: "75vh" }}>
               <Row>
                 <Col className="ml-auto mr-auto text-center" lg="8">
                   <h2 className="title font-black">Legalitas</h2>

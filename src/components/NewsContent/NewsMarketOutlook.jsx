@@ -84,7 +84,7 @@ class NewsMarketOutlook extends React.Component {
             // style={{ backgroundColor: "#1D1E1F" }}
             // style={{ backgroundColor: "#D4D4D4" }}
           >
-            <ColoredNavbar />
+            <ColoredNavbar location={{ ...this.props.location }} />
             <div className="space-50" />
             {/* <div className="page-header"> */}
             <div className="content-center">

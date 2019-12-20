@@ -13,7 +13,7 @@ class ForexGold extends React.Component {
       <>
         {/* <Navbar /> */}
         {/* <div id="navbar" className="ml-auto" style={{ position: "fixed" }}> */}
-        <ColoredNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
         {/* </div> */}
         <Content />
         <Footer />
