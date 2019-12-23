@@ -29,7 +29,7 @@ class BreakingNews extends Component {
                 backgroundColor: "white",
                 zIndex: 9,
                 paddingLeft: "6%",
-                paddingTop: "8px"
+                paddingTop: "5px"
               }}
             >
               {/* <div class="dropdown">

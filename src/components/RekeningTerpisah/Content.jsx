@@ -65,7 +65,7 @@ class Content extends React.Component {
               style={{
                 backgroundImage: `url(${dollar})`,
                 backgroundSize: "cover",
-                maxHeight: "180px"
+                maxHeight: "200px"
               }}
             >
               <div

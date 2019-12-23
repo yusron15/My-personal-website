@@ -88,7 +88,7 @@ class Features extends React.Component {
               FOREX
             </div>
           </div>
-          <div className="features-3">
+          <div className="features-3" style={{ paddingTop: 0 }}>
             <Container fluid>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
