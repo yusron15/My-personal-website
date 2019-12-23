@@ -439,6 +439,16 @@ class Pricing extends React.Component {
                                 display: "flex"
                               }}
                             >
+                              <div>
+                                <span
+                                  style={{
+                                    color: "white",
+                                    fontSize: 14
+                                  }}
+                                >
+                                  Minimum &nbsp;
+                                </span>
+                              </div>
                               <span
                                 style={{
                                   color: "white",
@@ -456,6 +466,16 @@ class Pricing extends React.Component {
                                 display: "flex"
                               }}
                             >
+                              <div>
+                                <span
+                                  style={{
+                                    color: "white",
+                                    fontSize: 14
+                                  }}
+                                >
+                                  Maximum &nbsp;
+                                </span>
+                              </div>
                               <span
                                 style={{
                                   color: "white",

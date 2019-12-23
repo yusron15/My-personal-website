@@ -15,25 +15,61 @@ import Footer from "../../components/Footers/Footer.jsx";
 import NewsLetter from "../../components/NewsLetter/NewsLetter.jsx";
 import BottomNavbar from "../../components/Navbars/BottomNavbar.jsx";
 
+import VizSensor from "react-visibility-sensor";
+
 class Landing extends React.Component {
-  state = {};
+  state = {
+    navbarColor: "white"
+  };
   componentDidMount = () => {
     window.scroll(0, 0);
+  };
+
+  onChange = id => async isVisible => {
+    if (isVisible && this.state.navbarColor !== id) {
+      await this.setState({
+        navbarColor: id
+      });
+    }
   };
   render() {
     return (
       <>
-        {/* <Navbar /> */}
-        {/* <BlurryNavbar /> */}
-        <ColoredNavbar location={{ ...this.props.location }} />
-        <HeaderLanding />
+        <ColoredNavbar
+          navbarColor={this.state.navbarColor}
+          location={{ ...this.props.location }}
+        />
+        <VizSensor scrollCheck onChange={this.onChange("white")}>
+          <HeaderLanding />
+        </VizSensor>
         {/* <BreakingNews /> */}
-        <Pricing />
-        <Feature />
+
+        <VizSensor
+          partialVisibility
+          scrollCheck
+          onChange={this.onChange("white")}
+        >
+          <Pricing />
+        </VizSensor>
+
+        <VizSensor
+          scrollCheck
+          minTopValue={200}
+          onChange={this.onChange("black")}
+        >
+          <Feature />
+        </VizSensor>
+
         <News />
-        <NewsInverted />
+        <VizSensor scrollCheck onChange={this.onChange("white")}>
+          <NewsInverted />
+        </VizSensor>
+
         <Benefit />
-        <Legality />
+        <VizSensor scrollCheck onChange={this.onChange("black")}>
+          <Legality />
+        </VizSensor>
+
         <NewsLetter />
         <Footer />
         <BottomNavbar />

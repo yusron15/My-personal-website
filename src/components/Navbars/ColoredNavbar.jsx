@@ -75,22 +75,6 @@ class ColorNavbar extends React.Component {
 
   changeNavbarColor = () => {
     if (
-      document.documentElement.scrollTop > 1500 ||
-      document.body.scrollTop > 1500
-    ) {
-      this.setState({
-        navbarColor: "black-newsletter",
-        color: "white"
-      });
-    } else if (
-      document.documentElement.scrollTop > 2000 ||
-      document.body.scrollTop > 2000
-    ) {
-      this.setState({
-        navbarColor: "broken-white",
-        color: "black"
-      });
-    } else if (
       document.documentElement.scrollTop > 10 ||
       document.body.scrollTop > 10
     ) {
@@ -102,9 +86,7 @@ class ColorNavbar extends React.Component {
       document.body.scrollTop < 300
     ) {
       this.setState({
-        navbarColor: "broken-white",
-        marginTop: "50px",
-        color: "black"
+        marginTop: "50px"
       });
     }
   };
@@ -129,22 +111,31 @@ class ColorNavbar extends React.Component {
 
   coloringNav = pathLink => {
     const currentPath = this.props.location.pathname;
+    let active = false;
+    if (pathLink instanceof Array) {
+      if (pathLink.includes(currentPath)) {
+        active = true;
+      }
+    } else {
+      active = pathLink === currentPath;
+    }
+    return active
+      ? "#2AB4E7"
+      : this.props.navbarColor == "black"
+      ? "white"
+      : "black";
 
-    console.log(currentPath, pathLink, "adasdadas");
-
-    return currentPath === pathLink ? "#2AB4E7" : this.state.color;
+    // console.log(currentPath, pathLink, "adasdadas");
   };
 
   render() {
-    console.log(this.props.location, "locationlocation");
-
     const styles = {
       containerStyle: {
         marginTop: this.state.marginTop,
         zIndex: 999
       },
       colorStyle: {
-        color: this.state.color
+        color: this.props.navbarColor == "black" ? "black" : "white"
       }
     };
     const { containerStyle, colorStyle } = styles;
@@ -152,14 +143,18 @@ class ColorNavbar extends React.Component {
       <>
         {/* <BlurryNavbar /> */}
         <Navbar
-          className={"fixed-top " + this.state.navbarColor}
+          className={`fixed-top  + ${
+            this.props.navbarColor === "black"
+              ? "black-newsletter"
+              : "broken-white"
+          }`}
           expand="lg"
           style={containerStyle}
         >
           <Container>
             <div className="navbar-translate">
               <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                <img src={logo} style={{ height: "5vh", width: "auto" }} />
+                <img src={logo} style={{ height: "7vh", width: "auto" }} />
                 {/* TGF */}
               </NavbarBrand>
               <button
@@ -202,12 +197,12 @@ class ColorNavbar extends React.Component {
                   <button
                     class="dropbtn"
                     style={{
-                      color: this.coloringNav(
-                        "/tentangkami" ||
-                          "/cabang" ||
-                          "/rekeningterpisah" ||
-                          "/legalitas"
-                      )
+                      color: this.coloringNav([
+                        "/tentangkami",
+                        "/cabang",
+                        "/rekeningterpisah",
+                        "/legalitas"
+                      ])
                     }}
                   >
                     Tentang Kami

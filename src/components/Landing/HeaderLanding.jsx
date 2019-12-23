@@ -44,6 +44,8 @@ import appstore from "../../assets/img/appstore.png";
 import playstore from "../../assets/img/playstore.png";
 import iphone3 from "../../assets/img/iphone3.png";
 
+import VizSensor from "react-visibility-sensor";
+
 const styles = {
   fadeInRight: {
     animation: "x 1s",
@@ -52,6 +54,10 @@ const styles = {
 };
 
 class HeaderLanding extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <>
@@ -111,15 +117,15 @@ class HeaderLanding extends React.Component {
                             <br />
                           </Col>
                           {/* <Col md="5">
-                            <Row className="vertical-center">
-                          <Col>
-                            <img src={best17} />
-                          </Col>
-                          <Col>
-                            <img src={best18} />
-                          </Col>
-                        </Row>
-                          </Col> */}
+                              <Row className="vertical-center">
+                            <Col>
+                              <img src={best17} />
+                            </Col>
+                            <Col>
+                              <img src={best18} />
+                            </Col>
+                          </Row>
+                            </Col> */}
                         </Row>
                       </Container>
                     </div>
@@ -130,11 +136,11 @@ class HeaderLanding extends React.Component {
                         <Row>
                           {/* <Navbar /> */}
                           {/* <Col className="mr-auto text-left" lg="5" md="7">
-                            <img
-                              src={phoneHeader}
-                              style={{ paddingBottom: "0" }}
-                            />
-                          </Col> */}
+                              <img
+                                src={phoneHeader}
+                                style={{ paddingBottom: "0" }}
+                              />
+                            </Col> */}
                           <Col md="12">
                             <Row className="vertical-center">
                               <div
@@ -168,14 +174,14 @@ class HeaderLanding extends React.Component {
                         <Row>
                           {/* <Navbar /> */}
                           {/* <Col className="mr-auto text-left" lg="5" md="7">
-                            <img
-                              src={iphone3}
-                              style={{
-                                height: "50vh",
-                                width: "100vw"
-                              }}
-                            />
-                          </Col> */}
+                              <img
+                                src={iphone3}
+                                style={{
+                                  height: "50vh",
+                                  width: "100vw"
+                                }}
+                              />
+                            </Col> */}
                           <Col md="12">
                             <Row>
                               <div
