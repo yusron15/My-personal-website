@@ -174,7 +174,7 @@ class NewsPage extends React.Component {
                 Forex Commodity
               </div>
             </NavItem>
-            <NavItem clssName="black-newsletter">
+            {/* <NavItem clssName="black-newsletter">
               <div
                 style={{
                   backgroundColor: "#1D1E1F",
@@ -192,6 +192,26 @@ class NewsPage extends React.Component {
               >
                 Economic Calendar Inside
               </div>
+            </NavItem> */}
+            <NavItem clssName="black-newsletter">
+              <div
+                style={{
+                  backgroundColor: "#1D1E1F",
+                  margin: "0 15px 0 15px",
+                  cursor: "pointer",
+                  color: "#B3B3B3",
+                  ...(this.state.activeTab === "4"
+                    ? { color: "#B3B3B3" }
+                    : { color: "#585858" })
+                }}
+                color={this.state.activeTab === "4" ? "#B3B3B3" : "#585858"}
+                className={this.state.activeTab === "4" ? "active" : ""}
+                onClick={() => {
+                  this.toggle("4");
+                }}
+              >
+                Economic Calendar
+              </div>
             </NavItem>
             <NavItem clssName="black-newsletter">
               <div
@@ -208,26 +228,6 @@ class NewsPage extends React.Component {
                 className={this.state.activeTab === "5" ? "active" : ""}
                 onClick={() => {
                   this.toggle("5");
-                }}
-              >
-                Economic Calendar
-              </div>
-            </NavItem>
-            <NavItem clssName="black-newsletter">
-              <div
-                style={{
-                  backgroundColor: "#1D1E1F",
-                  margin: "0 15px 0 15px",
-                  cursor: "pointer",
-                  color: "#B3B3B3",
-                  ...(this.state.activeTab === "6"
-                    ? { color: "#B3B3B3" }
-                    : { color: "#585858" })
-                }}
-                color={this.state.activeTab === "6" ? "#B3B3B3" : "#585858"}
-                className={this.state.activeTab === "6" ? "active" : ""}
-                onClick={() => {
-                  this.toggle("6");
                 }}
               >
                 Market Outlook
@@ -271,13 +271,13 @@ class NewsPage extends React.Component {
             <TabPane tabId="project3">
               <ForexCommodity />
             </TabPane>
-            <TabPane tabId="project4">
+            {/* <TabPane tabId="project4">
               <EconomicCalendarInside />
-            </TabPane>
-            <TabPane tabId="project5">
+            </TabPane> */}
+            <TabPane tabId="project4">
               <EconomicCalendar />
             </TabPane>
-            <TabPane tabId="project6">
+            <TabPane tabId="project5">
               <NewsMarketOutlook />
               {/* <MarketOutlook /> */}
             </TabPane>

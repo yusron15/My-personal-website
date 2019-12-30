@@ -19,10 +19,12 @@ import React from "react";
 // reactstrap components
 import { Badge, Button, Container, Row, Col } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
-import laptop from "../../assets/img/computer-download.png";
+import laptop from "../../assets/img/download-image.png";
 import android from "../../assets/img/download-android.png";
 import mac from "../../assets/img/download-mac.png";
 import ios from "../../assets/img/download-ios.png";
+import googleplay from "../../assets/img/googleplay.png";
+import appstore from "../../assets/img/appstore-button.png";
 import windows from "../../assets/img/download-windows.png";
 import world from "../../assets/img/world.png";
 import "../../assets/css/main.css";
@@ -32,13 +34,16 @@ class Features extends React.Component {
       <>
         <div className="cd-section" id="features">
           {/* ********* FEATURES 3 ********* */}
-          <div className="features-3 broken-white">
+          <div
+            className="features-3 broken-white"
+            style={{ padding: "50px", paddingTop: "20px" }}
+          >
             <Container fluid>
               <Row>
                 <Col className="mr-auto ml-auto" md="10">
                   <h1
                     className="title"
-                    style={{ color: "black", textAlign: "left" }}
+                    style={{ color: "black", textAlign: "center" }}
                   >
                     Download
                   </h1>
@@ -56,37 +61,37 @@ class Features extends React.Component {
                   </Col>
                 </Col>
                 <Col md="6">
-                  <Row>
-                    <Col md="5">
+                  <Row className="vertical-center">
+                    <Col md="6">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
-                        <img alt="..." className="bg-blob" src={ios} />
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          style={{
+                            width: "10vw",
+                            height: "auto"
+                          }}
+                          src={googleplay}
+                        />
                       </ScrollAnimation>
                     </Col>
-                    <Col md="5">
+                    <Col md="6">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
-                        <img alt="..." className="bg-blob" src={android} />
-                      </ScrollAnimation>
-                    </Col>
-                    <Col md="5" style={{ marginTop: "20px" }}>
-                      <ScrollAnimation
-                        animateIn="fadeInUp"
-                        animateOut="fadeOut"
-                      >
-                        <img alt="..." className="bg-blob" src={windows} />
-                      </ScrollAnimation>
-                    </Col>
-                    <Col md="5" style={{ marginTop: "20px" }}>
-                      <ScrollAnimation
-                        animateIn="fadeInUp"
-                        animateOut="fadeOut"
-                      >
-                        <img alt="..." className="bg-blob" src={mac} />
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          style={{
+                            width: "10vw",
+                            height: "auto"
+                          }}
+                          src={appstore}
+                        />
                       </ScrollAnimation>
                     </Col>
                   </Row>

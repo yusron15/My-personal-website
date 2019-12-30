@@ -234,17 +234,17 @@ class ColorNavbar extends React.Component {
                   <button
                     class="dropbtn"
                     style={{
-                      color: this.coloringNav(
-                        "/forex" ||
-                          "/gold" ||
-                          "/indexfutures" ||
-                          "/cfd" ||
-                          "/komoditi" ||
-                          "/jamperdagangan" ||
-                          "/protrader" ||
-                          "/topgrowthtrader" ||
-                          "/login" ||
-                          "/register"
+                      color: this.coloringNav([
+                        "/forex",
+                        "/gold",
+                        "/indexfutures",
+                        "/cfd",
+                        "/komoditi",
+                        "/jamperdagangan",
+                        "/protrader",
+                        "/topgrowthtrader",
+                        "/login",
+                        "/register"]
                       )
                     }}
                   >
