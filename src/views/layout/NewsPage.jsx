@@ -85,9 +85,9 @@ class NewsPage extends React.Component {
                   backgroundColor: "#1D1E1F",
                   margin: "0 15px 0 15px",
                   cursor: "pointer",
-                  color: "#B3B3B3",
+                  color: "#FFFFFF",
                   ...(this.state.activeTab === "1"
-                    ? { color: "#B3B3B3" }
+                    ? { color: "#FFFFFF" }
                     : { color: "#585858" })
                 }}
                 className={this.state.activeTab === "1" ? "active" : ""}
@@ -95,7 +95,7 @@ class NewsPage extends React.Component {
                   this.toggle("1");
                 }}
               >
-                Home
+                News Highlight
               </div>
             </NavItem>
             {/* <NavItem clssName="black-newsletter">
@@ -104,9 +104,9 @@ class NewsPage extends React.Component {
                   backgroundColor: "#1D1E1F",
                   margin: "0 15px 0 15px",
                   cursor: "pointer",
-                  color: "#B3B3B3",
+                  color: "#FFFFFF",
                   ...(this.state.activeTab === "2"
-                    ? { color: "#B3B3B3" }
+                    ? { color: "#FFFFFF" }
                     : { color: "#585858" })
                 }}
                 className={this.state.activeTab === "2" ? "active" : ""}
@@ -123,9 +123,9 @@ class NewsPage extends React.Component {
                   backgroundColor: "#1D1E1F",
                   margin: "0 15px 0 15px",
                   cursor: "pointer",
-                  color: "#B3B3B3",
+                  color: "#FFFFFF",
                   ...(this.state.activeTab === "3"
-                    ? { color: "#B3B3B3" }
+                    ? { color: "#FFFFFF" }
                     : { color: "#585858" })
                 }}
                 className={this.state.activeTab === "3" ? "active" : ""}
@@ -142,9 +142,9 @@ class NewsPage extends React.Component {
                   backgroundColor: "#1D1E1F",
                   margin: "0 15px 0 15px",
                   cursor: "pointer",
-                  color: "#B3B3B3",
+                  color: "#FFFFFF",
                   ...(this.state.activeTab === "2"
-                    ? { color: "#B3B3B3" }
+                    ? { color: "#FFFFFF" }
                     : { color: "#585858" })
                 }}
                 className={this.state.activeTab === "2" ? "active" : ""}
@@ -161,9 +161,9 @@ class NewsPage extends React.Component {
                   backgroundColor: "#1D1E1F",
                   margin: "0 15px 0 15px",
                   cursor: "pointer",
-                  color: "#B3B3B3",
+                  color: "#FFFFFF",
                   ...(this.state.activeTab === "3"
-                    ? { color: "#B3B3B3" }
+                    ? { color: "#FFFFFF" }
                     : { color: "#585858" })
                 }}
                 className={this.state.activeTab === "3" ? "active" : ""}
@@ -180,9 +180,9 @@ class NewsPage extends React.Component {
                   backgroundColor: "#1D1E1F",
                   margin: "0 15px 0 15px",
                   cursor: "pointer",
-                  color: "#B3B3B3",
+                  color: "#FFFFFF",
                   ...(this.state.activeTab === "4"
-                    ? { color: "#B3B3B3" }
+                    ? { color: "#FFFFFF" }
                     : { color: "#585858" })
                 }}
                 className={this.state.activeTab === "4" ? "active" : ""}
@@ -199,12 +199,12 @@ class NewsPage extends React.Component {
                   backgroundColor: "#1D1E1F",
                   margin: "0 15px 0 15px",
                   cursor: "pointer",
-                  color: "#B3B3B3",
+                  color: "#FFFFFF",
                   ...(this.state.activeTab === "4"
-                    ? { color: "#B3B3B3" }
+                    ? { color: "#FFFFFF" }
                     : { color: "#585858" })
                 }}
-                color={this.state.activeTab === "4" ? "#B3B3B3" : "#585858"}
+                color={this.state.activeTab === "4" ? "#FFFFFF" : "#585858"}
                 className={this.state.activeTab === "4" ? "active" : ""}
                 onClick={() => {
                   this.toggle("4");
@@ -219,12 +219,12 @@ class NewsPage extends React.Component {
                   backgroundColor: "#1D1E1F",
                   margin: "0 15px 0 15px",
                   cursor: "pointer",
-                  color: "#B3B3B3",
+                  color: "#FFFFFF",
                   ...(this.state.activeTab === "5"
-                    ? { color: "#B3B3B3" }
+                    ? { color: "#FFFFFF" }
                     : { color: "#585858" })
                 }}
-                color={this.state.activeTab === "5" ? "#B3B3B3" : "#585858"}
+                color={this.state.activeTab === "5" ? "#FFFFFF" : "#585858"}
                 className={this.state.activeTab === "5" ? "active" : ""}
                 onClick={() => {
                   this.toggle("5");
@@ -240,12 +240,12 @@ class NewsPage extends React.Component {
                     backgroundColor: "#1D1E1F",
                     margin: "0 15px 0 15px",
                     cursor: "pointer",
-                    color: "#B3B3B3",
+                    color: "#FFFFFF",
                     ...(this.state.activeTab === "7"
-                      ? { color: "#B3B3B3" }
+                      ? { color: "#FFFFFF" }
                       : { color: "#585858" })
                   }}
-                  color={this.state.activeTab === "7" ? "#B3B3B3" : "#585858"}
+                  color={this.state.activeTab === "7" ? "#FFFFFF" : "#585858"}
                   to="/edukasi"
                 >
                   Video

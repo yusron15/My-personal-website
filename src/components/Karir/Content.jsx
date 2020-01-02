@@ -30,7 +30,7 @@ import {
 
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
-
+import bg from "../../assets/img/header-karir.png";
 import "../../assets/css/main.css";
 
 class Blogs extends React.Component {
@@ -41,20 +41,25 @@ class Blogs extends React.Component {
           {/* ********* END BLOGS 5 ********* */}
           <BlurryNavbar />
           <ColoredNavbar location={{ ...this.props.location }} />
-          <div className="blogs-5">
+          <div>
+            <div
+              className="team-1 background-header"
+              style={{
+                backgroundImage: `url(${bg})`
+              }}
+            >
+              <div className="title title-header">Karir</div>
+            </div>
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto" md="10">
-                  <h2
-                    className="title text-center font-black"
-                    style={{ paddingTop: "2rem" }}
+                  <p
+                    className="description font-black"
+                    style={{ marginTop: "20px" }}
                   >
-                    Karir
-                  </h2>
-                  <p className="description font-black">
                     Kami sedang mencari posisi dibawah ini. Apabila lowongan
                     dibawah ini sesuai dengan <br /> keahlian anda, silakan
-                    kirim resume anda ke{" "}
+                    kirim resume anda ke
                     <b>
                       <i>hrd@topgrowthfutures.com</i>
                     </b>{" "}

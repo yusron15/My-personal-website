@@ -50,6 +50,7 @@ import icdx from "../../assets/img/legalitas3.png";
 import kbi from "../../assets/img/legalitas4.png";
 import ich from "../../assets/img/legalitas5.png";
 import bg from "../../assets/img/legalitas-header.png";
+import bglegalitas from "../../assets/img/bg-legalitas.png";
 
 import DarkNavbar from "../../components/Navbars/DarkNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
@@ -102,29 +103,24 @@ class Projects extends React.Component {
             className="project-raised broken-white"
             // style={{ backgroundColor: "#D4D4D4" }}
           >
-            <div className="space-50" />
             <div
-              className="team-1"
+              className="team-1 background-header"
               style={{
-                backgroundImage: `url(${bg})`,
-                backgroundSize: "cover",
-                maxHeight: "180px"
+                backgroundImage: `url(${bg})`
               }}
             >
-              <div
-                className="title"
-                style={{
-                  marginTop: "5px",
-                  textAlign: "center",
-                  fontStyle: "Helvetica Bold",
-                  fontSize: "2.25rem"
-                }}
-              >
-                Legalitas
-              </div>
+              <div className="title title-header">Legalitas</div>
             </div>
             {/* <DarkNavbar /> */}
-            <Container style={{ height: "65vh" }}>
+            <Container
+              className="center"
+              style={{
+                height: "65vh",
+                minWidth: "100vw",
+                backgroundSize: "cover",
+                backgroundImage: `url(${bglegalitas})`
+              }}
+            >
               {/* <Row>
                 <Col className="ml-auto mr-auto text-center" lg="8">
                   <h2

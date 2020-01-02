@@ -51,11 +51,10 @@ class ColorNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      navbarColor: "bg-transparent",
+      backgroundColor: "broken-white",
       marginTop: "50px",
       color: "black",
-      activeTab: "1",
-      logo: require("../../assets/img/white-topgrowth.png")
+      activeTab: "1"
     };
   }
 
@@ -63,8 +62,8 @@ class ColorNavbar extends React.Component {
     if (this.state.activeTab !== tab) {
       this.setState({
         activeTab: tab,
-        backgroundColor: "bg-transparent",
-        color: "white"
+        backgroundColor: "transparent",
+        color: "black"
       });
     }
   };
@@ -84,18 +83,16 @@ class ColorNavbar extends React.Component {
       this.setState({
         marginTop: "0px",
         color: "black",
-        backgroundColor: "broken-white",
-        logo: require("../../assets/img/logo-topgrowth.png")
+        backgroundColor: "broken-white"
       });
     } else if (
-      document.documentElement.scrollTop < 100 ||
-      document.body.scrollTop < 100
+      document.documentElement.scrollTop < 300 ||
+      document.body.scrollTop < 300
     ) {
       this.setState({
         marginTop: "50px",
-        color: "white",
-        backgroundColor: "bg-transparent",
-        logo: require("../../assets/img/white-topgrowth.png")
+        color: "black",
+        backgroundColor: "broken-white"
       });
     }
   };
@@ -141,12 +138,11 @@ class ColorNavbar extends React.Component {
     const styles = {
       containerStyle: {
         marginTop: this.state.marginTop,
-        navbarColor: this.state.navbarColor,
         zIndex: 999
       },
       colorStyle: {
-        // color: this.props.navbarColor == "white" ? "white" : "black"
-        color: this.state.color
+        color: this.props.navbarColor == "white" ? "black" : "white"
+        // color: this.state.color
       }
     };
     const { containerStyle, colorStyle } = styles;
@@ -155,17 +151,18 @@ class ColorNavbar extends React.Component {
         {/* <BlurryNavbar /> */}
         <Navbar
           // className={`fixed-top  + ${this.state.navbarColor}`}
-          className={`fixed-top  + ${this.state.backgroundColor}`}
+          className={`fixed-top  + ${
+            this.props.navbarColor === "black"
+              ? "black-newsletter"
+              : "broken-white"
+          }`}
           expand="lg"
           style={containerStyle}
         >
           <Container>
             <div className="navbar-translate">
               <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                <img
-                  src={this.state.logo}
-                  style={{ height: "7vh", width: "auto" }}
-                />
+                <img src={logo} style={{ height: "7vh", width: "auto" }} />
                 {/* TGF */}
               </NavbarBrand>
               <button

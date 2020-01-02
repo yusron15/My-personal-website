@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -71,34 +55,15 @@ class Content extends React.Component {
             className="project-raised broken-white"
             // style={{ backgroundColor: "#D4D4D4" }}
           >
-            <div className="space-50" />
             <div
-              className="team-1 bg-header"
+              className="team-1 bg-header background-header"
               style={{
-                backgroundImage: `url(${bg})`,
-                backgroundSize: "cover",
-                maxHeight: "180px"
+                backgroundImage: `url(${bg})`
               }}
             >
-              <div
-                className="title text-header"
-                style={{
-                  marginTop: "5px",
-                  textAlign: "center",
-                  fontStyle: "Helvetica Bold",
-                  fontSize: "2.25rem"
-                }}
-              >
-                Edukasi
-              </div>
+              <div className="title title-header">Edukasi</div>
             </div>
-            <ReactPlayer
-              url={videos}
-              controls={true}
-              height="300"
-              width="100%"
-              style={{ margin: "20px 0 20px 0" }}
-            />
+
             <div
               className="broken-white"
               style={{
@@ -106,6 +71,13 @@ class Content extends React.Component {
                 padding: "0 12% 2% 12%"
               }}
             >
+              <ReactPlayer
+                url={videos}
+                controls={true}
+                height="300"
+                width="100%"
+                style={{ margin: "20px 0 20px 0" }}
+              />
               <div
               // style={{
               //   padding: "0 15% 2% 15%"

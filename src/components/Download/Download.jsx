@@ -1,20 +1,5 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
+import { Parallax, ParallaxBanner } from "react-scroll-parallax";
 
 // reactstrap components
 import { Badge, Button, Container, Row, Col } from "reactstrap";
@@ -27,6 +12,8 @@ import googleplay from "../../assets/img/googleplay.png";
 import appstore from "../../assets/img/appstore-button.png";
 import windows from "../../assets/img/download-windows.png";
 import world from "../../assets/img/world.png";
+import bg from "../../assets/img/download-bg.jpg";
+
 import "../../assets/css/main.css";
 class Features extends React.Component {
   render() {
@@ -39,6 +26,14 @@ class Features extends React.Component {
             style={{ padding: "50px", paddingTop: "20px" }}
           >
             <Container fluid>
+              {/* <Parallax
+                className="custom-class"
+                y={[-20, 20]}
+                tagOuter="figure"
+              >
+                <image src={bg} />
+              </Parallax> */}
+
               <Row>
                 <Col className="mr-auto ml-auto" md="10">
                   <h1

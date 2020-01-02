@@ -63,26 +63,13 @@ class Features extends React.Component {
         <div className="cd-section broken-white" id="features">
           {/* ********* FEATURES 3 ********* */}
           <BlurryNavbar />
-          <div className="space-50" />
           <div
-            className="team-1"
+            className="team-1 background-header"
             style={{
-              backgroundImage: `url(${bg})`,
-              backgroundSize: "cover",
-              maxHeight: "180px"
+              backgroundImage: `url(${bg})`
             }}
           >
-            <div
-              className="title"
-              style={{
-                marginTop: "5px",
-                textAlign: "center",
-                fontStyle: "Helvetica Bold",
-                fontSize: "2.25rem"
-              }}
-            >
-              GOLD
-            </div>
+            <div className="title title-header">Gold</div>
           </div>
           <div className="space-50" />
           <div className="features-3" style={{ paddingTop: 0 }}>

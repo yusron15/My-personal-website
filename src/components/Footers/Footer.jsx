@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
@@ -46,9 +30,9 @@ class Footers extends React.Component {
             <div className="content">
               <Row>
                 <Col md="3">
-                  <a href="#pablo" onClick={e => e.preventDefault()}>
+                  <div style={{ cursor: "default" }}>
                     <h4>
-                      <b>PT. Topgrowth Futures</b>
+                      <b style={{ cursor: "default" }}>PT. Topgrowth Futures</b>
                     </h4>
                     <p>
                       Didirikan sejak tahun 2003, saat ini telah berkembang
@@ -57,64 +41,41 @@ class Footers extends React.Component {
                       transaksi produk forex, index, dan komoditi dengan spread
                       yang kompetitif.
                     </p>
-                  </a>
+                  </div>
                 </Col>
                 <Col md="3">
-                  <h4>Tentang Kami</h4>
+                  <h4 style={{ cursor: "default" }}>Tentang Kami</h4>
                   <p>
-                    <a
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                      style={{ color: "white" }}
-                    >
+                    <Link to="/tentangkami" style={{ color: "white" }}>
                       Tentang Topgrowth Futures
-                    </a>
+                    </Link>
                   </p>
                   <p>
-                    <a
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                      style={{ color: "white" }}
-                    >
+                    <Link to="/legalitas" style={{ color: "white" }}>
                       Legalitas
-                    </a>
+                    </Link>
                   </p>
                   <p>
-                    <a
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                      style={{ color: "white" }}
-                    >
+                    <Link to="/rekeningterpisah" style={{ color: "white" }}>
                       Rekening Terpisah
-                    </a>
+                    </Link>
                   </p>
                   <p>
-                    <a
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                      style={{ color: "white" }}
-                    >
+                    <Link to="/cabang" style={{ color: "white" }}>
                       Cabang Kami
-                    </a>
+                    </Link>
                   </p>
                 </Col>
                 <Col md="2">
-                  <h4>Layanan</h4>
-                  <a
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                    style={{ color: "white" }}
-                  >
-                    Research & Analysis
-                  </a>
+                  <h4 style={{ cursor: "default" }}>Layanan</h4>
+                  <Link to="/newspage" style={{ color: "white" }}>
+                    Berita
+                  </Link>
                 </Col>
                 <Col md="4">
-                  <h4>Hubungi Kami</h4>
-                  <a
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                    style={{ color: "white" }}
-                  >
+                  <Link to="" style={{ color: "white", cursor: "default" }}>
+                    <h4>Hubungi Kami</h4>
+
                     <p> Sahid Sudirman Center, lantai 40</p>
                     <p>Blok F &/ G</p>
                     <p>Jakarta 10220 Indonesia</p>
@@ -125,7 +86,7 @@ class Footers extends React.Component {
                     {/* Sudirman Kav 86 Jakarta 10220 Indonesia Email:
                     customerservices@topgrowthfutures.com Tel: 021 2788-9366
                     Fax: 021 2788-9395 */}
-                  </a>
+                  </Link>
                 </Col>
               </Row>
             </div>

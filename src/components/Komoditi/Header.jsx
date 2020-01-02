@@ -59,26 +59,13 @@ class Headers extends React.Component {
         > */}
         {/* ********* HEADER 4 w/ VIDEO ********* */}
         <BlurryNavbar />
-        <div className="space-50" />
         <div
-          className="team-1"
+          className="team-1 background-header"
           style={{
-            backgroundImage: `url(${bg})`,
-            backgroundSize: "cover",
-            maxHeight: "180px"
+            backgroundImage: `url(${bg})`
           }}
         >
-          <div
-            className="title"
-            style={{
-              marginTop: "5px",
-              textAlign: "center",
-              fontStyle: "Helvetica Bold",
-              fontSize: "2.25rem"
-            }}
-          >
-            KOMODITI
-          </div>
+          <div className="title title-header">Komoditi</div>
         </div>
         <div className="header header-4 broken-white">
           {/* <ColoredNavbar /> */}

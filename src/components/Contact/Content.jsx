@@ -247,13 +247,13 @@ class Content extends React.Component {
               /> */}
               <Row>
                 <Col md="12" className="header-filter">
-                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
-                    {/* <img src={map} /> */}
-                    <MapWithAMarker
-                      containerElement={<div style={{ height: `400px` }} />}
-                      mapElement={<div style={{ height: `100%` }} />}
-                    />
-                  </ScrollAnimation>
+                  {/* <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut"> */}
+                  {/* <img src={map} /> */}
+                  <MapWithAMarker
+                    containerElement={<div style={{ height: `400px` }} />}
+                    mapElement={<div style={{ height: `100%` }} />}
+                  />
+                  {/* </ScrollAnimation> */}
                 </Col>
               </Row>
             </Container>

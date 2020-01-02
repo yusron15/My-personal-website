@@ -50,7 +50,7 @@ import jfx from "../../assets/img/legalitas2.png";
 import icdx from "../../assets/img/legalitas3.png";
 import kbi from "../../assets/img/legalitas4.png";
 import ich from "../../assets/img/legalitas5.png";
-
+import bglegalitas from "../../assets/img/bg-legalitas.png";
 import DarkNavbar from "../../components/Navbars/DarkNavbar.jsx";
 
 import "../../assets/css/main.css";
@@ -99,7 +99,14 @@ class Projects extends React.Component {
             // style={{ backgroundColor: "#D4D4D4" }}
           >
             <DarkNavbar />
-            <Container style={{ height: "75vh" }}>
+            <Container
+              style={{
+                height: "75vh",
+                minWidth: "100vw",
+                backgroundSize: "cover",
+                backgroundImage: `url(${bglegalitas})`
+              }}
+            >
               <Row>
                 <Col className="ml-auto mr-auto text-center" lg="8">
                   <h2 className="title font-black">Legalitas</h2>

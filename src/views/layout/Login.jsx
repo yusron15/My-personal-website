@@ -97,7 +97,11 @@ class RegisterPage extends React.Component {
         <div className="wrapper" ref="wrapper">
           <div
             className="team-1"
-            style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
+            style={{
+              backgroundImage: `url(${bg})`,
+              backgroundSize: "cover",
+              padding: 0
+            }}
           >
             <div className="page-header">
               <Container style={{ paddingTop: 0 }}>
@@ -110,12 +114,13 @@ class RegisterPage extends React.Component {
                           style={{ backgroundColor: "rgba(14,14,14,0.7)" }}
                         >
                           <Form action="" className="form" method="">
-                            <CardHeader>
+                            <CardHeader style={{ padding: 0 }}>
                               <CardTitle
                                 style={{
                                   textAlign: "center",
                                   color: "white",
-                                  fontSize: "3rem"
+                                  fontSize: "3rem",
+                                  marginTop: "10px"
                                 }}
                               >
                                 Login

@@ -240,26 +240,13 @@ class Content extends React.Component {
         >
           {/* ********* TEAM 1 ********* */}
           <BlurryNavbar />
-          <div className="space-50" />
           <div
-            className="team-1"
+            className="team-1 background-header"
             style={{
-              backgroundImage: `url(${bg})`,
-              backgroundSize: "cover",
-              maxHeight: "180px"
+              backgroundImage: `url(${bg})`
             }}
           >
-            <div
-              className="title"
-              style={{
-                marginTop: "5px",
-                textAlign: "center",
-                fontStyle: "Helvetica Bold",
-                fontSize: "2.25rem"
-              }}
-            >
-              CONTRACT FOR DIFFERENCE
-            </div>
+            <div className="title title-header">Contract For Difference</div>
           </div>
           <div className="team-1 broken-white" style={{ height: "70vh" }}>
             <Container style={{ minHeight: "45vh" }}>

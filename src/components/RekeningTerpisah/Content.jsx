@@ -59,26 +59,13 @@ class Content extends React.Component {
           >
             <BlurryNavbar />
             <ColoredNavbar location={{ ...this.props.location }} />
-            <div className="space-50" />
             <div
-              className="team-1"
+              className="team-1 baclground-header"
               style={{
-                backgroundImage: `url(${dollar})`,
-                backgroundSize: "cover",
-                maxHeight: "200px"
+                backgroundImage: `url(${dollar})`
               }}
             >
-              <div
-                className="title"
-                style={{
-                  marginTop: "5px",
-                  textAlign: "center",
-                  fontStyle: "Helvetica Bold",
-                  fontSize: "2.25rem"
-                }}
-              >
-                Rekening Terpisah
-              </div>
+              <div className="title title-header">Rekening Terpisah</div>
             </div>
             <div
               className="team-1 broken-white"

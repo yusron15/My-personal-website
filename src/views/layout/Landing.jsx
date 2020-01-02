@@ -1,7 +1,7 @@
 import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import Navbar from "../../components/Navbars/Navbar.jsx";
-import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbarHome.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import HeaderLanding from "../../components/Landing/HeaderLanding.jsx";
 import BreakingNews from "../../components/Landing/BreakingNews.jsx";
@@ -14,12 +14,13 @@ import Legality from "../../components/Landing/Legality.jsx";
 import Footer from "../../components/Footers/Footer.jsx";
 import NewsLetter from "../../components/NewsLetter/NewsLetter.jsx";
 import BottomNavbar from "../../components/Navbars/BottomNavbar.jsx";
-
+import "../../assets/css/main.css";
 import VizSensor from "react-visibility-sensor";
 
 class Landing extends React.Component {
   state = {
-    navbarColor: "white"
+    navbarColor: "white",
+    color: "black"
   };
   componentDidMount = () => {
     window.scroll(0, 0);
@@ -32,11 +33,20 @@ class Landing extends React.Component {
       });
     }
   };
+
+  onChangeText = id => async isVisible => {
+    if (isVisible && this.state.color !== id) {
+      await this.setState({
+        color: id
+      });
+    }
+  };
   render() {
     return (
       <>
         <ColoredNavbar
           navbarColor={this.state.navbarColor}
+          color={this.state.color}
           location={{ ...this.props.location }}
         />
         <VizSensor scrollCheck onChange={this.onChange("white")}>

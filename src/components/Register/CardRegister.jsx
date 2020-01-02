@@ -130,12 +130,12 @@ class CardRegister extends React.Component {
               <Row>
                 <Col md="6">
                   <Button block color="info" type="button">
-                    Buat demo Akun
+                    Demo Akun
                   </Button>
                 </Col>
                 <Col md="6">
                   <Button block color="info" type="button">
-                    Buat real Akun
+                    Real Akun
                   </Button>
                 </Col>
               </Row>
