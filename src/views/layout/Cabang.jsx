@@ -1,6 +1,6 @@
 import React from "react";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
-import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbarHome.jsx";
 import CabangKami from "../../components/CabangKami/Content.jsx";
 import Footer from "../../components/Footers/Footer.jsx";
 

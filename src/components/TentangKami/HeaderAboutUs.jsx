@@ -44,7 +44,7 @@ import { fadeIn } from "react-animations";
 import "../../../src/App.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import tentangkami from "../../assets/img/tentangkamiheader.png";
-import ColoredNavbar from "../Navbars/ColoredNavbar.jsx";
+import ColoredNavbar from "../Navbars/ColoredNavbarHome.jsx";
 import BlurryNavbar from "components/Navbars/BlurryNavbar";
 
 import "../../assets/css/main.css";

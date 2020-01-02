@@ -49,11 +49,18 @@ const textContent = {
   textAlign: "left",
   fontStyle: "Helvetica Bold",
   margin: 0,
-  position: "absolute",
   // top: "50%",
   fontSize: "1rem"
   // msTransform: "translateY(-50%)",
   // transform: "translateY(-50%)"
+};
+
+const intermezzo = {
+  textAlign: "center",
+  fontStyle: "Helvetica Bold",
+  margin: 0,
+  color: "black",
+  fontSize: "1rem"
 };
 
 class Features extends React.Component {
@@ -82,13 +89,7 @@ class Features extends React.Component {
                   >
                     GOLD
                   </div> */}
-                  <p
-                    style={{
-                      textAlign: "center",
-                      color: "black",
-                      marginBottom: "50px"
-                    }}
-                  >
+                  <p style={intermezzo}>
                     London Bullion Market adalah grosir pasar over-the-counter
                     untuk perdagangan emas dan perak. Perdagangan dilakukan di
                     antara anggota Asosiasi Pasar Bullion London (LBMA), diawasi
@@ -103,7 +104,7 @@ class Features extends React.Component {
               <Row>
                 <Col
                   sm={{ size: 10, order: 2, offset: 1 }}
-                  style={{ marginTop: 0 }}
+                  style={{ marginTop: "50px" }}
                 >
                   <Row>
                     <Col lg="4">
@@ -165,7 +166,7 @@ class Features extends React.Component {
                           >
                             KEUNTUNGAN TRANSAKSI FOREX
                           </div>
-                          <p style={{ color: "black" }}>
+                          <p style={{ color: "black", textAlign: "justify" }}>
                             Secara internasional, emas diperdagangkan terutama
                             melalui transaksi over-the-counter (OTC) dengan
                             perdagangan dalam jumlah terbatas di New York
@@ -213,42 +214,51 @@ class Features extends React.Component {
                   <Row>
                     <Col lg="12">
                       <div style={{ marginTop: "50px" }}>
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOut"
-                        >
-                          <div
-                            className="title-content"
-                            style={{ color: "black" }}
+                        <div style={textContent}>
+                          <ScrollAnimation
+                            animateIn="fadeInUp"
+                            animateOut="fadeOut"
                           >
-                            Market Size
-                          </div>
-                          <p style={{ textAlign: "left", color: "black" }}>
-                            Sebagian besar perdagangan global dalam emas dan
-                            perak dilakukan di pasar over-the-counter (OTC).
-                            London sejauh ini merupakan pusat global terbesar
-                            untuk transaksi OTC yang diikuti oleh New York,
-                            Zurich, dan Tokyo. Perdagangan dalam bursa telah
-                            berkembang dalam beberapa tahun terakhir dengan
-                            Comex di New York dan Tocom di Tokyo menghasilkan
-                            sebagian besar aktivitas.
-                            <br /> <br />
-                            Emas juga diperdagangkan dalam bentuk surat
-                            berharga, seperti dana yang diperdagangkan di bursa
-                            (ETF), di London, New York, Johannesburg, dan bursa
-                            saham Australia. Meskipun pasar fisik untuk emas dan
-                            perak didistribusikan secara global, Kliring
-                            sebagian besar perdagangan OTC grosir dilakukan
-                            melalui London. Volume Kliring harian rata-rata emas
-                            dan perak di London Bullion Market Association
-                            (LBMA) pada November 2008 adalah 18,3 juta ons
-                            (senilai $ 13,9 miliar) dan 107,6 juta ons (senilai
-                            $ 1,1 miliar) masing-masing. Ini berarti bahwa
-                            jumlah kliring selam 4,4 hari di LBMA sama dengan
-                            produksi tambang emas tahunan, dan untuk produksi
-                            perak tahunan setiap 6,2 hari.
-                          </p>{" "}
-                        </ScrollAnimation>
+                            <div
+                              className="title-content"
+                              style={{ color: "black" }}
+                            >
+                              Market Size
+                            </div>
+                            <p
+                              style={{
+                                textAlign: "left",
+                                color: "black",
+                                textAlign: "justify"
+                              }}
+                            >
+                              Sebagian besar perdagangan global dalam emas dan
+                              perak dilakukan di pasar over-the-counter (OTC).
+                              London sejauh ini merupakan pusat global terbesar
+                              untuk transaksi OTC yang diikuti oleh New York,
+                              Zurich, dan Tokyo. Perdagangan dalam bursa telah
+                              berkembang dalam beberapa tahun terakhir dengan
+                              Comex di New York dan Tocom di Tokyo menghasilkan
+                              sebagian besar aktivitas.
+                              <br /> <br />
+                              Emas juga diperdagangkan dalam bentuk surat
+                              berharga, seperti dana yang diperdagangkan di
+                              bursa (ETF), di London, New York, Johannesburg,
+                              dan bursa saham Australia. Meskipun pasar fisik
+                              untuk emas dan perak didistribusikan secara
+                              global, Kliring sebagian besar perdagangan OTC
+                              grosir dilakukan melalui London. Volume Kliring
+                              harian rata-rata emas dan perak di London Bullion
+                              Market Association (LBMA) pada November 2008
+                              adalah 18,3 juta ons (senilai $ 13,9 miliar) dan
+                              107,6 juta ons (senilai $ 1,1 miliar)
+                              masing-masing. Ini berarti bahwa jumlah kliring
+                              selam 4,4 hari di LBMA sama dengan produksi
+                              tambang emas tahunan, dan untuk produksi perak
+                              tahunan setiap 6,2 hari.
+                            </p>{" "}
+                          </ScrollAnimation>
+                        </div>
                       </div>
                     </Col>
                   </Row>

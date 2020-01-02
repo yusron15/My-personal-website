@@ -53,7 +53,7 @@ class ColorNavbar extends React.Component {
     this.state = {
       navbarColor: "bg-transparent",
       marginTop: "50px",
-      color: "black",
+      color: "white",
       activeTab: "1",
       logo: require("../../assets/img/white-topgrowth.png")
     };
@@ -63,7 +63,7 @@ class ColorNavbar extends React.Component {
     if (this.state.activeTab !== tab) {
       this.setState({
         activeTab: tab,
-        backgroundColor: "bg-transparent",
+        navbarColor: "bg-transparent",
         color: "white"
       });
     }
@@ -84,7 +84,7 @@ class ColorNavbar extends React.Component {
       this.setState({
         marginTop: "0px",
         color: "black",
-        backgroundColor: "broken-white",
+        navbarColor: "broken-white",
         logo: require("../../assets/img/logo-topgrowth.png")
       });
     } else if (
@@ -94,7 +94,7 @@ class ColorNavbar extends React.Component {
       this.setState({
         marginTop: "50px",
         color: "white",
-        backgroundColor: "bg-transparent",
+        navbarColor: "bg-transparent",
         logo: require("../../assets/img/white-topgrowth.png")
       });
     }
@@ -130,7 +130,7 @@ class ColorNavbar extends React.Component {
     }
     return active
       ? "#2AB4E7"
-      : this.state.backgroundColor == "broken-white"
+      : this.state.navbarColor == "broken-white"
       ? "black"
       : "white";
 
@@ -155,7 +155,7 @@ class ColorNavbar extends React.Component {
         {/* <BlurryNavbar /> */}
         <Navbar
           // className={`fixed-top  + ${this.state.navbarColor}`}
-          className={`fixed-top  + ${this.state.backgroundColor}`}
+          className={`fixed-top  + ${this.state.navbarColor}`}
           expand="lg"
           style={containerStyle}
         >

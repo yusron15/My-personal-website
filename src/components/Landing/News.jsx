@@ -60,7 +60,7 @@ const PrevButton = props => {
       style={{
         height: "50px",
         width: "auto",
-        paddingLeft: "33%",
+        paddingLeft: "35%",
         marginBottom: "20px"
       }}
     />
@@ -77,7 +77,7 @@ const NextButton = props => {
       style={{
         height: "50px",
         width: "auto",
-        paddingLeft: "35%",
+        paddingLeft: "37%",
         marginBottom: "20px"
       }}
     />
@@ -270,10 +270,7 @@ class News extends React.Component {
     return (
       <>
         <div className="cd-section" id="testimonials">
-          <div
-            className="testimonials-4 broken-white"
-            style={{ padding: "5rem 0 0 0 " }}
-          >
+          <div className="testimonials-4 broken-white" style={{ padding: 0 }}>
             {/* <ColoredNavbar /> */}
             <Container>
               <Row>
@@ -348,19 +345,18 @@ class News extends React.Component {
                   className="positioned"
                   style={{
                     backgroundColor: "#FFFFFF",
-                    minHeight: "50vh",
-                    marginTop: 0
+                    marginTop: "5%"
                   }}
                   lg="4"
                   md="8"
                   xs="10"
                 >
                   <h1 className="title font-black">Berita Ekonomi</h1>
-                  <p className="description text-white">
+                  <p className="description" style={{ margin: 0 }}>
                     <TabContent activeTab={"project" + this.state.activeSlide}>
                       <TabPane tabId="project0">
                         {/* <Col> */}
-                        <p className="description mb-5 font-black">
+                        <p className="description  font-black">
                           Pesanan industri Jerman naik melebihi dari yang
                           diperkirakan pada bulan September, dibantu oleh
                           permintaan domestik yang kuat, data yang dirilis
@@ -391,8 +387,13 @@ class News extends React.Component {
                     </TabContent>
                   </p>
                   <Link to="/newspage">
-                    <Button block color="info" type="button">
-                      Explore
+                    <Button
+                      className="slide-button"
+                      block
+                      color="info"
+                      type="button"
+                    >
+                      &nbsp;
                     </Button>
                   </Link>
                 </Col>

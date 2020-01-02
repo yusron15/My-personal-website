@@ -242,8 +242,13 @@ class NewsInverted extends React.Component {
                     </TabContent>
                   </p>
                   <Link to="/newspage">
-                    <Button block color="info" type="button">
-                      Explore
+                    <Button
+                      className="slide-button"
+                      block
+                      color="info"
+                      type="button"
+                    >
+                      &nbsp;
                     </Button>
                   </Link>
                 </Col>

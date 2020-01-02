@@ -35,6 +35,7 @@ import fg3 from "../../assets/img/forexgold3.png";
 import bg from "../../assets/img/bg-forex.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
+import { styles } from "react-animations/lib/swing";
 
 const textTitle = {
   textAlign: "center",
@@ -49,10 +50,15 @@ const textContent = {
   fontStyle: "Helvetica Bold",
   margin: 0,
   position: "absolute",
-  // top: "50%",
   fontSize: "1rem",
-  // msTransform: "translateY(-50%)",
-  // transform: "translateY(-50%)",
+  color: "black"
+};
+
+const intermezzo = {
+  textAlign: "center",
+  fontStyle: "Helvetica Bold",
+  margin: 0,
+  fontSize: "1rem",
   color: "black"
 };
 
@@ -86,7 +92,7 @@ class Features extends React.Component {
                     FOREX
                   </div> */}
                   <div className="space-50" />
-                  <p style={{ textAlign: "center", color: "black" }}>
+                  <p style={intermezzo}>
                     Saat ini, Foreign Exchange (Forex) merupakan pasar terbesar
                     dan paling likuid di dunia dengan perputaran nilai transaksi
                     yang tiga kali lipat lebih besar dari jumlah gabungan pasar
@@ -131,7 +137,7 @@ class Features extends React.Component {
                           >
                             KEUNTUNGAN TRANSAKSI FOREX
                           </div>
-                          <p style={{ color: "black" }}>
+                          <p style={{ color: "black", textAlign: "justify" }}>
                             Likuiditas tinggi karena selalu adanya penawaran dan
                             permintaan, Potensi keuntungan dua arah yang
                             didapatkan pada saat harga naik maupun turun karena
@@ -162,7 +168,7 @@ class Features extends React.Component {
                           >
                             KEUNTUNGAN TRANSAKSI FOREX
                           </div>
-                          <p style={{ color: "black" }}>
+                          <p style={{ color: "black", textAlign: "justify" }}>
                             Likuiditas tinggi karena selalu adanya penawaran dan
                             permintaan, Potensi keuntungan dua arah yang
                             didapatkan pada saat harga naik maupun turun karena
@@ -207,7 +213,7 @@ class Features extends React.Component {
                           animateOut="fadeOut"
                         >
                           <div style={textTitle}>Ragam Produk Forex</div>
-                          <p style={{ color: "black" }}>
+                          <p style={intermezzo}>
                             Trading forex dengan TOPGROWTH memberi Anda akses
                             untuk bertransaksi ke banyak produk valuta asing,
                             terlepas dari apakah Anda mengunduh Pro-I Trading
@@ -223,7 +229,7 @@ class Features extends React.Component {
                         </ScrollAnimation>
                       </div>
 
-                      <div style={{ marginTop: "30px" }}>
+                      <div style={{ marginTop: "20px" }}>
                         <div style={textTitle}>Major Pairs</div>
 
                         <Table style={{ marginTop: "20px" }}>
@@ -278,7 +284,7 @@ class Features extends React.Component {
                         </Table>
                       </div>
 
-                      <div style={{ marginTop: "50px" }}>
+                      <div style={{ marginTop: "20px" }}>
                         <div style={textTitle}>Cross Pairs</div>
 
                         <Table style={{ marginTop: "20px" }}>
