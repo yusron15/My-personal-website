@@ -82,6 +82,7 @@ import Login from "views/layout/Login.jsx";
 import Register from "views/layout/Register.jsx";
 import News from "views/layout/News.jsx";
 import Edukasi from "views/layout/Edukasi.jsx";
+import NewsMarketOutlook from "./components/NewsContent/NewsMarketOutlook";
 
 //
 import "animate.css/animate.min.css";
@@ -142,6 +143,8 @@ ReactDOM.render(
             render={props => <TopgrowthTrader {...props} />}
           />
           <Route path="/NewsPage" render={props => <NewsPage {...props} />} />
+          <Route path="/NewsMarketOutlook" component={NewsMarketOutlook} />
+
           <Route path="/News" render={props => <News {...props} />} />
           <Route path="/Contact" render={props => <Contact {...props} />} />
           <Route path="/Karir" render={props => <Karir {...props} />} />

@@ -30,6 +30,9 @@ import {
 } from "reactstrap";
 
 import "../../assets/css/main.css";
+import { Route } from "react-router-dom";
+
+import NewsMarketOutlook from "../NewsContent/NewsMarketOutlook";
 import ShowMoreText from "react-show-more-text";
 import ReadMoreReact from "read-more-react";
 const textTitle = {

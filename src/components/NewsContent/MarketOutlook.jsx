@@ -15,9 +15,10 @@
 
 */
 import React from "react";
-
+import { Route } from "react-router-dom";
 import ReadMoreReact from "read-more-react";
 
+import NewsMarketOutlook from "./NewsMarketOutlook";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import RelatedPost from "../RelatedPost/Content";
 import Content from "../RelatedPost/Layout";

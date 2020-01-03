@@ -6,12 +6,18 @@ import { Link } from "react-router-dom";
 import Up from "../../assets/img/green-triangle.png";
 import Down from "../../assets/img/red-triangle.png";
 import "../../assets/css/main.css";
+
+import Select from "react-select";
+
 class BreakingNews extends Component {
+  state = {
+    dataSelect: ""
+  };
   render() {
     return (
       <div
         style={{
-          height: "50px",
+          height: "6vh",
           backgroundColor: "transparent"
         }}
       >
@@ -26,34 +32,53 @@ class BreakingNews extends Component {
             <Col
               md="2"
               style={{
-                backgroundColor: "white",
-                zIndex: 9,
-                paddingLeft: "6%",
-                paddingTop: "5px"
+                backgroundColor: "transparent",
+                padding: 0,
+                paddingLeft: 10,
+                paddingRight: 10,
+                color: "black"
               }}
             >
-              {/* <div class="dropdown">
-                <button class="dropbtn">KOMODITI</button>
-                <div class="dropdown-content">
-                  <Link to="#">INDEX</Link>
-                  <Link to="#">FX</Link>
-                </div>
-              </div> */}
-              <Input
-                type="select"
-                name="select"
-                id="exampleSelect"
-                style={{
-                  border: "none",
-                  backgroundColor: "white",
-                  color: "black"
+              <Select
+                value="index"
+                options={[
+                  {
+                    label: "KOMODITI",
+                    value: "komuditi"
+                  },
+                  {
+                    label: "INDEX",
+                    value: "index"
+                  },
+                  {
+                    label: "FX",
+                    value: "fx"
+                  }
+                ]}
+                value={this.state.dataSelect}
+                onChange={async data => {
+                  await this.setState({
+                    dataSelect: data
+                  });
+                  let dataSelect = [
+                    {
+                      label: "KOMODITI",
+                      value: "komuditi"
+                    },
+                    {
+                      label: "INDEX",
+                      value: "index"
+                    },
+                    {
+                      label: "FX",
+                      value: "fx"
+                    }
+                  ];
+                  return dataSelect.filter(
+                    item => this.state.dataSelect.value === item.value
+                  )[0];
                 }}
-              >
-                <option>KOMODITI</option>
-                <option>INDEX</option>
-                <option>FX</option>
-              </Input>
-              {/* KOMODITI */}
+              />
             </Col>
             <Col md="10">
               <marquee scrollamount="5">

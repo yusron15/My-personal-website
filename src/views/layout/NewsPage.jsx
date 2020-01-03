@@ -278,8 +278,8 @@ class NewsPage extends React.Component {
               <EconomicCalendar />
             </TabPane>
             <TabPane tabId="project5">
-              <NewsMarketOutlook />
-              {/* <MarketOutlook /> */}
+              {/* <NewsMarketOutlook /> */}
+              <MarketOutlook />
             </TabPane>
           </TabContent>
           <Footer />
