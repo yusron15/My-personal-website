@@ -361,6 +361,10 @@ class Carding extends React.Component {
                         backgroundColor: "transparent"
                       }}
                     >
+                      <CarouselIndicators
+                        items={items}
+                        activeIndex={this.state.activeIndex}
+                      />
                       {items.map((item, key) => {
                         return (
                           <CarouselItem
@@ -672,10 +676,12 @@ class Carding extends React.Component {
                     backgroundColor: "transparent"
                   }}
                 >
-                  <CarouselIndicators
-                    items={items}
-                    activeIndex={this.state.activeIndex}
-                  />
+                  <div style={{ marginTop: "20px" }}>
+                    <CarouselIndicators
+                      items={items}
+                      activeIndex={this.state.activeIndex}
+                    />
+                  </div>
                   {cardMarketNews.map((item, key) => {
                     return (
                       <CarouselItem

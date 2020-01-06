@@ -204,14 +204,15 @@ class ColorNavbar extends React.Component {
                 <div class="dropdown" style={stylesAnimation.slideInDown}>
                   <button
                     class="dropbtn"
-                    style={{
-                      color: this.coloringNav([
-                        "/tentangkami",
-                        "/cabang",
-                        "/rekeningterpisah",
-                        "/legalitas"
-                      ])
-                    }}
+                    // style={{
+                    //   color: this.coloringNav([
+                    //     "/tentangkami",
+                    //     "/cabang",
+                    //     "/rekeningterpisah",
+                    //     "/legalitas"
+                    //   ])
+                    // }}
+                    style={colorStyle}
                   >
                     Tentang Kami
                   </button>
@@ -241,20 +242,21 @@ class ColorNavbar extends React.Component {
                 <div class="dropdown ">
                   <button
                     class="dropbtn"
-                    style={{
-                      color: this.coloringNav([
-                        "/forex",
-                        "/gold",
-                        "/indexfutures",
-                        "/cfd",
-                        "/komoditi",
-                        "/jamperdagangan",
-                        "/protrader",
-                        "/topgrowthtrader",
-                        "/login",
-                        "/register"
-                      ])
-                    }}
+                    // style={{
+                    //   color: this.coloringNav([
+                    //     "/forex",
+                    //     "/gold",
+                    //     "/indexfutures",
+                    //     "/cfd",
+                    //     "/komoditi",
+                    //     "/jamperdagangan",
+                    //     "/protrader",
+                    //     "/topgrowthtrader",
+                    //     "/login",
+                    //     "/register"
+                    //   ])
+                    // }}
+                    style={colorStyle}
                   >
                     Trading Online
                   </button>
@@ -324,64 +326,70 @@ class ColorNavbar extends React.Component {
                 </Link>
 
                 <NavItem>
-                  <button class="dropbtn">
-                    <Link
-                      to="/edukasi"
-                      style={{
-                        color: this.coloringNav("/edukasi")
-                        // color: "black",
-                        // ...(this.state.activeTab === "3"
-                        //   ? { color: "#2AB4E7" }
-                        //   : { color: this.state.color })
-                      }}
-                      // onClick={() => {
-                      //   this.toggle("3");
-                      // }}
-                    >
+                  {/* <div class="dropbtn"> */}
+                  <Link
+                    to="/edukasi"
+                    style={{
+                      color: this.coloringNav("/edukasi")
+                      // color: "black",
+                      // ...(this.state.activeTab === "3"
+                      //   ? { color: "#2AB4E7" }
+                      //   : { color: this.state.color })
+                    }}
+                    // onClick={() => {
+                    //   this.toggle("3");
+                    // }}
+                  >
+                    <button class="dropbtn" style={colorStyle}>
                       Edukasi
-                    </Link>
-                  </button>
+                    </button>
+                  </Link>
+                  {/* </div> */}
                 </NavItem>
 
                 <NavItem>
-                  <button class="dropbtn">
-                    <Link
-                      to="/karir"
-                      style={colorStyle}
-                      style={{
-                        color: this.coloringNav("/karir")
-                        // color: this.state.color,
-                        // ...(this.state.activeTab === "4"
-                        //   ? { color: "#2AB4E7" }
-                        //   : { color: this.state.color })
-                      }}
-                      // onClick={() => {
-                      //   this.toggle("4");
-                      // }}
-                    >
+                  {/* <button class="dropbtn"> */}
+                  <Link
+                    to="/karir"
+                    style={colorStyle}
+                    style={{
+                      color: this.coloringNav("/karir")
+                      // color: this.state.color,
+                      // ...(this.state.activeTab === "4"
+                      //   ? { color: "#2AB4E7" }
+                      //   : { color: this.state.color })
+                    }}
+                    // onClick={() => {
+                    //   this.toggle("4");
+                    // }}
+                  >
+                    <button class="dropbtn" style={colorStyle}>
                       Karir
-                    </Link>
-                  </button>
+                    </button>
+                  </Link>
+                  {/* </button> */}
                 </NavItem>
 
                 <NavItem>
-                  <button class="dropbtn">
-                    <Link
-                      to="/Contact"
-                      style={{
-                        color: this.coloringNav("/Contact")
-                        // color: this.state.color,
-                        // ...(this.state.activeTab === "5"
-                        //   ? { color: "#2AB4E7" }
-                        //   : { color: this.state.color })
-                      }}
-                      // onClick={() => {
-                      //   this.toggle("5");
-                      // }}
-                    >
+                  {/* <button class="dropbtn"> */}
+                  <Link
+                    to="/Contact"
+                    style={{
+                      color: this.coloringNav("/Contact")
+                      // color: this.state.color,
+                      // ...(this.state.activeTab === "5"
+                      //   ? { color: "#2AB4E7" }
+                      //   : { color: this.state.color })
+                    }}
+                    // onClick={() => {
+                    //   this.toggle("5");
+                    // }}
+                  >
+                    <button class="dropbtn" style={colorStyle}>
                       Hubungi Kami
-                    </Link>
-                  </button>
+                    </button>
+                  </Link>
+                  {/* </button> */}
                 </NavItem>
               </Nav>
             </UncontrolledCollapse>
