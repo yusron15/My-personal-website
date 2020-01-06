@@ -11,7 +11,7 @@ import {
   Col
 } from "reactstrap";
 
-import user from "../../assets/img/user.png";
+import user from "../../assets/img/user-black-icon.png";
 import calendar from "../../assets/img/icon-calendar.png";
 import "../../assets/css/main.css";
 
@@ -89,7 +89,10 @@ class CardNews extends React.Component {
                 <Row>
                   <Col md="6">
                     <Row>
-                      <img src={user} />
+                      <img
+                        src={user}
+                        style={{ height: "20px", width: "auto" }}
+                      />
                       <p
                         className="vertical-center font-black"
                         style={{ color: "black", paddingLeft: "30px" }}
@@ -100,7 +103,10 @@ class CardNews extends React.Component {
                   </Col>
                   <Col md="6">
                     <Row>
-                      <img src={calendar} />
+                      <img
+                        src={calendar}
+                        style={{ height: "20px", width: "auto" }}
+                      />
                       <p
                         className="vertical-center font-black"
                         style={{ color: "black", paddingLeft: "30px" }}

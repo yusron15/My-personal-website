@@ -40,7 +40,7 @@ import {
 } from "reactstrap";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
-import bg from "../../assets/img/headerkomoditi.png";
+import bg from "../../assets/img/header-komoditi.png";
 import "../../assets/css/main.css";
 
 class Headers extends React.Component {
@@ -72,7 +72,13 @@ class Headers extends React.Component {
           <div className="header-wrapper">
             <div
               className="page-header"
-              style={{ justifyContent: "center", minHeight: "60vh" }}
+              style={{
+                justifyContent: "center",
+                minHeight: "60vh",
+                backgroundImage:
+                  "url(" + require("assets/img/white-dotted.png") + ")",
+                backgroundSize: "cover"
+              }}
             >
               {/* <div
                 style={{

@@ -185,7 +185,7 @@ class ColorNavbar extends React.Component {
                 navbar
               >
                 <NavItem>
-                  <button class="dropbtn">
+                  <button class=" dropdown dropbtn">
                     <Link
                       to="/landing"
                       style={{
@@ -204,46 +204,46 @@ class ColorNavbar extends React.Component {
                   </button>
                 </NavItem>
 
-                <div class="dropdown" style={stylesAnimation.slideInDown}>
-                  <button
-                    class="dropbtn"
-                    style={{
-                      color: this.coloringNav([
-                        "/tentangkami",
-                        "/cabang",
-                        "/rekeningterpisah",
-                        "/legalitas"
-                      ])
-                    }}
-                  >
-                    Tentang Kami
-                  </button>
-                  <div class="dropdown-content">
-                    <Link as={NavLink} to="/tentangkami">
-                      <div style={tentangkami}>Topgrowth Futures</div>
-                      <div>Topgrowth Futures Lorem Ipsum</div>
-                    </Link>
-                    <div class="vl-navbar"></div>
-                    <Link to="/cabang">
-                      <div style={tentangkami}>Cabang Kami</div>
-                      <div>Topgrowth Futures Lorem Ipsum</div>
-                    </Link>
-                    <div class="vl-navbar"></div>
-                    <Link to="/rekeningterpisah">
-                      <div style={tentangkami}> Rekening Terpisah </div>
-                      <div>Topgrowth Futures Lorem Ipsum</div>
-                    </Link>
-                    <div class="vl-navbar"></div>
-                    <Link to="/legalitas">
-                      <div style={tentangkami}> Legalitas </div>
-                      <div>Topgrowth Futures Lorem Ipsum</div>
-                    </Link>
+                <div class="dropdown dropbtn">
+                  <div style={stylesAnimation.slideInDown}>
+                    <div
+                      style={{
+                        color: this.coloringNav([
+                          "/tentangkami",
+                          "/cabang",
+                          "/rekeningterpisah",
+                          "/legalitas"
+                        ])
+                      }}
+                    >
+                      Tentang Kami
+                    </div>
+                    <div class="dropdown-content">
+                      <Link as={NavLink} to="/tentangkami">
+                        <div style={tentangkami}>Topgrowth Futures</div>
+                        <div>Topgrowth Futures Lorem Ipsum</div>
+                      </Link>
+                      <div class="vl-navbar"></div>
+                      <Link to="/cabang">
+                        <div style={tentangkami}>Cabang Kami</div>
+                        <div>Topgrowth Futures Lorem Ipsum</div>
+                      </Link>
+                      <div class="vl-navbar"></div>
+                      <Link to="/rekeningterpisah">
+                        <div style={tentangkami}> Rekening Terpisah </div>
+                        <div>Topgrowth Futures Lorem Ipsum</div>
+                      </Link>
+                      <div class="vl-navbar"></div>
+                      <Link to="/legalitas">
+                        <div style={tentangkami}> Legalitas </div>
+                        <div>Topgrowth Futures Lorem Ipsum</div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
 
-                <div class="dropdown ">
-                  <button
-                    class="dropbtn"
+                <div class="dropdown dropbtn">
+                  <div
                     style={{
                       color: this.coloringNav([
                         "/forex",
@@ -260,7 +260,7 @@ class ColorNavbar extends React.Component {
                     }}
                   >
                     Trading Online
-                  </button>
+                  </div>
                   <div class="dropdown-content-trading trading-online">
                     <Container>
                       <Row>

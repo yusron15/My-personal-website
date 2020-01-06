@@ -29,6 +29,7 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
+import Select from "react-select";
 import { VideoPlayer } from "react-video-players";
 import ReactPlayer from "react-player";
 import videos from "../../assets/video/nyc-exchange.mp4";
@@ -46,6 +47,9 @@ import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import "../../assets/css/main.css";
 
 class Content extends React.Component {
+  state = {
+    dataSelect: "Belajar Forex untuk Pemula"
+  };
   render() {
     return (
       <>
@@ -83,7 +87,7 @@ class Content extends React.Component {
               //   padding: "0 15% 2% 15%"
               // }}
               >
-                <div
+                {/* <div
                   className="title"
                   style={{
                     color: "black",
@@ -92,8 +96,59 @@ class Content extends React.Component {
                   }}
                 >
                   Belajar Forex untuk Pemula
-                </div>
-
+                </div> */}
+                <Col
+                  md="3"
+                  style={{
+                    backgroundColor: "transparent",
+                    padding: 0,
+                    color: "black"
+                  }}
+                >
+                  <Select
+                    style={{
+                      backgroundColor: "transparent"
+                    }}
+                    value="index"
+                    options={[
+                      {
+                        label: "Belajar Forex untuk Pemula",
+                        value: "Belajar Forex untuk Pemula"
+                      },
+                      {
+                        label: "Video Training",
+                        value: "Video Training"
+                      },
+                      {
+                        label: "Video Glossary",
+                        value: "Video Glossary"
+                      }
+                    ]}
+                    value={this.state.dataSelect}
+                    onChange={async data => {
+                      await this.setState({
+                        dataSelect: data
+                      });
+                      let dataSelect = [
+                        {
+                          label: "Belajar Forex untuk Pemula",
+                          value: "Belajar Forex untuk Pemula"
+                        },
+                        {
+                          label: "Video Training",
+                          value: "Video Training"
+                        },
+                        {
+                          label: "Video Glossary",
+                          value: "Video Glossary"
+                        }
+                      ];
+                      return dataSelect.filter(
+                        item => this.state.dataSelect.value === item.value
+                      )[0];
+                    }}
+                  />
+                </Col>
                 <Row>
                   <Col md="3">
                     <Card style={{ backgroundColor: "white" }}>

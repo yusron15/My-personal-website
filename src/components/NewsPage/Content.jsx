@@ -34,6 +34,7 @@ import {
   Table,
   Container,
   Row,
+  CarouselIndicators,
   Col,
   UncontrolledTooltip,
   Carousel,
@@ -44,7 +45,8 @@ import {
   InputGroupText,
   InputGroup
 } from "reactstrap";
-
+// import { Carousel } from "react-bootstrap";
+import { HoverCard } from "react-png-hovercard";
 import "../../assets/css/main.css";
 import town from "../../assets/img/town.png";
 import tractor from "../../assets/img/tractor.png";
@@ -173,6 +175,123 @@ const items = [
     altText: "",
     caption: "",
     src: "2"
+  }
+];
+
+const cardMarketNews = [
+  {
+    content: (
+      <div>
+        <Row>
+          <Col>
+            <CardNews
+              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+              image={pc}
+              person="person"
+              date="dd/mm/yyyy"
+            />
+          </Col>
+          <Col>
+            <CardNews
+              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+              image={pc2}
+              person="person"
+              date="dd/mm/yyyy"
+            />
+          </Col>
+          <Col>
+            <CardNews
+              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+              image={pc3}
+              person="person"
+              date="dd/mm/yyyy"
+            />
+          </Col>
+        </Row>
+      </div>
+    ),
+    altText: "",
+    caption: "",
+    src: "0"
+  },
+  {
+    content: (
+      <div>
+        <Row>
+          <Col>
+            <CardNews
+              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+              image={pc}
+              person="person"
+              date="dd/mm/yyyy"
+            />
+          </Col>
+          <Col>
+            <CardNews
+              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+              image={pc2}
+              person="person"
+              date="dd/mm/yyyy"
+            />
+          </Col>
+          <Col>
+            <CardNews
+              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+              image={pc3}
+              person="person"
+              date="dd/mm/yyyy"
+            />
+          </Col>
+        </Row>
+      </div>
+    ),
+    altText: "",
+    caption: "",
+    src: "0"
+  },
+  {
+    content: (
+      <div>
+        <Row>
+          <Col>
+            <CardNews
+              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+              image={pc}
+              person="person"
+              date="dd/mm/yyyy"
+            />
+          </Col>
+          <Col>
+            <CardNews
+              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+              image={pc2}
+              person="person"
+              date="dd/mm/yyyy"
+            />
+          </Col>
+          <Col>
+            <CardNews
+              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+              image={pc3}
+              person="person"
+              date="dd/mm/yyyy"
+            />
+          </Col>
+        </Row>
+      </div>
+    ),
+    altText: "",
+    caption: "",
+    src: "0"
   }
 ];
 
@@ -307,22 +426,110 @@ class Carding extends React.Component {
                 </Row>
                 <Row>
                   <Col>
-                    {/* <img top width="100%" src={town} alt="Card image cap"/> */}
-                    <div class="image">
-                      <img src={town} alt="" />
-                      <h2 className="text-news">
-                        <span>Market Updates</span>
-                      </h2>
+                    <div style={{ marginTop: "50px" }}>
+                      <HoverCard
+                        borderRadius={10}
+                        maxWidth={500}
+                        animationSpeed={500}
+                        height={150}
+                        front={
+                          <div>
+                            <img
+                              src={town}
+                              alt=""
+                              style={{ objectFit: "cover" }}
+                            />
+                            <h2 className="text-news">
+                              <span>Market Updates</span>
+                            </h2>
+                          </div>
+                        }
+                        back={
+                          <Container
+                            style={{
+                              marginTop: "20px",
+                              justifyContent: "center"
+                            }}
+                          >
+                            <div
+                              style={{
+                                textAlign: "center",
+                                margintTop: "10px"
+                              }}
+                            >
+                              <div
+                                style={{
+                                  color: "#167AFF",
+                                  fontWeight: "bold"
+                                }}
+                              >
+                                Bursa Asia Ditekan Aksi Ambil Untung
+                              </div>
+                              <div className="font-black">12/31/2019</div>
+                              <div className="font-black">
+                                Bursa Asia Ditekan Aksi Ambil Untung
+                                <br />
+                                Belum Terpengaruh Iran-AS, Pasar SUN Masih
+                                Mengua
+                              </div>
+                            </div>
+                          </Container>
+                        }
+                      />
                     </div>
                     <br />
                   </Col>
                   <Col>
-                    {/* <img top width="100%" src={town} alt="Card image cap"/> */}
-                    <div class="image">
-                      <img src={town} alt="" />
-                      <h2 className="text-news">
-                        <span>Morning News</span>
-                      </h2>
+                    <div style={{ marginTop: "50px" }}>
+                      <HoverCard
+                        borderRadius={10}
+                        maxWidth={500}
+                        animationSpeed={500}
+                        height={150}
+                        front={
+                          <div>
+                            <img
+                              src={town}
+                              alt=""
+                              style={{ objectFit: "cover" }}
+                            />
+                            <h2 className="text-news">
+                              <span>Morning News</span>
+                            </h2>
+                          </div>
+                        }
+                        back={
+                          <Container
+                            style={{
+                              marginTop: "20px",
+                              justifyContent: "center"
+                            }}
+                          >
+                            <div
+                              style={{
+                                textAlign: "center",
+                                margintTop: "10px"
+                              }}
+                            >
+                              <div
+                                style={{
+                                  color: "#167AFF",
+                                  fontWeight: "bold"
+                                }}
+                              >
+                                Bursa Asia Ditekan Aksi Ambil Untung
+                              </div>
+                              <div className="font-black">12/31/2019</div>
+                              <div className="font-black">
+                                Bursa Asia Ditekan Aksi Ambil Untung
+                                <br />
+                                Belum Terpengaruh Iran-AS, Pasar SUN Masih
+                                Mengua
+                              </div>
+                            </div>
+                          </Container>
+                        }
+                      />
                     </div>
                     <br />
                   </Col>
@@ -337,6 +544,42 @@ class Carding extends React.Component {
                 </Col>
               </Row>
               <Row>
+                <Carousel
+                  activeIndex={this.state.activeIndex}
+                  next={this.next}
+                  previous={this.previous}
+                  //   className="carousel-team"
+                  style={{
+                    borderRadius: "20px",
+                    backgroundColor: "transparent"
+                  }}
+                >
+                  <CarouselIndicators
+                    items={items}
+                    activeIndex={this.state.activeIndex}
+                  />
+                  {cardMarketNews.map((item, key) => {
+                    return (
+                      <CarouselItem
+                        onExiting={this.onExiting}
+                        onExited={this.onExited}
+                        key={key}
+                      >
+                        {item.content}
+                      </CarouselItem>
+                    );
+                  })}
+
+                  <Col
+                    sm="12"
+                    style={{
+                      position: "absolute",
+                      paddingLeft: "80%",
+                      bottom: "8%"
+                    }}
+                  ></Col>
+                </Carousel>
+                {/*              
                 <Col>
                   <CardNews
                     title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
@@ -363,7 +606,7 @@ class Carding extends React.Component {
                     person="person"
                     date="dd/mm/yyyy"
                   />
-                </Col>
+                </Col> */}
               </Row>
             </Container>
 
@@ -374,33 +617,41 @@ class Carding extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col>
-                  <CardNews
-                    title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                    image={pc}
-                    person="person"
-                    date="dd/mm/yyyy"
+                <Carousel
+                  activeIndex={this.state.activeIndex}
+                  next={this.next}
+                  previous={this.previous}
+                  //   className="carousel-team"
+                  style={{
+                    borderRadius: "20px",
+                    backgroundColor: "transparent"
+                  }}
+                >
+                  <CarouselIndicators
+                    items={items}
+                    activeIndex={this.state.activeIndex}
                   />
-                </Col>
-                <Col>
-                  <CardNews
-                    title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                    image={pc2}
-                    person="person"
-                    date="dd/mm/yyyy"
-                  />
-                </Col>
-                <Col>
-                  <CardNews
-                    title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                    image={pc3}
-                    person="person"
-                    date="dd/mm/yyyy"
-                  />
-                </Col>
+                  {cardMarketNews.map((item, key) => {
+                    return (
+                      <CarouselItem
+                        onExiting={this.onExiting}
+                        onExited={this.onExited}
+                        key={key}
+                      >
+                        {item.content}
+                      </CarouselItem>
+                    );
+                  })}
+
+                  <Col
+                    sm="12"
+                    style={{
+                      position: "absolute",
+                      paddingLeft: "80%",
+                      bottom: "8%"
+                    }}
+                  ></Col>
+                </Carousel>
               </Row>
             </Container>
 
@@ -411,34 +662,47 @@ class Carding extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col>
-                  <CardNews
-                    title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                    image={pc}
-                    person="person"
-                    date="dd/mm/yyyy"
+                <Carousel
+                  activeIndex={this.state.activeIndex}
+                  next={this.next}
+                  previous={this.previous}
+                  //   className="carousel-team"
+                  style={{
+                    borderRadius: "20px",
+                    backgroundColor: "transparent"
+                  }}
+                >
+                  <CarouselIndicators
+                    items={items}
+                    activeIndex={this.state.activeIndex}
                   />
-                </Col>
-                <Col>
-                  <CardNews
-                    title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                    image={pc2}
-                    person="person"
-                    date="dd/mm/yyyy"
-                  />
-                </Col>
-                <Col>
-                  <CardNews
-                    title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                    image={pc3}
-                    person="person"
-                    date="dd/mm/yyyy"
-                  />
-                </Col>
+                  {cardMarketNews.map((item, key) => {
+                    return (
+                      <CarouselItem
+                        onExiting={this.onExiting}
+                        onExited={this.onExited}
+                        key={key}
+                      >
+                        {item.content}
+                      </CarouselItem>
+                    );
+                  })}
+
+                  <Col
+                    sm="12"
+                    style={{
+                      position: "absolute",
+                      paddingLeft: "80%",
+                      bottom: "8%"
+                    }}
+                  ></Col>
+                </Carousel>
               </Row>
+              {/* <div style={{ position: "relative", left: "50%", right: "50%" }}>
+                <Button block color="info" style={{ maxWidth: "200px" }}>
+                  Indeks Berita
+                </Button>
+              </div> */}
             </Container>
           </div>
           <NewsLetter />
