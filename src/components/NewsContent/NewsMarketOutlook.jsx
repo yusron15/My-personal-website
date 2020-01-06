@@ -77,8 +77,7 @@ class NewsMarketOutlook extends React.Component {
   render() {
     return (
       <>
-        <div className="cd-section" id="headers">
-          {/* ********* HEADER 6 ********* */}
+        <div className="cd-section broken-white" id="headers">
           <div
             className="header header-6 broken-white "
             // style={{ backgroundColor: "#1D1E1F" }}
@@ -86,7 +85,6 @@ class NewsMarketOutlook extends React.Component {
           >
             <ColoredNavbar location={{ ...this.props.location }} />
             <div className="space-50" />
-            {/* <div className="page-header"> */}
             <div className="content-center">
               <Container>
                 {/* <Row className="align-items-center text-left"> */}

@@ -25,7 +25,14 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
-import { Link } from "react-router-dom";
+import {
+  Link,
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect,
+  Router
+} from "react-router-dom";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import Content from "../../components/NewsPage/Content.jsx";
@@ -279,7 +286,14 @@ class NewsPage extends React.Component {
             </TabPane>
             <TabPane tabId="project5">
               {/* <NewsMarketOutlook /> */}
-              <MarketOutlook />
+
+              <Route exact path="/newspage" component={MarketOutlook}></Route>
+              <Route
+                path="/newspage/:title"
+                component={NewsMarketOutlook}
+              ></Route>
+
+              {/* <MarketOutlook /> */}
             </TabPane>
           </TabContent>
           <Footer />

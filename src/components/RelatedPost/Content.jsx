@@ -48,21 +48,21 @@ class Content extends React.Component {
               image={news2}
               title="SoftBank Lanjutkan Penawaran Tender Saham WeWork"
               posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
-              description="SoftBank Group Corp minggu ini akan meluncurkan penawaran tender yang telah disepakati sebelumnya sebanyak $ 3 miliar saham WeWork, termasuk hingga $ 970 juta yang dimili..."
+              description="SoftBank Group Corp minggu ini akan meluncurkan penawaran tender yang telah disepakati sebelumnya sebanyak $ 3 miliar saham WeWork, termasuk hingga $ 970 juta yang dimiliki."
             />
 
             <Layout
               image={news3}
               title="Pasar Saham Asia Pulih Dari Level Rendah"
               posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
-              description="Aktivitas pabrik Jepang menyusut untuk bulan ketujuh berturut-turut pada bulan November, karena permintaan domestik dan ekspor tetap dalam lesu sehingga memperkuat tantan..."
+              description="Aktivitas pabrik Jepang menyusut untuk bulan ketujuh berturut-turut pada bulan November, karena permintaan domestik dan ekspor tetap dalam lesu sehingga memperkuat tantan"
             />
 
             <Layout
               image={news4}
               title="China Undang AS Untuk Bicara di Beijing"
               posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
-              description="Kontrak Futures AS turun sedikit karena ketegangan perdagangan tetap menjadi fokus setelah laporan bahwa China telah mengundang Washington untuk melakukan pembicaraan tat.."
+              description="Kontrak Futures AS turun sedikit karena ketegangan perdagangan tetap menjadi fokus setelah laporan bahwa China telah mengundang Washington untuk melakukan pembicaraan"
             />
           </Row>
         </Container>

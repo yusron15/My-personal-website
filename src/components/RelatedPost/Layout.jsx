@@ -15,6 +15,7 @@
 
 */
 import React from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -83,28 +84,26 @@ class Content extends React.Component {
                       {title}
                     </div>
                     <div
-                      className="text-posted font-black"
+                      className="text-posted font-black tag-space"
                       style={{ color: "black" }}
                     >
                       {posted}
                     </div>
                     <p className="font-black">
-                      {/* <ShowMoreText
-                        style={{ color: "blue" }}
-                        lines={3}
-                        more="Show more"
-                        less="Show less"
-                        anchorClass=""
-                        onClick={this.executeOnClick}
-                        expanded={false}
+                      {`${description.substring(0, 190)} `}
+                      <br />
+                      <Link
+                        to={`/newspage/${title}`}
+                        state={{
+                          data: {
+                            title,
+                            posted,
+                            description
+                          }
+                        }}
                       >
-                        {description}
-                      </ShowMoreText> */}
-                      <ReadMoreReact
-                        style={{ marginTop: "50px" }}
-                        text={description}
-                        readMoreText="click here to read more"
-                      />
+                        Read More
+                      </Link>
                     </p>
                   </div>
                 </Col>

@@ -142,6 +142,7 @@ ReactDOM.render(
             path="/TopgrowthTrader"
             render={props => <TopgrowthTrader {...props} />}
           />
+
           <Route path="/NewsPage" render={props => <NewsPage {...props} />} />
           <Route path="/NewsMarketOutlook" component={NewsMarketOutlook} />
 
@@ -212,6 +213,7 @@ ReactDOM.render(
             path="/checkout-page"
             render={props => <CheckoutPage {...props} />}
           />
+
           <Route path="/chat-page" render={props => <ChatPage {...props} />} />
           <Redirect from="/" to="/landing" />
         </Switch>
