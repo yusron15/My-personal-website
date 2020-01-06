@@ -273,16 +273,32 @@ class NewsPage extends React.Component {
               <NewsForexCommodity />
             </TabPane> */}
             <TabPane tabId="project2">
-              <StockIndex />
+              {/* <StockIndex /> */}
+              <Route exact path="/newspage" component={StockIndex}></Route>
+              <Route path="/newspage/:title" component={NewsStockIndex}></Route>
             </TabPane>
             <TabPane tabId="project3">
-              <ForexCommodity />
+              {/* <ForexCommodity /> */}
+              <Route exact path="/newspage" component={ForexCommodity}></Route>
+              <Route
+                path="/newspage/:title"
+                component={NewsForexCommodity}
+              ></Route>
             </TabPane>
             {/* <TabPane tabId="project4">
               <EconomicCalendarInside />
             </TabPane> */}
             <TabPane tabId="project4">
-              <EconomicCalendar />
+              {/* <EconomicCalendar /> */}
+              <Route
+                exact
+                path="/newspage"
+                component={EconomicCalendar}
+              ></Route>
+              <Route
+                path="/newspage/:time"
+                component={EconomicCalendarInside}
+              ></Route>
             </TabPane>
             <TabPane tabId="project5">
               {/* <NewsMarketOutlook /> */}
@@ -292,7 +308,6 @@ class NewsPage extends React.Component {
                 path="/newspage/:title"
                 component={NewsMarketOutlook}
               ></Route>
-
               {/* <MarketOutlook /> */}
             </TabPane>
           </TabContent>

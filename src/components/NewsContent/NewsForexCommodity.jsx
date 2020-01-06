@@ -55,6 +55,7 @@ const textContent = {
   margin: 0,
   position: "absolute",
   top: "50%",
+  color: "black",
   fontSize: "1rem",
   msTransform: "translateY(-50%)",
   transform: "translateY(-50%)"
@@ -65,9 +66,9 @@ class NewsForexCommodity extends React.Component {
     return (
       <>
         <div
-          className="cd-section"
+          className="cd-section broken-white"
           id="features"
-          style={{ backgroundColor: "#1D1E1F" }}
+          // style={{ backgroundColor: "#1D1E1F" }}
         >
           {/* ********* FEATURES 3 ********* */}
           <div className="features-3">
@@ -75,7 +76,7 @@ class NewsForexCommodity extends React.Component {
               <Row>
                 <Col
                   sm={{ size: 10, order: 2, offset: 1 }}
-                  style={{ marginTop: "150px" }}
+                  // style={{ marginTop: "150px" }}
                 >
                   <Row>
                     <Col lg="4">
@@ -87,11 +88,14 @@ class NewsForexCommodity extends React.Component {
                     </Col>
                     <Col lg="8">
                       <div style={textContent}>
-                        <div className="title-content">
+                        <div
+                          style={{ color: "black" }}
+                          className="title-content font-black"
+                        >
                           ECB Lagarde Minta Dukungan Kebijakan Fiskal Anggota
                           Zona Euro
                         </div>
-                        <p>
+                        <p style={{ color: "black" }}>
                           Presiden Bank Sentral Eropa Christine Lagarde
                           menyerukan bauran kebijakan baru. Ia mengatakan
                           investasi publik harus ditingkatkan untuk meringankan

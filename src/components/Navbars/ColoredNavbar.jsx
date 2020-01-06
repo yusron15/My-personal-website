@@ -197,9 +197,10 @@ class ColorNavbar extends React.Component {
                   </NavItem>
                 </Link>
 
-                <div class="dropdown dropbtn">
+                <div class="dropdown ">
                   <div style={stylesAnimation.slideInDown}>
-                    <div
+                    <button
+                      class="dropbtn"
                       style={{
                         color: this.coloringNav([
                           "/tentangkami",
@@ -210,7 +211,7 @@ class ColorNavbar extends React.Component {
                       }}
                     >
                       Tentang Kami
-                    </div>
+                    </button>
                     <div class="dropdown-content">
                       <Link
                         as={NavLink}
@@ -239,8 +240,9 @@ class ColorNavbar extends React.Component {
                   </div>
                 </div>
 
-                <div class="dropdown dropbtn">
-                  <div
+                <div class="dropdown ">
+                  <button
+                    class="dropbtn"
                     style={{
                       color: this.coloringNav([
                         "/forex",
@@ -257,7 +259,7 @@ class ColorNavbar extends React.Component {
                     }}
                   >
                     Trading Online
-                  </div>
+                  </button>
                   <div class="dropdown-content-trading trading-online">
                     <Container>
                       <Row>

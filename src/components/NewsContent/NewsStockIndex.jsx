@@ -69,9 +69,9 @@ class NewsStockIndex extends React.Component {
     return (
       <>
         <div
-          className="cd-section"
+          className="cd-section broken-white"
           id="features"
-          style={{ backgroundColor: "#1D1E1F" }}
+          // style={{ backgroundColor: "#1D1E1F" }}
         >
           {/* ********* FEATURES 3 ********* */}
           <div className="features-3">
@@ -79,7 +79,7 @@ class NewsStockIndex extends React.Component {
               <Row>
                 <Col
                   sm={{ size: 10, order: 2, offset: 1 }}
-                  style={{ marginTop: "50px" }}
+                  // style={{ marginTop: "50px" }}
                 >
                   <Row>
                     <Col lg="4">
@@ -91,41 +91,36 @@ class NewsStockIndex extends React.Component {
                     </Col>
                     <Col lg="8">
                       <div style={textContent}>
-                        <div className="title-content">
+                        <div
+                          style={{ color: "black" }}
+                          className="title-content"
+                        >
                           Pasar Saham Asia Tunggu Komentar Terkait Trade War
                         </div>
 
-                        <p>
-                          <ReadMoreReact
+                        <p style={{ color: "black" }}>
+                          {/* <ReadMoreReact style={{}}
                             text={
-                              "  Pasar Saham Asia membuat kenaikan pada hari Senin  karena investor bersiap di minggu ini untukkemungkinan komentar yang saling bertentangan mengenai perang perdagangan China-AS, sementara kinerja yang unggul dari data ekonomi AS baru-baru ini membuat dolar menguat terhadap rekan-rekannya.  Indeks MSCI dari saham Asia Pasifik di luar Jepang  melambung 0,26%, setelah kehilangan 0,4% minggu lalu. Nikkei Jepang menguat 0,8% di awal perdagangan,  sementara saham Australia naik 0,5%. Kontrak berjangka E-Mini untuk S&P 500 bertambah 0,2%. Pada hari Sabtu, penasihat keamanan nasional AS Robert O’Brien mengatakan perjanjian perdagangan awal dengan China masih mungkin dilakukan pada akhir tahun ini, tetapi memperingatkan Washington tidak akan menutup mata terhadap apa yang terjadi di Hong Kong. Komentar itu menambah kekhawatiran bahwa tindakan keras China terhadap protes anti-pemerintah di Hong Kong dapat semakin memperumit pembicaraan."
-                            }
-                          />
-                        </p>
-                      </div>
-                    </Col>
-                  </Row>
-
-                  <Row style={{ marginTop: "50px" }}>
-                    <Col lg="4">
-                      <div className="card-image">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img alt="..." className="img rounded" src={news1} />
-                        </a>
-                      </div>
-                    </Col>
-                    <Col lg="8">
-                      <div style={textContent}>
-                        <div className="title-content">
-                          Pasar Saham Asia Tunggu Komentar Terkait Trade War
-                        </div>
-
-                        <p>
-                          <ReadMoreReact
-                            text={
-                              "  Pasar Saham Asia membuat kenaikan pada hari Senin  karena investor bersiap di minggu ini untukkemungkinan komentar yang saling bertentangan mengenai perang perdagangan China-AS, sementara kinerja yang unggul dari data ekonomi AS baru-baru ini membuat dolar menguat terhadap rekan-rekannya.  Indeks MSCI dari saham Asia Pasifik di luar Jepang  melambung 0,26%, setelah kehilangan 0,4% minggu lalu. Nikkei Jepang menguat 0,8% di awal perdagangan,  sementara saham Australia naik 0,5%. Kontrak berjangka E-Mini untuk S&P 500 bertambah 0,2%. Pada hari Sabtu, penasihat keamanan nasional AS Robert O’Brien mengatakan perjanjian perdagangan awal dengan China masih mungkin dilakukan pada akhir tahun ini, tetapi memperingatkan Washington tidak akan menutup mata terhadap apa yang terjadi di Hong Kong. Komentar itu menambah kekhawatiran bahwa tindakan keras China terhadap protes anti-pemerintah di Hong Kong dapat semakin memperumit pembicaraan."
-                            }
-                          />
+                              "   */}
+                          Pasar Saham Asia membuat kenaikan pada hari Senin
+                          karena investor bersiap di minggu ini untukkemungkinan
+                          komentar yang saling bertentangan mengenai perang
+                          perdagangan China-AS, sementara kinerja yang unggul
+                          dari data ekonomi AS baru-baru ini membuat dolar
+                          menguat terhadap rekan-rekannya. Indeks MSCI dari
+                          saham Asia Pasifik di luar Jepang melambung 0,26%,
+                          setelah kehilangan 0,4% minggu lalu. Nikkei Jepang
+                          menguat 0,8% di awal perdagangan, sementara saham
+                          Australia naik 0,5%. Kontrak berjangka E-Mini untuk
+                          S&P 500 bertambah 0,2%. Pada hari Sabtu, penasihat
+                          keamanan nasional AS Robert O’Brien mengatakan
+                          perjanjian perdagangan awal dengan China masih mungkin
+                          dilakukan pada akhir tahun ini, tetapi memperingatkan
+                          Washington tidak akan menutup mata terhadap apa yang
+                          terjadi di Hong Kong. Komentar itu menambah
+                          kekhawatiran bahwa tindakan keras China terhadap
+                          protes anti-pemerintah di Hong Kong dapat semakin
+                          memperumit pembicaraan.
                         </p>
                       </div>
                     </Col>

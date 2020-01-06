@@ -18,6 +18,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../assets/css/main.css";
 
+const textTable = {
+  color: "white",
+  textAlign: "center"
+};
+
 class TableBody extends React.Component {
   render() {
     const {
@@ -31,9 +36,28 @@ class TableBody extends React.Component {
     } = this.props;
     return (
       <tbody>
+        {/* <Link
+          to={`/newspage/${time}`}
+          state={{
+            data: {
+              time
+            }
+          }}
+        > */}
         <tr className="even">
           <td>
-            <div className="text-center">> {time}</div>
+            <Link
+              to={`/newspage/${time}`}
+              state={{
+                data: {
+                  time
+                }
+              }}
+            >
+              <div style={textTable} className="text-center">
+                > {time}
+              </div>
+            </Link>
           </td>
           <td className="text-center">
             {/* <div className="img-container"> */}
@@ -49,10 +73,17 @@ class TableBody extends React.Component {
             {currency}
           </td>
           <td>{event}</td>
-          <td className="text-center">{actual}</td>
-          <td className="text-center">{forecast}</td>
-          <td className="text-center">{previous}</td>
+          <td style={textTable} className="text-center">
+            {actual}
+          </td>
+          <td style={textTable} className="text-center">
+            {forecast}
+          </td>
+          <td style={textTable} className="text-center">
+            {previous}
+          </td>
         </tr>
+        {/* </Link> */}
       </tbody>
     );
   }
