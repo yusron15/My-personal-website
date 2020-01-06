@@ -184,25 +184,18 @@ class ColorNavbar extends React.Component {
                 role="tablist"
                 navbar
               >
-                <NavItem>
-                  <button class=" dropdown dropbtn">
-                    <Link
-                      to="/landing"
+                <Link to="/landing">
+                  <NavItem>
+                    <button
+                      className="dropdown dropbtn"
                       style={{
                         color: this.coloringNav("/landing")
-                        // color: "black",
-                        // ...(this.state.activeTab === "1"
-                        //   ? { color: "#2AB4E7" }
-                        //   : { color: this.state.color })
                       }}
-                      // onClick={() => {
-                      //   this.toggle("1");
-                      // }}
                     >
                       Home
-                    </Link>
-                  </button>
-                </NavItem>
+                    </button>
+                  </NavItem>
+                </Link>
 
                 <div class="dropdown dropbtn">
                   <div style={stylesAnimation.slideInDown}>
@@ -219,7 +212,11 @@ class ColorNavbar extends React.Component {
                       Tentang Kami
                     </div>
                     <div class="dropdown-content">
-                      <Link as={NavLink} to="/tentangkami">
+                      <Link
+                        as={NavLink}
+                        to="/tentangkami"
+                        className="underlined"
+                      >
                         <div style={tentangkami}>Topgrowth Futures</div>
                         <div>Topgrowth Futures Lorem Ipsum</div>
                       </Link>
@@ -306,71 +303,69 @@ class ColorNavbar extends React.Component {
                   </div>
                 </div>
 
-                <div class="dropdown ">
-                  <button class="dropbtn" style={colorStyle}>
-                    <Link
-                      to="/newspage"
+                <Link
+                  to="/newspage"
+                  // onClick={() => {
+                  //   this.toggle("2");
+                  // }}
+                >
+                  <div class="dropdown">
+                    <button
+                      class="dropbtn"
                       style={{
+                        ...colorStyle,
                         color: this.coloringNav("/newspage")
-                        // color: "black",
-                        // ...(this.state.activeTab === "2"
-                        //   ? { color: "#2AB4E7" }
-                        //   : { color: this.state.color })
                       }}
-                      // onClick={() => {
-                      //   this.toggle("2");
-                      // }}
                     >
                       Berita
-                    </Link>
-                  </button>
-                </div>
+                    </button>
+                  </div>
+                </Link>
 
-                <NavItem>
-                  <button class="dropbtn">
-                    <Link
-                      to="/edukasi"
+                <Link to="/edukasi">
+                  <NavItem>
+                    <button
+                      class="dropbtn"
                       style={{
+                        ...colorStyle,
                         color: this.coloringNav("/edukasi")
-                        // color: "black",
-                        // ...(this.state.activeTab === "3"
-                        //   ? { color: "#2AB4E7" }
-                        //   : { color: this.state.color })
                       }}
-                      // onClick={() => {
-                      //   this.toggle("3");
-                      // }}
                     >
                       Edukasi
-                    </Link>
-                  </button>
-                </NavItem>
+                    </button>
+                  </NavItem>
+                </Link>
 
-                <NavItem>
-                  <button class="dropbtn">
-                    <Link
-                      to="/karir"
-                      style={colorStyle}
+                <Link
+                  to="/karir"
+                  style={colorStyle}
+
+                  // onClick={() => {
+                  //   this.toggle("4");
+                  // }}
+                >
+                  <NavItem>
+                    <button
+                      class="dropbtn"
                       style={{
                         color: this.coloringNav("/karir")
-                        // color: this.state.color,
-                        // ...(this.state.activeTab === "4"
-                        //   ? { color: "#2AB4E7" }
-                        //   : { color: this.state.color })
                       }}
-                      // onClick={() => {
-                      //   this.toggle("4");
-                      // }}
                     >
                       Karir
-                    </Link>
-                  </button>
-                </NavItem>
+                    </button>
+                  </NavItem>
+                </Link>
 
-                <NavItem>
-                  <button class="dropbtn">
-                    <Link
-                      to="/Contact"
+                <Link
+                  to="/Contact"
+
+                  // onClick={() => {
+                  //   this.toggle("5");
+                  // }}
+                >
+                  <NavItem>
+                    <button
+                      class="dropbtn"
                       style={{
                         color: this.coloringNav("/Contact")
                         // color: this.state.color,
@@ -378,14 +373,11 @@ class ColorNavbar extends React.Component {
                         //   ? { color: "#2AB4E7" }
                         //   : { color: this.state.color })
                       }}
-                      // onClick={() => {
-                      //   this.toggle("5");
-                      // }}
                     >
                       Hubungi Kami
-                    </Link>
-                  </button>
-                </NavItem>
+                    </button>
+                  </NavItem>
+                </Link>
               </Nav>
             </UncontrolledCollapse>
           </Container>

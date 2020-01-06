@@ -166,7 +166,8 @@
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  /* background-color: #ddd; */
+  text-decoration: underline;
 }
 
 .dropdown:hover .dropdown-content {
@@ -175,7 +176,8 @@
 }
 
 .dropdown-content-trading a:hover {
-  background-color: #ddd;
+  /* background-color: #ddd; */
+  text-decoration: underline;
 }
 
 .dropdown:hover .dropdown-content-trading {
@@ -507,4 +509,8 @@ hr.grey {
 .tag-space {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.underlined:hover {
+  background-color: red;
 }

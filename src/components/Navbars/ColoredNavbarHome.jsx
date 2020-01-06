@@ -303,25 +303,25 @@ class ColorNavbar extends React.Component {
                   </div>
                 </div>
 
-                <div class="dropdown ">
-                  <button class="dropbtn" style={colorStyle}>
-                    <Link
-                      to="/newspage"
-                      style={{
-                        color: this.coloringNav("/newspage")
-                        // color: "black",
-                        // ...(this.state.activeTab === "2"
-                        //   ? { color: "#2AB4E7" }
-                        //   : { color: this.state.color })
-                      }}
-                      // onClick={() => {
-                      //   this.toggle("2");
-                      // }}
-                    >
+                <Link
+                  to="/newspage"
+                  style={{
+                    color: this.coloringNav("/newspage")
+                    // color: "black",
+                    // ...(this.state.activeTab === "2"
+                    //   ? { color: "#2AB4E7" }
+                    //   : { color: this.state.color })
+                  }}
+                  // onClick={() => {
+                  //   this.toggle("2");
+                  // }}
+                >
+                  <div class="dropdown ">
+                    <button class="dropbtn" style={colorStyle}>
                       Berita
-                    </Link>
-                  </button>
-                </div>
+                    </button>
+                  </div>
+                </Link>
 
                 <NavItem>
                   <button class="dropbtn">
