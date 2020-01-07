@@ -219,22 +219,22 @@ class ColorNavbar extends React.Component {
                   <div class="dropdown-content">
                     <Link as={NavLink} to="/tentangkami">
                       <div style={tentangkami}>Topgrowth Futures</div>
-                      <div>Topgrowth Futures Lorem Ipsum</div>
+                      {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
                     </Link>
                     <div class="vl-navbar"></div>
                     <Link to="/cabang">
                       <div style={tentangkami}>Cabang Kami</div>
-                      <div>Topgrowth Futures Lorem Ipsum</div>
+                      {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
                     </Link>
                     <div class="vl-navbar"></div>
                     <Link to="/rekeningterpisah">
                       <div style={tentangkami}> Rekening Terpisah </div>
-                      <div>Topgrowth Futures Lorem Ipsum</div>
+                      {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
                     </Link>
                     <div class="vl-navbar"></div>
                     <Link to="/legalitas">
                       <div style={tentangkami}> Legalitas </div>
-                      <div>Topgrowth Futures Lorem Ipsum</div>
+                      {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
                     </Link>
                   </div>
                 </div>

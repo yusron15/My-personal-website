@@ -33,7 +33,7 @@ import { Carousel } from "react-bootstrap";
 // import { Carousel } from "react-responsive-carousel";
 import BreakingNews from "../../components/Landing/BreakingNews.jsx";
 import Navbar from "../../components/Navbars/Navbar.jsx";
-import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import BlurryNavbar from "../../components/Navbars/BlurryNavbarHome.jsx";
 import CardRegister from "../../components/Register/CardRegister.jsx";
 import HeaaderContent from "./HeaderContent.jsx";
 import image from "../../assets/img/bglanding.png";
@@ -58,8 +58,200 @@ class HeaderLanding extends React.Component {
   constructor(props) {
     super(props);
   }
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+          <div
+            className="cd-section header-filter"
+            id="headers"
+            style={{
+              backgroundImage:
+                "url(" + require("assets/img/header-image.png") + ")",
+              backgroundSize: "cover"
+            }}
+          >
+            <div>
+              <BlurryNavbar />
+              <div className="space-50" />
+              <Row
+              // className="header-filter"
+              // style={{
+              //   backgroundImage:
+              //     "url(" + require("assets/img/header-image.png") + ")",
+              //   backgroundSize: "cover"
+              // }}
+              >
+                <Col md="5 offset-md-1">
+                  <Carousel
+                    indicators={false}
+                    controls={false}
+                    slide={true}
+                    touch={true}
+                    interval="5000"
+                    pauseOnHover={false}
+                  >
+                    <Carousel.Item>
+                      <div
+                        className="page-header"
+                        style={{ minHeight: "60vh" }}
+                      >
+                        {/* here */}
+                        <Container style={{ paddingTop: "20%" }}>
+                          <Row>
+                            {/* <Navbar /> */}
 
-  render() {
+                            <Col className="mr-auto text-left" md="12">
+                              <div
+                                style={{
+                                  fontStyle: "Helvetica Bold",
+                                  fontSize: "2rem",
+                                  fontWeight: "bold"
+                                }}
+
+                                // className="title"
+                              >
+                                Trading Bersama Broker Terbaik
+                              </div>
+
+                              <h4>
+                                Didirikan sejak tahun 2003, saat ini telah
+                                berkembang menjadi Perusahaan Pialang Berjangka
+                                Terbaik dan Terbesar di Indonesia.
+                              </h4>
+                              <br />
+                            </Col>
+                            {/* <Col md="5">
+                              <Row className="vertical-center">
+                            <Col>
+                              <img src={best17} />
+                            </Col>
+                            <Col>
+                              <img src={best18} />
+                            </Col>
+                          </Row>
+                            </Col> */}
+                          </Row>
+                        </Container>
+                      </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <div
+                        className="page-header"
+                        style={{ minHeight: "60vh" }}
+                      >
+                        <Container style={{ paddingTop: "20%" }}>
+                          <Row>
+                            {/* <Navbar /> */}
+                            {/* <Col className="mr-auto text-left" lg="5" md="7">
+                              <img
+                                src={phoneHeader}
+                                style={{ paddingBottom: "0" }}
+                              />
+                            </Col> */}
+                            <Col md="12">
+                              <Row className="vertical-center">
+                                <div
+                                  style={{
+                                    fontStyle: "Helvetica Bold",
+                                    fontSize: "2rem",
+                                    fontWeight: "bold"
+                                  }}
+
+                                  // className="title"
+                                >
+                                  Platform Unggulan Pro I Trader
+                                </div>
+
+                                <h4>
+                                  Proses Eksekusi Order yang SEDERHANA dan CEPAT
+                                  LIVE QUOTES dalam bentuk Summary maupun
+                                  Advance Mode CHARTING dilengkapi dengan TOOLS
+                                  untuk bertrading secara TEKNIKAL BERITA
+                                  REAL-TIME untuk bertrading secara fundamental
+                                </h4>
+                              </Row>
+                            </Col>
+                          </Row>
+                        </Container>
+                      </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <div
+                        className="page-header"
+                        style={{ minHeight: "60vh" }}
+                      >
+                        <Container style={{ paddingTop: "20%" }}>
+                          <Row className="vertical-center">
+                            {/* <Navbar /> */}
+                            {/* <Col className="mr-auto text-left" lg="5" md="7">
+                              <img
+                                src={iphone3}
+                                style={{
+                                  height: "50vh",
+                                  width: "100vw"
+                                }}
+                              />
+                            </Col> */}
+                            <Col md="12">
+                              <Row>
+                                <div
+                                  style={{
+                                    fontStyle: "Helvetica Bold",
+                                    fontSize: "2rem",
+                                    fontWeight: "bold"
+                                  }}
+
+                                  // className="title"
+                                >
+                                  Topgrowth Futures Mobile
+                                </div>
+
+                                <h4>
+                                  Untuk Berita Pasar Keuangan Ter-UPDATE,
+                                  Rekomendasi TRADING, Ulasan Pasar & SIGNAL
+                                  TRADING REAL TIME
+                                </h4>
+                                <br />
+                                <Row>
+                                  <Col>
+                                    <img src={appstore} />
+                                  </Col>
+                                  <Col>
+                                    <img
+                                      src={playstore}
+                                      // style={{ marginLeft: "20px" }}
+                                    />
+                                  </Col>
+                                </Row>
+                              </Row>
+                            </Col>
+                          </Row>
+                        </Container>
+                      </div>
+                    </Carousel.Item>
+                  </Carousel>
+                </Col>
+                <Col
+                  // md=""
+                  md="4 offset-md-2"
+                  // style={{ padding: "2% 5% 5% 0" }}
+                >
+                  <ScrollAnimation
+                    delay={100}
+                    animateIn="fadeInRight"
+                    animateOut="fadeOut"
+                  >
+                    <CardRegister />
+                  </ScrollAnimation>
+                </Col>
+              </Row>
+            </div>
+            <BreakingNews />
+          </div>
+        </>
+      );
+    }
     return (
       <>
         <div
@@ -241,6 +433,9 @@ class HeaderLanding extends React.Component {
         </div>
       </>
     );
+  };
+  render() {
+    return this.renderContent();
   }
 }
 

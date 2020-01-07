@@ -285,14 +285,15 @@ class Content extends React.Component {
           style={{ backgroundColor: "#1D1E1F" }}
         >
           {/* ********* TEAM 1 ********* */}
-          <BlurryNavbar />
-          <ColoredNavbar location={{ ...this.props.location }} />
           <div
             className="team-1 background-header"
             style={{
-              backgroundImage: `url(${bg})`
+              backgroundImage: `url(${bg})`,
+              padding: 0
             }}
           >
+            <BlurryNavbar />
+            <ColoredNavbar location={{ ...this.props.location }} />
             <div className="title title-header">Topgrowth Trader</div>
           </div>
           <div className="team-1 broken-white">
@@ -369,54 +370,46 @@ class Content extends React.Component {
               </Row> */}
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="2">
-                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
-                    <div
-                      onMouseEnter={this.handleRatingEnter}
-                      onMouseLeave={this.handleRatingLeave}
-                      className="text-fitur"
-                    >
-                      <img
-                        style={{ marginBottom: "20px" }}
-                        src={this.state.rating}
-                      />
-                      <div>
-                        Charting dilengkapi dengan tools untuk bertrading secara
-                        teknikal.
-                      </div>
+                  <div
+                    onMouseEnter={this.handleRatingEnter}
+                    onMouseLeave={this.handleRatingLeave}
+                    className="text-fitur"
+                  >
+                    <img
+                      style={{ marginBottom: "20px" }}
+                      src={this.state.rating}
+                    />
+                    <div>
+                      Charting dilengkapi dengan tools untuk bertrading secara
+                      teknikal.
                     </div>
-                  </ScrollAnimation>
+                  </div>
                 </Col>
                 <Col className="ml-auto mr-auto text-center" md="2">
-                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
-                    <div
-                      onMouseEnter={this.handleReportEnter}
-                      onMouseLeave={this.handleReportLeave}
-                      className="text-fitur"
-                    >
-                      <img
-                        style={{ marginBottom: "20px" }}
-                        src={this.state.report}
-                      />
-                      <div>
-                        Catatan Trading Anda dapat diakses dengan cepat.
-                      </div>
-                    </div>
-                  </ScrollAnimation>
+                  <div
+                    onMouseEnter={this.handleReportEnter}
+                    onMouseLeave={this.handleReportLeave}
+                    className="text-fitur"
+                  >
+                    <img
+                      style={{ marginBottom: "20px" }}
+                      src={this.state.report}
+                    />
+                    <div>Catatan Trading Anda dapat diakses dengan cepat.</div>
+                  </div>
                 </Col>
                 <Col className="ml-auto mr-auto text-center" md="2">
-                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
-                    <div
-                      onMouseEnter={this.handleDemandEnter}
-                      onMouseLeave={this.handleDemandLeave}
-                      className="text-fitur"
-                    >
-                      <img
-                        style={{ marginBottom: "20px" }}
-                        src={this.state.demand}
-                      />
-                      <div>Bisa disesuaikan dengan kebutuhan anda.</div>
-                    </div>
-                  </ScrollAnimation>
+                  <div
+                    onMouseEnter={this.handleDemandEnter}
+                    onMouseLeave={this.handleDemandLeave}
+                    className="text-fitur"
+                  >
+                    <img
+                      style={{ marginBottom: "20px" }}
+                      src={this.state.demand}
+                    />
+                    <div>Bisa disesuaikan dengan kebutuhan anda.</div>
+                  </div>
                 </Col>
               </Row>
               <Row
@@ -425,56 +418,50 @@ class Content extends React.Component {
                 style={{ marginTop: "30px" }}
               >
                 <Col className="ml-auto mr-auto text-center" md="2">
-                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
-                    <div
-                      onMouseEnter={this.handleListEnter}
-                      onMouseLeave={this.handleListLeave}
-                      className="text-fitur"
-                    >
-                      <img
-                        style={{ marginBottom: "20px" }}
-                        src={this.state.list}
-                      />
-                      <div>
-                        Life Quotes dalam bentuk Summary maupun Advance mode.
-                        Proses eksekusi Order yang Sederhana dan Cepat.
-                      </div>
+                  <div
+                    onMouseEnter={this.handleListEnter}
+                    onMouseLeave={this.handleListLeave}
+                    className="text-fitur"
+                  >
+                    <img
+                      style={{ marginBottom: "20px" }}
+                      src={this.state.list}
+                    />
+                    <div>
+                      Life Quotes dalam bentuk Summary maupun Advance mode.
+                      Proses eksekusi Order yang Sederhana dan Cepat.
                     </div>
-                  </ScrollAnimation>
+                  </div>
                 </Col>
                 <Col className="ml-auto mr-auto text-center" md="2">
-                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
-                    <div
-                      onMouseEnter={this.handleSortingEnter}
-                      onMouseLeave={this.handleSortingLeave}
-                      className="text-fitur"
-                    >
-                      <img
-                        style={{ marginBottom: "20px" }}
-                        src={this.state.sorting}
-                      />
-                      <div style={{ marginTop: "35px" }}>
-                        Proses eksekusi Order yang Sederhana dan Cepat.
-                      </div>
+                  <div
+                    onMouseEnter={this.handleSortingEnter}
+                    onMouseLeave={this.handleSortingLeave}
+                    className="text-fitur"
+                  >
+                    <img
+                      style={{ marginBottom: "20px" }}
+                      src={this.state.sorting}
+                    />
+                    <div style={{ marginTop: "35px" }}>
+                      Proses eksekusi Order yang Sederhana dan Cepat.
                     </div>
-                  </ScrollAnimation>
+                  </div>
                 </Col>
                 <Col className="ml-auto mr-auto text-center" md="2">
-                  <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
-                    <div
-                      onMouseEnter={this.handleSubmitEnter}
-                      onMouseLeave={this.handleSubmitLeave}
-                      className="text-fitur"
-                    >
-                      <img
-                        style={{ marginBottom: "20px" }}
-                        src={this.state.submit}
-                      />
-                      <div>
-                        Berita real-time untuk bertrading secara fundamental.
-                      </div>
+                  <div
+                    onMouseEnter={this.handleSubmitEnter}
+                    onMouseLeave={this.handleSubmitLeave}
+                    className="text-fitur"
+                  >
+                    <img
+                      style={{ marginBottom: "20px" }}
+                      src={this.state.submit}
+                    />
+                    <div>
+                      Berita real-time untuk bertrading secara fundamental.
                     </div>
-                  </ScrollAnimation>
+                  </div>
                 </Col>
               </Row>
             </div>

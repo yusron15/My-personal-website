@@ -85,13 +85,15 @@ class Content extends React.Component {
           // style={{ backgroundColor: "#1D1E1F" }}
         >
           {/* ********* TEAM 1 ********* */}
-          <BlurryNavbar />
           <div
             className="team-1 background-header"
             style={{
-              backgroundImage: `url(${bg})`
+              backgroundImage: `url(${bg})`,
+              padding: 0
             }}
           >
+            <BlurryNavbar />
+
             <div className="title title-header">Contract For Difference</div>
           </div>
           <div className="team-1 broken-white">

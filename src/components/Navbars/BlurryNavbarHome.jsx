@@ -44,7 +44,7 @@ import flag from "../../assets/img/flag-uk.png";
 import "../../assets/css/main.css";
 
 const font = {
-  color: "white"
+  color: "black"
 };
 
 class BlurryNavbar extends React.Component {
@@ -85,12 +85,12 @@ class BlurryNavbar extends React.Component {
     return (
       <>
         <Navbar
-          // className={this.state.navbarPosition}
+          className="broken-white"
           expand="lg"
           style={{
             // backgroundColor: "rgba(112, 112, 112, 0.19)",
             // backgroundColor: "#343435",
-            backgroundColor: "transparent",
+            // backgroundColor: "white",
             height: "50px"
           }}
         >

@@ -54,7 +54,6 @@ class Content extends React.Component {
     return (
       <>
         <div className="cd-section" id="projects">
-          <BlurryNavbar />
           <div
             className="project-raised broken-white"
             // style={{ backgroundColor: "#D4D4D4" }}
@@ -62,9 +61,12 @@ class Content extends React.Component {
             <div
               className="team-1 bg-header background-header"
               style={{
-                backgroundImage: `url(${bg})`
+                backgroundImage: `url(${bg})`,
+                padding: 0
               }}
             >
+              <BlurryNavbar />
+
               <div className="title title-header">Edukasi</div>
             </div>
 

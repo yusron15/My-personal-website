@@ -44,15 +44,15 @@ class Tables extends React.Component {
         >
           {/* ********* Table 2 ********* */}
           <div className="tables-2">
-            <BlurryNavbar />
-            <ColoredNavbar location={{ ...this.props.location }} />
-
             <div
               className="team-1 background-header"
               style={{
-                backgroundImage: `url(${bg})`
+                backgroundImage: `url(${bg})`,
+                padding: 0
               }}
             >
+              <BlurryNavbar />
+              <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">Jam Perdagangan</div>
             </div>
             <Container style={{ marginTop: "50px" }}>

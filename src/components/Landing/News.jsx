@@ -344,7 +344,7 @@ class News extends React.Component {
                 <Col
                   className="positioned"
                   style={{
-                    backgroundColor: "#FFFFFF",
+                    backgroundColor: "transparent",
                     marginTop: "5%"
                   }}
                   lg="4"

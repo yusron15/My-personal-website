@@ -66,23 +66,25 @@ class HeaderAboutUs extends React.Component {
           {/* ********* HEADER 6 ********* */}
           <div
             className="header header-6  broken-white"
+
             // style={{ backgroundColor: "#1D1E1F" }}
             // style={{ backgroundColor: "#D4D4D4" }}
           >
-            <BlurryNavbar />
-            <ColoredNavbar location={{ ...this.props.location }} />
             <div
               className="team-1 background-header"
               style={{
-                backgroundImage: `url(${tentangkami})`
+                backgroundImage: `url(${tentangkami})`,
+                padding: 0
               }}
             >
+              <BlurryNavbar />
+              <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">
                 Tentang Topgrowth Futures
               </div>
             </div>
             {/* <div className="page-header" style={{ minHeight: "50vh" }}> */}
-            <div className="content-center">
+            <div className="content-center broken-white">
               <Container>
                 <Row className="align-items-center text-left">
                   <Col lg="12" xs="12">

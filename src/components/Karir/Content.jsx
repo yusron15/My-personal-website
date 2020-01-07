@@ -39,15 +39,17 @@ class Blogs extends React.Component {
       <>
         <div className="cd-section broken-white" id="blogs">
           {/* ********* END BLOGS 5 ********* */}
-          <BlurryNavbar />
-          <ColoredNavbar location={{ ...this.props.location }} />
+
           <div>
             <div
               className="team-1 background-header"
               style={{
-                backgroundImage: `url(${bg})`
+                backgroundImage: `url(${bg})`,
+                padding: 0
               }}
             >
+              <BlurryNavbar />
+              <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">Karir</div>
             </div>
             <Container>

@@ -81,17 +81,18 @@ class ContactUs extends React.Component {
     }
     return (
       <>
-        <BlurryNavbar />
-        <ColoredNavbar location={{ ...this.props.location }} />
-        <div className="wrapper" ref="wrapper">
+        <div
+          style={{
+            backgroundImage:
+              "url(" + require("assets/img/header-contact.png") + ")",
+            padding: 0
+          }}
+        >
+          <BlurryNavbar />
+          <ColoredNavbar location={{ ...this.props.location }} />
+          {/* <div className="wrapper" ref="wrapper"> */}
           <div className="page-header header-filter">
-            <div
-              className="page-header-image"
-              style={{
-                backgroundImage:
-                  "url(" + require("assets/img/header-contact.png") + ")"
-              }}
-            />
+            <div className="page-header-image" />
             <Container>
               <Row>
                 <Col className="text-center vertical-center" md="12">
@@ -104,6 +105,7 @@ class ContactUs extends React.Component {
               </Row>
             </Container>
           </div>
+          {/* </div> */}
         </div>
       </>
     );

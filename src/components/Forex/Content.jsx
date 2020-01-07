@@ -55,13 +55,15 @@ class Features extends React.Component {
           // style={{ backgroundColor: "#D4D4D4" }}
         >
           {/* ********* FEATURES 3 ********* */}
-          <BlurryNavbar />
           <div
             className="team-1 background-header"
             style={{
-              backgroundImage: `url(${bg})`
+              backgroundImage: `url(${bg})`,
+              padding: 0
             }}
           >
+            <BlurryNavbar />
+
             <div className="title title-header">Forex</div>
           </div>
           <div className="features-3" style={{ paddingTop: 0 }}>
@@ -97,43 +99,33 @@ class Features extends React.Component {
                 >
                   <Row>
                     <Col lg="4">
-                      <ScrollAnimation
-                        animateIn="fadeInLeft"
-                        animateOut="fadeOut"
-                      >
-                        <div className="card-image">
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img alt="..." className="img rounded" src={fg1} />
-                          </a>
-                        </div>
-                      </ScrollAnimation>
+                      <div className="card-image">
+                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <img alt="..." className="img rounded" src={fg1} />
+                        </a>
+                      </div>
                     </Col>
                     <Col lg="8">
                       <div style={textContent}>
-                        <ScrollAnimation
-                          animateIn="fadeInRight"
-                          animateOut="fadeOut"
+                        <div
+                          className="title-content"
+                          style={{ color: "black" }}
                         >
-                          <div
-                            className="title-content"
-                            style={{ color: "black" }}
-                          >
-                            KEUNTUNGAN TRANSAKSI FOREX
-                          </div>
-                          <p style={{ color: "black", textAlign: "justify" }}>
-                            Likuiditas tinggi karena selalu adanya penawaran dan
-                            permintaan, Potensi keuntungan dua arah yang
-                            didapatkan pada saat harga naik maupun turun karena
-                            tidak adanya batasan untuk perdagangan terarah,
-                            Biaya investasi awal yang relatif rendah karena
-                            forex diperdagangkan dengan leverage, Transparansi
-                            akibat berdagang secara langsung dengan pasar yang
-                            bertanggung jawab atas harga pasangan mata uang,
-                            Biaya perdagangan yang rendah karena biaya tersebut
-                            dihitung ke dalam spread, Dapat dilakukan di manapun
-                            dan kapanpun selama ada koneksi internet.
-                          </p>{" "}
-                        </ScrollAnimation>
+                          KEUNTUNGAN TRANSAKSI FOREX
+                        </div>
+                        <p style={{ color: "black", textAlign: "justify" }}>
+                          Likuiditas tinggi karena selalu adanya penawaran dan
+                          permintaan, Potensi keuntungan dua arah yang
+                          didapatkan pada saat harga naik maupun turun karena
+                          tidak adanya batasan untuk perdagangan terarah, Biaya
+                          investasi awal yang relatif rendah karena forex
+                          diperdagangkan dengan leverage, Transparansi akibat
+                          berdagang secara langsung dengan pasar yang
+                          bertanggung jawab atas harga pasangan mata uang, Biaya
+                          perdagangan yang rendah karena biaya tersebut dihitung
+                          ke dalam spread, Dapat dilakukan di manapun dan
+                          kapanpun selama ada koneksi internet.
+                        </p>{" "}
                       </div>
                     </Col>
                   </Row>
@@ -141,43 +133,33 @@ class Features extends React.Component {
                   <Row style={{ marginTop: "50px" }}>
                     <Col lg="8">
                       <div style={textContent}>
-                        <ScrollAnimation
-                          animateIn="fadeInLeft"
-                          animateOut="fadeOut"
+                        <div
+                          className="title-content"
+                          style={{ color: "black" }}
                         >
-                          <div
-                            className="title-content"
-                            style={{ color: "black" }}
-                          >
-                            KEUNTUNGAN TRANSAKSI FOREX
-                          </div>
-                          <p style={{ color: "black", textAlign: "justify" }}>
-                            Likuiditas tinggi karena selalu adanya penawaran dan
-                            permintaan, Potensi keuntungan dua arah yang
-                            didapatkan pada saat harga naik maupun turun karena
-                            tidak adanya batasan untuk perdagangan terarah,
-                            Biaya investasi awal yang relatif rendah karena
-                            forex diperdagangkan dengan leverage, Transparansi
-                            akibat berdagang secara langsung dengan pasar yang
-                            bertanggung jawab atas harga pasangan mata uang,
-                            Biaya perdagangan yang rendah karena biaya tersebut
-                            dihitung ke dalam spread, Dapat dilakukan di manapun
-                            dan kapanpun selama ada koneksi internet.
-                          </p>{" "}
-                        </ScrollAnimation>
+                          KEUNTUNGAN TRANSAKSI FOREX
+                        </div>
+                        <p style={{ color: "black", textAlign: "justify" }}>
+                          Likuiditas tinggi karena selalu adanya penawaran dan
+                          permintaan, Potensi keuntungan dua arah yang
+                          didapatkan pada saat harga naik maupun turun karena
+                          tidak adanya batasan untuk perdagangan terarah, Biaya
+                          investasi awal yang relatif rendah karena forex
+                          diperdagangkan dengan leverage, Transparansi akibat
+                          berdagang secara langsung dengan pasar yang
+                          bertanggung jawab atas harga pasangan mata uang, Biaya
+                          perdagangan yang rendah karena biaya tersebut dihitung
+                          ke dalam spread, Dapat dilakukan di manapun dan
+                          kapanpun selama ada koneksi internet.
+                        </p>{" "}
                       </div>
                     </Col>
                     <Col lg="4">
-                      <ScrollAnimation
-                        animateIn="fadeInRight"
-                        animateOut="fadeOut"
-                      >
-                        <div className="card-image">
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img alt="..." className="img rounded" src={fg2} />
-                          </a>
-                        </div>
-                      </ScrollAnimation>
+                      <div className="card-image">
+                        <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <img alt="..." className="img rounded" src={fg2} />
+                        </a>
+                      </div>
                     </Col>
                   </Row>
                 </Col>
@@ -191,25 +173,19 @@ class Features extends React.Component {
                   <Row style={{ marginTop: "50px" }}>
                     <Col lg="12">
                       <div>
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOut"
-                        >
-                          <div style={textTitle}>Ragam Produk Forex</div>
-                          <p style={intermezzo}>
-                            Trading forex dengan TOPGROWTH memberi Anda akses
-                            untuk bertransaksi ke banyak produk valuta asing,
-                            terlepas dari apakah Anda mengunduh Pro-I Trading
-                            pada PC atau Mac Anda, bertransaksi menggunakan
-                            gadget Anda melalui Pro-I Trader yang tersedia untuk
-                            Android maupun iOS, atau melakukan transaksi melalui
-                            telepon.
-                            <br />
-                            <br />
-                            Di bawah ini adalah ragam pasangan mata uang yang
-                            dapat Anda perdagangkan.
-                          </p>{" "}
-                        </ScrollAnimation>
+                        <div style={textTitle}>Ragam Produk Forex</div>
+                        <p style={intermezzo}>
+                          Trading forex dengan TOPGROWTH memberi Anda akses
+                          untuk bertransaksi ke banyak produk valuta asing,
+                          terlepas dari apakah Anda mengunduh Pro-I Trading pada
+                          PC atau Mac Anda, bertransaksi menggunakan gadget Anda
+                          melalui Pro-I Trader yang tersedia untuk Android
+                          maupun iOS, atau melakukan transaksi melalui telepon.
+                          <br />
+                          <br />
+                          Di bawah ini adalah ragam pasangan mata uang yang
+                          dapat Anda perdagangkan.
+                        </p>{" "}
                       </div>
 
                       <div style={{ marginTop: "20px" }}>

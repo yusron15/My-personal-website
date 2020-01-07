@@ -391,7 +391,11 @@ class Carding extends React.Component {
                   <Col md="4">
                     <div
                       className="title font-black"
-                      style={{ fontSize: "1.5rem", marginTop: 0 }}
+                      style={{
+                        fontSize: "1.5rem",
+                        marginTop: 0,
+                        paddingLeft: "15px"
+                      }}
                     >
                       Berita Terpopuler
                     </div>
@@ -704,11 +708,11 @@ class Carding extends React.Component {
                   ></Col>
                 </Carousel>
               </Row>
-              {/* <div style={{ position: "relative", left: "50%", right: "50%" }}>
-                <Button block color="info" style={{ maxWidth: "200px" }}>
+              <div className="center">
+                <Button color="info" style={{ maxWidth: "200px" }}>
                   Indeks Berita
                 </Button>
-              </div> */}
+              </div>
             </Container>
           </div>
           <NewsLetter />

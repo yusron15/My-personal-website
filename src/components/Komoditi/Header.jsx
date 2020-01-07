@@ -58,13 +58,15 @@ class Headers extends React.Component {
           }}
         > */}
         {/* ********* HEADER 4 w/ VIDEO ********* */}
-        <BlurryNavbar />
         <div
           className="team-1 background-header"
           style={{
-            backgroundImage: `url(${bg})`
+            backgroundImage: `url(${bg})`,
+            padding: 0
           }}
         >
+          <BlurryNavbar />
+
           <div className="title title-header">Komoditi</div>
         </div>
         <div className="header header-4 broken-white">
