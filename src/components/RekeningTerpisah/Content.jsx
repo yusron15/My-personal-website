@@ -57,14 +57,15 @@ class Content extends React.Component {
               minHeight: "80vh"
             }}
           >
-            <BlurryNavbar />
-            <ColoredNavbar location={{ ...this.props.location }} />
             <div
               className="team-1 background-header"
               style={{
-                backgroundImage: `url(${dollar})`
+                backgroundImage: `url(${dollar})`,
+                padding: 0
               }}
             >
+              <BlurryNavbar />
+              <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">Rekening Terpisah</div>
             </div>
             <div

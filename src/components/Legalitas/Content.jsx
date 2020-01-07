@@ -96,7 +96,6 @@ class Projects extends React.Component {
     return (
       <>
         <div className="cd-section" id="projects">
-          <BlurryNavbar />
           {/* <ColoredNavbar /> */}
           {/* ********* PROJECTS 2 ********* */}
           <div
@@ -106,9 +105,12 @@ class Projects extends React.Component {
             <div
               className="team-1 background-header"
               style={{
-                backgroundImage: `url(${bg})`
+                backgroundImage: `url(${bg})`,
+                padding: 0
               }}
             >
+              <BlurryNavbar />
+
               <div className="title title-header">Legalitas</div>
             </div>
             {/* <DarkNavbar /> */}

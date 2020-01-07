@@ -27,13 +27,17 @@ import {
   Row,
   Col
 } from "reactstrap";
-
+import SearchField from "react-search-field";
+import Select from "react-select";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
 import bg from "../../assets/img/header-karir.png";
 import "../../assets/css/main.css";
 
 class Blogs extends React.Component {
+  state = {
+    dataSelect: ""
+  };
   render() {
     return (
       <>
@@ -57,18 +61,14 @@ class Blogs extends React.Component {
                 <Col className="ml-auto mr-auto" md="10">
                   <p
                     className="description font-black"
-                    style={{ marginTop: "20px" }}
+                    style={{ marginTop: "10%", marginBottom: "2%" }}
                   >
-                    Kami sedang mencari posisi dibawah ini. Apabila lowongan
-                    dibawah ini sesuai dengan <br /> keahlian anda, silakan
-                    kirim resume anda ke
-                    <b>
-                      <i>hrd@topgrowthfutures.com</i>
-                    </b>{" "}
+                    Berikut ini lowongan kerja yang tersedia di Topgrowth
+                    Futures saat ini:
                   </p>
-                  <Row>
+                  <Row style={{ marginBottom: "10%" }}>
                     <Col lg="4" md="6">
-                      <Card className="card-blog card-plain">
+                      {/* <Card className="card-blog card-plain">
                         <div className="card-image">
                           <a href="#pablo" onClick={e => e.preventDefault()}>
                             <img
@@ -78,10 +78,11 @@ class Blogs extends React.Component {
                             />
                           </a>
                         </div>
-                      </Card>
+                      </Card> */}
+                      <SearchField placeholder="Cari " />
                     </Col>
                     <Col lg="4" md="6">
-                      <Card className="card-blog card-plain">
+                      {/* <Card className="card-blog card-plain">
                         <div className="card-image">
                           <a href="#pablo" onClick={e => e.preventDefault()}>
                             <img
@@ -91,7 +92,47 @@ class Blogs extends React.Component {
                             />
                           </a>
                         </div>
-                      </Card>
+                      </Card> */}
+                      <Select
+                        value="index "
+                        options={[
+                          {
+                            label: "Job Example",
+                            value: "Job Example"
+                          },
+                          {
+                            label: "Job Example",
+                            value: "Job Example"
+                          },
+                          {
+                            label: "Job Example",
+                            value: "Job Example"
+                          }
+                        ]}
+                        value={this.state.dataSelect}
+                        onChange={async data => {
+                          await this.setState({
+                            dataSelect: data
+                          });
+                          let dataSelect = [
+                            {
+                              label: "Job Example",
+                              value: "Job Example"
+                            },
+                            {
+                              label: "Job Example",
+                              value: "Job Example"
+                            },
+                            {
+                              label: "Job Example",
+                              value: "Job Example"
+                            }
+                          ];
+                          return dataSelect.filter(
+                            item => this.state.dataSelect.value === item.value
+                          )[0];
+                        }}
+                      />
                     </Col>
                     <Col lg="4" xs="12">
                       {/* <Card className="card-blog card-plain">

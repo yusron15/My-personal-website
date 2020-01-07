@@ -93,8 +93,6 @@ class RegisterPage extends React.Component {
   render() {
     return (
       <>
-        <BlurryNavbar />
-        <ColorNavbar location={{ ...this.props.location }} />
         <div className="wrapper" ref="wrapper">
           <div
             className="team-1"
@@ -104,6 +102,8 @@ class RegisterPage extends React.Component {
               padding: 0
             }}
           >
+            <BlurryNavbar />
+            <ColorNavbar location={{ ...this.props.location }} />
             <div className="page-header">
               <Container style={{ paddingTop: 0 }}>
                 <Row>

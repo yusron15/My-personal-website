@@ -35,6 +35,7 @@ class BreakingNews extends Component {
               style={{
                 backgroundColor: "transparent",
                 padding: 0,
+                paddingLeft: "20px",
                 color: "black"
               }}
             >

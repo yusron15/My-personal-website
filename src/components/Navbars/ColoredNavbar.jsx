@@ -263,7 +263,7 @@ class ColorNavbar extends React.Component {
                   <div class="dropdown-content-trading trading-online">
                     <Container>
                       <Row>
-                        <Col md="3">
+                        <Col>
                           <div style={title}>Produk</div>
                           <Row>
                             <Col>
@@ -277,25 +277,20 @@ class ColorNavbar extends React.Component {
                             </Col>
                           </Row>
                         </Col>
-                        <Col md="1">
-                          <div class="vl-navbar-trading"></div>
-                        </Col>
-                        <Col md="2">
+                        <Col>
                           <div style={title}>Informasi</div>
-                          <Link to="/jamperdagangan">Jam Perdagangan</Link>
+                          <Link to="/jamperdagangan" style={{ padding: 0 }}>
+                            Jam Perdagangan
+                          </Link>
                         </Col>
-                        <Col md="1">
-                          <div class="vl-navbar-trading"></div>
-                        </Col>
-                        <Col md="2">
+                        <div class="vl-navbar-trading"></div>
+                        <Col>
                           <div style={title}>Trading Platform</div>
                           <Link to="/protrader">Pro I Trader</Link>
                           <Link to="/topgrowthtrader">Topgrowth Trader</Link>
                         </Col>
-                        <Col md="1">
-                          <div class="vl-navbar-trading"></div>
-                        </Col>
-                        <Col md="2">
+                        <div class="vl-navbar-trading"></div>
+                        <Col>
                           <div style={title}>Buka Akun</div>
                           <Link to="/login">Login</Link>
                           <Link to="/register">Register</Link>

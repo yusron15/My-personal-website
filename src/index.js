@@ -1,20 +1,4 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import {
   BrowserRouter,
@@ -61,6 +45,7 @@ import CheckoutPage from "views/examples/CheckoutPage.jsx";
 import ChatPage from "views/examples/ChatPage.jsx";
 
 //TopgrowthPages
+import { lang, LangContext } from "./components/MyContext.js";
 import Landing from "views/layout/Landing.jsx";
 import TentangKami from "views/layout/TentangKami.jsx";
 import RekeningTerpisah from "views/layout/RekeningTerpisah.jsx";
@@ -111,6 +96,31 @@ const theme = createMuiTheme({
     }
   }
 });
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.toggleLang = selectedLang => {
+      // console.log(selectedLang)
+      if (selectedLang == "ID") {
+        this.setState({
+          lang: lang.id
+        });
+      } else if (selectedLang == "GB") {
+        this.setState({
+          lang: lang.eng
+        });
+      }
+    };
+
+    this.state = {
+      lang: lang.id,
+      // toggleLang: this.toggleLang
+      toggleLang: lang.id
+    };
+  }
+}
 
 ReactDOM.render(
   <Router history={hist}>
@@ -222,3 +232,4 @@ ReactDOM.render(
   </Router>,
   document.getElementById("root")
 );
+export default App;

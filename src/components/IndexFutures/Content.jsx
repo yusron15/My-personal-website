@@ -390,25 +390,25 @@ class Content extends React.Component {
                       <img src={prevButton} />
                     </Button>
 
-                    {/* <img
-                  className="slick-prev slick-arrow"
-                  data-slide="prev"
-                  src={prevButton}
-                  onClick={e => {
-                    e.preventDefault();
-                    this.previous();
-                  }}
-                  style={{ height: "30px", width: "auto" }}
-                /> */}
-                    {/* <img
-                  className="slick-arrow"
-                  src={nextButton}
-                  onClick={e => {
-                    e.preventDefault();
-                    this.next();
-                  }}
-                  style={{ height: "30px", width: "auto" }}
-                /> */}
+                    <img
+                      className="slick-prev slick-arrow"
+                      data-slide="prev"
+                      src={prevButton}
+                      onClick={e => {
+                        e.preventDefault();
+                        this.previous();
+                      }}
+                      style={{ height: "30px", width: "auto" }}
+                    />
+                    <img
+                      className="slick-arrow"
+                      src={nextButton}
+                      onClick={e => {
+                        e.preventDefault();
+                        this.next();
+                      }}
+                      style={{ height: "30px", width: "auto" }}
+                    />
 
                     <Button
                       className="btn-round btn-icon btn-simple slick-arrow"

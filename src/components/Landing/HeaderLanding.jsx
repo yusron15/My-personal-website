@@ -22,6 +22,7 @@ import {
 } from "reactstrap";
 import { isMobile } from "react-device-detect";
 import { fadeInRight } from "react-animations";
+import { LangContext } from "../MyContext";
 import Radium, { StyleRoot } from "radium";
 import ScrollAnimation from "react-animate-on-scroll";
 import TextField from "@material-ui/core/TextField";
@@ -256,64 +257,66 @@ class HeaderLanding extends React.Component {
       );
     }
     return (
-      <>
-        <div
-          className="cd-section header-filter"
-          id="headers"
-          style={{
-            backgroundImage:
-              "url(" + require("assets/img/header-image.png") + ")",
-            backgroundSize: "cover"
-          }}
-        >
-          <div>
-            <BlurryNavbar />
-            <div className="space-50" />
-            <Row
-              // className="header-filter"
-              // style={{
-              //   backgroundImage:
-              //     "url(" + require("assets/img/header-image.png") + ")",
-              //   backgroundSize: "cover"
-              // }}
-              style={{ marginRight: 0, marginLeft: 0 }}
+      <LangContext.Consumer>
+        {({ lang }) => (
+          <>
+            <div
+              className="cd-section header-filter"
+              id="headers"
+              style={{
+                backgroundImage:
+                  "url(" + require("assets/img/header-image.png") + ")",
+                backgroundSize: "cover"
+              }}
             >
-              <Col md="5 offset-md-1">
-                <Carousel
-                  indicators={false}
-                  controls={false}
-                  slide={true}
-                  touch={true}
-                  interval="5000"
-                  pauseOnHover={false}
+              <div>
+                <BlurryNavbar />
+                <div className="space-50" />
+                <Row
+                  // className="header-filter"
+                  // style={{
+                  //   backgroundImage:
+                  //     "url(" + require("assets/img/header-image.png") + ")",
+                  //   backgroundSize: "cover"
+                  // }}
+                  style={{ marginRight: 0, marginLeft: 0 }}
                 >
-                  <Carousel.Item>
-                    <div className="page-header minHeight">
-                      {/* here */}
-                      <Container style={{ paddingTop: 0 }}>
-                        <Row>
-                          {/* <Navbar /> */}
-                          <Col className="mr-auto text-left" md="12">
-                            <div
-                              style={{
-                                fontStyle: "Helvetica Bold",
-                                fontSize: "2.7rem",
-                                fontWeight: "bold"
-                              }}
+                  <Col md="5 offset-md-1">
+                    <Carousel
+                      indicators={false}
+                      controls={false}
+                      slide={true}
+                      touch={true}
+                      interval="5000"
+                      pauseOnHover={false}
+                    >
+                      <Carousel.Item>
+                        <div className="page-header minHeight">
+                          {/* here */}
+                          <Container style={{ paddingTop: 0 }}>
+                            <Row>
+                              {/* <Navbar /> */}
+                              <Col className="mr-auto text-left" md="12">
+                                <div
+                                  style={{
+                                    fontStyle: "Helvetica Bold",
+                                    fontSize: "2.7rem",
+                                    fontWeight: "bold"
+                                  }}
 
-                              // className="title"
-                            >
-                              Trading Bersama Broker Terbaik
-                            </div>
-
-                            <h4>
-                              Didirikan sejak tahun 2003, saat ini telah
-                              berkembang menjadi Perusahaan Pialang Berjangka
-                              Terbaik dan Terbesar di Indonesia.
-                            </h4>
-                            <br />
-                          </Col>
-                          {/* <Col md="5">
+                                  // className="title"
+                                >
+                                  Trading Bersama Broker Terbaik
+                                  {/* {lang.HeaderLanding.slide[0]} */}
+                                </div>
+                                <h4>
+                                  Didirikan sejak tahun 2003, saat ini telah
+                                  berkembang menjadi Perusahaan Pialang
+                                  Berjangka Terbaik dan Terbesar di Indonesia.
+                                </h4>
+                                <br />
+                              </Col>
+                              {/* <Col md="5">
                               <Row className="vertical-center">
                             <Col>
                               <img src={best17} />
@@ -323,54 +326,55 @@ class HeaderLanding extends React.Component {
                             </Col>
                           </Row>
                             </Col> */}
-                        </Row>
-                      </Container>
-                    </div>
-                  </Carousel.Item>
-                  <Carousel.Item>
-                    <div className="page-header minHeight">
-                      <Container style={{ paddingTop: 0 }}>
-                        <Row>
-                          {/* <Navbar /> */}
-                          {/* <Col className="mr-auto text-left" lg="5" md="7">
+                            </Row>
+                          </Container>
+                        </div>
+                      </Carousel.Item>
+                      <Carousel.Item>
+                        <div className="page-header minHeight">
+                          <Container style={{ paddingTop: 0 }}>
+                            <Row>
+                              {/* <Navbar /> */}
+                              {/* <Col className="mr-auto text-left" lg="5" md="7">
                               <img
                                 src={phoneHeader}
                                 style={{ paddingBottom: "0" }}
                               />
                             </Col> */}
-                          <Col md="12">
-                            <Row className="vertical-center">
-                              <div
-                                style={{
-                                  fontStyle: "Helvetica Bold",
-                                  fontSize: "2.7rem",
-                                  fontWeight: "bold"
-                                }}
+                              <Col md="12">
+                                <Row className="vertical-center">
+                                  <div
+                                    style={{
+                                      fontStyle: "Helvetica Bold",
+                                      fontSize: "2.7rem",
+                                      fontWeight: "bold"
+                                    }}
 
-                                // className="title"
-                              >
-                                Platform Unggulan Pro I Trader
-                              </div>
+                                    // className="title"
+                                  >
+                                    Platform Unggulan Pro I Trader
+                                  </div>
 
-                              <h4>
-                                Proses Eksekusi Order yang SEDERHANA dan CEPAT
-                                LIVE QUOTES dalam bentuk Summary maupun Advance
-                                Mode CHARTING dilengkapi dengan TOOLS untuk
-                                bertrading secara TEKNIKAL BERITA REAL-TIME
-                                untuk bertrading secara fundamental
-                              </h4>
+                                  <h4>
+                                    Proses Eksekusi Order yang SEDERHANA dan
+                                    CEPAT LIVE QUOTES dalam bentuk Summary
+                                    maupun Advance Mode CHARTING dilengkapi
+                                    dengan TOOLS untuk bertrading secara
+                                    TEKNIKAL BERITA REAL-TIME untuk bertrading
+                                    secara fundamental
+                                  </h4>
+                                </Row>
+                              </Col>
                             </Row>
-                          </Col>
-                        </Row>
-                      </Container>
-                    </div>
-                  </Carousel.Item>
-                  <Carousel.Item>
-                    <div className="page-header minHeight">
-                      <Container style={{ paddingTop: 0 }}>
-                        <Row>
-                          {/* <Navbar /> */}
-                          {/* <Col className="mr-auto text-left" lg="5" md="7">
+                          </Container>
+                        </div>
+                      </Carousel.Item>
+                      <Carousel.Item>
+                        <div className="page-header minHeight">
+                          <Container style={{ paddingTop: 0 }}>
+                            <Row>
+                              {/* <Navbar /> */}
+                              {/* <Col className="mr-auto text-left" lg="5" md="7">
                               <img
                                 src={iphone3}
                                 style={{
@@ -379,64 +383,66 @@ class HeaderLanding extends React.Component {
                                 }}
                               />
                             </Col> */}
-                          <Col md="12">
-                            <Row>
-                              <div
-                                style={{
-                                  fontStyle: "Helvetica Bold",
-                                  fontSize: "2.7rem",
-                                  fontWeight: "bold"
-                                }}
+                              <Col md="12">
+                                <Row>
+                                  <div
+                                    style={{
+                                      fontStyle: "Helvetica Bold",
+                                      fontSize: "2.7rem",
+                                      fontWeight: "bold"
+                                    }}
 
-                                // className="title"
-                              >
-                                Topgrowth Futures Mobile
-                              </div>
+                                    // className="title"
+                                  >
+                                    Topgrowth Futures Mobile
+                                  </div>
 
-                              <h4>
-                                Untuk Berita Pasar Keuangan Ter-UPDATE,
-                                Rekomendasi TRADING, Ulasan Pasar & SIGNAL
-                                TRADING REAL TIME
-                              </h4>
-                              <br />
-                              <Row>
-                                <Col>
-                                  <img src={appstore} />
-                                </Col>
-                                <Col>
-                                  <img
-                                    src={playstore}
-                                    style={{ marginLeft: "20px" }}
-                                  />
-                                </Col>
-                              </Row>
+                                  <h4>
+                                    Untuk Berita Pasar Keuangan Ter-UPDATE,
+                                    Rekomendasi TRADING, Ulasan Pasar & SIGNAL
+                                    TRADING REAL TIME
+                                  </h4>
+                                  <br />
+                                  <Row>
+                                    <Col>
+                                      <img src={appstore} />
+                                    </Col>
+                                    <Col>
+                                      <img
+                                        src={playstore}
+                                        style={{ marginLeft: "20px" }}
+                                      />
+                                    </Col>
+                                  </Row>
+                                </Row>
+                              </Col>
                             </Row>
-                          </Col>
-                        </Row>
-                      </Container>
-                    </div>
-                  </Carousel.Item>
-                </Carousel>
-              </Col>
-              <Col
-                // md=""
-                md="4 offset-md-2"
-                // md="4"
-                // style={{ padding: "2% 5% 5% 0" }}
-              >
-                {/* <ScrollAnimation
+                          </Container>
+                        </div>
+                      </Carousel.Item>
+                    </Carousel>
+                  </Col>
+                  <Col
+                    // md=""
+                    md="4 offset-md-2"
+                    // md="4"
+                    // style={{ padding: "2% 5% 5% 0" }}
+                  >
+                    {/* <ScrollAnimation
                   delay={100}
                   animateIn="fadeInRight"
                   animateOut="fadeOut"
                 > */}
-                <CardRegister />
-                {/* </ScrollAnimation> */}
-              </Col>
-            </Row>
-          </div>
-          {/* <BreakingNews /> */}
-        </div>
-      </>
+                    <CardRegister />
+                    {/* </ScrollAnimation> */}
+                  </Col>
+                </Row>
+              </div>
+              <BreakingNews />
+            </div>
+          </>
+        )}
+      </LangContext.Consumer>
     );
   };
   render() {

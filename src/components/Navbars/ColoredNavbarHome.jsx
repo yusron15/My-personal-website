@@ -201,7 +201,7 @@ class ColorNavbar extends React.Component {
                   </button>
                 </NavItem>
 
-                <div class="dropdown" style={stylesAnimation.slideInDown}>
+                <div class="dropdown">
                   <button
                     class="dropbtn"
                     // style={{
