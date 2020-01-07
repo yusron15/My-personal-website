@@ -39,7 +39,7 @@ import {
 import ScrollAnimation from "react-animate-on-scroll";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
-import bg from "../../assets/img/headerprotrader.png";
+import bg from "../../assets/img/header-trader.png";
 import rating from "../../assets/img/rating.png";
 import report from "../../assets/img/report.png";
 import list from "../../assets/img/list.png";

@@ -40,7 +40,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg1 from "../../assets/img/indexfutures1.png";
-import bg from "../../assets/img/header-indexfutures.png";
+import bg from "../../assets/img/header-indexfutures2.png";
 import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
 import "../../assets/css/main.css";

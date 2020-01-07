@@ -15,7 +15,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import fg1 from "../../assets/img/forex.png";
 import fg2 from "../../assets/img/forex2.png";
 import fg3 from "../../assets/img/forexgold3.png";
-import bg from "../../assets/img/bg-forex.png";
+import bg from "../../assets/img/forex-header.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import { styles } from "react-animations/lib/swing";

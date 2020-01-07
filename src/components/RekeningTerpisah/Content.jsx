@@ -29,7 +29,7 @@ import {
 } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 import check from "../../assets/img/Check.png";
-import dollar from "../../assets/img/dollar.png";
+import dollar from "../../assets/img/header-rekening.png";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
@@ -60,7 +60,7 @@ class Content extends React.Component {
             <BlurryNavbar />
             <ColoredNavbar location={{ ...this.props.location }} />
             <div
-              className="team-1 baclground-header"
+              className="team-1 background-header"
               style={{
                 backgroundImage: `url(${dollar})`
               }}

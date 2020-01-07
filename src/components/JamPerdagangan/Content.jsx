@@ -30,7 +30,7 @@ import {
 import ScrollAnimation from "react-animate-on-scroll";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
-import bg from "../../assets/img/jamperdagangan.png";
+import bg from "../../assets/img/jamperdagangan-header.png";
 import "../../assets/css/main.css";
 
 class Tables extends React.Component {

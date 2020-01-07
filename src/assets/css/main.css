@@ -98,14 +98,15 @@
 
 .background-header {
   background-size: cover;
-  max-height: 30vh;
+  min-height: 70vh;
 }
 
 .title-header {
   text-align: center;
   font-style: Helvetica Bold;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   color: white;
+  margin-top:10%;
 }
 
 .background-black {
@@ -511,6 +512,6 @@ hr.grey {
   margin-bottom: 10px;
 }
 
-.underlined:hover {
+/* .underlined:hover {
   background-color: red;
-}
+} */

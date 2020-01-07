@@ -38,7 +38,7 @@ import jfx from "../../assets/img/legalitas2.png";
 import icdx from "../../assets/img/legalitas3.png";
 import kbi from "../../assets/img/legalitas4.png";
 import ich from "../../assets/img/legalitas5.png";
-import bg from "../../assets/img/bg-edukasi.png";
+import bg from "../../assets/img/edukasi-header.png";
 
 import DarkNavbar from "../../components/Navbars/DarkNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
@@ -112,16 +112,20 @@ class Content extends React.Component {
                     value="index"
                     options={[
                       {
-                        label: "Belajar Forex untuk Pemula",
-                        value: "Belajar Forex untuk Pemula"
+                        label: "Pengenalan tentang Topgrowth",
+                        value: "Pengenalan tentang Topgrowth"
                       },
                       {
-                        label: "Video Training",
-                        value: "Video Training"
+                        label: "Trading untuk pemula",
+                        value: "Trading untuk pemula"
                       },
                       {
-                        label: "Video Glossary",
-                        value: "Video Glossary"
+                        label: "Platform Topgrowth Trader & Pro-I Trader",
+                        value: "Platform Topgrowth Trader & Pro-I Trader"
+                      },
+                      {
+                        label: "Webinar",
+                        value: "Webinar"
                       }
                     ]}
                     value={this.state.dataSelect}
@@ -131,16 +135,20 @@ class Content extends React.Component {
                       });
                       let dataSelect = [
                         {
-                          label: "Belajar Forex untuk Pemula",
-                          value: "Belajar Forex untuk Pemula"
+                          label: "Pengenalan tentang Topgrowth",
+                          value: "Pengenalan tentang Topgrowth"
                         },
                         {
-                          label: "Video Training",
-                          value: "Video Training"
+                          label: "Trading untuk pemula",
+                          value: "Trading untuk pemula"
                         },
                         {
-                          label: "Video Glossary",
-                          value: "Video Glossary"
+                          label: "Platform Topgrowth Trader & Pro-I Trader",
+                          value: "Platform Topgrowth Trader & Pro-I Trader"
+                        },
+                        {
+                          label: "Webinar",
+                          value: "Webinar"
                         }
                       ];
                       return dataSelect.filter(

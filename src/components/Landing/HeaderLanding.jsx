@@ -20,6 +20,7 @@ import {
   InputGroupText,
   InputGroup
 } from "reactstrap";
+import { isMobile } from "react-device-detect";
 import { fadeInRight } from "react-animations";
 import Radium, { StyleRoot } from "radium";
 import ScrollAnimation from "react-animate-on-scroll";

@@ -49,7 +49,7 @@ import jfx from "../../assets/img/legalitas2.png";
 import icdx from "../../assets/img/legalitas3.png";
 import kbi from "../../assets/img/legalitas4.png";
 import ich from "../../assets/img/legalitas5.png";
-import bg from "../../assets/img/legalitas-header.png";
+import bg from "../../assets/img/header-legalitas.png";
 import bglegalitas from "../../assets/img/bg-legalitas.png";
 
 import DarkNavbar from "../../components/Navbars/DarkNavbar.jsx";
