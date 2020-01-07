@@ -18,6 +18,7 @@ class BreakingNews extends Component {
       <div
         style={{
           height: "6vh",
+          overflow: "auto",
           backgroundColor: "transparent"
         }}
       >
@@ -34,8 +35,6 @@ class BreakingNews extends Component {
               style={{
                 backgroundColor: "transparent",
                 padding: 0,
-                paddingLeft: 10,
-                paddingRight: 10,
                 color: "black"
               }}
             >
@@ -80,7 +79,7 @@ class BreakingNews extends Component {
                 }}
               />
             </Col>
-            <Col md="10">
+            <Col style={{ padding: 0 }}>
               <marquee scrollamount="5">
                 <Row
                   style={{
@@ -93,8 +92,8 @@ class BreakingNews extends Component {
                   </div>
 
                   <div>
-                    <img src={Down} style={{ marginLeft: "50px" }} /> Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit
+                    <img src={Down} /> Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit
                   </div>
                 </Row>
               </marquee>

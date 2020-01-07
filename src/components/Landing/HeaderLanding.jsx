@@ -74,15 +74,17 @@ class HeaderLanding extends React.Component {
             <div>
               <BlurryNavbar />
               <div className="space-50" />
-              <Row
-              // className="header-filter"
-              // style={{
-              //   backgroundImage:
-              //     "url(" + require("assets/img/header-image.png") + ")",
-              //   backgroundSize: "cover"
-              // }}
+              <div
+                // className="header-filter"
+                // style={{
+                //   backgroundImage:
+                //     "url(" + require("assets/img/header-image.png") + ")",
+                //   backgroundSize: "cover"
+                // }}
+                style={{ marginRight: 0, marginLeft: 0 }}
               >
-                <Col md="5 offset-md-1">
+                {/* offset-md-1 */}
+                <Col md="5 offset-md-1 ">
                   <Carousel
                     indicators={false}
                     controls={false}
@@ -234,6 +236,7 @@ class HeaderLanding extends React.Component {
                 </Col>
                 <Col
                   // md=""
+                  // offset-md-2
                   md="4 offset-md-2"
                   // style={{ padding: "2% 5% 5% 0" }}
                 >
@@ -245,7 +248,7 @@ class HeaderLanding extends React.Component {
                     <CardRegister />
                   </ScrollAnimation>
                 </Col>
-              </Row>
+              </div>
             </div>
             <BreakingNews />
           </div>
@@ -267,12 +270,13 @@ class HeaderLanding extends React.Component {
             <BlurryNavbar />
             <div className="space-50" />
             <Row
-            // className="header-filter"
-            // style={{
-            //   backgroundImage:
-            //     "url(" + require("assets/img/header-image.png") + ")",
-            //   backgroundSize: "cover"
-            // }}
+              // className="header-filter"
+              // style={{
+              //   backgroundImage:
+              //     "url(" + require("assets/img/header-image.png") + ")",
+              //   backgroundSize: "cover"
+              // }}
+              style={{ marginRight: 0, marginLeft: 0 }}
             >
               <Col md="5 offset-md-1">
                 <Carousel
@@ -417,19 +421,20 @@ class HeaderLanding extends React.Component {
               <Col
                 // md=""
                 md="4 offset-md-2"
+                // md="4"
                 // style={{ padding: "2% 5% 5% 0" }}
               >
-                <ScrollAnimation
+                {/* <ScrollAnimation
                   delay={100}
                   animateIn="fadeInRight"
                   animateOut="fadeOut"
-                >
-                  <CardRegister />
-                </ScrollAnimation>
+                > */}
+                <CardRegister />
+                {/* </ScrollAnimation> */}
               </Col>
             </Row>
           </div>
-          <BreakingNews />
+          {/* <BreakingNews /> */}
         </div>
       </>
     );
