@@ -261,7 +261,8 @@ class BottomNavbar extends React.Component {
                       backgroundColor: "rgba(114, 114, 114, 0.65)",
                       border: "none"
                     }}
-                    placeholder="Kode"
+                    color="white"
+                    placeholder="+62"
                     type="text"
                     onFocus={e => this.setState({ emailFocus: true })}
                     onBlur={e => this.setState({ emailFocus: false })}

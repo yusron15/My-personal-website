@@ -87,26 +87,32 @@ class Content extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col className="ml-auto mr-auto" md="8">
+                <Col className="ml-auto mr-auto" md="9">
                   <Row>
                     <Col className="ml-auto" md="6">
                       <Container>
                         <div
-                          className="title font-black"
+                          className=" font-black title-text"
                           style={{ fontSize: "1.5rem" }}
                         >
                           Kontak & Informasi
                         </div>
                         <Row>
-                          <Col md="4">
-                            <div className="description font-black">
-                              Address: Sahid Sudirman Center, Lantai 40 Jl. Jend
-                              Sudirman Kav 86 Jakarta 10220 Indonesia
+                          <Col>
+                            <div className="description font-black desc-text">
+                              Alamat: <br />
+                              Sahid Sudirman Center <br />
+                              Lantai 40 Unit F&G <br />
+                              Jl. Jend Sudirman Kav 86 <br />
+                              Jakarta 10220 Indonesia
                             </div>
                           </Col>
-                          <Col md="4">
-                            <div className="descriptio font-blackn">
-                              Phone: (+62)21 2788-9393 Fax: (+62)21 2788-9395
+                          <Col>
+                            <div className="description font-black desc-text">
+                              Phone: (+62)21 2788-9393
+                            </div>
+                            <div className="description font-black desc-text">
+                              Fax: (+62)21 2788-9395
                             </div>
                           </Col>
                         </Row>

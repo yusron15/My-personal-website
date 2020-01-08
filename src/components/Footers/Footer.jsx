@@ -77,11 +77,12 @@ class Footers extends React.Component {
                     <h4>Hubungi Kami</h4>
 
                     <p> Sahid Sudirman Center, lantai 40</p>
-                    <p>Blok F &/ G</p>
+                    <p>Unit F &/ G</p>
+                    <p>Jl.Jend Sudirman Kav 86</p>
                     <p>Jakarta 10220 Indonesia</p>
                     <p>Email: customerservices@topgrowthfutures.com</p>
-                    <p>Tel: 021 2788-9366</p>
-                    <p>Fax: 021 2788-9395</p>
+                    <p>Tel: (+62)21 2788-9393</p>
+                    <p>Fax: (+62)21 2788-9395</p>
 
                     {/* Sudirman Kav 86 Jakarta 10220 Indonesia Email:
                     customerservices@topgrowthfutures.com Tel: 021 2788-9366

@@ -200,7 +200,10 @@ class NewsInverted extends React.Component {
                   style={{ padding: "10vh 20vw 0 0" }}
                 >
                   <h1 className="title">Analisa Harian</h1>
-                  <p className="description text-white">
+                  <p
+                    className="description text-white"
+                    style={{ minHeight: "20vh" }}
+                  >
                     <TabContent activeTab={"project" + this.state.activeSlide}>
                       <TabPane tabId="project0">
                         {/* <Col> */}
@@ -242,14 +245,7 @@ class NewsInverted extends React.Component {
                     </TabContent>
                   </p>
                   <Link to="/newspage">
-                    <Button
-                      className="slide-button"
-                      block
-                      color="info"
-                      type="button"
-                    >
-                      &nbsp;
-                    </Button>
+                    <button className="filled-button">Explore →</button>
                   </Link>
                 </Col>
               </Row>

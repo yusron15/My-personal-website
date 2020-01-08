@@ -352,7 +352,10 @@ class News extends React.Component {
                   xs="10"
                 >
                   <h1 className="title font-black">Berita Ekonomi</h1>
-                  <p className="description" style={{ margin: 0 }}>
+                  <p
+                    className="description"
+                    style={{ margin: 0, minHeight: "20vh" }}
+                  >
                     <TabContent activeTab={"project" + this.state.activeSlide}>
                       <TabPane tabId="project0">
                         {/* <Col> */}
@@ -387,14 +390,7 @@ class News extends React.Component {
                     </TabContent>
                   </p>
                   <Link to="/newspage">
-                    <Button
-                      className="slide-button"
-                      block
-                      color="info"
-                      type="button"
-                    >
-                      &nbsp;
-                    </Button>
+                    <button className="filled-button">Explore →</button>
                   </Link>
                 </Col>
               </Row>

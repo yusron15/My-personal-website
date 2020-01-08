@@ -116,8 +116,7 @@ class App extends Component {
 
     this.state = {
       lang: lang.id,
-      // toggleLang: this.toggleLang
-      toggleLang: lang.id
+      toggleLang: this.toggleLang
     };
   }
 }
@@ -126,6 +125,7 @@ ReactDOM.render(
   <Router history={hist}>
     <MuiThemeProvider theme={theme}>
       <Provider store={store}>
+        {/* <LangContext.Provider value={this.state}> */}
         <Switch>
           <Route path="/landing" render={props => <Landing {...props} />} />
           <Route
@@ -227,6 +227,7 @@ ReactDOM.render(
           <Route path="/chat-page" render={props => <ChatPage {...props} />} />
           <Redirect from="/" to="/landing" />
         </Switch>
+        {/* </LangContext.Provider> */}
       </Provider>
     </MuiThemeProvider>
   </Router>,

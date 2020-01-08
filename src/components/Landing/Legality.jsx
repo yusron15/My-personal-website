@@ -185,7 +185,7 @@ class Projects extends React.Component {
                           ? require('"../../assets/img/colored-bappebti.png')
                           : require('"../../assets/img/grey-bappebti.png')
                       }
-                      width={this.state.activeTab === "1" ? "200" : "150"}
+                      width={this.state.activeTab === "1" ? "150" : "150"}
                       auto="auto"
                       className={this.state.activeTab === "1" ? "active" : ""}
                       onClick={() => {
@@ -206,7 +206,7 @@ class Projects extends React.Component {
                           ? require('"../../assets/img/colored-jfx.png')
                           : require('"../../assets/img/grey-jfx.png')
                       }
-                      width={this.state.activeTab === "2" ? "200" : "150"}
+                      width={this.state.activeTab === "2" ? "150" : "150"}
                       auto="auto"
                       className={this.state.activeTab === "2" ? "active" : ""}
                       onClick={() => {
@@ -227,7 +227,7 @@ class Projects extends React.Component {
                           ? require('"../../assets/img/colored-kbi.png')
                           : require('"../../assets/img/grey-kbi.png')
                       }
-                      width={this.state.activeTab === "3" ? "200" : "150"}
+                      width={this.state.activeTab === "3" ? "150" : "150"}
                       auto="auto"
                       className={this.state.activeTab === "3" ? "active" : ""}
                       onClick={() => {
@@ -248,7 +248,7 @@ class Projects extends React.Component {
                           ? require('"../../assets/img/colored-ich.png')
                           : require('"../../assets/img/grey-ich.png')
                       }
-                      width={this.state.activeTab === "4" ? "200" : "150"}
+                      width={this.state.activeTab === "4" ? "150" : "150"}
                       auto="auto"
                       className={this.state.activeTab === "4" ? "active" : ""}
                       onClick={() => {
@@ -269,7 +269,7 @@ class Projects extends React.Component {
                           ? require('"../../assets/img/colored-icdx.png')
                           : require('"../../assets/img/grey-icdx.png')
                       }
-                      width={this.state.activeTab === "5" ? "200" : "150"}
+                      width={this.state.activeTab === "5" ? "150" : "150"}
                       auto="auto"
                       className={this.state.activeTab === "5" ? "active" : ""}
                       onClick={() => {

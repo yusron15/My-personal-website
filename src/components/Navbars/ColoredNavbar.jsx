@@ -262,40 +262,76 @@ class ColorNavbar extends React.Component {
                   </button>
                   <div class="dropdown-content-trading trading-online">
                     <Container>
-                      <Row>
-                        <Col>
+                      <div
+                        class="row"
+                        style={{ justifyContent: "space-around" }}
+                      >
+                        <div>
                           <div style={title}>Produk</div>
                           <Row>
                             <Col>
-                              <Link to="/forex">Forex</Link>
-                              <Link to="/gold">Gold</Link>
-                              <Link to="/indexfutures">Index Futures</Link>
+                              <Link className="vertical-space" to="/forex">
+                                Forex
+                              </Link>
+                              <Link className="vertical-space" to="/gold">
+                                Gold
+                              </Link>
+                              <Link
+                                className="vertical-space"
+                                to="/indexfutures"
+                              >
+                                Index Futures
+                              </Link>
                             </Col>
                             <Col>
-                              <Link to="/cfd">CFD</Link>
-                              <Link to="/komoditi">Komoditi</Link>
+                              <Link className="vertical-space" to="/cfd">
+                                CFD
+                              </Link>
+                              <Link className="vertical-space" to="/komoditi">
+                                Komoditi
+                              </Link>
                             </Col>
                           </Row>
-                        </Col>
-                        <Col>
+                        </div>
+                        {/* <div class="vl-navbar-trading" /> */}
+                        {/* <div class="outer">
+                          <div class="inner"></div>
+                        </div> */}
+                        <div>
                           <div style={title}>Informasi</div>
-                          <Link to="/jamperdagangan" style={{ padding: 0 }}>
+                          <Link
+                            className="vertical-space"
+                            to="/jamperdagangan"
+                            style={{ padding: 0 }}
+                          >
                             Jam Perdagangan
                           </Link>
-                        </Col>
-                        <div class="vl-navbar-trading"></div>
-                        <Col>
+                        </div>
+                        <div class="vl-navbar-trading" />
+                        <div>
                           <div style={title}>Trading Platform</div>
-                          <Link to="/protrader">Pro I Trader</Link>
-                          <Link to="/topgrowthtrader">Topgrowth Trader</Link>
-                        </Col>
-                        <div class="vl-navbar-trading"></div>
-                        <Col>
+                          <Link className="vertical-space" to="/protrader">
+                            Pro I Trader
+                          </Link>
+                          <Link
+                            className="vertical-space"
+                            to="/topgrowthtrader"
+                          >
+                            Topgrowth Trader
+                          </Link>
+                        </div>
+                        <div class="vl-navbar-trading" />
+                        {/* <div class="vl-navbar-trading"></div> */}
+                        <div>
                           <div style={title}>Buka Akun</div>
-                          <Link to="/login">Login</Link>
-                          <Link to="/register">Register</Link>
-                        </Col>
-                      </Row>
+                          <Link className="vertical-space" to="/login">
+                            Login
+                          </Link>
+                          <Link className="vertical-space" to="/register">
+                            Register
+                          </Link>
+                        </div>
+                      </div>
                     </Container>
                   </div>
                 </div>

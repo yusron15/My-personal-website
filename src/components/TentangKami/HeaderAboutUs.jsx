@@ -97,7 +97,7 @@ class HeaderAboutUs extends React.Component {
                       Tentang Topgrowth Future
                     </h1> */}
                     <p
-                      className="description font-black"
+                      className="description font-black desc-text"
                       style={{
                         color: "black",
                         textAlign: "justify",

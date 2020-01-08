@@ -307,7 +307,7 @@ class HeaderLanding extends React.Component {
                                   // className="title"
                                 >
                                   Trading Bersama Broker Terbaik
-                                  {/* {lang.HeaderLanding.slide[0]} */}
+                                  {/* {lang.Landing.HeaderLanding.slide[0]} */}
                                 </div>
                                 <h4>
                                   Didirikan sejak tahun 2003, saat ini telah

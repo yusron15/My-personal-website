@@ -1,21 +1,4 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
-// ReactJS plugin for a nice carousel
 import Slick from "react-slick";
 import "../../assets/css/helper.css";
 
@@ -45,6 +28,7 @@ import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import prevButton from "../../assets/img/blue-left.png";
 import nextButton from "../../assets/img/blue-right.png";
+import bg from "../../assets/img/header-cabang.png";
 import "../../assets/css/main.css";
 
 const PrevButton = props => {
@@ -261,7 +245,16 @@ class News extends React.Component {
           id="testimonials"
           // style={{ backgroundColor: "#D4D4D4" }}
         >
-          <BlurryNavbar />
+          <div
+            className="team-1 background-header"
+            style={{
+              backgroundImage: `url(${bg})`,
+              padding: 0
+            }}
+          >
+            <BlurryNavbar />
+            <div className="title title-header">Cabang Kami</div>
+          </div>
 
           <div className="testimonials-4">
             {/* <ColoredNavbar /> */}
@@ -271,83 +264,73 @@ class News extends React.Component {
                   md="12"
                   // style={{ paddingTop: "15vh" }}
                 >
-                  <ScrollAnimation
-                    animateIn="fadeInRight"
-                    delay={300}
-                    animateOut="fadeOut"
-                  >
-                    <Slick {...slickSettings}>
-                      <div>
-                        <NavLink
-                          className={
-                            this.state.activeSlide === 0 ? "scaled" : ""
-                          }
-                          // onClick={() => {
-                          //   this.toggle("1");
-                          // }}
-                          style={{
-                            backgroundImage:
-                              "url(" +
-                              require("assets/img/kantorpusat.png") +
-                              ")",
-                            height: "30vh",
-                            backgroundSize: "cover"
-                          }}
-                        ></NavLink>
-                      </div>
-                      <div>
-                        <NavLink
-                          className={
-                            this.state.activeSlide === 1 ? "scaled" : ""
-                          }
-                          // onClick={() => {
-                          //   this.toggle("2");
-                          // }}
-                          style={{
-                            backgroundImage:
-                              "url(" +
-                              require("assets/img/sumgaigerong.png") +
-                              ")",
-                            height: "30vh",
-                            backgroundSize: "cover"
-                          }}
-                        ></NavLink>
-                      </div>
-                      <div>
-                        <NavLink
-                          className={
-                            this.state.activeSlide === 2 ? "scaled" : ""
-                          }
-                          // onClick={() => {
-                          //   this.toggle("3");
-                          // }}
-                          style={styleCard}
-                        ></NavLink>
-                      </div>
-                      <div>
-                        <NavLink
-                          className={
-                            this.state.activeSlide === "4" ? "scaled" : ""
-                          }
-                          // onClick={() => {
-                          //   this.toggle("4");
-                          // }}
-                          style={styleCard}
-                        ></NavLink>
-                      </div>
-                      <div>
-                        <NavLink
-                          className={
-                            this.state.activeSlide === "5" ? "scaled" : ""
-                          }
-                          // onClick={() => {
-                          //   this.toggle("5");
-                          // }}
-                          style={styleCard}
-                        ></NavLink>
-                      </div>
-                    </Slick>
-                  </ScrollAnimation>
+                  {/* <ScrollAnimation animateIn="fadeInRight" animateOut="fadeOut"> */}
+                  <Slick {...slickSettings}>
+                    <div>
+                      <NavLink
+                        className={this.state.activeSlide === 0 ? "scaled" : ""}
+                        // onClick={() => {
+                        //   this.toggle("1");
+                        // }}
+                        style={{
+                          backgroundImage:
+                            "url(" +
+                            require("assets/img/kantorpusat.png") +
+                            ")",
+                          height: "30vh",
+                          backgroundSize: "cover"
+                        }}
+                      ></NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        className={this.state.activeSlide === 1 ? "scaled" : ""}
+                        // onClick={() => {
+                        //   this.toggle("2");
+                        // }}
+                        style={{
+                          backgroundImage:
+                            "url(" +
+                            require("assets/img/sumgaigerong.png") +
+                            ")",
+                          height: "30vh",
+                          backgroundSize: "cover"
+                        }}
+                      ></NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        className={this.state.activeSlide === 2 ? "scaled" : ""}
+                        // onClick={() => {
+                        //   this.toggle("3");
+                        // }}
+                        style={styleCard}
+                      ></NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        className={
+                          this.state.activeSlide === "4" ? "scaled" : ""
+                        }
+                        // onClick={() => {
+                        //   this.toggle("4");
+                        // }}
+                        style={styleCard}
+                      ></NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        className={
+                          this.state.activeSlide === "5" ? "scaled" : ""
+                        }
+                        // onClick={() => {
+                        //   this.toggle("5");
+                        // }}
+                        style={styleCard}
+                      ></NavLink>
+                    </div>
+                  </Slick>
+                  {/* </ScrollAnimation> */}
                 </Col>
                 <Col
                   className="positioned"
@@ -356,52 +339,46 @@ class News extends React.Component {
                   md="8"
                   xs="10"
                 >
-                  <ScrollAnimation
-                    animateIn="fadeInLeft"
-                    delay={300}
-                    animateOut="fadeOut"
-                  >
-                    <h1 className="title font-black">Cabang Kami</h1>
-                    <p className="description text-white">
-                      <TabContent
-                        activeTab={"project" + this.state.activeSlide}
-                      >
-                        <TabPane tabId="project0">
-                          {/* <Col> */}
-                          <div className="title font-black">Kantor Pusat</div>
-                          <p className="description font-black mb-5">
-                            Sahid Sudirman Center, Lantai 40 Jl. Jend Sudirman
-                            Kav 86 Jakarta 10220 Indonesia +62.21. 2788 9393
-                          </p>
-                          {/* </Col> */}
-                        </TabPane>
-                        <TabPane tabId="project1">
-                          <div className="title font-black">
-                            Kantor Cabang Sungai Gerong
-                          </div>
-                          <p className="description font-black mb-5">
-                            Sahid Sudirman Center, Lantai 40 Jl. Jend Sudirman
-                            Kav 86 Jakarta 10220 Indonesia +62.21. 2788 9393
-                          </p>
-                        </TabPane>
-                        <TabPane tabId="project2">
-                          <p className="description font-black mb-5">
-                            Add your information here for News 3.
-                          </p>
-                        </TabPane>
-                        <TabPane tabId="project3">
-                          <p className="description font-black mb-5">
-                            Add your information here for News 4.
-                          </p>
-                        </TabPane>
-                        <TabPane tabId="project4">
-                          <p className="description font-black mb-5">
-                            Add your information here for News 5.
-                          </p>
-                        </TabPane>
-                      </TabContent>
-                    </p>
-                  </ScrollAnimation>
+                  {/* <ScrollAnimation animateIn="fadeInLeft" animateOut="fadeOut"> */}
+                  <h1 className="title font-black">Cabang Kami</h1>
+                  <p className="description text-white">
+                    <TabContent activeTab={"project" + this.state.activeSlide}>
+                      <TabPane tabId="project0">
+                        {/* <Col> */}
+                        <div className="title font-black">Kantor Pusat</div>
+                        <p className="description font-black mb-5">
+                          Sahid Sudirman Center, Lantai 40 Jl. Jend Sudirman Kav
+                          86 Jakarta 10220 Indonesia +62.21. 2788 9393
+                        </p>
+                        {/* </Col> */}
+                      </TabPane>
+                      <TabPane tabId="project1">
+                        <div className="title font-black">
+                          Kantor Cabang Sungai Gerong
+                        </div>
+                        <p className="description font-black mb-5">
+                          Sahid Sudirman Center, Lantai 40 Jl. Jend Sudirman Kav
+                          86 Jakarta 10220 Indonesia +62.21. 2788 9393
+                        </p>
+                      </TabPane>
+                      <TabPane tabId="project2">
+                        <p className="description font-black mb-5">
+                          Add your information here for News 3.
+                        </p>
+                      </TabPane>
+                      <TabPane tabId="project3">
+                        <p className="description font-black mb-5">
+                          Add your information here for News 4.
+                        </p>
+                      </TabPane>
+                      <TabPane tabId="project4">
+                        <p className="description font-black mb-5">
+                          Add your information here for News 5.
+                        </p>
+                      </TabPane>
+                    </TabContent>
+                  </p>
+                  {/* </ScrollAnimation> */}
                 </Col>
               </Row>
             </Container>

@@ -30,6 +30,7 @@
     "react-fade-opacity": "^2.0.0",
     "react-flags-select": "^1.1.10",
     "react-google-maps": "^9.4.5",
+    "react-line": "^1.0.2",
     "react-multi-language": "^0.4.2",
     "react-player": "^1.14.2",
     "react-png-hovercard": "^1.0.3",

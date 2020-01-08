@@ -33,6 +33,7 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
+import LangTogglerButton from "../LangTogglerButton";
 import logo from "../../assets/img/Bitmap.png";
 import twitter from "../../assets/img/twitter.png";
 import facebook from "../../assets/img/facebook.png";
@@ -111,17 +112,18 @@ class BlurryNavbar extends React.Component {
             <UncontrolledCollapse navbar toggler="#example-navbar-transparent">
               <Nav className="ml-auto" style={{ marginRight: "25px" }} navbar>
                 <NavItem>
-                  <Link to="/#" className="vertical-center-nav">
-                    <img
+                  {/* <Link to="/#" className="vertical-center-nav"> */}
+                  {/* <img
                       src={flag}
                       style={{
                         paddingRight: "10px",
                         height: "10px",
                         width: "auto"
                       }}
-                    />
-                    <text style={font}>ENG</text>
-                  </Link>
+                    /> */}
+                  {/* <text style={font}>ENG</text> */}
+                  <LangTogglerButton />
+                  {/* </Link> */}
                 </NavItem>
                 <div class="vl"></div>
                 <NavItem>
