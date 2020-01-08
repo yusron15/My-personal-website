@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -36,6 +20,8 @@ import {
   Carousel,
   CarouselItem
 } from "reactstrap";
+import { LangContext } from "../MyContext";
+
 import ScrollAnimation from "react-animate-on-scroll";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
@@ -62,6 +48,7 @@ const textSubtitle = {
 
 const textDesc = {
   //   color: "black",
+  textAlign: "justify",
   fontSize: "1rem"
 };
 
@@ -69,34 +56,40 @@ const textDesc = {
 const items = [
   {
     content: (
-      <Container>
-        <Row>
-          <Col md="12">
-            <div style={textTitle}>
-              <b>BEBERAPA RAGAM INDEKS FUTURES</b>
-            </div>
-            <div style={textSubtitle}>
-              <b>INDEKS BERJANGKA JEPANG (NIKKEI 225)</b>
-            </div>
-          </Col>
-          <Col md="12">
-            <div className="description" style={textDesc}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.{" "}
-            </div>
-          </Col>
-        </Row>
-      </Container>
+      <LangContext.Consumer>
+        {({ lang }) => {
+          return (
+            <Container>
+              <Row>
+                <Col md="12">
+                  <div style={textTitle}>
+                    <b>BEBERAPA RAGAM INDEKS FUTURES</b>
+                  </div>
+                  <div style={textSubtitle}>
+                    <b>INDEKS BERJANGKA JEPANG (NIKKEI 225)</b>
+                  </div>
+                </Col>
+                <Col md="12">
+                  <div className="description" style={textDesc}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          );
+        }}
+      </LangContext.Consumer>
     ),
     altText: "",
     caption: "",
@@ -104,34 +97,40 @@ const items = [
   },
   {
     content: (
-      <Container>
-        <Row>
-          <Col md="12">
-            <div style={textTitle}>
-              <b>BEBERAPA RAGAM INDEKS FUTURES</b>
-            </div>
-            <div style={textSubtitle}>
-              <b>INDEKS BERJANGKA HONGKONG (HANGSENG))</b>
-            </div>
-          </Col>
-          <Col md="12">
-            <div className="description" style={textDesc}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.{" "}
-            </div>
-          </Col>
-        </Row>
-      </Container>
+      <LangContext.Consumer>
+        {({ lang }) => {
+          return (
+            <Container>
+              <Row>
+                <Col md="12">
+                  <div style={textTitle}>
+                    <b>BEBERAPA RAGAM INDEKS FUTURES</b>
+                  </div>
+                  <div style={textSubtitle}>
+                    <b>INDEKS BERJANGKA HONGKONG (HANGSENG))</b>
+                  </div>
+                </Col>
+                <Col md="12">
+                  <div className="description" style={textDesc}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          );
+        }}
+      </LangContext.Consumer>
     ),
     altText: "",
     caption: "",
@@ -139,34 +138,40 @@ const items = [
   },
   {
     content: (
-      <Container>
-        <Row>
-          <Col md="12">
-            <div style={textTitle}>
-              <b>BEBERAPA RAGAM INDEKS FUTURES</b>
-            </div>
-            <div style={textSubtitle}>
-              <b>INDEKS BERJANGKA JEPANG (NIKKEI 225)</b>
-            </div>
-          </Col>
-          <Col md="12">
-            <div className="description" style={textDesc}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat.{" "}
-            </div>
-          </Col>
-        </Row>
-      </Container>
+      <LangContext.Consumer>
+        {({ lang }) => {
+          return (
+            <Container>
+              <Row>
+                <Col md="12">
+                  <div style={textTitle}>
+                    <b>BEBERAPA RAGAM INDEKS FUTURES</b>
+                  </div>
+                  <div style={textSubtitle}>
+                    <b>INDEKS BERJANGKA JEPANG (NIKKEI 225)</b>
+                  </div>
+                </Col>
+                <Col md="12">
+                  <div className="description" style={textDesc}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          );
+        }}
+      </LangContext.Consumer>
     ),
     altText: "",
     caption: "",
@@ -277,162 +282,151 @@ class Content extends React.Component {
   };
   render() {
     return (
-      <>
-        <div
-          className="cd-section"
-          id="teams"
-          style={{ backgroundColor: "#1D1E1F" }}
-        >
-          {/* ********* TEAM 1 ********* */}
-
-          <div
-            className="team-1 background-header"
-            style={{
-              backgroundImage: `url(${bg})`,
-              padding: 0
-            }}
-          >
-            <BlurryNavbar />
-            <ColoredNavbar location={{ ...this.props.location }} />
-            <div className="title title-header">Pro I Trader</div>
-          </div>
-          <div className="team-1 broken-white">
-            <Container>
-              <Row>
-                <Col md="12">
-                  <div className="description font-black" style={textDesc}>
-                    Online Trading di pasar keuangan adalah sebuah keharusan.
-                    Bertrading secara online merupakan pengalaman tersendiri
-                    karena transaksi dapat dilakukan dengan mudah dan cepat.
-                    Karena persaingan ketat, platform online trading menjadi
-                    semakin user friendly dan bisa dipadukan dalam semua lingkup
-                    teknologi informasi.
-                  </div>
-                </Col>
-                <Col md="12">
-                  <div className="description font-black" style={textDesc}>
-                    Topgrowth adalah salah satu yang terdepan dalam
-                    mengembangkan teknologi online trading yang canggih.
-                    Platform Online Trading Topgrowth disebut Pro-iTrading.
-                    Platform Pro-iTrading memungkinkan Anda untuk bertransaksi
-                    real time produk-produk Forex dan Komoditi sepanjang waktu.
-                    Dengan menggunakan platform trading unggul yang menyediakan
-                    berbagai alat bantu yang Anda tidak pernah bayangkan
-                    sebelumnya serta menyajikan berita real-time, Anda dapat
-                    berkonsentrasi pada transaksi Anda.
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-          <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
-            <Row>
-              <Col className="ml-auto mr-auto text-center" md="9">
-                <h1 className="title">Fitur Utama Pro-iTrading</h1>
-              </Col>
-            </Row>
-            <div style={{ marginTop: "50px" }}>
-              <Row>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <div
-                    onMouseEnter={this.handleRatingEnter}
-                    onMouseLeave={this.handleRatingLeave}
-                    className="text-fitur"
-                  >
-                    <img
-                      style={{ marginBottom: "20px" }}
-                      src={this.state.rating}
-                    />
-                    <div>Proses eksekusi Order yang Sederhana dan Cepat.</div>
-                  </div>
-                </Col>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <div
-                    onMouseEnter={this.handleReportEnter}
-                    onMouseLeave={this.handleReportLeave}
-                    className="text-fitur"
-                  >
-                    <img
-                      style={{ marginBottom: "20px" }}
-                      src={this.state.report}
-                    />
-                    <div>
-                      Life Quotes dalam bentuk Summary maupun Advance mode.
-                    </div>
-                  </div>
-                </Col>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <div
-                    onMouseEnter={this.handleDemandEnter}
-                    onMouseLeave={this.handleDemandLeave}
-                    className="text-fitur"
-                  >
-                    <img
-                      style={{ marginBottom: "20px" }}
-                      src={this.state.demand}
-                    />
-                    <div>
-                      Charting dilengkapi dengan tools untuk bertrading secara
-                      teknikal.
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-              <Row
-                className="ml-auto mr-auto text-center"
-                md="9"
-                style={{ marginTop: "30px" }}
+      <LangContext.Consumer>
+        {({ lang }) => {
+          return (
+            <>
+              <div
+                className="cd-section"
+                id="teams"
+                style={{ backgroundColor: "#1D1E1F" }}
               >
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <div
-                    onMouseEnter={this.handleListEnter}
-                    onMouseLeave={this.handleListLeave}
-                    className="text-fitur"
-                  >
-                    <img
-                      style={{ marginBottom: "20px" }}
-                      src={this.state.list}
-                    />
-                    <div>
-                      Berita real-time untuk bertrading secara fundamental
-                      Proses eksekusi Order yang Sederhana dan Cepat.
-                    </div>
+                {/* ********* TEAM 1 ********* */}
+
+                <div
+                  className="team-1 background-header"
+                  style={{
+                    backgroundImage: `url(${bg})`,
+                    padding: 0
+                  }}
+                >
+                  <BlurryNavbar />
+                  <ColoredNavbar location={{ ...this.props.location }} />
+                  <div className="title title-header">
+                    {lang.protrader.header}
                   </div>
-                </Col>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <div
-                    onMouseEnter={this.handleSortingEnter}
-                    onMouseLeave={this.handleSortingLeave}
-                    className="text-fitur"
+                </div>
+                <div className="team-1 broken-white">
+                  <Container>
+                    <Row>
+                      <Col md="12">
+                        <div
+                          className="description font-black"
+                          style={textDesc}
+                        >
+                          {lang.protrader.top}
+                        </div>
+                      </Col>
+                    </Row>
+                  </Container>
+                </div>
+                <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
+                  {/* <Row style={{ marginRight: 0, marginLeft: 0 }}> */}
+                  <Col
+                    className="ml-auto mr-auto text-center"
+                    md="9"
+                    style={{ marginRight: 0, marginLeft: 0 }}
                   >
-                    <img
-                      style={{ marginBottom: "20px" }}
-                      src={this.state.sorting}
-                    />
-                    <div style={{ marginTop: "35px" }}>
-                      Bisa disesuaikan dengan kebutuhan anda.
-                    </div>
+                    <h1 className="title">{lang.protrader.title}</h1>
+                  </Col>
+                  {/* </Row> */}
+                  <div style={{ marginTop: "50px" }}>
+                    <Row>
+                      <Col className="ml-auto mr-auto text-center" md="2">
+                        <div
+                          onMouseEnter={this.handleRatingEnter}
+                          onMouseLeave={this.handleRatingLeave}
+                          className="text-fitur"
+                        >
+                          <img
+                            style={{ marginBottom: "20px" }}
+                            src={this.state.rating}
+                          />
+                          <div>{lang.protrader.content[0].content}</div>
+                        </div>
+                      </Col>
+                      <Col className="ml-auto mr-auto text-center" md="2">
+                        <div
+                          onMouseEnter={this.handleReportEnter}
+                          onMouseLeave={this.handleReportLeave}
+                          className="text-fitur"
+                        >
+                          <img
+                            style={{ marginBottom: "20px" }}
+                            src={this.state.report}
+                          />
+                          <div>{lang.protrader.content[1].content}</div>
+                        </div>
+                      </Col>
+                      <Col className="ml-auto mr-auto text-center" md="2">
+                        <div
+                          onMouseEnter={this.handleDemandEnter}
+                          onMouseLeave={this.handleDemandLeave}
+                          className="text-fitur"
+                        >
+                          <img
+                            style={{ marginBottom: "20px" }}
+                            src={this.state.demand}
+                          />
+                          <div>{lang.protrader.content[2].content}</div>
+                        </div>
+                      </Col>
+                    </Row>
+                    <Row
+                      className="ml-auto mr-auto text-center"
+                      md="9"
+                      style={{ marginTop: "30px" }}
+                    >
+                      <Col className="ml-auto mr-auto text-center" md="2">
+                        <div
+                          onMouseEnter={this.handleListEnter}
+                          onMouseLeave={this.handleListLeave}
+                          className="text-fitur"
+                        >
+                          <img
+                            style={{ marginBottom: "20px" }}
+                            src={this.state.list}
+                          />
+                          <div>{lang.protrader.content[3].content}</div>
+                        </div>
+                      </Col>
+                      <Col className="ml-auto mr-auto text-center" md="2">
+                        <div
+                          onMouseEnter={this.handleSortingEnter}
+                          onMouseLeave={this.handleSortingLeave}
+                          className="text-fitur"
+                        >
+                          <img
+                            style={{ marginBottom: "20px" }}
+                            src={this.state.sorting}
+                          />
+                          <div style={{ marginTop: "35px" }}>
+                            {lang.protrader.content[4].content}
+                          </div>
+                        </div>
+                      </Col>
+                      <Col className="ml-auto mr-auto text-center" md="2">
+                        <div
+                          onMouseEnter={this.handleSubmitEnter}
+                          onMouseLeave={this.handleSubmitLeave}
+                          className="text-fitur"
+                        >
+                          <img
+                            style={{ marginBottom: "20px" }}
+                            src={this.state.submit}
+                          />
+                          <div>{lang.protrader.content[5].content}</div>
+                        </div>
+                      </Col>
+                    </Row>
                   </div>
-                </Col>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <div
-                    onMouseEnter={this.handleSubmitEnter}
-                    onMouseLeave={this.handleSubmitLeave}
-                    className="text-fitur"
-                  >
-                    <img
-                      style={{ marginBottom: "20px" }}
-                      src={this.state.submit}
-                    />
-                    <div>Catatan Trading Anda dapat diakses dengan cepat.</div>
-                  </div>
-                </Col>
-              </Row>
-            </div>
-          </div>
-          {/* ********* END TEAM 1 ********* */}
-        </div>{" "}
-      </>
+                </div>
+                {/* ********* END TEAM 1 ********* */}
+              </div>{" "}
+            </>
+          );
+        }}
+      </LangContext.Consumer>
     );
   }
 }

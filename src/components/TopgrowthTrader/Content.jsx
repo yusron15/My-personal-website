@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -36,6 +20,8 @@ import {
   Carousel,
   CarouselItem
 } from "reactstrap";
+import { LangContext } from "../MyContext";
+
 import ScrollAnimation from "react-animate-on-scroll";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
@@ -278,197 +264,146 @@ class Content extends React.Component {
   };
   render() {
     return (
-      <>
-        <div
-          className="cd-section"
-          id="teams"
-          style={{ backgroundColor: "#1D1E1F" }}
-        >
-          {/* ********* TEAM 1 ********* */}
-          <div
-            className="team-1 background-header"
-            style={{
-              backgroundImage: `url(${bg})`,
-              padding: 0
-            }}
-          >
-            <BlurryNavbar />
-            <ColoredNavbar location={{ ...this.props.location }} />
-            <div className="title title-header">Topgrowth Trader</div>
-          </div>
-          <div className="team-1 broken-white">
-            <Container>
-              <Row>
-                <Col md="12">
-                  <div className="description font-black" style={textDesc}>
-                    Metatrader dikenal sebagai platform yang paling efisien dan
-                    paling banyak digunakan oleh para trader. Topgrowth Futures
-                    memberikan Anda akses untuk tetap terhubung dengan market
-                    setiap saat melalui berbagai pilihan Metatrader yang sesuai
-                    dengan kebutuhan Anda.
-                  </div>
-                </Col>
-                <Col md="12">
-                  <div className="description font-black" style={textDesc}>
-                    Topgrowth adalah salah satu yang terdepan dalam
-                    mengembangkan teknologi online trading yang canggih.
-                    Platform Online Trading Topgrowth disebut Pro-iTrading.
-                    Platform Pro-iTrading memungkinkan Anda untuk bertransaksi
-                    real time produk-produk Forex dan Komoditi sepanjang waktu.
-                    Dengan menggunakan platform trading unggul yang menyediakan
-                    berbagai alat bantu yang Anda tidak pernah bayangkan
-                    sebelumnya serta menyajikan berita real-time, Anda dapat
-                    berkonsentrasi pada transaksi Anda.
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-          <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
-            <Row>
-              <Col className="ml-auto mr-auto text-center" md="9">
-                <h1 className="title">Kelebihan Topgrowth Trader</h1>
-              </Col>
-            </Row>
-            <div style={{ marginTop: "50px" }}>
-              {/* <Row>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <img src={rating} />
-                  <h4>
-                    Charting dilengkapi dengan tools untuk bertrading secara
-                    teknikal.
-                  </h4>
-                </Col>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <img src={report} />
-                  <h4>Catatan Trading Anda dapat diakses dengan cepat.</h4>
-                </Col>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <img src={demand} />
-                  <h4>Bisa disesuaikan dengan kebutuhan anda.</h4>
-                </Col>
-              </Row>
-              <Row
-                className="ml-auto mr-auto text-center"
-                md="9"
-                style={{ marginTop: "30px" }}
+      <LangContext.Consumer>
+        {({ lang }) => {
+          return (
+            <>
+              <div
+                className="cd-section"
+                id="teams"
+                style={{ backgroundColor: "#1D1E1F" }}
               >
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <img src={list} />
-                  <h4>Life Quotes dalam bentuk Summary maupun Advance mode.</h4>
-                </Col>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <img src={sorting} />
-                  <h4 style={{ marginTop: "35px" }}>
-                    Proses eksekusi Order yang Sederhana dan Cepat.
-                  </h4>
-                </Col>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <img src={submit} />
-                  <h4>Berita real-time untuk bertrading secara fundamental.</h4>
-                </Col>
-              </Row> */}
-              <Row>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <div
-                    onMouseEnter={this.handleRatingEnter}
-                    onMouseLeave={this.handleRatingLeave}
-                    className="text-fitur"
-                  >
-                    <img
-                      style={{ marginBottom: "20px" }}
-                      src={this.state.rating}
-                    />
-                    <div>
-                      Charting dilengkapi dengan tools untuk bertrading secara
-                      teknikal.
-                    </div>
+                {/* ********* TEAM 1 ********* */}
+                <div
+                  className="team-1 background-header"
+                  style={{
+                    backgroundImage: `url(${bg})`,
+                    padding: 0
+                  }}
+                >
+                  <BlurryNavbar />
+                  <ColoredNavbar location={{ ...this.props.location }} />
+                  <div className="title title-header">
+                    {lang.topgrowthtrader.header}
                   </div>
-                </Col>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <div
-                    onMouseEnter={this.handleReportEnter}
-                    onMouseLeave={this.handleReportLeave}
-                    className="text-fitur"
-                  >
-                    <img
-                      style={{ marginBottom: "20px" }}
-                      src={this.state.report}
-                    />
-                    <div>Catatan Trading Anda dapat diakses dengan cepat.</div>
+                </div>
+                <div className="team-1 broken-white">
+                  <Container>
+                    <Row>
+                      <Col md="12">
+                        <div
+                          className="description font-black"
+                          style={textDesc}
+                        >
+                          {lang.topgrowthtrader.top}
+                        </div>
+                      </Col>
+                    </Row>
+                  </Container>
+                </div>
+                <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
+                  <Row>
+                    <Col className="ml-auto mr-auto text-center" md="9">
+                      <h1 className="title">{lang.topgrowthtrader.title}</h1>
+                    </Col>
+                  </Row>
+                  <div style={{ marginTop: "50px" }}>
+                    <Row>
+                      <Col className="ml-auto mr-auto text-center" md="2">
+                        <div
+                          onMouseEnter={this.handleRatingEnter}
+                          onMouseLeave={this.handleRatingLeave}
+                          className="text-fitur"
+                        >
+                          <img
+                            style={{ marginBottom: "20px" }}
+                            src={this.state.rating}
+                          />
+                          <div>{lang.topgrowthtrader.content[0].content}</div>
+                        </div>
+                      </Col>
+                      <Col className="ml-auto mr-auto text-center" md="2">
+                        <div
+                          onMouseEnter={this.handleReportEnter}
+                          onMouseLeave={this.handleReportLeave}
+                          className="text-fitur"
+                        >
+                          <img
+                            style={{ marginBottom: "20px" }}
+                            src={this.state.report}
+                          />
+                          <div>{lang.topgrowthtrader.content[1].content}</div>
+                        </div>
+                      </Col>
+                      <Col className="ml-auto mr-auto text-center" md="2">
+                        <div
+                          onMouseEnter={this.handleDemandEnter}
+                          onMouseLeave={this.handleDemandLeave}
+                          className="text-fitur"
+                        >
+                          <img
+                            style={{ marginBottom: "20px" }}
+                            src={this.state.demand}
+                          />
+                          <div>{lang.topgrowthtrader.content[2].content}</div>
+                        </div>
+                      </Col>
+                    </Row>
+                    <Row
+                      className="ml-auto mr-auto text-center"
+                      md="9"
+                      style={{ marginTop: "30px" }}
+                    >
+                      <Col className="ml-auto mr-auto text-center" md="2">
+                        <div
+                          onMouseEnter={this.handleListEnter}
+                          onMouseLeave={this.handleListLeave}
+                          className="text-fitur"
+                        >
+                          <img
+                            style={{ marginBottom: "20px" }}
+                            src={this.state.list}
+                          />
+                          <div>{lang.topgrowthtrader.content[3].content}</div>
+                        </div>
+                      </Col>
+                      <Col className="ml-auto mr-auto text-center" md="2">
+                        <div
+                          onMouseEnter={this.handleSortingEnter}
+                          onMouseLeave={this.handleSortingLeave}
+                          className="text-fitur"
+                        >
+                          <img
+                            style={{ marginBottom: "20px" }}
+                            src={this.state.sorting}
+                          />
+                          <div style={{ marginTop: "35px" }}>
+                            {lang.topgrowthtrader.content[4].content}]
+                          </div>
+                        </div>
+                      </Col>
+                      <Col className="ml-auto mr-auto text-center" md="2">
+                        <div
+                          onMouseEnter={this.handleSubmitEnter}
+                          onMouseLeave={this.handleSubmitLeave}
+                          className="text-fitur"
+                        >
+                          <img
+                            style={{ marginBottom: "20px" }}
+                            src={this.state.submit}
+                          />
+                          <div>{lang.topgrowthtrader.content[5].content}</div>
+                        </div>
+                      </Col>
+                    </Row>
                   </div>
-                </Col>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <div
-                    onMouseEnter={this.handleDemandEnter}
-                    onMouseLeave={this.handleDemandLeave}
-                    className="text-fitur"
-                  >
-                    <img
-                      style={{ marginBottom: "20px" }}
-                      src={this.state.demand}
-                    />
-                    <div>Bisa disesuaikan dengan kebutuhan anda.</div>
-                  </div>
-                </Col>
-              </Row>
-              <Row
-                className="ml-auto mr-auto text-center"
-                md="9"
-                style={{ marginTop: "30px" }}
-              >
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <div
-                    onMouseEnter={this.handleListEnter}
-                    onMouseLeave={this.handleListLeave}
-                    className="text-fitur"
-                  >
-                    <img
-                      style={{ marginBottom: "20px" }}
-                      src={this.state.list}
-                    />
-                    <div>
-                      Life Quotes dalam bentuk Summary maupun Advance mode.
-                      Proses eksekusi Order yang Sederhana dan Cepat.
-                    </div>
-                  </div>
-                </Col>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <div
-                    onMouseEnter={this.handleSortingEnter}
-                    onMouseLeave={this.handleSortingLeave}
-                    className="text-fitur"
-                  >
-                    <img
-                      style={{ marginBottom: "20px" }}
-                      src={this.state.sorting}
-                    />
-                    <div style={{ marginTop: "35px" }}>
-                      Proses eksekusi Order yang Sederhana dan Cepat.
-                    </div>
-                  </div>
-                </Col>
-                <Col className="ml-auto mr-auto text-center" md="2">
-                  <div
-                    onMouseEnter={this.handleSubmitEnter}
-                    onMouseLeave={this.handleSubmitLeave}
-                    className="text-fitur"
-                  >
-                    <img
-                      style={{ marginBottom: "20px" }}
-                      src={this.state.submit}
-                    />
-                    <div>
-                      Berita real-time untuk bertrading secara fundamental.
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-            </div>
-          </div>
-          {/* ********* END TEAM 1 ********* */}
-        </div>{" "}
-      </>
+                </div>
+                {/* ********* END TEAM 1 ********* */}
+              </div>{" "}
+            </>
+          );
+        }}
+      </LangContext.Consumer>
     );
   }
 }

@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -36,6 +20,7 @@ import {
   Carousel,
   CarouselItem
 } from "reactstrap";
+import { LangContext } from "../MyContext";
 import ScrollAnimation from "react-animate-on-scroll";
 import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
@@ -48,7 +33,7 @@ import "../../assets/css/main.css";
 const textTitle = {
   fontWeight: "bold",
   color: "black",
-  fontSize: "2.5rem"
+  fontSize: "1.4rem"
 };
 
 const textDesc = {
@@ -78,309 +63,261 @@ class Content extends React.Component {
 
   render() {
     return (
-      <>
-        <div
-          className="cd-section broken-white"
-          id="teams"
-          // style={{ backgroundColor: "#1D1E1F" }}
-        >
-          {/* ********* TEAM 1 ********* */}
-          <div
-            className="team-1 background-header"
-            style={{
-              backgroundImage: `url(${bg})`,
-              padding: 0
-            }}
-          >
-            <BlurryNavbar />
+      <LangContext.Consumer>
+        {({ lang }) => {
+          return (
+            <>
+              <div
+                className="cd-section broken-white"
+                id="teams"
+                // style={{ backgroundColor: "#1D1E1F" }}
+              >
+                {/* ********* TEAM 1 ********* */}
+                <div
+                  className="team-1 background-header"
+                  style={{
+                    backgroundImage: `url(${bg})`,
+                    padding: 0
+                  }}
+                >
+                  <BlurryNavbar />
 
-            <div className="title title-header">Contract For Difference</div>
-          </div>
-          <div className="team-1 broken-white">
-            <Container>
-              <Row>
-                <Col md="12">
-                  <div style={textTitle}>Apa Itu CFD?</div>
-                </Col>
-                <Col md="12">
-                  <div className="description" style={textDesc}>
-                    Perdagangan CFD secara online adalah salah satu alat paling
-                    fleksibel untuk memanfaatkan pergerakan pasar tanpa mengikat
-                    dana dengan memperdagangkan instrumen yang mendasarinya.{" "}
-                    <br />
-                    Tidak seperti perdagangan saham, CFD dapat dibeli dan dijual
-                    dan memungkinkan Anda untuk mencari keuntungan dari kenaikan
-                    maupun penurunan harga pasar. <br />
-                    CFD menawarkan kesempatan untuk membangun beragam portofolio
-                    multi-produk dari satu akun.
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-            <div className="space-50" />
-            <Container>
-              <Row>
-                <Col md="12">
-                  <div style={textTitle}>Mengapa Bertransaksi CFD?</div>
-                </Col>
-                <Col md="12">
-                  <div className="description" style={textDesc}>
-                    CFD (Contract for Difference) adalah perjanjian untuk
-                    menukarkan selisih nilai dari instrumen yang mendasari,
-                    misalnya saham, antara waktu saat order dibuka dan ditutup.
-                    Perdagangan CFD secara online merupakan cara praktis untuk
-                    memperdagangkan pasar bull dan bear yang memungkinkan untuk
-                    sell short. Saham dapat dijual dengan harga untung sebelum
-                    harga saham tersebut jatuh.
-                    <br />
-                    Produk-produk CFD dapat membantu untuk memanfaatkan modal
-                    investasi secara efektif. Akan tetapi, jumlah risiko yang
-                    dihadapi juga lebih besar dibandingkan produk konvensional.
-                    <br />
-                    CFD adalah produk yang diperdagangkan dengan menggunakan
-                    margin. Dengan demikian, potensi investasi menjadi jauh
-                    lebih besar hanya dengan menyetor sebagian kecil dari
-                    keseluruhan untuk memperdagangkan nilai kontrak penuh dari
-                    produk. Sama seperti perdagangan saham, laba atau rugi
-                    ditentukan oleh perbedaan antara harga yang dibeli dan
-                    dijual. Tingkat margin yang diperlukan akan bervariasi
-                    antara produk CFD.
-                    <br />
-                    Topgrowth menawarkan CFD pada berbagai produk mendasar yang
-                    komprehensif, termasuk indeks global, futures, komoditas,
-                    dan mata uang.
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-            <div className="space-50" />
-            <Container>
-              <Row>
-                <Col md="12">
-                  <div style={textTitle}>CFD Trading Strategis</div>
-                </Col>
-                <Col md="12">
-                  <div className="description" style={textDesc}>
-                    CFD adalah alat perdagangan yang menggunakan leverage untuk
-                    hampir semua produk keuangan. Produk CFD yang ditawarkan
-                    meliputi komoditas berjangka (logam dan produk energi) serta
-                    indeks yang terdaftar di berbagai pasar keuangan
-                    internasional.
-                    <br />
-                    Satu keuntungan besar yang ditawarkan adalah pengguna tidak
-                    perlu menyediakan dana 100% dari nilai nominal produk.
-                    Dengan membeli CFD, pengguna sebenarnya tidak memiliki
-                    produk yang mendasarinya, tetapi pengguna memiliki hak 100%
-                    atas keuntungan atau kerugian dari nilai penuh kontrak.
-                    <br />
-                    Terlepas dari gaya investasi, produk CFD adalah alat yang
-                    berharga untuk mengembangkan dan melindungi keseluruhan
-                    portofolio. Dengan CFD, pengguna dapat berspekulasi pada
-                    pergerakan jangka pendek harga produk keuangan, atau
-                    pengguna dapat melindungi posisi portofolio secara
-                    keseluruhan untuk meminimalkan pergerakan pasar negatif.
-                    Selain itu, pengguna dapat memanfaatkan penggunaan leverage
-                    yang ada, yang bergantung pada arah pasar, dan secara
-                    signifikan dapat meningkatkan laba pada ekuitas pengguna.
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-            <div className="space-50" />
-            <Container>
-              <Row>
-                <Col md="12">
-                  <div style={textTitle}>Daftar Produk CFD</div>
-                </Col>
-                <Col md="12">
-                  <div className="description" style={textDesc}>
-                    Trading CFD dengan Topgrowth berarti pengguna dapat membeli
-                    dan menjual saham Amerika, Inggris, Eropa, Cina, dan Jepang
-                    dari platform yang sama. Seluruh produk CFD yang dapat
-                    diperdagangkan melalui Topgrowth tercantum pada tabel di
-                    bawah ini. Selain itu, Topgrowth juga menyertakan informasi
-                    untuk setiap produk, mata uang yang relevan, dan persyaratan
-                    margin untuk memperdagangkan setiap kontrak.
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-            <div className="space-50" />
-            <Container>
-              <Row>
-                <Col md="12">
-                  <div style={textTitle}>CFDs Pada Index</div>
-                </Col>
-                <Col md="12">
-                  <Table
-                    bordered
-                    className="table-shopping"
-                    style={{
-                      backgroundColor: "#224377",
-                      borderRadius: "5px",
-                      borderCollapse: "inherit"
-                      // borderWidth: "0.2px"
-                    }}
-                  >
-                    <thead>
-                      <tr>
-                        <th style={titleTable}>Product</th>
-                        <th style={titleTable}>Tick Size</th>
-                        <th style={titleTable}>Tick Value</th>
-                        <th style={titleTable}>
-                          Margin yang diperlukan Per Lot (Day & Trade Overnight)
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                      <tr>
-                        <td style={text}>Dow Jones Index</td>
-                        <td style={text}>1 Indeks poin</td>
-                        <td style={text}>Rp 50.000</td>
-                        <td style={text}>Rp 10.000.000</td>
-                      </tr>
-                      <tr>
-                        <td style={text}>Indeks S & P 500 </td>
-                        <td style={text}>0,25 Indeks poin</td>
-                        <td style={text}>Rp 500.000 </td>
-                        <td style={text}>Rp 10.000.000</td>
-                      </tr>
-                      <tr>
-                        <td style={text}>NASDAQ Index</td>
-                        <td style={text}>0,25 Indeks poin</td>
-                        <td style={text}>Rp 200.000 </td>
-                        <td style={text}>Rp 10.000.000</td>
-                      </tr>
-                    </tbody>
-                  </Table>
-                  <Table
-                    bordered
-                    className="table-shopping"
-                    style={{
-                      backgroundColor: "#224377",
-                      borderRadius: "5px",
-                      borderCollapse: "inherit"
-                      // borderWidth: "0.2px"
-                    }}
-                  >
-                    <thead>
-                      <tr>
-                        <th style={titleTable}>Product</th>
-                        <th style={titleTable}>Tick Size</th>
-                        <th style={titleTable}>Tick Value</th>
-                        <th style={titleTable}>
-                          Margin yang diperlukan Per Lot (Day Trade)
-                        </th>
-                        <th style={titleTable}>
-                          Margin yang diperlukan Per Lot (Overnight)
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                      <tr>
-                        <td style={text}>FTSE Index </td>
-                        <td style={text}>0,50 Indeks poin</td>
-                        <td style={text}>Rp 150.000 </td>
-                        <td style={text}>Rp 10.000.000</td>
-                        <td style={text}>Rp 20.000.000</td>
-                      </tr>
-                      <tr>
-                        <td style={text}>DAX Index</td>
-                        <td style={text}>0,50 Indeks poin</td>
-                        <td style={text}>Rp 300.000 </td>
-                        <td style={text}>Rp 20.000.000</td>
-                        <td style={text}>Rp 40.000.000</td>
-                      </tr>
-                    </tbody>
-                  </Table>
-                </Col>
-              </Row>
-            </Container>
-            <div className="space-50" />
-            <Container>
-              <Row>
-                <Col md="12">
-                  <div style={textTitle}>CFDs Pada Produk Energi</div>
-                </Col>
-                <Col md="12">
-                  <Table
-                    bordered
-                    className="table-shopping"
-                    style={{
-                      backgroundColor: "#224377",
-                      borderRadius: "5px",
-                      borderCollapse: "inherit"
-                      // borderWidth: "0.2px"
-                    }}
-                  >
-                    <thead>
-                      <tr>
-                        <th style={titleTable}>Product</th>
-                        <th style={titleTable}>Tick Size</th>
-                        <th style={titleTable}>Tick Value</th>
-                        <th style={titleTable}>
-                          Margin yang diperlukan Per Lot (Day & Trade Overnight)
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                      <tr>
-                        <td style={text}>Minyak mentah</td>
-                        <td style={text}>US$ 0.01 </td>
-                        <td style={text}>Rp 120.000 </td>
-                        <td style={text}>Rp 24.000.000 (USD 2,000)</td>
-                      </tr>
-                    </tbody>
-                  </Table>
-                </Col>
-              </Row>
-            </Container>
-            <div className="space-50" />
-            <Container>
-              <Row>
-                <Col md="12">
-                  <div style={textTitle}>
-                    CFDs Pada Bullion Produk / Precious Metal
-                  </div>
-                </Col>
-                <Col md="12">
-                  <Table
-                    bordered
-                    className="table-shopping"
-                    style={{
-                      backgroundColor: "#224377",
-                      borderRadius: "5px",
-                      borderCollapse: "inherit"
-                      // borderWidth: "0.2px"
-                    }}
-                  >
-                    <thead>
-                      <tr>
-                        <th style={titleTable}>Product</th>
-                        <th style={titleTable}>Tick Size</th>
-                        <th style={titleTable}>Tick Value</th>
-                        <th style={titleTable}>
-                          Margin yang diperlukan Per Lot (Day & Trade Overnight)
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                      <tr>
-                        <td style={text}>Spot Perak </td>
-                        <td style={text}>US$ 0.001 </td>
-                        <td style={text}>Rp 600.000 </td>
-                        <td style={text}>Rp 36.000.000 (USD 3,000)</td>
-                      </tr>
-                    </tbody>
-                  </Table>
-                </Col>
-              </Row>
-            </Container>
-          </div>
+                  <div className="title title-header">{lang.CFD.header}</div>
+                </div>
+                <div className="team-1 broken-white">
+                  <Container>
+                    <Row>
+                      <Col md="12">
+                        <div style={textTitle}>{lang.CFD.content[0].titlw}</div>
+                      </Col>
+                      <Col md="12">
+                        <div className="description" style={textDesc}>
+                          {lang.CFD.content[0].content}
+                        </div>
+                      </Col>
+                    </Row>
+                  </Container>
+                  <div className="space-50" />
+                  <Container>
+                    <Row>
+                      <Col md="12">
+                        <div style={textTitle}>{lang.CFD.content[1].title}</div>
+                      </Col>
+                      <Col md="12">
+                        <div className="description" style={textDesc}>
+                          {lang.CFD.content[1].content}
+                        </div>
+                      </Col>
+                    </Row>
+                  </Container>
+                  <div className="space-50" />
+                  <Container>
+                    <Row>
+                      <Col md="12">
+                        <div style={textTitle}>{lang.CFD.content[2].title}</div>
+                      </Col>
+                      <Col md="12">
+                        <div className="description" style={textDesc}>
+                          {lang.CFD.content[2].content}
+                        </div>
+                      </Col>
+                    </Row>
+                  </Container>
+                  <div className="space-50" />
+                  <Container>
+                    <Row>
+                      <Col md="12">
+                        <div style={textTitle}>{lang.CFD.content[3].title}</div>
+                      </Col>
+                      <Col md="12">
+                        <div className="description" style={textDesc}>
+                          {lang.CFD.content[3].content}
+                        </div>
+                      </Col>
+                    </Row>
+                  </Container>
+                  <div className="space-50" />
+                  <Container>
+                    <Row>
+                      <Col md="12">
+                        <div style={textTitle}>{lang.CFD.content[3].title}</div>
+                      </Col>
+                      <Col md="12">
+                        <Table
+                          bordered
+                          className="table-shopping"
+                          style={{
+                            backgroundColor: "#224377",
+                            borderRadius: "5px",
+                            borderCollapse: "inherit"
+                            // borderWidth: "0.2px"
+                          }}
+                        >
+                          <thead>
+                            <tr>
+                              <th style={titleTable}>Product</th>
+                              <th style={titleTable}>Tick Size</th>
+                              <th style={titleTable}>Tick Value</th>
+                              <th style={titleTable}>
+                                Margin yang diperlukan Per Lot (Day & Trade
+                                Overnight)
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                            <tr>
+                              <td style={text}>Dow Jones Index</td>
+                              <td style={text}>1 Indeks poin</td>
+                              <td style={text}>Rp 50.000</td>
+                              <td style={text}>Rp 10.000.000</td>
+                            </tr>
+                            <tr>
+                              <td style={text}>Indeks S & P 500 </td>
+                              <td style={text}>0,25 Indeks poin</td>
+                              <td style={text}>Rp 500.000 </td>
+                              <td style={text}>Rp 10.000.000</td>
+                            </tr>
+                            <tr>
+                              <td style={text}>NASDAQ Index</td>
+                              <td style={text}>0,25 Indeks poin</td>
+                              <td style={text}>Rp 200.000 </td>
+                              <td style={text}>Rp 10.000.000</td>
+                            </tr>
+                          </tbody>
+                        </Table>
+                        <Table
+                          bordered
+                          className="table-shopping"
+                          style={{
+                            backgroundColor: "#224377",
+                            borderRadius: "5px",
+                            borderCollapse: "inherit"
+                            // borderWidth: "0.2px"
+                          }}
+                        >
+                          <thead>
+                            <tr>
+                              <th style={titleTable}>Product</th>
+                              <th style={titleTable}>Tick Size</th>
+                              <th style={titleTable}>Tick Value</th>
+                              <th style={titleTable}>
+                                Margin yang diperlukan Per Lot (Day Trade)
+                              </th>
+                              <th style={titleTable}>
+                                Margin yang diperlukan Per Lot (Overnight)
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                            <tr>
+                              <td style={text}>FTSE Index </td>
+                              <td style={text}>0,50 Indeks poin</td>
+                              <td style={text}>Rp 150.000 </td>
+                              <td style={text}>Rp 10.000.000</td>
+                              <td style={text}>Rp 20.000.000</td>
+                            </tr>
+                            <tr>
+                              <td style={text}>DAX Index</td>
+                              <td style={text}>0,50 Indeks poin</td>
+                              <td style={text}>Rp 300.000 </td>
+                              <td style={text}>Rp 20.000.000</td>
+                              <td style={text}>Rp 40.000.000</td>
+                            </tr>
+                          </tbody>
+                        </Table>
+                      </Col>
+                    </Row>
+                  </Container>
+                  <div className="space-50" />
+                  <Container>
+                    <Row>
+                      <Col md="12">
+                        <div style={textTitle}>CFDs Pada Produk Energi</div>
+                      </Col>
+                      <Col md="12">
+                        <Table
+                          bordered
+                          className="table-shopping"
+                          style={{
+                            backgroundColor: "#224377",
+                            borderRadius: "5px",
+                            borderCollapse: "inherit"
+                            // borderWidth: "0.2px"
+                          }}
+                        >
+                          <thead>
+                            <tr>
+                              <th style={titleTable}>Product</th>
+                              <th style={titleTable}>Tick Size</th>
+                              <th style={titleTable}>Tick Value</th>
+                              <th style={titleTable}>
+                                Margin yang diperlukan Per Lot (Day & Trade
+                                Overnight)
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                            <tr>
+                              <td style={text}>Minyak mentah</td>
+                              <td style={text}>US$ 0.01 </td>
+                              <td style={text}>Rp 120.000 </td>
+                              <td style={text}>Rp 24.000.000 (USD 2,000)</td>
+                            </tr>
+                          </tbody>
+                        </Table>
+                      </Col>
+                    </Row>
+                  </Container>
+                  <div className="space-50" />
+                  <Container>
+                    <Row>
+                      <Col md="12">
+                        <div style={textTitle}>
+                          CFDs Pada Bullion Produk / Precious Metal
+                        </div>
+                      </Col>
+                      <Col md="12">
+                        <Table
+                          bordered
+                          className="table-shopping"
+                          style={{
+                            backgroundColor: "#224377",
+                            borderRadius: "5px",
+                            borderCollapse: "inherit"
+                            // borderWidth: "0.2px"
+                          }}
+                        >
+                          <thead>
+                            <tr>
+                              <th style={titleTable}>Product</th>
+                              <th style={titleTable}>Tick Size</th>
+                              <th style={titleTable}>Tick Value</th>
+                              <th style={titleTable}>
+                                Margin yang diperlukan Per Lot (Day & Trade
+                                Overnight)
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                            <tr>
+                              <td style={text}>Spot Perak </td>
+                              <td style={text}>US$ 0.001 </td>
+                              <td style={text}>Rp 600.000 </td>
+                              <td style={text}>Rp 36.000.000 (USD 3,000)</td>
+                            </tr>
+                          </tbody>
+                        </Table>
+                      </Col>
+                    </Row>
+                  </Container>
+                </div>
 
-          {/* ********* END TEAM 1 ********* */}
-        </div>{" "}
-      </>
+                {/* ********* END TEAM 1 ********* */}
+              </div>{" "}
+            </>
+          );
+        }}
+      </LangContext.Consumer>
     );
   }
 }

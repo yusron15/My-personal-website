@@ -22,6 +22,8 @@ import {
   Row,
   Col
 } from "reactstrap";
+import { LangContext } from "../../components/MyContext";
+
 import Radium, { StyleRoot } from "radium";
 import { fadeInUp } from "react-animations";
 // core components.
@@ -76,6 +78,9 @@ class RegisterPage extends React.Component {
   };
   render() {
     return (
+      // <LangContext.Consumer>
+      //   {({ lang }) => {
+      //     return (
       <>
         <div className="wrapper" ref="wrapper">
           <div
@@ -96,7 +101,9 @@ class RegisterPage extends React.Component {
                       <div className="test" style={styles.fadeInUp}>
                         <Card
                           className="card-login"
-                          style={{ backgroundColor: "rgba(14,14,14,0.7)" }}
+                          style={{
+                            backgroundColor: "rgba(14,14,14,0.7)"
+                          }}
                         >
                           <Form action="" className="form" method="">
                             <CardHeader style={{ padding: 0 }}>
@@ -108,6 +115,7 @@ class RegisterPage extends React.Component {
                                   marginTop: "10px"
                                 }}
                               >
+                                {/* {lang.login.form.title} */}
                                 Login
                               </CardTitle>
                             </CardHeader>
@@ -129,10 +137,14 @@ class RegisterPage extends React.Component {
                                   placeholder="First Name..."
                                   type="text"
                                   onFocus={e =>
-                                    this.setState({ firstNameFocus: true })
+                                    this.setState({
+                                      firstNameFocus: true
+                                    })
                                   }
                                   onBlur={e =>
-                                    this.setState({ firstNameFocus: false })
+                                    this.setState({
+                                      firstNameFocus: false
+                                    })
                                   }
                                 />
                               </InputGroup>
@@ -156,7 +168,9 @@ class RegisterPage extends React.Component {
                                     this.setState({ lastNameFocus: true })
                                   }
                                   onBlur={e =>
-                                    this.setState({ lastNameFocus: false })
+                                    this.setState({
+                                      lastNameFocus: false
+                                    })
                                   }
                                 />
                               </InputGroup>
@@ -171,6 +185,7 @@ class RegisterPage extends React.Component {
                                 size="lg"
                               >
                                 Get Started
+                                {/* {lang.login.form.signIn} */}
                               </Button>
                             </CardFooter>
                             <div className="pull-left ml-3 mb-3">
@@ -199,6 +214,9 @@ class RegisterPage extends React.Component {
           </div>
         </div>
       </>
+      //     );
+      //   }}
+      // </LangContext.Consumer>
     );
   }
 }

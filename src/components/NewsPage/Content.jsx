@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -45,6 +29,8 @@ import {
   InputGroupText,
   InputGroup
 } from "reactstrap";
+import { LangContext } from "../MyContext";
+
 // import { Carousel } from "react-bootstrap";
 import { HoverCard } from "react-png-hovercard";
 import "../../assets/css/main.css";
@@ -333,6 +319,9 @@ class Carding extends React.Component {
   render() {
     const child = { width: `300em`, height: `100%` };
     return (
+      <LangContext.Consumer>
+      {({ lang }) => {
+        return (
       <>
         <div
           className="cd-section broken-white"
@@ -358,7 +347,7 @@ class Carding extends React.Component {
                         className="title font-black"
                         style={{ fontSize: "1.5rem", marginTop: 0 }}
                       >
-                        Berita Terkini
+                      {lang.berita.terkini}
                       </div>
                       <Carousel
                         activeIndex={this.state.activeIndex}
@@ -406,7 +395,7 @@ class Carding extends React.Component {
                           paddingLeft: "15px"
                         }}
                       >
-                        Berita Terpopuler
+                      {lang.berita.terpopuler}
                       </div>
                       <Col>
                         <div>
@@ -621,7 +610,7 @@ class Carding extends React.Component {
               >
                 <Row>
                   <Col className="ml-auto mr-auto text-center" md="8">
-                    <h2 className="title font-black">Market Outlook</h2>
+                    <h2 className="title font-black">{lang.berita.outlook}</h2>
                   </Col>
                 </Row>
                 <Row>
@@ -704,7 +693,7 @@ class Carding extends React.Component {
               >
                 <Row>
                   <Col className="ml-auto mr-auto text-center" md="8">
-                    <h2 className="title font-black">Forex & Commodity News</h2>
+                    <h2 className="title font-black">{lang.berita.forex}</h2>
                   </Col>
                 </Row>
                 <Row>
@@ -751,7 +740,7 @@ class Carding extends React.Component {
               >
                 <Row>
                   <Col className="ml-auto mr-auto text-center" md="8">
-                    <h2 className="title font-black">Stock Index News</h2>
+                    <h2 className="title font-black">{lang.berita.stock}</h2>
                   </Col>
                 </Row>
                 <Row>
@@ -798,7 +787,10 @@ class Carding extends React.Component {
           {/* ********* END TEAM 2 ********* */}
         </div>{" "}
       </>
-    );
+   );
+  }}
+</LangContext.Consumer>
+  );
   }
 }
 

@@ -175,6 +175,7 @@
     "protrader":{
         "header":"Pro I Trader",
         "top":"Online Trading di pasar keuangan adalah sebuah keharusan. Bertrading secara online merupakan pengalaman tersendiri karena transaksi dapat dilakukan dengan mudah dan cepat. Karena persaingan ketat, platform online trading menjadi semakin user friendly dan bisa dipadukan dalam semua lingkup teknologi informasi.\r\n        Topgrowth adalah salah satu yang terdepan dalam mengembangkan teknologi online trading yang canggih. Platform Online Trading Topgrowth disebut Pro-iTrading. Platform Pro-iTrading memungkinkan Anda untuk bertransaksi real time produk-produk Forex dan Komoditi sepanjang waktu. Dengan menggunakan platform trading unggul yang menyediakan berbagai alat bantu yang Anda tidak pernah bayangkan sebelumnya serta menyajikan berita real-time, Anda dapat berkonsentrasi pada transaksi Anda.",
+        "title":"Fitur Utama Pro-iTrading",
         "content":[
             {"image":"","content":"Proses eksekusi Order yang Sederhana dan Cepat."},
             {"image":"","content":"Life Quotes dalam bentuk Summary maupun Advance mode."},
@@ -187,6 +188,7 @@
     "topgrowthtrader":{
         "header":"Topgrowth Trader",
         "top":"Metatrader dikenal sebagai platform yang paling efisien dan paling banyak digunakan oleh para trader. Topgrowth Futures memberikan Anda akses untuk tetap terhubung dengan market setiap saat melalui berbagai pilihan Metatrader yang sesuai dengan kebutuhan Anda.\r\n        Topgrowth adalah salah satu yang terdepan dalam mengembangkan teknologi online trading yang canggih. Platform Online Trading Topgrowth disebut Pro-iTrading. Platform Pro-iTrading memungkinkan Anda untuk bertransaksi real time produk-produk Forex dan Komoditi sepanjang waktu. Dengan menggunakan platform trading unggul yang menyediakan berbagai alat bantu yang Anda tidak pernah bayangkan sebelumnya serta menyajikan berita real-time, Anda dapat berkonsentrasi pada transaksi Anda.",
+        "title":"Kelebihan Topgrowth Trader",        
         "content":[
             {"image":"","content":"Charting dilengkapi dengan tools untuk bertrading secara teknikal."},
             {"image":"","content":"Catatan Trading Anda dapat diakses dengan cepat."},
@@ -236,7 +238,7 @@
     "hubungikami":{
         "header":{"title":"Ada pertanyaan?","subtitle":"Kami mengharapkan anda untuk ikut membicarakan apa yang anda inginkan."},
         "top":{"title":"Kami sangat menanti pertanyaan, saran, dan kritik dari Anda.","subtitle":"Silakan hubungi atau kirimkan email ke formulir kontak dan kami akan dengan senang hati membantu Anda."},
-        "contact":{"title":"Kontak & Informasi","left":"Address: Sahid Sudirman Center, Lantai 40 Jl. Jend Sudirman Kav 86 Jakarta 10220 Indonesia","right":"Phone: (+62)21 2788-9393 Fax: (+62)21 2788-9395"},
+        "contact":{"title":"Kontak & Informasi","left":["Address:","Sahid Sudirman Center"," Lantai 40 Jl. Jend Sudirman Kav 86"," Jakarta 10220 Indonesia","Phone: (+62)21 2788-9393","Fax: (+62)21 2788-9395"]},
         "form":{
             "firstname":"First Name",
             "lastname":"Last Name",
