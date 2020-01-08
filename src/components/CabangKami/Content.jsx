@@ -20,6 +20,7 @@ import {
   CarouselItem,
   CarouselIndicators
 } from "reactstrap";
+import { LangContext } from "../MyContext";
 
 // import { NewsContent } from "./NewsContent";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -239,152 +240,170 @@ class News extends React.Component {
       ]
     };
     return (
-      <>
-        <div
-          className="cd-section broken-white"
-          id="testimonials"
-          // style={{ backgroundColor: "#D4D4D4" }}
-        >
-          <div
-            className="team-1 background-header"
-            style={{
-              backgroundImage: `url(${bg})`,
-              padding: 0
-            }}
-          >
-            <BlurryNavbar />
-            <div className="title title-header">Cabang Kami</div>
-          </div>
+      <LangContext.Consumer>
+        {({ lang }) => {
+          return (
+            <>
+              <div
+                className="cd-section broken-white"
+                id="testimonials"
+                // style={{ backgroundColor: "#D4D4D4" }}
+              >
+                <div
+                  className="team-1 background-header"
+                  style={{
+                    backgroundImage: `url(${bg})`,
+                    padding: 0
+                  }}
+                >
+                  <BlurryNavbar />
+                  <div className="title title-header">Cabang Kami</div>
+                </div>
 
-          <div className="testimonials-4">
-            {/* <ColoredNavbar /> */}
-            <Container>
-              <Row>
-                <Col
-                  md="12"
-                  // style={{ paddingTop: "15vh" }}
-                >
-                  {/* <ScrollAnimation animateIn="fadeInRight" animateOut="fadeOut"> */}
-                  <Slick {...slickSettings}>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 0 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("1");
-                        // }}
-                        style={{
-                          backgroundImage:
-                            "url(" +
-                            require("assets/img/kantorpusat.png") +
-                            ")",
-                          height: "30vh",
-                          backgroundSize: "cover"
-                        }}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 1 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("2");
-                        // }}
-                        style={{
-                          backgroundImage:
-                            "url(" +
-                            require("assets/img/sumgaigerong.png") +
-                            ")",
-                          height: "30vh",
-                          backgroundSize: "cover"
-                        }}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 2 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("3");
-                        // }}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={
-                          this.state.activeSlide === "4" ? "scaled" : ""
-                        }
-                        // onClick={() => {
-                        //   this.toggle("4");
-                        // }}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={
-                          this.state.activeSlide === "5" ? "scaled" : ""
-                        }
-                        // onClick={() => {
-                        //   this.toggle("5");
-                        // }}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
-                  </Slick>
-                  {/* </ScrollAnimation> */}
-                </Col>
-                <Col
-                  className="positioned"
-                  style={{ marginTop: "60px" }}
-                  lg="4"
-                  md="8"
-                  xs="10"
-                >
-                  {/* <ScrollAnimation animateIn="fadeInLeft" animateOut="fadeOut"> */}
-                  <h1 className="title font-black">Cabang Kami</h1>
-                  <p className="description text-white">
-                    <TabContent activeTab={"project" + this.state.activeSlide}>
-                      <TabPane tabId="project0">
-                        {/* <Col> */}
-                        <div className="title font-black">Kantor Pusat</div>
-                        <p className="description font-black mb-5">
-                          Sahid Sudirman Center, Lantai 40 Jl. Jend Sudirman Kav
-                          86 Jakarta 10220 Indonesia +62.21. 2788 9393
+                <div className="testimonials-4">
+                  {/* <ColoredNavbar /> */}
+                  <Container>
+                    <Row>
+                      <Col
+                        md="12"
+                        // style={{ paddingTop: "15vh" }}
+                      >
+                        {/* <ScrollAnimation animateIn="fadeInRight" animateOut="fadeOut"> */}
+                        <Slick {...slickSettings}>
+                          <div>
+                            <NavLink
+                              className={
+                                this.state.activeSlide === 0 ? "scaled" : ""
+                              }
+                              // onClick={() => {
+                              //   this.toggle("1");
+                              // }}
+                              style={{
+                                backgroundImage:
+                                  "url(" +
+                                  require("assets/img/kantorpusat.png") +
+                                  ")",
+                                height: "30vh",
+                                backgroundSize: "cover"
+                              }}
+                            ></NavLink>
+                          </div>
+                          <div>
+                            <NavLink
+                              className={
+                                this.state.activeSlide === 1 ? "scaled" : ""
+                              }
+                              // onClick={() => {
+                              //   this.toggle("2");
+                              // }}
+                              style={{
+                                backgroundImage:
+                                  "url(" +
+                                  require("assets/img/sumgaigerong.png") +
+                                  ")",
+                                height: "30vh",
+                                backgroundSize: "cover"
+                              }}
+                            ></NavLink>
+                          </div>
+                          <div>
+                            <NavLink
+                              className={
+                                this.state.activeSlide === 2 ? "scaled" : ""
+                              }
+                              // onClick={() => {
+                              //   this.toggle("3");
+                              // }}
+                              style={styleCard}
+                            ></NavLink>
+                          </div>
+                          <div>
+                            <NavLink
+                              className={
+                                this.state.activeSlide === "4" ? "scaled" : ""
+                              }
+                              // onClick={() => {
+                              //   this.toggle("4");
+                              // }}
+                              style={styleCard}
+                            ></NavLink>
+                          </div>
+                          <div>
+                            <NavLink
+                              className={
+                                this.state.activeSlide === "5" ? "scaled" : ""
+                              }
+                              // onClick={() => {
+                              //   this.toggle("5");
+                              // }}
+                              style={styleCard}
+                            ></NavLink>
+                          </div>
+                        </Slick>
+                        {/* </ScrollAnimation> */}
+                      </Col>
+                      <Col
+                        className="positioned"
+                        style={{ marginTop: "60px" }}
+                        lg="4"
+                        md="8"
+                        xs="10"
+                      >
+                        {/* <ScrollAnimation animateIn="fadeInLeft" animateOut="fadeOut"> */}
+                        <h1 className="title font-black">Cabang Kami</h1>
+                        <p className="description text-white">
+                          <TabContent
+                            activeTab={"project" + this.state.activeSlide}
+                          >
+                            <TabPane tabId="project0">
+                              {/* <Col> */}
+                              <div className="title font-black">
+                                Kantor Pusat
+                              </div>
+                              <p className="description font-black mb-5">
+                                Sahid Sudirman Center, Lantai 40 Jl. Jend
+                                Sudirman Kav 86 Jakarta 10220 Indonesia +62.21.
+                                2788 9393
+                              </p>
+                              {/* </Col> */}
+                            </TabPane>
+                            <TabPane tabId="project1">
+                              <div className="title font-black">
+                                Kantor Cabang Sungai Gerong
+                              </div>
+                              <p className="description font-black mb-5">
+                                Sahid Sudirman Center, Lantai 40 Jl. Jend
+                                Sudirman Kav 86 Jakarta 10220 Indonesia +62.21.
+                                2788 9393
+                              </p>
+                            </TabPane>
+                            <TabPane tabId="project2">
+                              <p className="description font-black mb-5">
+                                Add your information here for News 3.
+                              </p>
+                            </TabPane>
+                            <TabPane tabId="project3">
+                              <p className="description font-black mb-5">
+                                Add your information here for News 4.
+                              </p>
+                            </TabPane>
+                            <TabPane tabId="project4">
+                              <p className="description font-black mb-5">
+                                Add your information here for News 5.
+                              </p>
+                            </TabPane>
+                          </TabContent>
                         </p>
-                        {/* </Col> */}
-                      </TabPane>
-                      <TabPane tabId="project1">
-                        <div className="title font-black">
-                          Kantor Cabang Sungai Gerong
-                        </div>
-                        <p className="description font-black mb-5">
-                          Sahid Sudirman Center, Lantai 40 Jl. Jend Sudirman Kav
-                          86 Jakarta 10220 Indonesia +62.21. 2788 9393
-                        </p>
-                      </TabPane>
-                      <TabPane tabId="project2">
-                        <p className="description font-black mb-5">
-                          Add your information here for News 3.
-                        </p>
-                      </TabPane>
-                      <TabPane tabId="project3">
-                        <p className="description font-black mb-5">
-                          Add your information here for News 4.
-                        </p>
-                      </TabPane>
-                      <TabPane tabId="project4">
-                        <p className="description font-black mb-5">
-                          Add your information here for News 5.
-                        </p>
-                      </TabPane>
-                    </TabContent>
-                  </p>
-                  {/* </ScrollAnimation> */}
-                </Col>
-              </Row>
-            </Container>
-          </div>
-        </div>
-      </>
+                        {/* </ScrollAnimation> */}
+                      </Col>
+                    </Row>
+                  </Container>
+                </div>
+              </div>
+            </>
+          );
+        }}
+      </LangContext.Consumer>
     );
   }
 }

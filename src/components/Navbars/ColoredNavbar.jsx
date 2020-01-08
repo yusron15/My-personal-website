@@ -20,6 +20,7 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 import logo from "../../assets/img/logo-topgrowth.png";
+import vl from "../../assets/img/vertical-line.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import Radium, { StyleRoot } from "radium";
@@ -32,15 +33,23 @@ const stylesAnimation = {
 };
 
 const title = {
-  fontSize: "15px",
+  fontSize: "1rem",
   fontWeight: "bold",
   color: "black",
   marginTop: "40px",
   marginBottom: "10px"
 };
 const tentangkami = {
-  fontSize: "15px",
-  fontWeight: "bold",
+  fontSize: "1rem",
+  // fontWeight: "bold",
+  color: "black",
+  // marginTop: "20px",
+  marginBottom: "10px",
+  textAlign: "left"
+};
+
+const newstext = {
+  fontSize: "1rem",
   color: "black",
   // marginTop: "20px",
   marginBottom: "10px",
@@ -162,11 +171,13 @@ class ColorNavbar extends React.Component {
           <Container>
             <div className="navbar-translate">
               <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                <img
-                  src={this.state.logo}
-                  style={{ height: "7vh", width: "auto" }}
-                />
-                {/* TGF */}
+                <Link to="/landing">
+                  <img
+                    src={this.state.logo}
+                    style={{ height: "7vh", width: "auto" }}
+                  />
+                  {/* TGF */}
+                </Link>
               </NavbarBrand>
               <button
                 className="navbar-toggler"
@@ -239,7 +250,6 @@ class ColorNavbar extends React.Component {
                     </div>
                   </div>
                 </div>
-
                 <div class="dropdown ">
                   <button
                     class="dropbtn"
@@ -270,28 +280,50 @@ class ColorNavbar extends React.Component {
                           <div style={title}>Produk</div>
                           <Row>
                             <Col>
-                              <Link className="vertical-space" to="/forex">
+                              <Link
+                                style={tentangkami}
+                                className="vertical-space"
+                                to="/forex"
+                              >
                                 Forex
                               </Link>
-                              <Link className="vertical-space" to="/gold">
+                              <Link
+                                style={tentangkami}
+                                className="vertical-space"
+                                to="/gold"
+                              >
                                 Gold
                               </Link>
+                            </Col>
+                            <Col>
                               <Link
+                                style={tentangkami}
+                                className="vertical-space"
+                                to="/komoditi"
+                              >
+                                Komoditi
+                              </Link>
+                              <Link
+                                style={tentangkami}
+                                className="vertical-space"
+                                to="/cfd"
+                              >
+                                CFD
+                              </Link>
+                            </Col>
+                            <Col style={{ minWidth: "10vw" }}>
+                              <Link
+                                style={tentangkami}
                                 className="vertical-space"
                                 to="/indexfutures"
                               >
                                 Index Futures
                               </Link>
                             </Col>
-                            <Col>
-                              <Link className="vertical-space" to="/cfd">
-                                CFD
-                              </Link>
-                              <Link className="vertical-space" to="/komoditi">
-                                Komoditi
-                              </Link>
-                            </Col>
                           </Row>
+                        </div>
+                        <div>
+                          <img className="vl-img" src={vl} />
                         </div>
                         {/* <div class="vl-navbar-trading" /> */}
                         {/* <div class="outer">
@@ -300,34 +332,53 @@ class ColorNavbar extends React.Component {
                         <div>
                           <div style={title}>Informasi</div>
                           <Link
+                            style={tentangkami}
                             className="vertical-space"
                             to="/jamperdagangan"
-                            style={{ padding: 0 }}
                           >
                             Jam Perdagangan
                           </Link>
                         </div>
-                        <div class="vl-navbar-trading" />
+                        <div>
+                          <img className="vl-img" src={vl} />
+                        </div>
+                        {/* <div class="vl-navbar-trading" /> */}
                         <div>
                           <div style={title}>Trading Platform</div>
-                          <Link className="vertical-space" to="/protrader">
+                          <Link
+                            style={tentangkami}
+                            className="vertical-space"
+                            to="/protrader"
+                          >
                             Pro I Trader
                           </Link>
                           <Link
+                            style={tentangkami}
                             className="vertical-space"
                             to="/topgrowthtrader"
                           >
                             Topgrowth Trader
                           </Link>
                         </div>
-                        <div class="vl-navbar-trading" />
+                        <div>
+                          <img className="vl-img" src={vl} />
+                        </div>
+                        {/* <div class="vl-navbar-trading" /> */}
                         {/* <div class="vl-navbar-trading"></div> */}
                         <div>
                           <div style={title}>Buka Akun</div>
-                          <Link className="vertical-space" to="/login">
+                          <Link
+                            style={tentangkami}
+                            className="vertical-space"
+                            to="/login"
+                          >
                             Login
                           </Link>
-                          <Link className="vertical-space" to="/register">
+                          <Link
+                            style={tentangkami}
+                            className="vertical-space"
+                            to="/register"
+                          >
                             Register
                           </Link>
                         </div>
@@ -335,25 +386,62 @@ class ColorNavbar extends React.Component {
                     </Container>
                   </div>
                 </div>
+                <div class="dropdown ">
+                  <Link
+                    to="/newspage"
+                    // onClick={() => {
+                    //   this.toggle("2");
+                    // }}
+                  >
+                    <div class="dropdown">
+                      <button
+                        class="dropbtn"
+                        style={{
+                          ...colorStyle,
+                          color: this.coloringNav("/newspage")
+                        }}
+                      >
+                        Berita
+                      </button>
+                      <div
+                        class="dropdown-content-news"
+                        style={{ justifyContent: "space-around" }}
+                      >
+                        <Link
+                          as={NavLink}
+                          to="/newspage"
+                          className="underlined"
+                        >
+                          <div style={newstext}>News Hightlight</div>
+                        </Link>
+                        {/* <div class="vl-navbar"></div> */}
+                        <img className="vl-img-news" src={vl} />
 
-                <Link
-                  to="/newspage"
-                  // onClick={() => {
-                  //   this.toggle("2");
-                  // }}
-                >
-                  <div class="dropdown">
-                    <button
-                      class="dropbtn"
-                      style={{
-                        ...colorStyle,
-                        color: this.coloringNav("/newspage")
-                      }}
-                    >
-                      Berita
-                    </button>
-                  </div>
-                </Link>
+                        <Link to="/cabang">
+                          <div style={newstext}>Stock Index</div>
+                        </Link>
+                        {/* <div class="vl-navbar"></div> */}
+                        <img className="vl-img-news" src={vl} />
+
+                        <Link to="/rekeningterpisah">
+                          <div style={newstext}> Forex & Commodity </div>
+                        </Link>
+                        {/* <div class="vl-navbar"></div> */}
+                        <img className="vl-img-news" src={vl} />
+
+                        <Link to="/legalitas">
+                          <div style={newstext}> Economic Calender </div>
+                        </Link>
+                        {/* <div class="vl-navbar"></div> */}
+                        <img className="vl-img-news" src={vl} />
+
+                        <Link to="/legalitas">
+                          <div style={newstext}> Market Outlook </div>
+                        </Link>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
 
                 <Link to="/edukasi">
                   <NavItem>

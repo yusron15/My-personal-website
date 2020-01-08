@@ -23,6 +23,7 @@ import logo from "../../assets/img/logo-topgrowth.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import Radium, { StyleRoot } from "radium";
+import vl from "../../assets/img/vertical-line.png";
 
 const stylesAnimation = {
   slideInDown: {
@@ -40,13 +41,20 @@ const title = {
 };
 const tentangkami = {
   fontSize: "15px",
-  fontWeight: "bold",
+  // fontWeight: "bold",
   color: "black",
   // marginTop: "20px",
   marginBottom: "10px",
   textAlign: "left"
 };
 
+const newstext = {
+  fontSize: "1rem",
+  color: "black",
+  // marginTop: "20px",
+  marginBottom: "10px",
+  textAlign: "left"
+};
 class ColorNavbar extends React.Component {
   constructor(props) {
     super(props);
@@ -200,130 +208,240 @@ class ColorNavbar extends React.Component {
                     </Link>
                   </button>
                 </NavItem>
-
-                <div class="dropdown">
-                  <button
-                    class="dropbtn"
-                    // style={{
-                    //   color: this.coloringNav([
-                    //     "/tentangkami",
-                    //     "/cabang",
-                    //     "/rekeningterpisah",
-                    //     "/legalitas"
-                    //   ])
-                    // }}
-                    style={colorStyle}
-                  >
-                    Tentang Kami
-                  </button>
-                  <div class="dropdown-content">
-                    <Link as={NavLink} to="/tentangkami">
-                      <div style={tentangkami}>Topgrowth Futures</div>
-                      {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
-                    </Link>
-                    <div class="vl-navbar"></div>
-                    <Link to="/cabang">
-                      <div style={tentangkami}>Cabang Kami</div>
-                      {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
-                    </Link>
-                    <div class="vl-navbar"></div>
-                    <Link to="/rekeningterpisah">
-                      <div style={tentangkami}> Rekening Terpisah </div>
-                      {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
-                    </Link>
-                    <div class="vl-navbar"></div>
-                    <Link to="/legalitas">
-                      <div style={tentangkami}> Legalitas </div>
-                      {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
-                    </Link>
+                <div class="dropdown ">
+                  <div style={stylesAnimation.slideInDown}>
+                    <button
+                      class="dropbtn"
+                      style={{
+                        color: this.coloringNav([
+                          "/tentangkami",
+                          "/cabang",
+                          "/rekeningterpisah",
+                          "/legalitas"
+                        ])
+                      }}
+                    >
+                      Tentang Kami
+                    </button>
+                    <div class="dropdown-content">
+                      <Link
+                        as={NavLink}
+                        to="/tentangkami"
+                        className="underlined"
+                      >
+                        <div style={tentangkami}>Topgrowth Futures</div>
+                        {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
+                      </Link>
+                      <div class="vl-navbar"></div>
+                      <Link to="/cabang">
+                        <div style={tentangkami}>Cabang Kami</div>
+                        {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
+                      </Link>
+                      <div class="vl-navbar"></div>
+                      <Link to="/rekeningterpisah">
+                        <div style={tentangkami}> Rekening Terpisah </div>
+                        {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
+                      </Link>
+                      <div class="vl-navbar"></div>
+                      <Link to="/legalitas">
+                        <div style={tentangkami}> Legalitas </div>
+                        {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
+                      </Link>
+                    </div>
                   </div>
                 </div>
-
                 <div class="dropdown ">
                   <button
                     class="dropbtn"
-                    // style={{
-                    //   color: this.coloringNav([
-                    //     "/forex",
-                    //     "/gold",
-                    //     "/indexfutures",
-                    //     "/cfd",
-                    //     "/komoditi",
-                    //     "/jamperdagangan",
-                    //     "/protrader",
-                    //     "/topgrowthtrader",
-                    //     "/login",
-                    //     "/register"
-                    //   ])
-                    // }}
-                    style={colorStyle}
+                    style={{
+                      color: this.coloringNav([
+                        "/forex",
+                        "/gold",
+                        "/indexfutures",
+                        "/cfd",
+                        "/komoditi",
+                        "/jamperdagangan",
+                        "/protrader",
+                        "/topgrowthtrader",
+                        "/login",
+                        "/register"
+                      ])
+                    }}
                   >
                     Trading Online
                   </button>
                   <div class="dropdown-content-trading trading-online">
                     <Container>
-                      <Row>
-                        <Col md="3">
+                      <div
+                        class="row"
+                        style={{ justifyContent: "space-around" }}
+                      >
+                        <div>
                           <div style={title}>Produk</div>
                           <Row>
                             <Col>
-                              <Link to="/forex">Forex</Link>
-                              <Link to="/gold">Gold</Link>
-                              <Link to="/indexfutures">Index Futures</Link>
+                              <Link
+                                style={tentangkami}
+                                className="vertical-space"
+                                to="/forex"
+                              >
+                                Forex
+                              </Link>
+                              <Link
+                                style={tentangkami}
+                                className="vertical-space"
+                                to="/gold"
+                              >
+                                Gold
+                              </Link>
                             </Col>
                             <Col>
-                              <Link to="/cfd">CFD</Link>
-                              <Link to="/komoditi">Komoditi</Link>
+                              <Link
+                                style={tentangkami}
+                                className="vertical-space"
+                                to="/komoditi"
+                              >
+                                Komoditi
+                              </Link>
+                              <Link
+                                style={tentangkami}
+                                className="vertical-space"
+                                to="/cfd"
+                              >
+                                CFD
+                              </Link>
+                            </Col>
+                            <Col style={{ minWidth: "10vw" }}>
+                              <Link
+                                style={tentangkami}
+                                className="vertical-space"
+                                to="/indexfutures"
+                              >
+                                Index Futures
+                              </Link>
                             </Col>
                           </Row>
-                        </Col>
-                        <Col md="1">
-                          <div class="vl-navbar-trading"></div>
-                        </Col>
-                        <Col md="2">
+                        </div>
+                        <div>
+                          <img className="vl-img" src={vl} />
+                        </div>
+                        {/* <div class="vl-navbar-trading" /> */}
+                        {/* <div class="outer">
+                          <div class="inner"></div>
+                        </div> */}
+                        <div>
                           <div style={title}>Informasi</div>
-                          <Link to="/jamperdagangan">Jam Perdagangan</Link>
-                        </Col>
-                        <Col md="1">
-                          <div class="vl-navbar-trading"></div>
-                        </Col>
-                        <Col md="2">
+                          <Link
+                            style={tentangkami}
+                            className="vertical-space"
+                            to="/jamperdagangan"
+                          >
+                            Jam Perdagangan
+                          </Link>
+                        </div>
+                        <div>
+                          <img className="vl-img" src={vl} />
+                        </div>
+                        {/* <div class="vl-navbar-trading" /> */}
+                        <div>
                           <div style={title}>Trading Platform</div>
-                          <Link to="/protrader">Pro I Trader</Link>
-                          <Link to="/topgrowthtrader">Topgrowth Trader</Link>
-                        </Col>
-                        <Col md="1">
-                          <div class="vl-navbar-trading"></div>
-                        </Col>
-                        <Col md="2">
+                          <Link
+                            style={tentangkami}
+                            className="vertical-space"
+                            to="/protrader"
+                          >
+                            Pro I Trader
+                          </Link>
+                          <Link
+                            style={tentangkami}
+                            className="vertical-space"
+                            to="/topgrowthtrader"
+                          >
+                            Topgrowth Trader
+                          </Link>
+                        </div>
+                        <div>
+                          <img className="vl-img" src={vl} />
+                        </div>
+                        {/* <div class="vl-navbar-trading" /> */}
+                        {/* <div class="vl-navbar-trading"></div> */}
+                        <div>
                           <div style={title}>Buka Akun</div>
-                          <Link to="/login">Login</Link>
-                          <Link to="/register">Register</Link>
-                        </Col>
-                      </Row>
+                          <Link
+                            style={tentangkami}
+                            className="vertical-space"
+                            to="/login"
+                          >
+                            Login
+                          </Link>
+                          <Link
+                            style={tentangkami}
+                            className="vertical-space"
+                            to="/register"
+                          >
+                            Register
+                          </Link>
+                        </div>
+                      </div>
                     </Container>
                   </div>
                 </div>
+                <div class="dropdown ">
+                  <Link
+                    to="/newspage"
+                    // onClick={() => {
+                    //   this.toggle("2");
+                    // }}
+                  >
+                    <div class="dropdown">
+                      <button
+                        class="dropbtn"
+                        style={{
+                          ...colorStyle,
+                          color: this.coloringNav("/newspage")
+                        }}
+                      >
+                        Berita
+                      </button>
+                      <div
+                        class="dropdown-content-news"
+                        style={{ justifyContent: "space-around" }}
+                      >
+                        <Link
+                          as={NavLink}
+                          to="/newspage"
+                          className="underlined"
+                        >
+                          <div style={newstext}>News Hightlight</div>
+                        </Link>
+                        {/* <div class="vl-navbar"></div> */}
+                        <img className="vl-img-news" src={vl} />
 
-                <Link
-                  to="/newspage"
-                  style={{
-                    color: this.coloringNav("/newspage")
-                    // color: "black",
-                    // ...(this.state.activeTab === "2"
-                    //   ? { color: "#2AB4E7" }
-                    //   : { color: this.state.color })
-                  }}
-                  // onClick={() => {
-                  //   this.toggle("2");
-                  // }}
-                >
-                  <div class="dropdown ">
-                    <button class="dropbtn" style={colorStyle}>
-                      Berita
-                    </button>
-                  </div>
-                </Link>
+                        <Link to="/cabang">
+                          <div style={newstext}>Stock Index</div>
+                        </Link>
+                        {/* <div class="vl-navbar"></div> */}
+                        <img className="vl-img-news" src={vl} />
+
+                        <Link to="/rekeningterpisah">
+                          <div style={newstext}> Forex & Commodity </div>
+                        </Link>
+                        {/* <div class="vl-navbar"></div> */}
+                        <img className="vl-img-news" src={vl} />
+
+                        <Link to="/legalitas">
+                          <div style={newstext}> Economic Calender </div>
+                        </Link>
+                        {/* <div class="vl-navbar"></div> */}
+                        <img className="vl-img-news" src={vl} />
+
+                        <Link to="/legalitas">
+                          <div style={newstext}> Market Outlook </div>
+                        </Link>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
 
                 <NavItem>
                   {/* <div class="dropbtn"> */}

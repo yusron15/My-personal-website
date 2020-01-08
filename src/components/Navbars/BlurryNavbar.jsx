@@ -96,8 +96,8 @@ class BlurryNavbar extends React.Component {
             <UncontrolledCollapse navbar toggler="#example-navbar-transparent">
               <Nav className="ml-auto" style={{ marginRight: "25px" }} navbar>
                 <NavItem>
-                  <Link to="/#" className="vertical-center-nav">
-                    <img
+                  {/* <Link to="/#" className="vertical-center-nav"> */}
+                  {/* <img
                       src={flag}
                       style={{
                         paddingRight: "10px",
@@ -105,9 +105,9 @@ class BlurryNavbar extends React.Component {
                         width: "auto"
                       }}
                     />
-                    <text style={font}>ENG</text>
-                    {/* <LangTogglerButton /> */}
-                  </Link>
+                    <text style={font}>ENG</text> */}
+                  <LangTogglerButton />
+                  {/* </Link> */}
                 </NavItem>
                 <div class="vl"></div>
                 <NavItem>

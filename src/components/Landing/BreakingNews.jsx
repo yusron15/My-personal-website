@@ -44,7 +44,7 @@ class BreakingNews extends Component {
                 options={[
                   {
                     label: "KOMODITI",
-                    value: "komuditi"
+                    value: "komoditi"
                   },
                   {
                     label: "INDEX",
@@ -63,7 +63,7 @@ class BreakingNews extends Component {
                   let dataSelect = [
                     {
                       label: "KOMODITI",
-                      value: "komuditi"
+                      value: "komoditi"
                     },
                     {
                       label: "INDEX",

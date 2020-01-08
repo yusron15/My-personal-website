@@ -1,20 +1,5 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
+import { LangContext } from "../MyContext";
 
 // reactstrap components
 import {
@@ -92,38 +77,43 @@ class Projects extends React.Component {
     }
   };
   render() {
-    console.log(this.state.content[2].kbi);
+    // console.log(this.state.content[2].kbi);
     return (
-      <>
-        <div className="cd-section" id="projects">
-          {/* <ColoredNavbar /> */}
-          {/* ********* PROJECTS 2 ********* */}
-          <div
-            className="project-raised broken-white"
-            // style={{ backgroundColor: "#D4D4D4" }}
-          >
-            <div
-              className="team-1 background-header"
-              style={{
-                backgroundImage: `url(${bg})`,
-                padding: 0
-              }}
-            >
-              <BlurryNavbar />
+      <LangContext.Consumer>
+        {({ lang }) => {
+          return (
+            <>
+              <div className="cd-section" id="projects">
+                {/* <ColoredNavbar /> */}
+                {/* ********* PROJECTS 2 ********* */}
+                <div
+                  className="project-raised broken-white"
+                  // style={{ backgroundColor: "#D4D4D4" }}
+                >
+                  <div
+                    className="team-1 background-header"
+                    style={{
+                      backgroundImage: `url(${bg})`,
+                      padding: 0
+                    }}
+                  >
+                    <BlurryNavbar />
 
-              <div className="title title-header">Legalitas</div>
-            </div>
-            {/* <DarkNavbar /> */}
-            <Container
-              className="center"
-              style={{
-                height: "65vh",
-                minWidth: "100vw",
-                backgroundSize: "cover",
-                backgroundImage: `url(${bglegalitas})`
-              }}
-            >
-              {/* <Row>
+                    <div className="title title-header">
+                      {lang.Landing.Legality.header}
+                    </div>
+                  </div>
+                  {/* <DarkNavbar /> */}
+                  <Container
+                    className="center"
+                    style={{
+                      height: "65vh",
+                      minWidth: "100vw",
+                      backgroundSize: "cover",
+                      backgroundImage: `url(${bglegalitas})`
+                    }}
+                  >
+                    {/* <Row>
                 <Col className="ml-auto mr-auto text-center" lg="8">
                   <h2
                     className="title font-black"
@@ -135,172 +125,204 @@ class Projects extends React.Component {
                 </Col>
               </Row> */}
 
-              <TabContent
-                className="tab-space"
-                activeTab={"project" + this.state.activeTab}
-              >
-                <TabPane tabId="project1" style={{ height: "200px" }}>
-                  <Col className="ml-auto mr-auto text-center mt-4" md="8">
-                    <h2 className="title font-black">BAPPEBTI</h2>
-                    <p className="description mb-5 font-black">
-                      {this.state.content[0].bappebti}
-                    </p>
-                  </Col>
-                </TabPane>
-                <TabPane tabId="project2" style={{ height: "200px" }}>
-                  <Col className="ml-auto mr-auto text-center mt-4" md="8">
-                    <p className="description mb-5 font-black">
-                      <h2 className="title font-black">
-                        Bursa Berjangka Jakarta ( BBJ )
-                      </h2>
-                      {this.state.content[1].jfx}
-                    </p>
-                  </Col>
-                </TabPane>
-                <TabPane tabId="project3" style={{ height: "200px" }}>
-                  <Col className="ml-auto mr-auto text-center mt-4" md="8">
-                    <p className="description mb-5 font-black">
-                      <h2 className="title font-black">
-                        Kliring Berjangka Indonesia ( KBI )
-                      </h2>
-                      {this.state.content[2].kbi}
-                    </p>
-                  </Col>
-                </TabPane>
-                <TabPane tabId="project4" style={{ height: "200px" }}>
-                  <Col className="ml-auto mr-auto text-center mt-4" md="8">
-                    <h2 className="title font-black">
-                      ICH (Indonesia Clearing House)
-                    </h2>
-                    <p className="description mb-5 font-black">
-                      {this.state.content[3].ich}
-                    </p>
-                  </Col>
-                </TabPane>
-                <TabPane tabId="project5" style={{ height: "200px" }}>
-                  <Col className="ml-auto mr-auto text-center mt-4" md="8">
-                    <h2 className="title font-black">
-                      Bursa Komoditi dan Derivatif Indonesia (BKDI)/ (ICDX)
-                    </h2>
-                    <p className="description mb-5 font-black">
-                      {this.state.content[4].icdx}
-                    </p>
-                  </Col>
-                </TabPane>
-              </TabContent>
+                    <TabContent
+                      className="tab-space"
+                      activeTab={"project" + this.state.activeTab}
+                    >
+                      <TabPane tabId="project1" style={{ height: "200px" }}>
+                        <Col
+                          className="ml-auto mr-auto text-center mt-4"
+                          md="8"
+                        >
+                          <h2 className="title font-black">
+                            {lang.Landing.Legality.content[0].title}
+                          </h2>
+                          <p className="description mb-5 font-black">
+                            {/* {this.state.content[0].bappebti} */}
+                            {lang.Landing.Legality.content[0].content}
+                          </p>
+                        </Col>
+                      </TabPane>
+                      <TabPane tabId="project2" style={{ height: "200px" }}>
+                        <Col
+                          className="ml-auto mr-auto text-center mt-4"
+                          md="8"
+                        >
+                          <p className="description mb-5 font-black">
+                            <h2 className="title font-black">
+                              {lang.Landing.Legality.content[1].title}
+                            </h2>
+                            {lang.Landing.Legality.content[1].content}
+                          </p>
+                        </Col>
+                      </TabPane>
+                      <TabPane tabId="project3" style={{ height: "200px" }}>
+                        <Col
+                          className="ml-auto mr-auto text-center mt-4"
+                          md="8"
+                        >
+                          <p className="description mb-5 font-black">
+                            <h2 className="title font-black">
+                              {lang.Landing.Legality.content[2].title}
+                            </h2>
+                            {lang.Landing.Legality.content[2].content}
+                          </p>
+                        </Col>
+                      </TabPane>
+                      <TabPane tabId="project4" style={{ height: "200px" }}>
+                        <Col
+                          className="ml-auto mr-auto text-center mt-4"
+                          md="8"
+                        >
+                          <h2 className="title font-black">
+                            {lang.Landing.Legality.content[3].title}
+                          </h2>
+                          <p className="description mb-5 font-black">
+                            {lang.Landing.Legality.content[3].content}
+                          </p>
+                        </Col>
+                      </TabPane>
+                      <TabPane tabId="project5" style={{ height: "200px" }}>
+                        <Col
+                          className="ml-auto mr-auto text-center mt-4"
+                          md="8"
+                        >
+                          <h2 className="title font-black">
+                            {lang.Landing.Legality.content[4].title}
+                          </h2>
+                          <p className="description mb-5 font-black">
+                            {/* {this.state.content[4].icdx} */}
+                            {lang.Landing.Legality.content[4].content}
+                          </p>
+                        </Col>
+                      </TabPane>
+                    </TabContent>
 
-              <Nav
-                className="nav-pills-info nav-pills-icons nav-pills-lg"
-                pills
-                role="tablist"
-                // style={{marginTop:"50px"}}
-              >
-                <NavItem className="m-auto">
-                  <ScrollAnimation
-                    animateIn="fadeInUp"
-                    animateOut="fadeOutDown"
-                  >
-                    <img
-                      src={
-                        this.state.activeTab === "1"
-                          ? require('"../../assets/img/colored-bappebti.png')
-                          : require('"../../assets/img/grey-bappebti.png')
-                      }
-                      width={this.state.activeTab === "1" ? "150" : "150"}
-                      auto="auto"
-                      className={this.state.activeTab === "1" ? "active" : ""}
-                      onClick={() => {
-                        this.toggle("1");
-                      }}
-                    />
-                  </ScrollAnimation>
-                </NavItem>
-                <NavItem className="m-auto">
-                  <ScrollAnimation
-                    animateIn="fadeInUp"
-                    animateOut="fadeOutDown"
-                  >
-                    <img
-                      src={
-                        this.state.activeTab === "2"
-                          ? require('"../../assets/img/colored-jfx.png')
-                          : require('"../../assets/img/grey-jfx.png')
-                      }
-                      width={this.state.activeTab === "2" ? "150" : "150"}
-                      auto="auto"
-                      className={this.state.activeTab === "2" ? "active" : ""}
-                      onClick={() => {
-                        this.toggle("2");
-                      }}
-                    />
-                  </ScrollAnimation>
-                </NavItem>
-                <NavItem className="m-auto">
-                  <ScrollAnimation
-                    animateIn="fadeInUp"
-                    animateOut="fadeOutDown"
-                  >
-                    <img
-                      src={
-                        this.state.activeTab === "3"
-                          ? require('"../../assets/img/colored-kbi.png')
-                          : require('"../../assets/img/grey-kbi.png')
-                      }
-                      width={this.state.activeTab === "3" ? "150" : "150"}
-                      auto="auto"
-                      className={this.state.activeTab === "3" ? "active" : ""}
-                      onClick={() => {
-                        this.toggle("3");
-                      }}
-                    />
-                  </ScrollAnimation>
-                </NavItem>
-                <NavItem className="m-auto">
-                  <ScrollAnimation
-                    animateIn="fadeInUp"
-                    animateOut="fadeOutDown"
-                  >
-                    <img
-                      src={
-                        this.state.activeTab === "4"
-                          ? require('"../../assets/img/colored-ich.png')
-                          : require('"../../assets/img/grey-ich.png')
-                      }
-                      width={this.state.activeTab === "4" ? "150" : "150"}
-                      auto="auto"
-                      className={this.state.activeTab === "4" ? "active" : ""}
-                      onClick={() => {
-                        this.toggle("4");
-                      }}
-                    />
-                  </ScrollAnimation>
-                </NavItem>
-                <NavItem className="m-auto">
-                  <ScrollAnimation
-                    animateIn="fadeInUp"
-                    animateOut="fadeOutDown"
-                  >
-                    <img
-                      src={
-                        this.state.activeTab === "5"
-                          ? require('"../../assets/img/colored-icdx.png')
-                          : require('"../../assets/img/grey-icdx.png')
-                      }
-                      width={this.state.activeTab === "5" ? "150" : "150"}
-                      auto="auto"
-                      className={this.state.activeTab === "5" ? "active" : ""}
-                      onClick={() => {
-                        this.toggle("5");
-                      }}
-                    />
-                  </ScrollAnimation>
-                </NavItem>
-              </Nav>
-            </Container>
-          </div>
-          {/* ********* END PROJECTS 2 ********* */}
-        </div>{" "}
-      </>
+                    <Nav
+                      className="nav-pills-info nav-pills-icons nav-pills-lg"
+                      pills
+                      role="tablist"
+                      // style={{marginTop:"50px"}}
+                    >
+                      <NavItem className="m-auto">
+                        <ScrollAnimation
+                          animateIn="fadeInUp"
+                          animateOut="fadeOutDown"
+                        >
+                          <img
+                            src={
+                              this.state.activeTab === "1"
+                                ? require('"../../assets/img/colored-bappebti.png')
+                                : require('"../../assets/img/grey-bappebti.png')
+                            }
+                            width={this.state.activeTab === "1" ? "150" : "150"}
+                            auto="auto"
+                            className={
+                              this.state.activeTab === "1" ? "active" : ""
+                            }
+                            onClick={() => {
+                              this.toggle("1");
+                            }}
+                          />
+                        </ScrollAnimation>
+                      </NavItem>
+                      <NavItem className="m-auto">
+                        <ScrollAnimation
+                          animateIn="fadeInUp"
+                          animateOut="fadeOutDown"
+                        >
+                          <img
+                            src={
+                              this.state.activeTab === "2"
+                                ? require('"../../assets/img/colored-jfx.png')
+                                : require('"../../assets/img/grey-jfx.png')
+                            }
+                            width={this.state.activeTab === "2" ? "150" : "150"}
+                            auto="auto"
+                            className={
+                              this.state.activeTab === "2" ? "active" : ""
+                            }
+                            onClick={() => {
+                              this.toggle("2");
+                            }}
+                          />
+                        </ScrollAnimation>
+                      </NavItem>
+                      <NavItem className="m-auto">
+                        <ScrollAnimation
+                          animateIn="fadeInUp"
+                          animateOut="fadeOutDown"
+                        >
+                          <img
+                            src={
+                              this.state.activeTab === "3"
+                                ? require('"../../assets/img/colored-kbi.png')
+                                : require('"../../assets/img/grey-kbi.png')
+                            }
+                            width={this.state.activeTab === "3" ? "150" : "150"}
+                            auto="auto"
+                            className={
+                              this.state.activeTab === "3" ? "active" : ""
+                            }
+                            onClick={() => {
+                              this.toggle("3");
+                            }}
+                          />
+                        </ScrollAnimation>
+                      </NavItem>
+                      <NavItem className="m-auto">
+                        <ScrollAnimation
+                          animateIn="fadeInUp"
+                          animateOut="fadeOutDown"
+                        >
+                          <img
+                            src={
+                              this.state.activeTab === "4"
+                                ? require('"../../assets/img/colored-ich.png')
+                                : require('"../../assets/img/grey-ich.png')
+                            }
+                            width={this.state.activeTab === "4" ? "150" : "150"}
+                            auto="auto"
+                            className={
+                              this.state.activeTab === "4" ? "active" : ""
+                            }
+                            onClick={() => {
+                              this.toggle("4");
+                            }}
+                          />
+                        </ScrollAnimation>
+                      </NavItem>
+                      <NavItem className="m-auto">
+                        <ScrollAnimation
+                          animateIn="fadeInUp"
+                          animateOut="fadeOutDown"
+                        >
+                          <img
+                            src={
+                              this.state.activeTab === "5"
+                                ? require('"../../assets/img/colored-icdx.png')
+                                : require('"../../assets/img/grey-icdx.png')
+                            }
+                            width={this.state.activeTab === "5" ? "150" : "150"}
+                            auto="auto"
+                            className={
+                              this.state.activeTab === "5" ? "active" : ""
+                            }
+                            onClick={() => {
+                              this.toggle("5");
+                            }}
+                          />
+                        </ScrollAnimation>
+                      </NavItem>
+                    </Nav>
+                  </Container>
+                </div>
+                {/* ********* END PROJECTS 2 ********* */}
+              </div>{" "}
+            </>
+          );
+        }}
+      </LangContext.Consumer>
     );
   }
 }

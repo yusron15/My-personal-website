@@ -33,6 +33,8 @@ import {
   Row,
   Col
 } from "reactstrap";
+import { LangContext } from "../MyContext";
+
 import ScrollAnimation from "react-animate-on-scroll";
 import "../../assets/css/main.css";
 
@@ -51,6 +53,9 @@ class Pricing extends React.Component {
   };
   render() {
     return (
+      <LangContext.Consumer>
+      {({ lang }) => {
+        return (
       <>
         <div className="cd-section" id="pricing">
           {/* *** PRICING 3 *** */}
@@ -66,7 +71,8 @@ class Pricing extends React.Component {
                     className="title"
                     style={{ textAlign: "left", fontSize: 42, color: "white" }}
                   >
-                    Tipe Akun
+                    {/* Tipe Akun */}
+                    {lang.Landing.Pricing.title}
                   </h2>
                   <h4
                     className="description"
@@ -77,8 +83,8 @@ class Pricing extends React.Component {
                     }}
                     style={{ padding: "0 20px 0 0", color: "white" }}
                   >
-                    Kini Anda dapat memilih tipe akun sesuai dengan karakter
-                    trading anda.
+                    {lang.Landing.Pricing.subtitle}
+
                   </h4>
                 </Col>
               </Row>
@@ -113,7 +119,8 @@ class Pricing extends React.Component {
                                 textAlign: "center"
                               }}
                             >
-                              Akun Demo
+                    {lang.Landing.Pricing.card[0][0]}
+                             
                             </CardTitle>
                             <CardTitle
                               tag="h1"
@@ -124,7 +131,8 @@ class Pricing extends React.Component {
                                 textAlign: "center"
                               }}
                             >
-                              FREE
+                    {lang.Landing.Pricing.card[0][1]}
+
                             </CardTitle>
                             <div style={{ marginTop: 10, textAlign: "center" }}>
                               <span
@@ -133,7 +141,8 @@ class Pricing extends React.Component {
                                   textAlign: "center"
                                 }}
                               >
-                                Tidak Ada Deposit
+                    {lang.Landing.Pricing.card[0][2]}
+
                               </span>
                             </div>
                           </CardHeader>
@@ -170,7 +179,8 @@ class Pricing extends React.Component {
                                   fontSize: 20
                                 }}
                               >
-                                -
+                    {lang.Landing.Pricing.card[0][3]}
+                                
                               </span>
                             </div>
                             <div
@@ -187,7 +197,8 @@ class Pricing extends React.Component {
                                   fontSize: 20
                                 }}
                               >
-                                -
+                    {lang.Landing.Pricing.card[0][4]}
+                                
                               </span>
                             </div>
                             <div
@@ -199,7 +210,7 @@ class Pricing extends React.Component {
                                 margin: "20px 0 27px 0"
                               }}
                             >
-                              Pro I Trader & Topgrowth Trader (MT4)
+                    {lang.Landing.Pricing.card[0][5]}
                             </div>
 
                             <Button
@@ -209,7 +220,8 @@ class Pricing extends React.Component {
                               block
                               style={{ height: 50, fontSize: 18 }}
                             >
-                              Daftar
+                    {lang.Landing.Pricing.card[0][6]}
+                            
                             </Button>
                           </CardBody>
                         </Card>
@@ -241,7 +253,7 @@ class Pricing extends React.Component {
                                 color: "white"
                               }}
                             >
-                              Akun Mini
+                    {lang.Landing.Pricing.card[1][0]}
                             </CardTitle>
                             <CardTitle
                               tag="h1"
@@ -251,7 +263,7 @@ class Pricing extends React.Component {
                                 fontSize: 50
                               }}
                             >
-                              $500
+                    {lang.Landing.Pricing.card[1][1]}
                             </CardTitle>
                             <div style={{ marginTop: 10, textAlign: "center" }}>
                               <span
@@ -260,7 +272,7 @@ class Pricing extends React.Component {
                                   textAlign: "center"
                                 }}
                               >
-                                initial deposit
+                    {lang.Landing.Pricing.card[1][2]}
                               </span>
                             </div>
                           </CardHeader>
@@ -298,17 +310,11 @@ class Pricing extends React.Component {
                                     fontSize: 14
                                   }}
                                 >
-                                  Minimum &nbsp;
+                    {lang.Landing.Pricing.card[1][3]}
+                                  {/* Minimum &nbsp; */}
                                 </span>
                               </div>
-                              <span
-                                style={{
-                                  color: "white",
-                                  fontSize: 20
-                                }}
-                              >
-                                0.1 Lot
-                              </span>
+                              
                             </div>
                             <div
                               className="item-stripped opacity"
@@ -325,17 +331,11 @@ class Pricing extends React.Component {
                                     fontSize: 14
                                   }}
                                 >
-                                  Maximum &nbsp;
+                    {lang.Landing.Pricing.card[1][4]}
+                         
                                 </span>
                               </div>
-                              <span
-                                style={{
-                                  color: "white",
-                                  fontSize: 20
-                                }}
-                              >
-                                {` 5.0 Lot`}
-                              </span>
+                            
                             </div>
                             <div
                               style={{
@@ -346,7 +346,8 @@ class Pricing extends React.Component {
                                 margin: "20px 0 27px 0"
                               }}
                             >
-                              Topgrowth Trader (MT4)
+                    {lang.Landing.Pricing.card[1][5]}
+                         
                             </div>
 
                             <Button
@@ -356,7 +357,7 @@ class Pricing extends React.Component {
                               block
                               style={{ height: 50, fontSize: 18 }}
                             >
-                              Daftar
+                    {lang.Landing.Pricing.card[1][6]}
                             </Button>
                           </CardBody>
                         </Card>
@@ -388,7 +389,8 @@ class Pricing extends React.Component {
                                 textAlign: "center"
                               }}
                             >
-                              Akun Reguler
+                    {lang.Landing.Pricing.card[2][0]}
+                  
                             </CardTitle>
                             <CardTitle
                               tag="h1"
@@ -399,7 +401,8 @@ class Pricing extends React.Component {
                                 textAlign: "center"
                               }}
                             >
-                              $ 10,000
+                    {lang.Landing.Pricing.card[2][1]}
+                       
                             </CardTitle>
                             <div style={{ marginTop: 10, textAlign: "center" }}>
                               <span
@@ -408,7 +411,8 @@ class Pricing extends React.Component {
                                   textAlign: "center"
                                 }}
                               >
-                                initial deposit
+                    {lang.Landing.Pricing.card[2][2]}
+                               
                               </span>
                             </div>
                           </CardHeader>
@@ -446,17 +450,11 @@ class Pricing extends React.Component {
                                     fontSize: 14
                                   }}
                                 >
-                                  Minimum &nbsp;
+                    {lang.Landing.Pricing.card[2][3]}
+                              
                                 </span>
                               </div>
-                              <span
-                                style={{
-                                  color: "white",
-                                  fontSize: 20
-                                }}
-                              >
-                                1.0 Lot
-                              </span>
+                           
                             </div>
                             <div
                               className="item-stripped opacity"
@@ -473,17 +471,11 @@ class Pricing extends React.Component {
                                     fontSize: 14
                                   }}
                                 >
-                                  Maximum &nbsp;
+                    {lang.Landing.Pricing.card[2][4]}
+                                  
                                 </span>
                               </div>
-                              <span
-                                style={{
-                                  color: "white",
-                                  fontSize: 20
-                                }}
-                              >
-                                50.0 Lot
-                              </span>
+                            
                             </div>
                             <div
                               style={{
@@ -493,7 +485,8 @@ class Pricing extends React.Component {
                                 margin: "20px 0 27px 0"
                               }}
                             >
-                              Pro I Trader & Topgrowth Trader (MT4)
+                    {lang.Landing.Pricing.card[2][5]}
+                         
                             </div>
 
                             <Button
@@ -503,7 +496,8 @@ class Pricing extends React.Component {
                               block
                               style={{ height: 50, fontSize: 18 }}
                             >
-                              Daftar
+                    {lang.Landing.Pricing.card[2][6]}
+                              
                             </Button>
                           </CardBody>
                         </Card>
@@ -518,7 +512,11 @@ class Pricing extends React.Component {
           {/* *** END PRICING 3 *** */}
         </div>
       </>
-    );
+   
+   );
+  }}
+</LangContext.Consumer>
+   );
   }
 }
 

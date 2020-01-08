@@ -28,6 +28,7 @@ import {
   Col
 } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
+import { LangContext } from "../MyContext";
 
 class VisiMisi extends React.Component {
   state = {
@@ -42,51 +43,56 @@ class VisiMisi extends React.Component {
   };
   render() {
     return (
-      <>
-        <div className="cd-section" id="projects">
-          <div
-            className="projects-3 header-filter"
-            style={{
-              backgroundImage:
-                "url(" + require("assets/img/visimisi.png") + ")",
-              backgroundSize: "cover",
-              backgroundColor: "rgba(52, 52, 52, 0.8)"
-            }}
-          >
-            <ScrollAnimation
-              animateIn="fadeInRight"
-              delay={300}
-              animateOut="fadeOut"
-            >
-              <div style={{ backgroundColor: "rgba(0, 0, 0, 0.66)" }}>
-                <Container>
-                  <div className="space-50" />
-                  <Row>
-                    <Col md="6">
-                      <ScrollAnimation
-                        animateIn="fadeInRight"
-                        delay={900}
-                        animateOut="fadeOut"
-                      >
-                        <h2 className="title">VISI KAMI</h2>
-                        <p>
-                          Menjadi perusahaan yang unggul dalam industri
-                          perdagangan berjangka melalui pelayanan berkualitas
-                          dan program kerja yang inovatif demi menciptakan
-                          hubungan kerjasama yang ideal dengan para nasabah,
-                          baik dalam lingkup lokal maupun global.
-                        </p>
-                      </ScrollAnimation>
-                    </Col>
-                    <Col md="6">
-                      <ScrollAnimation
-                        animateIn="fadeInRight"
-                        delay={1200}
-                        animateOut="fadeOut"
-                      >
-                        <h2 className="title">MISI KAMI</h2>
-                        <p>
-                          Menyediakan fasilitas transaksi terbaik dengan beragam
+      <LangContext.Consumer>
+        {({ lang }) => {
+          return (
+            <>
+              <div className="cd-section" id="projects">
+                <div
+                  className="projects-3 header-filter"
+                  style={{
+                    backgroundImage:
+                      "url(" + require("assets/img/visimisi.png") + ")",
+                    backgroundSize: "cover",
+                    backgroundColor: "rgba(52, 52, 52, 0.8)"
+                  }}
+                >
+                  <ScrollAnimation
+                    animateIn="fadeInRight"
+                    delay={300}
+                    animateOut="fadeOut"
+                  >
+                    <div style={{ backgroundColor: "rgba(0, 0, 0, 0.66)" }}>
+                      <Container>
+                        <div className="space-50" />
+                        <Row>
+                          <Col md="6">
+                            <ScrollAnimation
+                              animateIn="fadeInRight"
+                              delay={900}
+                              animateOut="fadeOut"
+                            >
+                              <h2 className="title">
+                                {lang.tentangkami.visi.title}
+                              </h2>
+                              <p style={{ textAlign: "justify" }}>
+                                {lang.tentangkami.visi.content}
+                              </p>
+                            </ScrollAnimation>
+                          </Col>
+                          <Col md="6">
+                            <ScrollAnimation
+                              animateIn="fadeInRight"
+                              delay={1200}
+                              animateOut="fadeOut"
+                            >
+                              <h2 className="title">
+                                {lang.tentangkami.misi.title}
+                              </h2>
+                              <p style={{ textAlign: "justify" }}>
+                                {lang.tentangkami.misi.content}
+
+                                {/* Menyediakan fasilitas transaksi terbaik dengan beragam
                           produk investasi serta layanan informasi pasar
                           keuangan terkini dan terpercaya
                           <br /> <br />
@@ -99,19 +105,22 @@ class VisiMisi extends React.Component {
                           edukasi berkesinambungan
                           <br /> <br />
                           Senantiasa meningkatkan dan mengembangkan kualitas
-                          sumber daya manusia yang profesional
-                        </p>
-                      </ScrollAnimation>
-                    </Col>
-                  </Row>
+                          sumber daya manusia yang profesional */}
+                              </p>
+                            </ScrollAnimation>
+                          </Col>
+                        </Row>
 
-                  <div className="space-50" />
-                </Container>
-              </div>
-            </ScrollAnimation>
-          </div>
-        </div>{" "}
-      </>
+                        <div className="space-50" />
+                      </Container>
+                    </div>
+                  </ScrollAnimation>
+                </div>
+              </div>{" "}
+            </>
+          );
+        }}
+      </LangContext.Consumer>
     );
   }
 }

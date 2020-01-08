@@ -1,23 +1,8 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 // nodejs library that concatenates classes
 import classnames from "classnames";
 // reactstrap components
+import { Link } from "react-router-dom";
 import {
   Button,
   Card,
@@ -190,26 +175,16 @@ class RegisterPage extends React.Component {
                             </CardFooter>
                             <div className="pull-left ml-3 mb-3">
                               <h6>
-                                <a
-                                  className="link footer-link"
-                                  href="#pablo"
-                                  onClick={e => e.preventDefault()}
-                                  style={{ color: "white" }}
-                                >
+                                <Link to="/register" style={{ color: "white" }}>
                                   Create Account
-                                </a>
+                                </Link>
                               </h6>
                             </div>
                             <div className="pull-right mr-3 mb-3">
                               <h6>
-                                <a
-                                  className="link footer-link"
-                                  href="#pablo"
-                                  onClick={e => e.preventDefault()}
-                                  style={{ color: "white" }}
-                                >
+                                <Link to="/contact" style={{ color: "white" }}>
                                   Need Help?
-                                </a>
+                                </Link>
                               </h6>
                             </div>
                           </Form>

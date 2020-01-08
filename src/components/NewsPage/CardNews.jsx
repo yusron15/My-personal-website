@@ -75,9 +75,9 @@ class CardNews extends React.Component {
             src={image}
             alt="Card image cap"
           />
-          <div className="broken-white font-black">
+          <div className=" font-black">
             <CardBody
-              className="broken-white"
+              // className="broken-white"
               style={{
                 textAlign: "left"
                 // backgroundColor: "#D4D4D4"

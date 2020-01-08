@@ -33,6 +33,7 @@ import {
   Redirect,
   Router
 } from "react-router-dom";
+import bg from "../../assets/img/header-newspage.png";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import Content from "../../components/NewsPage/Content.jsx";
@@ -72,16 +73,26 @@ class NewsPage extends React.Component {
       // </>
       <>
         <div style={{ backgroundColor: "#1D1E1F" }}>
-          <BlurryNavbar />
+          <div
+            className="team-1 background-header"
+            style={{
+              backgroundImage: `url(${bg})`,
+              padding: 0
+            }}
+          >
+            <BlurryNavbar />
+
+            <div className="title title-header">Newspage</div>
+          </div>
+          {/* <BlurryNavbar /> */}
           <ColoredNavbar location={{ ...this.props.location }} />
-          <div className="space-50" />
           <Nav
             className="nav-pills-info nav-pills-icons nav-pills-lg"
             pills
             role="tablist"
             style={{
               backgroundColor: "#1D1E1F",
-              paddingTop: "60px",
+              paddingTop: "10px",
               justifyContent: "center",
               paddingBottom: "20px"
             }}

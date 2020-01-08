@@ -93,28 +93,10 @@ class Blogs extends React.Component {
                           </a>
                         </div>
                       </Card> */}
-                      <Select
-                        value="index "
-                        options={[
-                          {
-                            label: "Job Example",
-                            value: "Job Example"
-                          },
-                          {
-                            label: "Job Example",
-                            value: "Job Example"
-                          },
-                          {
-                            label: "Job Example",
-                            value: "Job Example"
-                          }
-                        ]}
-                        value={this.state.dataSelect}
-                        onChange={async data => {
-                          await this.setState({
-                            dataSelect: data
-                          });
-                          let dataSelect = [
+                      <div style={{ maxHeight: "20px" }}>
+                        <Select
+                          value="index "
+                          options={[
                             {
                               label: "Job Example",
                               value: "Job Example"
@@ -127,12 +109,32 @@ class Blogs extends React.Component {
                               label: "Job Example",
                               value: "Job Example"
                             }
-                          ];
-                          return dataSelect.filter(
-                            item => this.state.dataSelect.value === item.value
-                          )[0];
-                        }}
-                      />
+                          ]}
+                          value={this.state.dataSelect}
+                          onChange={async data => {
+                            await this.setState({
+                              dataSelect: data
+                            });
+                            let dataSelect = [
+                              {
+                                label: "Job Example",
+                                value: "Job Example"
+                              },
+                              {
+                                label: "Job Example",
+                                value: "Job Example"
+                              },
+                              {
+                                label: "Job Example",
+                                value: "Job Example"
+                              }
+                            ];
+                            return dataSelect.filter(
+                              item => this.state.dataSelect.value === item.value
+                            )[0];
+                          }}
+                        />
+                      </div>
                     </Col>
                     <Col lg="4" xs="12">
                       {/* <Card className="card-blog card-plain">

@@ -1,22 +1,7 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 // ReactJS plugin for a nice carousel
 import Slick from "react-slick";
+import { LangContext } from "../MyContext";
 
 // reactstrap components
 import {
@@ -233,314 +218,310 @@ class Testimonials extends React.Component {
   };
   render() {
     return (
-      <>
-        <div className="cd-section" id="testimonials">
-          {/* ********* TESTIMONIALS 4 ********* */}
-          <div
-            className="testimonials-4"
-            style={{
-              backgroundImage: `url(${Benefit})`,
-              backgroundSize: "cover"
-            }}
-          >
-            <Container fluid>
-              <Row>
-                <Col className="ml-auto mr-auto" md="9">
-                  <h2 className="title">
-                    Kenapa bertransaksi di Topgrowth Futures.
-                  </h2>
-                </Col>
-              </Row>
-              <Row md="12" className="justify-content-center">
-                <Col md="3">
-                  <ScrollAnimation
-                    delay={100}
-                    offset={200}
-                    animateIn="fadeInUp"
-                    animateOut="fadeOut"
-                  >
-                    <div onMouseEnter={() => this.state.bounce}>
-                      <div
-                        className="card-benefit text-benefit"
-                        // onMouseEnter={this.handleBiayaEnter}
-                        // onMouseLeave={this.handleBiayaLeave}
-                      >
-                        <div
-                          className="info text-left"
-                          // style={styles.fadeInUp}
-                          style={{
-                            backgroundColor: "rgba(112, 112, 112, 0.19)",
-                            color: "white",
-                            minHeight: "270px",
-                            minWidth: "200px",
-                            borderRadius: "10px"
-                          }}
+      <LangContext.Consumer>
+        {({ lang }) => {
+          return (
+            <>
+              <div className="cd-section" id="testimonials">
+                {/* ********* TESTIMONIALS 4 ********* */}
+                <div
+                  className="testimonials-4"
+                  style={{
+                    backgroundImage: `url(${Benefit})`,
+                    backgroundSize: "cover"
+                  }}
+                >
+                  <Container fluid>
+                    <Row>
+                      <Col className="ml-auto mr-auto" md="9">
+                        <h2 className="title">{lang.Landing.Benefit.title}</h2>
+                      </Col>
+                    </Row>
+                    <Row md="12" className="justify-content-center">
+                      <Col md="3">
+                        <ScrollAnimation
+                          delay={100}
+                          offset={200}
+                          animateIn="fadeInUp"
+                          animateOut="fadeOut"
                         >
-                          {/* <p className="title text-benefit" style={{ fontSize: "1.4rem" }}> */}
-                          {/* <img onMouseEnter style={{ marginRight: "5%" }} />
-                           */}
+                          <div onMouseEnter={() => this.state.bounce}>
+                            <div
+                              className="card-benefit text-benefit"
+                              // onMouseEnter={this.handleBiayaEnter}
+                              // onMouseLeave={this.handleBiayaLeave}
+                            >
+                              <div
+                                className="info text-left"
+                                // style={styles.fadeInUp}
+                                style={{
+                                  backgroundColor: "rgba(112, 112, 112, 0.19)",
+                                  color: "white",
+                                  minHeight: "270px",
+                                  minWidth: "200px",
+                                  borderRadius: "10px"
+                                }}
+                              >
+                                {/* <p className="title text-benefit" style={{ fontSize: "1.4rem" }}> */}
+                                {/* <img onMouseEnter style={{ marginRight: "5%" }} />
+                                 */}
+                                <div
+                                  style={{
+                                    fontSize: "1.4rem",
+                                    fontWeight: "bold",
+                                    margin: "30px 0 30px 10px"
+                                  }}
+                                >
+                                  <img
+                                    src={this.state.biayaImg}
+                                    style={{ marginRight: "10px" }}
+                                  />
+                                  {lang.Landing.Benefit.content[0].title}
+                                </div>
+                                <div style={{ marginLeft: "10px" }}>
+                                  {lang.Landing.Benefit.content[0].subtitle}
+                                </div>
+                                <div className="author"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </ScrollAnimation>
+                      </Col>
+                      <Col md="3">
+                        <ScrollAnimation
+                          delay={200}
+                          offset={200}
+                          animateIn="fadeInUp"
+                          animateOut="fadeOut"
+                        >
                           <div
-                            style={{
-                              fontSize: "1.4rem",
-                              fontWeight: "bold",
-                              margin: "30px 0 30px 10px"
-                            }}
+                            className="card-benefit text-benefit"
+                            // onMouseEnter={this.handleLegalitasEnter}
+                            // onMouseLeave={this.handleLegalitasLeave}
                           >
-                            <img
-                              src={this.state.biayaImg}
-                              style={{ marginRight: "10px" }}
-                            />
-                            Biaya Rendah
+                            <div
+                              className="info text-left"
+                              style={{
+                                backgroundColor: "rgba(112, 112, 112, 0.19)",
+                                color: "white",
+                                minHeight: "270px",
+                                minWidth: "200px",
+                                borderRadius: "10px"
+                              }}
+                            >
+                              <div
+                                style={{
+                                  fontSize: "1.4rem",
+                                  fontWeight: "bold",
+                                  margin: "30px 0 30px 10px"
+                                }}
+                              >
+                                <img
+                                  src={this.state.legalitasImg}
+                                  style={{ marginRight: "5%" }}
+                                />
+                                {lang.Landing.Benefit.content[1].title}
+                              </div>
+
+                              <div style={{ marginLeft: "10px" }}>
+                                {lang.Landing.Benefit.content[1].subtitle}
+                              </div>
+                              <div className="author"></div>
+                            </div>
                           </div>
-                          <div style={{ marginLeft: "10px" }}>
-                            Memungkinkan nasabah untuk memaksimalkan keuntungan
-                            serta menerapkan money management
+                        </ScrollAnimation>
+                      </Col>
+                      <Col md="3">
+                        <ScrollAnimation
+                          delay={300}
+                          offset={200}
+                          animateIn="fadeInUp"
+                          animateOut="fadeOut"
+                        >
+                          <div
+                            className="card-benefit text-benefit"
+                            // onMouseEnter={this.handleLayananEnter}
+                            // onMouseLeave={this.handleLayananLeave}
+                          >
+                            <div
+                              className="info text-left"
+                              style={{
+                                backgroundColor: "rgba(112, 112, 112, 0.19)",
+                                color: "white",
+                                minHeight: "270px",
+                                minWidth: "200px",
+                                borderRadius: "10px"
+                              }}
+                            >
+                              <div
+                                style={{
+                                  fontSize: "1.4rem",
+                                  fontWeight: "bold",
+                                  margin: "30px 0 30px 10px"
+                                }}
+                              >
+                                <img
+                                  src={this.state.layananImg}
+                                  style={{ marginRight: "5%" }}
+                                />
+                                {lang.Landing.Benefit.content[2].title}
+                              </div>
+
+                              <div style={{ marginLeft: "10px" }}>
+                                {lang.Landing.Benefit.content[2].subtitle}
+                              </div>
+                              <div className="author"></div>
+                            </div>
                           </div>
-                          <div className="author"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-                </Col>
-                <Col md="3">
-                  <ScrollAnimation
-                    delay={200}
-                    offset={200}
-                    animateIn="fadeInUp"
-                    animateOut="fadeOut"
-                  >
-                    <div
-                      className="card-benefit text-benefit"
-                      // onMouseEnter={this.handleLegalitasEnter}
-                      // onMouseLeave={this.handleLegalitasLeave}
+                        </ScrollAnimation>
+                      </Col>
+                    </Row>
+                    <Row
+                      md="12"
+                      className="justify-content-center"
+                      style={{ marginTop: "20px" }}
                     >
-                      <div
-                        className="info text-left"
-                        style={{
-                          backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          color: "white",
-                          minHeight: "270px",
-                          minWidth: "200px",
-                          borderRadius: "10px"
-                        }}
-                      >
-                        <div
-                          style={{
-                            fontSize: "1.4rem",
-                            fontWeight: "bold",
-                            margin: "30px 0 30px 10px"
-                          }}
+                      <Col md="3">
+                        <ScrollAnimation
+                          delay={100}
+                          offset={200}
+                          animateIn="fadeInUp"
+                          animateOut="fadeOut"
                         >
-                          <img
-                            src={this.state.legalitasImg}
-                            style={{ marginRight: "5%" }}
-                          />
-                          Legalitas Terjamin
-                        </div>
+                          <div
+                            className="card-benefit text-benefit"
+                            // onMouseEnter={this.handleBeritaEnter}
+                            // onMouseLeave={this.handleBeritaLeave}
+                          >
+                            <div
+                              className="info text-left"
+                              style={{
+                                backgroundColor: "rgba(112, 112, 112, 0.19)",
+                                color: "white",
+                                minHeight: "270px",
+                                minWidth: "200px",
+                                borderRadius: "10px"
+                              }}
+                            >
+                              <div
+                                style={{
+                                  fontSize: "1.4rem",
+                                  fontWeight: "bold",
+                                  margin: "30px 0 30px 10px"
+                                }}
+                              >
+                                <img
+                                  src={this.state.beritaImg}
+                                  style={{ marginRight: "5%" }}
+                                />
+                                {lang.Landing.Benefit.content[3].title}
+                              </div>
 
-                        <div style={{ marginLeft: "10px" }}>
-                          Perusahaan pialang berjangka berstandar internasional
-                          yang memiliki izin di Bappebti serta terdaftar sebagai
-                          anggota BBJ, ICDX, KBI, dan ICH
-                        </div>
-                        <div className="author"></div>
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-                </Col>
-                <Col md="3">
-                  <ScrollAnimation
-                    delay={300}
-                    offset={200}
-                    animateIn="fadeInUp"
-                    animateOut="fadeOut"
-                  >
-                    <div
-                      className="card-benefit text-benefit"
-                      // onMouseEnter={this.handleLayananEnter}
-                      // onMouseLeave={this.handleLayananLeave}
-                    >
-                      <div
-                        className="info text-left"
-                        style={{
-                          backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          color: "white",
-                          minHeight: "270px",
-                          minWidth: "200px",
-                          borderRadius: "10px"
-                        }}
-                      >
-                        <div
-                          style={{
-                            fontSize: "1.4rem",
-                            fontWeight: "bold",
-                            margin: "30px 0 30px 10px"
-                          }}
+                              <div style={{ marginLeft: "10px" }}>
+                                {lang.Landing.Benefit.content[3].subtitle}
+                              </div>
+                              <div className="author"></div>
+                            </div>
+                          </div>
+                        </ScrollAnimation>
+                      </Col>
+                      <Col md="3">
+                        <ScrollAnimation
+                          delay={200}
+                          offset={200}
+                          animateIn="fadeInUp"
+                          animateOut="fadeOut"
                         >
-                          <img
-                            src={this.state.layananImg}
-                            style={{ marginRight: "5%" }}
-                          />
-                          Layanan Prima
-                        </div>
+                          <div
+                            className="card-benefit text-benefit"
+                            // onMouseEnter={this.handleRequoteEnter}
+                            // onMouseLeave={this.handleRequoteLeave}
+                          >
+                            <div
+                              className="info text-left"
+                              style={{
+                                backgroundColor: "rgba(112, 112, 112, 0.19)",
+                                color: "white",
+                                minHeight: "270px",
+                                minWidth: "200px",
+                                borderRadius: "10px"
+                              }}
+                            >
+                              <div
+                                style={{
+                                  fontSize: "1.4rem",
+                                  fontWeight: "bold",
+                                  margin: "30px 0 30px 10px"
+                                }}
+                              >
+                                <img
+                                  src={this.state.requoteImg}
+                                  style={{ marginRight: "5%" }}
+                                />
+                                {lang.Landing.Benefit.content[4].title}
+                              </div>
 
-                        <div style={{ marginLeft: "10px" }}>
-                          Memberikan pelayanan terbaik kepada para nasabah,
-                          mulai dari pendidikan nasabah hingga penarikan dana
-                        </div>
-                        <div className="author"></div>
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-                </Col>
-              </Row>
-              <Row
-                md="12"
-                className="justify-content-center"
-                style={{ marginTop: "20px" }}
-              >
-                <Col md="3">
-                  <ScrollAnimation
-                    delay={100}
-                    offset={200}
-                    animateIn="fadeInUp"
-                    animateOut="fadeOut"
-                  >
-                    <div
-                      className="card-benefit text-benefit"
-                      // onMouseEnter={this.handleBeritaEnter}
-                      // onMouseLeave={this.handleBeritaLeave}
-                    >
-                      <div
-                        className="info text-left"
-                        style={{
-                          backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          color: "white",
-                          minHeight: "270px",
-                          minWidth: "200px",
-                          borderRadius: "10px"
-                        }}
-                      >
-                        <div
-                          style={{
-                            fontSize: "1.4rem",
-                            fontWeight: "bold",
-                            margin: "30px 0 30px 10px"
-                          }}
+                              <div style={{ marginLeft: "10px" }}>
+                                {lang.Landing.Benefit.content[4].subtitle}
+                              </div>
+                              <div className="author"></div>
+                            </div>
+                          </div>
+                        </ScrollAnimation>
+                      </Col>
+                      <Col md="3">
+                        <ScrollAnimation
+                          delay={300}
+                          offset={200}
+                          animateIn="fadeInUp"
+                          animateOut="fadeOut"
                         >
-                          <img
-                            src={this.state.beritaImg}
-                            style={{ marginRight: "5%" }}
-                          />
-                          Riset & Berita
-                        </div>
+                          <div
+                            className="card-benefit text-benefit"
+                            // onMouseEnter={this.handleSupportEnter}
+                            // onMouseLeave={this.handleSupportLeave}
+                          >
+                            <div
+                              className="info text-left"
+                              style={{
+                                backgroundColor: "rgba(112, 112, 112, 0.19)",
+                                color: "white",
+                                minHeight: "270px",
+                                minWidth: "200px",
+                                borderRadius: "10px"
+                              }}
+                            >
+                              <div
+                                style={{
+                                  fontSize: "1.4rem",
+                                  fontWeight: "bold",
+                                  margin: "30px 0 30px 10px"
+                                }}
+                              >
+                                <img
+                                  src={this.state.supportImg}
+                                  style={{ marginRight: "5%" }}
+                                />
+                                {lang.Landing.Benefit.content[5].title}
+                              </div>
 
-                        <div style={{ marginLeft: "10px" }}>
-                          Dapatkan informasi berita terkini serta analisa
-                          komprehensif setiap harinya di email Anda
-                        </div>
-                        <div className="author"></div>
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-                </Col>
-                <Col md="3">
-                  <ScrollAnimation
-                    delay={200}
-                    offset={200}
-                    animateIn="fadeInUp"
-                    animateOut="fadeOut"
-                  >
-                    <div
-                      className="card-benefit text-benefit"
-                      // onMouseEnter={this.handleRequoteEnter}
-                      // onMouseLeave={this.handleRequoteLeave}
-                    >
-                      <div
-                        className="info text-left"
-                        style={{
-                          backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          color: "white",
-                          minHeight: "270px",
-                          minWidth: "200px",
-                          borderRadius: "10px"
-                        }}
-                      >
-                        <div
-                          style={{
-                            fontSize: "1.4rem",
-                            fontWeight: "bold",
-                            margin: "30px 0 30px 10px"
-                          }}
-                        >
-                          <img
-                            src={this.state.requoteImg}
-                            style={{ marginRight: "5%" }}
-                          />
-                          Tanpa Requote
-                        </div>
-
-                        <div style={{ marginLeft: "10px" }}>
-                          Dapatkan pengalaman bertransaksi tanpa requote dengan
-                          platform unggulan Pro-I Trading
-                        </div>
-                        <div className="author"></div>
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-                </Col>
-                <Col md="3">
-                  <ScrollAnimation
-                    delay={300}
-                    offset={200}
-                    animateIn="fadeInUp"
-                    animateOut="fadeOut"
-                  >
-                    <div
-                      className="card-benefit text-benefit"
-                      // onMouseEnter={this.handleSupportEnter}
-                      // onMouseLeave={this.handleSupportLeave}
-                    >
-                      <div
-                        className="info text-left"
-                        style={{
-                          backgroundColor: "rgba(112, 112, 112, 0.19)",
-                          color: "white",
-                          minHeight: "270px",
-                          minWidth: "200px",
-                          borderRadius: "10px"
-                        }}
-                      >
-                        <div
-                          style={{
-                            fontSize: "1.4rem",
-                            fontWeight: "bold",
-                            margin: "30px 0 30px 10px"
-                          }}
-                        >
-                          <img
-                            src={this.state.supportImg}
-                            style={{ marginRight: "5%" }}
-                          />
-                          Support 24 Jam
-                        </div>
-
-                        <div style={{ marginLeft: "10px" }}>
-                          Kami berkomitmen untuk memberikan pelayanan terbaik
-                          kepada para nasabah mulai dari edukasi nasabah sampai
-                          dengan mudahnya penarikan dana.
-                        </div>
-                        <div className="author"></div>
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-          {/* ********* END TESTIMONIALS 4 ********* */}
-        </div>
-      </>
+                              <div style={{ marginLeft: "10px" }}>
+                                {lang.Landing.Benefit.content[5].subtitle}
+                              </div>
+                              <div className="author"></div>
+                            </div>
+                          </div>
+                        </ScrollAnimation>
+                      </Col>
+                    </Row>
+                  </Container>
+                </div>
+                {/* ********* END TESTIMONIALS 4 ********* */}
+              </div>
+            </>
+          );
+        }}
+      </LangContext.Consumer>
     );
   }
 }

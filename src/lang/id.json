@@ -16,7 +16,7 @@
             ]
         },
         "Feature":{
-            "title":"Trading Forex, Future Index, CFD dan Komoditi Bersama Topgrowth",
+            "title":"Trading Forex, Index Future, CFD dan Komoditi Bersama Topgrowth",
             "subtitle":"Berikut adalah ulasan singkat dari produk - produk yang tersedia untuk Anda.",
             "content":[
                 {"image":"","title":"Foreign Exchange","subtitle":"Forex pasar keuangan yang paling populer di dunia."},
@@ -40,8 +40,14 @@
         },
         "Legality":{
             "header":"Legalitas",
-            "content":{"title":"BAPPPEBTI","content":"BAPPEBTI (Badan Pengawas Perdagangan Berjangka Komoditi) merupakan institusi pemerintah yang berada di bawah naungan Kementerian Perdagangan Republik Indonesia dan bertugas untuk menerbitkan izin usaha baik bagi perusahaan maupun perorangan, membuat peraturan dan tata tertib, melakukan inspeksi dan kontrol terhadap seluruh aktivitas dalam industri pialang berjangka. PT. Topgrowth Futures beroperasi berdasarkan izin dan berada di bawah pengawasan BAPPEBTI, dengan Nomor Izin: No. 300/BAPPEBTI/SI/III/2004.",
-            "image":["image1","image1","image1","image1","image1"]}
+            "content":[
+                {"image":"","title":"BAPPPEBTI","content":"BAPPEBTI (Badan Pengawas Perdagangan Berjangka Komoditi) merupakan institusi pemerintah yang berada di bawah naungan Kementerian Perdagangan Republik Indonesia dan bertugas untuk menerbitkan izin usaha baik bagi perusahaan maupun perorangan, membuat peraturan dan tata tertib, melakukan inspeksi dan kontrol terhadap seluruh aktivitas dalam industri pialang berjangka. PT. Topgrowth Futures beroperasi berdasarkan izin dan berada di bawah pengawasan BAPPEBTI, dengan Nomor Izin: No. 300/BAPPEBTI/SI/III/2004."},
+                {"image":"","title":"Bursa Berjangka Jakarta ( BBJ )","content":"PT. Bursa Berjangka Jakarta (BBJ) merupakan bursa berjangka komoditi pertama di Indonesia yang bertugas menyediakan fasilitas bagi anggota untuk melaksanakan transaksi kontrak-kontrak berjangka. BBJ didirikan pada tanggal 19 Agustus 1999 di Jakarta oleh 29 perusahaan berbentuk Perseroan Terbatas (PT) sesuai PP No 9/99, dan telah memulai perdagangan perdana sejak 15 Desember 2000. PT. Topgrowth Futures merupakan perusahaan pialang berjangka dengan nomor keanggotaan BBJ: SPAB-059/BBJ/01/04."},
+                {"image":"","title":"Kliring Berjangka Indonesia ( KBI )","content":"PT. Kliring Berjangka Indonesia (KBI) adalah perusahaan Badan Usaha Milik Pemerintah (BUMN) yang berfungsi sebagai lembaga Kliring dan Penjaminan berdasarkan keputusan BAPPEBTI dengan nomor No.128/BAPPEBTI/IX/2001. Seluruh penyelesaian transaksi kontrak berjangka yang didaftarkan oleh anggota kliring dilaksanakan oleh KBI. Selain sebagai pialang anggota bursa, PT. Topgrowth Futures juga merupakan anggota dari Kliring Berjangka Indonesia dengan nomor: 21/AK-KBI/III/2004"},
+                {"image":"","title":"ICH (Indonesia Clearing House)","content":"PT. Kliring Berjangka Indonesia (KBI) adalah perusahaan Badan Usaha Milik Pemerintah (BUMN) yang berfungsi sebagai lembaga Kliring dan Penjaminan berdasarkan keputusan BAPPEBTI dengan nomor No.128/BAPPEBTI/IX/2001. Seluruh penyelesaian transaksi kontrak berjangka yang didaftarkan oleh anggota kliring dilaksanakan oleh KBI. Selain sebagai pialang anggota bursa, PT. Topgrowth Futures juga merupakan anggota dari Kliring Berjangka Indonesia dengan nomor: 21/AK-KBI/III/2004"},
+                {"image":"","title":"Bursa Komoditi dan Derivatif Indonesia (BKDI)/ (ICDX)","content":"PT. Bursa Komoditi dan Derivatif Indonesia merupakan bursa berjangka kedua berdiri di Indonesia dan memiliki fungsi menjadi penyedia sarana bagi anggotanya untuk melaksanakan transaksi kontrak berjangka. BKDI mendapatkan izin sebagai bursa dengan No. 26/BAPPEBTI/KP/6/2009, dan telah memulai perdagangan perdana sejak 30 November 2009. PT. Topgrowth Futures adalah perusahaan pialang berjangka anggota dari Bursa Komoditi dan Derivatif Indonesia (BKDI) dengan nomor: 047/SPKB/ICDX/Dir/IX/2010."}
+                
+            ]
         },
         "NewsLetter":{
             "title":"Subscribe to our Newsletter",
@@ -55,7 +61,7 @@
             {"title":"PT. Topgrowth Futures", "content":["Didirikan sejak tahun 2003, saat ini telah berkembang menjadi perusahaan pialang berjangka terbaik dan terbesar di Indonesia yang menyediakan sarana serta layanan untuk transaksi produk forex, index, dan komoditi dengan spread yang kompetitif."]},
             {"title":"Tentang Kami", "content":["Tentang Topgrowth Futures", "Legalitas", "Rekening Terpisah", "Cabang Kami"]},
             {"title":"Layanan", "content":["Berita"]},
-            {"title":"Hubungi Kami", "content":["Didirikan sejak tahun 2003, saat ini telah berkembang menjadi perusahaan pialang berjangka terbaik dan terbesar di Indonesia yang menyediakan sarana serta layanan untuk transaksi produk forex, index, dan komoditi dengan spread yang kompetitif."]}
+            {"title":"Hubungi Kami", "content":["Unit F &/ G","Jl.Jend Sudirman Kav 86","Jakarta 10220 Indonesia","Email: customerservices@topgrowthfutures.com","Tel: (+62)21 2788-9393","Fax: (+62)21 2788-9395"]}
         ],
         "BottomNavbar":{
             "title":"Download E-Book Now",
@@ -74,7 +80,7 @@
         "header":"Tentang Topgrowth Futures",
         "content":"Didirikan sejak tahun 2003, Topgrowth Futures telah berkembang menjadi perusahaan pialang terbaik dan terbesar di Indonesia yang menyediakan layanan transaksi produk forex, index, dan komoditi dengan ekspansi yang kompetitif.\r\n        Topgrowth Futures merupakan perusahaan yang telah diakui secara hukum dan mendapat penghargaan, baik dari sisi kepatuhan hukum maupun kinerja keuangan, serta beroperasi atas izin resmi dan berada di bawah pengawasan BAPPEBTI.\r\n        Topgrowth Futures menyediakan fasilitas online trading di pasar valuta asing dan derivatif dunia serta berencana untuk memanfaatkan potensi pasar komoditi Indonesia yang sudah terkenal sejak dahulu.\r\n        Bagi masyarakat Indonesia yang sudah terbiasa bertransaksi dengan teknologi trading online, kecanggihan platform Topgrowth Online Trading akan menjadi tempat yang tepat bagi para investor maupun nasabah.",
         "visi":{"title":"Visi Kami", "content":"Menjadi perusahaan yang unggul dalam industri perdagangan berjangka melalui pelayanan berkualitas dan program kerja yang inovatif demi menciptakan hubungan kerjasama yang ideal dengan para nasabah, baik dalam lingkup lokal maupun global."},
-        "misi":{"title":"Misi Kami", "content":"Menyediakan fasilitas transaksi terbaik dengan beragam produk investasi serta layanan informasi pasar keuangan terkini dan terpercaya\r\n\r\n        Menyediakan fasilitas perdagangan online bagi investor dalam lingkup lokal maupun global melalui teknologi online trading yang inovatif\r\n        \r\n        Aktif berpartisipasi dalam membangun industri perdagangan berjangka yang transparan melalui program edukasi berkesinambungan\r\n        \r\n        Senantiasa meningkatkan dan mengembangkan kualitas sumber daya manusia yang profesional\r\n        \r\n        "}       
+        "misi":{"title":"Misi Kami", "content":"Menyediakan fasilitas transaksi terbaik dengan beragam produk investasi serta layanan informasi pasar keuangan terkini dan terpercaya    Menyediakan fasilitas perdagangan online bagi investor dalam lingkup lokal maupun global melalui teknologi online trading yang inovatif\r\n        \r\n        Aktif berpartisipasi dalam membangun industri perdagangan berjangka yang transparan melalui program edukasi berkesinambungan\r\n        \r\n        Senantiasa meningkatkan dan mengembangkan kualitas sumber daya manusia yang profesional\r\n        \r\n        "}       
     },
     "cabang":[
             {"image":"","title":"","content":""},
@@ -83,8 +89,8 @@
         ],
     "rekeningterpisah":{
         "header":"Rekening Terpisah",
-        "content":{"title":"BAPPPEBTI","content":"BAPPEBTI (Badan Pengawas Perdagangan Berjangka Komoditi) merupakan institusi pemerintah yang berada di bawah naungan Kementerian Perdagangan Republik Indonesia dan bertugas untuk menerbitkan izin usaha baik bagi perusahaan maupun perorangan, membuat peraturan dan tata tertib, melakukan inspeksi dan kontrol terhadap seluruh aktivitas dalam industri pialang berjangka. PT. Topgrowth Futures beroperasi berdasarkan izin dan berada di bawah pengawasan BAPPEBTI, dengan Nomor Izin: No. 300/BAPPEBTI/SI/III/2004.",
-        "subContent":["BCA RUPIAH Nomor Akun // Account Number: 035.311.8568 Swiftcode: CENAIDJA a.n. // Account Name: PT. Topgrowth Futures","BCA Dollar Nomor Akun: // Account Number: 035.317.7718 Swiftcode: CENAIDJA a.n. // Account Name: PT. Topgrowth Futures"]}
+        "content":{"title":"Rekening Terpisah","content":"Rekening Terpisah (Segregated Account) adalah sebuah rekening bank atas nama perusahaan pialang berjangka yang difungsikan khusus untuk menampung dana kolektif semua nasabah dalam suatu perusahaan pialang berjangka dan hanyadigunakan untuk keperluan transaksi nasabah yang terpisahdari rekening operasional perusahaan. Rekening ini diawasisecara ketat dan berkala oleh Badan Pengawas PerdaganganBerjangka Komoditi (BAPPEBTI).",
+        "subContent":["Berikut ini adalah rekening terpisah resmi yang dimiliki oleh PT. Topgrowth Futures:","BCA RUPIAH Nomor Akun // Account Number: 035.311.8568 Swiftcode: CENAIDJA a.n. // Account Name: PT. Topgrowth Futures","BCA Dollar Nomor Akun: // Account Number: 035.317.7718 Swiftcode: CENAIDJA a.n. // Account Name: PT. Topgrowth Futures"]}
     },
     "legalitas":{
         "header":"Legalitas",

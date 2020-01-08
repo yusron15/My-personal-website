@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Button,
   Container,
@@ -81,6 +82,7 @@ class CardRegister extends React.Component {
                       <TextField
                         id="outlined-multiline-static"
                         fullWidth
+                        type="number"
                         variant="outlined"
                         label="Handphone Number"
                         size="small"
@@ -142,14 +144,13 @@ class CardRegister extends React.Component {
 
             <div className="pull-left ml-3 mb-3">
               <h6>
-                <a
+                <Link
+                  to="/login"
                   // className="link footer-link"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
                   style={{ color: "white" }}
                 >
                   Have an account? Sign In
-                </a>
+                </Link>
               </h6>
             </div>
             {/* <div className="pull-right mr-3 mb-3">
