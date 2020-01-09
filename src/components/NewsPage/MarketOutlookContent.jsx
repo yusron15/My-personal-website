@@ -12,13 +12,14 @@ import {
   Col
 } from "reactstrap";
 import NewsLetter from "../NewsLetter/NewsLetter";
+import NewsTicker from "./NewsTicker";
+
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
-import bg from "../../assets/img/header-stockindex.png";
+import bg from "../../assets/img/header-marketoutlook.png";
 import Footer from "../Footers/Footer";
 import "../../assets/css/main.css";
 import Content from "../RelatedPost/Layout";
-import BreakingNews from "../Landing/BreakingNews";
 import news1 from "../../assets/img/marketoutlook1.png";
 import news2 from "../../assets/img/marketoutlook2.png";
 import news3 from "../../assets/img/marketoutlook3.png";
@@ -46,8 +47,8 @@ class Blogs extends React.Component {
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">Market Outlook</div>
-              {/* <BreakingNews /> */}
             </div>
+            <NewsTicker />
 
             {/* <Container> */}
             <div

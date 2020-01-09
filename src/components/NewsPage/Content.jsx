@@ -336,7 +336,7 @@ class Carding extends React.Component {
               <Container>
                 <div
                   style={{
-                    backgroundColor: "#DCD8D8",
+                    backgroundColor: "rgba(183, 183, 183, 0.17)",
                     padding: "20px",
                     borderRadius: "5px"
                   }}
@@ -601,7 +601,7 @@ class Carding extends React.Component {
             <Container>
               <div
                 style={{
-                  backgroundColor: "#DCD8D8",
+                  backgroundColor: "rgba(183, 183, 183, 0.17)",
                   padding: "50px",
                   paddingTop: "10px",
                   marginTop: "20px",
@@ -684,7 +684,7 @@ class Carding extends React.Component {
             <Container>
               <div
                 style={{
-                  backgroundColor: "#DCD8D8",
+                  backgroundColor: "rgba(183, 183, 183, 0.17)",
                   padding: "50px",
                   paddingTop: "10px",
                   marginTop: "20px",
@@ -731,7 +731,7 @@ class Carding extends React.Component {
             <Container>
               <div
                 style={{
-                  backgroundColor: "#DCD8D8",
+                  backgroundColor: "rgba(183, 183, 183, 0.17)",
                   padding: "50px",
                   paddingTop: "10px",
                   marginTop: "20px",

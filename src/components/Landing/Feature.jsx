@@ -81,7 +81,7 @@ class Features extends React.Component {
                                     </h3>
                                     <p
                                       style={{
-                                        tetAlign: "left",
+                                        textAlign: "left",
                                         fontSize: "0.8rem",
                                         padding: 0,
                                         paddingRight: "10px"
@@ -154,6 +154,52 @@ class Features extends React.Component {
                                   <div className="icon icon-success">
                                     <img
                                       alt="..."
+                                      src={require("assets/img/blue-komoditi.png")}
+                                      height="60"
+                                      width="60"
+                                    />
+                                  </div>
+                                </Col>
+                                <Col
+                                  md="9"
+                                  style={{ paddingLeft: 0, paddingRight: 0 }}
+                                >
+                                  <div className="description">
+                                    <h3
+                                      // className="info-title"
+                                      style={{
+                                        color: "black",
+                                        fontSize: "1.2rem",
+                                        marginBottom: 0,
+                                        textAlign: "left"
+                                      }}
+                                    >
+                                      {lang.Landing.Feature.content[1].title}
+                                    </h3>
+                                    <p
+                                      style={{
+                                        textAlign: "left",
+                                        fontSize: "0.8rem",
+                                        padding: 0,
+                                        paddingRight: "10px"
+                                      }}
+                                    >
+                                      {lang.Landing.Feature.content[1].subtitle}
+                                    </p>
+                                  </div>
+                                </Col>
+                              </Row>
+                            </div>
+                            <div className="info">
+                              {/* komoditi */}
+                              <Row>
+                                <Col
+                                  md="3"
+                                  style={{ paddingLeft: 0, paddingRight: 0 }}
+                                >
+                                  <div className="icon icon-success">
+                                    <img
+                                      alt="..."
                                       src={require("assets/img/blue-future.png")}
                                       height="60"
                                       width="60"
@@ -185,52 +231,6 @@ class Features extends React.Component {
                                       }}
                                     >
                                       {lang.Landing.Feature.content[3].subtitle}
-                                    </p>
-                                  </div>
-                                </Col>
-                              </Row>
-                            </div>
-                            <div className="info">
-                              {/* komoditi */}
-                              <Row>
-                                <Col
-                                  md="3"
-                                  style={{ paddingLeft: 0, paddingRight: 0 }}
-                                >
-                                  <div className="icon icon-success">
-                                    <img
-                                      alt="..."
-                                      src={require("assets/img/blue-komoditi.png")}
-                                      height="60"
-                                      width="60"
-                                    />
-                                  </div>
-                                </Col>
-                                <Col
-                                  md="9"
-                                  style={{ paddingLeft: 0, paddingRight: 0 }}
-                                >
-                                  <div className="description">
-                                    <h3
-                                      // className="info-title"
-                                      style={{
-                                        color: "black",
-                                        fontSize: "1.2rem",
-                                        marginBottom: 0,
-                                        textAlign: "left"
-                                      }}
-                                    >
-                                      {lang.Landing.Feature.content[2].title}
-                                    </h3>
-                                    <p
-                                      style={{
-                                        textAlign: "left",
-                                        fontSize: "0.8rem",
-                                        padding: 0,
-                                        paddingRight: "10px"
-                                      }}
-                                    >
-                                      {lang.Landing.Feature.content[2].subtitle}
                                     </p>
                                   </div>
                                 </Col>

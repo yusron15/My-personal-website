@@ -50,7 +50,7 @@ const titleTable = {
 };
 
 const text = {
-  fontWeight: "bold",
+  // fontWeight: "bold",
   color: "black",
   textAlign: "center",
   fontSize: "1rem"

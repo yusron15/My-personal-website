@@ -23,7 +23,7 @@ import bg from "../../assets/img/video-header.png";
 import Footer from "../Footers/Footer";
 import "../../assets/css/main.css";
 import Content from "../RelatedPost/Layout";
-import BreakingNews from "../Landing/BreakingNews";
+import NewsTicker from "./NewsTicker";
 import fc1 from "../../assets/img/fc1.png";
 import fc2 from "../../assets/img/fc2.png";
 import fc5 from "../../assets/img/fc5.png";
@@ -54,9 +54,10 @@ class Blogs extends React.Component {
 
               <div className="title title-header">Video</div>
             </div>
+            <NewsTicker />
 
             <div
-              className="broken-white"
+              // className="broken-white"
               style={{
                 // backgroundColor: "#D4D4D4",
                 padding: "0 12% 2% 12%"

@@ -308,7 +308,7 @@ class Content extends React.Component {
                     </Col>
                   </Row>
                   <div style={{ marginTop: "50px" }}>
-                    <Row>
+                    <Row style={{ marginRight: 0, marginLeft: 0 }}>
                       <Col className="ml-auto mr-auto text-center" md="2">
                         <div
                           onMouseEnter={this.handleRatingEnter}

@@ -19,11 +19,12 @@ import TableBody from "../NewsContent/TableBody";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
-import bg from "../../assets/img/header-stockindex.png";
+import bg from "../../assets/img/header-economiccalendar.png";
 import Footer from "../Footers/Footer";
 import "../../assets/css/main.css";
 import Content from "../RelatedPost/Layout";
-import BreakingNews from "../Landing/BreakingNews";
+import NewsTicker from "./NewsTicker";
+
 import canada from "../../assets/img/flag-canada.png";
 import germany from "../../assets/img/flag-germany.png";
 import span from "../../assets/img/flag-span.png";
@@ -38,8 +39,8 @@ class Blogs extends React.Component {
     return (
       <>
         <div
-          className="cd-section"
-          style={{ backgroundColor: "#1D1E1F" }}
+          className="cd-section broken-white"
+          //   style={{ backgroundColor: "#1D1E1F" }}
           id="blogs"
         >
           {/* ********* END BLOGS 5 ********* */}
@@ -55,14 +56,14 @@ class Blogs extends React.Component {
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">Economic Calendar</div>
-              {/* <BreakingNews /> */}
             </div>
+            <NewsTicker />
 
             {/* <Container> */}
             <div
-              className="cd-section "
+              className="cd-section broken-white"
               id="features"
-              style={{ backgroundColor: "#1D1E1F" }}
+              //   style={{ backgroundColor: "#1D1E1F" }}
 
               // style={{ backgroundColor: "#D4D4D4" }}
             >
@@ -72,7 +73,7 @@ class Blogs extends React.Component {
                     <Row style={{ marginTop: "30px", marginBottom: "30px" }}>
                       <Label
                         style={{
-                          color: "#FFFFFF",
+                          color: "black",
                           fontSize: "18px",
                           marginRight: "10px",
                           marginLeft: "10px"
@@ -86,11 +87,11 @@ class Blogs extends React.Component {
                         name="date"
                         id="date"
                         placeholder="10/06/2019"
-                        style={{ width: "200px" }}
+                        style={{ width: "200px", color: "black" }}
                       />
                       <Label
                         style={{
-                          color: "#FFFFFF",
+                          color: "black",
                           fontSize: "18px",
                           marginRight: "10px",
                           marginLeft: "10px"

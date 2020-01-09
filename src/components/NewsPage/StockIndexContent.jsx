@@ -18,7 +18,8 @@ import bg from "../../assets/img/header-stockindex.png";
 import Footer from "../Footers/Footer";
 import "../../assets/css/main.css";
 import Content from "../RelatedPost/Layout";
-import BreakingNews from "../Landing/BreakingNews";
+import NewsTicker from "./NewsTicker";
+
 import news1 from "../../assets/img/newscontent1.png";
 import news2 from "../../assets/img/newscontent2.png";
 import news3 from "../../assets/img/newscontent3.png";
@@ -46,8 +47,8 @@ class Blogs extends React.Component {
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">Stock Index</div>
-              {/* <BreakingNews /> */}
             </div>
+            <NewsTicker />
 
             {/* <Container> */}
             <div

@@ -414,77 +414,97 @@ class ColorNavbar extends React.Component {
                         </div>
                       </div>
                       <div class="dropdown ">
-                        <Link
+                        {/* <Link
                           to="/newspage"
                           // onClick={() => {
                           //   this.toggle("2");
                           // }}
-                        >
-                          <div class="dropdown">
-                            <button
-                              class="dropbtn"
-                              style={{
-                                ...colorStyle,
-                                color: this.coloringNav("/newspage")
-                              }}
-                            >
-                              {lang.Header.m4.title}
-                            </button>
-                            <div
-                              class="dropdown-content-news"
-                              style={{ justifyContent: "space-around" }}
-                            >
-                              <Link
-                                as={NavLink}
-                                to="/newspage"
-                                className="underlined"
+                        > */}
+                        <div class="dropdown">
+                          <button
+                            class="dropbtn"
+                            style={{
+                              color: this.coloringNav([
+                                "/newspage",
+                                "/stockindex",
+                                "/forexcommodity",
+                                "/economiccalendar",
+                                "/marketoutlook",
+                                "/videocontent"
+                              ])
+                            }}
+                          >
+                            {lang.Header.m4.title}
+                          </button>
+                          <div class="dropdown-content-news">
+                            <Container>
+                              <div
+                                class="row"
+                                style={{
+                                  justifyContent: "space-around"
+                                }}
                               >
-                                <div style={newstext}>
-                                  {lang.Header.m4.dropdown[0].title}
-                                </div>
-                              </Link>
-                              {/* <div class="vl-navbar"></div> */}
-                              <img className="vl-img-news" src={vl} />
+                                <div>
+                                  <Col style={{paddingTop:"20px"}}>
+                                    <Link
+                                      as={NavLink}
+                                      to="/newspage"
+                                      className="underlined"
+                                    >
+                                      <div style={newstext}>
+                                        {lang.Header.m4.dropdown[0].title}
+                                      </div>
+                                    </Link>
 
-                              <Link to="/stockindex">
-                                <div style={newstext}>
-                                  {lang.Header.m4.dropdown[1].title}
+                                    <Link to="/stockindex">
+                                      <div style={newstext}>
+                                        {lang.Header.m4.dropdown[1].title}
+                                      </div>
+                                    </Link>
+                                  </Col>
                                 </div>
-                              </Link>
-                              {/* <div class="vl-navbar"></div> */}
-                              <img className="vl-img-news" src={vl} />
+                                <div>
+                                  <img className="vl-img-news" src={vl} />
+                                </div>
 
-                              <Link to="/forexcommodity">
-                                <div style={newstext}>
-                                  {lang.Header.m4.dropdown[2].title}
+                                <div>
+                                  <Col style={{paddingTop:"20px"}}>
+                                    <Link to="/forexcommodity">
+                                      <div style={newstext}>
+                                        {lang.Header.m4.dropdown[2].title}
+                                      </div>
+                                    </Link>
+                                    <Link to="/economiccalendar">
+                                      <div style={newstext}>
+                                        {lang.Header.m4.dropdown[3].title}
+                                      </div>
+                                    </Link>
+                                  </Col>
                                 </div>
-                              </Link>
-                              {/* <div class="vl-navbar"></div> */}
-                              <img className="vl-img-news" src={vl} />
+                                <div>
+                                  <img className="vl-img-news" src={vl} />
+                                </div>
 
-                              <Link to="/economiccalendar">
-                                <div style={newstext}>
-                                  {lang.Header.m4.dropdown[3].title}
-                                </div>
-                              </Link>
-                              {/* <div class="vl-navbar"></div> */}
-                              <img className="vl-img-news" src={vl} />
+                                <div style={{paddingTop:"20px"}}>
+                                  <Col>
+                                    <Link to="/marketoutlook">
+                                      <div style={newstext}>
+                                        {lang.Header.m4.dropdown[4].title}
+                                      </div>
+                                    </Link>
 
-                              <Link to="/marketoutlook">
-                                <div style={newstext}>
-                                  {lang.Header.m4.dropdown[4].title}
+                                    <Link to="/videocontent">
+                                      <div style={newstext}>
+                                        {lang.Header.m4.dropdown[5].title}
+                                      </div>
+                                    </Link>
+                                  </Col>
                                 </div>
-                              </Link>
-                              <img className="vl-img-news" src={vl} />
-
-                              <Link to="/videocontent">
-                                <div style={newstext}>
-                                  {lang.Header.m4.dropdown[5].title}
-                                </div>
-                              </Link>
-                            </div>
+                              </div>
+                            </Container>
                           </div>
-                        </Link>
+                        </div>
+                        {/* </Link> */}
                       </div>
 
                       <Link to="/edukasi">
