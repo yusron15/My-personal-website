@@ -256,7 +256,13 @@
                 {"title":"Trading Platform", "sub":["Pro I Trader","Topgrowth Trader"]},
                 {"title":"Buka Akun", "sub":["Login","Register"]}
                 ]},
-        "m4":  {"title":"Berita"},
+        "m4":  {"title":"Berita","dropdown":[
+                    {"title":"News Highlitght"},
+                    {"title":"Stock Index"},
+                    {"title":"Forex & Commodity"},
+                    {"title":"Economic Calendar"},
+                    {"title":"Market Outlook"},
+                    {"title":"Video"}]},
         "m5":  {"title":"Edukasi"},
         "m6":  {"title":"Karir"},
         "m7":  {"title":"Hubungi Kami"}    

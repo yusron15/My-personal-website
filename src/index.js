@@ -68,6 +68,11 @@ import Register from "views/layout/Register.jsx";
 import News from "views/layout/News.jsx";
 import Edukasi from "views/layout/Edukasi.jsx";
 import NewsMarketOutlook from "./components/NewsContent/NewsMarketOutlook";
+import StockIndex from "./components/NewsPage/StockIndexContent";
+import ForexCommodity from "./components/NewsPage/ForexCommodityContent";
+import VideoContent from "./components/NewsPage/VideoContent";
+import EconomicCalendar from "./components/NewsPage/EconomicCalendarContent";
+import MarketOutlook from "./components/NewsPage/MarketOutlookContent";
 
 //
 import "animate.css/animate.min.css";
@@ -168,6 +173,27 @@ class App extends Component {
                 <Route
                   path="/NewsPage"
                   render={props => <NewsPage {...props} />}
+                />
+
+                <Route
+                  path="/stockindex"
+                  render={props => <StockIndex {...props} />}
+                />
+                <Route
+                  path="/ForexCommodity"
+                  render={props => <ForexCommodity {...props} />}
+                />
+                <Route
+                  path="/EconomicCalendar"
+                  render={props => <EconomicCalendar {...props} />}
+                />
+                <Route
+                  path="/MarketOutlook"
+                  render={props => <MarketOutlook {...props} />}
+                />
+                <Route
+                  path="/VideoContent"
+                  render={props => <VideoContent {...props} />}
                 />
                 <Route
                   path="/NewsMarketOutlook"

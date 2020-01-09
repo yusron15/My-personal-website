@@ -320,16 +320,16 @@ class ColorNavbar extends React.Component {
                                     <Link
                                       style={tentangkami}
                                       className="vertical-space"
-                                      to="/komoditi"
+                                      to="/cfd"
                                     >
-                                      {lang.Header.m3.dropdown[0].sub[2]}
+                                      {lang.Header.m3.dropdown[0].sub[3]}
                                     </Link>
                                     <Link
                                       style={tentangkami}
                                       className="vertical-space"
-                                      to="/cfd"
+                                      to="/komoditi"
                                     >
-                                      {lang.Header.m3.dropdown[0].sub[3]}
+                                      {lang.Header.m3.dropdown[0].sub[2]}
                                     </Link>
                                   </Col>
                                   <Col style={{ minWidth: "10vw" }}>
@@ -439,31 +439,48 @@ class ColorNavbar extends React.Component {
                                 to="/newspage"
                                 className="underlined"
                               >
-                                <div style={newstext}>News Hightlight</div>
+                                <div style={newstext}>
+                                  {lang.Header.m4.dropdown[0].title}
+                                </div>
                               </Link>
                               {/* <div class="vl-navbar"></div> */}
                               <img className="vl-img-news" src={vl} />
 
-                              <Link to="/cabang">
-                                <div style={newstext}>Stock Index</div>
+                              <Link to="/stockindex">
+                                <div style={newstext}>
+                                  {lang.Header.m4.dropdown[1].title}
+                                </div>
                               </Link>
                               {/* <div class="vl-navbar"></div> */}
                               <img className="vl-img-news" src={vl} />
 
-                              <Link to="/rekeningterpisah">
-                                <div style={newstext}> Forex & Commodity </div>
+                              <Link to="/forexcommodity">
+                                <div style={newstext}>
+                                  {lang.Header.m4.dropdown[2].title}
+                                </div>
                               </Link>
                               {/* <div class="vl-navbar"></div> */}
                               <img className="vl-img-news" src={vl} />
 
-                              <Link to="/legalitas">
-                                <div style={newstext}> Economic Calender </div>
+                              <Link to="/economiccalendar">
+                                <div style={newstext}>
+                                  {lang.Header.m4.dropdown[3].title}
+                                </div>
                               </Link>
                               {/* <div class="vl-navbar"></div> */}
                               <img className="vl-img-news" src={vl} />
 
-                              <Link to="/legalitas">
-                                <div style={newstext}> Market Outlook </div>
+                              <Link to="/marketoutlook">
+                                <div style={newstext}>
+                                  {lang.Header.m4.dropdown[4].title}
+                                </div>
+                              </Link>
+                              <img className="vl-img-news" src={vl} />
+
+                              <Link to="/videocontent">
+                                <div style={newstext}>
+                                  {lang.Header.m4.dropdown[5].title}
+                                </div>
                               </Link>
                             </div>
                           </div>
