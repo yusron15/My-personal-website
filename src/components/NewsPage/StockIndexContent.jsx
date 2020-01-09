@@ -30,6 +30,9 @@ class Blogs extends React.Component {
   state = {
     dataSelect: ""
   };
+  componentDidMount = () => {
+    window.scroll(0, 0);
+  };
   render() {
     return (
       <>

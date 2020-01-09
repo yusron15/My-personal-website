@@ -60,18 +60,21 @@ class CardRegister extends React.Component {
                 <Col md="12">
                   <FormGroup>
                     <InputGroup>
-                      <TextField
-                        id="test-small"
-                        fullWidth
-                        variant="outlined"
-                        label="Full Name"
-                        size="small"
-                        inputProps={{
-                          style: { color: "white" }
-                        }}
-                        inputProps={{
-                          style: { color: "white" }
-                        }}
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText style={{ borderColor: "#FFFFFF" }}>
+                          <i className="tim-icons icon-caps-small" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        style={{ borderColor: "#FFFFFF" }}
+                        placeholder="Full Name"
+                        type="text"
+                        onFocus={e => this.setState({ lastNameFocus: true })}
+                        onBlur={e =>
+                          this.setState({
+                            lastNameFocus: false
+                          })
+                        }
                       />
                     </InputGroup>
                   </FormGroup>
@@ -79,16 +82,21 @@ class CardRegister extends React.Component {
                 <Col md="12">
                   <FormGroup>
                     <InputGroup>
-                      <TextField
-                        id="outlined-multiline-static"
-                        fullWidth
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText style={{ borderColor: "#FFFFFF" }}>
+                          <i className="tim-icons icon-tablet-2" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        style={{ borderColor: "#FFFFFF" }}
+                        placeholder="Hanphone Number"
                         type="number"
-                        variant="outlined"
-                        label="Handphone Number"
-                        size="small"
-                        inputProps={{
-                          style: { color: "white" }
-                        }}
+                        onFocus={e => this.setState({ lastNameFocus: true })}
+                        onBlur={e =>
+                          this.setState({
+                            lastNameFocus: false
+                          })
+                        }
                       />
                     </InputGroup>
                   </FormGroup>
@@ -96,15 +104,21 @@ class CardRegister extends React.Component {
                 <Col md="12">
                   <FormGroup>
                     <InputGroup>
-                      <TextField
-                        id="test-small"
-                        fullWidth
-                        variant="outlined"
-                        label="Email address"
-                        size="small"
-                        inputProps={{
-                          style: { color: "white" }
-                        }}
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText style={{ borderColor: "#FFFFFF" }}>
+                          <i className="tim-icons icon-email-85" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        style={{ borderColor: "#FFFFFF" }}
+                        placeholder="Email Address"
+                        type="email"
+                        onFocus={e => this.setState({ lastNameFocus: true })}
+                        onBlur={e =>
+                          this.setState({
+                            lastNameFocus: false
+                          })
+                        }
                       />
                     </InputGroup>
                   </FormGroup>
@@ -112,15 +126,21 @@ class CardRegister extends React.Component {
                 <Col md="12">
                   <FormGroup>
                     <InputGroup>
-                      <TextField
-                        id="test-small"
-                        fullWidth
-                        variant="outlined"
-                        label="Password"
-                        size="small"
-                        inputProps={{
-                          style: { color: "white" }
-                        }}
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText style={{ borderColor: "#FFFFFF" }}>
+                          <i className="tim-icons icon-lock-circle" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        style={{ borderColor: "#FFFFFF" }}
+                        placeholder="Password"
+                        type="text"
+                        onFocus={e => this.setState({ lastNameFocus: true })}
+                        onBlur={e =>
+                          this.setState({
+                            lastNameFocus: false
+                          })
+                        }
                       />
                     </InputGroup>
                   </FormGroup>

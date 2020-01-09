@@ -23,7 +23,7 @@ import twitter from "../../assets/img/twitter.png";
 import facebook from "../../assets/img/facebook.png";
 import instagram from "../../assets/img/instagram.png";
 import vimeo from "../../assets/img/vimeo.png";
-import subscribe from "../../assets/img/subscribe.png";
+import subscribe from "../../assets/img/black-icon-email.png";
 import flag from "../../assets/img/flag-uk.png";
 
 import "../../assets/css/main.css";
@@ -110,13 +110,13 @@ class BlurryNavbar extends React.Component {
                   {/* </Link> */}
                 </NavItem>
                 <div class="vl"></div>
-                <NavItem>
+                <NavItem style={{ marginTop: "5px" }}>
                   <Link to="/#" className="vertical-center-nav">
                     <img
                       src={subscribe}
                       style={{
                         paddingRight: "10px",
-                        height: "10px",
+                        height: "20px",
                         width: "auto"
                       }}
                     />
@@ -124,22 +124,22 @@ class BlurryNavbar extends React.Component {
                   </Link>
                 </NavItem>
                 <div class="vl"></div>
-                <NavItem>
+                <NavItem style={{ marginTop: "5px" }}>
                   <Link to="/#">
                     <img src={facebook} />
                   </Link>
                 </NavItem>
-                <NavItem>
+                <NavItem style={{ marginTop: "5px" }}>
                   <Link to="/#">
                     <img src={twitter} />
                   </Link>
                 </NavItem>
-                <NavItem>
+                <NavItem style={{ marginTop: "5px" }}>
                   <Link to="/#">
                     <img src={instagram} />
                   </Link>
                 </NavItem>
-                <NavItem>
+                <NavItem style={{ marginTop: "5px" }}>
                   <Link to="/#">
                     <img src={vimeo} />
                   </Link>

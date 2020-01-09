@@ -1,8 +1,8 @@
-html, body {
+/* html, body {
   max-width: 100% !important;
   overflow-x: hidden !important;
   background-color: rgb(29, 30, 31);
-}
+} */
 
 .dropbtn {
   background-color: transparent;
@@ -41,7 +41,7 @@ html, body {
   z-index: 1;
   left: -38vw;
 
-  width: 100%;
+  width: 100vw;
   /* top:9.8vh; */
   display: none;
   justify-content: space-around;
@@ -534,7 +534,7 @@ hr.grey {
 }
 
 .text-fitur:hover {
-  color: #31beff;
+  color: #19447E;
 }
 
 .image {

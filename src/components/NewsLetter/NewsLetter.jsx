@@ -23,6 +23,8 @@ import {
   InputGroupText,
   InputGroup
 } from "reactstrap";
+
+import "../../assets/css/main.css";
 class NewsLetter extends Component {
   render() {
     return (
@@ -47,7 +49,7 @@ class NewsLetter extends Component {
                 <CardBody>
                   <Form action="" method="">
                     <Row>
-                      <Col sm="8">
+                      <Col sm="8" style={{ marginTop: "5px" }}>
                         <InputGroup
                         // className={classnames({
                         //   "input-group-focus": this.state.emailFocus

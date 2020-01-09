@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Button,
@@ -46,6 +46,7 @@ import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
 import CardNews from "./CardNews";
 import NewsLetter from "../NewsLetter/NewsLetter.jsx";
+import right from "../../assets/img/black-right-icon.png";
 import HorizontalScroll from "react-scroll-horizontal";
 
 const textTitle = {
@@ -608,10 +609,23 @@ class Carding extends React.Component {
                   borderRadius: "5px"
                 }}
               >
-                <Row>
-                  <Col className="ml-auto mr-auto text-center" md="8">
+                <Row >
+                <Col md="1"/>
+
+                  <Col className="ml-auto mr-auto text-center" 
+                  // md={{ size: 10, order: 0, offset: 1 }}
+                  md="10"
+                  >
                     <h2 className="title font-black">{lang.berita.outlook}</h2>
                   </Col>
+                  <Col md="1">
+                    <Link to="/marketoutlook">
+                  <img style={{
+                  paddingTop: "4vh",
+                  }} src={right}/>
+                    </Link>
+                  </Col>
+
                 </Row>
                 <Row>
                   {/* <Carousel
@@ -692,8 +706,16 @@ class Carding extends React.Component {
                 }}
               >
                 <Row>
+                  <Col md="1"/>
                   <Col className="ml-auto mr-auto text-center" md="8">
                     <h2 className="title font-black">{lang.berita.forex}</h2>
+                  </Col>
+                  <Col md="1">
+                    <Link to="/forexcommodity">
+                  <img style={{
+                  paddingTop: "4vh",
+                  }} src={right}/>
+                    </Link>
                   </Col>
                 </Row>
                 <Row>
@@ -739,8 +761,16 @@ class Carding extends React.Component {
                 }}
               >
                 <Row>
+                  <Col md="1"/>
                   <Col className="ml-auto mr-auto text-center" md="8">
                     <h2 className="title font-black">{lang.berita.stock}</h2>
+                  </Col>
+                  <Col md="1">
+                    <Link to="/stockindex">
+                  <img style={{
+                  paddingTop: "4vh",
+                  }} src={right}/>
+                    </Link>
                   </Col>
                 </Row>
                 <Row>

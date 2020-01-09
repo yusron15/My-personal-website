@@ -110,13 +110,13 @@ class BlurryNavbar extends React.Component {
                   {/* </Link> */}
                 </NavItem>
                 <div class="vl"></div>
-                <NavItem>
+                <NavItem style={{ marginTop: "5px" }}>
                   <Link to="/#" className="vertical-center-nav">
                     <img
                       src={subscribe}
                       style={{
                         paddingRight: "10px",
-                        height: "10px",
+                        height: "14px",
                         width: "auto"
                       }}
                     />
@@ -124,22 +124,22 @@ class BlurryNavbar extends React.Component {
                   </Link>
                 </NavItem>
                 <div class="vl"></div>
-                <NavItem>
+                <NavItem style={{ marginTop: "5px" }}>
                   <Link to="/#">
                     <img src={facebook} />
                   </Link>
                 </NavItem>
-                <NavItem>
+                <NavItem style={{ marginTop: "5px" }}>
                   <Link to="/#">
                     <img src={twitter} />
                   </Link>
                 </NavItem>
-                <NavItem>
+                <NavItem style={{ marginTop: "5px" }}>
                   <Link to="/#">
                     <img src={instagram} />
                   </Link>
                 </NavItem>
-                <NavItem>
+                <NavItem style={{ marginTop: "5px" }}>
                   <Link to="/#">
                     <img src={vimeo} />
                   </Link>

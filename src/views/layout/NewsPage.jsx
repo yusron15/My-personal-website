@@ -44,7 +44,7 @@ import EconomicCalendar from "../../components/NewsContent/EconomicCalendar";
 import EconomicCalendarInside from "../../components/NewsContent/EconomicCalendarInside";
 import StockIndex from "../../components/NewsContent/StockIndex.jsx";
 import MarketOutlook from "../../components/NewsContent/MarketOutlook.jsx";
-import BreakingNews from "../../components/Landing/BreakingNews.jsx";
+import NewsTicker from "../../components/NewsPage/NewsTicker.jsx";
 import ForexCommodity from "../../components/NewsContent/ForexCommodity";
 import Footer from "../../components/Footers/Footer.jsx";
 
@@ -86,7 +86,8 @@ class NewsPage extends React.Component {
           </div>
           {/* <BlurryNavbar /> */}
           <ColoredNavbar location={{ ...this.props.location }} />
-          <Nav
+
+          {/* <Nav
             className="nav-pills-info nav-pills-icons nav-pills-lg"
             pills
             role="tablist"
@@ -116,44 +117,6 @@ class NewsPage extends React.Component {
                 News Highlight
               </div>
             </NavItem>
-            {/* <NavItem clssName="black-newsletter">
-              <div
-                style={{
-                  backgroundColor: "#1D1E1F",
-                  margin: "0 15px 0 15px",
-                  cursor: "pointer",
-                  color: "#FFFFFF",
-                  ...(this.state.activeTab === "2"
-                    ? { color: "#FFFFFF" }
-                    : { color: "#585858" })
-                }}
-                className={this.state.activeTab === "2" ? "active" : ""}
-                onClick={() => {
-                  this.toggle("2");
-                }}
-              >
-                News Stock Index
-              </div>
-            </NavItem>
-            <NavItem clssName="black-newsletter">
-              <div
-                style={{
-                  backgroundColor: "#1D1E1F",
-                  margin: "0 15px 0 15px",
-                  cursor: "pointer",
-                  color: "#FFFFFF",
-                  ...(this.state.activeTab === "3"
-                    ? { color: "#FFFFFF" }
-                    : { color: "#585858" })
-                }}
-                className={this.state.activeTab === "3" ? "active" : ""}
-                onClick={() => {
-                  this.toggle("3");
-                }}
-              >
-                News Forex & Commodity
-              </div>
-            </NavItem> */}
             <NavItem clssName="black-newsletter">
               <div
                 style={{
@@ -192,25 +155,7 @@ class NewsPage extends React.Component {
                 Forex Commodity
               </div>
             </NavItem>
-            {/* <NavItem clssName="black-newsletter">
-              <div
-                style={{
-                  backgroundColor: "#1D1E1F",
-                  margin: "0 15px 0 15px",
-                  cursor: "pointer",
-                  color: "#FFFFFF",
-                  ...(this.state.activeTab === "4"
-                    ? { color: "#FFFFFF" }
-                    : { color: "#585858" })
-                }}
-                className={this.state.activeTab === "4" ? "active" : ""}
-                onClick={() => {
-                  this.toggle("4");
-                }}
-              >
-                Economic Calendar Inside
-              </div>
-            </NavItem> */}
+
             <NavItem clssName="black-newsletter">
               <div
                 style={{
@@ -270,37 +215,28 @@ class NewsPage extends React.Component {
                 </Link>
               </div>
             </NavItem>
-          </Nav>
-          <BreakingNews />
+          </Nav> */}
 
+          <NewsTicker />
+          <Content />
+
+          {/* 
           <TabContent activeTab={"project" + this.state.activeTab}>
             <TabPane tabId="project1">
               <Content />
             </TabPane>
-            {/* <TabPane tabId="project2">
-              <NewsStockIndex />
-            </TabPane>
-            <TabPane tabId="project3">
-              <NewsForexCommodity />
-            </TabPane> */}
             <TabPane tabId="project2">
-              {/* <StockIndex /> */}
               <Route exact path="/newspage" component={StockIndex}></Route>
               <Route path="/newspage/:title" component={NewsStockIndex}></Route>
             </TabPane>
             <TabPane tabId="project3">
-              {/* <ForexCommodity /> */}
               <Route exact path="/newspage" component={ForexCommodity}></Route>
               <Route
                 path="/newspage/:title"
                 component={NewsForexCommodity}
               ></Route>
             </TabPane>
-            {/* <TabPane tabId="project4">
-              <EconomicCalendarInside />
-            </TabPane> */}
             <TabPane tabId="project4">
-              {/* <EconomicCalendar /> */}
               <Route
                 exact
                 path="/newspage"
@@ -312,16 +248,14 @@ class NewsPage extends React.Component {
               ></Route>
             </TabPane>
             <TabPane tabId="project5">
-              {/* <NewsMarketOutlook /> */}
-
               <Route exact path="/newspage" component={MarketOutlook}></Route>
               <Route
                 path="/newspage/:title"
                 component={NewsMarketOutlook}
               ></Route>
-              {/* <MarketOutlook /> */}
             </TabPane>
-          </TabContent>
+          </TabContent> */}
+
           <Footer />
         </div>
       </>

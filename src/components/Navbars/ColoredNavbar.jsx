@@ -445,7 +445,7 @@ class ColorNavbar extends React.Component {
                                 }}
                               >
                                 <div>
-                                  <Col style={{paddingTop:"20px"}}>
+                                  <Col style={{ paddingTop: "20px" }}>
                                     <Link
                                       as={NavLink}
                                       to="/newspage"
@@ -468,7 +468,7 @@ class ColorNavbar extends React.Component {
                                 </div>
 
                                 <div>
-                                  <Col style={{paddingTop:"20px"}}>
+                                  <Col style={{ paddingTop: "20px" }}>
                                     <Link to="/forexcommodity">
                                       <div style={newstext}>
                                         {lang.Header.m4.dropdown[2].title}
@@ -485,7 +485,7 @@ class ColorNavbar extends React.Component {
                                   <img className="vl-img-news" src={vl} />
                                 </div>
 
-                                <div style={{paddingTop:"20px"}}>
+                                <div style={{ paddingTop: "20px" }}>
                                   <Col>
                                     <Link to="/marketoutlook">
                                       <div style={newstext}>
