@@ -346,25 +346,25 @@ class ColorNavbar extends React.Component {
                                     <Link
                                       style={trading}
                                       className="vertical-space"
-                                      to="/gold"
+                                      to="/cfd"
                                     >
-                                      {lang.Header.m3.dropdown[0].sub[2]}
+                                      {lang.Header.m3.dropdown[0].sub[1]}
                                     </Link>
                                   </Col>
                                   <Col>
                                     <Link
                                       style={trading}
                                       className="vertical-space"
-                                      to="/cfd"
+                                      to="/komoditi"
                                     >
-                                      {lang.Header.m3.dropdown[0].sub[1]}
+                                      {lang.Header.m3.dropdown[0].sub[3]}
                                     </Link>
                                     <Link
                                       style={trading}
                                       className="vertical-space"
-                                      to="/komoditi"
+                                      to="/gold"
                                     >
-                                      {lang.Header.m3.dropdown[0].sub[3]}
+                                      {lang.Header.m3.dropdown[0].sub[2]}
                                     </Link>
                                   </Col>
                                   <Col style={{ minWidth: "10vw" }}>

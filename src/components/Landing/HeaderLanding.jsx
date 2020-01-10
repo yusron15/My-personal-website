@@ -66,22 +66,22 @@ class HeaderLanding extends React.Component {
           <div
             className="cd-section header-filter"
             id="headers"
-            style={{
-              backgroundImage:
-                "url(" + require("assets/img/header-image.png") + ")",
-              backgroundSize: "cover"
-            }}
+            // style={{
+            //   backgroundImage:
+            //     "url(" + require("assets/img/header-image.png") + ")",
+            //   backgroundSize: "cover"
+            // }}
           >
             <div>
               <BlurryNavbar />
               <div className="space-50" />
               <div
-                // className="header-filter"
-                // style={{
-                //   backgroundImage:
-                //     "url(" + require("assets/img/header-image.png") + ")",
-                //   backgroundSize: "cover"
-                // }}
+                className="header-filter"
+                style={{
+                  backgroundImage:
+                    "url(" + require("assets/img/header-image.png") + ")",
+                  backgroundSize: "cover"
+                }}
                 style={{ marginRight: 0, marginLeft: 0 }}
               >
                 {/* offset-md-1 */}
@@ -262,11 +262,11 @@ class HeaderLanding extends React.Component {
           return (
             <>
               <div
-                className="cd-section header-filter"
+                className="cd-section "
                 id="headers"
                 style={{
                   backgroundImage:
-                    "url(" + require("assets/img/header-image.png") + ")",
+                    "url(" + require("assets/img/header-image1.png") + ")",
                   backgroundSize: "cover"
                 }}
               >

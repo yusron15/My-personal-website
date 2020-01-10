@@ -75,6 +75,7 @@ class BottomNavbar extends React.Component {
     const styles = {
       containerStyle: {
         position: this.state.position,
+        // maxHeight: "150px",
         backgroundImage:
           "url(" + require("assets/img/ebook-background.png") + ")"
       }
@@ -194,10 +195,11 @@ class BottomNavbar extends React.Component {
           {/* <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut"> */}
           {/* <Fade> */}
           <div
-          // style={{
-          //   backgroundImage:
-          //     "url(" + require("assets/img/bg-bottom-navbar.png") + ")"
-          // }}
+            // style={{
+            //   backgroundImage:
+            //     "url(" + require("assets/img/bg-bottom-navbar.png") + ")"
+            // }}
+            style={{ maxHeight: "150px" }}
           >
             <h4
               className="title"
