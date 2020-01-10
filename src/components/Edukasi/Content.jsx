@@ -118,7 +118,7 @@ class Content extends React.Component {
                           style={{
                             fontSize: "1.2rem",
                             paddingLeft: "10px",
-                            paddingTop: "20px",
+                            paddingTop: "25px",
                             fontWeight: "bold",
                             height: "80px",
                             color:
@@ -143,7 +143,7 @@ class Content extends React.Component {
                           style={{
                             fontSize: "1.2rem",
                             paddingLeft: "10px",
-                            paddingTop: "20px",
+                            paddingTop: "25px",
                             fontWeight: "bold",
                             height: "80px",
 
@@ -169,7 +169,7 @@ class Content extends React.Component {
                           style={{
                             fontSize: "1.2rem",
                             paddingLeft: "10px",
-                            paddingTop: "20px",
+                            paddingTop: "25px",
                             fontWeight: "bold",
                             height: "80px",
 
@@ -195,7 +195,7 @@ class Content extends React.Component {
                           style={{
                             fontSize: "1.2rem",
                             paddingLeft: "10px",
-                            paddingTop: "20px",
+                            paddingTop: "25px",
                             fontWeight: "bold",
                             height: "80px",
 

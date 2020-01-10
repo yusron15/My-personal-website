@@ -38,15 +38,24 @@ const title = {
   fontSize: "15px",
   fontWeight: "bold",
   color: "black",
-  marginTop: "40px",
+  marginTop: "20px",
   marginBottom: "10px"
 };
 const tentangkami = {
   fontSize: "15px",
   // fontWeight: "bold",
   color: "black",
-  // marginTop: "20px",
-  marginBottom: "10px",
+  marginTop: "30px",
+  // marginBottom: "10px",
+  textAlign: "left"
+};
+
+const trading = {
+  fontSize: "15px",
+  // fontWeight: "bold",
+  color: "black",
+  marginTop: "10px",
+  // marginBottom: "10px",
   textAlign: "left"
 };
 
@@ -218,71 +227,119 @@ class ColorNavbar extends React.Component {
                         </NavItem>
                       </Link>
 
+                      {/* TENTANG KAMI */}
                       <div class="dropdown ">
-                        <div style={stylesAnimation.slideInDown}>
-                          <button class="dropbtn" style={colorStyle}>
-                            {lang.Header.m2.title}
-                          </button>
-                          <div class="dropdown-content">
-                            <Link
-                              as={NavLink}
-                              to="/tentangkami"
-                              className="underlined"
-                            >
-                              <div style={tentangkami}>
-                                {lang.Header.m2.dropdown[0].title}
+                        <button class="dropbtn" style={colorStyle}>
+                          {lang.Header.m2.title}
+                        </button>
+                        <div class="dropdown-content tentang-kami-left">
+                          <div
+                            class="row"
+                            style={{ justifyContent: "space-araound" }}
+                          >
+                            <Col>
+                              <div class="row">
+                                <div style={{ marginLeft: "20px" }}>
+                                  <Link
+                                    style={tentangkami}
+                                    className="vertical-space"
+                                    to="/tentangkami"
+                                  >
+                                    {lang.Header.m2.dropdown[0].title}
+                                  </Link>
+                                </div>
                               </div>
-                              {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
-                            </Link>
-                            <div class="vl-navbar"></div>
-                            <Link to="/cabang">
-                              <div style={tentangkami}>
-                                {lang.Header.m2.dropdown[1].title}
+                            </Col>
+
+                            <Col>
+                              <div class="row">
+                                <div>
+                                  <img
+                                    className="vl-img-tentangkami"
+                                    src={vl}
+                                  />
+                                </div>
+                                <div style={{ marginLeft: "20px" }}>
+                                  <Link
+                                    style={tentangkami}
+                                    className="vertical-space"
+                                    to="/jamperdagangan"
+                                  >
+                                    {lang.Header.m2.dropdown[1].title}
+                                  </Link>
+                                </div>
                               </div>
-                              {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
-                            </Link>
-                            <div class="vl-navbar"></div>
-                            <Link to="/rekeningterpisah">
-                              <div style={tentangkami}>
-                                {lang.Header.m2.dropdown[2].title}
+                            </Col>
+
+                            <Col>
+                              <div class="row">
+                                <div>
+                                  <img
+                                    className="vl-img-tentangkami"
+                                    src={vl}
+                                  />
+                                </div>
+                                <div style={{ marginLeft: "20px" }}>
+                                  <Link
+                                    style={tentangkami}
+                                    className="vertical-space"
+                                    to="/rekeningterpisah"
+                                  >
+                                    {lang.Header.m2.dropdown[2].title}
+                                  </Link>
+                                </div>
                               </div>
-                              {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
-                            </Link>
-                            <div class="vl-navbar"></div>
-                            <Link to="/legalitas">
-                              <div style={tentangkami}>
-                                {lang.Header.m2.dropdown[3].title}
+                            </Col>
+
+                            <Col>
+                              <div class="row">
+                                <div>
+                                  <img
+                                    className="vl-img-tentangkami"
+                                    src={vl}
+                                  />
+                                </div>
+                                <div style={{ marginLeft: "20px" }}>
+                                  <Link
+                                    style={tentangkami}
+                                    className="vertical-space"
+                                    to="/login"
+                                  >
+                                    {lang.Header.m2.dropdown[3].title}
+                                  </Link>
+                                </div>
                               </div>
-                              {/* <div>Topgrowth Futures Lorem Ipsum</div> */}
-                            </Link>
+                            </Col>
                           </div>
                         </div>
                       </div>
+
+                      {/* TRADING ONLINE */}
                       <div class="dropdown ">
                         <button class="dropbtn" style={colorStyle}>
                           {lang.Header.m3.title}
                         </button>
                         <div class="dropdown-content-trading trading-online">
-                          <Container>
-                            <div
-                              class="row"
-                              style={{ justifyContent: "space-around" }}
-                            >
-                              <div>
+                          <div
+                            class="row"
+                            style={{ justifyContent: "space-araound" }}
+                          >
+                            <Col>
+                              <div style={{ marginLeft: "20px" }}>
                                 <div style={title}>
                                   {lang.Header.m3.dropdown[0].title}
                                 </div>
                                 <Row>
                                   <Col>
                                     <Link
-                                      style={tentangkami}
+                                      style={trading}
                                       className="vertical-space"
                                       to="/forex"
                                     >
                                       {lang.Header.m3.dropdown[0].sub[0]}
                                     </Link>
                                     <Link
-                                      style={tentangkami}
+                                      style={trading}
                                       className="vertical-space"
                                       to="/gold"
                                     >
@@ -291,14 +348,14 @@ class ColorNavbar extends React.Component {
                                   </Col>
                                   <Col>
                                     <Link
-                                      style={tentangkami}
+                                      style={trading}
                                       className="vertical-space"
                                       to="/cfd"
                                     >
                                       {lang.Header.m3.dropdown[0].sub[3]}
                                     </Link>
                                     <Link
-                                      style={tentangkami}
+                                      style={trading}
                                       className="vertical-space"
                                       to="/komoditi"
                                     >
@@ -307,7 +364,7 @@ class ColorNavbar extends React.Component {
                                   </Col>
                                   <Col style={{ minWidth: "10vw" }}>
                                     <Link
-                                      style={tentangkami}
+                                      style={trading}
                                       className="vertical-space"
                                       to="/indexfutures"
                                     >
@@ -316,74 +373,82 @@ class ColorNavbar extends React.Component {
                                   </Col>
                                 </Row>
                               </div>
-                              <div>
-                                <img className="vl-img" src={vl} />
-                              </div>
-                              {/* <div class="vl-navbar-trading" /> */}
-                              {/* <div class="outer">
-                          <div class="inner"></div>
-                        </div> */}
-                              <div>
-                                <div style={title}>
-                                  {lang.Header.m3.dropdown[1].title}
+                            </Col>
+
+                            <Col>
+                              <div class="row">
+                                <div>
+                                  <img className="vl-img" src={vl} />
                                 </div>
-                                <Link
-                                  style={tentangkami}
-                                  className="vertical-space"
-                                  to="/jamperdagangan"
-                                >
-                                  {lang.Header.m3.dropdown[1].sub[0]}
-                                </Link>
-                              </div>
-                              <div>
-                                <img className="vl-img" src={vl} />
-                              </div>
-                              {/* <div class="vl-navbar-trading" /> */}
-                              <div>
-                                <div style={title}>
-                                  {lang.Header.m3.dropdown[2].title}
+                                <div style={{ marginLeft: "20px" }}>
+                                  <div style={title}>
+                                    {lang.Header.m3.dropdown[1].title}
+                                  </div>
+                                  <Link
+                                    style={trading}
+                                    className="vertical-space"
+                                    to="/jamperdagangan"
+                                  >
+                                    {lang.Header.m3.dropdown[1].sub[0]}
+                                  </Link>
                                 </div>
-                                <Link
-                                  style={tentangkami}
-                                  className="vertical-space"
-                                  to="/protrader"
-                                >
-                                  {lang.Header.m3.dropdown[2].sub[0]}
-                                </Link>
-                                <Link
-                                  style={tentangkami}
-                                  className="vertical-space"
-                                  to="/topgrowthtrader"
-                                >
-                                  {lang.Header.m3.dropdown[2].sub[1]}
-                                </Link>
                               </div>
-                              <div>
-                                <img className="vl-img" src={vl} />
-                              </div>
-                              {/* <div class="vl-navbar-trading" /> */}
-                              {/* <div class="vl-navbar-trading"></div> */}
-                              <div>
-                                <div style={title}>
-                                  {lang.Header.m3.dropdown[3].title}
+                            </Col>
+
+                            <Col>
+                              <div class="row">
+                                <div>
+                                  <img className="vl-img" src={vl} />
                                 </div>
-                                <Link
-                                  style={tentangkami}
-                                  className="vertical-space"
-                                  to="/login"
-                                >
-                                  {lang.Header.m3.dropdown[3].sub[0]}
-                                </Link>
-                                <Link
-                                  style={tentangkami}
-                                  className="vertical-space"
-                                  to="/register"
-                                >
-                                  {lang.Header.m3.dropdown[3].sub[1]}
-                                </Link>
+                                <div style={{ marginLeft: "20px" }}>
+                                  <div style={title}>
+                                    {lang.Header.m3.dropdown[2].title}
+                                  </div>
+                                  <Link
+                                    style={trading}
+                                    className="vertical-space"
+                                    to="/protrader"
+                                  >
+                                    {lang.Header.m3.dropdown[2].sub[0]}
+                                  </Link>
+                                  <Link
+                                    style={trading}
+                                    className="vertical-space"
+                                    to="/topgrowthtrader"
+                                  >
+                                    {lang.Header.m3.dropdown[2].sub[1]}
+                                  </Link>
+                                </div>
                               </div>
-                            </div>
-                          </Container>
+                            </Col>
+
+                            <Col>
+                              <div class="row">
+                                <div>
+                                  <img className="vl-img" src={vl} />
+                                </div>
+                                <div style={{ marginLeft: "20px" }}>
+                                  <div style={title}>
+                                    {lang.Header.m3.dropdown[3].title}
+                                  </div>
+                                  <Link
+                                    style={trading}
+                                    className="vertical-space"
+                                    to="/login"
+                                  >
+                                    {lang.Header.m3.dropdown[3].sub[0]}
+                                  </Link>
+                                  <Link
+                                    style={trading}
+                                    className="vertical-space"
+                                    to="/register"
+                                  >
+                                    {lang.Header.m3.dropdown[3].sub[1]}
+                                  </Link>
+                                </div>
+                              </div>
+                            </Col>
+                          </div>
                         </div>
                       </div>
                       <div class="dropdown ">
