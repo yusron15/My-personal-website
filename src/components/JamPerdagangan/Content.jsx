@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -34,6 +18,13 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import bg from "../../assets/img/jamperdagangan-header.png";
 import "../../assets/css/main.css";
+
+const text = {
+  // fontWeight: "bold",
+  color: "black",
+  textAlign: "center",
+  fontSize: "1rem"
+};
 
 class Tables extends React.Component {
   render() {
@@ -81,18 +72,17 @@ class Tables extends React.Component {
                         style={{ borderRadius: "20px", marginBottom: "50px" }}
                       >
                         <div>
-                          {/* <Card>
-                      <CardBody>
-                        <div className="table-responsive mb-0"> */}
-                          {/* <Table className="table-pricing"> */}
-                          {/* <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut"> */}
                           <Table
+                            // bordered
+                            className="table-shopping"
                             style={{
-                              borderCollapse: "collapse",
-                              borderRadius: "10px"
+                              backgroundColor: "#224377",
+                              borderRadius: "5px",
+                              borderCollapse: "inherit"
+                              // borderWidth: "0.2px"
                             }}
                           >
-                            <tbody>
+                            <thead>
                               <tr style={{ backgroundColor: "#224377" }}>
                                 <td className="text-white text-center">
                                   <b>{lang.jamperdagangan.table[0][0][0]}</b>
@@ -104,75 +94,105 @@ class Tables extends React.Component {
                                   <b>{lang.jamperdagangan.table[0][0][2]}</b>
                                 </td>
                               </tr>
-                              <tr className="black-newsletter">
-                                <td className="text-center">
+                            </thead>
+                            <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                              <tr>
+                                <td style={text}>
                                   {lang.jamperdagangan.table[0][1][0]}
                                 </td>
-                                <td>{lang.jamperdagangan.table[0][1][1]}</td>
-                                <td>{lang.jamperdagangan.table[0][1][2]}</td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][1][1]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][1][2]}
+                                </td>
                               </tr>
 
-                              <tr className="black-newsletter">
-                                <td className="text-center">
+                              <tr>
+                                <td style={text}>
                                   {lang.jamperdagangan.table[0][2][0]}
                                 </td>
-                                <td>{lang.jamperdagangan.table[0][2][1]}</td>
-                                <td>{lang.jamperdagangan.table[0][2][2]}</td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][2][1]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][2][2]}
+                                </td>
                               </tr>
 
-                              <tr className="black-newsletter">
-                                <td className="text-center">
+                              <tr>
+                                <td style={text}>
                                   {lang.jamperdagangan.table[0][3][0]}
                                 </td>
-                                <td>{lang.jamperdagangan.table[0][3][1]}</td>
-                                <td>{lang.jamperdagangan.table[0][3][2]}</td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][3][1]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][3][2]}
+                                </td>
                               </tr>
 
-                              <tr className="black-newsletter">
-                                <td className="text-center">
+                              <tr>
+                                <td style={text}>
                                   {lang.jamperdagangan.table[0][4][0]}
                                 </td>
-                                <td>{lang.jamperdagangan.table[0][4][1]}</td>
-                                <td>{lang.jamperdagangan.table[0][4][2]}</td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][4][1]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][4][2]}
+                                </td>
                               </tr>
 
-                              <tr className="black-newsletter">
-                                <td className="text-center">
+                              <tr>
+                                <td style={text}>
                                   {lang.jamperdagangan.table[0][5][0]}
                                 </td>
-                                <td>{lang.jamperdagangan.table[0][5][1]}</td>
-                                <td>{lang.jamperdagangan.table[0][5][2]}</td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][5][1]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][5][2]}
+                                </td>
                               </tr>
 
-                              <tr className="black-newsletter">
-                                <td className="text-center">
+                              <tr>
+                                <td style={text}>
                                   {lang.jamperdagangan.table[0][6][0]}
                                 </td>
-                                <td>{lang.jamperdagangan.table[0][6][1]}</td>
-                                <td>{lang.jamperdagangan.table[0][6][1]}</td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][6][1]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][6][1]}
+                                </td>
                               </tr>
 
-                              <tr className="black-newsletter">
-                                <td className="text-center">
+                              <tr>
+                                <td style={text}>
                                   {lang.jamperdagangan.table[0][7][0]}
                                 </td>
-                                <td>{lang.jamperdagangan.table[0][7][1]}</td>
-                                <td>{lang.jamperdagangan.table[0][7][2]}</td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][7][1]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[0][7][2]}
+                                </td>
                               </tr>
                             </tbody>
                           </Table>
-                          {/* </ScrollAnimation> */}
-                          {/* </div>
-                      </CardBody>
-                    </Card> */}
 
-                          {/* <Card>
-                      <CardBody>
-                        <div className="table-responsive mb-0"> */}
-                          {/* <Table className="table-pricing black-newsletter"> */}
-                          {/* <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut"> */}
-                          <Table>
-                            <tbody>
+                          <Table
+                            // bordered
+                            className="table-shopping"
+                            style={{
+                              backgroundColor: "#224377",
+                              borderRadius: "5px",
+                              borderCollapse: "inherit"
+                              // borderWidth: "0.2px"
+                            }}
+                          >
+                            <thead>
                               <tr style={{ backgroundColor: "#224377" }}>
                                 <td className="text-white text-center">
                                   <b>{lang.jamperdagangan.table[1][0][0]}</b>
@@ -187,25 +207,51 @@ class Tables extends React.Component {
                                   <b>{lang.jamperdagangan.table[1][0][3]}</b>
                                 </td>
                               </tr>
-                              <tr className="black-newsletter text-center">
-                                <td>{lang.jamperdagangan.table[1][1][0]}</td>
-                                <td>{lang.jamperdagangan.table[1][1][1]}</td>
-                                <td>{lang.jamperdagangan.table[1][1][2]}</td>
-                                <td>{lang.jamperdagangan.table[1][1][3]}</td>
+                            </thead>
+                            <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                              <tr>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[1][1][0]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[1][1][1]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[1][1][2]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[1][1][3]}
+                                </td>
                               </tr>
 
-                              <tr className="black-newsletter text-center">
-                                <td>{lang.jamperdagangan.table[1][2][0]}</td>
-                                <td>{lang.jamperdagangan.table[1][2][1]}</td>
-                                <td>{lang.jamperdagangan.table[1][2][2]}</td>
-                                <td>{lang.jamperdagangan.table[1][2][3]}</td>
+                              <tr>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[1][2][0]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[1][2][1]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[1][2][2]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[1][2][3]}
+                                </td>
                               </tr>
 
-                              <tr className="black-newsletter text-center">
-                                <td>{lang.jamperdagangan.table[1][3][0]}</td>
-                                <td>{lang.jamperdagangan.table[1][3][1]}</td>
-                                <td>{lang.jamperdagangan.table[1][3][2]}</td>
-                                <td>{lang.jamperdagangan.table[1][3][3]}</td>
+                              <tr>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[1][3][0]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[1][3][1]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[1][3][2]}
+                                </td>
+                                <td style={text}>
+                                  {lang.jamperdagangan.table[1][3][3]}
+                                </td>
                               </tr>
                             </tbody>
                           </Table>

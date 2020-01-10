@@ -386,14 +386,14 @@ class ColorNavbar extends React.Component {
                                       className="vertical-space"
                                       to="/cfd"
                                     >
-                                      {lang.Header.m3.dropdown[0].sub[3]}
+                                      {lang.Header.m3.dropdown[0].sub[2]}
                                     </Link>
                                     <Link
                                       style={trading}
                                       className="vertical-space"
                                       to="/komoditi"
                                     >
-                                      {lang.Header.m3.dropdown[0].sub[2]}
+                                      {lang.Header.m3.dropdown[0].sub[3]}
                                     </Link>
                                   </Col>
                                   <Col style={{ minWidth: "10vw" }}>

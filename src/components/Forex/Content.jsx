@@ -217,14 +217,6 @@ class Features extends React.Component {
                                   </tr>
                                 </thead>
                                 <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                                  {/* <thead>
-                                    <tr>
-                                      <th>Cross Currency Pairs</th>
-                                      <th>Nickname</th>
-                                      <th>Tick Value</th>
-                                      <th>Contract Size</th>
-                                    </tr>
-                                  </thead> */}
                                   <tr>
                                     <td style={text}>EUR / USD</td>
                                     <td style={text}>Euro</td>

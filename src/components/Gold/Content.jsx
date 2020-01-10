@@ -48,6 +48,12 @@ const intermezzo = {
   color: "black",
   fontSize: "1rem"
 };
+const text = {
+  // fontWeight: "bold",
+  color: "black",
+  textAlign: "center",
+  fontSize: "1rem"
+};
 
 class Features extends React.Component {
   render() {
@@ -105,8 +111,17 @@ class Features extends React.Component {
                               </a>
                             </div>
                             <div style={{ marginTop: "30px" }}>
-                              <Table>
-                                <tbody>
+                              <Table
+                                // bordered
+                                className="table-shopping"
+                                style={{
+                                  backgroundColor: "#224377",
+                                  borderRadius: "5px",
+                                  borderCollapse: "inherit"
+                                  // borderWidth: "0.2px"
+                                }}
+                              >
+                                <thead>
                                   <tr style={{ backgroundColor: "#224377" }}>
                                     <td className="text-white">
                                       <b>Product</b>
@@ -115,21 +130,24 @@ class Features extends React.Component {
                                       <b>LLG</b>
                                     </td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td>Contract Size</td>
-                                    <td>100 Troy Ounces</td>
+                                </thead>
+
+                                <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                                  <tr>
+                                    <td style={text}>Contract Size</td>
+                                    <td style={text}>100 Troy Ounces</td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td>Fixed Exchanged Rate </td>
-                                    <td>USD 1.00 = Rp. 10,000-</td>
+                                  <tr>
+                                    <td style={text}>Fixed Exchanged Rate </td>
+                                    <td style={text}>USD 1.00 = Rp. 10,000-</td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td>Minimum Tick </td>
-                                    <td>10 cents</td>
+                                  <tr>
+                                    <td style={text}>Minimum Tick </td>
+                                    <td style={text}>10 cents</td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td>Value Per 10 Cents </td>
-                                    <td>Rp. 100,000</td>
+                                  <tr>
+                                    <td style={text}>Value Per 10 Cents </td>
+                                    <td style={text}>Rp. 100,000</td>
                                   </tr>
                                 </tbody>
                               </Table>
