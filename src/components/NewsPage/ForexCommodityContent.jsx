@@ -17,7 +17,7 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
 import bg from "../../assets/img/header-forexcommodity.png";
 import Footer from "../Footers/Footer";
 import "../../assets/css/main.css";
-import Content from "../RelatedPost/Layout";
+import Content from "../RelatedPost/LayoutForexCommodity";
 import NewsTicker from "./NewsTicker";
 
 import fc1 from "../../assets/img/fc1.png";

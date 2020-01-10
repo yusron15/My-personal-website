@@ -19,7 +19,7 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
 import bg from "../../assets/img/header-marketoutlook.png";
 import Footer from "../Footers/Footer";
 import "../../assets/css/main.css";
-import Content from "../RelatedPost/Layout";
+import Content from "../RelatedPost/LayoutMarketOutlook";
 import news1 from "../../assets/img/marketoutlook1.png";
 import news2 from "../../assets/img/marketoutlook2.png";
 import news3 from "../../assets/img/marketoutlook3.png";

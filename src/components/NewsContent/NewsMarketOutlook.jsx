@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 // nodejs library that concatenates classes
 import classnames from "classnames";
@@ -40,13 +24,20 @@ import {
 } from "reactstrap";
 import Radium, { StyleRoot } from "radium";
 import { fadeIn } from "react-animations";
+import Comment from "../Comments/Comment";
 
 import "../../../src/App.css";
 import ScrollAnimation from "react-animate-on-scroll";
+import Content from "../RelatedPost/Layout";
+
 import marketoutlook from "../../assets/img/marketoutlook1.png";
 import ColoredNavbar from "../Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "components/Navbars/BlurryNavbar";
-
+import news1 from "../../assets/img/marketoutlook1.png";
+import news2 from "../../assets/img/marketoutlook2.png";
+import news3 from "../../assets/img/marketoutlook3.png";
+import news4 from "../../assets/img/marketoutlook4.png";
+import news5 from "../../assets/img/makretoutlook5.png";
 import "../../assets/css/main.css";
 
 const styles = {
@@ -228,6 +219,33 @@ class NewsMarketOutlook extends React.Component {
                   </Row>
                 </div>
               </Container>
+
+              <Comment />
+
+              <h3 className="title text-center font-black">Related Post</h3>
+
+              <div style={{ marginTop: "20px" }}>
+                <Content
+                  image={news2}
+                  title="SoftBank Lanjutkan Penawaran Tender Saham WeWork"
+                  posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
+                  description="  Pasar Saham Asia membuat kenaikan pada hari Senin  karena investor bersiap di minggu ini untukkemungkinan komentar yang saling bertentangan mengenai perang perdagangan China-AS, sementara kinerja yang unggul dari data ekonomi AS baru-baru ini membuat dolar menguat terhadap rekan-rekannya.  Indeks MSCI dari saham Asia Pasifik di luar Jepang  melambung 0,26%, setelah kehilangan 0,4% minggu lalu. Nikkei Jepang menguat 0,8% di awal perdagangan,  sementara saham Australia naik 0,5%. Kontrak berjangka E-Mini untuk S&P 500 bertambah 0,2%. Pada hari Sabtu, penasihat keamanan nasional AS Robert O’Brien mengatakan perjanjian perdagangan awal dengan China masih mungkin dilakukan pada akhir tahun ini, tetapi memperingatkan Washington tidak akan menutup mata terhadap apa yang terjadi di Hong Kong. Komentar itu menambah kekhawatiran bahwa tindakan keras China terhadap protes anti-pemerintah di Hong Kong dapat semakin memperumit pembicaraan."
+                />
+
+                <Content
+                  image={news3}
+                  title="Pasar Saham Asia Pulih Dari Level Rendah"
+                  posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
+                  description="  Pasar Saham Asia membuat kenaikan pada hari Senin  karena investor bersiap di minggu ini untukkemungkinan komentar yang saling bertentangan mengenai perang perdagangan China-AS, sementara kinerja yang unggul dari data ekonomi AS baru-baru ini membuat dolar menguat terhadap rekan-rekannya.  Indeks MSCI dari saham Asia Pasifik di luar Jepang  melambung 0,26%, setelah kehilangan 0,4% minggu lalu. Nikkei Jepang menguat 0,8% di awal perdagangan,  sementara saham Australia naik 0,5%. Kontrak berjangka E-Mini untuk S&P 500 bertambah 0,2%. Pada hari Sabtu, penasihat keamanan nasional AS Robert O’Brien mengatakan perjanjian perdagangan awal dengan China masih mungkin dilakukan pada akhir tahun ini, tetapi memperingatkan Washington tidak akan menutup mata terhadap apa yang terjadi di Hong Kong. Komentar itu menambah kekhawatiran bahwa tindakan keras China terhadap protes anti-pemerintah di Hong Kong dapat semakin memperumit pembicaraan."
+                />
+
+                <Content
+                  image={news4}
+                  title="China Undang AS Untuk Bicara di Beijing"
+                  posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
+                  description="Kontrak Futures AS turun sedikit karena ketegangan perdagangan tetap menjadi fokus setelah laporan bahwa China telah mengundang Washington untuk melakukan pembicaraan tat.."
+                />
+              </div>
               <div className="space-50" />
               <div className="space-50" />
             </div>

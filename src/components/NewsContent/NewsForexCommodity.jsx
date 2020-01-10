@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -33,6 +17,7 @@ import NewsLetter from "../NewsLetter/NewsLetter";
 import RelatedPost from "../RelatedPost/Content";
 
 import Layout from "../RelatedPost/Layout";
+import Comment from "../Comments/Comment";
 
 import fc1 from "../../assets/img/fc1.png";
 import fc2 from "../../assets/img/fc2.png";
@@ -117,8 +102,10 @@ class NewsForexCommodity extends React.Component {
                   </Row>
                 </Col>
               </Row>
+              <Comment />
+              <h3 className="title text-center font-black">Related Post</h3>
             </Container>
-            <div style={{ marginTop: "150px" }}>
+            <div style={{ marginTop: "20px" }}>
               <Layout
                 image={fc2}
                 title="Yen Menguat Seiring Permintaan Safe Haven Atas Kekhawatiran Hubungan AS dan China"

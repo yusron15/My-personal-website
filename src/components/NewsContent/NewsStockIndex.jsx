@@ -114,7 +114,6 @@ class NewsStockIndex extends React.Component {
               </Row>
             </Container>
             <Comment />
-            {/* <div className="title title-header-black">Related Post </div> */}
             <h3 className="title text-center font-black">Related Post</h3>
 
             <div style={{ marginTop: "20px" }}>
