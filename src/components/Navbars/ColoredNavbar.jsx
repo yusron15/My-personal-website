@@ -61,10 +61,15 @@ const trading = {
 };
 
 const newstext = {
-  fontSize: "1rem",
+  // fontSize: "1rem",
+  // color: "black",
+  // marginBottom: "10px",
+  // textAlign: "left"
+  fontSize: "15px",
+  // fontWeight: "bold",
   color: "black",
-  // marginTop: "20px",
-  marginBottom: "10px",
+  marginTop: "20px",
+  // marginBottom: "10px",
   textAlign: "left"
 };
 
@@ -481,13 +486,8 @@ class ColorNavbar extends React.Component {
                         </div>
                       </div>
 
+                      {/* BERITA */}
                       <div class="dropdown ">
-                        {/* <Link
-                          to="/newspage"
-                          // onClick={() => {
-                          //   this.toggle("2");
-                          // }}
-                        > */}
                         <div class="dropdown">
                           <button
                             class="dropbtn"
@@ -504,21 +504,15 @@ class ColorNavbar extends React.Component {
                           >
                             {lang.Header.m4.title}
                           </button>
-                          <div class="dropdown-content-news">
-                            <Container>
-                              <div
-                                class="row"
-                                style={{
-                                  justifyContent: "space-around"
-                                }}
-                              >
-                                <div>
-                                  <Col style={{ paddingTop: "20px" }}>
-                                    <Link
-                                      as={NavLink}
-                                      to="/newspage"
-                                      className="underlined"
-                                    >
+                          <div class="dropdown-content-news tentang-kami-left">
+                            <div
+                              class="row"
+                              style={{ justifyContent: "space-araound" }}
+                            >
+                              <Col>
+                                <div class="row">
+                                  <div style={{ marginLeft: "50px" }}>
+                                    <Link to="/newspage">
                                       <div style={newstext}>
                                         {lang.Header.m4.dropdown[0].title}
                                       </div>
@@ -529,14 +523,19 @@ class ColorNavbar extends React.Component {
                                         {lang.Header.m4.dropdown[1].title}
                                       </div>
                                     </Link>
-                                  </Col>
+                                  </div>
                                 </div>
-                                <div>
-                                  <img className="vl-img-news" src={vl} />
-                                </div>
+                              </Col>
 
-                                <div>
-                                  <Col style={{ paddingTop: "20px" }}>
+                              <Col>
+                                <div class="row">
+                                  <div>
+                                    <img
+                                      className="vl-img-tentangkami"
+                                      src={vl}
+                                    />
+                                  </div>
+                                  <div style={{ marginLeft: "20px" }}>
                                     <Link to="/forexcommodity">
                                       <div style={newstext}>
                                         {lang.Header.m4.dropdown[2].title}
@@ -547,14 +546,19 @@ class ColorNavbar extends React.Component {
                                         {lang.Header.m4.dropdown[3].title}
                                       </div>
                                     </Link>
-                                  </Col>
+                                  </div>
                                 </div>
-                                <div>
-                                  <img className="vl-img-news" src={vl} />
-                                </div>
+                              </Col>
 
-                                <div style={{ paddingTop: "20px" }}>
-                                  <Col>
+                              <Col>
+                                <div class="row">
+                                  <div>
+                                    <img
+                                      className="vl-img-tentangkami"
+                                      src={vl}
+                                    />
+                                  </div>
+                                  <div style={{ marginLeft: "20px" }}>
                                     <Link to="/marketoutlook">
                                       <div style={newstext}>
                                         {lang.Header.m4.dropdown[4].title}
@@ -566,13 +570,12 @@ class ColorNavbar extends React.Component {
                                         {lang.Header.m4.dropdown[5].title}
                                       </div>
                                     </Link>
-                                  </Col>
+                                  </div>
                                 </div>
-                              </div>
-                            </Container>
+                              </Col>
+                            </div>
                           </div>
                         </div>
-                        {/* </Link> */}
                       </div>
 
                       <Link to="/edukasi">

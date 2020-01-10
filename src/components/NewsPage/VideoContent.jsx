@@ -97,7 +97,7 @@ class Blogs extends React.Component {
                             style={{
                               fontSize: "1.2rem",
                               paddingLeft: "10px",
-                              paddingTop: "20px",
+                              paddingTop: "25px",
                               paddingRight: "10px",
                               fontWeight: "bold",
                               height: "80px",
@@ -125,7 +125,7 @@ class Blogs extends React.Component {
                             style={{
                               fontSize: "1.2rem",
                               paddingLeft: "10px",
-                              paddingTop: "20px",
+                              paddingTop: "25px",
                               paddingRight: "10px",
                               fontWeight: "bold",
                               height: "80px",
@@ -154,7 +154,7 @@ class Blogs extends React.Component {
                             style={{
                               fontSize: "1.2rem",
                               paddingLeft: "10px",
-                              paddingTop: "20px",
+                              paddingTop: "25px",
                               paddingRight: "10px",
                               fontWeight: "bold",
                               height: "80px",

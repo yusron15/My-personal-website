@@ -220,8 +220,7 @@ class NewsPage extends React.Component {
           <NewsTicker />
           <Content />
 
-          {/* 
-          <TabContent activeTab={"project" + this.state.activeTab}>
+          {/* <TabContent activeTab={"project" + this.state.activeTab}>
             <TabPane tabId="project1">
               <Content />
             </TabPane>

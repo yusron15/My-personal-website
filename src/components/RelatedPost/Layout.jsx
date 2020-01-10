@@ -93,7 +93,8 @@ class Content extends React.Component {
                       {`${description.substring(0, 190)} `}
                       <br />
                       <Link
-                        to={`/newspage/${title}`}
+                        // to={`/newspage/${title}`}
+                        to="/stockindexinside"
                         state={{
                           data: {
                             title,

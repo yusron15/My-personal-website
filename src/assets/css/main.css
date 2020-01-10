@@ -49,13 +49,25 @@
 }
 
 .tentang-kami-left {
-  left:-38vw;
+  left: -37.6vw;
 }
 
 .dropdown-content-news {
 
-
   position: absolute;
+  background-color: #fff7f7;
+  opacity: 0.98;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+  z-index: 1;
+  left: -57.8vw;  
+  width: 100vw;
+  display: none;
+  justify-content: space-around;
+  height: 120px;
+  align-items: center;
+
+  /* position: absolute;
   background-color: #fff7f7;
   opacity: 0.98;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -66,7 +78,7 @@
   display: none;
   justify-content: space-around;
   height: 120px;
-  align-items: center;
+  align-items: center; */
 }
 
 .trading-online {
@@ -153,6 +165,14 @@
   margin-top:12%;
 }
 
+.title-header-black {
+  text-align: center;
+  font-style: Helvetica Bold;
+  font-size: 2rem;
+  color: black;
+  /* margin-top:12%; */
+}
+
 .background-black {
   background-color: "black";
 }
@@ -228,7 +248,7 @@
 }
 
 .dropdown:hover .dropdown-content-news {
-  display: flex;
+  display: block;
   transform: translateY(0);
 }
 

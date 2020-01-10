@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 // ReactJS plugin for a nice carousel
 import Slick from "react-slick";
@@ -38,6 +22,12 @@ import {
 // core components
 import ColorNavbar from "components/Navbars/ColorNavbar.jsx";
 import DemoFooter from "components/Footers/DemoFooter.jsx";
+import "../../assets/css/main.css";
+
+const textComment = {
+  color: "black",
+  textALign: "justify"
+};
 
 class Comment extends React.Component {
   render() {
@@ -48,7 +38,7 @@ class Comment extends React.Component {
             <Row>
               <Col className="ml-auto mr-auto" md="8">
                 <div className="media-area">
-                  <h3 className="title text-center">3 Comments</h3>
+                  <h3 className="title text-center font-black">3 Comments</h3>
                   <Media>
                     <a
                       className="pull-left"
@@ -63,22 +53,20 @@ class Comment extends React.Component {
                         />
                       </div>
                     </a>
-                    <Media body>
-                      <Media heading tag="h5">
+                    <Media body className=" font-black">
+                      <Media heading tag="h5" className="font-black">
                         Tina Andrew{" "}
-                        <small className="text-muted">· 7 minutes ago</small>
+                        <small className="text-muted">· 2 Days Ago</small>
                       </Media>
-                      <p>
+                      <div style={{ color: "black", textAlign: "justify" }}>
                         Chance too good. God level bars. I'm so proud of
                         @LifeOfDesiigner #1 song in the country. Panda! Don't be
                         scared of the truth because we need to restart the human
                         foundation in truth I stand with the most humility. We
-                        are so blessed!
-                      </p>
-                      <p>
-                        All praises and blessings to the families of people who
-                        never gave up on dreams. Don't forget, You're Awesome!
-                      </p>
+                        are so blessed! All praises and blessings to the
+                        families of people who never gave up on dreams. Don't
+                        forget, You're Awesome!
+                      </div>
                       <div className="media-footer">
                         <Button
                           className="btn-simple pull-right"
@@ -123,16 +111,21 @@ class Comment extends React.Component {
                       </div>
                     </a>
                     <Media body>
-                      <Media heading tag="h5">
+                      <Media heading tag="h5" style={textComment}>
                         John Camber{" "}
-                        <small className="text-muted">· Yesterday</small>
+                        <small className="text-muted" className="font-black">
+                          · Yesterday
+                        </small>
                       </Media>
-                      <p>
-                        Hello guys, nice to have you on the platform! There will
-                        be a lot of great stuff coming soon. We will keep you
-                        posted for the latest news.
-                      </p>
-                      <p>Don't forget, You're Awesome!</p>
+                      <div style={{ color: "black", textAlign: "justify" }}>
+                        Chance too good. God level bars. I'm so proud of
+                        @LifeOfDesiigner #1 song in the country. Panda! Don't be
+                        scared of the truth because we need to restart the human
+                        foundation in truth I stand with the most humility. We
+                        are so blessed! All praises and blessings to the
+                        families of people who never gave up on dreams. Don't
+                        forget, You're Awesome!
+                      </div>
                       <div className="media-footer">
                         <Button
                           className="btn-simple pull-right"
@@ -175,16 +168,19 @@ class Comment extends React.Component {
                           </div>
                         </a>
                         <Media body>
-                          <Media heading tag="h5">
+                          <Media heading tag="h5" className="font-black">
                             Tina Andrew{" "}
                             <small className="text-muted">· 2 Days Ago</small>
                           </Media>
-                          <p>
-                            Hello guys, nice to have you on the platform! There
-                            will be a lot of great stuff coming soon. We will
-                            keep you posted for the latest news.
-                          </p>
-                          <p>Don't forget, You're Awesome!</p>
+                          <div style={{ color: "black", textAlign: "justify" }}>
+                            Chance too good. God level bars. I'm so proud of
+                            @LifeOfDesiigner #1 song in the country. Panda!
+                            Don't be scared of the truth because we need to
+                            restart the human foundation in truth I stand with
+                            the most humility. We are so blessed! All praises
+                            and blessings to the families of people who never
+                            gave up on dreams. Don't forget, You're Awesome!
+                          </div>
                           <div className="media-footer">
                             <Button
                               className="btn-simple pull-right"
@@ -217,7 +213,9 @@ class Comment extends React.Component {
                     </Media>
                   </Media>
                 </div>
-                <h3 className="title text-center">Post your comment</h3>
+                <h3 className="title text-center font-black">
+                  Post your comment
+                </h3>
                 <Media className="media-post">
                   <a
                     className="pull-left author"

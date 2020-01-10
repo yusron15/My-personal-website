@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -37,6 +21,7 @@ import RelatedPost from "../RelatedPost/Content";
 import Content from "../RelatedPost/Layout";
 import Comment from "../Comments/Comment";
 import ReadMoreReact from "read-more-react";
+// import Comment from "../../components/Comments/Comment";
 
 import news1 from "../../assets/img/newscontent1.png";
 import news2 from "../../assets/img/newscontent2.png";
@@ -128,8 +113,11 @@ class NewsStockIndex extends React.Component {
                 </Col>
               </Row>
             </Container>
+            <Comment />
+            {/* <div className="title title-header-black">Related Post </div> */}
+            <h3 className="title text-center font-black">Related Post</h3>
 
-            <div style={{ marginTop: "150px" }}>
+            <div style={{ marginTop: "20px" }}>
               <Content
                 image={news2}
                 title="SoftBank Lanjutkan Penawaran Tender Saham WeWork"

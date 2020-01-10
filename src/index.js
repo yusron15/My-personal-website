@@ -73,6 +73,7 @@ import ForexCommodity from "./components/NewsPage/ForexCommodityContent";
 import VideoContent from "./components/NewsPage/VideoContent";
 import EconomicCalendar from "./components/NewsPage/EconomicCalendarContent";
 import MarketOutlook from "./components/NewsPage/MarketOutlookContent";
+import StockIndexInside from "./components/NewsPage/StockIndexInside";
 
 //
 import "animate.css/animate.min.css";
@@ -178,6 +179,10 @@ class App extends Component {
                 <Route
                   path="/stockindex"
                   render={props => <StockIndex {...props} />}
+                />
+                <Route
+                  path="/stockindexinside"
+                  render={props => <StockIndexInside {...props} />}
                 />
                 <Route
                   path="/ForexCommodity"
