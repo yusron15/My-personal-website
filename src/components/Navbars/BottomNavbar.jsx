@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { slideInDown } from "react-animations";
 import { Link } from "react-router-dom";
@@ -92,7 +76,7 @@ class BottomNavbar extends React.Component {
       containerStyle: {
         position: this.state.position,
         backgroundImage:
-          "url(" + require("assets/img/bg-bottom-navbar.png") + ")"
+          "url(" + require("assets/img/ebook-background.png") + ")"
       }
     };
     const EbookShow = this.state.position;

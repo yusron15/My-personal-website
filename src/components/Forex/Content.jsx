@@ -47,6 +47,20 @@ const intermezzo = {
   color: "black"
 };
 
+const titleTable = {
+  fontWeight: "bold",
+  color: "white",
+  textAlign: "center",
+  fontSize: "1rem"
+};
+
+const text = {
+  // fontWeight: "bold",
+  color: "black",
+  textAlign: "center",
+  fontSize: "1rem"
+};
+
 class Features extends React.Component {
   render() {
     return (
@@ -179,9 +193,18 @@ class Features extends React.Component {
                                 {lang.Forex.content[3].title}
                               </div>
 
-                              <Table style={{ marginTop: "20px" }}>
-                                <tbody>
-                                  <tr style={{ backgroundColor: "#224377" }}>
+                              <Table
+                                // bordered
+                                className="table-shopping"
+                                style={{
+                                  backgroundColor: "#224377",
+                                  borderRadius: "5px",
+                                  borderCollapse: "inherit"
+                                  // borderWidth: "0.2px"
+                                }}
+                              >
+                                <thead>
+                                  <tr>
                                     <td className="text-white">
                                       <b>Cross Currency Pairs </b>
                                     </td>
@@ -192,40 +215,50 @@ class Features extends React.Component {
                                       <b>Contract Size </b>
                                     </td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td>EUR / USD</td>
-                                    <td>Euro</td>
-                                    <td>EUR 100,000</td>
+                                </thead>
+                                <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                                  {/* <thead>
+                                    <tr>
+                                      <th>Cross Currency Pairs</th>
+                                      <th>Nickname</th>
+                                      <th>Tick Value</th>
+                                      <th>Contract Size</th>
+                                    </tr>
+                                  </thead> */}
+                                  <tr>
+                                    <td style={text}>EUR / USD</td>
+                                    <td style={text}>Euro</td>
+                                    <td style={text}>EUR 100,000</td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td>USD / JPY </td>
-                                    <td> Japanese Yen</td>
-                                    <td>USD 100,000 </td>
+                                  <tr>
+                                    <td style={text}>USD / JPY </td>
+                                    <td style={text}> Japanese Yen</td>
+                                    <td style={text}>USD 100,000 </td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td> GBP / USD</td>
-                                    <td> Poundsterling</td>
-                                    <td> GBP 100,000</td>
+                                  <tr>
+                                    <td style={text}> GBP / USD</td>
+                                    <td style={text}> Poundsterling</td>
+                                    <td style={text}> GBP 100,000</td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td> USD / CHF</td>
-                                    <td> Swiss Franc</td>
-                                    <td> USD 100,000</td>
+                                  <tr>
+                                    <td style={text}> USD / CHF</td>
+                                    <td style={text}> Swiss Franc</td>
+                                    <td style={text}> USD 100,000</td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td> AUD / USD</td>
-                                    <td> Australian Dollar</td>
-                                    <td> AUD 100,000</td>
+                                  <tr>
+                                    <td style={text}> AUD / USD</td>
+                                    <td style={text}> Australian Dollar</td>
+                                    <td style={text}> AUD 100,000</td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td> NZD / USD</td>
-                                    <td> New Zealand Dollar</td>
-                                    <td> NZD 100,000</td>
+                                  <tr>
+                                    <td style={text}> NZD / USD</td>
+                                    <td style={text}> New Zealand Dollar</td>
+                                    <td style={text}> NZD 100,000</td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td>USD / CAD </td>
-                                    <td> Canadian Dollar</td>
-                                    <td>USD 100,000 </td>
+                                  <tr>
+                                    <td style={text}>USD / CAD </td>
+                                    <td style={text}> Canadian Dollar</td>
+                                    <td style={text}>USD 100,000 </td>
                                   </tr>
                                 </tbody>
                               </Table>
@@ -236,8 +269,17 @@ class Features extends React.Component {
                                 {lang.Forex.content[4].title}
                               </div>
 
-                              <Table style={{ marginTop: "20px" }}>
-                                <tbody>
+                              <Table
+                                // bordered
+                                className="table-shopping"
+                                style={{
+                                  backgroundColor: "#224377",
+                                  borderRadius: "5px",
+                                  borderCollapse: "inherit"
+                                  // borderWidth: "0.2px"
+                                }}
+                              >
+                                <thead>
                                   <tr style={{ backgroundColor: "#224377" }}>
                                     <td className="text-white">
                                       <b>Cross Currency Pairs </b>
@@ -249,30 +291,39 @@ class Features extends React.Component {
                                       <b>Contract Size </b>
                                     </td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td>EURGBP</td>
-                                    <td>Euro / British Pound </td>
-                                    <td>EUR 100,000</td>
+                                </thead>
+
+                                <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                                  <tr>
+                                    <td style={text}>EURGBP</td>
+                                    <td style={text}>Euro / British Pound </td>
+                                    <td style={text}>EUR 100,000</td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td>EURJPY</td>
-                                    <td>Euro / Japanese Yen </td>
-                                    <td>EUR 100,000</td>
+                                  <tr>
+                                    <td style={text}>EURJPY</td>
+                                    <td style={text}>Euro / Japanese Yen </td>
+                                    <td style={text}>EUR 100,000</td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td>GBPJPY</td>
-                                    <td>British Pound / Japanese Yen</td>
-                                    <td>GBP 100,000</td>
+                                  <tr>
+                                    <td style={text}>GBPJPY</td>
+                                    <td style={text}>
+                                      British Pound / Japanese Yen
+                                    </td>
+                                    <td style={text}>GBP 100,000</td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td>CHFJPY</td>
-                                    <td>Swiss Franc / Japanese Yen</td>
-                                    <td>CHF 100,000</td>
+                                  <tr>
+                                    <td style={text}>CHFJPY</td>
+                                    <td style={text}>
+                                      Swiss Franc / Japanese Yen
+                                    </td>
+                                    <td style={text}>CHF 100,000</td>
                                   </tr>
-                                  <tr className="black-newsletter">
-                                    <td>AUDJPY</td>
-                                    <td>Australian Dollar / Japanese Yen</td>
-                                    <td>AUD 100,000</td>
+                                  <tr>
+                                    <td style={text}>AUDJPY</td>
+                                    <td style={text}>
+                                      Australian Dollar / Japanese Yen
+                                    </td>
+                                    <td style={text}>AUD 100,000</td>
                                   </tr>
                                 </tbody>
                               </Table>
