@@ -203,7 +203,7 @@ class BottomNavbar extends React.Component {
           >
             <div
               style={{
-                margin: "10px 10px 10px 10px"
+                margin: "15px 10px 10px 10px"
               }}
             >
               <Col className="ml-auto mr-auto" md="11">

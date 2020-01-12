@@ -71,15 +71,99 @@ const newstext = {
   // marginBottom: "10px",
   textAlign: "left"
 };
+
+class DropdownTentangKami extends React.Component {
+  render() {
+    return (
+      <LangContext.Consumer>
+        {({ lang }) => {
+          return (
+            <div
+              className="broken-white"
+              style={{
+                position: "absolute",
+                justifyContent: "flex-around",
+                minWidth: "100vw",
+                height: "140px"
+              }}
+            >
+              {/* kontol */}
+              <Row>
+                <Col>
+                  <div class="row">
+                    <div>
+                      <Link
+                        style={tentangkami}
+                        className="vertical-space"
+                        to="/tentangkami"
+                      >
+                        {lang.Header.m2.dropdown[0].title}
+                      </Link>
+                    </div>
+                  </div>
+                </Col>
+                <Col>
+                  <div class="row">
+                    <div>
+                      <Link
+                        style={tentangkami}
+                        className="vertical-space"
+                        to="/tentangkami"
+                      >
+                        {lang.Header.m2.dropdown[0].title}
+                      </Link>
+                    </div>
+                  </div>
+                </Col>
+                <Col>
+                  <div class="row">
+                    <div>
+                      <Link
+                        style={tentangkami}
+                        className="vertical-space"
+                        to="/tentangkami"
+                      >
+                        {lang.Header.m2.dropdown[0].title}
+                      </Link>
+                    </div>
+                  </div>
+                </Col>
+                <Col>
+                  <div class="row">
+                    <div>
+                      <Link
+                        style={tentangkami}
+                        className="vertical-space"
+                        to="/tentangkami"
+                      >
+                        {lang.Header.m2.dropdown[0].title}
+                      </Link>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          );
+        }}
+      </LangContext.Consumer>
+    );
+  }
+}
+
 class ColorNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      childVisible: false,
       backgroundColor: "broken-white",
       marginTop: "50px",
       color: "black",
       activeTab: "1"
     };
+  }
+
+  onClick() {
+    this.setState({ childVisible: !this.state.childVisible });
   }
 
   toggle = tab => {
@@ -175,9 +259,7 @@ class ColorNavbar extends React.Component {
         {({ lang }) => {
           return (
             <>
-              {/* <BlurryNavbar /> */}
-              <Navbar
-                // className={`fixed-top  + ${this.state.navbarColor}`}
+              <Container
                 className={`fixed-top  + ${
                   this.props.navbarColor === "black"
                     ? "black-newsletter"
@@ -186,58 +268,75 @@ class ColorNavbar extends React.Component {
                 expand="lg"
                 style={containerStyle}
               >
-                <Container>
-                  <div className="navbar-translate">
-                    <NavbarBrand
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      {/* <Link to="/landing"> */}
-                      <img
-                        src={logo}
-                        style={{ height: "7vh", width: "auto" }}
-                      />
-                      {/* TGF */}
-                      {/* </Link> */}
-                    </NavbarBrand>
-                    <button
-                      className="navbar-toggler"
-                      id="example-navbar-transparent"
-                    >
-                      <span className="navbar-toggler-bar bar1" />
-                      <span className="navbar-toggler-bar bar2" />
-                      <span className="navbar-toggler-bar bar3" />
-                    </button>
-                  </div>
-                  <UncontrolledCollapse
-                    navbar
-                    toggler="#example-navbar-transparent"
-                  >
-                    <Nav
-                      className="nav-pills-info nav-pills-icons nav-pills-lg ml-auto"
-                      pills
-                      role="tablist"
+                {/* <BlurryNavbar /> */}
+                <Navbar
+                  className={`fixed-top  + ${
+                    this.props.navbarColor === "black"
+                      ? "black-newsletter"
+                      : "broken-white"
+                  }`}
+                  expand="lg"
+                  style={containerStyle}
+                >
+                  <Container>
+                    <div className="navbar-translate">
+                      <NavbarBrand
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                      >
+                        {/* <Link to="/landing"> */}
+                        <img
+                          src={logo}
+                          style={{ height: "7vh", width: "auto" }}
+                        />
+                        {/* TGF */}
+                        {/* </Link> */}
+                      </NavbarBrand>
+                      <button
+                        className="navbar-toggler"
+                        id="example-navbar-transparent"
+                      >
+                        <span className="navbar-toggler-bar bar1" />
+                        <span className="navbar-toggler-bar bar2" />
+                        <span className="navbar-toggler-bar bar3" />
+                      </button>
+                    </div>
+                    <UncontrolledCollapse
                       navbar
+                      toggler="#example-navbar-transparent"
                     >
-                      <Link to="/landing">
-                        <NavItem>
-                          <button
-                            className="dropdown dropbtn"
-                            style={{
-                              color: this.coloringNav("/landing")
-                            }}
-                          >
-                            {lang.Header.m1.title}
-                          </button>
-                        </NavItem>
-                      </Link>
+                      <Nav
+                        className="nav-pills-info nav-pills-icons nav-pills-lg ml-auto"
+                        pills
+                        role="tablist"
+                        navbar
+                      >
+                        <Link to="/landing">
+                          <NavItem>
+                            <button
+                              className="dropdown dropbtn"
+                              style={{
+                                color: this.coloringNav("/landing")
+                              }}
+                            >
+                              {lang.Header.m1.title}
+                            </button>
+                          </NavItem>
+                        </Link>
 
-                      {/* TENTANG KAMI */}
-                      <div class="dropdown ">
-                        <button class="dropbtn" style={colorStyle}>
-                          {lang.Header.m2.title}
-                        </button>
-                        <div class="dropdown-content tentang-kami-left">
+                        {/* TENTANG KAMI */}
+                        <div
+                          class="dropdown "
+                          style={colorStyle}
+                          // onMouseEnter={() => this.onClick()}
+                        >
+                          <button class="dropbtn" style={colorStyle}>
+                            {lang.Header.m2.title}
+                          </button>
+                          {/* {this.state.childVisible ? (
+                            <DropdownTentangKami />
+                          ) : null} */}
+                          <div class="dropdown-content tentang-kami-left">
                           <div
                             class="row"
                             style={{ justifyContent: "space-araound" }}
@@ -248,7 +347,7 @@ class ColorNavbar extends React.Component {
                                   <Link
                                     style={tentangkami}
                                     className="vertical-space"
-                                    to="/tentangkami"
+                                    to="/tentang-kami"
                                   >
                                     {lang.Header.m2.dropdown[0].title}
                                   </Link>
@@ -268,7 +367,7 @@ class ColorNavbar extends React.Component {
                                   <Link
                                     style={tentangkami}
                                     className="vertical-space"
-                                    to="/jamperdagangan"
+                                    to="/jam-perdagangan"
                                   >
                                     {lang.Header.m2.dropdown[1].title}
                                   </Link>
@@ -288,7 +387,7 @@ class ColorNavbar extends React.Component {
                                   <Link
                                     style={tentangkami}
                                     className="vertical-space"
-                                    to="/rekeningterpisah"
+                                    to="/rekening-terpisah"
                                   >
                                     {lang.Header.m2.dropdown[2].title}
                                   </Link>
@@ -317,171 +416,85 @@ class ColorNavbar extends React.Component {
                             </Col>
                           </div>
                         </div>
-                      </div>
-
-                      {/* TRADING ONLINE */}
-                      <div class="dropdown ">
-                        <button class="dropbtn" style={colorStyle}>
-                          {lang.Header.m3.title}
-                        </button>
-                        <div class="dropdown-content-trading trading-online">
-                          <div
-                            class="row"
-                            style={{ justifyContent: "space-araound" }}
-                          >
-                            <Col>
-                              <div style={{ marginLeft: "20px" }}>
-                                <div style={title}>
-                                  {lang.Header.m3.dropdown[0].title}
-                                </div>
-                                <Row>
-                                  <Col>
-                                    <Link
-                                      style={trading}
-                                      className="vertical-space"
-                                      to="/forex"
-                                    >
-                                      {lang.Header.m3.dropdown[0].sub[0]}
-                                    </Link>
-                                    <Link
-                                      style={trading}
-                                      className="vertical-space"
-                                      to="/cfd"
-                                    >
-                                      {lang.Header.m3.dropdown[0].sub[1]}
-                                    </Link>
-                                  </Col>
-                                  <Col>
-                                    <Link
-                                      style={trading}
-                                      className="vertical-space"
-                                      to="/komoditi"
-                                    >
-                                      {lang.Header.m3.dropdown[0].sub[3]}
-                                    </Link>
-                                    <Link
-                                      style={trading}
-                                      className="vertical-space"
-                                      to="/gold"
-                                    >
-                                      {lang.Header.m3.dropdown[0].sub[2]}
-                                    </Link>
-                                  </Col>
-                                  <Col style={{ minWidth: "10vw" }}>
-                                    <Link
-                                      style={trading}
-                                      className="vertical-space"
-                                      to="/indexfutures"
-                                    >
-                                      {lang.Header.m3.dropdown[0].sub[4]}
-                                    </Link>
-                                  </Col>
-                                </Row>
-                              </div>
-                            </Col>
-
-                            <Col>
-                              <div class="row">
-                                <div>
-                                  <img className="vl-img" src={vl} />
-                                </div>
-                                <div style={{ marginLeft: "20px" }}>
-                                  <div style={title}>
-                                    {lang.Header.m3.dropdown[1].title}
-                                  </div>
-                                  <Link
-                                    style={trading}
-                                    className="vertical-space"
-                                    to="/jamperdagangan"
-                                  >
-                                    {lang.Header.m3.dropdown[1].sub[0]}
-                                  </Link>
-                                </div>
-                              </div>
-                            </Col>
-
-                            <Col>
-                              <div class="row">
-                                <div>
-                                  <img className="vl-img" src={vl} />
-                                </div>
-                                <div style={{ marginLeft: "20px" }}>
-                                  <div style={title}>
-                                    {lang.Header.m3.dropdown[2].title}
-                                  </div>
-                                  <Link
-                                    style={trading}
-                                    className="vertical-space"
-                                    to="/protrader"
-                                  >
-                                    {lang.Header.m3.dropdown[2].sub[0]}
-                                  </Link>
-                                  <Link
-                                    style={trading}
-                                    className="vertical-space"
-                                    to="/topgrowthtrader"
-                                  >
-                                    {lang.Header.m3.dropdown[2].sub[1]}
-                                  </Link>
-                                </div>
-                              </div>
-                            </Col>
-
-                            <Col>
-                              <div class="row">
-                                <div>
-                                  <img className="vl-img" src={vl} />
-                                </div>
-                                <div style={{ marginLeft: "20px" }}>
-                                  <div style={title}>
-                                    {lang.Header.m3.dropdown[3].title}
-                                  </div>
-                                  <Link
-                                    style={trading}
-                                    className="vertical-space"
-                                    to="/login"
-                                  >
-                                    {lang.Header.m3.dropdown[3].sub[0]}
-                                  </Link>
-                                  <Link
-                                    style={trading}
-                                    className="vertical-space"
-                                    to="/register"
-                                  >
-                                    {lang.Header.m3.dropdown[3].sub[1]}
-                                  </Link>
-                                </div>
-                              </div>
-                            </Col>
-                          </div>
+                   
                         </div>
-                      </div>
 
-                      {/* BERITA */}
-                      <div class="dropdown ">
-                        <div class="dropdown">
+                        {/* TRADING ONLINE */}
+                        <div class="dropdown ">
                           <button class="dropbtn" style={colorStyle}>
-                            {lang.Header.m4.title}
+                            {lang.Header.m3.title}
                           </button>
-
-                          <div class="dropdown-content-news tentang-kami-left">
+                          <div class="dropdown-content-trading trading-online">
                             <div
                               class="row"
                               style={{ justifyContent: "space-araound" }}
                             >
                               <Col>
-                                <div class="row">
-                                  <div style={{ marginLeft: "50px" }}>
-                                    <Link to="/newspage">
-                                      <div style={newstext}>
-                                        {lang.Header.m4.dropdown[0].title}
-                                      </div>
-                                    </Link>
+                                <div style={{ marginLeft: "20px" }}>
+                                  <div style={title}>
+                                    {lang.Header.m3.dropdown[0].title}
+                                  </div>
+                                  <Row>
+                                    <Col>
+                                      <Link
+                                        style={trading}
+                                        className="vertical-space"
+                                        to="/forex"
+                                      >
+                                        {lang.Header.m3.dropdown[0].sub[0]}
+                                      </Link>
+                                      <Link
+                                        style={trading}
+                                        className="vertical-space"
+                                        to="/cfd"
+                                      >
+                                        {lang.Header.m3.dropdown[0].sub[1]}
+                                      </Link>
+                                    </Col>
+                                    <Col>
+                                      <Link
+                                        style={trading}
+                                        className="vertical-space"
+                                        to="/komoditi"
+                                      >
+                                        {lang.Header.m3.dropdown[0].sub[3]}
+                                      </Link>
+                                      <Link
+                                        style={trading}
+                                        className="vertical-space"
+                                        to="/gold"
+                                      >
+                                        {lang.Header.m3.dropdown[0].sub[2]}
+                                      </Link>
+                                    </Col>
+                                    <Col style={{ minWidth: "10vw" }}>
+                                      <Link
+                                        style={trading}
+                                        className="vertical-space"
+                                        to="/index-futures"
+                                      >
+                                        {lang.Header.m3.dropdown[0].sub[4]}
+                                      </Link>
+                                    </Col>
+                                  </Row>
+                                </div>
+                              </Col>
 
-                                    <Link to="/stockindex">
-                                      <div style={newstext}>
-                                        {lang.Header.m4.dropdown[1].title}
-                                      </div>
+                              <Col>
+                                <div class="row">
+                                  <div>
+                                    <img className="vl-img" src={vl} />
+                                  </div>
+                                  <div style={{ marginLeft: "20px" }}>
+                                    <div style={title}>
+                                      {lang.Header.m3.dropdown[1].title}
+                                    </div>
+                                    <Link
+                                      style={trading}
+                                      className="vertical-space"
+                                      to="/jam-perdagangan"
+                                    >
+                                      {lang.Header.m3.dropdown[1].sub[0]}
                                     </Link>
                                   </div>
                                 </div>
@@ -490,21 +503,25 @@ class ColorNavbar extends React.Component {
                               <Col>
                                 <div class="row">
                                   <div>
-                                    <img
-                                      className="vl-img-tentangkami"
-                                      src={vl}
-                                    />
+                                    <img className="vl-img" src={vl} />
                                   </div>
                                   <div style={{ marginLeft: "20px" }}>
-                                    <Link to="/forexcommodity">
-                                      <div style={newstext}>
-                                        {lang.Header.m4.dropdown[2].title}
-                                      </div>
+                                    <div style={title}>
+                                      {lang.Header.m3.dropdown[2].title}
+                                    </div>
+                                    <Link
+                                      style={trading}
+                                      className="vertical-space"
+                                      to="/pro-trader"
+                                    >
+                                      {lang.Header.m3.dropdown[2].sub[0]}
                                     </Link>
-                                    <Link to="/economiccalendar">
-                                      <div style={newstext}>
-                                        {lang.Header.m4.dropdown[3].title}
-                                      </div>
+                                    <Link
+                                      style={trading}
+                                      className="vertical-space"
+                                      to="/topgrowth-trader"
+                                    >
+                                      {lang.Header.m3.dropdown[2].sub[1]}
                                     </Link>
                                   </div>
                                 </div>
@@ -513,22 +530,25 @@ class ColorNavbar extends React.Component {
                               <Col>
                                 <div class="row">
                                   <div>
-                                    <img
-                                      className="vl-img-tentangkami"
-                                      src={vl}
-                                    />
+                                    <img className="vl-img" src={vl} />
                                   </div>
                                   <div style={{ marginLeft: "20px" }}>
-                                    <Link to="/marketoutlook">
-                                      <div style={newstext}>
-                                        {lang.Header.m4.dropdown[4].title}
-                                      </div>
+                                    <div style={title}>
+                                      {lang.Header.m3.dropdown[3].title}
+                                    </div>
+                                    <Link
+                                      style={trading}
+                                      className="vertical-space"
+                                      to="/login"
+                                    >
+                                      {lang.Header.m3.dropdown[3].sub[0]}
                                     </Link>
-
-                                    <Link to="/videocontent">
-                                      <div style={newstext}>
-                                        {lang.Header.m4.dropdown[5].title}
-                                      </div>
+                                    <Link
+                                      style={trading}
+                                      className="vertical-space"
+                                      to="/register"
+                                    >
+                                      {lang.Header.m3.dropdown[3].sub[1]}
                                     </Link>
                                   </div>
                                 </div>
@@ -536,48 +556,130 @@ class ColorNavbar extends React.Component {
                             </div>
                           </div>
                         </div>
-                      </div>
 
-                      <Link to="/edukasi">
-                        <NavItem>
-                          <button class="dropbtn" style={colorStyle}>
-                            {lang.Header.m5.title}
-                          </button>
-                        </NavItem>
-                      </Link>
+                        {/* BERITA */}
+                        <div class="dropdown ">
+                          <div class="dropdown">
+                            <button class="dropbtn" style={colorStyle}>
+                              {lang.Header.m4.title}
+                            </button>
 
-                      <Link
-                        to="/karir"
-                        style={colorStyle}
+                            <div class="dropdown-content-news tentang-kami-left">
+                              <div
+                                class="row"
+                                style={{ justifyContent: "space-araound" }}
+                              >
+                                <Col>
+                                  <div class="row">
+                                    <div style={{ marginLeft: "50px" }}>
+                                      <Link to="/newspage">
+                                        <div style={newstext}>
+                                          {lang.Header.m4.dropdown[0].title}
+                                        </div>
+                                      </Link>
 
-                        // onClick={() => {
-                        //   this.toggle("4");
-                        // }}
-                      >
-                        <NavItem>
-                          <button class="dropbtn" style={colorStyle}>
-                            {lang.Header.m6.title}
-                          </button>
-                        </NavItem>
-                      </Link>
+                                      <Link to="/stock-index">
+                                        <div style={newstext}>
+                                          {lang.Header.m4.dropdown[1].title}
+                                        </div>
+                                      </Link>
+                                    </div>
+                                  </div>
+                                </Col>
 
-                      <Link
-                        to="/Contact"
+                                <Col>
+                                  <div class="row">
+                                    <div>
+                                      <img
+                                        className="vl-img-tentangkami"
+                                        src={vl}
+                                      />
+                                    </div>
+                                    <div style={{ marginLeft: "20px" }}>
+                                      <Link to="/forex-commodity">
+                                        <div style={newstext}>
+                                          {lang.Header.m4.dropdown[2].title}
+                                        </div>
+                                      </Link>
+                                      <Link to="/economic-calendar">
+                                        <div style={newstext}>
+                                          {lang.Header.m4.dropdown[3].title}
+                                        </div>
+                                      </Link>
+                                    </div>
+                                  </div>
+                                </Col>
 
-                        // onClick={() => {
-                        //   this.toggle("5");
-                        // }}
-                      >
-                        <NavItem>
-                          <button class="dropbtn" style={colorStyle}>
-                            {lang.Header.m7.title}
-                          </button>
-                        </NavItem>
-                      </Link>
-                    </Nav>
-                  </UncontrolledCollapse>
-                </Container>
-              </Navbar>
+                                <Col>
+                                  <div class="row">
+                                    <div>
+                                      <img
+                                        className="vl-img-tentangkami"
+                                        src={vl}
+                                      />
+                                    </div>
+                                    <div style={{ marginLeft: "20px" }}>
+                                      <Link to="/market-outlook">
+                                        <div style={newstext}>
+                                          {lang.Header.m4.dropdown[4].title}
+                                        </div>
+                                      </Link>
+
+                                      <Link to="/video-content">
+                                        <div style={newstext}>
+                                          {lang.Header.m4.dropdown[5].title}
+                                        </div>
+                                      </Link>
+                                    </div>
+                                  </div>
+                                </Col>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <Link to="/edukasi">
+                          <NavItem>
+                            <button class="dropbtn" style={colorStyle}>
+                              {lang.Header.m5.title}
+                            </button>
+                          </NavItem>
+                        </Link>
+
+                        <Link
+                          to="/karir"
+                          style={colorStyle}
+
+                          // onClick={() => {
+                          //   this.toggle("4");
+                          // }}
+                        >
+                          <NavItem>
+                            <button class="dropbtn" style={colorStyle}>
+                              {lang.Header.m6.title}
+                            </button>
+                          </NavItem>
+                        </Link>
+
+                        <Link
+                          to="/contact"
+
+                          // onClick={() => {
+                          //   this.toggle("5");
+                          // }}
+                        >
+                          <NavItem>
+                            <button class="dropbtn" style={colorStyle}>
+                              {lang.Header.m7.title}
+                            </button>
+                          </NavItem>
+                        </Link>
+                      </Nav>
+                    </UncontrolledCollapse>
+                  </Container>
+                </Navbar>
+                {/* {this.state.childVisible ? <DropdownTentangKami /> : null} */}
+              </Container>
             </>
           );
         }}

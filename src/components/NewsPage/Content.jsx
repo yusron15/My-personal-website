@@ -619,7 +619,7 @@ class Carding extends React.Component {
                     <h2 className="title font-black">{lang.berita.outlook}</h2>
                   </Col>
                   <Col md="1">
-                    <Link to="/marketoutlook">
+                    <Link to="/market-outlook">
                   <img style={{
                   paddingTop: "4vh",
                   }} src={right}/>
@@ -711,7 +711,7 @@ class Carding extends React.Component {
                     <h2 className="title font-black">{lang.berita.forex}</h2>
                   </Col>
                   <Col md="1">
-                    <Link to="/forexcommodity">
+                    <Link to="/forex-commodity">
                   <img style={{
                   paddingTop: "4vh",
                   }} src={right}/>
@@ -766,7 +766,7 @@ class Carding extends React.Component {
                     <h2 className="title font-black">{lang.berita.stock}</h2>
                   </Col>
                   <Col md="1">
-                    <Link to="/stockindex">
+                    <Link to="/stock-index">
                   <img style={{
                   paddingTop: "4vh",
                   }} src={right}/>

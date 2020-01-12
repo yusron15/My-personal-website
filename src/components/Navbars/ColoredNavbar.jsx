@@ -239,9 +239,9 @@ class ColorNavbar extends React.Component {
                           class="dropbtn"
                           style={{
                             color: this.coloringNav([
-                              "/tentangkami",
+                              "/tentang-kami",
                               "/cabang",
-                              "/rekeningterpisah",
+                              "/rekening-terpisah",
                               "/legalitas"
                             ])
                           }}
@@ -259,7 +259,7 @@ class ColorNavbar extends React.Component {
                                   <Link
                                     style={tentangkami}
                                     className="vertical-space"
-                                    to="/tentangkami"
+                                    to="/tentang-kami"
                                   >
                                     {lang.Header.m2.dropdown[0].title}
                                   </Link>
@@ -279,7 +279,7 @@ class ColorNavbar extends React.Component {
                                   <Link
                                     style={tentangkami}
                                     className="vertical-space"
-                                    to="/jamperdagangan"
+                                    to="/jam-perdagangan"
                                   >
                                     {lang.Header.m2.dropdown[1].title}
                                   </Link>
@@ -299,7 +299,7 @@ class ColorNavbar extends React.Component {
                                   <Link
                                     style={tentangkami}
                                     className="vertical-space"
-                                    to="/rekeningterpisah"
+                                    to="/rekening-terpisah"
                                   >
                                     {lang.Header.m2.dropdown[2].title}
                                   </Link>
@@ -400,7 +400,7 @@ class ColorNavbar extends React.Component {
                                     <Link
                                       style={trading}
                                       className="vertical-space"
-                                      to="/indexfutures"
+                                      to="/index-futures"
                                     >
                                       {lang.Header.m3.dropdown[0].sub[4]}
                                     </Link>
@@ -421,7 +421,7 @@ class ColorNavbar extends React.Component {
                                   <Link
                                     style={trading}
                                     className="vertical-space"
-                                    to="/jamperdagangan"
+                                    to="/jam-perdagangan"
                                   >
                                     {lang.Header.m3.dropdown[1].sub[0]}
                                   </Link>
@@ -434,21 +434,21 @@ class ColorNavbar extends React.Component {
                                 <div>
                                   <img className="vl-img" src={vl} />
                                 </div>
-                                <div style={{ marginLeft: "20px" }}>
+                                <div style={{ marginLeft: "50px" }}>
                                   <div style={title}>
                                     {lang.Header.m3.dropdown[2].title}
                                   </div>
                                   <Link
                                     style={trading}
                                     className="vertical-space"
-                                    to="/protrader"
+                                    to="/pro-trader"
                                   >
                                     {lang.Header.m3.dropdown[2].sub[0]}
                                   </Link>
                                   <Link
                                     style={trading}
                                     className="vertical-space"
-                                    to="/topgrowthtrader"
+                                    to="/topgrowth-trader"
                                   >
                                     {lang.Header.m3.dropdown[2].sub[1]}
                                   </Link>
@@ -613,7 +613,7 @@ class ColorNavbar extends React.Component {
                       </Link>
 
                       <Link
-                        to="/Contact"
+                        to="/contact"
 
                         // onClick={() => {
                         //   this.toggle("5");

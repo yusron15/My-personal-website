@@ -108,7 +108,10 @@ const theme = createMuiTheme({
 class App extends Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      lang: lang.id,
+      toggleLang: this.toggleLang
+    };
     this.toggleLang = selectedLang => {
       if (selectedLang == "ID") {
         this.setState({
@@ -119,11 +122,6 @@ class App extends Component {
           lang: lang.eng
         });
       }
-    };
-
-    this.state = {
-      lang: lang.id,
-      toggleLang: this.toggleLang
     };
   }
 
@@ -176,7 +174,7 @@ class App extends Component {
                 />
 
                 <Route
-                  path="/newspage"
+                  path="/newsage"
                   render={props => <NewsPage {...props} />}
                 />
 
@@ -236,7 +234,7 @@ class App extends Component {
                   render={props => <JamPerdagangan {...props} />}
                 />
                 <Route
-                  path="/Edukasi"
+                  path="/edukasi"
                   render={props => <Edukasi {...props} />}
                 />
                 <Route path="/index" render={props => <Index {...props} />} />

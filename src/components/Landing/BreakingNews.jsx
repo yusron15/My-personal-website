@@ -1,7 +1,34 @@
 import React, { Component } from "react";
 import Marquee from "react-smooth-marquee";
 import { Input } from "reactstrap";
-import { Row, Col } from "reactstrap";
+import {
+  Badge,
+  Button,
+  Card,
+  CardImg,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  CardTitle,
+  CardText,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  UncontrolledDropdown,
+  Navbar,
+  NavItem,
+  NavLink,
+  Nav,
+  Pagination,
+  PaginationItem,
+  PaginationLink,
+  TabContent,
+  TabPane,
+  Container,
+  Row,
+  Col,
+  UncontrolledTooltip
+} from "reactstrap";
 import { Link } from "react-router-dom";
 import Up from "../../assets/img/green-triangle.png";
 import Down from "../../assets/img/red-triangle.png";
@@ -16,8 +43,18 @@ const options = [
 class BreakingNews extends Component {
   state = {
     dataSelect: "",
-    selectedOption: null
+    selectedOption: null,
+    activeTab: "1"
   };
+
+  toggle = tab => {
+    if (this.state.activeTab !== tab) {
+      this.setState({
+        activeTab: tab
+      });
+    }
+  };
+
   handleChange = selectedOption => {
     this.setState({ selectedOption });
     console.log(`Option selected:`, selectedOption);
@@ -27,7 +64,7 @@ class BreakingNews extends Component {
     return (
       <div
         style={{
-          height: "6vh",
+          height: "12vh",
           overflow: "hidden",
           backgroundColor: "transparent"
         }}
@@ -40,114 +77,141 @@ class BreakingNews extends Component {
           }}
         >
           <Row>
-            <Col
-              md="2"
-              // style={{
-              //   backgroundColor: "transparent",
-              //   // padding: 0,
-              //   paddingLeft: "20px",
-              //   color: "black"
-              // }}
-            >
-              {/* <Select
-                value="index"
-                options={[
-                  {
-                    label: "KOMODITI",
-                    value: "komoditi"
-                  },
-                  {
-                    label: "INDEX",
-                    value: "index"
-                  },
-                  {
-                    label: "FX",
-                    value: "fx"
-                  }
-                ]}
-                value={this.state.dataSelect}
-                onChange={async data => {
-                  await this.setState({
-                    dataSelect: data
-                  });
-                  let dataSelect = [
-                    {
-                      label: "KOMODITI",
-                      value: "komoditi"
-                    },
-                    {
-                      label: "INDEX",
-                      value: "index"
-                    },
-                    {
-                      label: "FX",
-                      value: "fx"
-                    }
-                  ];
-                  return dataSelect.filter(
-                    item => this.state.dataSelect.value === item.value
-                  )[0];
-                }}
-              /> */}
-              <div>
-                <Select
-                  styles={{
-                    control: styles => ({
-                      ...styles,
-                      backgroundColor: "transparent",
-                      borderColor: "none"
-                    }),
-                    option: () => ({
-                      zIndex: 999
-                    })
-                  }}
-                  options={[
-                    {
-                      label: "KOMODITI",
-                      value: "komoditi"
-                    },
-                    {
-                      label: "INDEX",
-                      value: "index"
-                    },
-                    {
-                      label: "FX",
-                      value: "fx"
-                    }
-                  ]}
-                  value={this.state.dataSelect}
-                  onChange={async data => {
-                    await this.setState({
-                      dataSelect: data
-                    });
-                    let dataSelect = [
-                      {
-                        label: "KOMODITI",
-                        value: "komoditi"
-                      },
-                      {
-                        label: "INDEX",
-                        value: "index"
-                      },
-                      {
-                        label: "FX",
-                        value: "fx"
-                      }
-                    ];
-                    return dataSelect.filter(
-                      item => this.state.dataSelect.value === item.value
-                    )[0];
-                  }}
-                  // options={options}
-                />
-              </div>
+            <Col md="4">
+              <Row>
+                <Col md="4" style={{ padding: 0 }}>
+                  <Nav tabs vertical pills style={{ padding: "0 0 0 15px" }}>
+                    <NavItem>
+                      <div
+                        // className={classnames({
+                        //   active: this.state.activeTab === "1"
+                        // })}
+                        onClick={() => {
+                          this.toggle("1");
+                        }}
+                      >
+                        <div
+                          style={{
+                            fontSize: "0.8rem",
+                            paddingLeft: "5px",
+                            // fontWeight: "bold",
+                            height: "26px",
+                            color:
+                              this.state.activeTab === "1" ? "white" : "white",
+                            backgroundColor:
+                              this.state.activeTab === "1" ? "grey" : "black"
+                          }}
+                        >
+                          Komoditi
+                        </div>
+                      </div>
+                    </NavItem>
+                    <NavItem>
+                      <div
+                        onClick={() => {
+                          this.toggle("2");
+                        }}
+                      >
+                        <div
+                          style={{
+                            fontSize: "0.8rem",
+                            paddingLeft: "5px",
+                            // fontWeight: "bold",
+                            height: "26px",
+
+                            color:
+                              this.state.activeTab === "2" ? "white" : "white",
+                            backgroundColor:
+                              this.state.activeTab === "2" ? "grey" : "black"
+                          }}
+                        >
+                          Index
+                        </div>
+                      </div>
+                    </NavItem>
+                    <NavItem>
+                      <div
+                        onClick={() => {
+                          this.toggle("3");
+                        }}
+                      >
+                        <div
+                          style={{
+                            fontSize: "0.8rem",
+                            paddingLeft: "5px",
+                            // fontWeight: "bold",
+                            height: "26px",
+
+                            color:
+                              this.state.activeTab === "3" ? "white" : "white",
+                            backgroundColor:
+                              this.state.activeTab === "3" ? "grey" : "black"
+                          }}
+                        >
+                          FX
+                        </div>
+                      </div>
+                    </NavItem>
+                  </Nav>
+                </Col>
+                <Col md="8" style={{ padding: 0 }}>
+                  <TabContent activeTab={this.state.activeTab}>
+                    <TabPane tabId="1">
+                      <div
+                        style={{
+                          backgroundColor: "#063980",
+                          border: "1px",
+                          color: "white",
+                          minHeight: "10.1vh",
+                          fontWeight: "bold",
+                          textAlign: "center",
+                          paddingTop: "25px"
+                        }}
+                      >
+                        Komoditi
+                      </div>
+                    </TabPane>
+                    <TabPane tabId="2">
+                      <div
+                        style={{
+                          backgroundColor: "#063980",
+                          border: "1px",
+                          color: "white",
+                          minHeight: "10.1vh",
+                          fontWeight: "bold",
+                          textAlign: "center",
+                          paddingTop: "25px"
+                        }}
+                      >
+                        Index
+                      </div>
+                    </TabPane>
+                    <TabPane tabId="3">
+                      <div
+                        style={{
+                          backgroundColor: "#063980",
+                          border: "1px",
+                          color: "white",
+                          minHeight: "10.1vh",
+                          fontWeight: "bold",
+                          textAlign: "center",
+                          paddingTop: "25px"
+                        }}
+                      >
+                        FX
+                      </div>
+                    </TabPane>
+                  </TabContent>
+                </Col>
+              </Row>
             </Col>
             <Col style={{ padding: 0 }}>
               <marquee scrollamount="5">
                 <Row
                   style={{
-                    paddingTop: "1%"
+                    paddingTop: "2.5%"
                   }}
+                  // classname="vertical-center"
                 >
                   <div>
                     <img src={Up} /> Lorem ipsum dolor sit amet, consectetur

@@ -67,13 +67,13 @@ class Content extends React.Component {
               <Row>
                 <Col className="ml-auto mr-auto text-center mt-5" md="6">
                   <h1 className="title font-black">
-                    {/* {lang.hubungikami.top.title} */}Kami sangat menanti
-                    pertanyaan, saran, dan kritik dari Anda.
+                    {/* {lang.hubungikami.header.title} */}
+                    Kami sangat menanti pertanyaan, saran, dan kritik dari Anda.
                   </h1>
                   <h4 className="desc font-black">
-                    {/* {lang.hubungikami.top.subtitle} */}Silakan hubungi atau
-                    kirimkan email ke formulir kontak dan kami akan dengan
-                    senang hati membantu Anda.
+                    {/* {lang.hubungikami.header.subtitle} */}
+                    Silakan hubungi atau kirimkan email ke formulir kontak dan
+                    kami akan dengan senang hati membantu Anda.
                   </h4>
                 </Col>
               </Row>
