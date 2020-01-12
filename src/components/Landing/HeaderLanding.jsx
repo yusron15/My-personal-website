@@ -264,16 +264,16 @@ class HeaderLanding extends React.Component {
               <div
                 className="cd-section "
                 id="headers"
-                style={{
-                  backgroundImage:
-                    "url(" + require("assets/img/header-image1.png") + ")",
-                  backgroundSize: "cover"
-                }}
+                // style={{
+                //   backgroundImage:
+                //     "url(" + require("assets/img/header-image1.png") + ")",
+                //   backgroundSize: "cover"
+                // }}
               >
                 <div>
                   <BlurryNavbar />
                   <div className="space-50" />
-                  <Row
+                  {/* <Row
                     // className="header-filter"
                     // style={{
                     //   backgroundImage:
@@ -281,41 +281,47 @@ class HeaderLanding extends React.Component {
                     //   backgroundSize: "cover"
                     // }}
                     style={{ marginRight: 0, marginLeft: 0 }}
-                  >
-                    <Col md="5 offset-md-1">
-                      <Carousel
-                        indicators={false}
-                        controls={false}
-                        slide={true}
-                        touch={true}
-                        interval="5000"
-                        pauseOnHover={false}
-                      >
-                        <Carousel.Item>
-                          <div className="page-header minHeight">
-                            {/* here */}
-                            <Container style={{ paddingTop: 0 }}>
-                              <Row>
-                                {/* <Navbar /> */}
-                                <Col className="mr-auto text-left" md="12">
-                                  <div
-                                    style={{
-                                      fontStyle: "Helvetica Bold",
-                                      fontSize: "2.7rem",
-                                      fontWeight: "bold"
-                                    }}
-                                  >
-                                    {lang.Landing.HeaderLanding.slide[0].title}
-                                  </div>
-                                  <h4>
-                                    {
-                                      lang.Landing.HeaderLanding.slide[0]
-                                        .subtitle
-                                    }
-                                  </h4>
-                                  <br />
-                                </Col>
-                                {/* <Col md="5">
+                  > */}
+                  <Col md="12" style={{ paddingRight: 0, paddingLeft: 0 }}>
+                    <Carousel
+                      indicators={false}
+                      controls={false}
+                      slide={true}
+                      touch={true}
+                      interval="5000"
+                      pauseOnHover={false}
+                    >
+                      <Carousel.Item>
+                        <div
+                          className="page-header minHeight header-filter"
+                          style={{
+                            backgroundImage:
+                              "url(" +
+                              require("assets/img/header-image.png") +
+                              ")",
+                            backgroundSize: "cover"
+                          }}
+                        >
+                          {/* here */}
+                          <Container style={{ paddingTop: 0 }}>
+                            <Row>
+                              {/* <Navbar /> */}
+                              <Col className="mr-auto text-left" md="8">
+                                <div
+                                  style={{
+                                    fontStyle: "Helvetica Bold",
+                                    fontSize: "2.5rem",
+                                    fontWeight: "bold"
+                                  }}
+                                >
+                                  {lang.Landing.HeaderLanding.slide[0].title}
+                                </div>
+                                <h4>
+                                  {lang.Landing.HeaderLanding.slide[0].subtitle}
+                                </h4>
+                                <br />
+                              </Col>
+                              {/* <Col md="5">
                               <Row className="vertical-center">
                             <Col>
                               <img src={best17} />
@@ -325,55 +331,70 @@ class HeaderLanding extends React.Component {
                             </Col>
                           </Row>
                             </Col> */}
-                              </Row>
-                            </Container>
-                          </div>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <div className="page-header minHeight">
-                            <Container style={{ paddingTop: 0 }}>
-                              <Row>
-                                {/* <Navbar /> */}
-                                {/* <Col className="mr-auto text-left" lg="5" md="7">
+                            </Row>
+                          </Container>
+                        </div>
+                      </Carousel.Item>
+                      <Carousel.Item>
+                        <div
+                          className="page-header minHeight"
+                          style={{
+                            backgroundImage:
+                              "url(" +
+                              require("assets/img/header-image1.png") +
+                              ")",
+                            backgroundSize: "cover"
+                          }}
+                        >
+                          <Container style={{ paddingTop: 0 }}>
+                            <Row>
+                              {/* <Navbar /> */}
+                              {/* <Col className="mr-auto text-left" lg="5" md="7">
                               <img
                                 src={phoneHeader}
                                 style={{ paddingBottom: "0" }}
                               />
                             </Col> */}
-                                <Col md="12">
-                                  <Row className="vertical-center">
-                                    <div
-                                      style={{
-                                        fontStyle: "Helvetica Bold",
-                                        fontSize: "2.7rem",
-                                        fontWeight: "bold"
-                                      }}
+                              <Col md="8">
+                                <Row className="vertical-center">
+                                  <div
+                                    style={{
+                                      fontStyle: "Helvetica Bold",
+                                      fontSize: "2.5rem",
+                                      fontWeight: "bold"
+                                    }}
 
-                                      // className="title"
-                                    >
-                                      {
-                                        lang.Landing.HeaderLanding.slide[1]
-                                          .title
-                                      }
-                                    </div>
-                                    <h4>
-                                      {
-                                        lang.Landing.HeaderLanding.slide[1]
-                                          .subtitle
-                                      }
-                                    </h4>
-                                  </Row>
-                                </Col>
-                              </Row>
-                            </Container>
-                          </div>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <div className="page-header minHeight">
-                            <Container style={{ paddingTop: 0 }}>
-                              <Row>
-                                {/* <Navbar /> */}
-                                {/* <Col className="mr-auto text-left" lg="5" md="7">
+                                    // className="title"
+                                  >
+                                    {lang.Landing.HeaderLanding.slide[1].title}
+                                  </div>
+                                  <h4>
+                                    {
+                                      lang.Landing.HeaderLanding.slide[1]
+                                        .subtitle
+                                    }
+                                  </h4>
+                                </Row>
+                              </Col>
+                            </Row>
+                          </Container>
+                        </div>
+                      </Carousel.Item>
+                      <Carousel.Item>
+                        <div
+                          className="page-header minHeight"
+                          style={{
+                            backgroundImage:
+                              "url(" +
+                              require("assets/img/header-image2.png") +
+                              ")",
+                            backgroundSize: "cover"
+                          }}
+                        >
+                          <Container style={{ paddingTop: 0 }}>
+                            <Row>
+                              {/* <Navbar /> */}
+                              {/* <Col className="mr-auto text-left" lg="5" md="7">
                               <img
                                 src={iphone3}
                                 style={{
@@ -382,66 +403,73 @@ class HeaderLanding extends React.Component {
                                 }}
                               />
                             </Col> */}
-                                <Col md="12">
+                              <Col md="8">
+                                <Row>
+                                  <div
+                                    style={{
+                                      fontStyle: "Helvetica Bold",
+                                      fontSize: "2.5rem",
+                                      fontWeight: "bold"
+                                    }}
+
+                                    // className="title"
+                                  >
+                                    {lang.Landing.HeaderLanding.slide[2].title}
+                                  </div>
+
+                                  <h4>
+                                    {
+                                      lang.Landing.HeaderLanding.slide[2]
+                                        .subtitle
+                                    }
+                                  </h4>
+                                  <br />
                                   <Row>
-                                    <div
-                                      style={{
-                                        fontStyle: "Helvetica Bold",
-                                        fontSize: "2.7rem",
-                                        fontWeight: "bold"
-                                      }}
-
-                                      // className="title"
-                                    >
-                                      {
-                                        lang.Landing.HeaderLanding.slide[2]
-                                          .title
-                                      }
-                                    </div>
-
-                                    <h4>
-                                      {
-                                        lang.Landing.HeaderLanding.slide[2]
-                                          .subtitle
-                                      }
-                                    </h4>
-                                    <br />
-                                    <Row>
-                                      <Col>
-                                        <img src={appstore} />
-                                      </Col>
-                                      <Col>
-                                        <img
-                                          src={playstore}
-                                          style={{ marginLeft: "20px" }}
-                                        />
-                                      </Col>
-                                    </Row>
+                                    <Col>
+                                      <img src={appstore} />
+                                    </Col>
+                                    <Col>
+                                      <img
+                                        src={playstore}
+                                        style={{ marginLeft: "20px" }}
+                                      />
+                                    </Col>
                                   </Row>
-                                </Col>
-                              </Row>
-                            </Container>
-                          </div>
-                        </Carousel.Item>
-                      </Carousel>
-                    </Col>
-                    <Col
-                      // md=""
-                      md="4 offset-md-2"
-                      // md="4"
-                      // style={{ padding: "2% 5% 5% 0" }}
-                    >
-                      {/* <ScrollAnimation
-                  delay={100}
-                  animateIn="fadeInRight"
-                  animateOut="fadeOut"
-                > */}
-                      <CardRegister />
-                      {/* </ScrollAnimation> */}
-                    </Col>
-                  </Row>
+                                </Row>
+                              </Col>
+                            </Row>
+                          </Container>
+                        </div>
+                      </Carousel.Item>
+                      {/* <Col md="4 offset-md-2">
+                          <CardRegister />
+                        </Col>
+                        <BreakingNews /> */}
+                    </Carousel>
+                  </Col>
+                  <Col
+                    md="4 offset-md-8"
+                    style={{
+                      top: "17vh",
+                      position: "absolute"
+                    }}
+                  >
+                    <CardRegister />
+                  </Col>
+                  <Col
+                    md="12"
+                    style={{
+                      position: "absolute",
+                      bottom: 0,
+                      paddingRight: 0,
+                      paddingLeft: 0
+                    }}
+                  >
+                    <BreakingNews />
+                  </Col>
+                  {/* </Row> */}
                 </div>
-                <BreakingNews />
+                {/* <BreakingNews /> */}
               </div>
             </>
           );

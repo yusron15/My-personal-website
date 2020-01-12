@@ -201,87 +201,96 @@ class BottomNavbar extends React.Component {
             // }}
             style={{ maxHeight: "150px" }}
           >
-            <h4
-              className="title"
-              style={{
-                textAlign: "center",
-                fontSize: "1.5rem",
-                color: "white"
-              }}
-            >
-              Download E-Book Now
-            </h4>
             <div
               style={{
-                margin: "0 20px 20px 20px"
+                margin: "10px 10px 10px 10px"
               }}
             >
-              <Row>
-                <Col md="3">
-                  <Input
-                    style={{
-                      backgroundColor: "rgba(114, 114, 114, 0.65)",
-                      border: "none"
-                    }}
-                    placeholder="Full Name"
-                    type="text"
-                    onFocus={e => this.setState({ emailFocus: true })}
-                    onBlur={e => this.setState({ emailFocus: false })}
-                  />
-                </Col>
-                <Col md="3">
-                  <Input
-                    style={{
-                      backgroundColor: "rgba(114, 114, 114, 0.65)",
-                      border: "none"
-                    }}
-                    placeholder="Email"
-                    type="text"
-                    onFocus={e => this.setState({ emailFocus: true })}
-                    onBlur={e => this.setState({ emailFocus: false })}
-                  />
-                </Col>
-                <Col md="1">
-                  <Input
-                    style={{
-                      backgroundColor: "rgba(114, 114, 114, 0.65)",
-                      border: "none"
-                    }}
-                    color="white"
-                    placeholder="+62"
-                    type="text"
-                    onFocus={e => this.setState({ emailFocus: true })}
-                    onBlur={e => this.setState({ emailFocus: false })}
-                  />
-                </Col>
-                <Col md="3">
-                  <Input
-                    style={{
-                      backgroundColor: "rgba(114, 114, 114, 0.65)",
-                      border: "none"
-                    }}
-                    placeholder="Telepon"
-                    type="text"
-                    onFocus={e => this.setState({ emailFocus: true })}
-                    onBlur={e => this.setState({ emailFocus: false })}
-                  />
-                </Col>
-                <Col md="2">
-                  <Button block color="info" type="button">
-                    Download EBook
-                  </Button>
-                </Col>
-              </Row>
-              <Row style={{ marginLeft: "20px" }}>
-                <Col style={{ color: "#FFFFFF" }}>
-                  <Input type="checkbox" /> Saya setuju untuk menerima berita
-                  dan email promosi dari Topgrowth Futures
-                </Col>
-                <Col style={{ color: "#FFFFFF" }}>
-                  <Input type="checkbox" /> Saya telah membaca dan setuju
-                  kebijakan privasi kebijakan privasi
-                </Col>
-              </Row>
+              <Col className="ml-auto mr-auto" md="11">
+                <Row>
+                  <Col md="2">
+                    <div
+                      style={{
+                        fontWeight: "bold",
+                        textAlign: "center",
+                        fontSize: "1.2rem",
+                        color: "white"
+                      }}
+                    >
+                      Download E-Book
+                    </div>
+                  </Col>
+                  <Col md="2">
+                    <Input
+                      style={{
+                        backgroundColor: "rgba(114, 114, 114, 0.65)",
+                        color: "white",
+                        border: "none"
+                      }}
+                      placeholder="Full Name"
+                      type="text"
+                      onFocus={e => this.setState({ emailFocus: true })}
+                      onBlur={e => this.setState({ emailFocus: false })}
+                    />
+                  </Col>
+                  <Col md="2">
+                    <Input
+                      style={{
+                        backgroundColor: "rgba(114, 114, 114, 0.65)",
+                        color: "white",
+                        border: "none"
+                      }}
+                      placeholder="Email"
+                      type="text"
+                      onFocus={e => this.setState({ emailFocus: true })}
+                      onBlur={e => this.setState({ emailFocus: false })}
+                    />
+                  </Col>
+                  <Col md="1">
+                    <Input
+                      style={{
+                        backgroundColor: "rgba(114, 114, 114, 0.65)",
+                        color: "white",
+                        border: "none"
+                      }}
+                      color="white"
+                      placeholder="+62"
+                      type="text"
+                      onFocus={e => this.setState({ emailFocus: true })}
+                      onBlur={e => this.setState({ emailFocus: false })}
+                    />
+                  </Col>
+                  <Col md="2">
+                    <Input
+                      style={{
+                        backgroundColor: "rgba(114, 114, 114, 0.65)",
+                        color: "white",
+                        border: "none"
+                      }}
+                      placeholder="Telepon"
+                      type="text"
+                      onFocus={e => this.setState({ emailFocus: true })}
+                      onBlur={e => this.setState({ emailFocus: false })}
+                    />
+                  </Col>
+                  <Col md="2">
+                    <Button block color="info" type="button">
+                      Download EBook
+                    </Button>
+                  </Col>
+                </Row>
+
+                <Row style={{ marginLeft: "20px" }}>
+                  <Col style={{ color: "#FFFFFF" }}>
+                    <Input type="checkbox" /> Saya setuju untuk menerima berita
+                    dan email promosi dari Topgrowth Futures
+                  </Col>
+                  <Col style={{ color: "#FFFFFF" }}>
+                    <Input type="checkbox" /> Saya telah membaca dan setuju
+                    kebijakan privasi kebijakan privasi
+                  </Col>
+                </Row>
+              </Col>
             </div>
           </div>
           {/* </Fade> */}

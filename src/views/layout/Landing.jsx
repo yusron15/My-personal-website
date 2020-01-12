@@ -84,8 +84,6 @@ class Landing extends React.Component {
         <Footer />
         <BottomNavbar />
         <div className="space-50" />
-        <div className="space-50" />
-        <div className="space-50" />
       </>
     );
   }

@@ -89,37 +89,19 @@ class BreakingNews extends Component {
                   )[0];
                 }}
               /> */}
-              <Select
-                styles={{
-                  control: styles => ({
-                    ...styles,
-                    backgroundColor: "transparent",
-                    borderColor: "none"
-                  }),
-                  option: () => ({
-                    zIndex: 999
-                  })
-                }}
-                options={[
-                  {
-                    label: "KOMODITI",
-                    value: "komoditi"
-                  },
-                  {
-                    label: "INDEX",
-                    value: "index"
-                  },
-                  {
-                    label: "FX",
-                    value: "fx"
-                  }
-                ]}
-                value={this.state.dataSelect}
-                onChange={async data => {
-                  await this.setState({
-                    dataSelect: data
-                  });
-                  let dataSelect = [
+              <div>
+                <Select
+                  styles={{
+                    control: styles => ({
+                      ...styles,
+                      backgroundColor: "transparent",
+                      borderColor: "none"
+                    }),
+                    option: () => ({
+                      zIndex: 999
+                    })
+                  }}
+                  options={[
                     {
                       label: "KOMODITI",
                       value: "komoditi"
@@ -132,13 +114,33 @@ class BreakingNews extends Component {
                       label: "FX",
                       value: "fx"
                     }
-                  ];
-                  return dataSelect.filter(
-                    item => this.state.dataSelect.value === item.value
-                  )[0];
-                }}
-                // options={options}
-              />
+                  ]}
+                  value={this.state.dataSelect}
+                  onChange={async data => {
+                    await this.setState({
+                      dataSelect: data
+                    });
+                    let dataSelect = [
+                      {
+                        label: "KOMODITI",
+                        value: "komoditi"
+                      },
+                      {
+                        label: "INDEX",
+                        value: "index"
+                      },
+                      {
+                        label: "FX",
+                        value: "fx"
+                      }
+                    ];
+                    return dataSelect.filter(
+                      item => this.state.dataSelect.value === item.value
+                    )[0];
+                  }}
+                  // options={options}
+                />
+              </div>
             </Col>
             <Col style={{ padding: 0 }}>
               <marquee scrollamount="5">
