@@ -16,15 +16,19 @@ import NewsLetter from "../../components/NewsLetter/NewsLetter.jsx";
 import BottomNavbar from "../../components/Navbars/BottomNavbar.jsx";
 import "../../assets/css/main.css";
 import VizSensor from "react-visibility-sensor";
+import { connect } from "react-redux";
+
+import { fetchPage } from "../../redux/ducks/actions.js";
 
 class Landing extends React.Component {
   state = {
     navbarColor: "white",
     color: "black"
   };
-  componentDidMount = () => {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
     window.scroll(0, 0);
-  };
+  }
 
   onChange = id => async isVisible => {
     if (isVisible && this.state.navbarColor !== id) {
@@ -89,7 +93,15 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Landing);
 
 // import React from "react";
 // import ScrollAnimation from "react-animate-on-scroll";

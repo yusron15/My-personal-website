@@ -1,4 +1,4 @@
-import { GetNews } from "../actions/newsActions";
+// import { GetNews } from "../actions/newsActions";
 import { fetchPage } from "../actions/pagesAction";
 
-export { GetNews, fetchPage };
+export { fetchPage };
