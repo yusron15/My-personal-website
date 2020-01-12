@@ -595,11 +595,12 @@ const defaultState = {
 };
 
 export default (state = defaultState, action = {}) => {
+  console.log(action);
   switch (action.type) {
     case "GET_PAGE": {
       return {
         ...state,
-        [action.payload.data.type]: action.payload.data 
+        [action.payload.type]: action.payload
       };
     }
 

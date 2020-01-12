@@ -21,10 +21,13 @@ import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
 
 class Landing extends React.Component {
-  state = {
-    navbarColor: "white",
-    color: "black"
-  };
+  constructor() {
+    super();
+    this.state = {
+      navbarColor: "white",
+      color: "black"
+    };
+  }
   async componentDidMount() {
     await this.props.fetchPage("landing", "id");
     window.scroll(0, 0);

@@ -4,7 +4,7 @@ export async function getPage(section, lang) {
   try {
     const result = await fetchJson(
       "GET",
-      `/Pages/${section}/getDetailByType/${lang}`
+      `Pages/${section}/getDetailByType/${lang}`
     );
     return result;
   } catch (error) {
