@@ -19,6 +19,7 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
+import ScrollAnimation from "react-animate-on-scroll";
 import { LangContext } from "../MyContext";
 import "../../assets/css/main.css";
 import vl from "../../assets/img/vertical-line.png";

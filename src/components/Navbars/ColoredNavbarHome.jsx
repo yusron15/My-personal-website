@@ -19,6 +19,7 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import DropdownTentangKami from "../DropdownContent/DropdownTentangKami";
 import DropdownTrading from "../DropdownContent/DropdownTrading";
@@ -557,7 +558,9 @@ class ColorNavbar extends React.Component {
                     </UncontrolledCollapse>
                   </Container>
                   <div onMouseLeave={() => this.onLeave()}>
+                    {/* <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut"> */}
                     {this.state.childVisible ? <DropdownTentangKami /> : null}
+                    {/* </ScrollAnimation> */}
                   </div>
                   <div onMouseLeave={() => this.onLeaveTrading()}>
                     {this.state.childVisibleTrading ? (

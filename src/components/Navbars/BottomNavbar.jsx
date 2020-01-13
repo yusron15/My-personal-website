@@ -220,7 +220,7 @@ class BottomNavbar extends React.Component {
                       Download E-Book
                     </div>
                   </Col>
-                  <Col md="2">
+                  <Col md="3">
                     <Input
                       style={{
                         backgroundColor: "rgba(114, 114, 114, 0.65)",
