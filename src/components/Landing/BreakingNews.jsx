@@ -64,9 +64,10 @@ class BreakingNews extends Component {
     return (
       <div
         style={{
-          height: "12vh",
+          height: "10.8vh",
           overflow: "hidden",
-          backgroundColor: "transparent"
+          backgroundColor: "transparent",
+          bottom: 0
         }}
       >
         <div
@@ -77,7 +78,7 @@ class BreakingNews extends Component {
           }}
         >
           <Row>
-            <Col md="4">
+            <Col md="3">
               <Row>
                 <Col md="4" style={{ padding: 0 }}>
                   <Nav tabs vertical pills style={{ padding: "0 0 0 15px" }}>
@@ -160,6 +161,7 @@ class BreakingNews extends Component {
                       <div
                         style={{
                           backgroundColor: "#063980",
+                          opacity: "0.5",
                           border: "1px",
                           color: "white",
                           minHeight: "10.1vh",
@@ -175,6 +177,7 @@ class BreakingNews extends Component {
                       <div
                         style={{
                           backgroundColor: "#063980",
+                          opacity: "0.5",
                           border: "1px",
                           color: "white",
                           minHeight: "10.1vh",
@@ -190,6 +193,7 @@ class BreakingNews extends Component {
                       <div
                         style={{
                           backgroundColor: "#063980",
+                          opacity: "0.5",
                           border: "1px",
                           color: "white",
                           minHeight: "10.1vh",

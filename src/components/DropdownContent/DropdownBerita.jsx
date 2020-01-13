@@ -64,13 +64,13 @@ class DropdownBerita extends React.Component {
               <div className="dropdown-contents">
                 <Col>
                   <div class="row">
-                    <div style={{ marginLeft: "40px", marginTop: "30px" }}>
+                    <div style={{ marginLeft: "40px", marginTop: "25px" }}>
                       <div style={DropdownBeritaText}>
                         <Link className="font-black" to="/newspage">
                           {lang.Header.m4.dropdown[0].title}
                         </Link>
                       </div>
-                      <div style={DropdownBeritaText}>
+                      <div style={{ ...DropdownBeritaText, marginTop: "10px" }}>
                         <Link className="font-black" to="/stock-index">
                           {lang.Header.m4.dropdown[1].title}
                         </Link>
@@ -84,13 +84,13 @@ class DropdownBerita extends React.Component {
                     <div>
                       <img className="vl-img-tentangkami" src={vl} />
                     </div>
-                    <div style={{ marginLeft: "20px", marginTop: "30px" }}>
+                    <div style={{ marginLeft: "20px", marginTop: "25px" }}>
                       <div style={DropdownBeritaText}>
                         <Link className="font-black" to="/forex-commodity">
                           {lang.Header.m4.dropdown[2].title}
                         </Link>
                       </div>
-                      <div style={DropdownBeritaText}>
+                      <div style={{ ...DropdownBeritaText, marginTop: "10px" }}>
                         <Link className="font-black" to="/economic-calendar">
                           {lang.Header.m4.dropdown[3].title}
                         </Link>
@@ -104,13 +104,13 @@ class DropdownBerita extends React.Component {
                     <div>
                       <img className="vl-img-tentangkami" src={vl} />
                     </div>
-                    <div style={{ marginLeft: "20px", marginTop: "30px" }}>
+                    <div style={{ marginLeft: "20px", marginTop: "25px" }}>
                       <div style={DropdownBeritaText}>
                         <Link className="font-black" to="/market-outlook">
                           {lang.Header.m4.dropdown[4].title}
                         </Link>
                       </div>
-                      <div style={DropdownBeritaText}>
+                      <div style={{ ...DropdownBeritaText, marginTop: "10px" }}>
                         <Link className="font-black" to="/video-content">
                           {lang.Header.m4.dropdown[5].title}
                         </Link>

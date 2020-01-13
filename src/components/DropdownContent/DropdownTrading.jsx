@@ -27,7 +27,7 @@ const title = {
   fontSize: "15px",
   fontWeight: "bold",
   color: "black",
-  marginTop: "20px",
+  marginTop: "15px",
   marginBottom: "10px"
 };
 
@@ -147,7 +147,7 @@ class DropdownTrading extends React.Component {
               <div className="dropdown-contents">
                 <div class="row">
                   <div>
-                    <img className="vl-img-tentangkami" src={vl} />
+                    <img className="vl-img-trading" src={vl} />
                   </div>
                   <div style={{ marginLeft: "20px" }}>
                     <div style={title}>{lang.Header.m3.dropdown[1].title}</div>
@@ -164,7 +164,7 @@ class DropdownTrading extends React.Component {
               <div className="dropdown-contents">
                 <div class="row">
                   <div>
-                    <img className="vl-img-tentangkami" src={vl} />
+                    <img className="vl-img-trading" src={vl} />
                   </div>
                   <div style={{ marginLeft: "20px" }}>
                     <div style={title}>{lang.Header.m3.dropdown[2].title}</div>
@@ -184,7 +184,7 @@ class DropdownTrading extends React.Component {
               <div className="dropdown-contents">
                 <div class="row">
                   <div>
-                    <img className="vl-img-tentangkami" src={vl} />
+                    <img className="vl-img-trading" src={vl} />
                   </div>
                   <div style={{ marginLeft: "20px" }}>
                     <div style={title}>{lang.Header.m3.dropdown[3].title}</div>
