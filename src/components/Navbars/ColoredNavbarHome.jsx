@@ -19,8 +19,11 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
-import { LangContext } from "../MyContext";
 
+import DropdownTentangKami from "../DropdownContent/DropdownTentangKami";
+import DropdownTrading from "../DropdownContent/DropdownTrading";
+import DropdownBerita from "../DropdownContent/DropdownBerita";
+import { LangContext } from "../MyContext";
 import logo from "../../assets/img/logo-topgrowth.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
@@ -50,6 +53,16 @@ const tentangkami = {
   textAlign: "left"
 };
 
+const DropdownTentangKamiText = {
+  fontSize: "15px",
+  // fontWeight: "bold",
+  color: "black",
+  marginTop: "40px",
+  marginLeft: "20px",
+  // marginBottom: "10px",
+  textAlign: "left"
+};
+
 const trading = {
   fontSize: "15px",
   // fontWeight: "bold",
@@ -72,89 +85,13 @@ const newstext = {
   textAlign: "left"
 };
 
-class DropdownTentangKami extends React.Component {
-  render() {
-    return (
-      <LangContext.Consumer>
-        {({ lang }) => {
-          return (
-            <div
-              className="broken-white"
-              style={{
-                position: "absolute",
-                justifyContent: "flex-around",
-                minWidth: "100vw",
-                height: "140px"
-              }}
-            >
-              {/* kontol */}
-              <Row>
-                <Col>
-                  <div class="row">
-                    <div>
-                      <Link
-                        style={tentangkami}
-                        className="vertical-space"
-                        to="/tentangkami"
-                      >
-                        {lang.Header.m2.dropdown[0].title}
-                      </Link>
-                    </div>
-                  </div>
-                </Col>
-                <Col>
-                  <div class="row">
-                    <div>
-                      <Link
-                        style={tentangkami}
-                        className="vertical-space"
-                        to="/tentangkami"
-                      >
-                        {lang.Header.m2.dropdown[0].title}
-                      </Link>
-                    </div>
-                  </div>
-                </Col>
-                <Col>
-                  <div class="row">
-                    <div>
-                      <Link
-                        style={tentangkami}
-                        className="vertical-space"
-                        to="/tentangkami"
-                      >
-                        {lang.Header.m2.dropdown[0].title}
-                      </Link>
-                    </div>
-                  </div>
-                </Col>
-                <Col>
-                  <div class="row">
-                    <div>
-                      <Link
-                        style={tentangkami}
-                        className="vertical-space"
-                        to="/tentangkami"
-                      >
-                        {lang.Header.m2.dropdown[0].title}
-                      </Link>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-            </div>
-          );
-        }}
-      </LangContext.Consumer>
-    );
-  }
-}
-
 class ColorNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       childVisible: false,
+      childVisibleTrading: false,
+      childVisibleBerita: false,
       backgroundColor: "broken-white",
       marginTop: "50px",
       color: "black",
@@ -164,6 +101,26 @@ class ColorNavbar extends React.Component {
 
   onClick() {
     this.setState({ childVisible: !this.state.childVisible });
+  }
+
+  onLeave() {
+    this.setState({ childVisible: false });
+  }
+
+  onClickTrading() {
+    this.setState({ childVisibleTrading: !this.state.childVisibleTrading });
+  }
+
+  onLeaveTrading() {
+    this.setState({ childVisibleTrading: false });
+  }
+
+  onClickBerita() {
+    this.setState({ childVisibleBerita: !this.state.childVisibleBerita });
+  }
+
+  onLeaveBerita() {
+    this.setState({ childVisibleBerita: false });
   }
 
   toggle = tab => {
@@ -328,103 +285,23 @@ class ColorNavbar extends React.Component {
                         <div
                           class="dropdown "
                           style={colorStyle}
-                          // onMouseEnter={() => this.onClick()}
+                          onMouseEnter={() => this.onClick()}
+                          // onMouseLeave={() => this.onLeave()}
                         >
                           <button class="dropbtn" style={colorStyle}>
                             {lang.Header.m2.title}
                           </button>
-                          {/* {this.state.childVisible ? (
-                            <DropdownTentangKami />
-                          ) : null} */}
-                          <div class="dropdown-content tentang-kami-left">
-                          <div
-                            class="row"
-                            style={{ justifyContent: "space-araound" }}
-                          >
-                            <Col>
-                              <div class="row">
-                                <div style={{ marginLeft: "20px" }}>
-                                  <Link
-                                    style={tentangkami}
-                                    className="vertical-space"
-                                    to="/tentang-kami"
-                                  >
-                                    {lang.Header.m2.dropdown[0].title}
-                                  </Link>
-                                </div>
-                              </div>
-                            </Col>
-
-                            <Col>
-                              <div class="row">
-                                <div>
-                                  <img
-                                    className="vl-img-tentangkami"
-                                    src={vl}
-                                  />
-                                </div>
-                                <div style={{ marginLeft: "20px" }}>
-                                  <Link
-                                    style={tentangkami}
-                                    className="vertical-space"
-                                    to="/jam-perdagangan"
-                                  >
-                                    {lang.Header.m2.dropdown[1].title}
-                                  </Link>
-                                </div>
-                              </div>
-                            </Col>
-
-                            <Col>
-                              <div class="row">
-                                <div>
-                                  <img
-                                    className="vl-img-tentangkami"
-                                    src={vl}
-                                  />
-                                </div>
-                                <div style={{ marginLeft: "20px" }}>
-                                  <Link
-                                    style={tentangkami}
-                                    className="vertical-space"
-                                    to="/rekening-terpisah"
-                                  >
-                                    {lang.Header.m2.dropdown[2].title}
-                                  </Link>
-                                </div>
-                              </div>
-                            </Col>
-
-                            <Col>
-                              <div class="row">
-                                <div>
-                                  <img
-                                    className="vl-img-tentangkami"
-                                    src={vl}
-                                  />
-                                </div>
-                                <div style={{ marginLeft: "20px" }}>
-                                  <Link
-                                    style={tentangkami}
-                                    className="vertical-space"
-                                    to="/login"
-                                  >
-                                    {lang.Header.m2.dropdown[3].title}
-                                  </Link>
-                                </div>
-                              </div>
-                            </Col>
-                          </div>
-                        </div>
-                   
                         </div>
 
                         {/* TRADING ONLINE */}
-                        <div class="dropdown ">
+                        <div
+                          class="dropdown "
+                          onMouseEnter={() => this.onClickTrading()}
+                        >
                           <button class="dropbtn" style={colorStyle}>
                             {lang.Header.m3.title}
                           </button>
-                          <div class="dropdown-content-trading trading-online">
+                          {/* <div class="dropdown-content-trading trading-online">
                             <div
                               class="row"
                               style={{ justifyContent: "space-araound" }}
@@ -554,18 +431,20 @@ class ColorNavbar extends React.Component {
                                 </div>
                               </Col>
                             </div>
-                          </div>
+                          </div> */}
                         </div>
 
                         {/* BERITA */}
-                        <div class="dropdown ">
-                          <div class="dropdown">
-                            <button class="dropbtn" style={colorStyle}>
-                              {lang.Header.m4.title}
-                            </button>
+                        <div
+                          class="dropdown"
+                          onMouseEnter={() => this.onClickBerita()}
+                        >
+                          <button class="dropbtn" style={colorStyle}>
+                            {lang.Header.m4.title}
+                          </button>
 
-                            <div class="dropdown-content-news tentang-kami-left">
-                              <div
+                          {/* <div class="dropdown-content-news tentang-kami-left"> */}
+                          {/* <div
                                 class="row"
                                 style={{ justifyContent: "space-araound" }}
                               >
@@ -634,8 +513,8 @@ class ColorNavbar extends React.Component {
                                   </div>
                                 </Col>
                               </div>
-                            </div>
-                          </div>
+                            </div> */}
+                          {/* </div> */}
                         </div>
 
                         <Link to="/edukasi">
@@ -677,6 +556,17 @@ class ColorNavbar extends React.Component {
                       </Nav>
                     </UncontrolledCollapse>
                   </Container>
+                  <div onMouseLeave={() => this.onLeave()}>
+                    {this.state.childVisible ? <DropdownTentangKami /> : null}
+                  </div>
+                  <div onMouseLeave={() => this.onLeaveTrading()}>
+                    {this.state.childVisibleTrading ? (
+                      <DropdownTrading />
+                    ) : null}
+                  </div>
+                  <div onMouseLeave={() => this.onLeaveBerita()}>
+                    {this.state.childVisibleBerita ? <DropdownBerita /> : null}
+                  </div>
                 </Navbar>
                 {/* {this.state.childVisible ? <DropdownTentangKami /> : null} */}
               </Container>
