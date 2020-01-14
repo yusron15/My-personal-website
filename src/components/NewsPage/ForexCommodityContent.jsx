@@ -19,6 +19,7 @@ import Footer from "../Footers/Footer";
 import "../../assets/css/main.css";
 import Content from "../RelatedPost/LayoutForexCommodity";
 import NewsTicker from "./NewsTicker";
+import BreakingNews from "../../components/Landing/BreakingNews";
 
 import fc1 from "../../assets/img/fc1.png";
 import fc2 from "../../assets/img/fc2.png";
@@ -50,8 +51,8 @@ class Blogs extends React.Component {
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">Forex Commodity</div>
+              <BreakingNews />
             </div>
-            <NewsTicker />
 
             {/* <Container> */}
             <div

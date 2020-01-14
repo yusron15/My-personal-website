@@ -86,9 +86,10 @@ class ColorNavbar extends React.Component {
       childVisibleBerita: false,
       navbarColor: "bg-transparent",
       marginTop: "50px",
+      bgButton: "transparent",
       color: "white",
       activeTab: "1",
-      logo: require("../../assets/img/white-topgrowth.png")
+      logo: require("../../assets/img/white-logo-hd.png")
     };
   }
 
@@ -152,7 +153,7 @@ class ColorNavbar extends React.Component {
         marginTop: "50px",
         color: "white",
         navbarColor: "bg-transparent",
-        logo: require("../../assets/img/white-topgrowth.png")
+        logo: require("../../assets/img/white-logo-hd.png")
       });
     }
   };
@@ -194,11 +195,25 @@ class ColorNavbar extends React.Component {
     // console.log(currentPath, pathLink, "adasdadas");
   };
 
+  coloringButton = pathLink => {
+    const currentPath = this.props.location.pathname;
+    let active = false;
+    if (pathLink instanceof Array) {
+      if (pathLink.includes(currentPath)) {
+        active = true;
+      }
+    } else {
+      active = pathLink === currentPath;
+    }
+    return active ? "rgba(255, 255, 255, 0.17)" : "transparent";
+  };
+
   render() {
     const styles = {
       containerStyle: {
         marginTop: this.state.marginTop,
         navbarColor: this.state.navbarColor,
+        bgButton: this.state.bgButton,
         zIndex: 999
       },
       colorStyle: {
@@ -278,6 +293,12 @@ class ColorNavbar extends React.Component {
                             class="dropbtn"
                             style={{
                               color: this.coloringNav([
+                                "/tentang-kami",
+                                "/cabang",
+                                "/rekening-terpisah",
+                                "/legalitas"
+                              ]),
+                              backgroundColor: this.coloringButton([
                                 "/tentang-kami",
                                 "/cabang",
                                 "/rekening-terpisah",
@@ -388,6 +409,18 @@ class ColorNavbar extends React.Component {
                                 "/topgrowth-trader",
                                 "/login",
                                 "/register"
+                              ]),
+                              backgroundColor: this.coloringButton([
+                                "/forex",
+                                "/gold",
+                                "/index-futures",
+                                "/cfd",
+                                "/komoditi",
+                                "/jam-perdagangan",
+                                "/pro-trader",
+                                "/topgrowth-trader",
+                                "/login",
+                                "/register"
                               ])
                             }}
                           >
@@ -405,6 +438,14 @@ class ColorNavbar extends React.Component {
                             class="dropbtn"
                             style={{
                               color: this.coloringNav([
+                                "/newspage",
+                                "/stock-index",
+                                "/forex-commodity",
+                                "/economic-calendar",
+                                "/market-outlook",
+                                "/video-content"
+                              ]),
+                              backgroundColor: this.coloringButton([
                                 "/newspage",
                                 "/stock-index",
                                 "/forex-commodity",
@@ -497,7 +538,8 @@ class ColorNavbar extends React.Component {
                               class="dropbtn"
                               style={{
                                 ...colorStyle,
-                                color: this.coloringNav("/edukasi")
+                                color: this.coloringNav("/edukasi"),
+                                backgroundColor: this.coloringButton("/edukasi")
                               }}
                             >
                               {lang.Header.m5.title}
@@ -517,7 +559,8 @@ class ColorNavbar extends React.Component {
                             <button
                               class="dropbtn"
                               style={{
-                                color: this.coloringNav("/karir")
+                                color: this.coloringNav("/karir"),
+                                backgroundColor: this.coloringButton("/karir")
                               }}
                             >
                               {lang.Header.m6.title}
@@ -536,7 +579,9 @@ class ColorNavbar extends React.Component {
                             <button
                               class="dropbtn"
                               style={{
-                                color: this.coloringNav("/Contact")
+                                color: this.coloringNav("/contact"),
+                                backgroundColor: this.coloringButton("/contact")
+
                                 // color: this.state.color,
                                 // ...(this.state.activeTab === "5"
                                 //   ? { color: "#2AB4E7" }

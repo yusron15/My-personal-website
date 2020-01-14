@@ -46,6 +46,7 @@ class DropdownTentangKami extends React.Component {
                 top: 93,
                 left: 0,
                 flex: 1,
+                opacity: "0.90",
                 flexDirection: "row",
                 justifyContent: "flex-around",
                 minWidth: "100vw",
@@ -55,7 +56,7 @@ class DropdownTentangKami extends React.Component {
             >
               <div className="dropdown-contents">
                 <div style={DropdownTentangKamiText}>
-                  <Link className="font-black" to="/tentangkami">
+                  <Link className="font-black" to="/tentang-kami">
                     {lang.Header.m2.dropdown[0].title}
                   </Link>
                 </div>

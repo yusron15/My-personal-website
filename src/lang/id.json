@@ -12,7 +12,7 @@
             "card":[
                 ["Akun Demo", "FREE", "Tidak Ada Deposit", "-", "-", "Pro I Trader & Topgrowth Trader (MT4)", "Daftar"],
                 ["Akun Mini", "$500", "initial deposit", "Minimum 0.1 Lot", "Minimum 5.0 Lot", "Topgrowth Trader (MT4)", "Daftar"],
-                ["Akun Demo", "$10,000", "initial Deposit", "Minimum 1.0 Lot", "Minimum 50.0 Lot", "Pro I Trader & Topgrowth Trader (MT4)", "Daftar"]
+                ["Akun Regular", "$10,000", "initial Deposit", "Minimum 1.0 Lot", "Minimum 50 Lot", "Pro I Trader & Topgrowth Trader (MT4)", "Daftar"]
             ]
         },
         "Feature":{

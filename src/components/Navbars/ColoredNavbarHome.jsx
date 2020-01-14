@@ -94,6 +94,7 @@ class ColorNavbar extends React.Component {
       childVisibleTrading: false,
       childVisibleBerita: false,
       backgroundColor: "broken-white",
+      bgButton: "transparent",
       marginTop: "50px",
       color: "black",
       activeTab: "1"
@@ -200,10 +201,24 @@ class ColorNavbar extends React.Component {
     // console.log(currentPath, pathLink, "adasdadas");
   };
 
+  coloringButton = pathLink => {
+    const currentPath = this.props.location.pathname;
+    let active = false;
+    if (pathLink instanceof Array) {
+      if (pathLink.includes(currentPath)) {
+        active = true;
+      }
+    } else {
+      active = pathLink === currentPath;
+    }
+    return active ? "rgba(255, 255, 255, 0.17)" : "transparent";
+  };
+
   render() {
     const styles = {
       containerStyle: {
         marginTop: this.state.marginTop,
+        bgButton: this.state.bgButton,
         zIndex: 999
       },
       colorStyle: {

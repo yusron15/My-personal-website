@@ -19,6 +19,7 @@ import Footer from "../Footers/Footer";
 import "../../assets/css/main.css";
 import Content from "../RelatedPost/Layout";
 import NewsTicker from "./NewsTicker";
+import BreakingNews from "../../components/Landing/BreakingNews";
 
 import news1 from "../../assets/img/newscontent1.png";
 import news2 from "../../assets/img/newscontent2.png";
@@ -41,7 +42,7 @@ class Blogs extends React.Component {
 
           <div>
             <div
-              className="team-1 background-header"
+              className="team-1"
               style={{
                 backgroundImage: `url(${bg})`,
                 padding: 0
@@ -50,8 +51,8 @@ class Blogs extends React.Component {
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">Stock Index</div>
+              <BreakingNews />
             </div>
-            <NewsTicker />
 
             {/* <Container> */}
             <div

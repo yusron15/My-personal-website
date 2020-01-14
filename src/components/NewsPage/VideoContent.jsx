@@ -19,7 +19,7 @@ import {
 import ReactPlayer from "react-player";
 import videos from "../../assets/video/nyc-exchange.mp4";
 import Select from "react-select";
-
+import BreakingNews from "../../components/Landing/BreakingNews";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
@@ -73,8 +73,8 @@ class Blogs extends React.Component {
               <ColoredNavbar location={{ ...this.props.location }} />
 
               <div className="title title-header">Video</div>
+              <BreakingNews />
             </div>
-            <NewsTicker />
 
             <div
               // className="broken-white"

@@ -12,7 +12,7 @@
             "card":[
                 ["Demo Account", "FREE", "No Initial Deposit", "-", "-", "Pro I Trader & Topgrowth Trader (MT4)", "Sign Up"],
                 ["Mini Account", "$500", "Initial Deposit", "Minimum 0.1 Lot", "Maximum 5.0 Lot", "Topgrowth Trader (MT4)", "Sign Up"],
-                ["Regular Account", "$10,000", "Initial Deposit", "Minimum 1.0 Lot", "Maximum 50.0 Lot", "Pro I Trader & Topgrowth Trader (MT4)", "Sign Up"]
+                ["Regular Account", "$10,000", "Initial Deposit", "Minimum 1.0 Lot", "Maximum 50 Lot", "Pro I Trader & Topgrowth Trader (MT4)", "Sign Up"]
             ]
         },
         "Feature":{

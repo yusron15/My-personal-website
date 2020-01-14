@@ -24,6 +24,7 @@ import Footer from "../Footers/Footer";
 import "../../assets/css/main.css";
 import Content from "../RelatedPost/Layout";
 import NewsTicker from "./NewsTicker";
+import BreakingNews from "../../components/Landing/BreakingNews";
 
 import canada from "../../assets/img/flag-canada.png";
 import germany from "../../assets/img/flag-germany.png";
@@ -59,8 +60,8 @@ class Blogs extends React.Component {
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">Economic Calendar</div>
+              <BreakingNews />
             </div>
-            <NewsTicker />
 
             {/* <Container> */}
             <div

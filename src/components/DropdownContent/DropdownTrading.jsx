@@ -64,6 +64,7 @@ class DropdownTrading extends React.Component {
                 left: 0,
                 flex: 1,
                 flexDirection: "row",
+                opacity: "0.90",
                 justifyContent: "flex-around",
                 minWidth: "100vw",
                 height: "120px",

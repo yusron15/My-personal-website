@@ -13,6 +13,7 @@ import {
 } from "reactstrap";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import NewsTicker from "./NewsTicker";
+import BreakingNews from "../../components/Landing/BreakingNews";
 
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
@@ -50,8 +51,8 @@ class Blogs extends React.Component {
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">Market Outlook</div>
+              <BreakingNews />
             </div>
-            <NewsTicker />
 
             {/* <Container> */}
             <div

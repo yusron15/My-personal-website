@@ -45,8 +45,10 @@ import EconomicCalendarInside from "../../components/NewsContent/EconomicCalenda
 import StockIndex from "../../components/NewsContent/StockIndex.jsx";
 import MarketOutlook from "../../components/NewsContent/MarketOutlook.jsx";
 import NewsTicker from "../../components/NewsPage/NewsTicker.jsx";
+import BreakingNews from "../../components/Landing/BreakingNews";
 import ForexCommodity from "../../components/NewsContent/ForexCommodity";
 import Footer from "../../components/Footers/Footer.jsx";
+import HeaderNewsPage from "../../components/NewsPage/HeaderNewspage";
 
 class NewsPage extends React.Component {
   state = {
@@ -73,18 +75,8 @@ class NewsPage extends React.Component {
       // </>
       <>
         <div style={{ backgroundColor: "#1D1E1F" }}>
-          <div
-            className="team-1 background-header"
-            style={{
-              backgroundImage: `url(${bg})`,
-              padding: 0
-            }}
-          >
-            <BlurryNavbar />
+          <HeaderNewsPage />
 
-            <div className="title title-header">Newspage</div>
-          </div>
-          {/* <BlurryNavbar /> */}
           <ColoredNavbar location={{ ...this.props.location }} />
 
           {/* <Nav
@@ -217,7 +209,8 @@ class NewsPage extends React.Component {
             </NavItem>
           </Nav> */}
 
-          <NewsTicker />
+          {/* <NewsTicker /> */}
+          {/* <BreakingNews /> */}
           <Content />
 
           {/* <TabContent activeTab={"project" + this.state.activeTab}>
