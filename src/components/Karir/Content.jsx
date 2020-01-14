@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -33,6 +17,13 @@ import ColoredNavbar from "../../components/Navbars/ColoredNavbar";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
 import bg from "../../assets/img/header-karir.png";
 import "../../assets/css/main.css";
+
+const customStyles = {
+  control: (base, state) => ({
+    ...base,
+    width: "300px"
+  })
+};
 
 class Blogs extends React.Component {
   state = {
@@ -79,7 +70,9 @@ class Blogs extends React.Component {
                           </a>
                         </div>
                       </Card> */}
-                      <SearchField placeholder="Cari " />
+                      {/* <div style={{ height: "10px" }}> */}
+                      <SearchField styles={customStyles} placeholder="Cari " />
+                      {/* </div> */}
                     </Col>
                     <Col lg="4" md="6">
                       {/* <Card className="card-blog card-plain">
@@ -93,10 +86,39 @@ class Blogs extends React.Component {
                           </a>
                         </div>
                       </Card> */}
-                      <div style={{ maxHeight: "20px" }}>
-                        <Select
-                          value="index "
-                          options={[
+                      {/* <div style={{ maxHeight: "10px" }}> */}
+                      <Select
+                        // styles={{
+                        //   control: styles => ({
+                        //     ...styles,
+                        //     height: "10px"
+                        //   }),
+                        //   option: () => ({
+                        //     zIndex: 999
+                        //   })
+                        // }}
+                        styles={customStyles}
+                        value="index "
+                        options={[
+                          {
+                            label: "Job Example",
+                            value: "Job Example"
+                          },
+                          {
+                            label: "Job Example",
+                            value: "Job Example"
+                          },
+                          {
+                            label: "Job Example",
+                            value: "Job Example"
+                          }
+                        ]}
+                        value={this.state.dataSelect}
+                        onChange={async data => {
+                          await this.setState({
+                            dataSelect: data
+                          });
+                          let dataSelect = [
                             {
                               label: "Job Example",
                               value: "Job Example"
@@ -109,32 +131,13 @@ class Blogs extends React.Component {
                               label: "Job Example",
                               value: "Job Example"
                             }
-                          ]}
-                          value={this.state.dataSelect}
-                          onChange={async data => {
-                            await this.setState({
-                              dataSelect: data
-                            });
-                            let dataSelect = [
-                              {
-                                label: "Job Example",
-                                value: "Job Example"
-                              },
-                              {
-                                label: "Job Example",
-                                value: "Job Example"
-                              },
-                              {
-                                label: "Job Example",
-                                value: "Job Example"
-                              }
-                            ];
-                            return dataSelect.filter(
-                              item => this.state.dataSelect.value === item.value
-                            )[0];
-                          }}
-                        />
-                      </div>
+                          ];
+                          return dataSelect.filter(
+                            item => this.state.dataSelect.value === item.value
+                          )[0];
+                        }}
+                      />
+                      {/* </div> */}
                     </Col>
                     <Col lg="4" xs="12">
                       {/* <Card className="card-blog card-plain">

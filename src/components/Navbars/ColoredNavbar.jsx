@@ -187,7 +187,7 @@ class ColorNavbar extends React.Component {
       active = pathLink === currentPath;
     }
     return active
-      ? "#2AB4E7"
+      ? "#063980"
       : this.state.navbarColor == "broken-white"
       ? "black"
       : "white";
@@ -205,7 +205,7 @@ class ColorNavbar extends React.Component {
     } else {
       active = pathLink === currentPath;
     }
-    return active ? "rgba(255, 255, 255, 0.17)" : "transparent";
+    return active ? "rgba(255, 255, 255, 0.22)" : "transparent";
   };
 
   render() {

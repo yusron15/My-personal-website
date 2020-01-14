@@ -125,7 +125,7 @@ class Content extends React.Component {
                               this.state.activeTab === "1" ? "white" : "black",
                             backgroundColor:
                               this.state.activeTab === "1"
-                                ? "#167AFF"
+                                ? "#063980"
                                 : "transparent"
                           }}
                         >
@@ -151,7 +151,7 @@ class Content extends React.Component {
                               this.state.activeTab === "2" ? "white" : "black",
                             backgroundColor:
                               this.state.activeTab === "2"
-                                ? "#167AFF"
+                                ? "#063980"
                                 : "transparent"
                           }}
                         >
@@ -177,7 +177,7 @@ class Content extends React.Component {
                               this.state.activeTab === "3" ? "white" : "black",
                             backgroundColor:
                               this.state.activeTab === "3"
-                                ? "#167AFF"
+                                ? "#063980"
                                 : "transparent"
                           }}
                         >
@@ -203,7 +203,7 @@ class Content extends React.Component {
                               this.state.activeTab === "4" ? "white" : "black",
                             backgroundColor:
                               this.state.activeTab === "4"
-                                ? "#167AFF"
+                                ? "#063980"
                                 : "transparent"
                           }}
                         >

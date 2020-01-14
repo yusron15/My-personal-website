@@ -1,22 +1,5 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
-// reactstrap components
 import {
   Badge,
   Button,
@@ -75,7 +58,12 @@ class VisiMisi extends React.Component {
                               <h2 className="title">
                                 {lang.tentangkami.visi.title}
                               </h2>
-                              <p style={{ textAlign: "justify" }}>
+                              <p
+                                style={{
+                                  textAlign: "justify",
+                                  fontSize: "1rem"
+                                }}
+                              >
                                 {lang.tentangkami.visi.content}
                               </p>
                             </ScrollAnimation>
@@ -89,23 +77,13 @@ class VisiMisi extends React.Component {
                               <h2 className="title">
                                 {lang.tentangkami.misi.title}
                               </h2>
-                              <p style={{ textAlign: "justify" }}>
+                              <p
+                                style={{
+                                  textAlign: "justify",
+                                  fontSize: "1rem"
+                                }}
+                              >
                                 {lang.tentangkami.misi.content}
-
-                                {/* Menyediakan fasilitas transaksi terbaik dengan beragam
-                          produk investasi serta layanan informasi pasar
-                          keuangan terkini dan terpercaya
-                          <br /> <br />
-                          Menyediakan fasilitas perdagangan online bagi investor
-                          dalam lingkup lokal maupun global melalui teknologi
-                          online trading yang inovatif
-                          <br /> <br />
-                          Aktif berpartisipasi dalam membangun industri
-                          perdagangan berjangka yang transparan melalui program
-                          edukasi berkesinambungan
-                          <br /> <br />
-                          Senantiasa meningkatkan dan mengembangkan kualitas
-                          sumber daya manusia yang profesional */}
                               </p>
                             </ScrollAnimation>
                           </Col>

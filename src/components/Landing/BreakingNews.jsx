@@ -35,11 +35,24 @@ import Down from "../../assets/img/red-triangle.png";
 import "../../assets/css/main.css";
 
 import Select from "react-select";
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" }
-];
+
+const tabItem = {
+  fontSize: "0.8rem",
+  paddingLeft: "5px",
+  height: "30px"
+};
+
+const tabContent = {
+  backgroundColor: "#063980",
+  opacity: "0.8",
+  border: "1px",
+  color: "white",
+  minHeight: "10.7vh",
+  fontWeight: "bold",
+  textAlign: "center",
+  paddingTop: "30px"
+};
+
 class BreakingNews extends Component {
   state = {
     dataSelect: "",
@@ -84,19 +97,13 @@ class BreakingNews extends Component {
                   <Nav tabs vertical pills style={{ padding: "0 0 0 15px" }}>
                     <NavItem>
                       <div
-                        // className={classnames({
-                        //   active: this.state.activeTab === "1"
-                        // })}
                         onClick={() => {
                           this.toggle("1");
                         }}
                       >
                         <div
                           style={{
-                            fontSize: "0.8rem",
-                            paddingLeft: "5px",
-                            // fontWeight: "bold",
-                            height: "26px",
+                            ...tabItem,
                             color:
                               this.state.activeTab === "1" ? "white" : "white",
                             backgroundColor:
@@ -115,11 +122,7 @@ class BreakingNews extends Component {
                       >
                         <div
                           style={{
-                            fontSize: "0.8rem",
-                            paddingLeft: "5px",
-                            // fontWeight: "bold",
-                            height: "26px",
-
+                            ...tabItem,
                             color:
                               this.state.activeTab === "2" ? "white" : "white",
                             backgroundColor:
@@ -138,11 +141,7 @@ class BreakingNews extends Component {
                       >
                         <div
                           style={{
-                            fontSize: "0.8rem",
-                            paddingLeft: "5px",
-                            // fontWeight: "bold",
-                            height: "26px",
-
+                            ...tabItem,
                             color:
                               this.state.activeTab === "3" ? "white" : "white",
                             backgroundColor:
@@ -158,52 +157,13 @@ class BreakingNews extends Component {
                 <Col md="8" style={{ padding: 0 }}>
                   <TabContent activeTab={this.state.activeTab}>
                     <TabPane tabId="1">
-                      <div
-                        style={{
-                          backgroundColor: "#063980",
-                          opacity: "0.5",
-                          border: "1px",
-                          color: "white",
-                          minHeight: "10.1vh",
-                          fontWeight: "bold",
-                          textAlign: "center",
-                          paddingTop: "25px"
-                        }}
-                      >
-                        Komoditi
-                      </div>
+                      <div style={tabContent}>Komoditi</div>
                     </TabPane>
                     <TabPane tabId="2">
-                      <div
-                        style={{
-                          backgroundColor: "#063980",
-                          opacity: "0.5",
-                          border: "1px",
-                          color: "white",
-                          minHeight: "10.1vh",
-                          fontWeight: "bold",
-                          textAlign: "center",
-                          paddingTop: "25px"
-                        }}
-                      >
-                        Index
-                      </div>
+                      <div style={tabContent}>Index</div>
                     </TabPane>
                     <TabPane tabId="3">
-                      <div
-                        style={{
-                          backgroundColor: "#063980",
-                          opacity: "0.5",
-                          border: "1px",
-                          color: "white",
-                          minHeight: "10.1vh",
-                          fontWeight: "bold",
-                          textAlign: "center",
-                          paddingTop: "25px"
-                        }}
-                      >
-                        FX
-                      </div>
+                      <div style={tabContent}>FX</div>
                     </TabPane>
                   </TabContent>
                 </Col>

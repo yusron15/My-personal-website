@@ -107,8 +107,9 @@ class Blogs extends React.Component {
                                   : "black",
                               backgroundColor:
                                 this.state.activeTab === "1"
-                                  ? "#167AFF"
-                                  : "transparent"
+                                  ? "#063980"
+                                  : "transparent",
+                              opacity: "0.90"
                             }}
                           >
                             Market Updates
@@ -136,8 +137,9 @@ class Blogs extends React.Component {
                                   : "black",
                               backgroundColor:
                                 this.state.activeTab === "2"
-                                  ? "#167AFF"
-                                  : "transparent"
+                                  ? "#063980"
+                                  : "transparent",
+                              opacity: "0.90"
                             }}
                           >
                             Morning News
@@ -165,8 +167,9 @@ class Blogs extends React.Component {
                                   : "black",
                               backgroundColor:
                                 this.state.activeTab === "3"
-                                  ? "#167AFF"
-                                  : "transparent"
+                                  ? "#063980"
+                                  : "transparent",
+                              opacity: "0.90"
                             }}
                           >
                             PM Market

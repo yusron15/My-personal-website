@@ -44,12 +44,14 @@ const textTitle = {
 const textSubtitle = {
   fontWeight: "bold",
   //   color: "white",
-  fontSize: "1.5rem"
+  fontSize: "1.5rem",
+  textAlign: "justify"
 };
 
 const textDesc = {
   //   color: "black",
-  fontSize: "1rem"
+  fontSize: "1rem",
+  textAign: "justify"
 };
 
 // core components
@@ -293,7 +295,7 @@ class Content extends React.Component {
                       <Col md="12">
                         <div
                           className="description font-black"
-                          style={textDesc}
+                          style={{ ...textDesc, textAlign: "justify" }}
                         >
                           {lang.topgrowthtrader.top}
                         </div>

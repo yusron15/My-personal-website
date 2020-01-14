@@ -689,3 +689,14 @@ hr.grey {
   justify-content: left;
   align-items: left;
 }
+
+.tabpane-breakingnews {
+  background-color: "#063980";
+  opacity: "0.8";
+  border: "1px";
+  color: "white";
+  min-height: "10.7vh";
+  font-weight: "bold";
+  text-align: "center";
+  padding-top: "30px";
+}
