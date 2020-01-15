@@ -21,7 +21,8 @@ import "../../assets/css/main.css";
 const customStyles = {
   control: (base, state) => ({
     ...base,
-    width: "300px"
+    minWidth: "300px",
+    height: "35px"
   })
 };
 
@@ -58,7 +59,7 @@ class Blogs extends React.Component {
                     Futures saat ini:
                   </p>
                   <Row style={{ marginBottom: "10%" }}>
-                    <Col lg="4" md="6">
+                    <Col md="5">
                       {/* <Card className="card-blog card-plain">
                         <div className="card-image">
                           <a href="#pablo" onClick={e => e.preventDefault()}>
@@ -71,10 +72,14 @@ class Blogs extends React.Component {
                         </div>
                       </Card> */}
                       {/* <div style={{ height: "10px" }}> */}
-                      <SearchField styles={customStyles} placeholder="Cari " />
+                      <SearchField
+                        className="react-search-field-input"
+                        placeholder="Cari "
+                      />
                       {/* </div> */}
                     </Col>
-                    <Col lg="4" md="6">
+
+                    <Col md="5">
                       {/* <Card className="card-blog card-plain">
                         <div className="card-image">
                           <a href="#pablo" onClick={e => e.preventDefault()}>
@@ -139,6 +144,7 @@ class Blogs extends React.Component {
                       />
                       {/* </div> */}
                     </Col>
+
                     <Col lg="4" xs="12">
                       {/* <Card className="card-blog card-plain">
                         <div className="card-image">

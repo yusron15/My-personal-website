@@ -70,7 +70,7 @@ class Comment extends React.Component {
                       <div className="media-footer">
                         <Button
                           className="btn-simple pull-right"
-                          color="primary"
+                          color="info"
                           href="#pablo"
                           id="tooltip341431465"
                           onClick={e => e.preventDefault()}
@@ -129,7 +129,7 @@ class Comment extends React.Component {
                       <div className="media-footer">
                         <Button
                           className="btn-simple pull-right"
-                          color="primary"
+                          color="info"
                           href="#pablo"
                           id="tooltip871944617"
                           onClick={e => e.preventDefault()}
@@ -184,7 +184,7 @@ class Comment extends React.Component {
                           <div className="media-footer">
                             <Button
                               className="btn-simple pull-right"
-                              color="primary"
+                              color="info"
                               href="#pablo"
                               id="tooltip442113005"
                               onClick={e => e.preventDefault()}
@@ -232,17 +232,22 @@ class Comment extends React.Component {
                   </a>
                   <Media body>
                     <Input
+                      style={{ color: "black" }}
                       placeholder="Write a nice reply or go home..."
                       rows="4"
                       type="textarea"
                     />
                     <div className="media-footer">
-                      <Button
+                      {/* <Button
+                        style={{ backgroundColor: "#063980" }}
                         className="pull-right"
-                        color="primary"
+                        // color="primary"
                         href="#pablo"
                         onClick={e => e.preventDefault()}
                       >
+                        Reply
+                      </Button> */}
+                      <Button color="info" className="pull-right" type="button">
                         Reply
                       </Button>
                     </div>

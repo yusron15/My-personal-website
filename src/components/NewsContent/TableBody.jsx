@@ -1,25 +1,10 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../assets/css/main.css";
 
 const textTable = {
-  color: "white",
+  color: "black",
+  fontSize: "1rem",
   textAlign: "center"
 };
 
@@ -35,7 +20,7 @@ class TableBody extends React.Component {
       previous
     } = this.props;
     return (
-      <tbody>
+      <tbody style={{ backgroundColor: "#D1D1D1" }}>
         {/* <Link
           to={`/newspage/${time}`}
           state={{
@@ -59,7 +44,7 @@ class TableBody extends React.Component {
               </div>
             </Link>
           </td>
-          <td className="text-center">
+          <td className="text-center" style={textTable}>
             {/* <div className="img-container"> */}
             <img
               className="content-center"
@@ -72,7 +57,7 @@ class TableBody extends React.Component {
             />
             {currency}
           </td>
-          <td>{event}</td>
+          <td style={textTable}>{event}</td>
           <td style={textTable} className="text-center">
             {actual}
           </td>

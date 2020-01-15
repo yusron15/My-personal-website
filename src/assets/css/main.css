@@ -700,3 +700,7 @@ hr.grey {
   text-align: "center";
   padding-top: "30px";
 }
+
+.react-search-field-input{
+  width:300px;
+}

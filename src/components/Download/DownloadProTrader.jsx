@@ -8,9 +8,9 @@ import laptop from "../../assets/img/download-pc.png";
 import android from "../../assets/img/download-android.png";
 import mac from "../../assets/img/download-mac.png";
 import ios from "../../assets/img/download-ios.png";
-import googleplay from "../../assets/img/playstore.png";
+import windows from "../../assets/img/windows-download.png";
 import appstore from "../../assets/img/appstore.png";
-import windows from "../../assets/img/download-windows.png";
+
 import world from "../../assets/img/world.png";
 import bg from "../../assets/img/download-bg.png";
 
@@ -73,7 +73,7 @@ class Features extends React.Component {
                             width: "10vw",
                             height: "auto"
                           }}
-                          src={googleplay}
+                          src={windows}
                         />
                       </ScrollAnimation>
                     </Col>

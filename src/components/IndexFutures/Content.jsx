@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -27,12 +11,14 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
+  CarouselIndicators,
   UncontrolledDropdown,
   Table,
   Container,
   Row,
   Col,
   UncontrolledTooltip,
+  CarouselControl,
   Carousel,
   CarouselItem
 } from "reactstrap";
@@ -256,6 +242,7 @@ class Content extends React.Component {
     if (this.animating) return;
     this.setState({ activeIndex: newIndex });
   };
+
   render() {
     return (
       <LangContext.Consumer>
@@ -314,6 +301,21 @@ class Content extends React.Component {
                         previous={this.previous}
                         //   className="carousel-team"
                       >
+                        {/* <CarouselControl
+                          direction="prev"
+                          directionText="Previous"
+                          onClickHandler={this.previous}
+                        />
+                        <CarouselControl
+                          direction="next"
+                          directionText="Next"
+                          onClickHandler={this.next}
+                        /> */}
+                        <CarouselIndicators
+                          items={items}
+                          activeIndex={this.state.activeIndex}
+                          onClickHandler={this.goToIndex}
+                        />
                         {items.map((item, key) => {
                           return (
                             <CarouselItem
@@ -337,7 +339,7 @@ class Content extends React.Component {
                             top: "450px"
                           }}
                         >
-                          <Button
+                          {/* <Button
                             className="btn-round btn-icon btn-simple slick-prev slick-arrow"
                             data-slide="prev"
                             href="#pablo"
@@ -346,9 +348,9 @@ class Content extends React.Component {
                               this.previous();
                             }}
                           >
-                            {/* <i className="tim-icons icon-minimal-left" /> */}
+
                             <img src={prevButton} />
-                          </Button>
+                          </Button> */}
 
                           <img
                             className="slick-prev slick-arrow"
@@ -370,7 +372,7 @@ class Content extends React.Component {
                             style={{ height: "30px", width: "auto" }}
                           />
 
-                          <Button
+                          {/* <Button
                             className="btn-round btn-icon btn-simple slick-arrow"
                             data-slide="next"
                             href="#pablo"
@@ -380,9 +382,9 @@ class Content extends React.Component {
                             }}
                             role="button"
                           >
-                            {/* <i className="tim-icons icon-minimal-right" /> */}
+
                             <img src={nextButton} />
-                          </Button>
+                          </Button>  */}
                         </div>
                         {/* </Col> */}
                       </Carousel>

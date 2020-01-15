@@ -52,7 +52,7 @@ class Content extends React.Component {
                   </div>
                   <div
                     className="team-1 broken-white"
-                    style={{ height: "70vh", padding: 0 }}
+                    style={{ height: "50vh", padding: 0 }}
                   >
                     <Col>
                       <Row style={{ marginLeft: "10%" }}>

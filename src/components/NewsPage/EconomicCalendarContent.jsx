@@ -133,14 +133,18 @@ class Blogs extends React.Component {
                         </tr>
                         <tr
                           style={{
-                            backgroundColor: "#484D4F",
+                            // backgroundColor: "#484D4F",
+                            backgroundColor: "#19447E",
                             borderRadius: "5px"
                           }}
                         >
                           <td
                             colspan="6"
                             className="text-center title"
-                            style={{ fontSize: "20px" }}
+                            style={{
+                              fontSize: "20px",
+                              backgroundColor: "#19447E"
+                            }}
                           >
                             25 November 2019, Monday
                           </td>
@@ -243,7 +247,10 @@ class Blogs extends React.Component {
                           <td
                             colspan="6"
                             className="text-center title"
-                            style={{ fontSize: "20px" }}
+                            style={{
+                              fontSize: "20px",
+                              backgroundColor: "#19447E"
+                            }}
                           >
                             26 November 2019, Tuesday
                           </td>

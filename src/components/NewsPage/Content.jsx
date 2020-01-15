@@ -71,12 +71,12 @@ const items = [
   {
     content: (
       <div
-        className="team-1 header-filter"
+        className="team-1"
         style={{
           backgroundImage: "url(" + require("assets/img/gold-town.png") + ")",
           backgroundSize: "cover",
           height: "70vh",
-          borderRadius: "20px"
+          borderRadius: "10px"
         }}
       >
         <Container>
@@ -103,12 +103,12 @@ const items = [
   {
     content: (
       <div
-        className="team-1 header-filter"
+        className="team-1"
         style={{
           backgroundImage: "url(" + require("assets/img/gold-town.png") + ")",
           backgroundSize: "cover",
           height: "70vh",
-          borderRadius: "20px"
+          borderRadius: "10px"
         }}
       >
         <Container>
@@ -135,12 +135,12 @@ const items = [
   {
     content: (
       <div
-        className="team-1 header-filter"
+        className="team-1"
         style={{
           backgroundImage: "url(" + require("assets/img/gold-town.png") + ")",
           backgroundSize: "cover",
           height: "70vh",
-          borderRadius: "20px"
+          borderRadius: "10px"
         }}
       >
         <Container>
@@ -318,7 +318,7 @@ class Carding extends React.Component {
     this.setState({ activeIndex: newIndex });
   };
   render() {
-    const child = { width: `300em`, height: `100%` };
+
     return (
       <LangContext.Consumer>
       {({ lang }) => {
@@ -364,6 +364,7 @@ class Carding extends React.Component {
                           items={items}
                           activeIndex={this.state.activeIndex}
                         />
+
                         {items.map((item, key) => {
                           return (
                             <CarouselItem
@@ -372,7 +373,9 @@ class Carding extends React.Component {
                               key={key}
                             >
                               {item.content}
+
                             </CarouselItem>
+                           
                           );
                         })}
 
