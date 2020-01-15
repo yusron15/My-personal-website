@@ -30,6 +30,8 @@ import {
 // core components
 import ColorNavbar from "components/Navbars/ColorNavbar.jsx";
 import DemoFooter from "components/Footers/DemoFooter.jsx";
+import subscribe from "../../assets/img/black-icon-email.png";
+import texticon from "../../assets/img/text-icon.png";
 
 import map from "../../assets/img/map-contact.png";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -142,10 +144,15 @@ class Content extends React.Component {
                               >
                                 <InputGroupAddon addonType="prepend">
                                   <InputGroupText>
-                                    <i className="tim-icons icon-single-02" />
+                                    {/* <i className="tim-icons icon-single-02" /> */}
+                                    <img
+                                      src={texticon}
+                                      style={{ height: "15px", width: "auto" }}
+                                    />
                                   </InputGroupText>
                                 </InputGroupAddon>
                                 <Input
+                                  style={{ color: "black" }}
                                   aria-label="First Name..."
                                   placeholder="First Name..."
                                   type="text"
@@ -173,10 +180,18 @@ class Content extends React.Component {
                                 >
                                   <InputGroupAddon addonType="prepend">
                                     <InputGroupText>
-                                      <i className="tim-icons icon-caps-small" />
+                                      {/* <i className="tim-icons icon-caps-small" /> */}
+                                      <img
+                                        src={texticon}
+                                        style={{
+                                          height: "15px",
+                                          width: "auto"
+                                        }}
+                                      />
                                     </InputGroupText>
                                   </InputGroupAddon>
                                   <Input
+                                    style={{ color: "black" }}
                                     aria-label="Last Name..."
                                     placeholder="Last Name..."
                                     type="text"
@@ -204,10 +219,15 @@ class Content extends React.Component {
                             >
                               <InputGroupAddon addonType="prepend">
                                 <InputGroupText>
-                                  <i className="tim-icons icon-email-85" />
+                                  {/* <i className="tim-icons icon-email-85" /> */}
+                                  <img
+                                    src={subscribe}
+                                    style={{ height: "15px", width: "auto" }}
+                                  />
                                 </InputGroupText>
                               </InputGroupAddon>
                               <Input
+                                style={{ color: "black" }}
                                 placeholder="Email Here..."
                                 type="text"
                                 onFocus={e =>
@@ -222,6 +242,7 @@ class Content extends React.Component {
                           <FormGroup>
                             <label>Your message</label>
                             <Input
+                              style={{ color: "black" }}
                               id="message"
                               name="message"
                               rows="6"

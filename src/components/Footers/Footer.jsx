@@ -49,7 +49,7 @@ class Footers extends React.Component {
                           {lang.Landing.Footer[1].title}
                         </h4>
                         <p>
-                          <Link to="/tentangkami" style={{ color: "white" }}>
+                          <Link to="/tentang-kami" style={{ color: "white" }}>
                             {lang.Landing.Footer[1].content[0]}
                           </Link>
                         </p>
@@ -60,7 +60,7 @@ class Footers extends React.Component {
                         </p>
                         <p>
                           <Link
-                            to="/rekeningterpisah"
+                            to="/rekening-terpisah"
                             style={{ color: "white" }}
                           >
                             {lang.Landing.Footer[1].content[2]}

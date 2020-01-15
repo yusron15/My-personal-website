@@ -175,7 +175,7 @@ class BottomNavbar extends React.Component {
                   </Col>
                 </Row>
 
-                <Row style={{ marginLeft: "18px" }}>
+                <Row style={{ marginLeft: "12px" }}>
                   <Col style={{ color: "#FFFFFF" }}>
                     <Input type="checkbox" /> Saya setuju untuk menerima berita
                     dan email promosi dari Topgrowth Futures

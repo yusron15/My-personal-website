@@ -12,8 +12,8 @@ function LangTogglerButton() {
       {({ lang, toggleLang }) => (
         <ReactFlagsSelect
           defaultCountry={"ID"}
-          countries={["ID", "GB"]}
-          customLabels={{ ID: "Indonesia", GB: "English" }}
+          countries={["ID", "GB", "CN"]}
+          customLabels={{ ID: "Indonesia", GB: "English", CN: "China" }}
           showSelectedLabel={false}
           showOptionLabel={true}
           className="menu-flags"

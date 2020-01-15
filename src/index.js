@@ -118,6 +118,10 @@ class App extends Component {
         this.setState({
           lang: lang.eng
         });
+      } else if (selectedLang == "CN") {
+        this.setState({
+          lang: lang.china
+        });
       }
     };
 

@@ -93,6 +93,7 @@ class ColorNavbar extends React.Component {
       childVisible: false,
       childVisibleTrading: false,
       childVisibleBerita: false,
+      fontBold: "",
       backgroundColor: "broken-white",
       bgButton: "transparent",
       marginTop: "50px",
@@ -103,14 +104,24 @@ class ColorNavbar extends React.Component {
 
   onClick() {
     this.setState({ childVisible: !this.state.childVisible });
+    this.setState({ childVisibleBerita: false });
+    this.setState({ childVisibleTrading: false });
   }
 
   onLeave() {
     this.setState({ childVisible: false });
   }
 
+  onLeaveAll() {
+    this.setState({ childVisible: false });
+    this.setState({ childVisibleBerita: false });
+    this.setState({ childVisibleTrading: false });
+  }
+
   onClickTrading() {
     this.setState({ childVisibleTrading: !this.state.childVisibleTrading });
+    this.setState({ childVisibleBerita: false });
+    this.setState({ childVisible: false });
   }
 
   onLeaveTrading() {
@@ -119,6 +130,8 @@ class ColorNavbar extends React.Component {
 
   onClickBerita() {
     this.setState({ childVisibleBerita: !this.state.childVisibleBerita });
+    this.setState({ childVisible: false });
+    this.setState({ childVisibleTrading: false });
   }
 
   onLeaveBerita() {
@@ -214,11 +227,25 @@ class ColorNavbar extends React.Component {
     return active ? "rgba(255, 255, 255, 0.17)" : "transparent";
   };
 
+  fontBold = pathLink => {
+    const currentPath = this.props.location.pathname;
+    let active = false;
+    if (pathLink instanceof Array) {
+      if (pathLink.includes(currentPath)) {
+        active = true;
+      }
+    } else {
+      active = pathLink === currentPath;
+    }
+    return active ? "bold" : "";
+  };
+
   render() {
     const styles = {
       containerStyle: {
         marginTop: this.state.marginTop,
         bgButton: this.state.bgButton,
+        fontBold: this.state.fontBold,
         zIndex: 999
       },
       colorStyle: {
@@ -286,14 +313,17 @@ class ColorNavbar extends React.Component {
                       >
                         <Link to="/landing">
                           <NavItem>
-                            <button
-                              className="dropdown dropbtn"
-                              style={{
-                                color: this.coloringNav("/landing")
-                              }}
-                            >
-                              {lang.Header.m1.title}
-                            </button>
+                            <div onMouseEnter={() => this.onLeaveAll()}>
+                              <button
+                                className="dropdown dropbtn"
+                                style={{
+                                  color: this.coloringNav("/landing"),
+                                  fontWeight: "bold"
+                                }}
+                              >
+                                {lang.Header.m1.title}
+                              </button>
+                            </div>
                           </NavItem>
                         </Link>
 
@@ -535,38 +565,31 @@ class ColorNavbar extends React.Component {
 
                         <Link to="/edukasi">
                           <NavItem>
-                            <button class="dropbtn" style={colorStyle}>
-                              {lang.Header.m5.title}
-                            </button>
+                            <div onMouseEnter={() => this.onLeaveAll()}>
+                              <button class="dropbtn" style={colorStyle}>
+                                {lang.Header.m5.title}
+                              </button>
+                            </div>
                           </NavItem>
                         </Link>
 
-                        <Link
-                          to="/karir"
-                          style={colorStyle}
-
-                          // onClick={() => {
-                          //   this.toggle("4");
-                          // }}
-                        >
+                        <Link to="/karir" style={colorStyle}>
                           <NavItem>
-                            <button class="dropbtn" style={colorStyle}>
-                              {lang.Header.m6.title}
-                            </button>
+                            <div onMouseEnter={() => this.onLeaveAll()}>
+                              <button class="dropbtn" style={colorStyle}>
+                                {lang.Header.m6.title}
+                              </button>
+                            </div>
                           </NavItem>
                         </Link>
 
-                        <Link
-                          to="/contact"
-
-                          // onClick={() => {
-                          //   this.toggle("5");
-                          // }}
-                        >
+                        <Link to="/contact">
                           <NavItem>
-                            <button class="dropbtn" style={colorStyle}>
-                              {lang.Header.m7.title}
-                            </button>
+                            <div onMouseEnter={() => this.onLeaveAll()}>
+                              <button class="dropbtn" style={colorStyle}>
+                                {lang.Header.m7.title}
+                              </button>
+                            </div>
                           </NavItem>
                         </Link>
                       </Nav>
