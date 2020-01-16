@@ -1,0 +1,541 @@
+{
+  "Landing": {
+    "HeaderLanding": {
+      "slide": [
+        {
+          "title": "與最佳經紀商交易",
+          "subtitle": "自2003 年成立以來，目前Topgrowth Futures 已成長為印度尼西亞最佳及最大的經紀公司",
+          "image": []
+        },
+        {
+          "title": "專業交易平台Pro I Trader",
+          "subtitle": "出色的平台，可讓您隨時進行實時交易",
+          "image": []
+        },
+        {
+          "title": "Topgrowth Futures 應用",
+          "subtitle": "立即下載Topgrowth Futures 應用以獲得最新的金融市場新聞，\r\n                交易推薦, 市場評論和實時交易信號",
+          "image": []
+        }
+      ]
+    },
+    "Pricing": {
+      "title": "帳號類型",
+      "subtitle": "現在您可以根據自己的交易特徵選擇賬戶類型.",
+      "card": [
+        [
+          "模擬賬戶",
+          "免費",
+          "不用押金（存款）",
+          "-",
+          "-",
+          "Pro I Trader & Topgrowth Trader (MT4)",
+          "名單"
+        ],
+        [
+          "迷你賬戶",
+          "$500",
+          "初始押金",
+          "最小0.1 手",
+          "最大5.0 手",
+          "Topgrowth Trader (MT4)",
+          "名單"
+        ],
+        [
+          "普通賬戶",
+          "$10,000",
+          "初始押金",
+          "最小0 .1 手",
+          "最大5.0 手",
+          "Topgrowth Trader (MT4)",
+          "名單"
+        ]
+      ]
+    },
+    "Feature": {
+      "title": "外匯交易，指數貨期，差價合約，和商品",
+      "subtitle": "以下給您提供產品的簡短評論：",
+      "content": [
+        {
+          "image": "",
+          "title": "外匯交易",
+          "subtitle": "世界上最受歡迎的金融市場"
+        },
+        {
+          "image": "",
+          "title": "指數貨期",
+          "subtitle": "可以將價格波動風險最小化的另類股票交易投資方案"
+        },
+        {
+          "image": "",
+          "title": "差價合約 (CFD)",
+          "subtitle": "利用市場動向的最靈活的工具之一，提供了以一個賬戶建立各種多產品組合的機會"
+        },
+        {
+          "image": "",
+          "title": "商品",
+          "subtitle": "期貨交易所交易的實物"
+        }
+      ]
+    },
+    "News": {},
+    "NewsInverted": {},
+    "Benefit": {
+      "title": "為什麼要在Topgrowth Futures 交易",
+      "content": [
+        {
+          "image": "",
+          "title": "低成本",
+          "subtitle": "使客戶能夠獲取最大利潤並實施資金管理"
+        },
+        {
+          "image": "",
+          "title": "合法性保障",
+          "subtitle": "具有BAPPEBTI （商品期貨交易監管局）許可證並已註冊為B BJ （Bursa Berjangka Jakarta / 雅加達期貨交易所）, ICDX （Indonesia Commodity and Derivative Exchange / 印尼商品及衍生品交易所）, KBI （Kliring Berjangka Indonesia / 印尼結算所）和I CH（Indonesia Clearing House / 印尼票據交換所）成員以及擁有國際標準的期貨經紀公司"
+        },
+        {
+          "image": "",
+          "title": "優良服務",
+          "subtitle": "提供最好的服務，從客戶培訓到提款知識"
+        },
+        {
+          "image": "",
+          "title": "研究和新聞",
+          "subtitle": "每天通過電子郵箱獲取最新的新聞信息和全面的分析"
+        },
+        {
+          "image": "",
+          "title": "沒有重新報價",
+          "subtitle": "體驗在Pro-I Trader 優秀平台上的無需重新報價的交易經驗"
+        },
+        {
+          "image": "",
+          "title": "24 小時服務支持",
+          "subtitle": "我們致力為客戶提供優質的24 小時服務"
+        }
+      ]
+    },
+    "Legality": {
+      "header": "合法性",
+      "content": {
+        "title": "BAPPPEBTI",
+        "content": "（商品期貨交易監管局）是印度尼西亞共和國貿易部主持下的政府機構，其任務是為公司和個人頒發營業執照，制定法規和程序，以及檢查和控制經紀行業的所有活動。Topgrowth Futures 公司在B APPEBTI 的監督下獲得牌照，編號為No. 300/BAPPEBTI/SI/III/2004.",
+        "image": ["image1", "image1", "image1", "image1", "image1"]
+      }
+    },
+    "NewsLetter": {
+      "title": "訂閱我們的新聞",
+      "subtitle": "加入我們的新聞通訊，並通過電子郵件獲取最新新聞！我們也討厭垃圾郵件，所以不",
+      "form": {
+        "email": "所以不用擔心",
+        "button": "您的電子郵件– 訂閱"
+      }
+    },
+    "Footer": [
+      {
+        "title": "PT. Topgrowth Futures",
+        "content": [
+          "自2003 年成立以來，Topgrowth Futures 已成長為印尼最好，最大的經紀公司，提供具有競爭力的外匯，期貨，差價合同和商品交易服務"
+        ]
+      },
+      {
+        "title": "關於我們",
+        "content": [
+          "關於Topgrowth Futures",
+          "合法性",
+          "獨立賬戶",
+          "我們分行"
+        ]
+      },
+      { "title": "服務", "content": ["新聞"] },
+      {
+        "title": "聯繫我們",
+        "content": [
+          "Sahid Sudirman Center, Lantai 40, Jl. Jend. Sudirman Kav. 86, Jakarta 10220, Indonesia <br /> 電子郵箱: customerservices@topgrowthfutures.com <br /> 電話: 021-2788-9366 <br /> 傳真: 021-2788-9395"
+        ]
+      }
+    ],
+    "BottomNavbar": {
+      "title": "立即下載電子書",
+      "form": {
+        "fullname": "全名",
+        "email": "電子郵箱地址",
+        "code": "密碼",
+        "handphone": "電話號碼",
+        "leftTick": "我同意接收來自Topgrowth Futures 的促銷新聞和電子郵件",
+        "rightTick": "我已閱讀並同意隱私政策",
+        "button": "下載電子書"
+      }
+    }
+  },
+  "tentangkami": {
+    "header": "關於 Topgrowth Futures",
+    "content": "自2003 年成立以來，Topgrowth Futures 已成長為印尼最好，最大的經紀公司，提供具有競爭力的外匯，期貨，差價合同和商品交易服務",
+    "visi": {
+      "title": "我們的願景",
+      "content": "通過優質服務和創新的工作計劃，成為期貨交易行業的領先公司，與本地和全球客戶建立理想的合作關係"
+    },
+    "misi": {
+      "title": "我們的任務",
+      "content": "提供具有各種投資產品的最佳交易設施以及最新最受信任的金融市場信息服務 \n 通過創新的網上交易技術為本地和全球範圍內的投資者提供在線交易設施 \n 通過長期教育計劃積極參與建立透明的期貨交易行業 不斷提高和發展專業人力資源質量"
+    }
+  },
+  "cabang": [
+    { "image": "", "title": "", "content": "" },
+    { "image": "", "title": "", "content": "" },
+    { "image": "", "title": "", "content": "" }
+  ],
+  "rekeningterpisah": {
+    "header": "獨立賬戶",
+    "content": {
+      "title": "獨立賬戶",
+      "content": "（隔離賬戶）是以期貨經紀公司的名義下開設的銀行賬戶，專門用於收集客戶的集體資金，並且僅用於與公司運營賬戶分開的客戶交易。",
+      "subContent": [
+        "BCA Rupiah （印尼盾）// 賬號：035.311.8569 // Swift Code: CENAIDJA // 賬號名：PT. Topgrowth Futures, \n BCA Dolar （美金）// 賬號：035.317.7718 // Swift Code: CENAIDJA // 賬號名：P T. Topgrowth Futures"
+      ]
+    }
+  },
+  "legalitas": {
+    "header": "合法性",
+    "content": {
+      "title": "BAPPPEBTI",
+      "content": "BAPPEBTI （商品期貨交易監管局）是印度尼西亞共和國貿易部主持下的政府機構，其任務是為公司和個人頒發營業執照，制定法規和程序，以及檢查和控制經紀行業的所有活動。Topgrowth Futures 公司在B APPEBTI 的監督下獲得牌照，編號為No. 300/BAPPEBTI/SI/III/2004.",
+      "image": ["image1", "image1", "image1", "image1", "image1"]
+    }
+  },
+  "Forex": {
+    "header": "外匯交易",
+    "top": "目前，外匯（F orex ）是世界上最大，流動性最強的市場，其交易價值周轉率是股票和債卷市場綜合的三倍。外匯或外匯市場通過全球銀行網路，從亞洲，歐洲，到美國，每天24 小時運作而無需集中交易。因此，外匯簡稱為O TC 產品（場外交易市場）。此交易通過利用價格波動購買或出售貨幣來執行的。",
+    "content": [
+      {
+        "title": "外匯交易的優勢",
+        "image": "",
+        "content": "高流動性因總有供求關係 \n 潛在的雙向收益，因對直接貿易無限制 \n 起初投資成本較低，因通過槓桿作用交易的 \n 透明性，因與負責貨幣對價市場的直接交易 \n 交易成本低 \n 只要有互聯網連接就可以隨時歲的完成"
+      },
+      {
+        "title": "與Topgrowth 外匯交易的優勢",
+        "image": "",
+        "content": "隨時隨地進行交易 \n 數據和信息向所有客戶開放 \n	在研究開發團的支持下，在線和離線 \n	有個培訓模塊提高專業交易員的只能 \n	獨立 戶的存在來保証投資資金的安全性 \n	提款過程快速高效 \n	優質的及時訂單執行 \n 在所有情況下的固定價 \n 卓越可靠的交易技術"
+      },
+      {
+        "title": "各種外匯產品",
+        "content": "使用T opgrowth Futures 進行外匯交易給您無論使用什麼平台或設備，通路到各種外匯產品做交易 \r\n          以下是您可以交易的各種貨幣對"
+      },
+      { "title": "Major Pairs", "table": [] },
+      { "title": "Cross Pairs", "table": [] }
+    ]
+  },
+  "CFD": {
+    "header": "差價合約（CFD)",
+    "content": [
+      {
+        "title": "什麼是CFD?",
+        "content": "在線差價合約交易是最靈活的工具，利用市場動向，在無需通過交易基礎設備來佔用資金。不像一般股票交易，差價合約可以做買賣，讓您從市場價格上漲或下跌中尋找利潤。差價合約提供獨立賬戶建立各種產品組合的機會。"
+      },
+      {
+        "title": "為什麼要交易加成合約?",
+        "content": "差價合約（CFD ）是一項在開立和關閉訂單之間交換基礎工具（例如股票）價值差的協議。在線差價合約交易是買賣牛市和熊市的一種使用方式，並可賣空。股票可在下跌之前獲利出售。差價合約產品可以幫助有效利用投資資金。但是，面臨的風險也比傳統產品更大. 差價合約是以差額作交易的產品。因此，僅存入一小部分來交易產品的全合同價值，使投資潛力更為擴大。與股票交易一樣，損益由買賣價格之差決定。需要的差額度相對於差價合約產品會有所不同. Topgrowth 提供全面基礎產品的差價合約包括全球指數，期貨，商品和貨幣。"
+      },
+      {
+        "title": "差價合約交易戰略",
+        "content": "差價合約交易戰略. 差價合約幾乎對所有金融產品都使用的槓桿交易工具。差價合約產品提供的包括商品期貨（金屬和能源產品）以及在各種國際金融市場上列出的指數. 所提供的一大優勢是客戶不需要準備產品標稱值的100%基金。購買差價合約，客戶其實並沒有擁有實際產品，但是客戶擁有全部合約價值中的100%獲利或虧損. 無論哪種投資方式，差價合約是開發並保護整個投資組合的寶貴工具。使用差價合約，客戶可以推測金融產品價格短期變動，或客戶可以保護整體投資，以最大程度減少負面的市場變動。此外，客戶可以利用現有的槓桿，取決於市場方向，並可以顯出增加客戶權益利潤."
+      },
+      {
+        "title": "差價合約產品名單",
+        "content": "使用Topgrowth 進行差價合約交易意味著客戶可以在一個平台上做美國，英國，歐洲，中國和日本股票的買賣。下表列出了所有差價合約通過Topgrowth 可交易產品。此外，Topgrowth 還包括每種產品的信息，相關貨幣以及每筆合約交易的差額要求 \r\n            "
+      },
+      { "title": "CFDs Pada Index", "table": [] },
+      { "title": "CFDs Pada Produk Energi", "table": [] },
+      { "title": "CFDs Pada Bullion Produk / Precious Metal", "table": [] }
+    ]
+  },
+  "Gold": {
+    "header": "黃金",
+    "top": "倫敦金銀市場是黃金和白銀交易的場外批發市場。交易在倫敦金銀市場協會（LBMA ）的成員之間進行，其成員大多數是在英格蘭銀行監管下的銀行或主要的金條經銷商和精煉商.",
+    "content": [
+      {
+        "title": "黃金交易",
+        "table": [],
+        "image": "",
+        "content": "在國際上，黃金是通過場外交易在紐約產品交易所（N YMEX ）和東京商品交易所（T OCOM ）於有限數量進行的交易. 遠期合約被稱為黃金期貨合約，現貨金在交易日後兩天工作日內進行交易結算，以工作日為紐約和倫敦市場開放營業。與商品市場不同，黃金遠期合約是由現貨價和利率差啟動的，類似外匯市場，並且不基於供求動態。像貨幣一樣，黃金由中央銀行和銀行間市場借貸的。黃金貸款更具有吸引力，因為黃金的利率往往低於美國國內利率，除非在特殊情況下黃金市場處於遠期價格高於現貨價格的狀態。歷史性上看來，此事使黃金交易成為生產者可進行的遠期銷售的吸引力的市場，並為活躍和相對流動的衍生品市場做出了貢獻."
+      },
+      {
+        "title": "市場規模",
+        "content": "到目前為止，倫敦是全球最大的場外交易中心，其次是紐約，蘇黎世，和東京。但是，近年來交易所交易量有所增長，其中最高活躍的是紐約C OMEX 和東京T OCOM 。黃金還以證券形式交易，列入在倫敦，紐約，橋涵內斯堡和澳大利亞交易的基金。儘管黃金和白銀的十五市場分佈於全球，但大多數場外交易批發清算是在倫敦進行的。在2008 年11 月L BMA 每日黃金和白銀清算平均分別為每兩183 0 萬（價值139 億美元）和1 . 076 億（價值11 億美元）。這意味著，在L BMA 每4.4 天清算等於金礦的年產量，而6.2 天白銀的年產量。"
+      }
+    ]
+  },
+  "Komoditi": {
+    "header": "商品",
+    "top": "作為大多數全球投資經理最流行的工具之一，商品交易導致商品市場上的資金周轉率很高 \r\n\r\n        商品可以解釋為某種物質，分為兩種，採礦商品，例如黃金，白銀，石油和其他商品，以及農業商品，例如糖，米，可可，咖啡和其他商品 \r\n        \r\n        商品更容易理解因為更多取決於需求和供應的基本條件上。商品價格波動性較小於股票和債卷，因此為市場參與者提供了有效的投資組合多樣化選擇。更讓商品在交易中比股票擁有吸引力又更有風險的是槓桿率。但實際上，商品市場的交易風險不會超過客戶確定的風險。\r\n 雅加達期貨交易所（JFX ）和印尼商品及衍生品交易所（ICDX ）作為印尼期貨交易所的作用為以更加動態，透明和流動的系統來開發期貨市場。多邊交易允許多方通過電子手段作買賣工具.",
+    "reason": {
+      "title": "為什麼要交易商品？",
+      "content": [
+        "商品需求持續增長",
+        "隨著世界的發展，對商品的需求將繼續增加並將影響到價格上漲"
+      ]
+    },
+    "content": [
+      {
+        "image": "",
+        "title": "商品需求持續增長",
+        "content": "隨著世界的發展，對商品的需求將繼續增加並將影響到價格上漲"
+      },
+      {
+        "image": "",
+        "title": "保護投資組合免受通貨膨脹",
+        "content": "於同夥膨脹率一支，商品價格將繼續上漲；市場參與者可以通過期貨交易所保護這些價格受到通貨膨脹的影響"
+      },
+      {
+        "image": "",
+        "title": "商品價格變動的因素",
+        "content": "其中包括天氣預報，經濟因素，政治因素，國際壓力和投機"
+      }
+    ],
+    "keuntungan": {
+      "title": "期貨交易的優勢",
+      "content": [
+        {
+          "title": "MARGI\n LEVERAGE",
+          "desc": "差價額/ 槓桿率所有期貨合約的交易差價額在2%-10%的範圍內\n 比如\n 合約: GOLDGR\n 合約規模: 1 手= 100 克例如，黃金價格Rp . 495.000. 1 手GOLDGR: 100 克x Rp . 495.000 = Rp . 49.500.000 每手差價額4%: 4% x Rp . 49.500 .000 = Rp . 1.980.000, 圓為Rp 2.000.000,- ."
+        },
+        {
+          "title": "雙向機會",
+          "desc": "買入– 購買合約（投資者希望價格繼續上漲）出賣– 賣出合約（投資者希望價格繼續下跌)"
+        },
+        {
+          "title": "保戶值",
+          "desc": "給生產者提供保護值的機會，這樣一來他們不必在價格低廉時出賣。此外，在通貨膨脹期間，商品可以作為其他資產的另一種保護選擇"
+        }
+      ]
+    }
+  },
+  "indexfutures": {
+    "header": "指數期貨",
+    "content": "期貨合約或指數期貨是股票交易的一種另類投資，可以以最大程度降低風險並保護投資者遭到不利的價格波動的影響。期貨合約是在未來以今天約定的價格接受或提交金融工具或合約的義務。\r\n\r\n        在期貨合約交易中，投資者有機會持有公開賣出合約以期望價格會下跌，而持有公開買入合約則期望價格上漲。\r\n        \r\n        Topgrowth Futures 推薦給投資者日本期貨（日經225），香港期貨（恆生）和韓國期貨（K OSPI 200），從指數價格波動中尋找利潤。",
+    "slide": [
+      {
+        "title": "BEBERAPA RAGAM INDEKS FUTURES",
+        "subtitle": "日本指數期貨（日經225）",
+        "content": "日經225 ，通常稱為日經，日經指數，或日經平均指數，是東京證券交易所（T SE ）的股票市場指數，每天使用平均日元價格計算方法得出並從1950年由日本經濟新聞進行年度審查及出版\r\n            目前，日經指數最常用於描述日本的股市狀況，類似於道璟斯工業平均指數，甚至在1975-1985年間被稱為日經道璟斯指數。日經225期貨於1986年在新加坡證券交易所（S GX ），1988年在大阪證券交易所（O SE ）和1990年在芝加哥商品交易所（C ME ）推出。如今，日經已成為國際認可的指數期貨並自2010年在交易時段每15秒更新一次"
+      },
+      {
+        "title": "BEBERAPA RAGAM INDEKS FUTURES",
+        "subtitle": "香港指數期貨（恆生）",
+        "content": "恆生指數（H SI）是在香港交易所使用的股票指數流通綜合調整市值加權的方法。該指數用於記錄和監控各大公司在香港股市中的每日變化，並且是該地區整體市場表現的關鍵指標。恆生指數中的45家公司代表香港證券交易所總市值的60% \r\n            自2011年3月7日起，香港交易所將交易時間延長為09.30-12.00 和13.30-16.00 。此外，自2012年3月5日起，交易時間更改為09.15-12.00 和13.00-16.15 ，以適應中國大陸的交易時間. 恆生指數於1969年11月24日開始交易。目前進行準備和管理由恆生指數有限公司，也就是市值最大的銀行之一的恆生銀行的子公司。"
+      },
+      {
+        "title": "BEBERAPA RAGAM INDEKS FUTURES",
+        "subtitle": "韓國期貨指數（KOSPI 200 ）",
+        "content": "韓國綜合股票價格指數或KOSPI 是在股票市場部交易的所有股票指數（之前稱韓國證券交易所）。KOSPI 是代表韓國的股票市場指數，就如美國的道璟斯工業平均或S&P 500 。\r\n            KOSPI 於2983年推出，基質為100。在2007年，KOSPI 的日交易量為數億股或相當於數万億韓元的股票。KOSPI 200 指數來由自股票市場部的200 家大公司組成。KOSPI 200 的市場價值超過KOSPI 的70%，並且與KOSPI 指數一起移動。KOSPI 200 指數之所以被視為重要是因為它在期貨和期權交易所進行交易，以及是全球交易最活躍的指數之一"
+      }
+    ]
+  },
+  "jamperdagangan": {
+    "header": "Jam Perdagangan",
+    "table": [
+      [
+        ["Product", "Summer", "Winter"],
+        [
+          "FOREX",
+          "Monday 05.00am – Saturday 04:00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
+          "Monday 05.30am – Saturday 05:00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)"
+        ],
+        [
+          "LLG & SILVER",
+          "\tMonday Open at 06.00am Tuesday – Friday Open at 05.00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
+          "Monday – Friday Open at 06.00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)"
+        ],
+        [
+          "DOW JONES, S&P500, NASDAQ",
+          "05.00am – 03.15am next day (all time is Jakarta time)",
+          "06.00am – 04.15am next day (all time is Jakarta time)"
+        ],
+        [
+          "FOREX",
+          "Monday 05.00am – Saturday 04:00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
+          "Monday 05.30am – Saturday 05:00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)"
+        ],
+        [
+          "FTSE",
+          "07:00am – 03:00am next day (all time is Jakarta time)",
+          "08:00am – 04:00am next day (all time is Jakarta time)"
+        ],
+        [
+          "DAX",
+          "07:15am – 03:00am next day (all time is Jakarta time)",
+          "07:15am – 04:00am next day (all time is Jakarta time)"
+        ],
+        [
+          "CRUDE OIL",
+          "05.00am – 04.00am next day (all time is Jakarta time)",
+          "06.00pm – 05.00am next day (all time is Jakarta time)"
+        ]
+      ],
+      [
+        ["Product", "Session 1", "Session 2", "Last Trading Day Closing"],
+        ["KOSPI200", "07.00am – 01.35pm", "", "01.20pm"],
+        [
+          "NIKKEI225",
+          "06.30am – 01.25pm",
+          "01.55pm – 03.45am next day",
+          "01.25pm"
+        ],
+        ["HANGSENG", "08.15am – 11.00am", "12.00pm – 03.30pm", "03.00pm"]
+      ]
+    ]
+  },
+  "protrader": {
+    "header": "Pro I Trader",
+    "top": "金融市場中的網上交易是必須且個有趣的體驗，因為可以快速輕鬆的完成交易。由於競爭激烈，網上交易平台變得越來越容易使用並且可以集成到信息技術所有範圍內\r\n        Topgrowth 是開發最先進的網上交易技術的領先公司之一。Pro- iTrading 是Topgrowth 網上交易平台使客戶可以隨時隨地實時進行外彙和商品交易。通過先進交易平台提供的各種最新工具以及實時新聞，使客戶可以輕鬆便捷的進行交易",
+    "content": [
+      {
+        "image": "",
+        "content": "訂單執行過程簡單快捷"
+      },
+      {
+        "image": "",
+        "content": "生活行情摘要格式和高級模式"
+      },
+      {
+        "image": "",
+        "content": "具有技術交易功能的圖標"
+      },
+      {
+        "image": "",
+        "content": "基本交易的實時新聞"
+      },
+      { "image": "", 
+        "content": "可以根據客戶要求進行調整" },
+      {
+        "image": "",
+        "content": "可以輕鬆的訪問交易票據"
+      }
+    ]
+  },
+  "topgrowthtrader": {
+    "header": "Topgrowth Trader",
+    "top": "Metatrader 被交易員稱為最高效，使用最廣泛的平台。Topgrowth Futures 通過各種滿足客戶需求的M etatrader 選項，使客戶可以一直連接到市場\r\n        Topgrowth Trader 是以網上在線訪問系統的軟件應用。借助metatrader ，一個交易員可以輕鬆的進行交易並配備了完整的軟件和功能。幾乎所有經紀人支持交易員使用MetaQuotes 軟件平台。\r\n 和其他平台相比，Topgrowth Trader 應用程序擁有許多優勢和進行交易的軟件。Metatrader 可以幫助交易員添加和創造用於交易的特殊腳本（指標和EA機器人）。",
+    "content": [
+      {
+        "image": "",
+        "content": "容易操作"
+      },
+      {
+        "image": "",
+        "content": "以實時價格在metatrader 上交易"
+      },
+      {
+        "image": "",
+        "content": "根據客戶需求提供各種圖形，分析，和指標"
+      },
+      {
+        "image": "",
+        "content": "提供來自金融市場的最新信息"
+      },
+      {
+        "image": "",
+        "content": "擁有超過20中語言可選"
+      },
+      {
+        "image": "",
+        "content": "客戶可以直接並透明的觀察財務狀況"
+      },
+      {
+        "image": "",
+        "content": "metatrader 帶寬的使用較小，據有較高的安全性"
+      }
+    ]
+  },
+  "login": {
+    "form": {
+      "title": "登錄",
+      "firstName": "名字",
+      "lastName": "姓",
+      "signIn": "開始",
+      "bantuan": "需要幫忙?"
+    }
+  },
+  "register": {
+    "form": {
+      "title": "目錄",
+      "fullname": "全名",
+      "handphone": "電話號碼",
+      "email": "電子郵件地址",
+      "password": "密碼",
+      "leftButton": "模擬賬戶",
+      "rightButton": "真實賬戶",
+      "signIn": "已有賬戶？ 點此輸入"
+    }
+  },
+  "berita": {
+    "terkini": "Berita Terkini",
+    "terpopuler": "Berita Terpopuler",
+    "outlook": "Market Outlook",
+    "forex": "Forex & Commodity News",
+    "stock": "Stock Index News",
+    "button": "Indeks Berita"
+  },
+  "edukasi": {},
+  "karir": {
+    "title": "事業",
+    "desc": "我們正在尋找以下適合員工。",
+    "form": {
+      "search": "Cari",
+      "Select": "Select"
+    }
+  },
+  "hubungikami": {
+    "header": {
+      "title": "您有提問？",
+      "subtitle": "我們希望您能轉達您想對我們說的話"
+    },
+    "top": {
+      "title": "我們期待您的任何意見回饋",
+      "subtitle": "請通過我們的聯繫表致電或發送電子郵件，我們很樂意為您提供幫助"
+    },
+    "contact": {
+      "title": "聯繫和信息",
+      "left": "地址: Sahid Sudirman Center, Lantai 40, Jl. Jend. Sudirman Kav. 86, Jakarta 10220, Indonesia",
+      "right": "電話號碼: (+62)21 2788-9393 \n 傳真: (+62)21 2788-9395"
+    },
+    "form": {
+      "firstname": "名字",
+      "lastname": "姓",
+      "emailaddress": "電子郵件",
+      "yourmessage": "信息",
+      "button": "發送"
+    }
+  },
+  "Header": {
+    "m1": { "title": "首頁" },
+    "m2": {
+      "title": "關於我們",
+      "dropdown": [
+        { "title": "關於TopgrowthFutures" },
+        { "title": "我們分行" },
+        { "title": "獨立賬戶" },
+        { "title": "合法性" }
+      ]
+    },
+    "m3": {
+      "title": "網上交易",
+      "dropdown": [
+        {
+          "title": "產品",
+          "sub": ["外匯交易", "差價合約（CFD）", "黃金", "商品", "指數期貨"]
+        },
+        { "title": "Informasi", "sub": ["Jam Perdagangan"] },
+        {
+          "title": "交易平台",
+          "sub": ["Pro I Trader", "Topgrowth Trader"]
+        },
+        { "title": "創建賬戶", "sub": ["開始", "名單"] }
+      ]
+    },
+    "m4": { "title": "新聞" },
+    "m5": { "title": "Edukasi" },
+    "m6": { "title": "事業" },
+    "m7": { "title": "聯繫我們" }
+  }
+}
