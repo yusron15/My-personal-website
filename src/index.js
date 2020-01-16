@@ -82,6 +82,9 @@ import "animate.css/animate.min.css";
 
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 
+import eng from "./lang/eng.json";
+import id from "./lang/id.json";
+
 const hist = createBrowserHistory();
 
 const theme = createMuiTheme({
@@ -130,6 +133,13 @@ class App extends Component {
       toggleLang: this.toggleLang
     };
   }
+
+  componentDidMount = () => {
+    store.dispatch({
+      type: "GET_ALL_PAGE",
+      payload: id
+    });
+  };
 
   render() {
     return (

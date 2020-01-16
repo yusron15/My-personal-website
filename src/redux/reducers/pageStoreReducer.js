@@ -624,6 +624,12 @@ export default (state = defaultState, action = {}) => {
       };
     }
 
+    case "GET_ALL_PAGE": {
+      return {
+        ...action.payload
+      };
+    }
+
     default:
       return state;
   }

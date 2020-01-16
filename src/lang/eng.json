@@ -1,270 +1,528 @@
 {
-    "Landing":{
-        "HeaderLanding":{
-            "slide":[
-                {"title":"Trade with the Best Broker", "subtitle":"Established in 2003, Topgrowth Futures has grown to become the best and biggest broker in Indonesia","image":[]},
-                {"title":"Top Quality Pro I Trader Platform", "subtitle":"A high-quality platform that allows you to trade real time anytime","image":[]},
-                {"title":"Topgrowth Futures Mobile", "subtitle":"Download our application now to get the latest financial market news, trading recommendations, market reviews, and real time trading signals","image":[]}
-        ]},
-        "Pricing":{
-            "title":"Account Types",
-            "subtitle":"Choose the most suitable account based on your trading character!",
-            "card":[
-                ["Demo Account", "FREE", "No Initial Deposit", "-", "-", "Pro I Trader & Topgrowth Trader (MT4)", "Sign Up"],
-                ["Mini Account", "$500", "Initial Deposit", "Minimum 0.1 Lot", "Maximum 5.0 Lot", "Topgrowth Trader (MT4)", "Sign Up"],
-                ["Regular Account", "$10,000", "Initial Deposit", "Minimum 1.0 Lot", "Maximum 50 Lot", "Pro I Trader & Topgrowth Trader (MT4)", "Sign Up"]
-            ]
+  "Landing": {
+    "HeaderLanding": {
+      "slide": [
+        {
+          "title": "Trade with the Best Broker",
+          "subtitle": "Established in 2003, Topgrowth Futures has grown to become the best and biggest broker in Indonesia",
+          "image": []
         },
-        "Feature":{
-            "title":"Forex Trading, Index Futures, CFD, and Commodities with Topgrowth",
-            "subtitle":"Here is a brief review of our available products",
-            "content":[
-                {"image":"","title":"Foreign Exchange","subtitle":"The most popular financial market in the world"},
-                {"image":"","title":"Commodities","subtitle":"Physical substances traded on the futures exchange"},
-                {"image":"","title":"CFD","subtitle":"One of the most flexible tools to take advantage of market movements that offers the opportunity to create a variety of multiproduct portfolios from one account"},
-                {"image":"","title":"Index Futures","subtitle":"An alternative for stock trading investment that is able to minimize the risk of price fluctuations"}
-            ]
+        {
+          "title": "Top Quality Pro I Trader Platform",
+          "subtitle": "A high-quality platform that allows you to trade real time anytime",
+          "image": []
         },
-        "News":{},
-        "NewsInverted":{},
-        "Benefit":{
-            "title":"Why Topgrowth Futures",
-            "content":[
-                {"image":"","title":"Low Cost","subtitle":"Enabling customers to maximize profits and implement money management"},
-                {"image":"","title":"Guaranteed Legality","subtitle":"An international standard brokerage company licensed under BAPPEBTI who is registered as a member of BBJ, ICDX, KBI, and ICH"},
-                {"image":"","title":"Excellent Service","subtitle":"Providing the best services, from customer education to fund withdrawals"},
-                {"image":"","title":"Research and News","subtitle":"Get the latest news and comprehensive analysis to your email on a daily basis"},
-                {"image":"","title":"No Requote","subtitle":"Experience trading without requote with our top-quality Pro I Trader platform"},
-                {"image":"","title":"24 Hour Support","subtitle":"We are committed to provide the best service through a 24-hour customer service"}
-            ]
-        },
-        "Legality":{
-            "header":"Legality",
-            "content":[
-                {"image":"","title":"BAPPPEBTI","content":"BAPPEBTI (Badan Pengawas Perdagangan Berjangka Komoditi) is a government institution under the wing of the Ministry of Trade Republic of Indonesia whose tasks are to issue business licenses, for both companies and individuals, make rules and regulations, as well as inspect and control all brokerage companies’ activities. PT Topgrowth Futures operates under the license and supervision of BAPPEBTI with a license number of 300/BAPPEBTI/SI/III/2004."},
-                {"image":"","title":"Jakarta Futures Exchange (JFX)","content":"PT Jakarta Futures Exchange (JFX) is the first commodity futures exchange in Indonesia to provide facilities for its members to carry out futures contract transactions. JFX was established on August 19, 1999 in Jakarta by 29 limited liability companies in accordance with PP No. 9/99, and has started its first trade since December 15, 2000 PT Topgrowth Futures is a member of JFX with a membership number of SPAB-059/BBJ/01/04."},
-                {"image":"","title":"Kliring Berjangka Indonesia (KBI)","content":"PT Kliring Berjangka Indonesia (KBI) is a governemnt-owned company that functions as a clearing guarantee institution based on BAPPEBTI's decision of No. 128/BAPPEBTI/IX/2001. Every futures contract settlement transaction registered by the members are carried out by KBI. Aside from being a stock exchange broker, PT Topgrowth Futures is also a member of KBI with a clearing number of 21/AK-KBI/III/2004."},
-                {"image":"","title":"Indonesia Clearing House (ICH)","content":"Indonesia Clearing House (ICH) is a non-governmental company that obtained a clearing house license from BAPPEBTI under the number of No. 30/BAPPEBTI/KP/7/2009. Therefore, ICH is able to carry out the futures contract transactions registered by its members."},
-                {"image":"","title":"Indonesian Commodity and Derivative Exchange (ICDX)","content":"PT Indonesian Commodity and Derivative Exchange is a second-term stock exchange established in Indonesia that functions of being a facilities provider for its members to carry out futures contract transactions. ICDX obtained an exchange license from BAPPEBTI under the number No. 26/BAPPEBTI/KP/6/2009, and has started its first trade since November 30, 2009. PT Topgrowth Futures is a member of the ICDX with a membership number of 047/SPKB/ICDX/Dir/IX/2010."}
-                
-            ]
-        },
-        "NewsLetter":{
-            "title":"Subscribe to Our Newsletter",
-            "subtitle":"Join our newsletter and get the latest news in your inbox every week! We also hate spams, so no worries",
-            "form":{
-                "email":"Your Email",
-                "button":"Subscribe"
-            }
-        },
-        "Footer":[
-            {"title":"PT Topgrowth Futures", "content":["Established in 2003, Topgrowth Futures has grown to become the best and biggest broker in Indonesia that provides forex, index futures, CFD, and commodities product transaction services with a competitive expansion"]},
-            {"title":"About Us", "content":["About Topgrowth Futures", "Legality", "Segregated Account", "Our Branch"]},
-            {"title":"Service", "content":["News"]},
-            {"title":"Contact Us", "content":["Sahid Sudirman Center, 40th Floor, Unit F-G","Jl. Jend Sudirman Kav. 86","Jakarta 10220, Indonesia","Email: customerservices@topgrowthfutures.com","Ph: (+62)21 2788-9393","Fax: (+62)21 2788-9395"]}
+        {
+          "title": "Topgrowth Futures Mobile",
+          "subtitle": "Download our application now to get the latest financial market news, trading recommendations, market reviews, and real time trading signals",
+          "image": []
+        }
+      ]
+    },
+    "Pricing": {
+      "title": "Account Types",
+      "subtitle": "Choose the most suitable account based on your trading character!",
+      "card": [
+        [
+          "Demo Account",
+          "FREE",
+          "No Initial Deposit",
+          "-",
+          "-",
+          "Pro I Trader & Topgrowth Trader (MT4)",
+          "Sign Up"
         ],
-        "BottomNavbar":{
-            "title":"Download E-Book Now",
-            "form":{
-                "fullname":"Full Name",
-                "email":"Email Address",
-                "code":"+62",
-                "handphone":"Phone Number",
-                "leftTick":"I agree to receive news and promotional emails from Topgrowth Futures",
-                "rightTick":"I have read and agree to the privacy policy",
-                "button":"Download E-Book"
-            }
-        }
-    },
-    "tentangkami":{
-        "header":"About Topgrowth Futures",
-        "content":"Established in 2003, Topgrowth Futures has grown to become the best and biggest broker in Indonesia that provides forex, index futures, CFD, and commodities product transaction services with a competitive expansion.\r\n        Topgrowth Futures is a legally-recognized company that operates under the license and supervision of BAPPEBTI and has received numerous awards, in terms of legal compliance and financial performance.\r\n        Topgrowth Futures provides online trading facilities in foreign exchange markets and plans to utilize the long existing potential of Indonesia’s well-known commodity market.\r\n        For Indonesians who are already familiar with trading through online technology, the sophistication of our Topgrowth Online Trading platform will be the right option for both investors and customers.",
-        "visi":{"title":"Our Vision", "content":"To become the leading company in the futures trading industry through high-quality services and innovative work programs to create ideal cooperative relationships with customers, both locally and globally."},
-        "misi":{"title":"Our Mission", "content":"Providing the best transaction facilities with various investment products as well as the latest and most trusted financial market information services    Providing online trading facilities for investors, both locally and globally, thorugh an innovative online trading technology\r\n        \r\n        Actively participating in building a transparent futures trading industry through continuous education programs\r\n        \r\n        Improving and developing the quality of professional human resources\r\n        \r\n        "}       
-    },
-    "cabang":[
-            {"image":"","title":"","content":""},
-            {"image":"","title":"","content":""},
-            {"image":"","title":"","content":""}
+        [
+          "Mini Account",
+          "$500",
+          "Initial Deposit",
+          "Minimum 0.1 Lot",
+          "Maximum 5.0 Lot",
+          "Topgrowth Trader (MT4)",
+          "Sign Up"
         ],
-    "rekeningterpisah":{
-        "header":"Segregated Account",
-        "content":{"title":"Segregated Account","content":"Segregated Account is a bank account in the name of a brokerage company that is specifically used to handle the collective funds of all customers and is only utilized for customer-related transactions that are separated from the company’s operational account. This account is monitored closely and periodically by BAPPEBTI.",
-        "subContent":["The followings are the official Segregated Accounts owned by PT Topgrowth Futures:","BCA Rupiah // Account Number: 035.311.8569 // Swift Code: CENAIDJA // Account Name: PT. Topgrowth Futures","BCA Dollar // Account Number: 035.317.7718 // Swift Code: CENAIDJA // Account Name: PT. Topgrowth Futures"]}
-    },
-    "legalitas":{
-        "header":"Legality",
-        "content":{"title":"BAPPPEBTI","content":"BAPPEBTI (Badan Pengawas Perdagangan Berjangka Komoditi) is a government institution under the wing of the Ministry of Trade Republic of Indonesia whose tasks are to issue business licenses, for both companies and individuals, make rules and regulations, as well as inspect and control all brokerage companies’ activities. PT Topgrowth Futures operates under the license and supervision of BAPPEBTI with a license number of 300/BAPPEBTI/SI/III/2004.",
-        "image":["image1","image1","image1","image1","image1"]}
-    },
-    "Forex":{
-        "header":"Forex",
-        "top":"As of right now, Foreign Exhange (Forex) is the world's largest market with a transaction value three times greater than the number of stock and bond market combined. Forex is open 24 hours a day through a network of global banks throughout Asia, Europe, and America without a centralized exchange; thus, it is known as an OTC (Over the Counter) product.This transaction is carried out by buying or selling currencies using price fluctuations.",
-        "content":[
-            {"title":"The Benefits of Forex Transaction","image":"","content":"High liquidity due to a never-ending supply and demand, A potential two-way profit gained whether the prices move up or fall, as there is no limit to direct trade, A relatively low initial investment cost, as forex is traded through leverage, Transparency resulted from trading directly with markets responsible for the price of currencies, Low trading costs since they are calculated into spreads, Can be easily done whenever and wherever as long as there is an internet connection"},
-            {"title":"The Benefits of Forex Transaction with Topgrowth","image":"","content":"Can be easily done whenever and wherever, Every data and information is accessible for cutomers, Supported by our Research and Development team, both online and offline, An available training module to improve our customers' skills as professional traders, Secured and guaranteed nvestment funds due to the existing Segregated Account, A fast and efficient withdrawal process, A superior execution of instant order, Fixed spreads during all conditions, An excellent and trusted trading technology"},
-            {"title":"Variety of Forex Products","content":"Trading forex with Topgrowth Futures allows customers to trade many foreign exchange products, regardless of the platforms or gadgets used.\r\n            Below are the various currency pairs that customers are able to trade."},
-            {"title":"Major Pairs","table":[]},
-            {"title":"Cross Pairs","table":[]}
+        [
+          "Regular Account",
+          "$10,000",
+          "Initial Deposit",
+          "Minimum 1.0 Lot",
+          "Maximum 50 Lot",
+          "Pro I Trader & Topgrowth Trader (MT4)",
+          "Sign Up"
         ]
+      ]
     },
-    "CFD":{
-        "header":"Contract For Difference",
-        "content":[
-            {"title":"What is CFD?","content":"Online trading through CFD is one of the most flexible tools to take advantage of market movements without tying up funds by trading the underlying instruments. Unlike stock trading, CFDs can be bought and sold, and it allows you to seek profits from both rising and falling market prices. It also offers the opportunity to create a variety of multiproduct portfolios from one account."},
-            {"title":"Why CFD?","content":"CFD (Contract for Difference) is an agreement to exchange the difference in value of the underlying instrument, for instance, shares, between the time the order is opened and closed. CFD online trading is a practical way to trade bull and bear markets that allows to sell short. Stocks can be sold at a profit before the price falls.\r\n            CFD products can help to utilize investment capital effectively. However, the amount of risk faced is also greater than that of conventional products.\r\n            CFD is traded using margin. Thus, the investment potential becomes much greater by only depositing a small portion of the whole to trade the full contract value of the product. Like stock trading, the profit or loss is determined by the difference between the bought and sold prices. The required margin level varies between CFD products.\r\n            Topgrowth offers CFD on a comprehensive range of basic products, including global indices, futures, commodities, and currencies."},
-            {"title":"Strategic CGD Trading","content":"CFD is a trading tool that uses leverage for almost all financial products. The products offered include commodity futures (metals and energy products) as well as indexes listed on various international financial markets.\r\n            One big advantage is that users do not need to provide 100% of the product's nominal value. By buying a CFD, users do not actually have the underlying product, but they have 100% rights to the profit or loss from the full value of the contract.\r\n            Regardless of investment style, CFD products are valuable tools to develop and protect an entire portfolio. With CFD, users are able speculate the short-term movements of financial product prices, or they can protect the overall portfolio position to minimize the negative market movements. In addition, users can take advantage of the existing leverage, which depends on the direction of the market, and can significantly increase profits on their equity."},
-            {"title":"CFD Products","content":"CFD trading with Topgrowth means that users are able to buy and sell American, British, European, Chinese and Japanese shares from a single platform. All CFD products that can be traded through Topgrowth are listed in the table below. In addition, Topgrowth also includes the information of each product, relevant currencies, and margin requirements for every contract trading.\r\n            "},
-            {"title":"CFDs Pada Index","table":[]},
-            {"title":"CFDs Pada Produk Energi","table":[]},
-            {"title":"CFDs Pada Bullion Produk / Precious Metal","table":[]}
-        ]
-
-    },
-    "Gold":{
-        "header":"Gold",
-        "top":"London Bullion Market is an over-the-counter wholesale market intended for gold and silver trading. Trading is carried out between members of the London Bullion Market Association (LBMA), the majority of whose members are banks or major gold bar dealers and refiners, and supervised by the Bank of England.",
-        "content":[
-            {"title":"Gold Trading","table":[],"image":"","content":"Internationally, gold is traded through over-the-counter transcations with a limited number of trades on the New York Mercantile Exchange (NYMEX) and Tokyo Commodity Exchange (TOCOM).\r\n\r\n            Forward contracts are known as gold futures contracts, and gold spot is traded to be settled two working days after the trading date when both New York and London markets are open for business.\r\n            \r\n            Unlike the commodity market, the forward market for gold is driven by spot prices and interest rate differences, similar to that of foreign exchange market, and is not based on the dynamics of supply and demand. Like currencies, gold is borrowed and lent by the central bank. Gold loans are more attractive due to the lower interest rate than that of the US, except in special situations where the market tends to be in contango, in which the forward price of gold is higher than the spot price. Historically, this has made gold trading an attractive market option."},
-            {"title":"Market Size","content":"So far, London is the largest global center for over-the-counter transactions, followed by New York, Zurich, and Tokyo. However, trading has grown in recent years with Comex in New York and Tocom in Tokyo generating the most activity.\r\n\r\n            Gold is also traded in the form of securities, such as funds traded in London, New York, Johannesburg, and Australia. Although the physical market for gold and silver is distributed globally, clearing most of the over-the-counter wholesale trade is done through London. The average daily clearing volume of gold and silver at the LBMA back in November 2008 was 18.3 million ounces (worth $13.9 billion) and 107.6 million ounces (worth $1.1 billion). This means that the clearing amount for 4.4 days at LBMA is the same as the annual gold mine production and 6.2 days for annual silver production."}
-        ]
-
-    },
-    "Komoditi":{
-        "header":"Commodities",
-        "top":"Being one of the most popular instruments for the majority of global investment managers, commodity transactions have resulted in a high turnover of money in the commodity market.\r\n\r\n        Commodities can be interpreted as objects of physical substance and are divided into two, which are mining commodities, such as gold, silver, oil and others, and agricultural commodities, such as sugar, rice, cocoa, coffee and others.\r\n        \r\n        Commodities are easier to understand because a lot depends on the fundamental conditions of demand and supply. Commodity price volatility is smaller than stocks and bonds; thus, providing an efficient and diverse portfolio options for market participants. What makes commodities more attractive and riskier in transactions than stocks is the amount of leverage. However, the risks in commodity trading market are lesser than user-determined risks.\r\n        \r\n        JFX (Jakarta Futures Exchange) and ICDX (Indonesia Commodity & Derivatives Exchange), as futures exchanges in Indonesia, work to develop the futures market through a more dynamic, transparent, and liquid system. Moreover, multilateral transactions allow many parties to buy and sell financial instruments on an exchange through electronic means.",
-        "content":[
-            {"image":"","title":"Demand Continues to Increase", "content":"Due to rapid global growth, the demand for commodities will continue to increase, resulting in an increase in the price of these commodities"},
-            {"image":"","title":"Portfolios Protection Against Inflation", "content":"In accordance with inflation, commodity prices will continue to increase, and market participants are able to protect commodity prices against inflation through Futures Exchange"},
-            {"image":"","title":"Factors that Affect Commodity Price Movements", "content":"Some of the factors are weather forecast, economic factors, political factors, international pressure, and speculation"}
-        ]
-
-    },
-    "indexfutures":{
-        "header":"Index Futures",
-        "content":"INDEX FUTURES is an investment alternative in stock trading that is able to minimize the risk of adverse price fluctuations. A futures contract is an obligation to accept or submit a financial instrument or contract in the future using the current agreed price.\r\n\r\n        In futures contract trading, investors are given the opportunity to take open sell contract position in the hope that prices will fall or open buy contract position in the hope that prices will rise.\r\n        \r\n        Topgrowth Futures offers investment in futures contracts to gain profits from index price fluctuations by recommending Japanese Futures (Nikkei 225), Hong Kong Futures (Hang Seng), and Korean Futures (Kospi 200).",
-        "slide":[
-            {"title":"Our Index Futures", "subtitle":"The Nikkei 225 index, which is often referred to as the Nikkei, Nikkei index, or Nikkei Stock Average, is a stock market index for the Tokyo Stock Exchange (TSE). Since 1950, Japanese newspaper Nihon Keizai Shimbun (Nikkei) has calculated the index daily using the method of calculating the weighted average price in yen, and it is also reviewed annually.\r\n            As of right now, the Nikkei index is mostly used to describe the condition of Japanese stocks; similar to the Dow Jones Industrial Average, and it was even dubbed as Nikkei Dow Jones Index during the 1975-1985 era. Nikkei 225 Futures was introduced on the Singapore Exchange (SGX) in 1986, on the Osaka Securities Exchange (OSE) in 1988, and on the Chicago Mercantile Exchange (CME) in 1990. Today, the Nikkei index has become an internationally recognized futures index, and it has been updated every 15 seconds during the trading session since 2010."},
-            {"title":"Our Index Futures", "subtitle":"Hongkong Futures - Hangseng","content":"The Hang Seng Index (HSI) is a stock index on the Hong Kong stock exchange. It is calculated using the freefloat-adjusted market capitalization-weighted method. This index is used to record and monitor the daily changes of the largest companies in the Hong Kong stock market, and it is a key indicator of the overall market performance in the area. The 45 companies on the Hang Seng index represent around 60% of the capitalization of the Hong Kong Stock Exchange.\r\n            Since March 7, 2011, HKEx has extended its trading hours to 09.30-12.00 and 13.30-16.00. Furthermore, since March 5, 2012, its trading hours have been changed to 09.15-12.00 and 13.00-16.15, adjusted to mainland China's trading time. The Hang Seng Index first began trading on November 24, 1969. Currently, the preparation and management are carried out by Hang Seng Index Limited which is a subsidiary of one of Hong Kong's largest banks in market capitalization Hang Seng Bank."},
-            {"title":"Our Index Futures", "subtitle":"Korean Futures – Kospi 200","content":"The Korea Composite Stock Price Index or KOSPI is an index of all shares traded on the Stock Market Division, formerly known as the Korea Stock Exchange. KOSPI is a stock market index that represents South Korea, such as the Dow Jones Industrial Average or the S&P 500 in the US.\r\n            KOSPI was introduced in 1983 with a base value of 100. In 2007, KOSPI's daily volume was hundreds of millions of shares, equivalent to trillions of won. The KOSPI 200 index consists of 200 large companies from the Stock Market Division. KOSPI 200 has a market value of more than 70% of KOSPI, and moves together with the KOSPI index. The KOSPI 200 index is deemed as important since it is also traded on the futures and options exchanges, and it is one of the most actively traded indices in the world."}
-        ]
-
-    },
-    "jamperdagangan":{
-        "header":"Trading Hours",
-        "table":[
-            [
-                ["Product","Summer","Winter"],
-                ["FOREX","Monday 05.00am – Saturday 04:00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)","Monday 05.30am – Saturday 05:00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)"],
-                ["LLG & SILVER","\tMonday Open at 06.00am Tuesday – Friday Open at 05.00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)","Monday – Friday Open at 06.00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)"],
-                ["DOW JONES, S&P500, NASDAQ","05.00am – 03.15am next day (all time is Jakarta time)","06.00am – 04.15am next day (all time is Jakarta time)"],
-                ["FOREX","Monday 05.00am – Saturday 04:00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)","Monday 05.30am – Saturday 05:00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)"],
-                ["FTSE","07:00am – 03:00am next day (all time is Jakarta time)","08:00am – 04:00am next day (all time is Jakarta time)"],
-                ["DAX","07:15am – 03:00am next day (all time is Jakarta time)","07:15am – 04:00am next day (all time is Jakarta time)"],
-                ["CRUDE OIL","05.00am – 04.00am next day (all time is Jakarta time)","06.00pm – 05.00am next day (all time is Jakarta time)"]
-            ],
-            [
-                ["Product","Session 1","Session 2","Last Trading Day Closing"],
-                ["KOSPI200","07.00am – 01.35pm","","01.20pm"],
-                ["NIKKEI225","06.30am – 01.25pm","01.55pm – 03.45am next day","01.25pm"],
-                ["HANGSENG","08.15am – 11.00am","12.00pm – 03.30pm","03.00pm"]
-        
-            ]
-        ]
-    },
-    "protrader":{
-        "header":"Pro I Trader",
-        "top":"Online trading in financial markets is basically a must, and it is an interesting experience since transactions can be done easily and quickly. Due to intense competition, online trading platforms are becoming increasingly user-friendly and can be integrated into all scopes of information technology.\r\n        Topgrowth is one of the leading companies in developing sophisticated online trading technology. Pro-iTrading, which is Topgrowth's Online Trading Platform, allows users to transact Forex and Commodity products at anytime. By using a superior trading platform that provides a variety of the latest tools and presents real-time news, users can trade comfortably and easily.",
-        "title":"Main Features of Pro I Trader",
-        "content":[
-            {"image":"","content":"A simple and fast order execution process"},
-            {"image":"","content":"Life Quotes in a summary form and advanced mode"},
-            {"image":"","content":"Charting that is equipped with technical trading features and tools"},
-            {"image":"","content":"Real-time news for fundamental trading"},
-            {"image":"","content":"Adjustable based on the users' needs"},
-            {"image":"","content":"An easily accessible trading notes"}
-        ]
-    },
-    "topgrowthtrader":{
-        "header":"Topgrowth Trader",
-        "top":"Metatrader is known as the most efficient and most widely-used platform by traders. Topgrowth Futures gives users access to always be connected to the market through a variety of Metatrader options that suit the users' needs.\r\n        Topgrowth Trader is a software application that allows online access to the system. With MetaTrader, traders can easily and quickly trade, and it is equipped with eminent software and facilities. Most brokers support their traders using this application platform from MetaQuotes Software. Compared to other platforms, Topgrowth Trader application has various advantages and its own software to do trading activities. Metatrader is able to facilitate traders to add and create special scripts (indicators and EA robots) for trading purposes.",
-        "title":"Main Features of Topgrowth Trader",        
-        "content":[
-            {"image":"","content":"User-friendly"},
-            {"image":"","content":"Trade on metatrader at real-time prices"},
-            {"image":"","content":"Provides a variety of graphs, analysis, and indicators according to the users' needs"},
-            {"image":"","content":"Provides the latest financial market news"},
-            {"image":"","content":"Has more than 20 languages to choose from"},
-            {"image":"","content":"Transparency in screening users' financial condition"}
-        ]
-
-    },
-    "login":{
-        "form":{
-            "title":"login",
-            "firstname":"First Name",
-            "lastname":"Last Name",
-            "signIn":"Get Started",
-            "leftButton":"Demo Account",
-            "rightButton":"Real Account"
+    "Feature": {
+      "title": "Forex Trading, Index Futures, CFD, and Commodities with Topgrowth",
+      "subtitle": "Here is a brief review of our available products",
+      "content": [
+        {
+          "image": "",
+          "title": "Foreign Exchange",
+          "subtitle": "The most popular financial market in the world"
+        },
+        {
+          "image": "",
+          "title": "Commodities",
+          "subtitle": "Physical substances traded on the futures exchange"
+        },
+        {
+          "image": "",
+          "title": "CFD",
+          "subtitle": "One of the most flexible tools to take advantage of market movements that offers the opportunity to create a variety of multiproduct portfolios from one account"
+        },
+        {
+          "image": "",
+          "title": "Index Futures",
+          "subtitle": "An alternative for stock trading investment that is able to minimize the risk of price fluctuations"
         }
+      ]
     },
-    "register":{
-        "form":{
-            "title":"Sign Up",
-            "fullname":"Full Name",
-            "handphone":"Handphone Number",
-            "email":"Email Address",
-            "password":"Password",
-            "leftButton":"Demo Account",
-            "rightButton":"Real Account",
-            "signIn":"Already have an account? Sign in"
+    "News": {},
+    "NewsInverted": {},
+    "Benefit": {
+      "title": "Why Topgrowth Futures",
+      "content": [
+        {
+          "image": "",
+          "title": "Low Cost",
+          "subtitle": "Enabling customers to maximize profits and implement money management"
+        },
+        {
+          "image": "",
+          "title": "Guaranteed Legality",
+          "subtitle": "An international standard brokerage company licensed under BAPPEBTI who is registered as a member of BBJ, ICDX, KBI, and ICH"
+        },
+        {
+          "image": "",
+          "title": "Excellent Service",
+          "subtitle": "Providing the best services, from customer education to fund withdrawals"
+        },
+        {
+          "image": "",
+          "title": "Research and News",
+          "subtitle": "Get the latest news and comprehensive analysis to your email on a daily basis"
+        },
+        {
+          "image": "",
+          "title": "No Requote",
+          "subtitle": "Experience trading without requote with our top-quality Pro I Trader platform"
+        },
+        {
+          "image": "",
+          "title": "24 Hour Support",
+          "subtitle": "We are committed to provide the best service through a 24-hour customer service"
         }
+      ]
     },
-    "berita":{
-        "terkini":"Latest News",
-        "terpopuler":"Top News",
-        "outlook":"Market Outlook",
-        "forex":"Forex & Commodity News",
-        "stock":"Stock Index News",
-        "button":"News Index"
-    },
-    "edukasi":{
-
-    },
-    "karir":{
-
-    },
-    "hubungikami":{
-        "header":{"title":"Any Questions?","subtitle":"Ask us everything!"},
-        "top":{"title":"We look forward to hearing from you","subtitle":"Call us or send us an email through the form below, and we would be happy to help!"},
-        "contact":{"title":"Contact and Information","left":["Address:","Sahid Sudirman Center","40th Floor, Jl. Jend Sudirman Kav 86","Jakarta 10220, Indonesia","Phone: (+62)21 2788-9393","Fax: (+62)21 2788-9395"]},
-        "form":{
-            "firstname":"First Name",
-            "lastname":"Last Name",
-            "emailaddress":"Email Address",
-            "yourmessage":"Your Message",
-            "button":"Send Message"
+    "Legality": {
+      "header": "Legality",
+      "content": [
+        {
+          "image": "",
+          "title": "BAPPPEBTI",
+          "content": "BAPPEBTI (Badan Pengawas Perdagangan Berjangka Komoditi) is a government institution under the wing of the Ministry of Trade Republic of Indonesia whose tasks are to issue business licenses, for both companies and individuals, make rules and regulations, as well as inspect and control all brokerage companies’ activities. PT Topgrowth Futures operates under the license and supervision of BAPPEBTI with a license number of 300/BAPPEBTI/SI/III/2004."
+        },
+        {
+          "image": "",
+          "title": "Jakarta Futures Exchange (JFX)",
+          "content": "PT Jakarta Futures Exchange (JFX) is the first commodity futures exchange in Indonesia to provide facilities for its members to carry out futures contract transactions. JFX was established on August 19, 1999 in Jakarta by 29 limited liability companies in accordance with PP No. 9/99, and has started its first trade since December 15, 2000 PT Topgrowth Futures is a member of JFX with a membership number of SPAB-059/BBJ/01/04."
+        },
+        {
+          "image": "",
+          "title": "Kliring Berjangka Indonesia (KBI)",
+          "content": "PT Kliring Berjangka Indonesia (KBI) is a governemnt-owned company that functions as a clearing guarantee institution based on BAPPEBTI's decision of No. 128/BAPPEBTI/IX/2001. Every futures contract settlement transaction registered by the members are carried out by KBI. Aside from being a stock exchange broker, PT Topgrowth Futures is also a member of KBI with a clearing number of 21/AK-KBI/III/2004."
+        },
+        {
+          "image": "",
+          "title": "Indonesia Clearing House (ICH)",
+          "content": "Indonesia Clearing House (ICH) is a non-governmental company that obtained a clearing house license from BAPPEBTI under the number of No. 30/BAPPEBTI/KP/7/2009. Therefore, ICH is able to carry out the futures contract transactions registered by its members."
+        },
+        {
+          "image": "",
+          "title": "Indonesian Commodity and Derivative Exchange (ICDX)",
+          "content": "PT Indonesian Commodity and Derivative Exchange is a second-term stock exchange established in Indonesia that functions of being a facilities provider for its members to carry out futures contract transactions. ICDX obtained an exchange license from BAPPEBTI under the number No. 26/BAPPEBTI/KP/6/2009, and has started its first trade since November 30, 2009. PT Topgrowth Futures is a member of the ICDX with a membership number of 047/SPKB/ICDX/Dir/IX/2010."
         }
+      ]
     },
-    "Header": {
-        "m1": {"title":"Home"},
-        "m2":  {"title":"About Us", "dropdown":[{"title":"Topgrowth Futures"},{"title":"Our Branch"},{"title":"Segregated Account"},{"title":"Legality"}]},
-        "m3":  {"title":"Online Trading","dropdown":[
-                {"title":"Our Products", "sub":["Forex","CFD","Gold","Commodities","Index Futures"]},
-                {"title":"Information", "sub":["Trading Hours"]},
-                {"title":"Trading Platform", "sub":["Pro I Trader","Topgrowth Trader"]},
-                {"title":"Create Account", "sub":["Login","Register"]}
-                ]},
-        "m4":  {"title":"News","dropdown":[
-                    {"title":"News Highlitght"},
-                    {"title":"Stock Index"},
-                    {"title":"Forex & Commodity"},
-                    {"title":"Economic Calendar"},
-                    {"title":"Market Outlook"},
-                    {"title":"Video"}]},
-        "m5":  {"title":"Education"},
-        "m6":  {"title":"Career"},
-        "m7":  {"title":"Contact Us"}    
+    "NewsLetter": {
+      "title": "Subscribe to Our Newsletter",
+      "subtitle": "Join our newsletter and get the latest news in your inbox every week! We also hate spams, so no worries",
+      "form": {
+        "email": "Your Email",
+        "button": "Subscribe"
+      }
+    },
+    "Footer": [
+      {
+        "title": "PT Topgrowth Futures",
+        "content": [
+          "Established in 2003, Topgrowth Futures has grown to become the best and biggest broker in Indonesia that provides forex, index futures, CFD, and commodities product transaction services with a competitive expansion"
+        ]
+      },
+      {
+        "title": "About Us",
+        "content": [
+          "About Topgrowth Futures",
+          "Legality",
+          "Segregated Account",
+          "Our Branch"
+        ]
+      },
+      { "title": "Service", "content": ["News"] },
+      {
+        "title": "Contact Us",
+        "content": [
+          "Sahid Sudirman Center, 40th Floor, Unit F-G",
+          "Jl. Jend Sudirman Kav. 86",
+          "Jakarta 10220, Indonesia",
+          "Email: customerservices@topgrowthfutures.com",
+          "Ph: (+62)21 2788-9393",
+          "Fax: (+62)21 2788-9395"
+        ]
+      }
+    ],
+    "BottomNavbar": {
+      "title": "Download E-Book Now",
+      "form": {
+        "fullname": "Full Name",
+        "email": "Email Address",
+        "code": "+62",
+        "handphone": "Phone Number",
+        "leftTick": "I agree to receive news and promotional emails from Topgrowth Futures",
+        "rightTick": "I have read and agree to the privacy policy",
+        "button": "Download E-Book"
+      }
     }
+  },
+  "tentangkami": {
+    "header": "About Topgrowth Futures",
+    "content": "Established in 2003, Topgrowth Futures has grown to become the best and biggest broker in Indonesia that provides forex, index futures, CFD, and commodities product transaction services with a competitive expansion.\r\n        Topgrowth Futures is a legally-recognized company that operates under the license and supervision of BAPPEBTI and has received numerous awards, in terms of legal compliance and financial performance.\r\n        Topgrowth Futures provides online trading facilities in foreign exchange markets and plans to utilize the long existing potential of Indonesia’s well-known commodity market.\r\n        For Indonesians who are already familiar with trading through online technology, the sophistication of our Topgrowth Online Trading platform will be the right option for both investors and customers.",
+    "visi": {
+      "title": "Our Vision",
+      "content": "To become the leading company in the futures trading industry through high-quality services and innovative work programs to create ideal cooperative relationships with customers, both locally and globally."
+    },
+    "misi": {
+      "title": "Our Mission",
+      "content": "Providing the best transaction facilities with various investment products as well as the latest and most trusted financial market information services    Providing online trading facilities for investors, both locally and globally, thorugh an innovative online trading technology\r\n        \r\n        Actively participating in building a transparent futures trading industry through continuous education programs\r\n        \r\n        Improving and developing the quality of professional human resources\r\n        \r\n        "
+    }
+  },
+  "cabang": [
+    { "image": "", "title": "", "content": "" },
+    { "image": "", "title": "", "content": "" },
+    { "image": "", "title": "", "content": "" }
+  ],
+  "rekeningterpisah": {
+    "header": "Segregated Account",
+    "content": {
+      "title": "Segregated Account",
+      "content": "Segregated Account is a bank account in the name of a brokerage company that is specifically used to handle the collective funds of all customers and is only utilized for customer-related transactions that are separated from the company’s operational account. This account is monitored closely and periodically by BAPPEBTI.",
+      "subContent": [
+        "The followings are the official Segregated Accounts owned by PT Topgrowth Futures:",
+        "BCA Rupiah // Account Number: 035.311.8569 // Swift Code: CENAIDJA // Account Name: PT. Topgrowth Futures",
+        "BCA Dollar // Account Number: 035.317.7718 // Swift Code: CENAIDJA // Account Name: PT. Topgrowth Futures"
+      ]
+    }
+  },
+  "legalitas": {
+    "header": "Legality",
+    "content": {
+      "title": "BAPPPEBTI",
+      "content": "BAPPEBTI (Badan Pengawas Perdagangan Berjangka Komoditi) is a government institution under the wing of the Ministry of Trade Republic of Indonesia whose tasks are to issue business licenses, for both companies and individuals, make rules and regulations, as well as inspect and control all brokerage companies’ activities. PT Topgrowth Futures operates under the license and supervision of BAPPEBTI with a license number of 300/BAPPEBTI/SI/III/2004.",
+      "image": ["image1", "image1", "image1", "image1", "image1"]
+    }
+  },
+  "Forex": {
+    "header": "Forex",
+    "top": "As of right now, Foreign Exhange (Forex) is the world's largest market with a transaction value three times greater than the number of stock and bond market combined. Forex is open 24 hours a day through a network of global banks throughout Asia, Europe, and America without a centralized exchange; thus, it is known as an OTC (Over the Counter) product.This transaction is carried out by buying or selling currencies using price fluctuations.",
+    "content": [
+      {
+        "title": "The Benefits of Forex Transaction",
+        "image": "",
+        "content": "High liquidity due to a never-ending supply and demand, A potential two-way profit gained whether the prices move up or fall, as there is no limit to direct trade, A relatively low initial investment cost, as forex is traded through leverage, Transparency resulted from trading directly with markets responsible for the price of currencies, Low trading costs since they are calculated into spreads, Can be easily done whenever and wherever as long as there is an internet connection"
+      },
+      {
+        "title": "The Benefits of Forex Transaction with Topgrowth",
+        "image": "",
+        "content": "Can be easily done whenever and wherever, Every data and information is accessible for cutomers, Supported by our Research and Development team, both online and offline, An available training module to improve our customers' skills as professional traders, Secured and guaranteed nvestment funds due to the existing Segregated Account, A fast and efficient withdrawal process, A superior execution of instant order, Fixed spreads during all conditions, An excellent and trusted trading technology"
+      },
+      {
+        "title": "Variety of Forex Products",
+        "content": "Trading forex with Topgrowth Futures allows customers to trade many foreign exchange products, regardless of the platforms or gadgets used.\r\n            Below are the various currency pairs that customers are able to trade."
+      },
+      { "title": "Major Pairs", "table": [] },
+      { "title": "Cross Pairs", "table": [] }
+    ]
+  },
+  "CFD": {
+    "header": "Contract For Difference",
+    "content": [
+      {
+        "title": "What is CFD?",
+        "content": "Online trading through CFD is one of the most flexible tools to take advantage of market movements without tying up funds by trading the underlying instruments. Unlike stock trading, CFDs can be bought and sold, and it allows you to seek profits from both rising and falling market prices. It also offers the opportunity to create a variety of multiproduct portfolios from one account."
+      },
+      {
+        "title": "Why CFD?",
+        "content": "CFD (Contract for Difference) is an agreement to exchange the difference in value of the underlying instrument, for instance, shares, between the time the order is opened and closed. CFD online trading is a practical way to trade bull and bear markets that allows to sell short. Stocks can be sold at a profit before the price falls.\r\n            CFD products can help to utilize investment capital effectively. However, the amount of risk faced is also greater than that of conventional products.\r\n            CFD is traded using margin. Thus, the investment potential becomes much greater by only depositing a small portion of the whole to trade the full contract value of the product. Like stock trading, the profit or loss is determined by the difference between the bought and sold prices. The required margin level varies between CFD products.\r\n            Topgrowth offers CFD on a comprehensive range of basic products, including global indices, futures, commodities, and currencies."
+      },
+      {
+        "title": "Strategic CGD Trading",
+        "content": "CFD is a trading tool that uses leverage for almost all financial products. The products offered include commodity futures (metals and energy products) as well as indexes listed on various international financial markets.\r\n            One big advantage is that users do not need to provide 100% of the product's nominal value. By buying a CFD, users do not actually have the underlying product, but they have 100% rights to the profit or loss from the full value of the contract.\r\n            Regardless of investment style, CFD products are valuable tools to develop and protect an entire portfolio. With CFD, users are able speculate the short-term movements of financial product prices, or they can protect the overall portfolio position to minimize the negative market movements. In addition, users can take advantage of the existing leverage, which depends on the direction of the market, and can significantly increase profits on their equity."
+      },
+      {
+        "title": "CFD Products",
+        "content": "CFD trading with Topgrowth means that users are able to buy and sell American, British, European, Chinese and Japanese shares from a single platform. All CFD products that can be traded through Topgrowth are listed in the table below. In addition, Topgrowth also includes the information of each product, relevant currencies, and margin requirements for every contract trading.\r\n            "
+      },
+      { "title": "CFDs Pada Index", "table": [] },
+      { "title": "CFDs Pada Produk Energi", "table": [] },
+      { "title": "CFDs Pada Bullion Produk / Precious Metal", "table": [] }
+    ]
+  },
+  "Gold": {
+    "header": "Gold",
+    "top": "London Bullion Market is an over-the-counter wholesale market intended for gold and silver trading. Trading is carried out between members of the London Bullion Market Association (LBMA), the majority of whose members are banks or major gold bar dealers and refiners, and supervised by the Bank of England.",
+    "content": [
+      {
+        "title": "Gold Trading",
+        "table": [],
+        "image": "",
+        "content": "Internationally, gold is traded through over-the-counter transcations with a limited number of trades on the New York Mercantile Exchange (NYMEX) and Tokyo Commodity Exchange (TOCOM).\r\n\r\n            Forward contracts are known as gold futures contracts, and gold spot is traded to be settled two working days after the trading date when both New York and London markets are open for business.\r\n            \r\n            Unlike the commodity market, the forward market for gold is driven by spot prices and interest rate differences, similar to that of foreign exchange market, and is not based on the dynamics of supply and demand. Like currencies, gold is borrowed and lent by the central bank. Gold loans are more attractive due to the lower interest rate than that of the US, except in special situations where the market tends to be in contango, in which the forward price of gold is higher than the spot price. Historically, this has made gold trading an attractive market option."
+      },
+      {
+        "title": "Market Size",
+        "content": "So far, London is the largest global center for over-the-counter transactions, followed by New York, Zurich, and Tokyo. However, trading has grown in recent years with Comex in New York and Tocom in Tokyo generating the most activity.\r\n\r\n            Gold is also traded in the form of securities, such as funds traded in London, New York, Johannesburg, and Australia. Although the physical market for gold and silver is distributed globally, clearing most of the over-the-counter wholesale trade is done through London. The average daily clearing volume of gold and silver at the LBMA back in November 2008 was 18.3 million ounces (worth $13.9 billion) and 107.6 million ounces (worth $1.1 billion). This means that the clearing amount for 4.4 days at LBMA is the same as the annual gold mine production and 6.2 days for annual silver production."
+      }
+    ]
+  },
+  "Komoditi": {
+    "header": "Commodities",
+    "top": "Being one of the most popular instruments for the majority of global investment managers, commodity transactions have resulted in a high turnover of money in the commodity market.\r\n\r\n        Commodities can be interpreted as objects of physical substance and are divided into two, which are mining commodities, such as gold, silver, oil and others, and agricultural commodities, such as sugar, rice, cocoa, coffee and others.\r\n        \r\n        Commodities are easier to understand because a lot depends on the fundamental conditions of demand and supply. Commodity price volatility is smaller than stocks and bonds; thus, providing an efficient and diverse portfolio options for market participants. What makes commodities more attractive and riskier in transactions than stocks is the amount of leverage. However, the risks in commodity trading market are lesser than user-determined risks.\r\n        \r\n        JFX (Jakarta Futures Exchange) and ICDX (Indonesia Commodity & Derivatives Exchange), as futures exchanges in Indonesia, work to develop the futures market through a more dynamic, transparent, and liquid system. Moreover, multilateral transactions allow many parties to buy and sell financial instruments on an exchange through electronic means.",
+    "content": [
+      {
+        "image": "",
+        "title": "Demand Continues to Increase",
+        "content": "Due to rapid global growth, the demand for commodities will continue to increase, resulting in an increase in the price of these commodities"
+      },
+      {
+        "image": "",
+        "title": "Portfolios Protection Against Inflation",
+        "content": "In accordance with inflation, commodity prices will continue to increase, and market participants are able to protect commodity prices against inflation through Futures Exchange"
+      },
+      {
+        "image": "",
+        "title": "Factors that Affect Commodity Price Movements",
+        "content": "Some of the factors are weather forecast, economic factors, political factors, international pressure, and speculation"
+      }
+    ]
+  },
+  "indexfutures": {
+    "header": "Index Futures",
+    "content": "INDEX FUTURES is an investment alternative in stock trading that is able to minimize the risk of adverse price fluctuations. A futures contract is an obligation to accept or submit a financial instrument or contract in the future using the current agreed price.\r\n\r\n        In futures contract trading, investors are given the opportunity to take open sell contract position in the hope that prices will fall or open buy contract position in the hope that prices will rise.\r\n        \r\n        Topgrowth Futures offers investment in futures contracts to gain profits from index price fluctuations by recommending Japanese Futures (Nikkei 225), Hong Kong Futures (Hang Seng), and Korean Futures (Kospi 200).",
+    "slide": [
+      {
+        "title": "Our Index Futures",
+        "subtitle": "The Nikkei 225 index, which is often referred to as the Nikkei, Nikkei index, or Nikkei Stock Average, is a stock market index for the Tokyo Stock Exchange (TSE). Since 1950, Japanese newspaper Nihon Keizai Shimbun (Nikkei) has calculated the index daily using the method of calculating the weighted average price in yen, and it is also reviewed annually.\r\n            As of right now, the Nikkei index is mostly used to describe the condition of Japanese stocks; similar to the Dow Jones Industrial Average, and it was even dubbed as Nikkei Dow Jones Index during the 1975-1985 era. Nikkei 225 Futures was introduced on the Singapore Exchange (SGX) in 1986, on the Osaka Securities Exchange (OSE) in 1988, and on the Chicago Mercantile Exchange (CME) in 1990. Today, the Nikkei index has become an internationally recognized futures index, and it has been updated every 15 seconds during the trading session since 2010."
+      },
+      {
+        "title": "Our Index Futures",
+        "subtitle": "Hongkong Futures - Hangseng",
+        "content": "The Hang Seng Index (HSI) is a stock index on the Hong Kong stock exchange. It is calculated using the freefloat-adjusted market capitalization-weighted method. This index is used to record and monitor the daily changes of the largest companies in the Hong Kong stock market, and it is a key indicator of the overall market performance in the area. The 45 companies on the Hang Seng index represent around 60% of the capitalization of the Hong Kong Stock Exchange.\r\n            Since March 7, 2011, HKEx has extended its trading hours to 09.30-12.00 and 13.30-16.00. Furthermore, since March 5, 2012, its trading hours have been changed to 09.15-12.00 and 13.00-16.15, adjusted to mainland China's trading time. The Hang Seng Index first began trading on November 24, 1969. Currently, the preparation and management are carried out by Hang Seng Index Limited which is a subsidiary of one of Hong Kong's largest banks in market capitalization Hang Seng Bank."
+      },
+      {
+        "title": "Our Index Futures",
+        "subtitle": "Korean Futures – Kospi 200",
+        "content": "The Korea Composite Stock Price Index or KOSPI is an index of all shares traded on the Stock Market Division, formerly known as the Korea Stock Exchange. KOSPI is a stock market index that represents South Korea, such as the Dow Jones Industrial Average or the S&P 500 in the US.\r\n            KOSPI was introduced in 1983 with a base value of 100. In 2007, KOSPI's daily volume was hundreds of millions of shares, equivalent to trillions of won. The KOSPI 200 index consists of 200 large companies from the Stock Market Division. KOSPI 200 has a market value of more than 70% of KOSPI, and moves together with the KOSPI index. The KOSPI 200 index is deemed as important since it is also traded on the futures and options exchanges, and it is one of the most actively traded indices in the world."
+      }
+    ]
+  },
+  "jamperdagangan": {
+    "header": "Trading Hours",
+    "table": [
+      [
+        ["Product", "Summer", "Winter"],
+        [
+          "FOREX",
+          "Monday 05.00am – Saturday 04:00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
+          "Monday 05.30am – Saturday 05:00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)"
+        ],
+        [
+          "LLG & SILVER",
+          "\tMonday Open at 06.00am Tuesday – Friday Open at 05.00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
+          "Monday – Friday Open at 06.00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)"
+        ],
+        [
+          "DOW JONES, S&P500, NASDAQ",
+          "05.00am – 03.15am next day (all time is Jakarta time)",
+          "06.00am – 04.15am next day (all time is Jakarta time)"
+        ],
+        [
+          "FOREX",
+          "Monday 05.00am – Saturday 04:00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
+          "Monday 05.30am – Saturday 05:00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)"
+        ],
+        [
+          "FTSE",
+          "07:00am – 03:00am next day (all time is Jakarta time)",
+          "08:00am – 04:00am next day (all time is Jakarta time)"
+        ],
+        [
+          "DAX",
+          "07:15am – 03:00am next day (all time is Jakarta time)",
+          "07:15am – 04:00am next day (all time is Jakarta time)"
+        ],
+        [
+          "CRUDE OIL",
+          "05.00am – 04.00am next day (all time is Jakarta time)",
+          "06.00pm – 05.00am next day (all time is Jakarta time)"
+        ]
+      ],
+      [
+        ["Product", "Session 1", "Session 2", "Last Trading Day Closing"],
+        ["KOSPI200", "07.00am – 01.35pm", "", "01.20pm"],
+        [
+          "NIKKEI225",
+          "06.30am – 01.25pm",
+          "01.55pm – 03.45am next day",
+          "01.25pm"
+        ],
+        ["HANGSENG", "08.15am – 11.00am", "12.00pm – 03.30pm", "03.00pm"]
+      ]
+    ]
+  },
+  "protrader": {
+    "header": "Pro I Trader",
+    "top": "Online trading in financial markets is basically a must, and it is an interesting experience since transactions can be done easily and quickly. Due to intense competition, online trading platforms are becoming increasingly user-friendly and can be integrated into all scopes of information technology.\r\n        Topgrowth is one of the leading companies in developing sophisticated online trading technology. Pro-iTrading, which is Topgrowth's Online Trading Platform, allows users to transact Forex and Commodity products at anytime. By using a superior trading platform that provides a variety of the latest tools and presents real-time news, users can trade comfortably and easily.",
+    "title": "Main Features of Pro I Trader",
+    "content": [
+      { "image": "", "content": "A simple and fast order execution process" },
+      {
+        "image": "",
+        "content": "Life Quotes in a summary form and advanced mode"
+      },
+      {
+        "image": "",
+        "content": "Charting that is equipped with technical trading features and tools"
+      },
+      { "image": "", "content": "Real-time news for fundamental trading" },
+      { "image": "", "content": "Adjustable based on the users' needs" },
+      { "image": "", "content": "An easily accessible trading notes" }
+    ]
+  },
+  "topgrowthtrader": {
+    "header": "Topgrowth Trader",
+    "top": "Metatrader is known as the most efficient and most widely-used platform by traders. Topgrowth Futures gives users access to always be connected to the market through a variety of Metatrader options that suit the users' needs.\r\n        Topgrowth Trader is a software application that allows online access to the system. With MetaTrader, traders can easily and quickly trade, and it is equipped with eminent software and facilities. Most brokers support their traders using this application platform from MetaQuotes Software. Compared to other platforms, Topgrowth Trader application has various advantages and its own software to do trading activities. Metatrader is able to facilitate traders to add and create special scripts (indicators and EA robots) for trading purposes.",
+    "title": "Main Features of Topgrowth Trader",
+    "content": [
+      { "image": "", "content": "User-friendly" },
+      { "image": "", "content": "Trade on metatrader at real-time prices" },
+      {
+        "image": "",
+        "content": "Provides a variety of graphs, analysis, and indicators according to the users' needs"
+      },
+      { "image": "", "content": "Provides the latest financial market news" },
+      { "image": "", "content": "Has more than 20 languages to choose from" },
+      {
+        "image": "",
+        "content": "Transparency in screening users' financial condition"
+      }
+    ]
+  },
+  "login": {
+    "form": {
+      "title": "login",
+      "firstname": "First Name",
+      "lastname": "Last Name",
+      "signIn": "Get Started",
+      "leftButton": "Demo Account",
+      "rightButton": "Real Account"
+    }
+  },
+  "register": {
+    "form": {
+      "title": "Sign Up",
+      "fullname": "Full Name",
+      "handphone": "Handphone Number",
+      "email": "Email Address",
+      "password": "Password",
+      "leftButton": "Demo Account",
+      "rightButton": "Real Account",
+      "signIn": "Already have an account? Sign in"
+    }
+  },
+  "berita": {
+    "terkini": "Latest News",
+    "terpopuler": "Top News",
+    "outlook": "Market Outlook",
+    "forex": "Forex & Commodity News",
+    "stock": "Stock Index News",
+    "button": "News Index"
+  },
+  "edukasi": {},
+  "karir": {},
+  "hubungikami": {
+    "header": { "title": "Any Questions?", "subtitle": "Ask us everything!" },
+    "top": {
+      "title": "We look forward to hearing from you",
+      "subtitle": "Call us or send us an email through the form below, and we would be happy to help!"
+    },
+    "contact": {
+      "title": "Contact and Information",
+      "left": [
+        "Address:",
+        "Sahid Sudirman Center",
+        "40th Floor, Jl. Jend Sudirman Kav 86",
+        "Jakarta 10220, Indonesia",
+        "Phone: (+62)21 2788-9393",
+        "Fax: (+62)21 2788-9395"
+      ]
+    },
+    "form": {
+      "firstname": "First Name",
+      "lastname": "Last Name",
+      "emailaddress": "Email Address",
+      "yourmessage": "Your Message",
+      "button": "Send Message"
+    }
+  },
+  "Header": {
+    "m1": { "title": "Home" },
+    "m2": {
+      "title": "About Us",
+      "dropdown": [
+        { "title": "Topgrowth Futures" },
+        { "title": "Our Branch" },
+        { "title": "Segregated Account" },
+        { "title": "Legality" }
+      ]
+    },
+    "m3": {
+      "title": "Online Trading",
+      "dropdown": [
+        {
+          "title": "Our Products",
+          "sub": ["Forex", "CFD", "Gold", "Commodities", "Index Futures"]
+        },
+        { "title": "Information", "sub": ["Trading Hours"] },
+        {
+          "title": "Trading Platform",
+          "sub": ["Pro I Trader", "Topgrowth Trader"]
+        },
+        { "title": "Create Account", "sub": ["Login", "Register"] }
+      ]
+    },
+    "m4": {
+      "title": "News",
+      "dropdown": [
+        { "title": "News Highlitght" },
+        { "title": "Stock Index" },
+        { "title": "Forex & Commodity" },
+        { "title": "Economic Calendar" },
+        { "title": "Market Outlook" },
+        { "title": "Video" }
+      ]
+    },
+    "m5": { "title": "Education" },
+    "m6": { "title": "Career" },
+    "m7": { "title": "Contact Us" }
+  }
 }
