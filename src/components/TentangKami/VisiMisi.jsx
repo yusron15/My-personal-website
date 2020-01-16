@@ -13,10 +13,18 @@ import {
 import ScrollAnimation from "react-animate-on-scroll";
 import { LangContext } from "../MyContext";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 class VisiMisi extends React.Component {
   state = {
     activeTab: "1"
   };
+
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   toggle = tab => {
     if (this.state.activeTab !== tab) {
       this.setState({
@@ -56,7 +64,7 @@ class VisiMisi extends React.Component {
                               animateOut="fadeOut"
                             >
                               <h2 className="title">
-                                {lang.tentangkami.visi.title}
+                                {this.props.pageStore.tentangkami.visi.title}
                               </h2>
                               <p
                                 style={{
@@ -64,7 +72,7 @@ class VisiMisi extends React.Component {
                                   fontSize: "1rem"
                                 }}
                               >
-                                {lang.tentangkami.visi.content}
+                                {this.props.pageStore.tentangkami.visi.content}
                               </p>
                             </ScrollAnimation>
                           </Col>
@@ -75,7 +83,7 @@ class VisiMisi extends React.Component {
                               animateOut="fadeOut"
                             >
                               <h2 className="title">
-                                {lang.tentangkami.misi.title}
+                                {this.props.pageStore.tentangkami.misi.title}
                               </h2>
                               <p
                                 style={{
@@ -83,7 +91,7 @@ class VisiMisi extends React.Component {
                                   fontSize: "1rem"
                                 }}
                               >
-                                {lang.tentangkami.misi.content}
+                                {this.props.pageStore.tentangkami.misi.content}
                               </p>
                             </ScrollAnimation>
                           </Col>
@@ -103,4 +111,12 @@ class VisiMisi extends React.Component {
   }
 }
 
-export default VisiMisi;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(VisiMisi);

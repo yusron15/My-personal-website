@@ -31,6 +31,8 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColorNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import DemoFooter from "../../components/Footers/Footer.jsx";
 import bg from "../../assets/img/bg-login.png";
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
 
 const styles = {
   fadeInUp: {
@@ -44,7 +46,8 @@ class RegisterPage extends React.Component {
     squares1to6: "",
     squares7and8: ""
   };
-  componentDidMount() {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.wrapper.scrollTop = 0;
@@ -116,7 +119,7 @@ class RegisterPage extends React.Component {
                                 }}
                               >
                                 {/* {lang.login.form.title} */}
-                                Login
+                                {this.props.pageStore.login.form.title}
                               </CardTitle>
                             </CardHeader>
                             <CardBody>
@@ -184,8 +187,7 @@ class RegisterPage extends React.Component {
                                 onClick={e => e.preventDefault()}
                                 size="lg"
                               >
-                                Get Started
-                                {/* {lang.login.form.signIn} */}
+                                {this.props.pageStore.login.form.signIn}
                               </Button>
                             </CardFooter>
                             <div className="pull-left ml-3 mb-3">
@@ -221,4 +223,12 @@ class RegisterPage extends React.Component {
   }
 }
 
-export default RegisterPage;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(RegisterPage);

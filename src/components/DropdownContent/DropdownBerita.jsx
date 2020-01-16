@@ -22,6 +22,8 @@ import {
 import { LangContext } from "../MyContext";
 import "../../assets/css/main.css";
 import vl from "../../assets/img/vertical-line.png";
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
 
 const title = {
   fontSize: "15px",
@@ -42,6 +44,9 @@ const DropdownBeritaText = {
 };
 
 class DropdownBerita extends React.Component {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
   render() {
     return (
       <LangContext.Consumer>
@@ -58,7 +63,7 @@ class DropdownBerita extends React.Component {
                 opacity: "0.90",
                 justifyContent: "flex-around",
                 minWidth: "100vw",
-                height: "120px",
+                height: "110px",
                 display: "flex"
               }}
             >
@@ -68,12 +73,12 @@ class DropdownBerita extends React.Component {
                     <div style={{ marginLeft: "40px", marginTop: "25px" }}>
                       <div style={DropdownBeritaText}>
                         <Link className="font-black" to="/newspage">
-                          {lang.Header.m4.dropdown[0].title}
+                          {this.props.pageStore.Header.m4.dropdown[0].title}
                         </Link>
                       </div>
                       <div style={{ ...DropdownBeritaText, marginTop: "10px" }}>
                         <Link className="font-black" to="/stock-index">
-                          {lang.Header.m4.dropdown[1].title}
+                          {this.props.pageStore.Header.m4.dropdown[1].title}
                         </Link>
                       </div>
                     </div>
@@ -88,12 +93,12 @@ class DropdownBerita extends React.Component {
                     <div style={{ marginLeft: "20px", marginTop: "25px" }}>
                       <div style={DropdownBeritaText}>
                         <Link className="font-black" to="/forex-commodity">
-                          {lang.Header.m4.dropdown[2].title}
+                          {this.props.pageStore.Header.m4.dropdown[2].title}
                         </Link>
                       </div>
                       <div style={{ ...DropdownBeritaText, marginTop: "10px" }}>
                         <Link className="font-black" to="/economic-calendar">
-                          {lang.Header.m4.dropdown[3].title}
+                          {this.props.pageStore.Header.m4.dropdown[3].title}
                         </Link>
                       </div>
                     </div>
@@ -108,12 +113,12 @@ class DropdownBerita extends React.Component {
                     <div style={{ marginLeft: "20px", marginTop: "25px" }}>
                       <div style={DropdownBeritaText}>
                         <Link className="font-black" to="/market-outlook">
-                          {lang.Header.m4.dropdown[4].title}
+                          {this.props.pageStore.Header.m4.dropdown[4].title}
                         </Link>
                       </div>
                       <div style={{ ...DropdownBeritaText, marginTop: "10px" }}>
                         <Link className="font-black" to="/video-content">
-                          {lang.Header.m4.dropdown[5].title}
+                          {this.props.pageStore.Header.m4.dropdown[5].title}
                         </Link>
                       </div>
                     </div>
@@ -128,4 +133,12 @@ class DropdownBerita extends React.Component {
   }
 }
 
-export default DropdownBerita;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(DropdownBerita);

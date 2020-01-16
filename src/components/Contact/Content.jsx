@@ -35,6 +35,10 @@ import texticon from "../../assets/img/text-icon.png";
 
 import map from "../../assets/img/map-contact.png";
 import ScrollAnimation from "react-animate-on-scroll";
+
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 
 const MapWithAMarker = withGoogleMap(props => (
@@ -48,7 +52,8 @@ const MapWithAMarker = withGoogleMap(props => (
 
 class Content extends React.Component {
   state = {};
-  componentDidMount() {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.wrapper.scrollTop = 0;
@@ -70,12 +75,12 @@ class Content extends React.Component {
                 <Col className="ml-auto mr-auto text-center mt-5" md="6">
                   <h1 className="title font-black">
                     {/* {lang.hubungikami.header.title} */}
-                    Kami sangat menanti pertanyaan, saran, dan kritik dari Anda.
+                    {/* {this.props.pageStore.hubungikami.header.top} */}
+                    {this.props.pageStore.hubungikami.top.title}
                   </h1>
                   <h4 className="desc font-black">
                     {/* {lang.hubungikami.header.subtitle} */}
-                    Silakan hubungi atau kirimkan email ke formulir kontak dan
-                    kami akan dengan senang hati membantu Anda.
+                    {this.props.pageStore.hubungikami.top.subtitle}
                   </h4>
                 </Col>
               </Row>
@@ -88,16 +93,23 @@ class Content extends React.Component {
                           className=" font-black title-text"
                           style={{ fontSize: "1.5rem" }}
                         >
-                          {/* {lang.hubungikami.contact.title} */}Kontak &
-                          Informasi
+                          {this.props.pageStore.hubungikami.contact.title}
                         </div>
                         <Row>
                           <Col>
                             <div className="description font-black desc-text">
                               {/* {lang.hubungikami.contact.left[0]} */}
-                              Address:
+                              {this.props.pageStore.hubungikami.contact.left[0]}
                               <br />
-                              Sahid Sudirman Center
+                              {this.props.pageStore.hubungikami.contact.left[1]}
+                              <br />
+                              {this.props.pageStore.hubungikami.contact.left[2]}
+                              <br />
+                              {this.props.pageStore.hubungikami.contact.left[3]}
+                              <br />
+
+                              <br />
+                              {/* Sahid Sudirman Center */}
                               {/* {lang.hubungikami.contact.left[1]} */}
                               {/* {lang.hubungikami.contact.left[2]} */}
                               {/* {lang.hubungikami.contact.left[3]} */}
@@ -105,9 +117,9 @@ class Content extends React.Component {
                               {/* {lang.hubungikami.contact.left[5]} */}
                               {/* {lang.hubungikami.contact.left[6]} */}
                               <br />
-                              Lantai 40 Jl. Jend Sudirman Kav 86
+                              {/* Lantai 40 Jl. Jend Sudirman Kav 86 */}
                               {/* {lang.hubungikami.contact.left[7]} */}
-                              <br /> Jakarta 10220 Indonesia
+                              {/* <br /> Jakarta 10220 Indonesia */}
                               {/* {lang.hubungikami.contact.left[8]} */}
                               <br />
                               {/* {lang.hubungikami.contact.left[9]} */}
@@ -116,11 +128,13 @@ class Content extends React.Component {
                           <Col>
                             <div className="description font-black desc-text">
                               {/* {lang.hubungikami.contact.left[10]} */}
-                              Phone: (+62)21 2788-9393
+                              {/* Phone: (+62)21 2788-9393 */}
+                              {this.props.pageStore.hubungikami.contact.left[4]}
                             </div>
                             <div className="description font-black desc-text">
                               {/* {lang.hubungikami.contact.left[11]} */}
-                              Fax: (+62)21 2788-9395
+                              {/* Fax: (+62)21 2788-9395 */}
+                              {this.props.pageStore.hubungikami.contact.left[5]}
                             </div>
                           </Col>
                         </Row>
@@ -320,4 +334,12 @@ class Content extends React.Component {
   }
 }
 
-export default Content;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

@@ -24,6 +24,9 @@ import { LangContext } from "../MyContext";
 import "../../assets/css/main.css";
 import vl from "../../assets/img/vertical-line.png";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 const title = {
   fontSize: "15px",
   fontWeight: "bold",
@@ -51,6 +54,9 @@ const DropdownTradingText = {
 };
 
 class DropdownTrading extends React.Component {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
   render() {
     return (
       <LangContext.Consumer>
@@ -67,7 +73,7 @@ class DropdownTrading extends React.Component {
                 opacity: "0.90",
                 justifyContent: "flex-around",
                 minWidth: "100vw",
-                height: "120px",
+                height: "110px",
                 display: "flex"
               }}
             >
@@ -76,7 +82,7 @@ class DropdownTrading extends React.Component {
                   <div style={DropdownTradingText}>
                     <div style={{ marginLeft: "10%" }}>
                       <div style={title}>
-                        {lang.Header.m3.dropdown[0].title}
+                        {this.props.pageStore.Header.m3.dropdown[0].title}
                       </div>
                     </div>
                   </div>
@@ -84,12 +90,12 @@ class DropdownTrading extends React.Component {
                     <div style={{ marginLeft: "40px", marginTop: 0 }}>
                       <div style={DropdownTradingText}>
                         <Link className="font-black" to="/forex">
-                          {lang.Header.m3.dropdown[0].sub[0]}
+                          {this.props.pageStore.Header.m3.dropdown[0].sub[0]}
                         </Link>
                       </div>
                       <div style={DropdownTradingText}>
                         <Link className="font-black" to="/cfd">
-                          {lang.Header.m3.dropdown[0].sub[1]}
+                          {this.props.pageStore.Header.m3.dropdown[0].sub[1]}
                         </Link>
                       </div>
                     </div>
@@ -97,12 +103,12 @@ class DropdownTrading extends React.Component {
                     <div style={{ marginLeft: "20px" }}>
                       <div style={DropdownTradingText}>
                         <Link className="font-black" to="/komoditi">
-                          {lang.Header.m3.dropdown[0].sub[3]}
+                          {this.props.pageStore.Header.m3.dropdown[0].sub[3]}
                         </Link>
                       </div>
                       <div style={DropdownTradingText}>
                         <Link className="font-black" to="/gold">
-                          {lang.Header.m3.dropdown[0].sub[2]}
+                          {this.props.pageStore.Header.m3.dropdown[0].sub[2]}
                         </Link>
                       </div>
                     </div>
@@ -110,7 +116,7 @@ class DropdownTrading extends React.Component {
                     <div style={{ marginLeft: "20px" }}>
                       <div style={DropdownTradingText}>
                         <Link className="font-black" to="/index-futures">
-                          {lang.Header.m3.dropdown[0].sub[4]}
+                          {this.props.pageStore.Header.m3.dropdown[0].sub[4]}
                         </Link>
                       </div>
                     </div>
@@ -152,13 +158,15 @@ class DropdownTrading extends React.Component {
                     <img className="vl-img-trading" src={vl} />
                   </div>
                   <div style={{ marginLeft: "20px" }}>
-                    <div style={title}>{lang.Header.m3.dropdown[1].title}</div>
+                    <div style={title}>
+                      {this.props.pageStore.Header.m3.dropdown[1].title}
+                    </div>
                     <Link
                       style={trading}
                       className="vertical-space"
                       to="/jam-perdagangan"
                     >
-                      {lang.Header.m3.dropdown[1].sub[0]}
+                      {this.props.pageStore.Header.m3.dropdown[1].sub[0]}
                     </Link>
                   </div>
                 </div>
@@ -169,15 +177,17 @@ class DropdownTrading extends React.Component {
                     <img className="vl-img-trading" src={vl} />
                   </div>
                   <div style={{ marginLeft: "20px" }}>
-                    <div style={title}>{lang.Header.m3.dropdown[2].title}</div>
+                    <div style={title}>
+                      {this.props.pageStore.Header.m3.dropdown[2].title}
+                    </div>
                     <div style={DropdownTradingText}>
                       <Link className="font-black" to="/pro-trader">
-                        {lang.Header.m3.dropdown[2].sub[0]}
+                        {this.props.pageStore.Header.m3.dropdown[2].sub[0]}
                       </Link>
                     </div>
                     <div style={DropdownTradingText}>
                       <Link className="font-black" to="/topgrowth-trader">
-                        {lang.Header.m3.dropdown[2].sub[1]}
+                        {this.props.pageStore.Header.m3.dropdown[2].sub[1]}
                       </Link>
                     </div>
                   </div>
@@ -189,15 +199,17 @@ class DropdownTrading extends React.Component {
                     <img className="vl-img-trading" src={vl} />
                   </div>
                   <div style={{ marginLeft: "20px" }}>
-                    <div style={title}>{lang.Header.m3.dropdown[3].title}</div>
+                    <div style={title}>
+                      {this.props.pageStore.Header.m3.dropdown[3].title}
+                    </div>
                     <div style={DropdownTradingText}>
                       <Link className="font-black" to="/login">
-                        {lang.Header.m3.dropdown[3].sub[0]}
+                        {this.props.pageStore.Header.m3.dropdown[3].sub[0]}
                       </Link>
                     </div>
                     <div style={DropdownTradingText}>
                       <Link className="font-black" to="/register">
-                        {lang.Header.m3.dropdown[3].sub[1]}
+                        {this.props.pageStore.Header.m3.dropdown[3].sub[1]}
                       </Link>
                     </div>
                   </div>
@@ -211,4 +223,12 @@ class DropdownTrading extends React.Component {
   }
 }
 
-export default DropdownTrading;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(DropdownTrading);

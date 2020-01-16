@@ -30,6 +30,9 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import Radium, { StyleRoot } from "radium";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 const stylesAnimation = {
   slideInDown: {
     animation: "x 1s",
@@ -45,6 +48,11 @@ class BottomNavbar extends React.Component {
       display: "none"
     };
   }
+
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   componentDidMount() {
     window.addEventListener("scroll", this.changeNavbarPosition);
   }
@@ -110,7 +118,7 @@ class BottomNavbar extends React.Component {
                         marginTop: "5px"
                       }}
                     >
-                      Download E-Book
+                      {this.props.pageStore.Landing.BottomNavbar.title}
                     </div>
                   </Col>
                   <Col md="3">
@@ -177,12 +185,12 @@ class BottomNavbar extends React.Component {
 
                 <Row style={{ marginLeft: "12px" }}>
                   <Col style={{ color: "#FFFFFF" }}>
-                    <Input type="checkbox" /> Saya setuju untuk menerima berita
-                    dan email promosi dari Topgrowth Futures
+                    <Input type="checkbox" />
+                    {this.props.pageStore.Landing.BottomNavbar.form.leftTick}
                   </Col>
                   <Col style={{ color: "#FFFFFF" }}>
-                    <Input type="checkbox" /> Saya telah membaca dan setuju
-                    kebijakan privasi kebijakan privasi
+                    <Input type="checkbox" />
+                    {this.props.pageStore.Landing.BottomNavbar.form.rightTick}
                   </Col>
                 </Row>
               </Col>
@@ -197,4 +205,12 @@ class BottomNavbar extends React.Component {
   }
 }
 
-export default BottomNavbar;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BottomNavbar);

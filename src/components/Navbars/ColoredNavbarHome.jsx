@@ -31,6 +31,9 @@ import "../../assets/css/main.css";
 import Radium, { StyleRoot } from "radium";
 import vl from "../../assets/img/vertical-line.png";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 const stylesAnimation = {
   slideInDown: {
     animation: "x 1s",
@@ -100,6 +103,10 @@ class ColorNavbar extends React.Component {
       color: "black",
       activeTab: "1"
     };
+  }
+
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
   }
 
   onClick() {
@@ -321,7 +328,7 @@ class ColorNavbar extends React.Component {
                                   fontWeight: "bold"
                                 }}
                               >
-                                {lang.Header.m1.title}
+                                {this.props.pageStore.Header.m1.title}
                               </button>
                             </div>
                           </NavItem>
@@ -335,7 +342,7 @@ class ColorNavbar extends React.Component {
                           // onMouseLeave={() => this.onLeave()}
                         >
                           <button class="dropbtn" style={colorStyle}>
-                            {lang.Header.m2.title}
+                            {this.props.pageStore.Header.m2.title}
                           </button>
                         </div>
 
@@ -345,139 +352,8 @@ class ColorNavbar extends React.Component {
                           onMouseEnter={() => this.onClickTrading()}
                         >
                           <button class="dropbtn" style={colorStyle}>
-                            {lang.Header.m3.title}
+                            {this.props.pageStore.Header.m3.title}
                           </button>
-                          {/* <div class="dropdown-content-trading trading-online">
-                            <div
-                              class="row"
-                              style={{ justifyContent: "space-araound" }}
-                            >
-                              <Col>
-                                <div style={{ marginLeft: "20px" }}>
-                                  <div style={title}>
-                                    {lang.Header.m3.dropdown[0].title}
-                                  </div>
-                                  <Row>
-                                    <Col>
-                                      <Link
-                                        style={trading}
-                                        className="vertical-space"
-                                        to="/forex"
-                                      >
-                                        {lang.Header.m3.dropdown[0].sub[0]}
-                                      </Link>
-                                      <Link
-                                        style={trading}
-                                        className="vertical-space"
-                                        to="/cfd"
-                                      >
-                                        {lang.Header.m3.dropdown[0].sub[1]}
-                                      </Link>
-                                    </Col>
-                                    <Col>
-                                      <Link
-                                        style={trading}
-                                        className="vertical-space"
-                                        to="/komoditi"
-                                      >
-                                        {lang.Header.m3.dropdown[0].sub[3]}
-                                      </Link>
-                                      <Link
-                                        style={trading}
-                                        className="vertical-space"
-                                        to="/gold"
-                                      >
-                                        {lang.Header.m3.dropdown[0].sub[2]}
-                                      </Link>
-                                    </Col>
-                                    <Col style={{ minWidth: "10vw" }}>
-                                      <Link
-                                        style={trading}
-                                        className="vertical-space"
-                                        to="/index-futures"
-                                      >
-                                        {lang.Header.m3.dropdown[0].sub[4]}
-                                      </Link>
-                                    </Col>
-                                  </Row>
-                                </div>
-                              </Col>
-
-                              <Col>
-                                <div class="row">
-                                  <div>
-                                    <img className="vl-img" src={vl} />
-                                  </div>
-                                  <div style={{ marginLeft: "20px" }}>
-                                    <div style={title}>
-                                      {lang.Header.m3.dropdown[1].title}
-                                    </div>
-                                    <Link
-                                      style={trading}
-                                      className="vertical-space"
-                                      to="/jam-perdagangan"
-                                    >
-                                      {lang.Header.m3.dropdown[1].sub[0]}
-                                    </Link>
-                                  </div>
-                                </div>
-                              </Col>
-
-                              <Col>
-                                <div class="row">
-                                  <div>
-                                    <img className="vl-img" src={vl} />
-                                  </div>
-                                  <div style={{ marginLeft: "20px" }}>
-                                    <div style={title}>
-                                      {lang.Header.m3.dropdown[2].title}
-                                    </div>
-                                    <Link
-                                      style={trading}
-                                      className="vertical-space"
-                                      to="/pro-trader"
-                                    >
-                                      {lang.Header.m3.dropdown[2].sub[0]}
-                                    </Link>
-                                    <Link
-                                      style={trading}
-                                      className="vertical-space"
-                                      to="/topgrowth-trader"
-                                    >
-                                      {lang.Header.m3.dropdown[2].sub[1]}
-                                    </Link>
-                                  </div>
-                                </div>
-                              </Col>
-
-                              <Col>
-                                <div class="row">
-                                  <div>
-                                    <img className="vl-img" src={vl} />
-                                  </div>
-                                  <div style={{ marginLeft: "20px" }}>
-                                    <div style={title}>
-                                      {lang.Header.m3.dropdown[3].title}
-                                    </div>
-                                    <Link
-                                      style={trading}
-                                      className="vertical-space"
-                                      to="/login"
-                                    >
-                                      {lang.Header.m3.dropdown[3].sub[0]}
-                                    </Link>
-                                    <Link
-                                      style={trading}
-                                      className="vertical-space"
-                                      to="/register"
-                                    >
-                                      {lang.Header.m3.dropdown[3].sub[1]}
-                                    </Link>
-                                  </div>
-                                </div>
-                              </Col>
-                            </div>
-                          </div> */}
                         </div>
 
                         {/* BERITA */}
@@ -486,88 +362,15 @@ class ColorNavbar extends React.Component {
                           onMouseEnter={() => this.onClickBerita()}
                         >
                           <button class="dropbtn" style={colorStyle}>
-                            {lang.Header.m4.title}
+                            {this.props.pageStore.Header.m4.title}
                           </button>
-
-                          {/* <div class="dropdown-content-news tentang-kami-left"> */}
-                          {/* <div
-                                class="row"
-                                style={{ justifyContent: "space-araound" }}
-                              >
-                                <Col>
-                                  <div class="row">
-                                    <div style={{ marginLeft: "50px" }}>
-                                      <Link to="/newspage">
-                                        <div style={newstext}>
-                                          {lang.Header.m4.dropdown[0].title}
-                                        </div>
-                                      </Link>
-
-                                      <Link to="/stock-index">
-                                        <div style={newstext}>
-                                          {lang.Header.m4.dropdown[1].title}
-                                        </div>
-                                      </Link>
-                                    </div>
-                                  </div>
-                                </Col>
-
-                                <Col>
-                                  <div class="row">
-                                    <div>
-                                      <img
-                                        className="vl-img-tentangkami"
-                                        src={vl}
-                                      />
-                                    </div>
-                                    <div style={{ marginLeft: "20px" }}>
-                                      <Link to="/forex-commodity">
-                                        <div style={newstext}>
-                                          {lang.Header.m4.dropdown[2].title}
-                                        </div>
-                                      </Link>
-                                      <Link to="/economic-calendar">
-                                        <div style={newstext}>
-                                          {lang.Header.m4.dropdown[3].title}
-                                        </div>
-                                      </Link>
-                                    </div>
-                                  </div>
-                                </Col>
-
-                                <Col>
-                                  <div class="row">
-                                    <div>
-                                      <img
-                                        className="vl-img-tentangkami"
-                                        src={vl}
-                                      />
-                                    </div>
-                                    <div style={{ marginLeft: "20px" }}>
-                                      <Link to="/market-outlook">
-                                        <div style={newstext}>
-                                          {lang.Header.m4.dropdown[4].title}
-                                        </div>
-                                      </Link>
-
-                                      <Link to="/video-content">
-                                        <div style={newstext}>
-                                          {lang.Header.m4.dropdown[5].title}
-                                        </div>
-                                      </Link>
-                                    </div>
-                                  </div>
-                                </Col>
-                              </div>
-                            </div> */}
-                          {/* </div> */}
                         </div>
 
                         <Link to="/edukasi">
                           <NavItem>
                             <div onMouseEnter={() => this.onLeaveAll()}>
                               <button class="dropbtn" style={colorStyle}>
-                                {lang.Header.m5.title}
+                                {this.props.pageStore.Header.m5.title}
                               </button>
                             </div>
                           </NavItem>
@@ -577,7 +380,7 @@ class ColorNavbar extends React.Component {
                           <NavItem>
                             <div onMouseEnter={() => this.onLeaveAll()}>
                               <button class="dropbtn" style={colorStyle}>
-                                {lang.Header.m6.title}
+                                {this.props.pageStore.Header.m6.title}
                               </button>
                             </div>
                           </NavItem>
@@ -587,7 +390,7 @@ class ColorNavbar extends React.Component {
                           <NavItem>
                             <div onMouseEnter={() => this.onLeaveAll()}>
                               <button class="dropbtn" style={colorStyle}>
-                                {lang.Header.m7.title}
+                                {this.props.pageStore.Header.m7.title}
                               </button>
                             </div>
                           </NavItem>
@@ -619,4 +422,12 @@ class ColorNavbar extends React.Component {
   }
 }
 
-export default ColorNavbar;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ColorNavbar);

@@ -23,6 +23,9 @@ import { LangContext } from "../MyContext";
 import "../../assets/css/main.css";
 import vl from "../../assets/img/vertical-line.png";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 const DropdownTentangKamiText = {
   fontSize: "15px",
   // fontWeight: "bold",
@@ -34,6 +37,9 @@ const DropdownTentangKamiText = {
 };
 
 class DropdownTentangKami extends React.Component {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
   render() {
     return (
       <LangContext.Consumer>
@@ -50,14 +56,14 @@ class DropdownTentangKami extends React.Component {
                 flexDirection: "row",
                 justifyContent: "flex-around",
                 minWidth: "100vw",
-                height: "120px",
+                height: "110px",
                 display: "flex"
               }}
             >
               <div className="dropdown-contents">
                 <div style={DropdownTentangKamiText}>
                   <Link className="font-black" to="/tentang-kami">
-                    {lang.Header.m2.dropdown[0].title}
+                    {this.props.pageStore.Header.m2.dropdown[0].title}
                   </Link>
                 </div>
               </div>
@@ -67,7 +73,7 @@ class DropdownTentangKami extends React.Component {
                 </div>
                 <div style={DropdownTentangKamiText}>
                   <Link className="font-black" to="/cabang">
-                    {lang.Header.m2.dropdown[1].title}
+                    {this.props.pageStore.Header.m2.dropdown[1].title}
                   </Link>
                 </div>
               </div>
@@ -77,7 +83,7 @@ class DropdownTentangKami extends React.Component {
                 </div>
                 <div style={DropdownTentangKamiText}>
                   <Link className="font-black" to="/rekening-terpisah">
-                    {lang.Header.m2.dropdown[2].title}
+                    {this.props.pageStore.Header.m2.dropdown[2].title}
                   </Link>
                 </div>
               </div>
@@ -87,7 +93,7 @@ class DropdownTentangKami extends React.Component {
                 </div>
                 <div style={DropdownTentangKamiText}>
                   <Link className="font-black" to="/legalitas">
-                    {lang.Header.m2.dropdown[3].title}
+                    {this.props.pageStore.Header.m2.dropdown[3].title}
                   </Link>
                 </div>
               </div>
@@ -99,4 +105,15 @@ class DropdownTentangKami extends React.Component {
   }
 }
 
-export default DropdownTentangKami;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DropdownTentangKami);

@@ -46,7 +46,11 @@ import appstore from "../../assets/img/appstore.png";
 import playstore from "../../assets/img/playstore.png";
 import iphone3 from "../../assets/img/iphone3.png";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import VizSensor from "react-visibility-sensor";
+import { throwStatement } from "@babel/types";
 
 const styles = {
   fadeInRight: {
@@ -59,6 +63,11 @@ class HeaderLanding extends React.Component {
   constructor(props) {
     super(props);
   }
+
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   renderContent = () => {
     if (isMobile) {
       return (
@@ -261,27 +270,10 @@ class HeaderLanding extends React.Component {
         {({ lang }) => {
           return (
             <>
-              <div
-                className="cd-section "
-                id="headers"
-                // style={{
-                //   backgroundImage:
-                //     "url(" + require("assets/img/header-image1.png") + ")",
-                //   backgroundSize: "cover"
-                // }}
-              >
+              <div className="cd-section " id="headers">
                 <div>
                   <BlurryNavbar />
                   <div className="space-50" />
-                  {/* <Row
-                    // className="header-filter"
-                    // style={{
-                    //   backgroundImage:
-                    //     "url(" + require("assets/img/header-image.png") + ")",
-                    //   backgroundSize: "cover"
-                    // }}
-                    style={{ marginRight: 0, marginLeft: 0 }}
-                  > */}
                   <Col md="12" style={{ paddingRight: 0, paddingLeft: 0 }}>
                     <Carousel
                       indicators={false}
@@ -314,23 +306,19 @@ class HeaderLanding extends React.Component {
                                     fontWeight: "bold"
                                   }}
                                 >
-                                  {lang.Landing.HeaderLanding.slide[0].title}
+                                  {
+                                    this.props.pageStore.Landing.HeaderLanding
+                                      .slide[0].title
+                                  }
                                 </div>
                                 <h4>
-                                  {lang.Landing.HeaderLanding.slide[0].subtitle}
+                                  {
+                                    this.props.pageStore.Landing.HeaderLanding
+                                      .slide[0].subtitle
+                                  }
                                 </h4>
                                 <br />
                               </Col>
-                              {/* <Col md="5">
-                              <Row className="vertical-center">
-                            <Col>
-                              <img src={best17} />
-                            </Col>
-                            <Col>
-                              <img src={best18} />
-                            </Col>
-                          </Row>
-                            </Col> */}
                             </Row>
                           </Container>
                         </div>
@@ -348,13 +336,6 @@ class HeaderLanding extends React.Component {
                         >
                           <Container style={{ paddingTop: 0 }}>
                             <Row>
-                              {/* <Navbar /> */}
-                              {/* <Col className="mr-auto text-left" lg="5" md="7">
-                              <img
-                                src={phoneHeader}
-                                style={{ paddingBottom: "0" }}
-                              />
-                            </Col> */}
                               <Col md="8">
                                 <Row className="vertical-center">
                                   <div
@@ -363,15 +344,16 @@ class HeaderLanding extends React.Component {
                                       fontSize: "2.5rem",
                                       fontWeight: "bold"
                                     }}
-
-                                    // className="title"
                                   >
-                                    {lang.Landing.HeaderLanding.slide[1].title}
+                                    {
+                                      this.props.pageStore.Landing.HeaderLanding
+                                        .slide[1].title
+                                    }
                                   </div>
                                   <h4>
                                     {
-                                      lang.Landing.HeaderLanding.slide[1]
-                                        .subtitle
+                                      this.props.pageStore.Landing.HeaderLanding
+                                        .slide[1].subtitle
                                     }
                                   </h4>
                                 </Row>
@@ -393,16 +375,6 @@ class HeaderLanding extends React.Component {
                         >
                           <Container style={{ paddingTop: 0 }}>
                             <Row>
-                              {/* <Navbar /> */}
-                              {/* <Col className="mr-auto text-left" lg="5" md="7">
-                              <img
-                                src={iphone3}
-                                style={{
-                                  height: "50vh",
-                                  width: "100vw"
-                                }}
-                              />
-                            </Col> */}
                               <Col md="8">
                                 <Row>
                                   <div
@@ -411,16 +383,17 @@ class HeaderLanding extends React.Component {
                                       fontSize: "2.5rem",
                                       fontWeight: "bold"
                                     }}
-
-                                    // className="title"
                                   >
-                                    {lang.Landing.HeaderLanding.slide[2].title}
+                                    {
+                                      this.props.pageStore.Landing.HeaderLanding
+                                        .slide[2].title
+                                    }
                                   </div>
 
                                   <h4>
                                     {
-                                      lang.Landing.HeaderLanding.slide[2]
-                                        .subtitle
+                                      this.props.pageStore.Landing.HeaderLanding
+                                        .slide[2].subtitle
                                     }
                                   </h4>
                                   <br />
@@ -441,10 +414,6 @@ class HeaderLanding extends React.Component {
                           </Container>
                         </div>
                       </Carousel.Item>
-                      {/* <Col md="4 offset-md-2">
-                          <CardRegister />
-                        </Col>
-                        <BreakingNews /> */}
                     </Carousel>
                   </Col>
                   <Col
@@ -467,9 +436,7 @@ class HeaderLanding extends React.Component {
                   >
                     <BreakingNews />
                   </Col>
-                  {/* </Row> */}
                 </div>
-                {/* <BreakingNews /> */}
               </div>
             </>
           );
@@ -482,4 +449,12 @@ class HeaderLanding extends React.Component {
   }
 }
 
-export default HeaderLanding;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderLanding);

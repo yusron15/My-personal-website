@@ -18,8 +18,16 @@ import check from "../../assets/img/Check.png";
 import dollar from "../../assets/img/header-rekening.png";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 class Content extends React.Component {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   render() {
     return (
       <LangContext.Consumer>
@@ -47,7 +55,7 @@ class Content extends React.Component {
                     <BlurryNavbar />
                     <ColoredNavbar location={{ ...this.props.location }} />
                     <div className="title title-header">
-                      {lang.rekeningterpisah.header}
+                      {this.props.pageStore.rekeningterpisah.header}
                     </div>
                   </div>
                   <div
@@ -66,16 +74,25 @@ class Content extends React.Component {
                               color: "black"
                             }}
                           >
-                            {lang.rekeningterpisah.content.title}
+                            {
+                              this.props.pageStore.rekeningterpisah.content
+                                .title
+                            }
                           </h1>
                           <p
                             className="font-black"
                             style={{ lineHeight: "25px" }}
                           >
-                            {lang.rekeningterpisah.content.content}
+                            {
+                              this.props.pageStore.rekeningterpisah.content
+                                .content
+                            }
                             <br />
 
-                            {lang.rekeningterpisah.content.subContent[0]}
+                            {
+                              this.props.pageStore.rekeningterpisah.content
+                                .subContent[0]
+                            }
                           </p>
                         </Col>
                       </Row>
@@ -90,7 +107,10 @@ class Content extends React.Component {
                                 className="font-black"
                                 style={{ lineHeight: "25px" }}
                               >
-                                {lang.rekeningterpisah.content.subContent[1]}
+                                {
+                                  this.props.pageStore.rekeningterpisah.content
+                                    .subContent[1]
+                                }
                               </p>
                             </Col>
                           </Row>
@@ -105,7 +125,10 @@ class Content extends React.Component {
                                 className="font-black"
                                 style={{ lineHeight: "25px" }}
                               >
-                                {lang.rekeningterpisah.content.subContent[2]}
+                                {
+                                  this.props.pageStore.rekeningterpisah.content
+                                    .subContent[2]
+                                }
                               </p>
                             </Col>
                           </Row>
@@ -123,4 +146,12 @@ class Content extends React.Component {
   }
 }
 
-export default Content;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

@@ -28,6 +28,9 @@ import rightButton from "../../assets/img/right-blue-arrow.png";
 import leftButton from "../../assets/img/left-blue-arrow.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg from "../../assets/img/bg-cfd.png";
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 
 const textTitle = {
@@ -61,6 +64,10 @@ class Content extends React.Component {
     activeIndex: 0
   };
 
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   render() {
     return (
       <LangContext.Consumer>
@@ -82,17 +89,21 @@ class Content extends React.Component {
                 >
                   <BlurryNavbar />
 
-                  <div className="title title-header">{lang.CFD.header}</div>
+                  <div className="title title-header">
+                    {this.props.pageStore.CFD.header}
+                  </div>
                 </div>
                 <div className="team-1 broken-white">
                   <Container>
                     <Row>
                       <Col md="12">
-                        <div style={textTitle}>{lang.CFD.content[0].titlw}</div>
+                        <div style={textTitle}>
+                          {this.props.pageStore.CFD.content[0].title}
+                        </div>
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {lang.CFD.content[0].content}
+                          {this.props.pageStore.CFD.content[0].content}
                         </div>
                       </Col>
                     </Row>
@@ -101,11 +112,13 @@ class Content extends React.Component {
                   <Container>
                     <Row>
                       <Col md="12">
-                        <div style={textTitle}>{lang.CFD.content[1].title}</div>
+                        <div style={textTitle}>
+                          {this.props.pageStore.CFD.content[1].title}
+                        </div>
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {lang.CFD.content[1].content}
+                          {this.props.pageStore.CFD.content[1].content}
                         </div>
                       </Col>
                     </Row>
@@ -114,11 +127,13 @@ class Content extends React.Component {
                   <Container>
                     <Row>
                       <Col md="12">
-                        <div style={textTitle}>{lang.CFD.content[2].title}</div>
+                        <div style={textTitle}>
+                          {this.props.pageStore.CFD.content[2].title}
+                        </div>
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {lang.CFD.content[2].content}
+                          {this.props.pageStore.CFD.content[2].content}
                         </div>
                       </Col>
                     </Row>
@@ -127,11 +142,13 @@ class Content extends React.Component {
                   <Container>
                     <Row>
                       <Col md="12">
-                        <div style={textTitle}>{lang.CFD.content[3].title}</div>
+                        <div style={textTitle}>
+                          {this.props.pageStore.CFD.content[3].title}
+                        </div>
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {lang.CFD.content[3].content}
+                          {this.props.pageStore.CFD.content[3].content}
                         </div>
                       </Col>
                     </Row>
@@ -140,7 +157,9 @@ class Content extends React.Component {
                   <Container>
                     <Row>
                       <Col md="12">
-                        <div style={textTitle}>{lang.CFD.content[3].title}</div>
+                        <div style={textTitle}>
+                          {this.props.pageStore.CFD.content[4].title}
+                        </div>
                       </Col>
                       <Col md="12">
                         <Table
@@ -232,7 +251,9 @@ class Content extends React.Component {
                   <Container>
                     <Row>
                       <Col md="12">
-                        <div style={textTitle}>CFDs Pada Produk Energi</div>
+                        <div style={textTitle}>
+                          {this.props.pageStore.CFD.content[5].title}
+                        </div>
                       </Col>
                       <Col md="12">
                         <Table
@@ -273,7 +294,7 @@ class Content extends React.Component {
                     <Row>
                       <Col md="12">
                         <div style={textTitle}>
-                          CFDs Pada Bullion Produk / Precious Metal
+                          {this.props.pageStore.CFD.content[6].title}
                         </div>
                       </Col>
                       <Col md="12">
@@ -322,4 +343,12 @@ class Content extends React.Component {
   }
 }
 
-export default Content;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

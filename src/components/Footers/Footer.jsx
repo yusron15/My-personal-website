@@ -17,8 +17,15 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 class Footers extends React.Component {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   render() {
     return (
       <LangContext.Consumer>
@@ -38,24 +45,26 @@ class Footers extends React.Component {
                         <div style={{ cursor: "default" }}>
                           <h4>
                             <b style={{ cursor: "default" }}>
-                              {lang.Landing.Footer[0].title}
+                              {this.props.pageStore.Landing.Footer[0].title}
                             </b>
                           </h4>
-                          <p>{lang.Landing.Footer[0].content[0]}</p>
+                          <p>
+                            {this.props.pageStore.Landing.Footer[0].content[0]}
+                          </p>
                         </div>
                       </Col>
                       <Col md="3">
                         <h4 style={{ cursor: "default" }}>
-                          {lang.Landing.Footer[1].title}
+                          {this.props.pageStore.Landing.Footer[1].title}
                         </h4>
                         <p>
                           <Link to="/tentang-kami" style={{ color: "white" }}>
-                            {lang.Landing.Footer[1].content[0]}
+                            {this.props.pageStore.Landing.Footer[1].content[0]}
                           </Link>
                         </p>
                         <p>
                           <Link to="/legalitas" style={{ color: "white" }}>
-                            {lang.Landing.Footer[1].content[1]}
+                            {this.props.pageStore.Landing.Footer[1].content[1]}
                           </Link>
                         </p>
                         <p>
@@ -63,21 +72,21 @@ class Footers extends React.Component {
                             to="/rekening-terpisah"
                             style={{ color: "white" }}
                           >
-                            {lang.Landing.Footer[1].content[2]}
+                            {this.props.pageStore.Landing.Footer[1].content[2]}
                           </Link>
                         </p>
                         <p>
                           <Link to="/cabang" style={{ color: "white" }}>
-                            {lang.Landing.Footer[1].content[3]}
+                            {this.props.pageStore.Landing.Footer[1].content[3]}
                           </Link>
                         </p>
                       </Col>
                       <Col md="2">
                         <h4 style={{ cursor: "default" }}>
-                          {lang.Landing.Footer[2].title}
+                          {this.props.pageStore.Landing.Footer[2].title}
                         </h4>
                         <Link to="/newspage" style={{ color: "white" }}>
-                          {lang.Landing.Footer[2].content[0]}
+                          {this.props.pageStore.Landing.Footer[2].content[0]}
                         </Link>
                       </Col>
                       <Col md="4">
@@ -85,15 +94,37 @@ class Footers extends React.Component {
                           to=""
                           style={{ color: "white", cursor: "default" }}
                         >
-                          <h4>{lang.Landing.Footer[3].title}</h4>
+                          <h4>
+                            {this.props.pageStore.Landing.Footer[3].title}
+                          </h4>
 
-                          <p>{lang.Landing.Footer[3].content[0]}</p>
-                          <p>{lang.Landing.Footer[3].content[1]}</p>
-                          <p>{lang.Landing.Footer[3].content[2]}</p>
-                          <p>{lang.Landing.Footer[3].content[3]}</p>
-                          <p>{lang.Landing.Footer[3].content[4]}</p>
-                          <p>{lang.Landing.Footer[3].content[5]}</p>
-                          <p>{lang.Landing.Footer[3].content[6]}</p>
+                          <p>
+                            {this.props.pageStore.Landing.Footer[3].content[0]}
+                          </p>
+
+                          <p>
+                            {this.props.pageStore.Landing.Footer[3].content[1]}
+                          </p>
+
+                          <p>
+                            {this.props.pageStore.Landing.Footer[3].content[2]}
+                          </p>
+
+                          <p>
+                            {this.props.pageStore.Landing.Footer[3].content[3]}
+                          </p>
+
+                          <p>
+                            {this.props.pageStore.Landing.Footer[3].content[4]}
+                          </p>
+
+                          <p>
+                            {this.props.pageStore.Landing.Footer[3].content[5]}
+                          </p>
+
+                          <p>
+                            {this.props.pageStore.Landing.Footer[3].content[6]}
+                          </p>
 
                           {/* Sudirman Kav 86 Jakarta 10220 Indonesia Email:
                     customerservices@topgrowthfutures.com Tel: 021 2788-9366
@@ -118,4 +149,12 @@ class Footers extends React.Component {
   }
 }
 
-export default Footers;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footers);

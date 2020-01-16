@@ -17,7 +17,7 @@ const defaultState = {
         {
           title: "Topgrowth Futures Mobile",
           subtitle:
-            "Untuk Berita Pasar Keuangan Ter-UPDATE,\r\n                Rekomendasi TRADING, Ulasan Pasar & SIGNALTRADING REAL TIME",
+            "Untuk Berita Pasar Keuangan Ter-UPDATE,\r\nRekomendasi TRADING, Ulasan Pasar & SIGNALTRADING REAL TIME",
           image: []
         }
       ]
@@ -50,7 +50,7 @@ const defaultState = {
           "$10,000",
           "initial Deposit",
           "Minimum 1.0 Lot",
-          "Minimum 50.0 Lot",
+          "Minimum 50 Lot",
           "Pro I Trader & Topgrowth Trader (MT4)",
           "Daftar"
         ]
@@ -203,7 +203,7 @@ const defaultState = {
       }
     ],
     BottomNavbar: {
-      title: "Download E-Book Now",
+      title: "Download E-Book",
       form: {
         fullname: "Full Name",
         email: "email",
@@ -355,7 +355,27 @@ const defaultState = {
         content:
           "Memungkinkan nasabah untuk memaksimalkan keuntungan serta menerapkan money management"
       }
-    ]
+    ],
+    footerKomoditi: {
+      title: "Keuntungan Bertransaksi Kontrak Berjangka",
+      content: [
+        {
+          title: "MARGIN/ LEVERAGE",
+          subtitle:
+            "Semua kontrak berjangka i perdagangkan dengan margin Margin ranges 2%-10% Contoh : Kontrak : GOLDGR Ukuran Kontrak : 1 Lot = 100 gram Misalnya harga emas adalahRp. 495.000. Nilai dari 1 Lot GOLDGR = 100 gram x Rp. 495.000 = Rp. 49.500.000 Margin per lot 4% = 4% x Rp. 49.500.000 = Rp. 1.980.000, dibulatkan menjadi Rp 2.000.000,-"
+        },
+        {
+          title: "2WAYS OPPORTUNITY",
+          subtitle:
+            "BUY position – buying a contract (Investor menginginkan harga terus meningkat SHORT position — selling a contract (Investor menginginkan harga terus menurun)"
+        },
+        {
+          title: "LINDUNG NILAI (HEDGING)",
+          subtitle:
+            "Memberi kesempatan pada produsen untuk melakukan lindung nilai, sehingga tidak perlu menjual saat harga rendah. Komoditas bisa menjadi pilihan lindung nilai asset lainnya pada saat inflasi."
+        }
+      ]
+    }
   },
   indexfutures: {
     header: "Index Futures",

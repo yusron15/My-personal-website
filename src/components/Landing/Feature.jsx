@@ -7,10 +7,15 @@ import { Badge, Button, Container, Row, Col } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 import laptop from "../../assets/img/macbook.png";
 import feature from "../../assets/img/all-device.png";
-
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
 import "../../assets/css/main.css";
 
 class Features extends React.Component {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   render() {
     return (
       <LangContext.Consumer>
@@ -27,13 +32,13 @@ class Features extends React.Component {
                           className="title"
                           style={{ color: "black", textAlign: "left" }}
                         >
-                          {lang.Landing.Feature.title}
+                          {this.props.pageStore.Landing.Feature.title}
                         </h1>
                         <h4
                           className="description"
                           style={{ textAlign: "left" }}
                         >
-                          {lang.Landing.Feature.subtitle}
+                          {this.props.pageStore.Landing.Feature.subtitle}
                         </h4>
                       </Col>
                     </Row>
@@ -77,7 +82,11 @@ class Features extends React.Component {
                                         textAlign: "left"
                                       }}
                                     >
-                                      {lang.Landing.Feature.content[0].title}
+                                      {/* Foreign Exchange */}
+                                      {
+                                        this.props.pageStore.Landing.Feature
+                                          .content[0].title
+                                      }
                                     </h3>
                                     <p
                                       style={{
@@ -87,7 +96,10 @@ class Features extends React.Component {
                                         paddingRight: "10px"
                                       }}
                                     >
-                                      {lang.Landing.Feature.content[0].subtitle}
+                                      {
+                                        this.props.pageStore.Landing.Feature
+                                          .content[0].subtitle
+                                      }
                                     </p>
                                   </div>
                                 </Col>
@@ -123,7 +135,11 @@ class Features extends React.Component {
                                         textAlign: "left"
                                       }}
                                     >
-                                      {lang.Landing.Feature.content[2].title}
+                                      {/* CFD */}
+                                      {
+                                        this.props.pageStore.Landing.Feature
+                                          .content[2].title
+                                      }
                                     </h3>
                                     <p
                                       style={{
@@ -133,7 +149,10 @@ class Features extends React.Component {
                                         paddingRight: "10px"
                                       }}
                                     >
-                                      {lang.Landing.Feature.content[2].subtitle}
+                                      {
+                                        this.props.pageStore.Landing.Feature
+                                          .content[2].subtitle
+                                      }
                                     </p>
                                   </div>
                                 </Col>
@@ -174,7 +193,11 @@ class Features extends React.Component {
                                         textAlign: "left"
                                       }}
                                     >
-                                      {lang.Landing.Feature.content[1].title}
+                                      {/* komoditi */}
+                                      {
+                                        this.props.pageStore.Landing.Feature
+                                          .content[1].title
+                                      }
                                     </h3>
                                     <p
                                       style={{
@@ -184,7 +207,10 @@ class Features extends React.Component {
                                         paddingRight: "10px"
                                       }}
                                     >
-                                      {lang.Landing.Feature.content[1].subtitle}
+                                      {
+                                        this.props.pageStore.Landing.Feature
+                                          .content[1].subtitle
+                                      }
                                     </p>
                                   </div>
                                 </Col>
@@ -220,7 +246,11 @@ class Features extends React.Component {
                                         textAlign: "left"
                                       }}
                                     >
-                                      {lang.Landing.Feature.content[3].title}
+                                      {/* Future Index */}
+                                      {
+                                        this.props.pageStore.Landing.Feature
+                                          .content[3].title
+                                      }
                                     </h3>
                                     <p
                                       style={{
@@ -230,7 +260,10 @@ class Features extends React.Component {
                                         paddingRight: "10px"
                                       }}
                                     >
-                                      {lang.Landing.Feature.content[3].subtitle}
+                                      {
+                                        this.props.pageStore.Landing.Feature
+                                          .content[3].subtitle
+                                      }
                                     </p>
                                   </div>
                                 </Col>
@@ -271,4 +304,12 @@ class Features extends React.Component {
   }
 }
 
-export default Features;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Features);

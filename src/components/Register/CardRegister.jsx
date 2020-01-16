@@ -24,9 +24,17 @@ import {
 
 import TextField from "@material-ui/core/TextField";
 import classnames from "classnames";
+
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 
 class CardRegister extends React.Component {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   render() {
     return (
       <>
@@ -52,7 +60,7 @@ class CardRegister extends React.Component {
                   fontWeight: "bold"
                 }}
               >
-                Sign Up
+                {this.props.pageStore.register.form.title}
               </CardTitle>
             </CardHeader>
             <CardBody>
@@ -151,12 +159,12 @@ class CardRegister extends React.Component {
               <Row>
                 <Col md="6">
                   <Button block color="info" type="button">
-                    Demo Akun
+                    {this.props.pageStore.register.form.leftButton}
                   </Button>
                 </Col>
                 <Col md="6">
                   <Button block color="info" type="button">
-                    Real Akun
+                    {this.props.pageStore.register.form.rightButton}
                   </Button>
                 </Col>
               </Row>
@@ -169,7 +177,7 @@ class CardRegister extends React.Component {
                   // className="link footer-link"
                   style={{ color: "white" }}
                 >
-                  Have an account? Sign In
+                  {this.props.pageStore.register.form.signIn}
                 </Link>
               </h6>
             </div>
@@ -192,4 +200,12 @@ class CardRegister extends React.Component {
   }
 }
 
-export default CardRegister;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CardRegister);

@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -33,9 +17,12 @@ import {
   Row,
   Col
 } from "reactstrap";
-import { LangContext } from "../MyContext";
-
 import ScrollAnimation from "react-animate-on-scroll";
+
+import { LangContext } from "../MyContext";
+import { connect } from 'react-redux';
+import { fetchPage } from '../../redux/ducks/actions.js';
+
 import "../../assets/css/main.css";
 
 class Pricing extends React.Component {
@@ -44,6 +31,11 @@ class Pricing extends React.Component {
     secondTabs: "2",
     thirdTabs: "1"
   };
+
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   toggle = (tabName, tab) => {
     if (this.state.activeTab !== tab) {
       this.setState({
@@ -71,8 +63,8 @@ class Pricing extends React.Component {
                     className="title"
                     style={{ textAlign: "left", fontSize: 42, color: "white" }}
                   >
-                    {/* Tipe Akun */}
-                    {lang.Landing.Pricing.title}
+                    {/* {lang.Landing.Pricing.title} */}
+                    {this.props.pageStore.Landing.Pricing.title}
                   </h2>
                   <h4
                     className="description"
@@ -83,8 +75,8 @@ class Pricing extends React.Component {
                     }}
                     style={{ padding: "0 20px 0 0", color: "white" }}
                   >
-                    {lang.Landing.Pricing.subtitle}
-
+                    {/* {lang.Landing.Pricing.subtitle} */}
+                    {this.props.pageStore.Landing.Pricing.subtitle}
                   </h4>
                 </Col>
               </Row>
@@ -119,8 +111,8 @@ class Pricing extends React.Component {
                                 textAlign: "center"
                               }}
                             >
-                    {lang.Landing.Pricing.card[0][0]}
-                             
+                              {/* Akun Demo */}
+                            {this.props.pageStore.Landing.Pricing.card[0][0]}
                             </CardTitle>
                             <CardTitle
                               tag="h1"
@@ -131,8 +123,8 @@ class Pricing extends React.Component {
                                 textAlign: "center"
                               }}
                             >
-                    {lang.Landing.Pricing.card[0][1]}
-
+                            {/* FREE */}
+                            {this.props.pageStore.Landing.Pricing.card[0][1]}
                             </CardTitle>
                             <div style={{ marginTop: 10, textAlign: "center" }}>
                               <span
@@ -141,30 +133,12 @@ class Pricing extends React.Component {
                                   textAlign: "center"
                                 }}
                               >
-                    {lang.Landing.Pricing.card[0][2]}
-
+                                {/* Tidak ada deposit */}
+                                {this.props.pageStore.Landing.Pricing.card[0][2]}
                               </span>
                             </div>
                           </CardHeader>
                           <CardBody>
-                            {/* <div
-                              className="item-stripped opacity"
-                              style={{
-                                justifyContent: "center",
-                                alignItems: "center",
-                                display: "flex"
-                              }}
-                            >
-                              <span
-                                style={{
-                                  color: "white",
-                                  fontSize: 20,
-                                  opacity: "none"
-                                }}
-                              >
-                                -
-                              </span>
-                            </div> */}
                             <div
                               className="item-stripped"
                               style={{
@@ -179,8 +153,8 @@ class Pricing extends React.Component {
                                   fontSize: 20
                                 }}
                               >
-                    {lang.Landing.Pricing.card[0][3]}
-                                
+                                {/* - */}
+                                {this.props.pageStore.Landing.Pricing.card[0][3]}                                
                               </span>
                             </div>
                             <div
@@ -197,8 +171,8 @@ class Pricing extends React.Component {
                                   fontSize: 20
                                 }}
                               >
-                    {lang.Landing.Pricing.card[0][4]}
-                                
+                                {/* - */}
+                                {this.props.pageStore.Landing.Pricing.card[0][4]}                                                                
                               </span>
                             </div>
                             <div
@@ -210,9 +184,9 @@ class Pricing extends React.Component {
                                 margin: "20px 0 27px 0"
                               }}
                             >
-                    {lang.Landing.Pricing.card[0][5]}
+                              {/* Pro I Trader & Topgrowth Trader (MT4) */}
+                              {this.props.pageStore.Landing.Pricing.card[0][5]}                                
                             </div>
-
                             <Button
                               className="btn-round"
                               color="info"
@@ -220,8 +194,8 @@ class Pricing extends React.Component {
                               block
                               style={{ height: 50, fontSize: 18 }}
                             >
-                    {lang.Landing.Pricing.card[0][6]}
-                            
+                                {/* Daftar */}
+                                {this.props.pageStore.Landing.Pricing.card[0][6]}                                                    
                             </Button>
                           </CardBody>
                         </Card>
@@ -253,7 +227,8 @@ class Pricing extends React.Component {
                                 color: "white"
                               }}
                             >
-                    {lang.Landing.Pricing.card[1][0]}
+                              {/* Akun Mini */}
+                              {this.props.pageStore.Landing.Pricing.card[1][0]}                                                    
                             </CardTitle>
                             <CardTitle
                               tag="h1"
@@ -263,7 +238,8 @@ class Pricing extends React.Component {
                                 fontSize: 50
                               }}
                             >
-                    {lang.Landing.Pricing.card[1][1]}
+                              {/* $500 */}
+                            {this.props.pageStore.Landing.Pricing.card[1][1]}                                                                                  
                             </CardTitle>
                             <div style={{ marginTop: 10, textAlign: "center" }}>
                               <span
@@ -272,29 +248,12 @@ class Pricing extends React.Component {
                                   textAlign: "center"
                                 }}
                               >
-                    {lang.Landing.Pricing.card[1][2]}
+                                {/* initial deposit */}
+                                {this.props.pageStore.Landing.Pricing.card[1][2]}                                                    
                               </span>
                             </div>
                           </CardHeader>
                           <CardBody>
-                            {/* <div
-                              className="item-stripped opacity"
-                              style={{
-                                justifyContent: "center",
-                                alignItems: "center",
-                                display: "flex"
-                              }}
-                            >
-                              <span
-                                style={{
-                                  color: "white",
-                                  fontSize: 20,
-                                  opacity: "none"
-                                }}
-                              >
-                                $ 5
-                              </span>
-                            </div> */}
                             <div
                               className="item-stripped"
                               style={{
@@ -310,8 +269,8 @@ class Pricing extends React.Component {
                                     fontSize: 14
                                   }}
                                 >
-                    {lang.Landing.Pricing.card[1][3]}
-                                  {/* Minimum &nbsp; */}
+                                {/* Minimum 0.1 Lot */}
+                                {this.props.pageStore.Landing.Pricing.card[1][3]}                                                    
                                 </span>
                               </div>
                               
@@ -331,8 +290,8 @@ class Pricing extends React.Component {
                                     fontSize: 14
                                   }}
                                 >
-                    {lang.Landing.Pricing.card[1][4]}
-                         
+                                  {/* Minimum 5.0 Lot */}
+                                  {this.props.pageStore.Landing.Pricing.card[1][4]}      
                                 </span>
                               </div>
                             
@@ -346,8 +305,8 @@ class Pricing extends React.Component {
                                 margin: "20px 0 27px 0"
                               }}
                             >
-                    {lang.Landing.Pricing.card[1][5]}
-                         
+                              {/* Topgrowth Trader (MT4) */}
+                              {this.props.pageStore.Landing.Pricing.card[1][5]}   
                             </div>
 
                             <Button
@@ -357,7 +316,8 @@ class Pricing extends React.Component {
                               block
                               style={{ height: 50, fontSize: 18 }}
                             >
-                    {lang.Landing.Pricing.card[1][6]}
+                              {/* Daftar */}
+                              {this.props.pageStore.Landing.Pricing.card[1][5]}   
                             </Button>
                           </CardBody>
                         </Card>
@@ -389,8 +349,8 @@ class Pricing extends React.Component {
                                 textAlign: "center"
                               }}
                             >
-                    {lang.Landing.Pricing.card[2][0]}
-                  
+                              {/* Akun Regular */}
+                              {this.props.pageStore.Landing.Pricing.card[2][0]}   
                             </CardTitle>
                             <CardTitle
                               tag="h1"
@@ -401,8 +361,8 @@ class Pricing extends React.Component {
                                 textAlign: "center"
                               }}
                             >
-                    {lang.Landing.Pricing.card[2][1]}
-                       
+                            {/* $10,000 */}
+                            {this.props.pageStore.Landing.Pricing.card[2][1]}   
                             </CardTitle>
                             <div style={{ marginTop: 10, textAlign: "center" }}>
                               <span
@@ -411,30 +371,12 @@ class Pricing extends React.Component {
                                   textAlign: "center"
                                 }}
                               >
-                    {lang.Landing.Pricing.card[2][2]}
-                               
+                                 {/* initial deposit */}
+                                {this.props.pageStore.Landing.Pricing.card[2][2]}   
                               </span>
                             </div>
                           </CardHeader>
                           <CardBody>
-                            {/* <div
-                              className="item-stripped opacity"
-                              style={{
-                                justifyContent: "center",
-                                alignItems: "center",
-                                display: "flex"
-                              }}
-                            >
-                              <span
-                                style={{
-                                  color: "white",
-                                  fontSize: 20,
-                                  opacity: "none"
-                                }}
-                              >
-                                $ 50
-                              </span>
-                            </div> */}
                             <div
                               className="item-stripped"
                               style={{
@@ -450,8 +392,8 @@ class Pricing extends React.Component {
                                     fontSize: 14
                                   }}
                                 >
-                    {lang.Landing.Pricing.card[2][3]}
-                              
+                                {/* Minimum 1.0 Lot */}
+                                {this.props.pageStore.Landing.Pricing.card[2][3]}  
                                 </span>
                               </div>
                            
@@ -471,8 +413,8 @@ class Pricing extends React.Component {
                                     fontSize: 14
                                   }}
                                 >
-                    {lang.Landing.Pricing.card[2][4]}
-                                  
+                                {/* Minimum 50 Lot */}
+                                {this.props.pageStore.Landing.Pricing.card[2][4]}  
                                 </span>
                               </div>
                             
@@ -485,8 +427,8 @@ class Pricing extends React.Component {
                                 margin: "20px 0 27px 0"
                               }}
                             >
-                    {lang.Landing.Pricing.card[2][5]}
-                         
+                              {/* Pro I Trader & Topgrowth Trader (MT4) */}
+                              {this.props.pageStore.Landing.Pricing.card[2][5]}  
                             </div>
 
                             <Button
@@ -496,8 +438,8 @@ class Pricing extends React.Component {
                               block
                               style={{ height: 50, fontSize: 18 }}
                             >
-                    {lang.Landing.Pricing.card[2][6]}
-                              
+                              {/* Daftar */}
+                                {this.props.pageStore.Landing.Pricing.card[2][6]}  
                             </Button>
                           </CardBody>
                         </Card>
@@ -520,4 +462,12 @@ class Pricing extends React.Component {
   }
 }
 
-export default Pricing;
+const mapStateToProps = state => ({
+  pageStore : state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Pricing);

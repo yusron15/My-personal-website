@@ -31,6 +31,9 @@ import DropdownTentangKami from "../DropdownContent/DropdownTentangKami";
 import DropdownTrading from "../DropdownContent/DropdownTrading";
 import DropdownBerita from "../DropdownContent/DropdownBerita";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 const stylesAnimation = {
   slideInDown: {
     animation: "x 1s",
@@ -92,6 +95,10 @@ class ColorNavbar extends React.Component {
       activeTab: "1",
       logo: require("../../assets/img/white-logo-hd.png")
     };
+  }
+
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
   }
 
   onClick() {
@@ -316,7 +323,7 @@ class ColorNavbar extends React.Component {
                                   color: this.coloringNav("/landing")
                                 }}
                               >
-                                {lang.Header.m1.title}
+                                {this.props.pageStore.Header.m1.title}
                               </button>
                             </div>
                           </NavItem>
@@ -351,7 +358,7 @@ class ColorNavbar extends React.Component {
                               ])
                             }}
                           >
-                            {lang.Header.m2.title}
+                            {this.props.pageStore.Header.m2.title}
                           </button>
                         </div>
 
@@ -401,7 +408,7 @@ class ColorNavbar extends React.Component {
                               ])
                             }}
                           >
-                            {lang.Header.m3.title}
+                            {this.props.pageStore.Header.m3.title}
                           </button>
                         </div>
 
@@ -439,7 +446,7 @@ class ColorNavbar extends React.Component {
                               ])
                             }}
                           >
-                            {lang.Header.m4.title}
+                            {this.props.pageStore.Header.m4.title}
                           </button>
                         </div>
 
@@ -457,7 +464,7 @@ class ColorNavbar extends React.Component {
                                   fontWeight: this.fontBold("/edukasi")
                                 }}
                               >
-                                {lang.Header.m5.title}
+                                {this.props.pageStore.Header.m5.title}
                               </button>
                             </div>
                           </NavItem>
@@ -474,7 +481,7 @@ class ColorNavbar extends React.Component {
                                   fontWeight: this.fontBold("/karir")
                                 }}
                               >
-                                {lang.Header.m6.title}
+                                {this.props.pageStore.Header.m6.title}
                               </button>
                             </div>
                           </NavItem>
@@ -498,7 +505,7 @@ class ColorNavbar extends React.Component {
                                   //   : { color: this.state.color })
                                 }}
                               >
-                                {lang.Header.m7.title}
+                                {this.props.pageStore.Header.m7.title}
                               </button>
                             </div>
                           </NavItem>
@@ -528,4 +535,12 @@ class ColorNavbar extends React.Component {
   }
 }
 
-export default ColorNavbar;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ColorNavbar);

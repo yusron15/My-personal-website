@@ -49,6 +49,10 @@ import NewsLetter from "../NewsLetter/NewsLetter.jsx";
 import right from "../../assets/img/black-right-icon.png";
 import HorizontalScroll from "react-scroll-horizontal";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
+
 const textTitle = {
   fontWeight: "bold",
   color: "white",
@@ -287,6 +291,11 @@ class Carding extends React.Component {
   state = {
     activeIndex: 0
   };
+
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   onExiting = () => {
     this.animating = true;
   };
@@ -348,7 +357,7 @@ class Carding extends React.Component {
                         className="title font-black"
                         style={{ fontSize: "1.5rem", marginTop: 0 }}
                       >
-                      {lang.berita.terkini}
+                      {this.props.pageStore.berita.terkini}
                       </div>
                       <Carousel
                         activeIndex={this.state.activeIndex}
@@ -363,6 +372,8 @@ class Carding extends React.Component {
                         <CarouselIndicators
                           items={items}
                           activeIndex={this.state.activeIndex}
+                          onClickHandler={this.goToIndex}
+
                         />
 
                         {items.map((item, key) => {
@@ -399,7 +410,7 @@ class Carding extends React.Component {
                           paddingLeft: "15px"
                         }}
                       >
-                      {lang.berita.terpopuler}
+                      {this.props.pageStore.berita.terpopuler}
                       </div>
                       <Col>
                         <div>
@@ -619,7 +630,9 @@ class Carding extends React.Component {
                   // md={{ size: 10, order: 0, offset: 1 }}
                   md="10"
                   >
-                    <h2 className="title font-black">{lang.berita.outlook}</h2>
+                    <h2 className="title font-black">
+                    {this.props.pageStore.berita.outlook}
+                    </h2>
                   </Col>
                   <Col md="1">
                     <Link to="/market-outlook">
@@ -711,7 +724,9 @@ class Carding extends React.Component {
                 <Row>
                   <Col md="1"/>
                   <Col className="ml-auto mr-auto text-center" md="8">
-                    <h2 className="title font-black">{lang.berita.forex}</h2>
+                    <h2 className="title font-black">
+                    {this.props.pageStore.berita.forex}
+                    </h2>
                   </Col>
                   <Col md="1">
                     <Link to="/forex-commodity">
@@ -766,7 +781,9 @@ class Carding extends React.Component {
                 <Row>
                   <Col md="1"/>
                   <Col className="ml-auto mr-auto text-center" md="8">
-                    <h2 className="title font-black">{lang.berita.stock}</h2>
+                    <h2 className="title font-black">
+                    {this.props.pageStore.berita.stock}
+                    </h2>
                   </Col>
                   <Col md="1">
                     <Link to="/stock-index">
@@ -827,4 +844,14 @@ class Carding extends React.Component {
   }
 }
 
-export default Carding;
+
+
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Carding);

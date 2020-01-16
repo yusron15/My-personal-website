@@ -32,6 +32,9 @@ import list from "../../assets/img/list.png";
 import submit from "../../assets/img/submit.png";
 import demand from "../../assets/img/demand.png";
 import sorting from "../../assets/img/sorting.png";
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 
 const textTitle = {
@@ -190,6 +193,10 @@ class Content extends React.Component {
     sorting: require("../../assets/img/sorting.png")
   };
 
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   handleRatingEnter = () => {
     this.setState({
       rating: require("../../assets/img/blue-rating.png")
@@ -303,7 +310,7 @@ class Content extends React.Component {
                   <BlurryNavbar />
                   <ColoredNavbar location={{ ...this.props.location }} />
                   <div className="title title-header">
-                    {lang.protrader.header}
+                    {this.props.pageStore.protrader.header}
                   </div>
                 </div>
                 <div className="team-1 broken-white">
@@ -314,7 +321,7 @@ class Content extends React.Component {
                           className="description font-black"
                           style={textDesc}
                         >
-                          {lang.protrader.top}
+                          {this.props.pageStore.protrader.top}
                         </div>
                       </Col>
                     </Row>
@@ -327,7 +334,9 @@ class Content extends React.Component {
                     md="9"
                     style={{ marginRight: 0, marginLeft: 0 }}
                   >
-                    <h1 className="title">{lang.protrader.title}</h1>
+                    <h1 className="title">
+                      {this.props.pageStore.protrader.title}
+                    </h1>
                   </Col>
                   {/* </Row> */}
                   <div style={{ marginTop: "50px" }}>
@@ -342,7 +351,9 @@ class Content extends React.Component {
                             style={{ marginBottom: "20px" }}
                             src={this.state.rating}
                           />
-                          <div>{lang.protrader.content[0].content}</div>
+                          <div>
+                            {this.props.pageStore.protrader.content[0].content}
+                          </div>
                         </div>
                       </Col>
                       <Col className="ml-auto mr-auto text-center" md="2">
@@ -355,7 +366,9 @@ class Content extends React.Component {
                             style={{ marginBottom: "20px" }}
                             src={this.state.report}
                           />
-                          <div>{lang.protrader.content[1].content}</div>
+                          <div>
+                            {this.props.pageStore.protrader.content[1].content}
+                          </div>
                         </div>
                       </Col>
                       <Col className="ml-auto mr-auto text-center" md="2">
@@ -368,7 +381,9 @@ class Content extends React.Component {
                             style={{ marginBottom: "20px" }}
                             src={this.state.demand}
                           />
-                          <div>{lang.protrader.content[2].content}</div>
+                          <div>
+                            {this.props.pageStore.protrader.content[2].content}
+                          </div>
                         </div>
                       </Col>
                     </Row>
@@ -387,7 +402,9 @@ class Content extends React.Component {
                             style={{ marginBottom: "20px" }}
                             src={this.state.list}
                           />
-                          <div>{lang.protrader.content[3].content}</div>
+                          <div>
+                            {this.props.pageStore.protrader.content[3].content}
+                          </div>
                         </div>
                       </Col>
                       <Col className="ml-auto mr-auto text-center" md="2">
@@ -401,7 +418,7 @@ class Content extends React.Component {
                             src={this.state.sorting}
                           />
                           <div style={{ marginTop: "35px" }}>
-                            {lang.protrader.content[4].content}
+                            {this.props.pageStore.protrader.content[4].content}
                           </div>
                         </div>
                       </Col>
@@ -415,7 +432,9 @@ class Content extends React.Component {
                             style={{ marginBottom: "20px" }}
                             src={this.state.submit}
                           />
-                          <div>{lang.protrader.content[5].content}</div>
+                          <div>
+                            {this.props.pageStore.protrader.content[5].content}
+                          </div>
                         </div>
                       </Col>
                     </Row>
@@ -431,4 +450,12 @@ class Content extends React.Component {
   }
 }
 
-export default Content;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

@@ -21,6 +21,9 @@ import fg3 from "../../assets/img/forexgold3.png";
 
 import bg from "../../assets/img/gold-header.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 
 const textTitle = {
@@ -56,6 +59,10 @@ const text = {
 };
 
 class Features extends React.Component {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   render() {
     return (
       <LangContext.Consumer>
@@ -73,7 +80,9 @@ class Features extends React.Component {
                 >
                   <BlurryNavbar />
 
-                  <div className="title title-header">{lang.Gold.header}</div>
+                  <div className="title title-header">
+                    {this.props.pageStore.Gold.header}
+                  </div>
                 </div>
                 <div className="space-50" />
                 <div className="features-3" style={{ paddingTop: 0 }}>
@@ -86,7 +95,9 @@ class Features extends React.Component {
                   >
                     GOLD
                   </div> */}
-                        <p style={intermezzo}>{lang.Gold.top}</p>
+                        <p style={intermezzo}>
+                          {this.props.pageStore.Gold.top}
+                        </p>
                         {/* <Col className="mr-auto ml-auto" md="5"> */}
                         {/* </Col> */}
                       </Col>
@@ -159,12 +170,12 @@ class Features extends React.Component {
                                 className="title-content"
                                 style={{ color: "black" }}
                               >
-                                {lang.Gold.content[0].title}
+                                {this.props.pageStore.Gold.content[0].title}
                               </div>
                               <p
                                 style={{ color: "black", textAlign: "justify" }}
                               >
-                                {lang.Gold.content[0].content}
+                                {this.props.pageStore.Gold.content[0].content}
                               </p>{" "}
                             </div>
                           </Col>
@@ -185,7 +196,7 @@ class Features extends React.Component {
                                   className="title-content"
                                   style={{ color: "black" }}
                                 >
-                                  {lang.Gold.content[1].title}
+                                  {this.props.pageStore.Gold.content[1].title}
                                 </div>
                                 <p
                                   style={{
@@ -194,7 +205,7 @@ class Features extends React.Component {
                                     textAlign: "justify"
                                   }}
                                 >
-                                  {lang.Gold.content[1].content}
+                                  {this.props.pageStore.Gold.content[1].content}
                                 </p>{" "}
                               </div>
                             </div>
@@ -224,4 +235,12 @@ class Features extends React.Component {
   }
 }
 
-export default Features;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Features);

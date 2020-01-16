@@ -30,6 +30,9 @@ import bg1 from "../../assets/img/indexfutures1.png";
 import bg from "../../assets/img/header-indexfutures2.png";
 import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 
 const textTitle = {
@@ -212,6 +215,11 @@ class Content extends React.Component {
   state = {
     activeIndex: 0
   };
+
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   onExiting = () => {
     this.animating = true;
   };
@@ -260,7 +268,7 @@ class Content extends React.Component {
                 <BlurryNavbar />
                 <ColoredNavbar location={{ ...this.props.location }} />
                 <div className="title title-header">
-                  {lang.indexfutures.header}
+                  {this.props.pageStore.indexfutures.header}
                 </div>
               </div>
               <div
@@ -276,7 +284,7 @@ class Content extends React.Component {
                     INDEX FUTURES
                   </h1> */}
                         <p className="description font-black">
-                          {lang.indexfutures.content}
+                          {this.props.pageStore.indexfutures.content}
                         </p>
                       </Col>
                     </Row>
@@ -299,18 +307,7 @@ class Content extends React.Component {
                         activeIndex={this.state.activeIndex}
                         next={this.next}
                         previous={this.previous}
-                        //   className="carousel-team"
                       >
-                        {/* <CarouselControl
-                          direction="prev"
-                          directionText="Previous"
-                          onClickHandler={this.previous}
-                        />
-                        <CarouselControl
-                          direction="next"
-                          directionText="Next"
-                          onClickHandler={this.next}
-                        /> */}
                         <CarouselIndicators
                           items={items}
                           activeIndex={this.state.activeIndex}
@@ -401,4 +398,12 @@ class Content extends React.Component {
   }
 }
 
-export default Content;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

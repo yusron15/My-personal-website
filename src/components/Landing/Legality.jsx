@@ -38,6 +38,9 @@ import ich from "../../assets/img/legalitas5.png";
 import bglegalitas from "../../assets/img/bg-legalitas.png";
 import DarkNavbar from "../../components/Navbars/DarkNavbar.jsx";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 
 class Projects extends React.Component {
@@ -66,6 +69,11 @@ class Projects extends React.Component {
       }
     ]
   };
+
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   toggle = tab => {
     if (this.state.activeTab !== tab) {
       this.setState({
@@ -97,7 +105,9 @@ class Projects extends React.Component {
                   >
                     <Row>
                       <Col className="ml-auto mr-auto text-center" lg="8">
-                        <h2 className="title font-black">Legalitas</h2>
+                        <h2 className="title font-black">
+                          {this.props.pageStore.Landing.Legality.header}
+                        </h2>
                         <div className="section-space" />
                       </Col>
                     </Row>
@@ -112,11 +122,17 @@ class Projects extends React.Component {
                           md="8"
                         >
                           <h2 className="title font-black">
-                            {lang.Landing.Legality.content[0].title}
+                            {
+                              this.props.pageStore.Landing.Legality.content[0]
+                                .title
+                            }
                           </h2>
                           <p className="description mb-5 font-black">
                             {/* {this.state.content[0].bappebti} */}
-                            {lang.Landing.Legality.content[0].content}
+                            {
+                              this.props.pageStore.Landing.Legality.content[0]
+                                .content
+                            }
                           </p>
                         </Col>
                       </TabPane>
@@ -127,9 +143,15 @@ class Projects extends React.Component {
                         >
                           <p className="description mb-5 font-black">
                             <h2 className="title font-black">
-                              {lang.Landing.Legality.content[1].title}
+                              {
+                                this.props.pageStore.Landing.Legality.content[1]
+                                  .title
+                              }
                             </h2>
-                            {lang.Landing.Legality.content[1].content}
+                            {
+                              this.props.pageStore.Landing.Legality.content[1]
+                                .content
+                            }
                           </p>
                         </Col>
                       </TabPane>
@@ -140,9 +162,15 @@ class Projects extends React.Component {
                         >
                           <p className="description mb-5 font-black">
                             <h2 className="title font-black">
-                              {lang.Landing.Legality.content[2].title}
+                              {
+                                this.props.pageStore.Landing.Legality.content[2]
+                                  .title
+                              }
                             </h2>
-                            {lang.Landing.Legality.content[2].content}
+                            {
+                              this.props.pageStore.Landing.Legality.content[2]
+                                .content
+                            }
                           </p>
                         </Col>
                       </TabPane>
@@ -152,10 +180,16 @@ class Projects extends React.Component {
                           md="8"
                         >
                           <h2 className="title font-black">
-                            {lang.Landing.Legality.content[3].title}
+                            {
+                              this.props.pageStore.Landing.Legality.content[3]
+                                .title
+                            }
                           </h2>
                           <p className="description mb-5 font-black">
-                            {lang.Landing.Legality.content[3].content}
+                            {
+                              this.props.pageStore.Landing.Legality.content[3]
+                                .content
+                            }
                           </p>
                         </Col>
                       </TabPane>
@@ -165,11 +199,16 @@ class Projects extends React.Component {
                           md="8"
                         >
                           <h2 className="title font-black">
-                            {lang.Landing.Legality.content[4].title}
+                            {
+                              this.props.pageStore.Landing.Legality.content[4]
+                                .title
+                            }
                           </h2>
                           <p className="description mb-5 font-black">
-                            {/* {this.state.content[4].icdx} */}
-                            {lang.Landing.Legality.content[4].content}
+                            {
+                              this.props.pageStore.Landing.Legality.content[4]
+                                .content
+                            }
                           </p>
                         </Col>
                       </TabPane>
@@ -308,4 +347,12 @@ class Projects extends React.Component {
   }
 }
 
-export default Projects;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Projects);

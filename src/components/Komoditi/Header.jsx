@@ -27,9 +27,15 @@ import { LangContext } from "../MyContext";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg from "../../assets/img/header-komoditi.png";
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 
 class Headers extends React.Component {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
   state = {};
   render() {
     return (
@@ -56,7 +62,9 @@ class Headers extends React.Component {
               >
                 <BlurryNavbar />
 
-                <div className="title title-header">{lang.Komoditi.header}</div>
+                <div className="title title-header">
+                  {this.props.pageStore.Komoditi.header}
+                </div>
               </div>
               <div className="header header-4 broken-white">
                 {/* <ColoredNavbar /> */}
@@ -79,7 +87,7 @@ class Headers extends React.Component {
                     <Container style={{ paddingTop: 0 }}>
                       {/* <h1 className="title text-center">KOMODITI</h1> */}
                       <p className="description" style={{ color: "black" }}>
-                        {lang.Komoditi.top}
+                        {this.props.pageStore.Komoditi.top}
                       </p>
                     </Container>
                     {/* </div> */}
@@ -96,4 +104,12 @@ class Headers extends React.Component {
   }
 }
 
-export default Headers;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Headers);

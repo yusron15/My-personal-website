@@ -33,6 +33,9 @@ import submit from "../../assets/img/submit.png";
 import demand from "../../assets/img/demand.png";
 import sorting from "../../assets/img/sorting.png";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 
 const textTitle = {
@@ -174,6 +177,10 @@ class Content extends React.Component {
     sorting: require("../../assets/img/sorting.png")
   };
 
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   handleRatingEnter = () => {
     this.setState({
       rating: require("../../assets/img/blue-rating.png")
@@ -286,7 +293,7 @@ class Content extends React.Component {
                   <BlurryNavbar />
                   <ColoredNavbar location={{ ...this.props.location }} />
                   <div className="title title-header">
-                    {lang.topgrowthtrader.header}
+                    {this.props.pageStore.topgrowthtrader.header}
                   </div>
                 </div>
                 <div className="team-1 broken-white">
@@ -297,7 +304,7 @@ class Content extends React.Component {
                           className="description font-black"
                           style={{ ...textDesc, textAlign: "justify" }}
                         >
-                          {lang.topgrowthtrader.top}
+                          {this.props.pageStore.topgrowthtrader.top}
                         </div>
                       </Col>
                     </Row>
@@ -306,7 +313,9 @@ class Content extends React.Component {
                 <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
                   <Row>
                     <Col className="ml-auto mr-auto text-center" md="9">
-                      <h1 className="title">{lang.topgrowthtrader.title}</h1>
+                      <h1 className="title">
+                        {this.props.pageStore.topgrowthtrader.title}
+                      </h1>
                     </Col>
                   </Row>
                   <div style={{ marginTop: "50px" }}>
@@ -321,7 +330,12 @@ class Content extends React.Component {
                             style={{ marginBottom: "20px" }}
                             src={this.state.rating}
                           />
-                          <div>{lang.topgrowthtrader.content[0].content}</div>
+                          <div>
+                            {
+                              this.props.pageStore.topgrowthtrader.content[0]
+                                .content
+                            }
+                          </div>
                         </div>
                       </Col>
                       <Col className="ml-auto mr-auto text-center" md="2">
@@ -334,7 +348,12 @@ class Content extends React.Component {
                             style={{ marginBottom: "20px" }}
                             src={this.state.report}
                           />
-                          <div>{lang.topgrowthtrader.content[1].content}</div>
+                          <div>
+                            {
+                              this.props.pageStore.topgrowthtrader.content[1]
+                                .content
+                            }
+                          </div>
                         </div>
                       </Col>
                       <Col className="ml-auto mr-auto text-center" md="2">
@@ -347,7 +366,12 @@ class Content extends React.Component {
                             style={{ marginBottom: "20px" }}
                             src={this.state.demand}
                           />
-                          <div>{lang.topgrowthtrader.content[2].content}</div>
+                          <div>
+                            {
+                              this.props.pageStore.topgrowthtrader.content[2]
+                                .content
+                            }
+                          </div>
                         </div>
                       </Col>
                     </Row>
@@ -366,7 +390,12 @@ class Content extends React.Component {
                             style={{ marginBottom: "20px" }}
                             src={this.state.list}
                           />
-                          <div>{lang.topgrowthtrader.content[3].content}</div>
+                          <div>
+                            {
+                              this.props.pageStore.topgrowthtrader.content[3]
+                                .content
+                            }
+                          </div>
                         </div>
                       </Col>
                       <Col className="ml-auto mr-auto text-center" md="2">
@@ -380,7 +409,10 @@ class Content extends React.Component {
                             src={this.state.sorting}
                           />
                           <div style={{ marginTop: "35px" }}>
-                            {lang.topgrowthtrader.content[4].content}]
+                            {
+                              this.props.pageStore.topgrowthtrader.content[4]
+                                .content
+                            }
                           </div>
                         </div>
                       </Col>
@@ -394,7 +426,12 @@ class Content extends React.Component {
                             style={{ marginBottom: "20px" }}
                             src={this.state.submit}
                           />
-                          <div>{lang.topgrowthtrader.content[5].content}</div>
+                          <div>
+                            {
+                              this.props.pageStore.topgrowthtrader.content[5]
+                                .content
+                            }
+                          </div>
                         </div>
                       </Col>
                     </Row>
@@ -410,4 +447,12 @@ class Content extends React.Component {
   }
 }
 
-export default Content;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

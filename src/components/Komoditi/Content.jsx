@@ -2,9 +2,16 @@ import React from "react";
 import { LangContext } from "../MyContext";
 import { Container, Row, Col } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 
 class Content extends React.Component {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   state = {
     carousel1Index: 0,
     carousel2Index: 0,
@@ -97,13 +104,15 @@ class Content extends React.Component {
                                   margin: "30px 0 30px 10px"
                                 }}
                               >
-                                {lang.Komoditi.content[0].title}
+                                {this.props.pageStore.Komoditi.content[0].title}
                               </div>
                               <div>
                                 {/* </p> */}
                                 {/* <p className="text-benefit"> */}
-                                {lang.Komoditi.content[0].content}
-
+                                {
+                                  this.props.pageStore.Komoditi.content[0]
+                                    .content
+                                }
                                 {/* </p> */}
                               </div>
                               <div className="author"></div>
@@ -147,13 +156,15 @@ class Content extends React.Component {
                                   margin: "30px 0 30px 10px"
                                 }}
                               >
-                                {lang.Komoditi.content[1].title}
+                                {this.props.pageStore.Komoditi.content[1].title}
                               </div>
                               <div style={{ marginLeft: "10px" }}>
                                 {/* </p> */}
                                 {/* <p className="text-benefit"> */}
-                                {lang.Komoditi.content[1].content}
-
+                                {
+                                  this.props.pageStore.Komoditi.content[1]
+                                    .content
+                                }
                                 {/* </p> */}
                               </div>
                               <div className="author"></div>
@@ -194,10 +205,13 @@ class Content extends React.Component {
                                   margin: "30px 0 30px 10px"
                                 }}
                               >
-                                {lang.Komoditi.content[2].title}
+                                {this.props.pageStore.Komoditi.content[2].title}
                               </div>
                               <div style={{ marginLeft: "10px" }}>
-                                {lang.Komoditi.content[2].content}
+                                {
+                                  this.props.pageStore.Komoditi.content[2]
+                                    .content
+                                }
                               </div>
                               <div className="author"></div>
                             </div>
@@ -217,15 +231,22 @@ class Content extends React.Component {
                 <Container>
                   <div className="content">
                     <h2>
-                      <b>Keuntungan Bertransaksi Kontrak Berjangka</b>
+                      <b>
+                        {this.props.pageStore.Komoditi.footerKomoditi.title}
+                      </b>
                     </h2>
                     <Row>
                       <Col md="4">
                         <p>
-                          <b>MARGIN/ LEVERAGE</b>
+                          <b>
+                            {
+                              this.props.pageStore.Komoditi.footerKomoditi
+                                .content[0].title
+                            }
+                          </b>
                         </p>
                         <p>
-                          {" "}
+                          {/* {" "}
                           Semua kontrak berjangka di perdagangkan dengan margin
                           Margin ranges 2%-10%
                         </p>
@@ -241,30 +262,44 @@ class Content extends React.Component {
                           Margin per lot 4% = 4% x Rp. 49.500.000 = Rp.
                           1.980.000,
                         </p>
-                        <p>dibulatkan menjadi Rp 2.000.000,-</p>
-                      </Col>
-                      <Col md="4">
-                        <p>
-                          <b>2WAYS OPPORTUNITY</b>
-                        </p>
-                        <p>
-                          BUY position – buying a contract (Investor
-                          menginginkan harga terus meningkat
-                        </p>
-                        <p>
-                          SHORT position — selling a contract (Investor
-                          menginginkan harga terus menurun)
+                        <p>dibulatkan menjadi Rp 2.000.000,-
+                           */}
+                          {
+                            this.props.pageStore.Komoditi.footerKomoditi
+                              .content[0].subtitle
+                          }
                         </p>
                       </Col>
                       <Col md="4">
                         <p>
-                          <b> LINDUNG NILAI (HEDGING)</b>
+                          <b>
+                            {
+                              this.props.pageStore.Komoditi.footerKomoditi
+                                .content[1].title
+                            }
+                          </b>
                         </p>
                         <p>
-                          Memberi kesempatan pada produsen untuk melakukan
-                          lindung nilai, sehingga tidak perlu menjual saat harga
-                          rendah. Komoditas bisa menjadi pilihan lindung nilai
-                          asset lainnya pada saat inflasi.
+                          {
+                            this.props.pageStore.Komoditi.footerKomoditi
+                              .content[1].subtitle
+                          }
+                        </p>
+                      </Col>
+                      <Col md="4">
+                        <p>
+                          <b>
+                            {
+                              this.props.pageStore.Komoditi.footerKomoditi
+                                .content[2].title
+                            }
+                          </b>
+                        </p>
+                        <p>
+                          {
+                            this.props.pageStore.Komoditi.footerKomoditi
+                              .content[2].subtitle
+                          }
                         </p>
                       </Col>
                     </Row>
@@ -281,4 +316,12 @@ class Content extends React.Component {
   }
 }
 
-export default Content;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

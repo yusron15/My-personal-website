@@ -20,6 +20,9 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import { LangContext } from "../MyContext";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import { styles } from "react-animations/lib/swing";
 
 const textTitle = {
@@ -62,6 +65,10 @@ const text = {
 };
 
 class Features extends React.Component {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   render() {
     return (
       <LangContext.Consumer>
@@ -83,7 +90,9 @@ class Features extends React.Component {
                 >
                   <BlurryNavbar />
 
-                  <div className="title title-header">{lang.Forex.header}</div>
+                  <div className="title title-header">
+                    {this.props.pageStore.Forex.header}
+                  </div>
                 </div>
                 <div className="features-3" style={{ paddingTop: 0 }}>
                   <Container fluid>
@@ -96,7 +105,9 @@ class Features extends React.Component {
                     FOREX
                   </div> */}
                         <div className="space-50" />
-                        <p style={intermezzo}>{lang.Forex.top}</p>
+                        <p style={intermezzo}>
+                          {this.props.pageStore.Forex.top}
+                        </p>
                         {/* <Col className="mr-auto ml-auto" md="5"> */}
                         {/* </Col> */}
                       </Col>
@@ -127,12 +138,12 @@ class Features extends React.Component {
                                 className="title-content"
                                 style={{ color: "black" }}
                               >
-                                {lang.Forex.content[0].title}
+                                {this.props.pageStore.Forex.content[0].title}
                               </div>
                               <p
                                 style={{ color: "black", textAlign: "justify" }}
                               >
-                                {lang.Forex.content[0].content}
+                                {this.props.pageStore.Forex.content[0].content}
                               </p>
                             </div>
                           </Col>
@@ -145,12 +156,12 @@ class Features extends React.Component {
                                 className="title-content"
                                 style={{ color: "black" }}
                               >
-                                {lang.Forex.content[1].title}
+                                {this.props.pageStore.Forex.content[1].title}
                               </div>
                               <p
                                 style={{ color: "black", textAlign: "justify" }}
                               >
-                                {lang.Forex.content[1].content}
+                                {this.props.pageStore.Forex.content[1].content}
                               </p>{" "}
                             </div>
                           </Col>
@@ -181,16 +192,16 @@ class Features extends React.Component {
                           <Col lg="12">
                             <div>
                               <div style={textTitle}>
-                                {lang.Forex.content[2].title}
+                                {this.props.pageStore.Forex.content[2].title}
                               </div>
                               <p style={intermezzo}>
-                                {lang.Forex.content[2].content}
+                                {this.props.pageStore.Forex.content[2].content}
                               </p>
                             </div>
 
                             <div style={{ marginTop: "20px" }}>
                               <div style={textTitle}>
-                                {lang.Forex.content[3].title}
+                                {this.props.pageStore.Forex.content[3].title}
                               </div>
 
                               <Table
@@ -258,7 +269,7 @@ class Features extends React.Component {
 
                             <div style={{ marginTop: "20px" }}>
                               <div style={textTitle}>
-                                {lang.Forex.content[4].title}
+                                {this.props.pageStore.Forex.content[4].title}
                               </div>
 
                               <Table
@@ -346,4 +357,12 @@ class Features extends React.Component {
   }
 }
 
-export default Features;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Features);

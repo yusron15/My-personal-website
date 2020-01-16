@@ -31,16 +31,10 @@ import layanan from "../../assets/img/layanan.png";
 import requote from "../../assets/img/requote.png";
 import support from "../../assets/img/support.png";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
-
-// core components
-
-// const styles = {
-//   fadeInUp: {
-//     animation: "x 1s",
-//     animationName: Radium.keyframes(fadeInUp, "fadeInUp")
-//   }
-// };
 
 const styles = {
   bounce: {
@@ -73,45 +67,6 @@ const NextButton = props => {
   );
 };
 
-let slickSettings = {
-  dots: false,
-  infinite: true,
-  centerMode: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  prevArrow: <PrevButton />,
-  nextArrow: <NextButton />,
-  className: "center slider",
-  slide: "section",
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-};
-
 class Testimonials extends React.Component {
   state = {
     carousel1Index: 0,
@@ -128,6 +83,10 @@ class Testimonials extends React.Component {
       animationName: Radium.keyframes(bounce, "bounce")
     }
   };
+
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
 
   handleBiayaEnter = () => {
     this.setState({ biayaImg: require('"../../assets/img/biaya-black.png') });
@@ -234,7 +193,9 @@ class Testimonials extends React.Component {
                   <Container fluid>
                     <Row>
                       <Col className="ml-auto mr-auto" md="9">
-                        <h2 className="title">{lang.Landing.Benefit.title}</h2>
+                        <h2 className="title">
+                          {this.props.pageStore.Landing.Benefit.title}
+                        </h2>
                       </Col>
                     </Row>
                     <Row md="12" className="justify-content-center">
@@ -276,10 +237,16 @@ class Testimonials extends React.Component {
                                     src={this.state.biayaImg}
                                     style={{ marginRight: "10px" }}
                                   />
-                                  {lang.Landing.Benefit.content[0].title}
+                                  {
+                                    this.props.pageStore.Landing.Benefit
+                                      .content[0].title
+                                  }
                                 </div>
                                 <div style={{ marginLeft: "10px" }}>
-                                  {lang.Landing.Benefit.content[0].subtitle}
+                                  {
+                                    this.props.pageStore.Landing.Benefit
+                                      .content[0].subtitle
+                                  }
                                 </div>
                                 <div className="author"></div>
                               </div>
@@ -320,11 +287,17 @@ class Testimonials extends React.Component {
                                   src={this.state.legalitasImg}
                                   style={{ marginRight: "5%" }}
                                 />
-                                {lang.Landing.Benefit.content[1].title}
+                                {
+                                  this.props.pageStore.Landing.Benefit
+                                    .content[1].title
+                                }
                               </div>
 
                               <div style={{ marginLeft: "10px" }}>
-                                {lang.Landing.Benefit.content[1].subtitle}
+                                {
+                                  this.props.pageStore.Landing.Benefit
+                                    .content[1].subtitle
+                                }
                               </div>
                               <div className="author"></div>
                             </div>
@@ -364,11 +337,17 @@ class Testimonials extends React.Component {
                                   src={this.state.layananImg}
                                   style={{ marginRight: "5%" }}
                                 />
-                                {lang.Landing.Benefit.content[2].title}
+                                {
+                                  this.props.pageStore.Landing.Benefit
+                                    .content[2].title
+                                }
                               </div>
 
                               <div style={{ marginLeft: "10px" }}>
-                                {lang.Landing.Benefit.content[2].subtitle}
+                                {
+                                  this.props.pageStore.Landing.Benefit
+                                    .content[2].subtitle
+                                }
                               </div>
                               <div className="author"></div>
                             </div>
@@ -414,11 +393,17 @@ class Testimonials extends React.Component {
                                   src={this.state.beritaImg}
                                   style={{ marginRight: "5%" }}
                                 />
-                                {lang.Landing.Benefit.content[3].title}
+                                {
+                                  this.props.pageStore.Landing.Benefit
+                                    .content[3].title
+                                }
                               </div>
 
                               <div style={{ marginLeft: "10px" }}>
-                                {lang.Landing.Benefit.content[3].subtitle}
+                                {
+                                  this.props.pageStore.Landing.Benefit
+                                    .content[3].subtitle
+                                }
                               </div>
                               <div className="author"></div>
                             </div>
@@ -458,11 +443,17 @@ class Testimonials extends React.Component {
                                   src={this.state.requoteImg}
                                   style={{ marginRight: "5%" }}
                                 />
-                                {lang.Landing.Benefit.content[4].title}
+                                {
+                                  this.props.pageStore.Landing.Benefit
+                                    .content[4].title
+                                }
                               </div>
 
                               <div style={{ marginLeft: "10px" }}>
-                                {lang.Landing.Benefit.content[4].subtitle}
+                                {
+                                  this.props.pageStore.Landing.Benefit
+                                    .content[4].subtitle
+                                }
                               </div>
                               <div className="author"></div>
                             </div>
@@ -502,11 +493,17 @@ class Testimonials extends React.Component {
                                   src={this.state.supportImg}
                                   style={{ marginRight: "5%" }}
                                 />
-                                {lang.Landing.Benefit.content[5].title}
+                                {
+                                  this.props.pageStore.Landing.Benefit
+                                    .content[5].title
+                                }
                               </div>
 
                               <div style={{ marginLeft: "10px" }}>
-                                {lang.Landing.Benefit.content[5].subtitle}
+                                {
+                                  this.props.pageStore.Landing.Benefit
+                                    .content[5].subtitle
+                                }
                               </div>
                               <div className="author"></div>
                             </div>
@@ -526,4 +523,12 @@ class Testimonials extends React.Component {
   }
 }
 
-export default Testimonials;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Testimonials);

@@ -31,9 +31,16 @@ import { LangContext } from "../MyContext";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 
 class ContactUs extends React.Component {
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   renderContent = () => {
     if (isMobile) {
       return (
@@ -41,7 +48,7 @@ class ContactUs extends React.Component {
           <BlurryNavbar />
           <ColoredNavbar location={{ ...this.props.location }} />
           <div className="wrapper" ref="wrapper">
-            <div className="page-header header-filter">
+            <div className="title-header header-filter">
               <div
                 className="page-header-image"
                 style={{
@@ -71,6 +78,7 @@ class ContactUs extends React.Component {
           return (
             <>
               <div
+                className="background-header header-filter"
                 style={{
                   backgroundImage:
                     "url(" + require("assets/img/header-contact.png") + ")",
@@ -80,16 +88,16 @@ class ContactUs extends React.Component {
                 <BlurryNavbar />
                 <ColoredNavbar location={{ ...this.props.location }} />
                 {/* <div className="wrapper" ref="wrapper"> */}
-                <div className="page-header header-filter">
+                <div className="title-header header-filter">
                   <div className="page-header-image" />
                   <Container>
                     <Row>
                       <Col className="text-center vertical-center" md="12">
                         <h1 className="title">
-                          {lang.hubungikami.header.title}
+                          {this.props.pageStore.hubungikami.header.title}
                         </h1>
                         <h4 className="desc">
-                          {lang.hubungikami.header.subtitle}
+                          {this.props.pageStore.hubungikami.header.subtitle}
                         </h4>
                       </Col>
                     </Row>
@@ -108,4 +116,12 @@ class ContactUs extends React.Component {
   }
 }
 
-export default ContactUs;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContactUs);

@@ -32,6 +32,9 @@ import ColoredNavbar from "../Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "components/Navbars/BlurryNavbar";
 import { LangContext } from "../MyContext";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 
 const styles = {
@@ -44,6 +47,11 @@ const styles = {
 
 class HeaderAboutUs extends React.Component {
   state = {};
+
+  async componentDidMount() {
+    await this.props.fetchPage("landing", "id");
+  }
+
   render() {
     return (
       <LangContext.Consumer>
@@ -63,7 +71,7 @@ class HeaderAboutUs extends React.Component {
                     <BlurryNavbar />
                     <ColoredNavbar location={{ ...this.props.location }} />
                     <div className="title title-header">
-                      {lang.tentangkami.header}
+                      {this.props.pageStore.tentangkami.header}
                     </div>
                   </div>
                   <div className="content-center broken-white">
@@ -78,7 +86,7 @@ class HeaderAboutUs extends React.Component {
                               lineHeight: "30px"
                             }}
                           >
-                            {lang.tentangkami.content}
+                            {this.props.pageStore.tentangkami.content}
                           </p>
                         </Col>
                       </Row>
@@ -95,4 +103,12 @@ class HeaderAboutUs extends React.Component {
   }
 }
 
-export default HeaderAboutUs;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderAboutUs);
