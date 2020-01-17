@@ -45,29 +45,33 @@ class ContactUs extends React.Component {
     if (isMobile) {
       return (
         <>
-          <BlurryNavbar />
-          <ColoredNavbar location={{ ...this.props.location }} />
-          <div className="wrapper" ref="wrapper">
+          <div
+            className="background-header header-filter"
+            style={{
+              backgroundImage:
+                "url(" + require("assets/img/header-contact.png") + ")",
+              padding: 0
+            }}
+          >
+            <BlurryNavbar />
+            <ColoredNavbar location={{ ...this.props.location }} />
+            {/* <div className="wrapper" ref="wrapper"> */}
             <div className="title-header header-filter">
-              <div
-                className="page-header-image"
-                style={{
-                  backgroundImage:
-                    "url(" + require("assets/img/header-contact.png") + ")"
-                }}
-              />
+              <div className="page-header-image" />
               <Container>
                 <Row>
-                  <Col className="text-center vertical-center" md="12">
-                    <h1 className="title">Ada pertanyaan?</h1>
+                  <Col className="text-center title-header" md="12">
+                    <h1 className="title">
+                      {this.props.pageStore.hubungikami.header.title}
+                    </h1>
                     <h4 className="desc">
-                      Kami mengharapkan anda untuk ikut membicarakan apa yang
-                      anda inginkan.
+                      {this.props.pageStore.hubungikami.header.subtitle}
                     </h4>
                   </Col>
                 </Row>
               </Container>
             </div>
+            {/* </div> */}
           </div>
         </>
       );

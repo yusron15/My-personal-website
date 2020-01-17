@@ -22,6 +22,7 @@ import {
   Row,
   Col
 } from "reactstrap";
+import { isMobile } from "react-device-detect";
 import Radium, { StyleRoot } from "radium";
 import { fadeIn } from "react-animations";
 
@@ -52,7 +53,53 @@ class HeaderAboutUs extends React.Component {
     await this.props.fetchPage("landing", "id");
   }
 
-  render() {
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+          <div className="cd-section" id="headers">
+            {/* ********* HEADER 6 ********* */}
+            <div className="header header-6  broken-white">
+              <div
+                className="team-1 background-header"
+                style={{
+                  backgroundImage: `url(${tentangkami})`,
+                  padding: 0
+                }}
+              >
+                <BlurryNavbar />
+                <ColoredNavbar location={{ ...this.props.location }} />
+                <div
+                  className="title title-header"
+                  style={{ marginTop: "11vh", fontSize: "2rem" }}
+                >
+                  {this.props.pageStore.tentangkami.header}
+                </div>
+              </div>
+              <div className="content-center broken-white">
+                <Container>
+                  <Row className="align-items-center text-left">
+                    <Col lg="12" xs="12">
+                      <p
+                        className="description font-black desc-text"
+                        style={{
+                          color: "black",
+                          textAlign: "justify",
+                          lineHeight: "30px"
+                        }}
+                      >
+                        {this.props.pageStore.tentangkami.content}
+                      </p>
+                    </Col>
+                  </Row>
+                </Container>
+              </div>
+            </div>
+          </div>
+          {/* ********* END HEADER 6 ********* */}
+        </>
+      );
+    }
     return (
       <LangContext.Consumer>
         {({ lang }) => {
@@ -100,6 +147,10 @@ class HeaderAboutUs extends React.Component {
         }}
       </LangContext.Consumer>
     );
+  };
+
+  render() {
+    return this.renderContent();
   }
 }
 

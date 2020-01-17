@@ -30,6 +30,8 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import prevButton from "../../assets/img/blue-left.png";
 import nextButton from "../../assets/img/blue-right.png";
 import bg from "../../assets/img/header-cabang.png";
+import { isMobile } from "react-device-detect";
+
 import "../../assets/css/main.css";
 
 const PrevButton = props => {
@@ -198,6 +200,19 @@ class News extends React.Component {
       ["carousel" + carousel + "Index"]: newIndex,
       activeTab: newIndex
     });
+  };
+
+  renderContent = () => {
+    if (isMobile) {
+      return <></>;
+    }
+    return (
+      <LangContext.Consumer>
+        {({ lang }) => {
+          return <></>;
+        }}
+      </LangContext.Consumer>
+    );
   };
 
   render() {

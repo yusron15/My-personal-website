@@ -74,12 +74,9 @@ class Content extends React.Component {
               <Row>
                 <Col className="ml-auto mr-auto text-center mt-5" md="6">
                   <h1 className="title font-black">
-                    {/* {lang.hubungikami.header.title} */}
-                    {/* {this.props.pageStore.hubungikami.header.top} */}
                     {this.props.pageStore.hubungikami.top.title}
                   </h1>
                   <h4 className="desc font-black">
-                    {/* {lang.hubungikami.header.subtitle} */}
                     {this.props.pageStore.hubungikami.top.subtitle}
                   </h4>
                 </Col>
@@ -98,7 +95,6 @@ class Content extends React.Component {
                         <Row>
                           <Col>
                             <div className="description font-black desc-text">
-                              {/* {lang.hubungikami.contact.left[0]} */}
                               {this.props.pageStore.hubungikami.contact.left[0]}
                               <br />
                               {this.props.pageStore.hubungikami.contact.left[1]}
@@ -107,33 +103,14 @@ class Content extends React.Component {
                               <br />
                               {this.props.pageStore.hubungikami.contact.left[3]}
                               <br />
-
                               <br />
-                              {/* Sahid Sudirman Center */}
-                              {/* {lang.hubungikami.contact.left[1]} */}
-                              {/* {lang.hubungikami.contact.left[2]} */}
-                              {/* {lang.hubungikami.contact.left[3]} */}
-                              {/* {lang.hubungikami.contact.left[4]} */}
-                              {/* {lang.hubungikami.contact.left[5]} */}
-                              {/* {lang.hubungikami.contact.left[6]} */}
-                              <br />
-                              {/* Lantai 40 Jl. Jend Sudirman Kav 86 */}
-                              {/* {lang.hubungikami.contact.left[7]} */}
-                              {/* <br /> Jakarta 10220 Indonesia */}
-                              {/* {lang.hubungikami.contact.left[8]} */}
-                              <br />
-                              {/* {lang.hubungikami.contact.left[9]} */}
                             </div>
                           </Col>
                           <Col>
                             <div className="description font-black desc-text">
-                              {/* {lang.hubungikami.contact.left[10]} */}
-                              {/* Phone: (+62)21 2788-9393 */}
                               {this.props.pageStore.hubungikami.contact.left[4]}
                             </div>
                             <div className="description font-black desc-text">
-                              {/* {lang.hubungikami.contact.left[11]} */}
-                              {/* Fax: (+62)21 2788-9395 */}
                               {this.props.pageStore.hubungikami.contact.left[5]}
                             </div>
                           </Col>
@@ -158,7 +135,6 @@ class Content extends React.Component {
                               >
                                 <InputGroupAddon addonType="prepend">
                                   <InputGroupText>
-                                    {/* <i className="tim-icons icon-single-02" /> */}
                                     <img
                                       src={texticon}
                                       style={{ height: "15px", width: "auto" }}
@@ -194,7 +170,6 @@ class Content extends React.Component {
                                 >
                                   <InputGroupAddon addonType="prepend">
                                     <InputGroupText>
-                                      {/* <i className="tim-icons icon-caps-small" /> */}
                                       <img
                                         src={texticon}
                                         style={{
@@ -233,7 +208,6 @@ class Content extends React.Component {
                             >
                               <InputGroupAddon addonType="prepend">
                                 <InputGroupText>
-                                  {/* <i className="tim-icons icon-email-85" /> */}
                                   <img
                                     src={subscribe}
                                     style={{ height: "15px", width: "auto" }}
@@ -268,7 +242,6 @@ class Content extends React.Component {
                               <Button
                                 className="btn-round pull-right"
                                 color="info"
-                                // style={{ backgroundColor: "#3467D6" }}
                               >
                                 Send Message
                               </Button>
@@ -280,51 +253,16 @@ class Content extends React.Component {
                   </Row>
                 </Col>
               </Row>
-              {/* <hr
-                style={{
-                  color: "grey",
-                  backgroundColor: "grey",
-                  height: 0.5,
-                  width: "100vw",
-                  borderColor: "grey"
-                }}
-              /> */}
               <Row>
                 <Col md="12" className="header-filter">
-                  {/* <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut"> */}
-                  {/* <img src={map} /> */}
                   <MapWithAMarker
                     containerElement={<div style={{ height: `400px` }} />}
                     mapElement={<div style={{ height: `100%` }} />}
                   />
-                  {/* </ScrollAnimation> */}
                 </Col>
               </Row>
             </Container>
           </div>
-          {/* <div className="team-1" style={{ backgroundColor: "white" }}>
-            <Container>
-              <div
-                className="title"
-                style={{ color: "black", fontSize: "1.5rem" }}
-              >
-                Kontak & Informasi
-              </div>
-              <Row>
-                <Col md="4">
-                  <div className="description">
-                    Address: Sahid Sudirman Center, Lantai 40 Jl. Jend Sudirman
-                    Kav 86 Jakarta 10220 Indonesia
-                  </div>
-                </Col>
-                <Col md="4">
-                  <div className="description">
-                    Phone: (+62)21 2788-9393 Fax: (+62)21 2788-9395
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-          </div> */}
         </div>
       </>
       //     );
