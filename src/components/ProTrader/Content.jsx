@@ -330,9 +330,9 @@ class Content extends React.Component {
                 md="9"
                 style={{ marginRight: 0, marginLeft: 0 }}
               >
-                <h1 className="title">
+                <h3 className="title">
                   {this.props.pageStore.protrader.title}
-                </h1>
+                </h3>
               </Col>
               {/* </Row> */}
               <div style={{ marginTop: "50px" }}>

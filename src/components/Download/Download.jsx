@@ -2,6 +2,7 @@ import React from "react";
 import { Parallax, ParallaxBanner } from "react-scroll-parallax";
 
 // reactstrap components
+import { isMobile } from "react-device-detect";
 import { Badge, Button, Container, Row, Col } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 import laptop from "../../assets/img/download-image.png";
@@ -16,7 +17,90 @@ import bg from "../../assets/img/download-bg.png";
 
 import "../../assets/css/main.css";
 class Features extends React.Component {
-  render() {
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+          <div className="cd-section" id="features">
+            <div
+              className="features-3 broken-white"
+              style={{
+                padding: "50px",
+                paddingTop: "20px",
+                backgroundImage: `url(${bg})`
+              }}
+            >
+              <Container fluid>
+                <Row>
+                  <Col className="mr-auto ml-auto" md="10">
+                    <h1
+                      className="title"
+                      style={{
+                        color: "white",
+                        textAlign: "center",
+                        fontSize: "1.5rem"
+                      }}
+                    >
+                      Download
+                    </h1>
+                  </Col>
+                </Row>
+                <Col>
+                  <div>
+                    <Row>
+                      <ScrollAnimation
+                        animateIn="fadeInLeft"
+                        animateOut="fadeOut"
+                      >
+                        <img src={laptop} />
+                      </ScrollAnimation>
+                    </Row>
+                  </div>
+                  <div>
+                    <Row>
+                      <Col md="6">
+                        <ScrollAnimation
+                          animateIn="fadeInUp"
+                          animateOut="fadeOut"
+                        >
+                          <img
+                            alt="..."
+                            className="bg-blob"
+                            style={{
+                              width: "30vw",
+                              marginTop: "20px",
+                              height: "auto"
+                            }}
+                            src={googleplay}
+                          />
+                        </ScrollAnimation>
+                      </Col>
+                      <Col md="6">
+                        <ScrollAnimation
+                          animateIn="fadeInUp"
+                          animateOut="fadeOut"
+                        >
+                          <img
+                            alt="..."
+                            className="bg-blob"
+                            style={{
+                              width: "30vw",
+                              marginTop: "20px",
+                              height: "auto"
+                            }}
+                            src={appstore}
+                          />
+                        </ScrollAnimation>
+                      </Col>
+                    </Row>
+                  </div>
+                </Col>
+              </Container>
+            </div>
+          </div>{" "}
+        </>
+      );
+    }
     return (
       <>
         <div className="cd-section" id="features">
@@ -102,6 +186,9 @@ class Features extends React.Component {
         </div>{" "}
       </>
     );
+  };
+  render() {
+    return this.renderContent();
   }
 }
 

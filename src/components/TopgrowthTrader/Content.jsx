@@ -312,9 +312,9 @@ class Content extends React.Component {
             <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="9">
-                  <h1 className="title">
+                  <h3 className="title">
                     {this.props.pageStore.topgrowthtrader.title}
-                  </h1>
+                  </h3>
                 </Col>
               </Row>
               <div>

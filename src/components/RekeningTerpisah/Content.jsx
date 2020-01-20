@@ -59,7 +59,7 @@ class Content extends React.Component {
               </div>
               <div
                 className="team-1 broken-white"
-                style={{ height: "70vh", padding: 0 }}
+                style={{ height: "80vh", padding: 0 }}
               >
                 <Col>
                   <Row>
@@ -68,7 +68,7 @@ class Content extends React.Component {
                         className="title"
                         style={{
                           fontStyle: "Helvetica Bold",
-                          // fontSize: "2.5rem",
+                          fontSize: "1.5rem",
                           fontWeight: "bold",
                           color: "black"
                         }}
