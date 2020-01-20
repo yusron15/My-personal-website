@@ -139,6 +139,11 @@ class App extends Component {
       type: "GET_ALL_PAGE",
       payload: id
     });
+
+    store.dispatch({
+      type: "CHANGE_LANG",
+      payload: "ID"
+    });
   };
 
   render() {

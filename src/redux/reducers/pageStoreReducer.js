@@ -611,7 +611,8 @@ const defaultState = {
     m5: { title: "Edukasi" },
     m6: { title: "Karir" },
     m7: { title: "Hubungi Kami" }
-  }
+  },
+  currentLang: "ID"
 };
 
 export default (state = defaultState, action = {}) => {
@@ -624,8 +625,16 @@ export default (state = defaultState, action = {}) => {
       };
     }
 
+    case "CHANGE_LANG": {
+      return {
+        ...state,
+        currentLang: action.payload
+      };
+    }
+
     case "GET_ALL_PAGE": {
       return {
+        ...state,
         ...action.payload
       };
     }
