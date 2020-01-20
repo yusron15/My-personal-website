@@ -45,7 +45,7 @@ class Content extends React.Component {
               }}
             >
               <div
-                className="team-1 background-header"
+                className="team-1 background-header-mobile"
                 style={{
                   backgroundImage: `url(${dollar})`,
                   padding: 0
@@ -53,10 +53,7 @@ class Content extends React.Component {
               >
                 <BlurryNavbar />
                 <ColoredNavbar location={{ ...this.props.location }} />
-                <div
-                  className="title title-header"
-                  style={{ fontSize: "2rem", marginTop: "11vh" }}
-                >
+                <div className="title-header-mobile">
                   {this.props.pageStore.rekeningterpisah.header}
                 </div>
               </div>

@@ -89,7 +89,7 @@ class Features extends React.Component {
                 >
                   <BlurryNavbar />
 
-                  <div className="title title-header" style={{marginTop:"11vh", fontSize:"2rem"}}>
+                  <div className="title-header-mobile">
                     {this.props.pageStore.Forex.header}
                   </div>
                 </div>

@@ -32,6 +32,7 @@ import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
+import { isMobile } from "react-device-detect";
 
 import "../../assets/css/main.css";
 
@@ -251,13 +252,82 @@ class Content extends React.Component {
     this.setState({ activeIndex: newIndex });
   };
 
-  render() {
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+          <div
+            className="team-1 background-header-mobile"
+            style={{
+              backgroundImage: `url(${bg})`,
+              padding: 0
+            }}
+          >
+            <BlurryNavbar />
+            <ColoredNavbar location={{ ...this.props.location }} />
+            <div className="title title-header-mobile">
+              {this.props.pageStore.indexfutures.header}
+            </div>
+          </div>
+          <div className="cd-section broken-white" id="teams">
+            <div className="team-1">
+              <Container>
+                <Row>
+                  <Col className="ml-auto mr-auto" md="12">
+                    <p
+                      className="description font-black"
+                      style={{ textAlign: "justify" }}
+                    >
+                      {this.props.pageStore.indexfutures.content}
+                    </p>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
+            <div>
+              <div
+                className="team-1"
+                style={{
+                  backgroundImage:
+                    "url(" + require("assets/img/coin.png") + ")",
+                  backgroundSize: "cover"
+                }}
+              >
+                <ScrollAnimation animateIn="fadeInRight" animateOut="fadeOut">
+                  <Carousel
+                    activeIndex={this.state.activeIndex}
+                    next={this.next}
+                    previous={this.previous}
+                  >
+                    <CarouselIndicators
+                      items={items}
+                      activeIndex={this.state.activeIndex}
+                      onClickHandler={this.goToIndex}
+                    />
+                    {items.map((item, key) => {
+                      return (
+                        <CarouselItem
+                          onExiting={this.onExiting}
+                          onExited={this.onExited}
+                          key={key}
+                        >
+                          {item.content}
+                        </CarouselItem>
+                      );
+                    })}
+                  </Carousel>
+                </ScrollAnimation>
+              </div>
+            </div>
+          </div>{" "}
+        </>
+      );
+    }
     return (
       <LangContext.Consumer>
         {({ lang }) => {
           return (
             <>
-              {" "}
               <div
                 className="team-1 background-header"
                 style={{
@@ -349,7 +419,7 @@ class Content extends React.Component {
                             <img src={prevButton} />
                           </Button> */}
 
-                          <img
+                          {/* <img
                             className="slick-prev slick-arrow"
                             data-slide="prev"
                             src={prevButton}
@@ -367,7 +437,7 @@ class Content extends React.Component {
                               this.next();
                             }}
                             style={{ height: "30px", width: "auto" }}
-                          />
+                          /> */}
 
                           {/* <Button
                             className="btn-round btn-icon btn-simple slick-arrow"
@@ -395,6 +465,10 @@ class Content extends React.Component {
         }}
       </LangContext.Consumer>
     );
+  };
+
+  render() {
+    return this.renderContent();
   }
 }
 

@@ -59,7 +59,7 @@ class Blogs extends React.Component {
                     Futures saat ini:
                   </p>
                   <Row style={{ marginBottom: "10%" }}>
-                    <Col md="5">
+                    <Col md="6">
                       {/* <Card className="card-blog card-plain">
                         <div className="card-image">
                           <a href="#pablo" onClick={e => e.preventDefault()}>
@@ -145,8 +145,8 @@ class Blogs extends React.Component {
                       {/* </div> */}
                     </Col>
 
-                    <Col lg="4" xs="12">
-                      {/* <Card className="card-blog card-plain">
+                    {/* <Col lg="4" xs="12">
+                      <Card className="card-blog card-plain">
                         <div className="card-image">
                           <a href="#pablo" onClick={e => e.preventDefault()}>
                             <img
@@ -156,8 +156,8 @@ class Blogs extends React.Component {
                             />
                           </a>
                         </div>
-                      </Card> */}
-                    </Col>
+                      </Card>
+                    </Col> */}
                   </Row>
                 </Col>
               </Row>

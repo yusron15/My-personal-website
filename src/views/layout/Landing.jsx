@@ -89,7 +89,7 @@ class Landing extends React.Component {
 
         <NewsLetter />
         <Footer />
-        <BottomNavbar />
+        {/* <BottomNavbar /> */}
         <div className="space-50" />
       </>
     );

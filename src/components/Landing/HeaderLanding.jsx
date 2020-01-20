@@ -103,7 +103,8 @@ class HeaderLanding extends React.Component {
                               className="title-header"
                               style={{
                                 fontStyle: "Helvetica Bold",
-                                fontWeight: "bold"
+                                fontWeight: "bold",
+                                fontSize: "2rem"
                               }}
                             >
                               {
@@ -111,7 +112,12 @@ class HeaderLanding extends React.Component {
                                   .slide[0].title
                               }
                             </div>
-                            <h4 style={{ textAlign: "center" }}>
+                            <h4
+                              style={{
+                                textAlign: "center",
+                                fontSize: "0.8rem"
+                              }}
+                            >
                               {
                                 this.props.pageStore.Landing.HeaderLanding
                                   .slide[0].subtitle
@@ -142,7 +148,8 @@ class HeaderLanding extends React.Component {
                                 className="title-header"
                                 style={{
                                   fontStyle: "Helvetica Bold",
-                                  fontWeight: "bold"
+                                  fontWeight: "bold",
+                                  fontSize: "2rem"
                                 }}
                               >
                                 {
@@ -150,7 +157,12 @@ class HeaderLanding extends React.Component {
                                     .slide[1].title
                                 }
                               </div>
-                              <h4 style={{ textAlign: "center" }}>
+                              <h4
+                                style={{
+                                  textAlign: "center",
+                                  fontSize: "0.8rem"
+                                }}
+                              >
                                 {
                                   this.props.pageStore.Landing.HeaderLanding
                                     .slide[1].subtitle
@@ -181,7 +193,8 @@ class HeaderLanding extends React.Component {
                                 className="title-header"
                                 style={{
                                   fontStyle: "Helvetica Bold",
-                                  fontWeight: "bold"
+                                  fontWeight: "bold",
+                                  fontSize: "2rem"
                                 }}
                               >
                                 {
@@ -190,7 +203,12 @@ class HeaderLanding extends React.Component {
                                 }
                               </div>
 
-                              <h4 style={{ textAlign: "center" }}>
+                              <h4
+                                style={{
+                                  textAlign: "center",
+                                  fontSize: "0.8rem"
+                                }}
+                              >
                                 {
                                   this.props.pageStore.Landing.HeaderLanding
                                     .slide[2].subtitle
@@ -216,26 +234,6 @@ class HeaderLanding extends React.Component {
                   </Carousel.Item>
                 </Carousel>
               </Col>
-              {/* <Col
-                md="4 offset-md-8"
-                style={{
-                  top: "17vh",
-                  position: "absolute"
-                }}
-              >
-                <CardRegister />
-              </Col> */}
-              {/* <Col
-                md="12"
-                style={{
-                  position: "absolute",
-                  bottom: 0,
-                  paddingRight: 0,
-                  paddingLeft: 0
-                }}
-              >
-                <BreakingNews />
-              </Col> */}
             </div>
           </div>
         </>

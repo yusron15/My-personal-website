@@ -12,7 +12,7 @@ import {
   Col
 } from "reactstrap";
 import { LangContext } from "../MyContext";
-
+import { isMobile } from "react-device-detect";
 import ScrollAnimation from "react-animate-on-scroll";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
@@ -34,13 +34,373 @@ class Tables extends React.Component {
     await this.props.fetchPage("landing", "id");
   }
 
-  render() {
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+           <div
+                className="cd-section broken-white"
+                id="tables"
+              >
+                <div className="tables-2">
+                  <div
+                    className="team-1 background-header-mobile"
+                    style={{
+                      backgroundImage: `url(${bg})`,
+                      padding: 0
+                    }}
+                  >
+                    <BlurryNavbar />
+                    <ColoredNavbar location={{ ...this.props.location }} />
+                    <div className="title title-header-mobile">
+                      {this.props.pageStore.jamperdagangan.header}
+                    </div>
+                  </div>
+                  <Container style={{ marginTop: "50px" }}>
+                    <Row>
+                      <Col
+                        className="mx-auto"
+                        md="12"
+                        style={{ borderRadius: "20px", marginBottom: "50px" }}
+                      >
+                        <div>
+                          <Table
+                            // bordered
+                            className="table-shopping"
+                            style={{
+                              backgroundColor: "#224377",
+                              borderRadius: "5px",
+                              borderCollapse: "inherit"
+                              // borderWidth: "0.2px"
+                            }}
+                          >
+                            <thead>
+                              <tr style={{ backgroundColor: "#224377" }}>
+                                <td className="text-white text-center">
+                                  <b>
+                                    {
+                                      this.props.pageStore.jamperdagangan
+                                        .table[0][0][0]
+                                    }
+                                  </b>
+                                </td>
+                                <td className="text-white text-center">
+                                  <b>
+                                    {
+                                      this.props.pageStore.jamperdagangan
+                                        .table[0][0][1]
+                                    }
+                                  </b>
+                                </td>
+                                <td className="text-white text-center">
+                                  <b>
+                                    {
+                                      this.props.pageStore.jamperdagangan
+                                        .table[0][0][2]
+                                    }
+                                  </b>
+                                </td>
+                              </tr>
+                            </thead>
+                            <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                              <tr>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][1][0]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][1][1]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][1][2]
+                                  }
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][2][0]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][2][1]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][2][2]
+                                  }
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][3][0]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][3][1]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][3][2]
+                                  }
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][4][0]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][4][1]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][4][2]
+                                  }
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][5][0]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][5][1]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][5][2]
+                                  }
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][6][0]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][6][1]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][6][1]
+                                  }
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][7][0]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][7][1]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[0][7][2]
+                                  }
+                                </td>
+                              </tr>
+                            </tbody>
+                          </Table>
+
+                          <Table
+                            // bordered
+                            className="table-shopping"
+                            style={{
+                              backgroundColor: "#224377",
+                              borderRadius: "5px",
+                              borderCollapse: "inherit"
+                              // borderWidth: "0.2px"
+                            }}
+                          >
+                            <thead>
+                              <tr style={{ backgroundColor: "#224377" }}>
+                                <td className="text-white text-center">
+                                  <b>
+                                    {
+                                      this.props.pageStore.jamperdagangan
+                                        .table[1][0][0]
+                                    }
+                                  </b>
+                                </td>
+                                <td className="text-white text-center">
+                                  <b>
+                                    {
+                                      this.props.pageStore.jamperdagangan
+                                        .table[1][0][1]
+                                    }
+                                  </b>
+                                </td>
+                                <td className="text-white text-center">
+                                  <b>
+                                    {
+                                      this.props.pageStore.jamperdagangan
+                                        .table[1][0][2]
+                                    }
+                                  </b>
+                                </td>
+                                <td className="text-white text-center">
+                                  <b>
+                                    {
+                                      this.props.pageStore.jamperdagangan
+                                        .table[1][0][3]
+                                    }
+                                  </b>
+                                </td>
+                              </tr>
+                            </thead>
+                            <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                              <tr>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[1][1][0]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[1][1][1]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[1][1][2]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[1][1][3]
+                                  }
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[1][2][0]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[1][2][1]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[1][2][2]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[1][2][3]
+                                  }
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[1][3][0]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[1][3][1]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[1][3][2]
+                                  }
+                                </td>
+                                <td style={text}>
+                                  {
+                                    this.props.pageStore.jamperdagangan
+                                      .table[1][3][3]
+                                  }
+                                </td>
+                              </tr>
+                            </tbody>
+                          </Table>
+                          {/* </ScrollAnimation> */}
+                          {/* </div>
+                      </CardBody>
+                    </Card> */}
+                        </div>
+                      </Col>
+                    </Row>
+                  </Container>
+                </div>
+                {/* ********* END Table 2 ********* */}
+              </div>{" "}
+        </>
+      );
+    }
     return (
       <LangContext.Consumer>
         {({ lang }) => {
           return (
             <>
-              <div
+               <div
                 className="cd-section broken-white"
                 // style={{ backgroundColor: "#D4D4D4" }}
                 id="tables"
@@ -412,6 +772,10 @@ class Tables extends React.Component {
         }}
       </LangContext.Consumer>
     );
+  };
+
+  render() {
+    return this.renderContent();
   }
 }
 

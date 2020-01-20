@@ -61,7 +61,7 @@ class HeaderAboutUs extends React.Component {
             {/* ********* HEADER 6 ********* */}
             <div className="header header-6  broken-white">
               <div
-                className="team-1 background-header"
+                className="team-1 background-header-mobile"
                 style={{
                   backgroundImage: `url(${tentangkami})`,
                   padding: 0
@@ -70,8 +70,8 @@ class HeaderAboutUs extends React.Component {
                 <BlurryNavbar />
                 <ColoredNavbar location={{ ...this.props.location }} />
                 <div
-                  className="title title-header"
-                  style={{ marginTop: "11vh", fontSize: "2rem" }}
+                  className="title-header-mobile"
+                  // style={{ marginTop: "11vh", fontSize: "2rem" }}
                 >
                   {this.props.pageStore.tentangkami.header}
                 </div>

@@ -24,6 +24,7 @@ import {
 } from "reactstrap";
 import { LangContext } from "../MyContext";
 
+import { isMobile } from "react-device-detect";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg from "../../assets/img/header-komoditi.png";
@@ -37,22 +38,59 @@ class Headers extends React.Component {
     await this.props.fetchPage("landing", "id");
   }
   state = {};
-  render() {
+
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+          <div
+            className="team-1 background-header-mobile"
+            style={{
+              backgroundImage: `url(${bg})`,
+              padding: 0
+            }}
+          >
+            <BlurryNavbar />
+
+            <div className="title title-header-mobile">
+              {this.props.pageStore.Komoditi.header}
+            </div>
+          </div>
+          <div className="header header-4 broken-white">
+            <div className="header-wrapper">
+              <div
+                className="page-header"
+                style={{
+                  justifyContent: "center",
+                  minHeight: "60vh",
+                  backgroundImage:
+                    "url(" + require("assets/img/white-dotted.png") + ")",
+                  backgroundSize: "cover"
+                }}
+              >
+                <Container style={{ paddingTop: 0 }}>
+                  <p
+                    className="description"
+                    style={{
+                      color: "black",
+                      marginTop: "20px",
+                      textAlign: "justify"
+                    }}
+                  >
+                    {this.props.pageStore.Komoditi.top}
+                  </p>
+                </Container>
+              </div>
+            </div>
+          </div>
+        </>
+      );
+    }
     return (
       <LangContext.Consumer>
         {({ lang }) => {
           return (
             <>
-              {/* <div
-          className="cd-section"
-          id="headers"
-          style={{
-            backgroundImage:
-              "url(" + require("assets/img/headerkomoditi.png") + ")",
-            backgroundSize: "cover"
-          }}
-        > */}
-              {/* ********* HEADER 4 w/ VIDEO ********* */}
               <div
                 className="team-1 background-header"
                 style={{
@@ -67,7 +105,6 @@ class Headers extends React.Component {
                 </div>
               </div>
               <div className="header header-4 broken-white">
-                {/* <ColoredNavbar /> */}
                 <div className="header-wrapper">
                   <div
                     className="page-header"
@@ -79,28 +116,23 @@ class Headers extends React.Component {
                       backgroundSize: "cover"
                     }}
                   >
-                    {/* <div
-                style={{
-                  backgroundColor: "rgba(179, 172, 172, 0.39)"
-                }}
-              > */}
                     <Container style={{ paddingTop: 0 }}>
-                      {/* <h1 className="title text-center">KOMODITI</h1> */}
                       <p className="description" style={{ color: "black" }}>
                         {this.props.pageStore.Komoditi.top}
                       </p>
                     </Container>
-                    {/* </div> */}
                   </div>
                 </div>
               </div>
-              {/* ********* END HEADER 4 ********* */}
-              {/* </div>{" "} */}
             </>
           );
         }}
       </LangContext.Consumer>
     );
+  };
+
+  render() {
+    return this.renderContent();
   }
 }
 

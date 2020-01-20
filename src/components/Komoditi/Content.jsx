@@ -227,8 +227,7 @@ class Content extends React.Component {
                 style={{ backgroundColor: "#1D1E1F" }}
               >
                 {/* ********* BIG WHITE FOOTER V2 ********* */}
-                {/* <footer className="footer footer-white footer-big"> */}
-                <Container>
+                {/* <Container>
                   <div className="content">
                     <h2>
                       <b>
@@ -246,24 +245,6 @@ class Content extends React.Component {
                           </b>
                         </p>
                         <p>
-                          {/* {" "}
-                          Semua kontrak berjangka di perdagangkan dengan margin
-                          Margin ranges 2%-10%
-                        </p>
-                        <p>Contoh :</p>
-                        <p>Kontrak : GOLDGR</p>
-                        <p>Ukuran Kontrak : 1 Lot = 100 gram</p>
-                        <p>Misalnya harga emas adalahRp. 495.000.</p>
-                        <p>
-                          Nilai dari 1 Lot GOLDGR = 100 gram x Rp. 495.000 = Rp.
-                          49.500.000
-                        </p>
-                        <p>
-                          Margin per lot 4% = 4% x Rp. 49.500.000 = Rp.
-                          1.980.000,
-                        </p>
-                        <p>dibulatkan menjadi Rp 2.000.000,-
-                           */}
                           {
                             this.props.pageStore.Komoditi.footerKomoditi
                               .content[0].subtitle
@@ -304,8 +285,7 @@ class Content extends React.Component {
                       </Col>
                     </Row>
                   </div>
-                </Container>
-                {/* </footer> */}
+                </Container> */}
                 {/* ********* END BIG WHITE FOOTER v2 ********* */}
               </div>
             </>

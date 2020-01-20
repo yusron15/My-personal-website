@@ -34,14 +34,14 @@ class Features extends React.Component {
                       style={{
                         color: "black",
                         textAlign: "center",
-                        fontSize: "1.8rem"
+                        fontSize: "1.5rem"
                       }}
                     >
                       {this.props.pageStore.Landing.Feature.title}
                     </h1>
                     <h4
                       className="description"
-                      style={{ textAlign: "center", fontSize: "1rem" }}
+                      style={{ textAlign: "center", fontSize: "0.8rem" }}
                     >
                       {this.props.pageStore.Landing.Feature.subtitle}
                     </h4>
@@ -80,7 +80,7 @@ class Features extends React.Component {
                         </h3>
                         <p
                           style={{
-                            fontSize: "1rem",
+                            fontSize: "0.8rem",
                             padding: 0,
                             textAlign: "center"
                           }}
@@ -125,7 +125,7 @@ class Features extends React.Component {
                         </h3>
                         <p
                           style={{
-                            fontSize: "1rem",
+                            fontSize: "0.8rem",
                             padding: 0,
                             textAlign: "center"
                           }}
@@ -170,7 +170,7 @@ class Features extends React.Component {
                         </h3>
                         <p
                           style={{
-                            fontSize: "1rem",
+                            fontSize: "0.8rem",
                             padding: 0,
                             textAlign: "center"
                           }}
@@ -215,7 +215,7 @@ class Features extends React.Component {
                         </h3>
                         <p
                           style={{
-                            fontSize: "1rem",
+                            fontSize: "0.8rem",
                             padding: 0,
                             textAlign: "center"
                           }}

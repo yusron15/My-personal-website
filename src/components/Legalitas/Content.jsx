@@ -98,7 +98,7 @@ class Projects extends React.Component {
               // style={{ backgroundColor: "#D4D4D4" }}
             >
               <div
-                className="team-1 background-header"
+                className="team-1 background-header-mobile"
                 style={{
                   backgroundImage: `url(${bg})`,
                   padding: 0
@@ -106,10 +106,7 @@ class Projects extends React.Component {
               >
                 <BlurryNavbar />
 
-                <div
-                  className="title title-header"
-                  style={{ fontSize: "2rem", marginTop: "11vh" }}
-                >
+                <div className="title-header-mobile">
                   {this.props.pageStore.Landing.Legality.header}
                 </div>
               </div>

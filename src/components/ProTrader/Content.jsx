@@ -21,7 +21,7 @@ import {
   CarouselItem
 } from "reactstrap";
 import { LangContext } from "../MyContext";
-
+import { isMobile } from "react-device-detect";
 import ScrollAnimation from "react-animate-on-scroll";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
@@ -287,7 +287,185 @@ class Content extends React.Component {
     if (this.animating) return;
     this.setState({ activeIndex: newIndex });
   };
-  render() {
+
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+          <div
+            className="cd-section"
+            id="teams"
+            style={{ backgroundColor: "#1D1E1F" }}
+          >
+            {/* ********* TEAM 1 ********* */}
+
+            <div
+              className="team-1 background-header-mobile"
+              style={{
+                backgroundImage: `url(${bg})`,
+                padding: 0
+              }}
+            >
+              <BlurryNavbar />
+              <ColoredNavbar location={{ ...this.props.location }} />
+              <div className="title title-header-mobile">
+                {this.props.pageStore.protrader.header}
+              </div>
+            </div>
+            <div className="team-1 broken-white">
+              <Container>
+                <Row>
+                  <Col md="12">
+                    <div className="description font-black" style={textDesc}>
+                      {this.props.pageStore.protrader.top}
+                    </div>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
+            <div className="team-1" style={{ backgroundColor: "#1D1E1F" }}>
+              {/* <Row style={{ marginRight: 0, marginLeft: 0 }}> */}
+              <Col
+                className="ml-auto mr-auto text-center"
+                md="9"
+                style={{ marginRight: 0, marginLeft: 0 }}
+              >
+                <h1 className="title">
+                  {this.props.pageStore.protrader.title}
+                </h1>
+              </Col>
+              {/* </Row> */}
+              <div style={{ marginTop: "50px" }}>
+                <Row style={{ marginRight: 0, marginLeft: 0 }}>
+                  <Col className="ml-auto mr-auto text-center" md="12">
+                    <div
+                      onMouseEnter={this.handleRatingEnter}
+                      onMouseLeave={this.handleRatingLeave}
+                      className="text-fitur"
+                    >
+                      <img
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          marginTop: "30px",
+                          marginBottom: "20px"
+                        }}
+                        src={this.state.rating}
+                      />
+                      <div style={{ margin: "0 50px 0 50px" }}>
+                        {this.props.pageStore.protrader.content[0].content}
+                      </div>
+                    </div>
+                  </Col>
+                  <Col className="ml-auto mr-auto text-center" md="12">
+                    <div
+                      onMouseEnter={this.handleReportEnter}
+                      onMouseLeave={this.handleReportLeave}
+                      className="text-fitur"
+                    >
+                      <img
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          marginTop: "30px",
+                          marginBottom: "20px"
+                        }}
+                        src={this.state.report}
+                      />
+                      <div style={{ margin: "0 50px 0 50px" }}>
+                        {this.props.pageStore.protrader.content[1].content}
+                      </div>
+                    </div>
+                  </Col>
+                  <Col className="ml-auto mr-auto text-center" md="12">
+                    <div
+                      onMouseEnter={this.handleDemandEnter}
+                      onMouseLeave={this.handleDemandLeave}
+                      className="text-fitur"
+                    >
+                      <img
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          marginTop: "30px",
+                          marginBottom: "20px"
+                        }}
+                        src={this.state.demand}
+                      />
+                      <div style={{ margin: "0 50px 0 50px" }}>
+                        {this.props.pageStore.protrader.content[2].content}
+                      </div>
+                    </div>
+                  </Col>
+
+                  <Col className="ml-auto mr-auto text-center" md="12">
+                    <div
+                      onMouseEnter={this.handleListEnter}
+                      onMouseLeave={this.handleListLeave}
+                      className="text-fitur"
+                    >
+                      <img
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          marginTop: "30px",
+                          marginBottom: "20px"
+                        }}
+                        src={this.state.list}
+                      />
+                      <div style={{ margin: "0 50px 0 50px" }}>
+                        {this.props.pageStore.protrader.content[3].content}
+                      </div>
+                    </div>
+                  </Col>
+                  <Col className="ml-auto mr-auto text-center" md="12">
+                    <div
+                      onMouseEnter={this.handleSortingEnter}
+                      onMouseLeave={this.handleSortingLeave}
+                      className="text-fitur"
+                    >
+                      <img
+                        style={{
+                          height: "30px",
+                          width: "auto",
+                          marginTop: "30px",
+                          marginBottom: "20px"
+                        }}
+                        src={this.state.sorting}
+                      />
+                      <div style={{ margin: "0 50px 0 50px" }}>
+                        {this.props.pageStore.protrader.content[4].content}
+                      </div>
+                    </div>
+                  </Col>
+                  <Col className="ml-auto mr-auto text-center" md="12">
+                    <div
+                      onMouseEnter={this.handleSubmitEnter}
+                      onMouseLeave={this.handleSubmitLeave}
+                      className="text-fitur"
+                    >
+                      <img
+                        style={{
+                          height: "50px",
+                          width: "auto",
+                          marginTop: "30px",
+                          marginBottom: "20px"
+                        }}
+                        src={this.state.submit}
+                      />
+                      <div style={{ margin: "0 50px 0 50px" }}>
+                        {this.props.pageStore.protrader.content[5].content}
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            </div>
+            {/* ********* END TEAM 1 ********* */}
+          </div>{" "}
+        </>
+      );
+    }
     return (
       <LangContext.Consumer>
         {({ lang }) => {
@@ -447,6 +625,10 @@ class Content extends React.Component {
         }}
       </LangContext.Consumer>
     );
+  };
+
+  render() {
+    return this.renderContent();
   }
 }
 
