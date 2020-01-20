@@ -18,7 +18,7 @@ function LangTogglerButton(props) {
     <LangContext.Consumer>
       {({ lang, toggleLang }) => (
         <ReactFlagsSelect
-          defaultCountry={"ID"}
+          defaultCountry={props.lang}
           countries={["ID", "GB", "CN", "HK"]}
           customLabels={{
             ID: "Indonesian",
@@ -44,6 +44,7 @@ function LangTogglerButton(props) {
               data = cn_tr;
             }
             await props.fetchDataLang(data);
+            await props.changeLang(a);
           }}
         />
       )}
@@ -53,6 +54,7 @@ function LangTogglerButton(props) {
 
 const mapStateToProps = state => ({
   // pageStore: state.pageStore
+  lang: state.pageStore.currentLang
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -62,6 +64,11 @@ const mapDispatchToProps = dispatch => ({
     dispatch({
       type: "GET_ALL_PAGE",
       payload: data
+    }),
+  changeLang: lang =>
+    dispatch({
+      type: "CHANGE_LANG",
+      payload: lang
     })
 });
 
