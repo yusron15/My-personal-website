@@ -11,11 +11,13 @@ import {
   Row,
   Col
 } from "reactstrap";
+import { isMobile } from "react-device-detect";
 import SearchField from "react-search-field";
 import Select from "react-select";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
 import bg from "../../assets/img/header-karir.png";
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import "../../assets/css/main.css";
 
 const customStyles = {
@@ -30,7 +32,95 @@ class Blogs extends React.Component {
   state = {
     dataSelect: ""
   };
-  render() {
+
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+          {/* <SidebarMobile /> */}
+          <div className="broken-white">
+            <div>
+              <div
+                className="background-header-mobile"
+                style={{
+                  backgroundImage: `url(${bg})`,
+                  padding: 0
+                }}
+              >
+                <BlurryNavbar />
+                <ColoredNavbar location={{ ...this.props.location }} />
+                <div className="title title-header-mobile">Karir</div>
+              </div>
+              <Container>
+                <Row>
+                  <Col className="ml-auto mr-auto" md="10">
+                    <p
+                      className="description font-black"
+                      style={{ marginTop: "10%", marginBottom: "2%" }}
+                    >
+                      Berikut ini lowongan kerja yang tersedia di Topgrowth
+                      Futures saat ini:
+                    </p>
+                    <Row style={{ marginBottom: "10%" }}>
+                      <Col md="6">
+                        <SearchField
+                          className="react-search-field-input"
+                          placeholder="Cari "
+                        />
+                      </Col>
+
+                      <Col md="5">
+                        <Select
+                          styles={customStyles}
+                          value="index "
+                          options={[
+                            {
+                              label: "Job Example",
+                              value: "Job Example"
+                            },
+                            {
+                              label: "Job Example",
+                              value: "Job Example"
+                            },
+                            {
+                              label: "Job Example",
+                              value: "Job Example"
+                            }
+                          ]}
+                          value={this.state.dataSelect}
+                          onChange={async data => {
+                            await this.setState({
+                              dataSelect: data
+                            });
+                            let dataSelect = [
+                              {
+                                label: "Job Example",
+                                value: "Job Example"
+                              },
+                              {
+                                label: "Job Example",
+                                value: "Job Example"
+                              },
+                              {
+                                label: "Job Example",
+                                value: "Job Example"
+                              }
+                            ];
+                            return dataSelect.filter(
+                              item => this.state.dataSelect.value === item.value
+                            )[0];
+                          }}
+                        />
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
+          </div>{" "}
+        </>
+      );
+    }
     return (
       <>
         <div className="cd-section broken-white" id="blogs">
@@ -167,6 +257,10 @@ class Blogs extends React.Component {
         </div>{" "}
       </>
     );
+  };
+
+  render() {
+    return this.renderContent();
   }
 }
 

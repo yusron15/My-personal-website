@@ -31,6 +31,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import tentangkami from "../../assets/img/header-aboutus.png";
 import ColoredNavbar from "../Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "components/Navbars/BlurryNavbar";
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import { LangContext } from "../MyContext";
 
 import { connect } from "react-redux";
@@ -67,8 +68,9 @@ class HeaderAboutUs extends React.Component {
                   padding: 0
                 }}
               >
-                <BlurryNavbar />
-                <ColoredNavbar location={{ ...this.props.location }} />
+                <SidebarMobile />
+                {/* <BlurryNavbar />
+                <ColoredNavbar location={{ ...this.props.location }} /> */}
                 <div
                   className="title-header-mobile"
                   // style={{ marginTop: "11vh", fontSize: "2rem" }}

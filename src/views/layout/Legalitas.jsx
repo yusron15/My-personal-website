@@ -15,8 +15,8 @@ class LegalitasPage extends React.Component {
       <>
         {/* <Navbar /> */}
         {/* <BlurryNavbar /> */}
-        <ColoredNavbar location={{ ...this.props.location }} />
-        <Content />
+        {/* <ColoredNavbar location={{ ...this.props.location }} /> */}
+        <Content location={{ ...this.props.location }} />
         <Footer />
       </>
     );

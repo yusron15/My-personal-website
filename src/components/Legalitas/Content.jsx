@@ -41,6 +41,7 @@ import bglegalitas from "../../assets/img/bg-legalitas.png";
 import DarkNavbar from "../../components/Navbars/DarkNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
 
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
@@ -49,29 +50,7 @@ import "../../assets/css/main.css";
 
 class Projects extends React.Component {
   state = {
-    activeTab: "1",
-    content: [
-      {
-        bappebti:
-          "BAPPEBTI (Badan Pengawas Perdagangan Berjangka Komoditi) merupakan institusi pemerintah yang berada di bawah naungan Kementerian Perdagangan Republik Indonesia dan bertugas untuk menerbitkan izin usaha baik bagi perusahaan maupun perorangan, membuat peraturan dan tata tertib, melakukan inspeksi dan kontrol terhadap seluruh aktivitas dalam industri pialang berjangka. PT. Topgrowth Futures beroperasi berdasarkan izin dan berada di bawah pengawasan BAPPEBTI, dengan Nomor Izin: No. 300/BAPPEBTI/SI/III/2004."
-      },
-      {
-        jfx:
-          "PT. Bursa Berjangka Jakarta (BBJ) merupakan bursa berjangka komoditi pertama di Indonesia yang bertugas menyediakan fasilitas bagi anggota untuk melaksanakan transaksi kontrak-kontrak berjangka. BBJ didirikan pada tanggal 19 Agustus 1999 di Jakarta oleh 29 perusahaan berbentuk Perseroan Terbatas (PT) sesuai PP No 9/99, dan telah memulai perdagangan perdana sejak 15 Desember 2000. PT. Topgrowth Futures merupakan perusahaan pialang berjangka dengan nomor keanggotaan BBJ: SPAB-059/BBJ/01/04."
-      },
-      {
-        kbi:
-          "PT. Kliring Berjangka Indonesia (KBI) adalah perusahaan Badan Usaha Milik Pemerintah (BUMN) yang berfungsi sebagai lembaga Kliring dan Penjaminan berdasarkan keputusan BAPPEBTI dengan nomor No.128/BAPPEBTI/IX/2001. Seluruh penyelesaian transaksi kontrak berjangka yang didaftarkan oleh anggota kliring dilaksanakan oleh KBI. Selain sebagai pialang anggota bursa, PT. Topgrowth Futures juga merupakan anggota dari Kliring Berjangka Indonesia dengan nomor: 21/AK-KBI/III/2004"
-      },
-      {
-        ich:
-          "PT. Kliring Berjangka Indonesia (KBI) adalah perusahaan Badan Usaha Milik Pemerintah (BUMN) yang berfungsi sebagai lembaga Kliring dan Penjaminan berdasarkan keputusan BAPPEBTI dengan nomor No.128/BAPPEBTI/IX/2001. Seluruh penyelesaian transaksi kontrak berjangka yang didaftarkan oleh anggota kliring dilaksanakan oleh KBI. Selain sebagai pialang anggota bursa, PT. Topgrowth Futures juga merupakan anggota dari Kliring Berjangka Indonesia dengan nomor: 21/AK-KBI/III/2004"
-      },
-      {
-        icdx:
-          "PT. Bursa Komoditi dan Derivatif Indonesia merupakan bursa berjangka kedua berdiri di Indonesia dan memiliki fungsi menjadi penyedia sarana bagi anggotanya untuk melaksanakan transaksi kontrak berjangka. BKDI mendapatkan izin sebagai bursa dengan No. 26/BAPPEBTI/KP/6/2009, dan telah memulai perdagangan perdana sejak 30 November 2009. PT. Topgrowth Futures adalah perusahaan pialang berjangka anggota dari Bursa Komoditi dan Derivatif Indonesia (BKDI) dengan nomor: 047/SPKB/ICDX/Dir/IX/2010."
-      }
-    ]
+    activeTab: "1"
   };
 
   async componentDidMount() {
@@ -104,7 +83,8 @@ class Projects extends React.Component {
                   padding: 0
                 }}
               >
-                <BlurryNavbar />
+                {/* <BlurryNavbar /> */}
+                <SidebarMobile />
 
                 <div className="title-header-mobile">
                   {this.props.pageStore.Landing.Legality.header}
@@ -376,6 +356,7 @@ class Projects extends React.Component {
                     }}
                   >
                     <BlurryNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
 
                     <div className="title title-header">
                       {this.props.pageStore.Landing.Legality.header}

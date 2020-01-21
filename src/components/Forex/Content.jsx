@@ -17,6 +17,8 @@ import fg1 from "../../assets/img/forex.png";
 import fg2 from "../../assets/img/forex2.png";
 import fg3 from "../../assets/img/forexgold3.png";
 import bg from "../../assets/img/forex-header.png";
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import { LangContext } from "../MyContext";
@@ -81,13 +83,14 @@ class Features extends React.Component {
           >
             {/* ********* FEATURES 3 ********* */}
             <div
-              className="team-1 background-header"
+              className="team-1 background-header-mobile"
               style={{
                 backgroundImage: `url(${bg})`,
                 padding: 0
               }}
             >
-              <BlurryNavbar />
+              <SidebarMobile />
+              {/* <BlurryNavbar /> */}
 
               <div className="title-header-mobile">
                 {this.props.pageStore.Forex.header}
@@ -344,7 +347,7 @@ class Features extends React.Component {
                   }}
                 >
                   <BlurryNavbar />
-
+                  <ColoredNavbar location={{ ...this.props.location }} />
                   <div className="title title-header">
                     {this.props.pageStore.Forex.header}
                   </div>

@@ -19,75 +19,23 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
+import Sidebar from "react-sidebar";
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import ScrollAnimation from "react-animate-on-scroll";
-
+import { isMobile } from "react-device-detect";
 import DropdownTentangKami from "../DropdownContent/DropdownTentangKami";
 import DropdownTrading from "../DropdownContent/DropdownTrading";
 import DropdownBerita from "../DropdownContent/DropdownBerita";
 import { LangContext } from "../MyContext";
 import logo from "../../assets/img/logo-topgrowth.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import BlurryNavbarHome from "../../components/Navbars/BlurryNavbarHome";
 import "../../assets/css/main.css";
 import Radium, { StyleRoot } from "radium";
 import vl from "../../assets/img/vertical-line.png";
 
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
-
-const stylesAnimation = {
-  slideInDown: {
-    animation: "x 1s",
-    animationName: Radium.keyframes(slideInDown, "bounce")
-  }
-};
-
-const title = {
-  fontSize: "15px",
-  fontWeight: "bold",
-  color: "black",
-  marginTop: "20px",
-  marginBottom: "10px"
-};
-const tentangkami = {
-  fontSize: "15px",
-  // fontWeight: "bold",
-  color: "black",
-  marginTop: "30px",
-  // marginBottom: "10px",
-  textAlign: "left"
-};
-
-const DropdownTentangKamiText = {
-  fontSize: "15px",
-  // fontWeight: "bold",
-  color: "black",
-  marginTop: "40px",
-  marginLeft: "20px",
-  // marginBottom: "10px",
-  textAlign: "left"
-};
-
-const trading = {
-  fontSize: "15px",
-  // fontWeight: "bold",
-  color: "black",
-  marginTop: "10px",
-  // marginBottom: "10px",
-  textAlign: "left"
-};
-
-const newstext = {
-  // fontSize: "1rem",
-  // color: "black",
-  // marginBottom: "10px",
-  // textAlign: "left"
-  fontSize: "15px",
-  // fontWeight: "bold",
-  color: "black",
-  marginTop: "20px",
-  // marginBottom: "10px",
-  textAlign: "left"
-};
 
 class ColorNavbar extends React.Component {
   constructor(props) {
@@ -101,7 +49,8 @@ class ColorNavbar extends React.Component {
       bgButton: "transparent",
       marginTop: "50px",
       color: "black",
-      activeTab: "1"
+      activeTab: "1",
+      sidebarOpen: false
     };
   }
 
@@ -153,6 +102,10 @@ class ColorNavbar extends React.Component {
         color: "black"
       });
     }
+  };
+
+  onSetSidebarOpen = open => {
+    this.setState({ sidebarOpen: open });
   };
 
   componentDidMount() {
@@ -247,7 +200,7 @@ class ColorNavbar extends React.Component {
     return active ? "bold" : "";
   };
 
-  render() {
+  renderContent = () => {
     const styles = {
       containerStyle: {
         marginTop: this.state.marginTop,
@@ -261,6 +214,13 @@ class ColorNavbar extends React.Component {
       }
     };
     const { containerStyle, colorStyle } = styles;
+    if (isMobile) {
+      return (
+        <>
+          <SidebarMobile />
+        </>
+      );
+    }
     return (
       <LangContext.Consumer>
         {({ lang }) => {
@@ -419,6 +379,23 @@ class ColorNavbar extends React.Component {
         }}
       </LangContext.Consumer>
     );
+  };
+
+  render() {
+    // const styles = {
+    //   containerStyle: {
+    //     marginTop: this.state.marginTop,
+    //     bgButton: this.state.bgButton,
+    //     fontBold: this.state.fontBold,
+    //     zIndex: 999
+    //   },
+    //   colorStyle: {
+    //     color: this.props.navbarColor == "white" ? "black" : "white"
+    //     // color: this.state.color
+    //   }
+    // };
+    // const { containerStyle, colorStyle } = styles;
+    return this.renderContent();
   }
 }
 

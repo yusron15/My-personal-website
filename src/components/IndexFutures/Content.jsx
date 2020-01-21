@@ -26,6 +26,7 @@ import { LangContext } from "../MyContext";
 import ScrollAnimation from "react-animate-on-scroll";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import SidebarMobile from "components/Navbars/SidebarMobile";
 import bg1 from "../../assets/img/indexfutures1.png";
 import bg from "../../assets/img/header-indexfutures2.png";
 import prevButton from "../../assets/img/prevbutton.png";
@@ -263,8 +264,10 @@ class Content extends React.Component {
               padding: 0
             }}
           >
-            <BlurryNavbar />
-            <ColoredNavbar location={{ ...this.props.location }} />
+            <SidebarMobile />
+
+            {/* <BlurryNavbar />
+            <ColoredNavbar location={{ ...this.props.location }} /> */}
             <div className="title title-header-mobile">
               {this.props.pageStore.indexfutures.header}
             </div>

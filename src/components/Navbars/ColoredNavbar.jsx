@@ -20,65 +20,19 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 import { LangContext } from "../MyContext";
-
+import { isMobile } from "react-device-detect";
 import logo from "../../assets/img/logo-topgrowth.png";
 import vl from "../../assets/img/vertical-line.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import Radium, { StyleRoot } from "radium";
-
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import DropdownTentangKami from "../DropdownContent/DropdownTentangKami";
 import DropdownTrading from "../DropdownContent/DropdownTrading";
 import DropdownBerita from "../DropdownContent/DropdownBerita";
 
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
-
-const stylesAnimation = {
-  slideInDown: {
-    animation: "x 1s",
-    animationName: Radium.keyframes(slideInDown, "bounce")
-  }
-};
-
-const title = {
-  fontSize: "1rem",
-  fontWeight: "bold",
-  color: "black",
-  marginTop: "20px",
-  marginBottom: "10px"
-};
-
-const tentangkami = {
-  fontSize: "15px",
-  // fontWeight: "bold",
-  color: "black",
-  marginTop: "30px",
-  // marginBottom: "10px",
-  textAlign: "left"
-};
-
-const trading = {
-  fontSize: "1rem",
-  // fontWeight: "bold",
-  color: "black",
-  // marginTop: "20px",
-  marginBottom: "10px",
-  textAlign: "left"
-};
-
-const newstext = {
-  // fontSize: "1rem",
-  // color: "black",
-  // marginBottom: "10px",
-  // textAlign: "left"
-  fontSize: "15px",
-  // fontWeight: "bold",
-  color: "black",
-  marginTop: "20px",
-  // marginBottom: "10px",
-  textAlign: "left"
-};
 
 class ColorNavbar extends React.Component {
   constructor(props) {
@@ -265,272 +219,260 @@ class ColorNavbar extends React.Component {
     };
     const { containerStyle, colorStyle } = styles;
     return (
-      <LangContext.Consumer>
-        {({ lang }) => {
-          return (
-            <>
-              {/* <BlurryNavbar /> */}
-              <Container
-                className={`fixed-top  + ${this.state.navbarColor}`}
-                expand="lg"
-                style={containerStyle}
-              >
-                <Navbar
-                  // className={`fixed-top  + ${this.state.navbarColor}`}
-                  className={`fixed-top  + ${this.state.navbarColor}`}
-                  expand="lg"
-                  style={containerStyle}
+      <>
+        <Container
+          className={`fixed-top  + ${this.state.navbarColor}`}
+          expand="lg"
+          style={containerStyle}
+        >
+          <Navbar
+            // className={`fixed-top  + ${this.state.navbarColor}`}
+            className={`fixed-top  + ${this.state.navbarColor}`}
+            expand="lg"
+            style={containerStyle}
+          >
+            <Container>
+              <div className="navbar-translate">
+                <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+                  <Link to="/landing">
+                    <img
+                      src={this.state.logo}
+                      style={{ height: "7vh", width: "auto" }}
+                    />
+                    {/* TGF */}
+                  </Link>
+                </NavbarBrand>
+                <button
+                  className="navbar-toggler"
+                  id="example-navbar-transparent"
                 >
-                  <Container>
-                    <div className="navbar-translate">
-                      <NavbarBrand
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <Link to="/landing">
-                          <img
-                            src={this.state.logo}
-                            style={{ height: "7vh", width: "auto" }}
-                          />
-                          {/* TGF */}
-                        </Link>
-                      </NavbarBrand>
-                      <button
-                        className="navbar-toggler"
-                        id="example-navbar-transparent"
-                      >
-                        <span className="navbar-toggler-bar bar1" />
-                        <span className="navbar-toggler-bar bar2" />
-                        <span className="navbar-toggler-bar bar3" />
-                      </button>
-                    </div>
-                    <UncontrolledCollapse
-                      navbar
-                      toggler="#example-navbar-transparent"
+                  <span className="navbar-toggler-bar bar1" />
+                  <span className="navbar-toggler-bar bar2" />
+                  <span className="navbar-toggler-bar bar3" />
+                </button>
+              </div>
+              <UncontrolledCollapse
+                navbar
+                toggler="#example-navbar-transparent"
+              >
+                <Nav
+                  className="nav-pills-info nav-pills-icons nav-pills-lg ml-auto"
+                  pills
+                  role="tablist"
+                  navbar
+                >
+                  <Link to="/landing">
+                    <NavItem>
+                      <div onMouseEnter={() => this.onLeaveAll()}>
+                        <button
+                          className="dropdown dropbtn"
+                          style={{
+                            color: this.coloringNav("/landing")
+                          }}
+                        >
+                          {this.props.pageStore.Header.m1.title}
+                        </button>
+                      </div>
+                    </NavItem>
+                  </Link>
+
+                  {/* TENTANG KAMI */}
+                  <div
+                    // class="dropdown"
+                    onMouseEnter={() => this.onClick()}
+                    // onMouseLeave={() => this.onLeave()}
+                  >
+                    <button
+                      class="dropbtn"
+                      style={{
+                        color: this.coloringNav([
+                          "/tentang-kami",
+                          "/cabang",
+                          "/rekening-terpisah",
+                          "/legalitas"
+                        ]),
+                        // backgroundColor: this.coloringButton([
+                        //   "/tentang-kami",
+                        //   "/cabang",
+                        //   "/rekening-terpisah",
+                        //   "/legalitas"
+                        // ]),
+                        fontWeight: this.fontBold([
+                          "/tentang-kami",
+                          "/cabang",
+                          "/rekening-terpisah",
+                          "/legalitas"
+                        ])
+                      }}
                     >
-                      <Nav
-                        className="nav-pills-info nav-pills-icons nav-pills-lg ml-auto"
-                        pills
-                        role="tablist"
-                        navbar
-                      >
-                        <Link to="/landing">
-                          <NavItem>
-                            <div onMouseEnter={() => this.onLeaveAll()}>
-                              <button
-                                className="dropdown dropbtn"
-                                style={{
-                                  color: this.coloringNav("/landing")
-                                }}
-                              >
-                                {this.props.pageStore.Header.m1.title}
-                              </button>
-                            </div>
-                          </NavItem>
-                        </Link>
-
-                        {/* TENTANG KAMI */}
-                        <div
-                          // class="dropdown"
-                          onMouseEnter={() => this.onClick()}
-                          // onMouseLeave={() => this.onLeave()}
-                        >
-                          <button
-                            class="dropbtn"
-                            style={{
-                              color: this.coloringNav([
-                                "/tentang-kami",
-                                "/cabang",
-                                "/rekening-terpisah",
-                                "/legalitas"
-                              ]),
-                              // backgroundColor: this.coloringButton([
-                              //   "/tentang-kami",
-                              //   "/cabang",
-                              //   "/rekening-terpisah",
-                              //   "/legalitas"
-                              // ]),
-                              fontWeight: this.fontBold([
-                                "/tentang-kami",
-                                "/cabang",
-                                "/rekening-terpisah",
-                                "/legalitas"
-                              ])
-                            }}
-                          >
-                            {this.props.pageStore.Header.m2.title}
-                          </button>
-                        </div>
-
-                        {/* TRADING ONLINE */}
-                        <div
-                          class="dropdown "
-                          onMouseEnter={() => this.onClickTrading()}
-                        >
-                          <button
-                            class="dropbtn"
-                            style={{
-                              color: this.coloringNav([
-                                "/forex",
-                                "/gold",
-                                "/index-futures",
-                                "/cfd",
-                                "/komoditi",
-                                "/jam-perdagangan",
-                                "/pro-trader",
-                                "/topgrowth-trader",
-                                "/login",
-                                "/register"
-                              ]),
-                              // backgroundColor: this.coloringButton([
-                              //   "/forex",
-                              //   "/gold",
-                              //   "/index-futures",
-                              //   "/cfd",
-                              //   "/komoditi",
-                              //   "/jam-perdagangan",
-                              //   "/pro-trader",
-                              //   "/topgrowth-trader",
-                              //   "/login",
-                              //   "/register"
-                              // ]),
-                              fontWeight: this.fontBold([
-                                "/forex",
-                                "/gold",
-                                "/index-futures",
-                                "/cfd",
-                                "/komoditi",
-                                "/jam-perdagangan",
-                                "/pro-trader",
-                                "/topgrowth-trader",
-                                "/login",
-                                "/register"
-                              ])
-                            }}
-                          >
-                            {this.props.pageStore.Header.m3.title}
-                          </button>
-                        </div>
-
-                        {/* BERITA */}
-                        <div
-                          class="dropdown"
-                          onMouseEnter={() => this.onClickBerita()}
-                        >
-                          <button
-                            class="dropbtn"
-                            style={{
-                              color: this.coloringNav([
-                                "/newspage",
-                                "/stock-index",
-                                "/forex-commodity",
-                                "/economic-calendar",
-                                "/market-outlook",
-                                "/video-content"
-                              ]),
-                              // backgroundColor: this.coloringButton([
-                              //   "/newspage",
-                              //   "/stock-index",
-                              //   "/forex-commodity",
-                              //   "/economic-calendar",
-                              //   "/market-outlook",
-                              //   "/video-content"
-                              // ]),
-                              fontWeight: this.fontBold([
-                                "/newspage",
-                                "/stock-index",
-                                "/forex-commodity",
-                                "/economic-calendar",
-                                "/market-outlook",
-                                "/video-content"
-                              ])
-                            }}
-                          >
-                            {this.props.pageStore.Header.m4.title}
-                          </button>
-                        </div>
-
-                        <Link to="/edukasi">
-                          <NavItem>
-                            <div onMouseEnter={() => this.onLeaveAll()}>
-                              <button
-                                class="dropbtn"
-                                style={{
-                                  ...colorStyle,
-                                  color: this.coloringNav("/edukasi"),
-                                  // backgroundColor: this.coloringButton(
-                                  //   "/edukasi"
-                                  // ),
-                                  fontWeight: this.fontBold("/edukasi")
-                                }}
-                              >
-                                {this.props.pageStore.Header.m5.title}
-                              </button>
-                            </div>
-                          </NavItem>
-                        </Link>
-
-                        <Link to="/karir" style={colorStyle}>
-                          <NavItem>
-                            <div onMouseEnter={() => this.onLeaveAll()}>
-                              <button
-                                class="dropbtn"
-                                style={{
-                                  color: this.coloringNav("/karir"),
-                                  // backgroundColor: this.coloringButton("/karir"),
-                                  fontWeight: this.fontBold("/karir")
-                                }}
-                              >
-                                {this.props.pageStore.Header.m6.title}
-                              </button>
-                            </div>
-                          </NavItem>
-                        </Link>
-
-                        <Link to="/contact">
-                          <NavItem>
-                            <div onMouseEnter={() => this.onLeaveAll()}>
-                              <button
-                                class="dropbtn"
-                                style={{
-                                  color: this.coloringNav("/contact"),
-                                  // backgroundColor: this.coloringButton(
-                                  //   "/contact"
-                                  // ),
-                                  fontWeight: this.fontBold("/contact")
-
-                                  // color: this.state.color,
-                                  // ...(this.state.activeTab === "5"
-                                  //   ? { color: "#2AB4E7" }
-                                  //   : { color: this.state.color })
-                                }}
-                              >
-                                {this.props.pageStore.Header.m7.title}
-                              </button>
-                            </div>
-                          </NavItem>
-                        </Link>
-                      </Nav>
-                    </UncontrolledCollapse>
-                  </Container>
-
-                  <div onMouseLeave={() => this.onLeave()}>
-                    {this.state.childVisible ? <DropdownTentangKami /> : null}
+                      {this.props.pageStore.Header.m2.title}
+                    </button>
                   </div>
-                  <div onMouseLeave={() => this.onLeaveTrading()}>
-                    {this.state.childVisibleTrading ? (
-                      <DropdownTrading />
-                    ) : null}
+
+                  {/* TRADING ONLINE */}
+                  <div
+                    class="dropdown "
+                    onMouseEnter={() => this.onClickTrading()}
+                  >
+                    <button
+                      class="dropbtn"
+                      style={{
+                        color: this.coloringNav([
+                          "/forex",
+                          "/gold",
+                          "/index-futures",
+                          "/cfd",
+                          "/komoditi",
+                          "/jam-perdagangan",
+                          "/pro-trader",
+                          "/topgrowth-trader",
+                          "/login",
+                          "/register"
+                        ]),
+                        // backgroundColor: this.coloringButton([
+                        //   "/forex",
+                        //   "/gold",
+                        //   "/index-futures",
+                        //   "/cfd",
+                        //   "/komoditi",
+                        //   "/jam-perdagangan",
+                        //   "/pro-trader",
+                        //   "/topgrowth-trader",
+                        //   "/login",
+                        //   "/register"
+                        // ]),
+                        fontWeight: this.fontBold([
+                          "/forex",
+                          "/gold",
+                          "/index-futures",
+                          "/cfd",
+                          "/komoditi",
+                          "/jam-perdagangan",
+                          "/pro-trader",
+                          "/topgrowth-trader",
+                          "/login",
+                          "/register"
+                        ])
+                      }}
+                    >
+                      {this.props.pageStore.Header.m3.title}
+                    </button>
                   </div>
-                  <div onMouseLeave={() => this.onLeaveBerita()}>
-                    {this.state.childVisibleBerita ? <DropdownBerita /> : null}
+
+                  {/* BERITA */}
+                  <div
+                    class="dropdown"
+                    onMouseEnter={() => this.onClickBerita()}
+                  >
+                    <button
+                      class="dropbtn"
+                      style={{
+                        color: this.coloringNav([
+                          "/newspage",
+                          "/stock-index",
+                          "/forex-commodity",
+                          "/economic-calendar",
+                          "/market-outlook",
+                          "/video-content"
+                        ]),
+                        // backgroundColor: this.coloringButton([
+                        //   "/newspage",
+                        //   "/stock-index",
+                        //   "/forex-commodity",
+                        //   "/economic-calendar",
+                        //   "/market-outlook",
+                        //   "/video-content"
+                        // ]),
+                        fontWeight: this.fontBold([
+                          "/newspage",
+                          "/stock-index",
+                          "/forex-commodity",
+                          "/economic-calendar",
+                          "/market-outlook",
+                          "/video-content"
+                        ])
+                      }}
+                    >
+                      {this.props.pageStore.Header.m4.title}
+                    </button>
                   </div>
-                </Navbar>
-              </Container>
-            </>
-          );
-        }}
-      </LangContext.Consumer>
+
+                  <Link to="/edukasi">
+                    <NavItem>
+                      <div onMouseEnter={() => this.onLeaveAll()}>
+                        <button
+                          class="dropbtn"
+                          style={{
+                            ...colorStyle,
+                            color: this.coloringNav("/edukasi"),
+                            // backgroundColor: this.coloringButton(
+                            //   "/edukasi"
+                            // ),
+                            fontWeight: this.fontBold("/edukasi")
+                          }}
+                        >
+                          {this.props.pageStore.Header.m5.title}
+                        </button>
+                      </div>
+                    </NavItem>
+                  </Link>
+
+                  <Link to="/karir" style={colorStyle}>
+                    <NavItem>
+                      <div onMouseEnter={() => this.onLeaveAll()}>
+                        <button
+                          class="dropbtn"
+                          style={{
+                            color: this.coloringNav("/karir"),
+                            // backgroundColor: this.coloringButton("/karir"),
+                            fontWeight: this.fontBold("/karir")
+                          }}
+                        >
+                          {this.props.pageStore.Header.m6.title}
+                        </button>
+                      </div>
+                    </NavItem>
+                  </Link>
+
+                  <Link to="/contact">
+                    <NavItem>
+                      <div onMouseEnter={() => this.onLeaveAll()}>
+                        <button
+                          class="dropbtn"
+                          style={{
+                            color: this.coloringNav("/contact"),
+                            // backgroundColor: this.coloringButton(
+                            //   "/contact"
+                            // ),
+                            fontWeight: this.fontBold("/contact")
+
+                            // color: this.state.color,
+                            // ...(this.state.activeTab === "5"
+                            //   ? { color: "#2AB4E7" }
+                            //   : { color: this.state.color })
+                          }}
+                        >
+                          {this.props.pageStore.Header.m7.title}
+                        </button>
+                      </div>
+                    </NavItem>
+                  </Link>
+                </Nav>
+              </UncontrolledCollapse>
+            </Container>
+
+            <div onMouseLeave={() => this.onLeave()}>
+              {this.state.childVisible ? <DropdownTentangKami /> : null}
+            </div>
+            <div onMouseLeave={() => this.onLeaveTrading()}>
+              {this.state.childVisibleTrading ? <DropdownTrading /> : null}
+            </div>
+            <div onMouseLeave={() => this.onLeaveBerita()}>
+              {this.state.childVisibleBerita ? <DropdownBerita /> : null}
+            </div>
+          </Navbar>
+        </Container>
+      </>
     );
   }
 }

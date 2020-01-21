@@ -27,12 +27,14 @@ import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
 import rightButton from "../../assets/img/right-blue-arrow.png";
 import leftButton from "../../assets/img/left-blue-arrow.png";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg from "../../assets/img/bg-cfd.png";
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
+import SidebarMobile from "components/Navbars/SidebarMobile";
 
 const textTitle = {
   fontWeight: "bold",
@@ -86,8 +88,8 @@ class Content extends React.Component {
                 padding: 0
               }}
             >
-              <BlurryNavbar />
-
+              {/* <BlurryNavbar /> */}
+              <SidebarMobile />
               <div className="title title-header-mobile">
                 {this.props.pageStore.CFD.header}
               </div>
@@ -358,7 +360,7 @@ class Content extends React.Component {
                   }}
                 >
                   <BlurryNavbar />
-
+                  <ColoredNavbar location={{ ...this.props.location }} />
                   <div className="title title-header">
                     {this.props.pageStore.CFD.header}
                   </div>

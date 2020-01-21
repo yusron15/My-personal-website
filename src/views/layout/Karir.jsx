@@ -9,7 +9,8 @@ class Karir extends React.Component {
   render() {
     return (
       <>
-        <Content location={{ ...this.props.location }} />
+        <Content />
+        {/* <Content location={{ ...this.props.location }} /> */}
         <Footer />
       </>
     );

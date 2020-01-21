@@ -22,6 +22,8 @@ import fg3 from "../../assets/img/forexgold3.png";
 
 import bg from "../../assets/img/gold-header.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
 
@@ -77,7 +79,8 @@ class Features extends React.Component {
                 padding: 0
               }}
             >
-              <BlurryNavbar />
+              <SidebarMobile />
+              {/* <BlurryNavbar /> */}
 
               <div className="title title-header-mobile">
                 {this.props.pageStore.Gold.header}
@@ -233,6 +236,7 @@ class Features extends React.Component {
                   }}
                 >
                   <BlurryNavbar />
+                  <ColoredNavbar location={{ ...this.props.location }} />
 
                   <div className="title title-header">
                     {this.props.pageStore.Gold.header}

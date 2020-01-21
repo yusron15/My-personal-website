@@ -13,9 +13,9 @@ class Forex extends React.Component {
       <>
         {/* <Navbar /> */}
         {/* <div id="navbar" className="ml-auto" style={{ position: "fixed" }}> */}
-        <ColoredNavbar location={{ ...this.props.location }} />
+        {/* <ColoredNavbar location={{ ...this.props.location }} /> */}
         {/* </div> */}
-        <Content />
+        <Content location={{ ...this.props.location }} />
         <Footer />
       </>
     );

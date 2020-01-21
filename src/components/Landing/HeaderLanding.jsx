@@ -74,7 +74,7 @@ class HeaderLanding extends React.Component {
         <>
           <div className="cd-section " id="headers">
             <div>
-              <BlurryNavbar />
+              {/* <BlurryNavbar /> */}
               <div className="space-50" />
               <Col md="12" style={{ paddingRight: 0, paddingLeft: 0 }}>
                 <Carousel

@@ -25,6 +25,7 @@ import {
 import { LangContext } from "../MyContext";
 
 import { isMobile } from "react-device-detect";
+import SidebarMobile from "components/Navbars/SidebarMobile";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg from "../../assets/img/header-komoditi.png";
@@ -50,8 +51,8 @@ class Headers extends React.Component {
               padding: 0
             }}
           >
-            <BlurryNavbar />
-
+            {/* <BlurryNavbar /> */}
+            <SidebarMobile />
             <div className="title title-header-mobile">
               {this.props.pageStore.Komoditi.header}
             </div>
@@ -99,7 +100,7 @@ class Headers extends React.Component {
                 }}
               >
                 <BlurryNavbar />
-
+                <ColoredNavbar location={{ ...this.props.location }} />
                 <div className="title title-header">
                   {this.props.pageStore.Komoditi.header}
                 </div>

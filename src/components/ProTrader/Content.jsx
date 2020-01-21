@@ -24,6 +24,7 @@ import { LangContext } from "../MyContext";
 import { isMobile } from "react-device-detect";
 import ScrollAnimation from "react-animate-on-scroll";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
+import SidebarMobile from "components/Navbars/SidebarMobile";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg from "../../assets/img/header-trader.png";
 import rating from "../../assets/img/rating.png";
@@ -306,8 +307,9 @@ class Content extends React.Component {
                 padding: 0
               }}
             >
-              <BlurryNavbar />
-              <ColoredNavbar location={{ ...this.props.location }} />
+              <SidebarMobile />
+              {/* <BlurryNavbar />
+              <ColoredNavbar location={{ ...this.props.location }} /> */}
               <div className="title title-header-mobile">
                 {this.props.pageStore.protrader.header}
               </div>
