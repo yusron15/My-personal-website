@@ -27,9 +27,11 @@ import { LangContext } from "../../components/MyContext";
 import Radium, { StyleRoot } from "radium";
 import { fadeInUp } from "react-animations";
 // core components.
+import { isMobile } from "react-device-detect";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColorNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import DemoFooter from "../../components/Footers/Footer.jsx";
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import bg from "../../assets/img/bg-login.png";
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
@@ -79,11 +81,152 @@ class RegisterPage extends React.Component {
         "deg)"
     });
   };
-  render() {
+
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+          <div className="wrapper" ref="wrapper">
+            <div
+              className="team-1"
+              style={{
+                backgroundImage: `url(${bg})`,
+                backgroundSize: "cover",
+                padding: 0
+              }}
+            >
+              <SidebarMobile />
+              <div className="page-header">
+                <Container style={{ paddingTop: 0 }}>
+                  <Row>
+                    <Col className="mx-auto" lg="5" md="12">
+                      <StyleRoot>
+                        <div className="test" style={styles.fadeInUp}>
+                          <Card
+                            className="card-login"
+                            style={{
+                              backgroundColor: "rgba(14,14,14,0.7)"
+                            }}
+                          >
+                            <Form action="" className="form" method="">
+                              <CardHeader style={{ padding: 0 }}>
+                                <CardTitle
+                                  style={{
+                                    textAlign: "center",
+                                    color: "white",
+                                    fontSize: "3rem",
+                                    marginTop: "10px"
+                                  }}
+                                >
+                                  {/* {lang.login.form.title} */}
+                                  {this.props.pageStore.login.form.title}
+                                </CardTitle>
+                              </CardHeader>
+                              <CardBody>
+                                <InputGroup
+                                  className={classnames("input-lg", {
+                                    "input-group-focus": this.state
+                                      .firstNameFocus
+                                  })}
+                                >
+                                  <InputGroupAddon addonType="prepend">
+                                    <InputGroupText
+                                      style={{ borderColor: "#FFFFFF" }}
+                                    >
+                                      <i className="tim-icons icon-single-02" />
+                                    </InputGroupText>
+                                  </InputGroupAddon>
+                                  <Input
+                                    style={{ borderColor: "#FFFFFF" }}
+                                    placeholder="First Name..."
+                                    type="text"
+                                    onFocus={e =>
+                                      this.setState({
+                                        firstNameFocus: true
+                                      })
+                                    }
+                                    onBlur={e =>
+                                      this.setState({
+                                        firstNameFocus: false
+                                      })
+                                    }
+                                  />
+                                </InputGroup>
+                                <InputGroup
+                                  className={classnames("input-lg", {
+                                    "input-group-focus": this.state
+                                      .lastNameFocus
+                                  })}
+                                >
+                                  <InputGroupAddon addonType="prepend">
+                                    <InputGroupText
+                                      style={{ borderColor: "#FFFFFF" }}
+                                    >
+                                      <i className="tim-icons icon-caps-small" />
+                                    </InputGroupText>
+                                  </InputGroupAddon>
+                                  <Input
+                                    style={{ borderColor: "#FFFFFF" }}
+                                    placeholder="Last Name..."
+                                    type="text"
+                                    onFocus={e =>
+                                      this.setState({ lastNameFocus: true })
+                                    }
+                                    onBlur={e =>
+                                      this.setState({
+                                        lastNameFocus: false
+                                      })
+                                    }
+                                  />
+                                </InputGroup>
+                              </CardBody>
+                              <CardFooter className="text-center">
+                                <Button
+                                  block
+                                  className="btn-round"
+                                  color="info"
+                                  href="#pablo"
+                                  onClick={e => e.preventDefault()}
+                                  size="lg"
+                                >
+                                  {this.props.pageStore.login.form.signIn}
+                                </Button>
+                              </CardFooter>
+                              <div className="pull-left ml-3 mb-3">
+                                <h6>
+                                  <Link
+                                    to="/register"
+                                    style={{ color: "white" }}
+                                  >
+                                    Create Account
+                                  </Link>
+                                </h6>
+                              </div>
+                              <div className="pull-right mr-3 mb-3">
+                                <h6>
+                                  <Link
+                                    to="/contact"
+                                    style={{ color: "white" }}
+                                  >
+                                    Need Help?
+                                  </Link>
+                                </h6>
+                              </div>
+                            </Form>
+                          </Card>
+                        </div>
+                      </StyleRoot>
+                    </Col>
+                  </Row>
+                </Container>
+              </div>
+              <DemoFooter />
+            </div>
+          </div>
+        </>
+      );
+    }
     return (
-      // <LangContext.Consumer>
-      //   {({ lang }) => {
-      //     return (
       <>
         <div className="wrapper" ref="wrapper">
           <div
@@ -216,10 +359,11 @@ class RegisterPage extends React.Component {
           </div>
         </div>
       </>
-      //     );
-      //   }}
-      // </LangContext.Consumer>
     );
+  };
+
+  render() {
+    return this.renderContent();
   }
 }
 

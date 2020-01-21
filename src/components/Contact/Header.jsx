@@ -30,6 +30,7 @@ import { LangContext } from "../MyContext";
 // core components
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
 
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
@@ -46,21 +47,20 @@ class ContactUs extends React.Component {
       return (
         <>
           <div
-            className="background-header header-filter"
+            className="background-header-mobile header-filter"
             style={{
               backgroundImage:
                 "url(" + require("assets/img/header-contact.png") + ")",
               padding: 0
             }}
           >
-            <BlurryNavbar />
-            <ColoredNavbar location={{ ...this.props.location }} />
+            <SidebarMobile />
             {/* <div className="wrapper" ref="wrapper"> */}
             <div className="title-header header-filter">
               <div className="page-header-image" />
               <Container>
                 <Row>
-                  <Col className="text-center title-header" md="12">
+                  <Col className="text-center title-header-mobile" md="12">
                     <h1 className="title">
                       {this.props.pageStore.hubungikami.header.title}
                     </h1>

@@ -73,9 +73,9 @@ class Content extends React.Component {
             <Container fluid>
               <Row>
                 <Col className="ml-auto mr-auto text-center mt-5" md="6">
-                  <h1 className="title font-black">
+                  <h3 className="title font-black">
                     {this.props.pageStore.hubungikami.top.title}
-                  </h1>
+                  </h3>
                   <h4 className="desc font-black">
                     {this.props.pageStore.hubungikami.top.subtitle}
                   </h4>
@@ -86,12 +86,12 @@ class Content extends React.Component {
                   <Row>
                     <Col className="ml-auto" md="6">
                       <Container>
-                        <div
-                          className=" font-black title-text"
-                          style={{ fontSize: "1.5rem" }}
+                        <h3
+                          className=" font-black "
+                          // style={{ fontSize: "1.5rem" }}
                         >
                           {this.props.pageStore.hubungikami.contact.title}
-                        </div>
+                        </h3>
                         <Row>
                           <Col>
                             <div className="description font-black desc-text">

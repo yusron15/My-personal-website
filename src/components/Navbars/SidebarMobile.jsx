@@ -265,12 +265,12 @@ class SidebarMobile extends React.Component {
                   </Link>
                   <Link to="/market-outlook">
                     <div style={subText}>
-                      > {this.props.pageStore.Header.m4.dropdown[3].title}
+                      > {this.props.pageStore.Header.m4.dropdown[4].title}
                     </div>
                   </Link>
                   <Link to="/video-content">
                     <div style={subText}>
-                      > {this.props.pageStore.Header.m4.dropdown[3].title}
+                      > {this.props.pageStore.Header.m4.dropdown[5].title}
                     </div>
                   </Link>
                 </Collapsible>

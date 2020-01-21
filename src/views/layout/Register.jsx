@@ -39,7 +39,9 @@ import {
 } from "reactstrap";
 import Radium, { StyleRoot } from "radium";
 import { fadeInUp } from "react-animations";
+import { isMobile } from "react-device-detect";
 // core components.
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColorNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import CardRegister from "../../components/Register/CardRegister.jsx";
@@ -90,7 +92,40 @@ class RegisterPage extends React.Component {
         "deg)"
     });
   };
-  render() {
+
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+          <div className="wrapper" ref="wrapper">
+            <div
+              className="team-1"
+              style={{
+                backgroundImage: `url(${bg})`,
+                backgroundSize: "cover",
+                padding: 0
+              }}
+            >
+              <SidebarMobile />
+              <div className="page-header">
+                <Container style={{ paddingTop: 0 }}>
+                  <Row>
+                    <Col className="mx-auto" lg="5" md="12">
+                      <StyleRoot>
+                        <div className="test" style={styles.fadeInUp}>
+                          <CardRegister />
+                        </div>
+                      </StyleRoot>
+                    </Col>
+                  </Row>
+                </Container>
+              </div>
+              <DemoFooter />
+            </div>
+          </div>
+        </>
+      );
+    }
     return (
       <>
         <div className="wrapper" ref="wrapper">
@@ -122,6 +157,9 @@ class RegisterPage extends React.Component {
         </div>
       </>
     );
+  };
+  render() {
+    return this.renderContent();
   }
 }
 

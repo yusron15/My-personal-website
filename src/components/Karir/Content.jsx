@@ -18,15 +18,44 @@ import ColoredNavbar from "../../components/Navbars/ColoredNavbar";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
 import bg from "../../assets/img/header-karir.png";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
+import ReactSearchBox from "react-search-box";
 import "../../assets/css/main.css";
+
+const searchStyle = {
+  minWidth: "100vw"
+};
 
 const customStyles = {
   control: (base, state) => ({
     ...base,
     minWidth: "300px",
-    height: "35px"
+    height: "35px",
+    marginTop: "30px"
   })
 };
+
+const data = [
+  {
+    key: "john",
+    value: "John Doe"
+  },
+  {
+    key: "jane",
+    value: "Jane Doe"
+  },
+  {
+    key: "mary",
+    value: "Mary Phillips"
+  },
+  {
+    key: "robert",
+    value: "Robert"
+  },
+  {
+    key: "karius",
+    value: "Karius"
+  }
+];
 
 class Blogs extends React.Component {
   state = {
@@ -47,8 +76,7 @@ class Blogs extends React.Component {
                   padding: 0
                 }}
               >
-                <BlurryNavbar />
-                <ColoredNavbar location={{ ...this.props.location }} />
+                <SidebarMobile />
                 <div className="title title-header-mobile">Karir</div>
               </div>
               <Container>
@@ -63,9 +91,17 @@ class Blogs extends React.Component {
                     </p>
                     <Row style={{ marginBottom: "10%" }}>
                       <Col md="6">
-                        <SearchField
+                        {/* <SearchField
+                          styles={searchStyle}
                           className="react-search-field-input"
                           placeholder="Cari "
+                        /> */}
+                        <ReactSearchBox
+                          style={{ color: "black" }}
+                          placeholder="Search"
+                          value="Doe"
+                          data={data}
+                          callback={record => console.log(record)}
                         />
                       </Col>
 
