@@ -34,6 +34,7 @@
     "react-flags-select": "^1.1.10",
     "react-ga": "^2.7.0",
     "react-google-maps": "^9.4.5",
+    "react-html-parser": "^2.0.2",
     "react-line": "^1.0.2",
     "react-multi-language": "^0.4.2",
     "react-player": "^1.14.2",

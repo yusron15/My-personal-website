@@ -34,7 +34,7 @@ import submit from "../../assets/img/submit.png";
 import demand from "../../assets/img/demand.png";
 import sorting from "../../assets/img/sorting.png";
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
 
@@ -195,7 +195,7 @@ class Content extends React.Component {
   };
 
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    await this.props.getContent("protrader", "id");
   }
 
   handleRatingEnter = () => {
@@ -639,7 +639,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);

@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 // ReactJS plugin for a nice carousel
 import Slick from "react-slick";
@@ -38,6 +22,7 @@ import {
   CarouselItem,
   CarouselIndicators
 } from "reactstrap";
+import { isMobile } from "react-device-detect";
 
 import { Link } from "react-router-dom";
 
@@ -51,6 +36,67 @@ import prevButton from "../../assets/img/prevbutton.png";
 import nextButton from "../../assets/img/nextbutton.png";
 import leftButton from "../../assets/img/blue-right.png";
 import rightButton from "../../assets/img/blue-left.png";
+
+import sungaigerong from "../../assets/img/sumgaigerong.png";
+
+const items2 = [
+  {
+    content: (
+      // <div className="info info-primary">
+      //   <div className="card-avatar">
+      //     <a href="#pablo" onClick={e => e.preventDefault()}>
+      //       <img
+      //         alt="..."
+      //         className="img img-raised rounded"
+      //         src={require("assets/img/michael.jpg")}
+      //       />
+      //     </a>
+      //   </div>
+      //   <h4 className="info-title">Best Quality</h4>
+      //   <p className="description">
+      //     Gain access to the demographics, psychographics, and location of
+      //     unique people.
+      //   </p>
+      // </div>
+      <div
+        className="info info-warning broken-white header-filter"
+        style={{
+          backgroundImage: `url(${sungaigerong})`,
+          backgroundColor: "rgba(0, 0, 0, 0.25)",
+          backgroundSize: "cover"
+        }}
+      >
+        <h4 className="title" style={{ color: "white" }}>
+          Best Quality
+        </h4>
+        <p style={{ color: "white" }}>
+          Gain access to the demographics, psychographics, and location of
+          unique people.
+        </p>
+      </div>
+    ),
+    altText: "",
+    caption: "",
+    src: "0"
+  },
+  {
+    content: (
+      <div
+        className="info info-warning broken-white"
+        style={{ backgroundImage: `url(${sungaigerong})` }}
+      >
+        <h4 className="title font-black">Best Quality</h4>
+        <p className="font-black" style={{ color: "black" }}>
+          Gain access to the demographics, psychographics, and location of
+          unique people.
+        </p>
+      </div>
+    ),
+    altText: "",
+    caption: "",
+    src: "1"
+  }
+];
 
 const PrevButton = props => {
   return (
@@ -106,7 +152,57 @@ class NewsInverted extends React.Component {
     activeSlide2: 0
   };
 
-  render() {
+  toggle = tab => {
+    if (this.state.activeTab !== tab) {
+      this.setState({
+        activeTab: tab
+      });
+    }
+  };
+
+  onExiting = carousel => {
+    this["carousel" + carousel + "Animating"] = true;
+  };
+
+  onExited = carousel => {
+    this["carousel" + carousel + "Animating"] = false;
+  };
+  next = (carousel, items, tab) => {
+    console.log(this.state["carousel" + carousel + "Index"]);
+    if (this["carousel" + carousel + "Animating"]) return;
+    const nextIndex =
+      this.state["carousel" + carousel + "Index"] === items.length - 1
+        ? 0
+        : this.state["carousel" + carousel + "Index"] + 1;
+    this.setState({
+      ["carousel" + carousel + "Index"]: nextIndex,
+      activeTab: nextIndex
+    });
+  };
+
+  previous = (carousel, items) => {
+    console.log(this.state["carousel" + carousel + "Index"]);
+    if (this["carousel" + carousel + "Animating"]) return;
+    const nextIndex =
+      this.state["carousel" + carousel + "Index"] === 0
+        ? items.length - 1
+        : this.state["carousel" + carousel + "Index"] - 1;
+    this.setState({
+      ["carousel" + carousel + "Index"]: nextIndex,
+      activeTab: nextIndex
+    });
+  };
+
+  goToIndex = (newIndex, carousel) => {
+    console.log(this.state["carousel" + carousel + "Index"]);
+    if (this["carousel" + carousel + "Animating"]) return;
+    this.setState({
+      ["carousel" + carousel + "Index"]: newIndex,
+      activeTab: newIndex
+    });
+  };
+
+  renderContent = () => {
     let slickSettings = {
       dots: false,
       infinite: true,
@@ -145,7 +241,75 @@ class NewsInverted extends React.Component {
         }
       ]
     };
-
+    if (isMobile) {
+      return (
+        <>
+          <h3 className="title center" style={{ textAlign: "center" }}>
+            Analisa Harian
+          </h3>
+          <div className="testimonials-2" style={{ padding: 0 }}>
+            <Container>
+              <Row>
+                <Col md="12">
+                  <Carousel
+                    activeIndex={this.state.carousel2Index}
+                    next={() => this.next(2, items2)}
+                    previous={() => this.previous(2, items2)}
+                  >
+                    <CarouselIndicators
+                      items={items2}
+                      activeIndex={this.state.carousel2Index}
+                      onClickHandler={newIndex => this.goToIndex(newIndex, 2)}
+                    />
+                    {items2.map((item, key) => {
+                      return (
+                        <CarouselItem
+                          onExiting={() => this.onExiting(2)}
+                          onExited={() => this.onExited(2)}
+                          key={key}
+                          className="justify-content-center"
+                        >
+                          {item.content}
+                        </CarouselItem>
+                      );
+                    })}
+                    <a
+                      className="carousel-control-prev"
+                      data-slide="prev"
+                      href="#pablo"
+                      onClick={e => {
+                        e.preventDefault();
+                        this.previous(2, items2);
+                      }}
+                      role="button"
+                    >
+                      <i className="tim-icons icon-minimal-left" />
+                    </a>
+                    <a
+                      className="carousel-control-next"
+                      data-slide="next"
+                      href="#pablo"
+                      onClick={e => {
+                        e.preventDefault();
+                        this.next(2, items2);
+                      }}
+                      role="button"
+                    >
+                      <i className="tim-icons icon-minimal-right" />
+                    </a>
+                  </Carousel>
+                </Col>
+              </Row>
+              <Link to="/newspage">
+                <div style={{ marginBottom: "20px", textAlign: "center" }}>
+                  <button className="filled-button">Explore →</button>
+                </div>
+              </Link>
+            </Container>
+          </div>{" "}
+        </>
+      );
+    }
     return (
       <>
         <div className="cd-section" id="testimonials">
@@ -254,6 +418,10 @@ class NewsInverted extends React.Component {
         </div>
       </>
     );
+  };
+
+  render() {
+    return this.renderContent();
   }
 }
 

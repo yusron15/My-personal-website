@@ -615,8 +615,12 @@ const defaultState = {
   currentLang: "ID"
 };
 
+// const defaultState = {
+//   Landing: {}
+// };
+
 export default (state = defaultState, action = {}) => {
-  console.log(action);
+  console.log(action, "fgbfgbfgbf");
   switch (action.type) {
     case "GET_PAGE": {
       return {
@@ -636,6 +640,22 @@ export default (state = defaultState, action = {}) => {
       return {
         ...state,
         ...action.payload
+      };
+    }
+
+    case "GET_LANDING": {
+      return {
+        ...state,
+        Landing: action.payload
+      };
+    }
+
+    case "GET_CONTENT": {
+      let keys = Object.keys(action.payload)[0];
+      // alert(keys);
+      return {
+        ...state,
+        [keys]: action.payload[keys]
       };
     }
 

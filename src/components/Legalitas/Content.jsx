@@ -44,7 +44,7 @@ import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
 
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
 
@@ -54,7 +54,7 @@ class Projects extends React.Component {
   };
 
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    await this.props.getContent("legalitas", "id");
   }
 
   toggle = tab => {
@@ -356,7 +356,7 @@ class Projects extends React.Component {
                     }}
                   >
                     <BlurryNavbar />
-        <ColoredNavbar location={{ ...this.props.location }} />
+                    <ColoredNavbar location={{ ...this.props.location }} />
 
                     <div className="title title-header">
                       {this.props.pageStore.Landing.Legality.header}
@@ -625,7 +625,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Projects);

@@ -1,4 +1,10 @@
 // import { GetNews } from "../actions/newsActions";
-import { fetchPage } from "../actions/pagesAction";
+import { fetchPage, getContent } from "../actions/pagesAction";
+import { fetchLanding } from "../actions/landingActions";
 
-export { fetchPage };
+export {
+  // page action
+  fetchLanding,
+  fetchPage,
+  getContent
+};

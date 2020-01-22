@@ -3,13 +3,13 @@ import { LangContext } from "../MyContext";
 import { Container, Row, Col } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
 
 class Content extends React.Component {
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    await this.props.getContent("Komoditi", "id");
   }
 
   state = {
@@ -301,7 +301,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);

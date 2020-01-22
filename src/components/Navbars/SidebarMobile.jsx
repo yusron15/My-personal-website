@@ -98,7 +98,8 @@ class SidebarMobile extends React.Component {
           expand="lg"
           style={{
             height: "80px",
-            position: "fixed"
+            position: "fixed",
+            top: 0
           }}
         >
           <Container>
@@ -152,7 +153,7 @@ class SidebarMobile extends React.Component {
                       > {this.props.pageStore.Header.m2.dropdown[1].title}
                     </div>
                   </Link>
-                  <Link to="/rekeing-terpisah">
+                  <Link to="/rekening-terpisah">
                     <div style={subText}>
                       > {this.props.pageStore.Header.m2.dropdown[2].title}
                     </div>

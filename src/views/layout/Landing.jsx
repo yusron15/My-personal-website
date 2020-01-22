@@ -18,7 +18,7 @@ import "../../assets/css/main.css";
 import VizSensor from "react-visibility-sensor";
 import { connect } from "react-redux";
 
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { fetchPage, getContent } from "../../redux/ducks/actions.js";
 
 class Landing extends React.Component {
   constructor() {
@@ -29,7 +29,8 @@ class Landing extends React.Component {
     };
   }
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    // await this.props.fetchPage("landing", "id");
+    await this.props.getContent("landing", "id");
     window.scroll(0, 0);
   }
 
@@ -89,7 +90,7 @@ class Landing extends React.Component {
 
         <NewsLetter />
         <Footer />
-        {/* <BottomNavbar /> */}
+        <BottomNavbar />
         <div className="space-50" />
       </>
     );
@@ -101,7 +102,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  // fetchPage: (section, lang) => dispatch(fetchPage(section, lang)),
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Landing);

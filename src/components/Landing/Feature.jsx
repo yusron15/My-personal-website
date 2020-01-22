@@ -9,12 +9,12 @@ import { isMobile } from "react-device-detect";
 import laptop from "../../assets/img/macbook.png";
 import feature from "../../assets/img/all-device.png";
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 import "../../assets/css/main.css";
 
 class Features extends React.Component {
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    await this.props.getContent("landing", "id");
   }
 
   renderContent = () => {
@@ -531,7 +531,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Features);

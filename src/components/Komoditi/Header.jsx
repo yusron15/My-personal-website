@@ -30,13 +30,13 @@ import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg from "../../assets/img/header-komoditi.png";
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
 
 class Headers extends React.Component {
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    await this.props.getContent("Komoditi", "id");
   }
   state = {};
 
@@ -118,7 +118,10 @@ class Headers extends React.Component {
                     }}
                   >
                     <Container style={{ paddingTop: 0 }}>
-                      <p className="description" style={{ color: "black" }}>
+                      <p
+                        className="description"
+                        style={{ color: "black", textAlign: "justify" }}
+                      >
                         {this.props.pageStore.Komoditi.top}
                       </p>
                     </Container>
@@ -142,7 +145,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Headers);

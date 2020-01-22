@@ -2,12 +2,15 @@ import React from "react";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import Content from "../../components/Cfd/Content.jsx";
 import Footer from "../../components/Footers/Footer.jsx";
+import { getContent } from "../../redux/ducks/actions.js";
+import { connect } from "react-redux";
 
 class Cfd extends React.Component {
   state = {};
-  componentDidMount = () => {
+  async componentDidMount() {
+    await this.props.getContent("CFD", "id");
     window.scroll(0, 0);
-  };
+  }
   render() {
     return (
       <>
@@ -19,4 +22,12 @@ class Cfd extends React.Component {
   }
 }
 
-export default Cfd;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  getContent: (section, lang) => dispatch(getContent(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cfd);

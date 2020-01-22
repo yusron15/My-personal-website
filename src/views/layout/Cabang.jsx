@@ -13,8 +13,8 @@ class Cabang extends React.Component {
     return (
       <>
         {/* <Navbar /> */}
-        <ColoredNavbar location={{ ...this.props.location }} />
-        <CabangKami />
+        {/* <ColoredNavbar /> */}
+        <CabangKami location={{ ...this.props.location }} />
         <Footer />
       </>
     );

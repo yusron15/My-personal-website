@@ -21,12 +21,12 @@ import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
 class Content extends React.Component {
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    await this.props.getContent("rekeningterpisah", "id");
   }
 
   renderContent = () => {
@@ -83,10 +83,7 @@ class Content extends React.Component {
                         {this.props.pageStore.rekeningterpisah.content.content}
                         <br />
 
-                        {
-                          this.props.pageStore.rekeningterpisah.content
-                            .subContent[0]
-                        }
+                        {this.props.pageStore.rekeningterpisah.subContent[0]}
                       </p>
                     </Col>
                   </Row>
@@ -102,7 +99,7 @@ class Content extends React.Component {
                             style={{ lineHeight: "25px", textAlign: "justify" }}
                           >
                             {
-                              this.props.pageStore.rekeningterpisah.content
+                              this.props.pageStore.rekeningterpisah
                                 .subContent[1]
                             }
                           </p>
@@ -120,7 +117,7 @@ class Content extends React.Component {
                             style={{ lineHeight: "25px", textAlign: "justify" }}
                           >
                             {
-                              this.props.pageStore.rekeningterpisah.content
+                              this.props.pageStore.rekeningterpisah
                                 .subContent[2]
                             }
                           </p>
@@ -195,10 +192,7 @@ class Content extends React.Component {
                             }
                             <br />
 
-                            {
-                              this.props.pageStore.rekeningterpisah.content
-                                .subContent[0]
-                            }
+                            {this.props.pageStore.rekeningterpisah.subContent}
                           </p>
                         </Col>
                       </Row>
@@ -214,8 +208,8 @@ class Content extends React.Component {
                                 style={{ lineHeight: "25px" }}
                               >
                                 {
-                                  this.props.pageStore.rekeningterpisah.content
-                                    .subContent[1]
+                                  this.props.pageStore.rekeningterpisah
+                                    .subContent
                                 }
                               </p>
                             </Col>
@@ -232,8 +226,8 @@ class Content extends React.Component {
                                 style={{ lineHeight: "25px" }}
                               >
                                 {
-                                  this.props.pageStore.rekeningterpisah.content
-                                    .subContent[2]
+                                  this.props.pageStore.rekeningterpisah
+                                    .subContent
                                 }
                               </p>
                             </Col>
@@ -261,7 +255,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);

@@ -45,6 +45,7 @@ import phoneHeader2 from "../../assets/img/phoneHeader2.png";
 import appstore from "../../assets/img/appstore.png";
 import playstore from "../../assets/img/playstore.png";
 import iphone3 from "../../assets/img/iphone3.png";
+import headerimage from "../../assets/img/header-image1.png";
 
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
@@ -90,7 +91,10 @@ class HeaderLanding extends React.Component {
                       className="page-header minHeight header-filter"
                       style={{
                         backgroundImage:
-                          "url(" + require("assets/img/header-image.png") + ")",
+                          "url(" +
+                          this.props.pageStore.Landing.HeaderLanding.slide[0]
+                            .image +
+                          ")",
                         backgroundSize: "cover"
                       }}
                     >
@@ -135,7 +139,8 @@ class HeaderLanding extends React.Component {
                       style={{
                         backgroundImage:
                           "url(" +
-                          require("assets/img/header-image1.png") +
+                          this.props.pageStore.Landing.HeaderLanding.slide[1]
+                            .image +
                           ")",
                         backgroundSize: "cover"
                       }}
@@ -180,7 +185,8 @@ class HeaderLanding extends React.Component {
                       style={{
                         backgroundImage:
                           "url(" +
-                          require("assets/img/header-image2.png") +
+                          this.props.pageStore.Landing.HeaderLanding.slide[2]
+                            .image +
                           ")",
                         backgroundSize: "cover"
                       }}
@@ -263,7 +269,10 @@ class HeaderLanding extends React.Component {
                           style={{
                             backgroundImage:
                               "url(" +
-                              require("assets/img/header-image.png") +
+                              this.props.pageStore.Landing.HeaderLanding
+                                .slide[0].image +
+                              // == null ? :  this.props.pageStore.Landing.HeaderLanding
+                              // .slide[0].image
                               ")",
                             backgroundSize: "cover"
                           }}
@@ -303,7 +312,8 @@ class HeaderLanding extends React.Component {
                           style={{
                             backgroundImage:
                               "url(" +
-                              require("assets/img/header-image1.png") +
+                              this.props.pageStore.Landing.HeaderLanding
+                                .slide[1].image +
                               ")",
                             backgroundSize: "cover"
                           }}
@@ -342,7 +352,8 @@ class HeaderLanding extends React.Component {
                           style={{
                             backgroundImage:
                               "url(" +
-                              require("assets/img/header-image2.png") +
+                              this.props.pageStore.Landing.HeaderLanding
+                                .slide[2].image +
                               ")",
                             backgroundSize: "cover"
                           }}

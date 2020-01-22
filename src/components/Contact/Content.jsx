@@ -37,7 +37,7 @@ import map from "../../assets/img/map-contact.png";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
 
@@ -53,7 +53,7 @@ const MapWithAMarker = withGoogleMap(props => (
 class Content extends React.Component {
   state = {};
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    await this.props.getContent("hubungikami", "id");
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.wrapper.scrollTop = 0;
@@ -277,7 +277,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);

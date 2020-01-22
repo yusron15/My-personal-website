@@ -33,7 +33,7 @@ import requote from "../../assets/img/requote.png";
 import support from "../../assets/img/support.png";
 
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
 
@@ -86,7 +86,7 @@ class Testimonials extends React.Component {
   };
 
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    await this.props.getContent("landing", "id");
   }
 
   handleBiayaEnter = () => {
@@ -839,7 +839,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Testimonials);

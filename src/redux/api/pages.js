@@ -11,3 +11,15 @@ export async function getPage(section, lang) {
     throw error;
   }
 }
+
+export async function GetContent(page, lang) {
+  try {
+    const result = await fetchJson(
+      "GET",
+      `Pages/${page}/getDetailByType/${lang}`
+    );
+    return result;
+  } catch (error) {
+    throw error;
+  }
+}

@@ -40,7 +40,7 @@ import bglegalitas from "../../assets/img/bg-legalitas.png";
 import DarkNavbar from "../../components/Navbars/DarkNavbar.jsx";
 
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
 
@@ -72,7 +72,7 @@ class Projects extends React.Component {
   };
 
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    await this.props.getContent("landing", "id");
   }
 
   toggle = tab => {
@@ -624,7 +624,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Projects);

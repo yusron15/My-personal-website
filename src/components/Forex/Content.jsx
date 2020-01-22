@@ -24,7 +24,7 @@ import "../../assets/css/main.css";
 import { LangContext } from "../MyContext";
 
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 import { styles } from "react-animations/lib/swing";
 
@@ -69,7 +69,7 @@ const text = {
 
 class Features extends React.Component {
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    await this.props.getContent("Forex", "id");
   }
 
   renderContent = () => {
@@ -624,7 +624,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Features);
