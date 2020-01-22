@@ -322,7 +322,9 @@ class ColorNavbar extends React.Component {
                           onMouseEnter={() => this.onClickTrading()}
                         >
                           <button class="dropbtn" style={colorStyle}>
-                            {ReactHtmlParser(this.props.pageStore.Header.m3.titl)e}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Header.m3.title
+                            )}
                           </button>
                         </div>
 
@@ -332,7 +334,9 @@ class ColorNavbar extends React.Component {
                           onMouseEnter={() => this.onClickBerita()}
                         >
                           <button class="dropbtn" style={colorStyle}>
-                            {ReactHtmlParser(this.props.pageStore.Header.m4.title)}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Header.m4.title
+                            )}
                           </button>
                         </div>
 
@@ -340,7 +344,9 @@ class ColorNavbar extends React.Component {
                           <NavItem>
                             <div onMouseEnter={() => this.onLeaveAll()}>
                               <button class="dropbtn" style={colorStyle}>
-                                {ReactHtmlParser(this.props.pageStore.Header.m5.title)}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.Header.m5.title
+                                )}
                               </button>
                             </div>
                           </NavItem>
