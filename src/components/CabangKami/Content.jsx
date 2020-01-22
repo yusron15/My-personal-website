@@ -2,6 +2,8 @@ import React from "react";
 import Slick from "react-slick";
 import "../../assets/css/helper.css";
 
+import { connect } from "react-redux";
+
 // reactstrap components
 import {
   Button,
@@ -33,6 +35,8 @@ import bg from "../../assets/img/header-cabang.png";
 import { isMobile } from "react-device-detect";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import sungaigerong from "../../assets/img/sumgaigerong.png";
+
+import { getContent } from "../../redux/ducks/actions";
 
 import "../../assets/css/main.css";
 
@@ -175,7 +179,7 @@ class News extends React.Component {
       dots: false,
       infinite: true,
       centerMode: true,
-      slidesToShow: 4,
+      slidesToShow: 3,
       slidesToScroll: 1,
       prevArrow: <PrevButton />,
       nextArrow: <NextButton />,
@@ -312,69 +316,29 @@ class News extends React.Component {
                 >
                   {/* <ScrollAnimation animateIn="fadeInRight" animateOut="fadeOut"> */}
                   <Slick {...slickSettings}>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 0 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("1");
-                        // }}
-                        style={{
-                          backgroundImage:
-                            "url(" +
-                            require("assets/img/kantorpusat.png") +
-                            ")",
-                          height: "30vh",
-                          backgroundSize: "cover"
-                        }}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 1 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("2");
-                        // }}
-                        style={{
-                          backgroundImage:
-                            "url(" +
-                            require("assets/img/sumgaigerong.png") +
-                            ")",
-                          height: "30vh",
-                          backgroundSize: "cover"
-                        }}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 2 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("3");
-                        // }}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={
-                          this.state.activeSlide === "4" ? "scaled" : ""
-                        }
-                        // onClick={() => {
-                        //   this.toggle("4");
-                        // }}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={
-                          this.state.activeSlide === "5" ? "scaled" : ""
-                        }
-                        // onClick={() => {
-                        //   this.toggle("5");
-                        // }}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
+                    {this.props.pageStore.cabang.map((item, index) => {
+                      return (
+                        <div key={index}>
+                          <NavLink
+                            className={
+                              this.state.activeSlide === index ? "scaled" : ""
+                            }
+                            // onClick={() => {
+                            //   this.toggle("1");
+                            // }}
+                            style={{
+                              backgroundImage:
+                                // "url(" +
+                                // require("assets/img/kantorpusat.png") +
+                                // ")",
+                                "url(" + item.image + ")",
+                              height: "30vh",
+                              backgroundSize: "cover"
+                            }}
+                          ></NavLink>
+                        </div>
+                      );
+                    })}
                   </Slick>
                   {/* </ScrollAnimation> */}
                 </Col>
@@ -439,4 +403,12 @@ class News extends React.Component {
   }
 }
 
-export default News;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  // fetchPage: (section, lang) => dispatch(fetchPage(section, lang)),
+});
+
+export default connect(mapStateToProps, null)(News);

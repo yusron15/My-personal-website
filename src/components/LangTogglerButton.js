@@ -13,6 +13,8 @@ import id from "../lang/id.json";
 import cn from "../lang/cn.json";
 import cn_tr from "../lang/cn_tr.json";
 
+import { getContent } from "../redux/ducks/actions";
+
 function LangTogglerButton(props) {
   return (
     <LangContext.Consumer>
@@ -33,18 +35,22 @@ function LangTogglerButton(props) {
           onSelect={async a => {
             let data = id;
             if (a == "GB") {
-              data = eng;
+              data = "EN";
             }
 
             if (a == "CN") {
-              data = cn;
+              data = "";
             }
 
             if (a == "HK") {
-              data = cn_tr;
+              data = "HK";
             }
-            await props.fetchDataLang(data);
+
+            if (a == "ID") {
+              data = "ID";
+            }
             await props.changeLang(a);
+            await props.getContent(props.activePage, data, true);
           }}
         />
       )}
@@ -54,17 +60,15 @@ function LangTogglerButton(props) {
 
 const mapStateToProps = state => ({
   // pageStore: state.pageStore
-  lang: state.pageStore.currentLang
+  lang: state.pageStore.currentLang,
+  activePage: state.pageStore.activePage
 });
 
 const mapDispatchToProps = dispatch => ({
   // fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
 
-  fetchDataLang: data =>
-    dispatch({
-      type: "GET_ALL_PAGE",
-      payload: data
-    }),
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle)),
   changeLang: lang =>
     dispatch({
       type: "CHANGE_LANG",

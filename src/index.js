@@ -137,7 +137,7 @@ class App extends Component {
   componentDidMount = () => {
     store.dispatch({
       type: "GET_ALL_PAGE",
-      payload: id
+      payload: lang.id
     });
 
     store.dispatch({

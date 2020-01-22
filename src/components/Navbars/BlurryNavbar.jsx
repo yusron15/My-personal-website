@@ -67,6 +67,7 @@ class BlurryNavbar extends React.Component {
   //   }
   // };
   render() {
+    console.log(this.props, "LangTogglerButtonLangTogglerButton");
     return (
       <>
         <Navbar

@@ -37,6 +37,12 @@ import vl from "../../assets/img/vertical-line.png";
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
 
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
+
 class ColorNavbar extends React.Component {
   constructor(props) {
     super(props);
@@ -288,7 +294,9 @@ class ColorNavbar extends React.Component {
                                   fontWeight: "bold"
                                 }}
                               >
-                                {this.props.pageStore.Header.m1.title}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.Header.m1.title
+                                )}
                               </button>
                             </div>
                           </NavItem>
@@ -302,7 +310,9 @@ class ColorNavbar extends React.Component {
                           // onMouseLeave={() => this.onLeave()}
                         >
                           <button class="dropbtn" style={colorStyle}>
-                            {this.props.pageStore.Header.m2.title}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Header.m2.title
+                            )}
                           </button>
                         </div>
 
@@ -312,7 +322,7 @@ class ColorNavbar extends React.Component {
                           onMouseEnter={() => this.onClickTrading()}
                         >
                           <button class="dropbtn" style={colorStyle}>
-                            {this.props.pageStore.Header.m3.title}
+                            {ReactHtmlParser(this.props.pageStore.Header.m3.titl)e}
                           </button>
                         </div>
 
@@ -322,7 +332,7 @@ class ColorNavbar extends React.Component {
                           onMouseEnter={() => this.onClickBerita()}
                         >
                           <button class="dropbtn" style={colorStyle}>
-                            {this.props.pageStore.Header.m4.title}
+                            {ReactHtmlParser(this.props.pageStore.Header.m4.title)}
                           </button>
                         </div>
 
@@ -330,7 +340,7 @@ class ColorNavbar extends React.Component {
                           <NavItem>
                             <div onMouseEnter={() => this.onLeaveAll()}>
                               <button class="dropbtn" style={colorStyle}>
-                                {this.props.pageStore.Header.m5.title}
+                                {ReactHtmlParser(this.props.pageStore.Header.m5.title)}
                               </button>
                             </div>
                           </NavItem>

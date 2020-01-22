@@ -8,8 +8,9 @@ import { connect } from "react-redux";
 
 class TentangKami extends React.Component {
   state = {};
+
   async componentDidMount() {
-    await this.props.getContent("tentangkami", "id");
+    await this.props.getContent("tentangkami", this.props.currentLang, true);
     window.scroll(0, 0);
   }
 
@@ -26,12 +27,13 @@ class TentangKami extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  currentLang: state.pageStore.currentLang
 });
 
 const mapDispatchToProps = dispatch => ({
   // fetchPage: (section, lang) => dispatch(fetchPage(section, lang)),
-  getContent: (section, lang) => dispatch(getContent(section, lang))
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TentangKami);

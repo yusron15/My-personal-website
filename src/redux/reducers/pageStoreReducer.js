@@ -612,15 +612,11 @@ const defaultState = {
     m6: { title: "Karir" },
     m7: { title: "Hubungi Kami" }
   },
-  currentLang: "ID"
+  currentLang: "ID",
+  activePage: "landing"
 };
 
-// const defaultState = {
-//   Landing: {}
-// };
-
 export default (state = defaultState, action = {}) => {
-  console.log(action, "fgbfgbfgbf");
   switch (action.type) {
     case "GET_PAGE": {
       return {
@@ -656,6 +652,13 @@ export default (state = defaultState, action = {}) => {
       return {
         ...state,
         [keys]: action.payload[keys]
+      };
+    }
+
+    case "SET_CURRENT_PAGE": {
+      return {
+        ...state,
+        activePage: action.payload
       };
     }
 

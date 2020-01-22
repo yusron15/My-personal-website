@@ -30,7 +30,7 @@ class Landing extends React.Component {
   }
   async componentDidMount() {
     // await this.props.fetchPage("landing", "id");
-    await this.props.getContent("landing", "id");
+    await this.props.getContent("landing", this.props.currentLang, true);
     window.scroll(0, 0);
   }
 
@@ -98,12 +98,14 @@ class Landing extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
 });
 
 const mapDispatchToProps = dispatch => ({
   // fetchPage: (section, lang) => dispatch(fetchPage(section, lang)),
-  getContent: (section, lang) => dispatch(getContent(section, lang))
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Landing);
