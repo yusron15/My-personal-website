@@ -83,7 +83,7 @@ class BottomNavbar extends React.Component {
     const styles = {
       containerStyle: {
         position: this.state.position,
-        // maxHeight: "150px",
+        maxHeight: "150px",
         backgroundImage:
           "url(" + require("assets/img/ebook-background.png") + ")"
       }

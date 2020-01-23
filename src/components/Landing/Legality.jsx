@@ -422,9 +422,8 @@ class Projects extends React.Component {
                               className="font-black"
                               style={{ color: "black" }}
                             >
-                              {
-                                this.props.pageStore.Landing.Legality.content[0]
-                                  .content
+                              {ReactHtmlParser(this.props.pageStore.Landing.Legality.content[0]
+                                  .content)
                               }
                             </p>
                           </div>

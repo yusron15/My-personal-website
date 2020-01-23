@@ -35,6 +35,7 @@ import bg from "../../assets/img/header-cabang.png";
 import { isMobile } from "react-device-detect";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import sungaigerong from "../../assets/img/sumgaigerong.png";
+import bgcard from "../../assets/img/header-rekening.png";
 
 import { getContent } from "../../redux/ducks/actions";
 
@@ -69,14 +70,13 @@ const styleCard = {
   height: "30vh",
   backgroundSize: "cover"
 };
-
 const items2 = [
   {
     content: (
       <div
-        className="info info-warning broken-white header-filter"
+        className="info info-warning broken-white"
         style={{
-          backgroundImage: `url(${sungaigerong})`,
+          backgroundImage: `url(${bgcard})`,
           backgroundColor: "rgba(0, 0, 0, 0.25)",
           backgroundSize: "cover"
         }}
@@ -98,10 +98,16 @@ const items2 = [
     content: (
       <div
         className="info info-warning broken-white"
-        style={{ backgroundImage: `url(${sungaigerong})` }}
+        style={{
+          backgroundImage: `url(${bgcard})`,
+          backgroundColor: "rgba(0, 0, 0, 0.25)",
+          backgroundSize: "cover"
+        }}
       >
-        <h4 className="title font-black">Best Quality</h4>
-        <p className="font-black" style={{ color: "black" }}>
+        <h4 className="title" style={{ color: "white" }}>
+          Best Quality
+        </h4>
+        <p style={{ color: "white" }}>
           Gain access to the demographics, psychographics, and location of
           unique people.
         </p>
@@ -109,7 +115,7 @@ const items2 = [
     ),
     altText: "",
     caption: "",
-    src: "1"
+    src: "0"
   }
 ];
 

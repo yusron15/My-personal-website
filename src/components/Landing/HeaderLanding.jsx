@@ -358,7 +358,7 @@ class HeaderLanding extends React.Component {
                             backgroundImage:
                               "url(" +
                               this.props.pageStore.Landing.HeaderLanding
-                                .slide[1].image +
+                                .slide[2].image +
                               ")",
                             backgroundSize: "cover"
                           }}
@@ -376,14 +376,14 @@ class HeaderLanding extends React.Component {
                                   >
                                     {ReactHtmlParser(
                                       this.props.pageStore.Landing.HeaderLanding
-                                        .slide[1].title
+                                        .slide[2].title
                                     )}
                                   </div>
 
                                   <h4>
                                     {ReactHtmlParser(
                                       this.props.pageStore.Landing.HeaderLanding
-                                        .slide[1].subtitle
+                                        .slide[2].subtitle
                                     )}
                                   </h4>
                                   <br />
