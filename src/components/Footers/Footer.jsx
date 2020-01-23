@@ -16,7 +16,11 @@ import {
   Col,
   UncontrolledTooltip
 } from "reactstrap";
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 
@@ -45,26 +49,36 @@ class Footers extends React.Component {
                         <div style={{ cursor: "default" }}>
                           <h4>
                             <b style={{ cursor: "default" }}>
-                              {this.props.pageStore.Landing.Footer[0].title}
+                              {ReactHtmlParser(
+                                this.props.pageStore.Landing.Footer[0].title
+                              )}
                             </b>
                           </h4>
                           <p>
-                            {this.props.pageStore.Landing.Footer[0].content[0]}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[0].content[0]
+                            )}
                           </p>
                         </div>
                       </Col>
                       <Col md="3">
                         <h4 style={{ cursor: "default" }}>
-                          {this.props.pageStore.Landing.Footer[1].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.Landing.Footer[1].title
+                          )}
                         </h4>
                         <p>
                           <Link to="/tentang-kami" style={{ color: "white" }}>
-                            {this.props.pageStore.Landing.Footer[1].content[0]}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[1].content[0]
+                            )}
                           </Link>
                         </p>
                         <p>
                           <Link to="/legalitas" style={{ color: "white" }}>
-                            {this.props.pageStore.Landing.Footer[1].content[1]}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[1].content[1]
+                            )}
                           </Link>
                         </p>
                         <p>
@@ -72,21 +86,29 @@ class Footers extends React.Component {
                             to="/rekening-terpisah"
                             style={{ color: "white" }}
                           >
-                            {this.props.pageStore.Landing.Footer[1].content[2]}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[1].content[2]
+                            )}
                           </Link>
                         </p>
                         <p>
                           <Link to="/cabang" style={{ color: "white" }}>
-                            {this.props.pageStore.Landing.Footer[1].content[3]}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[1].content[3]
+                            )}
                           </Link>
                         </p>
                       </Col>
                       <Col md="2">
                         <h4 style={{ cursor: "default" }}>
-                          {this.props.pageStore.Landing.Footer[2].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.Landing.Footer[2].title
+                          )}
                         </h4>
                         <Link to="/newspage" style={{ color: "white" }}>
-                          {this.props.pageStore.Landing.Footer[2].content[0]}
+                          {ReactHtmlParser(
+                            this.props.pageStore.Landing.Footer[2].content[0]
+                          )}
                         </Link>
                       </Col>
                       <Col md="4">
@@ -95,35 +117,51 @@ class Footers extends React.Component {
                           style={{ color: "white", cursor: "default" }}
                         >
                           <h4>
-                            {this.props.pageStore.Landing.Footer[3].title}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[3].title
+                            )}
                           </h4>
 
                           <p>
-                            {this.props.pageStore.Landing.Footer[3].content[0]}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[3].content[0]
+                            )}
                           </p>
 
                           <p>
-                            {this.props.pageStore.Landing.Footer[3].content[1]}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[3].content[1]
+                            )}
                           </p>
 
                           <p>
-                            {this.props.pageStore.Landing.Footer[3].content[2]}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[3].content[2]
+                            )}
                           </p>
 
                           <p>
-                            {this.props.pageStore.Landing.Footer[3].content[3]}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[3].content[3]
+                            )}
                           </p>
 
                           <p>
-                            {this.props.pageStore.Landing.Footer[3].content[4]}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[3].content[4]
+                            )}
                           </p>
 
                           <p>
-                            {this.props.pageStore.Landing.Footer[3].content[5]}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[3].content[5]
+                            )}
                           </p>
 
                           <p>
-                            {this.props.pageStore.Landing.Footer[3].content[6]}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Footer[3].content[6]
+                            )}
                           </p>
 
                           {/* Sudirman Kav 86 Jakarta 10220 Indonesia Email:

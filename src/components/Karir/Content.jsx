@@ -197,12 +197,16 @@ class Blogs extends React.Component {
                           </a>
                         </div>
                       </Card> */}
-                      {/* <div style={{ height: "10px" }}> */}
-                      <SearchField
-                        className="react-search-field-input"
-                        placeholder="Cari "
-                      />
-                      {/* </div> */}
+                      <div
+                        style={{
+                          marginTop: "30px"
+                        }}
+                      >
+                        <SearchField
+                          className="react-search-field-input"
+                          placeholder="Cari "
+                        />
+                      </div>
                     </Col>
 
                     <Col md="5">

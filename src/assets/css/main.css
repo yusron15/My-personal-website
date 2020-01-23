@@ -143,6 +143,10 @@ html, body {
   color: black;
 }
 
+.font-black-html {
+  color: black !important;
+}
+
 .font-white {
   color: white;
 }
@@ -611,9 +615,20 @@ hr.grey {
   background-color: white;
 }
 
+.title-mobile {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
 .text-news {
   position: absolute;
   top: 100px;
+  left: 20px;
+  width: 100%;
+}
+
+.text-news-mobile {
+  position: absolute;
+  top: 80px;
   left: 20px;
   width: 100%;
 }

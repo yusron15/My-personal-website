@@ -77,7 +77,7 @@ class NewsPage extends React.Component {
         <div style={{ backgroundColor: "#1D1E1F" }}>
           <HeaderNewsPage />
 
-          <ColoredNavbar location={{ ...this.props.location }} />
+          {/* <ColoredNavbar location={{ ...this.props.location }} /> */}
 
           {/* <Nav
             className="nav-pills-info nav-pills-icons nav-pills-lg"

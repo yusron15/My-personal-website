@@ -23,7 +23,11 @@ import { isMobile } from "react-device-detect";
 import { LangContext } from "../MyContext";
 import { connect } from 'react-redux';
 import { fetchPage } from '../../redux/ducks/actions.js';
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import "../../assets/css/main.css";
 
 class Pricing extends React.Component {
@@ -66,7 +70,7 @@ class Pricing extends React.Component {
                     style={{ textAlign: "left", fontSize: 42, color: "white", fontSize:"2rem" }}
                   >
                     {/* {lang.Landing.Pricing.title} */}
-                    {this.props.pageStore.Landing.Pricing.title}
+                    {ReactHtmlParser(this.props.pageStore.Landing.Pricing.title)}
                   </h2>
                   <h4
                     className="description"
@@ -80,7 +84,7 @@ class Pricing extends React.Component {
                     }}
                   >
                     {/* {lang.Landing.Pricing.subtitle} */}
-                    {this.props.pageStore.Landing.Pricing.subtitle}
+                     {ReactHtmlParser(this.props.pageStore.Landing.Pricing.subtitle)}
                   </h4>
                 </Col>
               </Row>
@@ -117,7 +121,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* Akun Demo */}
-                            {this.props.pageStore.Landing.Pricing.card[0][0]}
+                            {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[0][0])}
                             </CardTitle>
                             <CardTitle
                               tag="h1"
@@ -159,7 +163,7 @@ class Pricing extends React.Component {
                                 }}
                               >
                                 {/* - */}
-                                {this.props.pageStore.Landing.Pricing.card[0][3]}                                
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[0][3])}                                
                               </span>
                             </div>
                             <div
@@ -177,7 +181,7 @@ class Pricing extends React.Component {
                                 }}
                               >
                                 {/* - */}
-                                {this.props.pageStore.Landing.Pricing.card[0][4]}                                                                
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[0][4])}                                                                
                               </span>
                             </div>
                             <div
@@ -190,7 +194,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* Pro I Trader & Topgrowth Trader (MT4) */}
-                              {this.props.pageStore.Landing.Pricing.card[0][5]}                                
+                              {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[0][5])}                                
                             </div>
                             <Button
                               className="btn-round"
@@ -200,7 +204,7 @@ class Pricing extends React.Component {
                               style={{ height: 50, fontSize: 18 }}
                             >
                                 {/* Daftar */}
-                                {this.props.pageStore.Landing.Pricing.card[0][6]}                                                    
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[0][6])}                                                    
                             </Button>
                           </CardBody>
                         </Card>
@@ -234,7 +238,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* Akun Mini */}
-                              {this.props.pageStore.Landing.Pricing.card[1][0]}                                                    
+                              {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][0])}                                                    
                             </CardTitle>
                             <CardTitle
                               tag="h1"
@@ -245,7 +249,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* $500 */}
-                            {this.props.pageStore.Landing.Pricing.card[1][1]}                                                                                  
+                           {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][1])}                                                                                  
                             </CardTitle>
                             <div style={{ marginTop: 10, textAlign: "center" }}>
                               <span
@@ -255,7 +259,7 @@ class Pricing extends React.Component {
                                 }}
                               >
                                 {/* initial deposit */}
-                                {this.props.pageStore.Landing.Pricing.card[1][2]}                                                    
+                                {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][2])}                                                    
                               </span>
                             </div>
                           </CardHeader>
@@ -276,7 +280,7 @@ class Pricing extends React.Component {
                                   }}
                                 >
                                 {/* Minimum 0.1 Lot */}
-                                {this.props.pageStore.Landing.Pricing.card[1][3]}                                                    
+                                {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][3])}                                                    
                                 </span>
                               </div>
                               
@@ -297,7 +301,7 @@ class Pricing extends React.Component {
                                   }}
                                 >
                                   {/* Minimum 5.0 Lot */}
-                                  {this.props.pageStore.Landing.Pricing.card[1][4]}      
+                                  {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][4])}      
                                 </span>
                               </div>
                             
@@ -312,7 +316,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* Topgrowth Trader (MT4) */}
-                              {this.props.pageStore.Landing.Pricing.card[1][5]}   
+                              {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][5])}   
                             </div>
 
                             <Button
@@ -323,7 +327,7 @@ class Pricing extends React.Component {
                               style={{ height: 50, fontSize: 18 }}
                             >
                               {/* Daftar */}
-                              {this.props.pageStore.Landing.Pricing.card[1][5]}   
+                              {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][5])}   
                             </Button>
                           </CardBody>
                         </Card>
@@ -357,7 +361,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* Akun Regular */}
-                              {this.props.pageStore.Landing.Pricing.card[2][0]}   
+                               {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][0])}   
                             </CardTitle>
                             <CardTitle
                               tag="h1"
@@ -369,7 +373,7 @@ class Pricing extends React.Component {
                               }}
                             >
                             {/* $10,000 */}
-                            {this.props.pageStore.Landing.Pricing.card[2][1]}   
+                             {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][1])}   
                             </CardTitle>
                             <div style={{ marginTop: 10, textAlign: "center" }}>
                               <span
@@ -379,7 +383,7 @@ class Pricing extends React.Component {
                                 }}
                               >
                                  {/* initial deposit */}
-                                {this.props.pageStore.Landing.Pricing.card[2][2]}   
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][2])}   
                               </span>
                             </div>
                           </CardHeader>
@@ -400,7 +404,7 @@ class Pricing extends React.Component {
                                   }}
                                 >
                                 {/* Minimum 1.0 Lot */}
-                                {this.props.pageStore.Landing.Pricing.card[2][3]}  
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][3])}  
                                 </span>
                               </div>
                            
@@ -421,7 +425,7 @@ class Pricing extends React.Component {
                                   }}
                                 >
                                 {/* Minimum 50 Lot */}
-                                {this.props.pageStore.Landing.Pricing.card[2][4]}  
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][4])}  
                                 </span>
                               </div>
                             
@@ -435,7 +439,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* Pro I Trader & Topgrowth Trader (MT4) */}
-                              {this.props.pageStore.Landing.Pricing.card[2][5]}  
+                               {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][5])}  
                             </div>
 
                             <Button
@@ -446,7 +450,7 @@ class Pricing extends React.Component {
                               style={{ height: 50, fontSize: 18 }}
                             >
                               {/* Daftar */}
-                                {this.props.pageStore.Landing.Pricing.card[2][6]}  
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][6])}  
                             </Button>
                           </CardBody>
                         </Card>
@@ -483,7 +487,7 @@ class Pricing extends React.Component {
                     style={{ textAlign: "left", fontSize: 42, color: "white" }}
                   >
                     {/* {lang.Landing.Pricing.title} */}
-                    {this.props.pageStore.Landing.Pricing.title}
+                    {ReactHtmlParser(this.props.pageStore.Landing.Pricing.title)}
                   </h2>
                   <h4
                     className="description"
@@ -495,7 +499,7 @@ class Pricing extends React.Component {
                     style={{ padding: "0 20px 0 0", color: "white" }}
                   >
                     {/* {lang.Landing.Pricing.subtitle} */}
-                    {this.props.pageStore.Landing.Pricing.subtitle}
+                     {ReactHtmlParser(this.props.pageStore.Landing.Pricing.subtitle)}
                   </h4>
                 </Col>
               </Row>
@@ -531,7 +535,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* Akun Demo */}
-                            {this.props.pageStore.Landing.Pricing.card[0][0]}
+                            {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[0][0])}
                             </CardTitle>
                             <CardTitle
                               tag="h1"
@@ -543,7 +547,7 @@ class Pricing extends React.Component {
                               }}
                             >
                             {/* FREE */}
-                            {this.props.pageStore.Landing.Pricing.card[0][1]}
+                            {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[0][1])}
                             </CardTitle>
                             <div style={{ marginTop: 10, textAlign: "center" }}>
                               <span
@@ -553,7 +557,7 @@ class Pricing extends React.Component {
                                 }}
                               >
                                 {/* Tidak ada deposit */}
-                                {this.props.pageStore.Landing.Pricing.card[0][2]}
+                                {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[0][2])}
                               </span>
                             </div>
                           </CardHeader>
@@ -573,7 +577,7 @@ class Pricing extends React.Component {
                                 }}
                               >
                                 {/* - */}
-                                {this.props.pageStore.Landing.Pricing.card[0][3]}                                
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[0][3])}                                
                               </span>
                             </div>
                             <div
@@ -591,7 +595,7 @@ class Pricing extends React.Component {
                                 }}
                               >
                                 {/* - */}
-                                {this.props.pageStore.Landing.Pricing.card[0][4]}                                                                
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[0][4])}                                                                
                               </span>
                             </div>
                             <div
@@ -604,7 +608,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* Pro I Trader & Topgrowth Trader (MT4) */}
-                              {this.props.pageStore.Landing.Pricing.card[0][5]}                                
+                              {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[0][5])}                                
                             </div>
                             <Button
                               className="btn-round"
@@ -614,7 +618,7 @@ class Pricing extends React.Component {
                               style={{ height: 50, fontSize: 18 }}
                             >
                                 {/* Daftar */}
-                                {this.props.pageStore.Landing.Pricing.card[0][6]}                                                    
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[0][6])}                                                    
                             </Button>
                           </CardBody>
                         </Card>
@@ -647,7 +651,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* Akun Mini */}
-                              {this.props.pageStore.Landing.Pricing.card[1][0]}                                                    
+                              {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][0])}                                                    
                             </CardTitle>
                             <CardTitle
                               tag="h1"
@@ -658,7 +662,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* $500 */}
-                            {this.props.pageStore.Landing.Pricing.card[1][1]}                                                                                  
+                           {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][1])}                                                                                  
                             </CardTitle>
                             <div style={{ marginTop: 10, textAlign: "center" }}>
                               <span
@@ -668,7 +672,7 @@ class Pricing extends React.Component {
                                 }}
                               >
                                 {/* initial deposit */}
-                                {this.props.pageStore.Landing.Pricing.card[1][2]}                                                    
+                                {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][2])}                                                    
                               </span>
                             </div>
                           </CardHeader>
@@ -689,7 +693,7 @@ class Pricing extends React.Component {
                                   }}
                                 >
                                 {/* Minimum 0.1 Lot */}
-                                {this.props.pageStore.Landing.Pricing.card[1][3]}                                                    
+                                {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][3])}                                                    
                                 </span>
                               </div>
                               
@@ -710,7 +714,7 @@ class Pricing extends React.Component {
                                   }}
                                 >
                                   {/* Minimum 5.0 Lot */}
-                                  {this.props.pageStore.Landing.Pricing.card[1][4]}      
+                                  {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][4])}      
                                 </span>
                               </div>
                             
@@ -725,7 +729,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* Topgrowth Trader (MT4) */}
-                              {this.props.pageStore.Landing.Pricing.card[1][5]}   
+                              {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][5])}   
                             </div>
 
                             <Button
@@ -736,7 +740,7 @@ class Pricing extends React.Component {
                               style={{ height: 50, fontSize: 18 }}
                             >
                               {/* Daftar */}
-                              {this.props.pageStore.Landing.Pricing.card[1][5]}   
+                              {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[1][6])}   
                             </Button>
                           </CardBody>
                         </Card>
@@ -769,7 +773,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* Akun Regular */}
-                              {this.props.pageStore.Landing.Pricing.card[2][0]}   
+                               {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][0])}   
                             </CardTitle>
                             <CardTitle
                               tag="h1"
@@ -781,7 +785,7 @@ class Pricing extends React.Component {
                               }}
                             >
                             {/* $10,000 */}
-                            {this.props.pageStore.Landing.Pricing.card[2][1]}   
+                             {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][1])}   
                             </CardTitle>
                             <div style={{ marginTop: 10, textAlign: "center" }}>
                               <span
@@ -791,7 +795,7 @@ class Pricing extends React.Component {
                                 }}
                               >
                                  {/* initial deposit */}
-                                {this.props.pageStore.Landing.Pricing.card[2][2]}   
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][2])}   
                               </span>
                             </div>
                           </CardHeader>
@@ -812,7 +816,7 @@ class Pricing extends React.Component {
                                   }}
                                 >
                                 {/* Minimum 1.0 Lot */}
-                                {this.props.pageStore.Landing.Pricing.card[2][3]}  
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][3])}  
                                 </span>
                               </div>
                            
@@ -833,7 +837,7 @@ class Pricing extends React.Component {
                                   }}
                                 >
                                 {/* Minimum 50 Lot */}
-                                {this.props.pageStore.Landing.Pricing.card[2][4]}  
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][4])}  
                                 </span>
                               </div>
                             
@@ -847,7 +851,7 @@ class Pricing extends React.Component {
                               }}
                             >
                               {/* Pro I Trader & Topgrowth Trader (MT4) */}
-                              {this.props.pageStore.Landing.Pricing.card[2][5]}  
+                               {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][5])}  
                             </div>
 
                             <Button
@@ -858,7 +862,7 @@ class Pricing extends React.Component {
                               style={{ height: 50, fontSize: 18 }}
                             >
                               {/* Daftar */}
-                                {this.props.pageStore.Landing.Pricing.card[2][6]}  
+                                 {ReactHtmlParser(this.props.pageStore.Landing.Pricing.card[2][6])}  
                             </Button>
                           </CardBody>
                         </Card>

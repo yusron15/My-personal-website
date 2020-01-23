@@ -25,7 +25,11 @@ import { LangContext } from "../MyContext";
 
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import { styles } from "react-animations/lib/swing";
 
 const textTitle = {
@@ -93,7 +97,7 @@ class Features extends React.Component {
               {/* <BlurryNavbar /> */}
 
               <div className="title-header-mobile">
-                {this.props.pageStore.Forex.header}
+                {ReactHtmlParser(this.props.pageStore.Forex.header)}
               </div>
             </div>
             <div className="features-3" style={{ paddingTop: 0 }}>
@@ -172,16 +176,22 @@ class Features extends React.Component {
                     <Col lg="12">
                       <div>
                         <div style={textTitle}>
-                          {this.props.pageStore.Forex.content[2].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.Forex.content[2].title
+                          )}
                         </div>
                         <p style={intermezzo}>
-                          {this.props.pageStore.Forex.content[2].content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.Forex.content[2].content
+                          )}
                         </p>
                       </div>
 
                       <div style={{ marginTop: "20px" }}>
                         <div style={textTitle}>
-                          {this.props.pageStore.Forex.content[3].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.Forex.content[3].title
+                          )}
                         </div>
 
                         <Table
@@ -349,7 +359,7 @@ class Features extends React.Component {
                   <BlurryNavbar />
                   <ColoredNavbar location={{ ...this.props.location }} />
                   <div className="title title-header">
-                    {this.props.pageStore.Forex.header}
+                    {ReactHtmlParser(this.props.pageStore.Forex.header)}
                   </div>
                 </div>
                 <div className="features-3" style={{ paddingTop: 0 }}>
@@ -364,7 +374,7 @@ class Features extends React.Component {
                   </div> */}
                         <div className="space-50" />
                         <p style={intermezzo}>
-                          {this.props.pageStore.Forex.top}
+                          {ReactHtmlParser(this.props.pageStore.Forex.top)}
                         </p>
                         {/* <Col className="mr-auto ml-auto" md="5"> */}
                         {/* </Col> */}
@@ -396,12 +406,16 @@ class Features extends React.Component {
                                 className="title-content"
                                 style={{ color: "black" }}
                               >
-                                {this.props.pageStore.Forex.content[0].title}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.Forex.content[0].title
+                                )}
                               </div>
                               <p
                                 style={{ color: "black", textAlign: "justify" }}
                               >
-                                {this.props.pageStore.Forex.content[0].content}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.Forex.content[0].content
+                                )}
                               </p>
                             </div>
                           </Col>
@@ -414,12 +428,16 @@ class Features extends React.Component {
                                 className="title-content"
                                 style={{ color: "black" }}
                               >
-                                {this.props.pageStore.Forex.content[1].title}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.Forex.content[1].title
+                                )}
                               </div>
                               <p
                                 style={{ color: "black", textAlign: "justify" }}
                               >
-                                {this.props.pageStore.Forex.content[1].content}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.Forex.content[1].content
+                                )}
                               </p>{" "}
                             </div>
                           </Col>
@@ -450,16 +468,22 @@ class Features extends React.Component {
                           <Col lg="12">
                             <div>
                               <div style={textTitle}>
-                                {this.props.pageStore.Forex.content[2].title}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.Forex.content[2].title
+                                )}
                               </div>
                               <p style={intermezzo}>
-                                {this.props.pageStore.Forex.content[2].content}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.Forex.content[2].content
+                                )}
                               </p>
                             </div>
 
                             <div style={{ marginTop: "20px" }}>
                               <div style={textTitle}>
-                                {this.props.pageStore.Forex.content[3].title}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.Forex.content[3].title
+                                )}
                               </div>
 
                               <Table

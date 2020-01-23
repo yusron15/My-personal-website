@@ -12,7 +12,11 @@ import {
 } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 import { LangContext } from "../MyContext";
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
 
@@ -64,7 +68,9 @@ class VisiMisi extends React.Component {
                               animateOut="fadeOut"
                             >
                               <h2 className="title">
-                                {this.props.pageStore.tentangkami.visi.title}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.tentangkami.visi.title
+                                )}
                               </h2>
                               <p
                                 style={{
@@ -72,7 +78,9 @@ class VisiMisi extends React.Component {
                                   fontSize: "1rem"
                                 }}
                               >
-                                {this.props.pageStore.tentangkami.visi.content}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.tentangkami.visi.content
+                                )}
                               </p>
                             </ScrollAnimation>
                           </Col>
@@ -83,7 +91,9 @@ class VisiMisi extends React.Component {
                               animateOut="fadeOut"
                             >
                               <h2 className="title">
-                                {this.props.pageStore.tentangkami.misi.title}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.tentangkami.misi.title
+                                )}
                               </h2>
                               <p
                                 style={{
@@ -91,7 +101,9 @@ class VisiMisi extends React.Component {
                                   fontSize: "1rem"
                                 }}
                               >
-                                {this.props.pageStore.tentangkami.misi.content}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.tentangkami.misi.content
+                                )}
                               </p>
                             </ScrollAnimation>
                           </Col>

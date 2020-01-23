@@ -11,6 +11,11 @@ import feature from "../../assets/img/all-device.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 import "../../assets/css/main.css";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 
 class Features extends React.Component {
   async componentDidMount() {
@@ -37,13 +42,17 @@ class Features extends React.Component {
                         fontSize: "1.5rem"
                       }}
                     >
-                      {this.props.pageStore.Landing.Feature.title}
+                      {ReactHtmlParser(
+                        this.props.pageStore.Landing.Feature.title
+                      )}
                     </h1>
                     <h4
                       className="description"
                       style={{ textAlign: "center", fontSize: "0.8rem" }}
                     >
-                      {this.props.pageStore.Landing.Feature.subtitle}
+                      {ReactHtmlParser(
+                        this.props.pageStore.Landing.Feature.subtitle
+                      )}
                     </h4>
                   </Col>
                 </Row>
@@ -73,10 +82,10 @@ class Features extends React.Component {
                           }}
                         >
                           {/* Foreign Exchange */}
-                          {
+                          {ReactHtmlParser(
                             this.props.pageStore.Landing.Feature.content[0]
                               .title
-                          }
+                          )}
                         </h3>
                         <p
                           style={{
@@ -85,10 +94,10 @@ class Features extends React.Component {
                             textAlign: "center"
                           }}
                         >
-                          {
+                          {ReactHtmlParser(
                             this.props.pageStore.Landing.Feature.content[0]
                               .subtitle
-                          }
+                          )}
                         </p>
                       </div>
                     </Col>
@@ -118,10 +127,10 @@ class Features extends React.Component {
                           }}
                         >
                           {/* CFD */}
-                          {
+                          {ReactHtmlParser(
                             this.props.pageStore.Landing.Feature.content[2]
                               .title
-                          }
+                          )}
                         </h3>
                         <p
                           style={{
@@ -130,10 +139,10 @@ class Features extends React.Component {
                             textAlign: "center"
                           }}
                         >
-                          {
+                          {ReactHtmlParser(
                             this.props.pageStore.Landing.Feature.content[2]
                               .subtitle
-                          }
+                          )}
                         </p>
                       </div>
                     </Col>
@@ -163,10 +172,10 @@ class Features extends React.Component {
                           }}
                         >
                           {/* komoditi */}
-                          {
+                          {ReactHtmlParser(
                             this.props.pageStore.Landing.Feature.content[1]
                               .title
-                          }
+                          )}
                         </h3>
                         <p
                           style={{
@@ -175,10 +184,10 @@ class Features extends React.Component {
                             textAlign: "center"
                           }}
                         >
-                          {
+                          {ReactHtmlParser(
                             this.props.pageStore.Landing.Feature.content[1]
                               .subtitle
-                          }
+                          )}
                         </p>
                       </div>
                     </Col>
@@ -208,10 +217,10 @@ class Features extends React.Component {
                           }}
                         >
                           {/* Future Index */}
-                          {
+                          {ReactHtmlParser(
                             this.props.pageStore.Landing.Feature.content[3]
                               .title
-                          }
+                          )}
                         </h3>
                         <p
                           style={{
@@ -220,10 +229,10 @@ class Features extends React.Component {
                             textAlign: "center"
                           }}
                         >
-                          {
+                          {ReactHtmlParser(
                             this.props.pageStore.Landing.Feature.content[3]
                               .subtitle
-                          }
+                          )}
                         </p>
                       </div>
                     </Col>
@@ -250,13 +259,17 @@ class Features extends React.Component {
                           className="title"
                           style={{ color: "black", textAlign: "left" }}
                         >
-                          {this.props.pageStore.Landing.Feature.title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.Landing.Feature.title
+                          )}
                         </h1>
                         <h4
                           className="description"
                           style={{ textAlign: "left" }}
                         >
-                          {this.props.pageStore.Landing.Feature.subtitle}
+                          {ReactHtmlParser(
+                            this.props.pageStore.Landing.Feature.subtitle
+                          )}
                         </h4>
                       </Col>
                     </Row>
@@ -275,7 +288,11 @@ class Features extends React.Component {
                               <Row>
                                 <Col
                                   md="3"
-                                  style={{ paddingLeft: 0, paddingRight: 0 }}
+                                  style={{
+                                    paddingLeft: 0,
+                                    paddingRight: 0,
+                                    minHeight: "15vh"
+                                  }}
                                 >
                                   <div className="icon icon-success">
                                     <img
@@ -288,7 +305,11 @@ class Features extends React.Component {
                                 </Col>
                                 <Col
                                   md="9"
-                                  style={{ paddingLeft: 0, paddingRight: 0 }}
+                                  style={{
+                                    paddingLeft: 0,
+                                    paddingRight: 0,
+                                    minHeight: "15vh"
+                                  }}
                                 >
                                   <div className="description">
                                     <h3
@@ -301,10 +322,10 @@ class Features extends React.Component {
                                       }}
                                     >
                                       {/* Foreign Exchange */}
-                                      {
+                                      {ReactHtmlParser(
                                         this.props.pageStore.Landing.Feature
                                           .content[0].title
-                                      }
+                                      )}
                                     </h3>
                                     <p
                                       style={{
@@ -314,10 +335,10 @@ class Features extends React.Component {
                                         paddingRight: "10px"
                                       }}
                                     >
-                                      {
+                                      {ReactHtmlParser(
                                         this.props.pageStore.Landing.Feature
                                           .content[0].subtitle
-                                      }
+                                      )}
                                     </p>
                                   </div>
                                 </Col>
@@ -328,7 +349,11 @@ class Features extends React.Component {
                               <Row>
                                 <Col
                                   md="3"
-                                  style={{ paddingLeft: 0, paddingRight: 0 }}
+                                  style={{
+                                    paddingLeft: 0,
+                                    paddingRight: 0,
+                                    minHeight: "15vh"
+                                  }}
                                 >
                                   <div className="icon icon-success">
                                     <img
@@ -341,7 +366,11 @@ class Features extends React.Component {
                                 </Col>
                                 <Col
                                   md="9"
-                                  style={{ paddingLeft: 0, paddingRight: 0 }}
+                                  style={{
+                                    paddingLeft: 0,
+                                    paddingRight: 0,
+                                    minHeight: "15vh"
+                                  }}
                                 >
                                   <div className="description">
                                     <h3
@@ -354,10 +383,10 @@ class Features extends React.Component {
                                       }}
                                     >
                                       {/* CFD */}
-                                      {
+                                      {ReactHtmlParser(
                                         this.props.pageStore.Landing.Feature
                                           .content[2].title
-                                      }
+                                      )}
                                     </h3>
                                     <p
                                       style={{
@@ -367,10 +396,10 @@ class Features extends React.Component {
                                         paddingRight: "10px"
                                       }}
                                     >
-                                      {
+                                      {ReactHtmlParser(
                                         this.props.pageStore.Landing.Feature
                                           .content[2].subtitle
-                                      }
+                                      )}
                                     </p>
                                   </div>
                                 </Col>
@@ -412,10 +441,10 @@ class Features extends React.Component {
                                       }}
                                     >
                                       {/* komoditi */}
-                                      {
+                                      {ReactHtmlParser(
                                         this.props.pageStore.Landing.Feature
                                           .content[1].title
-                                      }
+                                      )}
                                     </h3>
                                     <p
                                       style={{
@@ -425,10 +454,10 @@ class Features extends React.Component {
                                         paddingRight: "10px"
                                       }}
                                     >
-                                      {
+                                      {ReactHtmlParser(
                                         this.props.pageStore.Landing.Feature
                                           .content[1].subtitle
-                                      }
+                                      )}
                                     </p>
                                   </div>
                                 </Col>
@@ -465,10 +494,10 @@ class Features extends React.Component {
                                       }}
                                     >
                                       {/* Future Index */}
-                                      {
+                                      {ReactHtmlParser(
                                         this.props.pageStore.Landing.Feature
                                           .content[3].title
-                                      }
+                                      )}
                                     </h3>
                                     <p
                                       style={{
@@ -478,10 +507,10 @@ class Features extends React.Component {
                                         paddingRight: "10px"
                                       }}
                                     >
-                                      {
+                                      {ReactHtmlParser(
                                         this.props.pageStore.Landing.Feature
                                           .content[3].subtitle
-                                      }
+                                      )}
                                     </p>
                                   </div>
                                 </Col>

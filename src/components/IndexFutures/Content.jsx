@@ -35,6 +35,11 @@ import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 import { isMobile } from "react-device-detect";
 
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import "../../assets/css/main.css";
 
 const textTitle = {
@@ -269,7 +274,7 @@ class Content extends React.Component {
             {/* <BlurryNavbar />
             <ColoredNavbar location={{ ...this.props.location }} /> */}
             <div className="title title-header-mobile">
-              {this.props.pageStore.indexfutures.header}
+              {ReactHtmlParser(this.props.pageStore.indexfutures.header)}
             </div>
           </div>
           <div className="cd-section broken-white" id="teams">
@@ -281,7 +286,9 @@ class Content extends React.Component {
                       className="description font-black"
                       style={{ textAlign: "justify" }}
                     >
-                      {this.props.pageStore.indexfutures.content}
+                      {ReactHtmlParser(
+                        this.props.pageStore.indexfutures.content
+                      )}
                     </p>
                   </Col>
                 </Row>
@@ -341,7 +348,7 @@ class Content extends React.Component {
                 <BlurryNavbar />
                 <ColoredNavbar location={{ ...this.props.location }} />
                 <div className="title title-header">
-                  {this.props.pageStore.indexfutures.header}
+                  {ReactHtmlParser(this.props.pageStore.indexfutures.header)}
                 </div>
               </div>
               <div
@@ -357,7 +364,9 @@ class Content extends React.Component {
                     INDEX FUTURES
                   </h1> */}
                         <p className="description font-black">
-                          {this.props.pageStore.indexfutures.content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.indexfutures.content
+                          )}
                         </p>
                       </Col>
                     </Row>

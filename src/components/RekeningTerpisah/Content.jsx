@@ -13,7 +13,11 @@ import {
 } from "reactstrap";
 import { LangContext } from "../MyContext";
 import { isMobile } from "react-device-detect";
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import ScrollAnimation from "react-animate-on-scroll";
 import check from "../../assets/img/Check.png";
 import dollar from "../../assets/img/header-rekening.png";
@@ -55,7 +59,9 @@ class Content extends React.Component {
                 {/* <BlurryNavbar />
                 <ColoredNavbar location={{ ...this.props.location }} /> */}
                 <div className="title-header-mobile">
-                  {this.props.pageStore.rekeningterpisah.header}
+                  {ReactHtmlParser(
+                    this.props.pageStore.rekeningterpisah.header
+                  )}
                 </div>
               </div>
               <div
@@ -74,16 +80,22 @@ class Content extends React.Component {
                           color: "black"
                         }}
                       >
-                        {this.props.pageStore.rekeningterpisah.content.title}
+                        {ReactHtmlParser(
+                          this.props.pageStore.rekeningterpisah.content.title
+                        )}
                       </h1>
                       <p
                         className="font-black"
                         style={{ lineHeight: "25px", textAlign: "justify" }}
                       >
-                        {this.props.pageStore.rekeningterpisah.content.content}
+                        {ReactHtmlParser(
+                          this.props.pageStore.rekeningterpisah.content.content
+                        )}
                         <br />
 
-                        {this.props.pageStore.rekeningterpisah.subContent[0]}
+                        {ReactHtmlParser(
+                          this.props.pageStore.rekeningterpisah.subContent[0]
+                        )}
                       </p>
                     </Col>
                   </Row>
@@ -98,10 +110,10 @@ class Content extends React.Component {
                             className="font-black"
                             style={{ lineHeight: "25px", textAlign: "justify" }}
                           >
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.rekeningterpisah
                                 .subContent[1]
-                            }
+                            )}
                           </p>
                         </Col>
                       </Row>
@@ -116,10 +128,10 @@ class Content extends React.Component {
                             className="font-black"
                             style={{ lineHeight: "25px", textAlign: "justify" }}
                           >
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.rekeningterpisah
                                 .subContent[2]
-                            }
+                            )}
                           </p>
                         </Col>
                       </Row>
@@ -158,7 +170,9 @@ class Content extends React.Component {
                     <BlurryNavbar />
                     <ColoredNavbar location={{ ...this.props.location }} />
                     <div className="title title-header">
-                      {this.props.pageStore.rekeningterpisah.header}
+                      {ReactHtmlParser(
+                        this.props.pageStore.rekeningterpisah.header
+                      )}
                     </div>
                   </div>
                   <div
@@ -177,22 +191,24 @@ class Content extends React.Component {
                               color: "black"
                             }}
                           >
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.rekeningterpisah.content
                                 .title
-                            }
+                            )}
                           </h1>
                           <p
                             className="font-black"
                             style={{ lineHeight: "25px" }}
                           >
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.rekeningterpisah.content
                                 .content
-                            }
+                            )}
                             <br />
 
-                            {this.props.pageStore.rekeningterpisah.subContent}
+                            {ReactHtmlParser(
+                              this.props.pageStore.rekeningterpisah.subContent
+                            )}
                           </p>
                         </Col>
                       </Row>
@@ -207,10 +223,10 @@ class Content extends React.Component {
                                 className="font-black"
                                 style={{ lineHeight: "25px" }}
                               >
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.rekeningterpisah
                                     .subContent
-                                }
+                                )}
                               </p>
                             </Col>
                           </Row>
@@ -225,10 +241,10 @@ class Content extends React.Component {
                                 className="font-black"
                                 style={{ lineHeight: "25px" }}
                               >
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.rekeningterpisah
                                     .subContent
-                                }
+                                )}
                               </p>
                             </Col>
                           </Row>

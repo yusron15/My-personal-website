@@ -31,7 +31,11 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg from "../../assets/img/header-komoditi.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import "../../assets/css/main.css";
 
 class Headers extends React.Component {
@@ -54,7 +58,7 @@ class Headers extends React.Component {
             {/* <BlurryNavbar /> */}
             <SidebarMobile />
             <div className="title title-header-mobile">
-              {this.props.pageStore.Komoditi.header}
+              {ReactHtmlParser(this.props.pageStore.Komoditi.header)}
             </div>
           </div>
           <div className="header header-4 broken-white">
@@ -78,7 +82,7 @@ class Headers extends React.Component {
                       textAlign: "justify"
                     }}
                   >
-                    {this.props.pageStore.Komoditi.top}
+                    {ReactHtmlParser(this.props.pageStore.Komoditi.top)}
                   </p>
                 </Container>
               </div>
@@ -102,7 +106,7 @@ class Headers extends React.Component {
                 <BlurryNavbar />
                 <ColoredNavbar location={{ ...this.props.location }} />
                 <div className="title title-header">
-                  {this.props.pageStore.Komoditi.header}
+                  {ReactHtmlParser(this.props.pageStore.Komoditi.header)}
                 </div>
               </div>
               <div className="header header-4 broken-white">
@@ -122,7 +126,7 @@ class Headers extends React.Component {
                         className="description"
                         style={{ color: "black", textAlign: "justify" }}
                       >
-                        {this.props.pageStore.Komoditi.top}
+                        {ReactHtmlParser(this.props.pageStore.Komoditi.top)}
                       </p>
                     </Container>
                   </div>

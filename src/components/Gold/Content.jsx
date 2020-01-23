@@ -14,7 +14,11 @@ import {
 } from "reactstrap";
 import { LangContext } from "../MyContext";
 import { isMobile } from "react-device-detect";
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import ScrollAnimation from "react-animate-on-scroll";
 import fg1 from "../../assets/img/gold.png";
 import fg2 from "../../assets/img/forexgold2.png";
@@ -83,7 +87,7 @@ class Features extends React.Component {
               {/* <BlurryNavbar /> */}
 
               <div className="title title-header-mobile">
-                {this.props.pageStore.Gold.header}
+                {ReactHtmlParser(this.props.pageStore.Gold.header)}
               </div>
             </div>
             <div className="space-50" />
@@ -163,10 +167,14 @@ class Features extends React.Component {
                             className="title-content"
                             style={{ color: "black" }}
                           >
-                            {this.props.pageStore.Gold.content[0].title}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Gold.content[0].title
+                            )}
                           </div>
                           <p style={{ color: "black", textAlign: "justify" }}>
-                            {this.props.pageStore.Gold.content[0].content}
+                            {ReactHtmlParser(
+                              this.props.pageStore.Gold.content[0].content
+                            )}
                           </p>{" "}
                         </div>
                       </Col>
@@ -187,7 +195,9 @@ class Features extends React.Component {
                               className="title-content"
                               style={{ color: "black" }}
                             >
-                              {this.props.pageStore.Gold.content[1].title}
+                              {ReactHtmlParser(
+                                this.props.pageStore.Gold.content[1].title
+                              )}
                             </div>
                             <p
                               style={{
@@ -196,7 +206,9 @@ class Features extends React.Component {
                                 textAlign: "justify"
                               }}
                             >
-                              {this.props.pageStore.Gold.content[1].content}
+                              {ReactHtmlParser(
+                                this.props.pageStore.Gold.content[1].content
+                              )}
                             </p>{" "}
                           </div>
                         </div>
@@ -239,7 +251,7 @@ class Features extends React.Component {
                   <ColoredNavbar location={{ ...this.props.location }} />
 
                   <div className="title title-header">
-                    {this.props.pageStore.Gold.header}
+                    {ReactHtmlParser(this.props.pageStore.Gold.header)}
                   </div>
                 </div>
                 <div className="space-50" />
@@ -254,7 +266,7 @@ class Features extends React.Component {
                     GOLD
                   </div> */}
                         <p style={intermezzo}>
-                          {this.props.pageStore.Gold.top}
+                          {ReactHtmlParser(this.props.pageStore.Gold.top)}
                         </p>
                         {/* <Col className="mr-auto ml-auto" md="5"> */}
                         {/* </Col> */}
@@ -328,12 +340,16 @@ class Features extends React.Component {
                                 className="title-content"
                                 style={{ color: "black" }}
                               >
-                                {this.props.pageStore.Gold.content[0].title}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.Gold.content[0].title
+                                )}
                               </div>
                               <p
                                 style={{ color: "black", textAlign: "justify" }}
                               >
-                                {this.props.pageStore.Gold.content[0].content}
+                                {ReactHtmlParser(
+                                  this.props.pageStore.Gold.content[0].content
+                                )}
                               </p>{" "}
                             </div>
                           </Col>
@@ -354,7 +370,9 @@ class Features extends React.Component {
                                   className="title-content"
                                   style={{ color: "black" }}
                                 >
-                                  {this.props.pageStore.Gold.content[1].title}
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Gold.content[1].title
+                                  )}
                                 </div>
                                 <p
                                   style={{
@@ -363,7 +381,9 @@ class Features extends React.Component {
                                     textAlign: "justify"
                                   }}
                                 >
-                                  {this.props.pageStore.Gold.content[1].content}
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Gold.content[1].content
+                                  )}
                                 </p>{" "}
                               </div>
                             </div>

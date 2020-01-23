@@ -52,6 +52,11 @@ import { fetchPage } from "../../redux/ducks/actions.js";
 
 import VizSensor from "react-visibility-sensor";
 import { throwStatement } from "@babel/types";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 
 const styles = {
   fadeInRight: {
@@ -111,10 +116,10 @@ class HeaderLanding extends React.Component {
                                 fontSize: "2rem"
                               }}
                             >
-                              {
+                              {ReactHtmlParser(
                                 this.props.pageStore.Landing.HeaderLanding
                                   .slide[0].title
-                              }
+                              )}
                             </div>
                             <h4
                               style={{
@@ -122,10 +127,10 @@ class HeaderLanding extends React.Component {
                                 fontSize: "0.8rem"
                               }}
                             >
-                              {
+                              {ReactHtmlParser(
                                 this.props.pageStore.Landing.HeaderLanding
                                   .slide[0].subtitle
-                              }
+                              )}
                             </h4>
                             <br />
                           </Col>
@@ -157,10 +162,10 @@ class HeaderLanding extends React.Component {
                                   fontSize: "2rem"
                                 }}
                               >
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.HeaderLanding
                                     .slide[1].title
-                                }
+                                )}
                               </div>
                               <h4
                                 style={{
@@ -168,10 +173,10 @@ class HeaderLanding extends React.Component {
                                   fontSize: "0.8rem"
                                 }}
                               >
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.HeaderLanding
                                     .slide[1].subtitle
-                                }
+                                )}
                               </h4>
                             </Row>
                           </Col>
@@ -203,10 +208,10 @@ class HeaderLanding extends React.Component {
                                   fontSize: "2rem"
                                 }}
                               >
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.HeaderLanding
                                     .slide[2].title
-                                }
+                                )}
                               </div>
 
                               <h4
@@ -215,10 +220,10 @@ class HeaderLanding extends React.Component {
                                   fontSize: "0.8rem"
                                 }}
                               >
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.HeaderLanding
                                     .slide[2].subtitle
-                                }
+                                )}
                               </h4>
                               <br />
                               <Row>
@@ -289,16 +294,16 @@ class HeaderLanding extends React.Component {
                                     fontWeight: "bold"
                                   }}
                                 >
-                                  {
+                                  {ReactHtmlParser(
                                     this.props.pageStore.Landing.HeaderLanding
                                       .slide[0].title
-                                  }
+                                  )}
                                 </div>
                                 <h4>
-                                  {
+                                  {ReactHtmlParser(
                                     this.props.pageStore.Landing.HeaderLanding
                                       .slide[0].subtitle
-                                  }
+                                  )}
                                 </h4>
                                 <br />
                               </Col>
@@ -329,16 +334,16 @@ class HeaderLanding extends React.Component {
                                       fontWeight: "bold"
                                     }}
                                   >
-                                    {
+                                    {ReactHtmlParser(
                                       this.props.pageStore.Landing.HeaderLanding
                                         .slide[1].title
-                                    }
+                                    )}
                                   </div>
                                   <h4>
-                                    {
+                                    {ReactHtmlParser(
                                       this.props.pageStore.Landing.HeaderLanding
                                         .slide[1].subtitle
-                                    }
+                                    )}
                                   </h4>
                                 </Row>
                               </Col>
@@ -353,7 +358,7 @@ class HeaderLanding extends React.Component {
                             backgroundImage:
                               "url(" +
                               this.props.pageStore.Landing.HeaderLanding
-                                .slide[2].image +
+                                .slide[1].image +
                               ")",
                             backgroundSize: "cover"
                           }}
@@ -369,17 +374,17 @@ class HeaderLanding extends React.Component {
                                       fontWeight: "bold"
                                     }}
                                   >
-                                    {
+                                    {ReactHtmlParser(
                                       this.props.pageStore.Landing.HeaderLanding
-                                        .slide[2].title
-                                    }
+                                        .slide[1].title
+                                    )}
                                   </div>
 
                                   <h4>
-                                    {
+                                    {ReactHtmlParser(
                                       this.props.pageStore.Landing.HeaderLanding
-                                        .slide[2].subtitle
-                                    }
+                                        .slide[1].subtitle
+                                    )}
                                   </h4>
                                   <br />
                                   <Row>

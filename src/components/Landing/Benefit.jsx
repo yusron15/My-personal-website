@@ -31,7 +31,11 @@ import legalitas from "../../assets/img/legalitas.png";
 import layanan from "../../assets/img/layanan.png";
 import requote from "../../assets/img/requote.png";
 import support from "../../assets/img/support.png";
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 
@@ -197,7 +201,9 @@ class Testimonials extends React.Component {
                       className="title center"
                       style={{ textAlign: "center" }}
                     >
-                      {this.props.pageStore.Landing.Benefit.title}
+                      {ReactHtmlParser(
+                        this.props.pageStore.Landing.Benefit.title
+                      )}
                     </h2>
                   </Col>
                 </Row>
@@ -235,18 +241,18 @@ class Testimonials extends React.Component {
                                 src={this.state.biayaImg}
                                 style={{ marginRight: "10px" }}
                               />
-                              {
+                              {ReactHtmlParser(
                                 this.props.pageStore.Landing.Benefit.content[0]
                                   .title
-                              }
+                              )}
                             </div>
                             <div
                               style={{ marginLeft: "10px", fontSize: "1rem" }}
                             >
-                              {
+                              {ReactHtmlParser(
                                 this.props.pageStore.Landing.Benefit.content[0]
                                   .subtitle
-                              }
+                              )}
                             </div>
                             <div className="author"></div>
                           </div>
@@ -282,17 +288,17 @@ class Testimonials extends React.Component {
                               src={this.state.legalitasImg}
                               style={{ marginRight: "5%" }}
                             />
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Benefit.content[1]
                                 .title
-                            }
+                            )}
                           </div>
 
                           <div style={{ marginLeft: "10px", fontSize: "1rem" }}>
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Benefit.content[1]
                                 .subtitle
-                            }
+                            )}
                           </div>
                           <div className="author"></div>
                         </div>
@@ -327,17 +333,17 @@ class Testimonials extends React.Component {
                               src={this.state.layananImg}
                               style={{ marginRight: "5%" }}
                             />
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Benefit.content[2]
                                 .title
-                            }
+                            )}
                           </div>
 
                           <div style={{ marginLeft: "10px", fontSize: "1rem" }}>
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Benefit.content[2]
                                 .subtitle
-                            }
+                            )}
                           </div>
                           <div className="author"></div>
                         </div>
@@ -372,17 +378,17 @@ class Testimonials extends React.Component {
                               src={this.state.beritaImg}
                               style={{ marginRight: "5%" }}
                             />
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Benefit.content[3]
                                 .title
-                            }
+                            )}
                           </div>
 
                           <div style={{ marginLeft: "10px", fontSize: "1rem" }}>
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Benefit.content[3]
                                 .subtitle
-                            }
+                            )}
                           </div>
                           <div className="author"></div>
                         </div>
@@ -417,17 +423,17 @@ class Testimonials extends React.Component {
                               src={this.state.requoteImg}
                               style={{ marginRight: "5%" }}
                             />
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Benefit.content[4]
                                 .title
-                            }
+                            )}
                           </div>
 
                           <div style={{ marginLeft: "10px", fontSize: "1rem" }}>
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Benefit.content[4]
                                 .subtitle
-                            }
+                            )}
                           </div>
                           <div className="author"></div>
                         </div>
@@ -462,17 +468,17 @@ class Testimonials extends React.Component {
                               src={this.state.supportImg}
                               style={{ marginRight: "5%" }}
                             />
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Benefit.content[5]
                                 .title
-                            }
+                            )}
                           </div>
 
                           <div style={{ marginLeft: "10px", fontSize: "1rem" }}>
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Benefit.content[5]
                                 .subtitle
-                            }
+                            )}
                           </div>
                           <div className="author"></div>
                         </div>
@@ -503,7 +509,9 @@ class Testimonials extends React.Component {
                     <Row>
                       <Col className="ml-auto mr-auto" md="9">
                         <h2 className="title">
-                          {this.props.pageStore.Landing.Benefit.title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.Landing.Benefit.title
+                          )}
                         </h2>
                       </Col>
                     </Row>
@@ -546,16 +554,16 @@ class Testimonials extends React.Component {
                                     src={this.state.biayaImg}
                                     style={{ marginRight: "10px" }}
                                   />
-                                  {
+                                  {ReactHtmlParser(
                                     this.props.pageStore.Landing.Benefit
                                       .content[0].title
-                                  }
+                                  )}
                                 </div>
                                 <div style={{ marginLeft: "10px" }}>
-                                  {
+                                  {ReactHtmlParser(
                                     this.props.pageStore.Landing.Benefit
                                       .content[0].subtitle
-                                  }
+                                  )}
                                 </div>
                                 <div className="author"></div>
                               </div>
@@ -596,17 +604,17 @@ class Testimonials extends React.Component {
                                   src={this.state.legalitasImg}
                                   style={{ marginRight: "5%" }}
                                 />
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.Benefit
                                     .content[1].title
-                                }
+                                )}
                               </div>
 
                               <div style={{ marginLeft: "10px" }}>
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.Benefit
                                     .content[1].subtitle
-                                }
+                                )}
                               </div>
                               <div className="author"></div>
                             </div>
@@ -646,17 +654,17 @@ class Testimonials extends React.Component {
                                   src={this.state.layananImg}
                                   style={{ marginRight: "5%" }}
                                 />
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.Benefit
                                     .content[2].title
-                                }
+                                )}
                               </div>
 
                               <div style={{ marginLeft: "10px" }}>
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.Benefit
                                     .content[2].subtitle
-                                }
+                                )}
                               </div>
                               <div className="author"></div>
                             </div>
@@ -702,17 +710,17 @@ class Testimonials extends React.Component {
                                   src={this.state.beritaImg}
                                   style={{ marginRight: "5%" }}
                                 />
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.Benefit
                                     .content[3].title
-                                }
+                                )}
                               </div>
 
                               <div style={{ marginLeft: "10px" }}>
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.Benefit
                                     .content[3].subtitle
-                                }
+                                )}
                               </div>
                               <div className="author"></div>
                             </div>
@@ -752,17 +760,17 @@ class Testimonials extends React.Component {
                                   src={this.state.requoteImg}
                                   style={{ marginRight: "5%" }}
                                 />
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.Benefit
                                     .content[4].title
-                                }
+                                )}
                               </div>
 
                               <div style={{ marginLeft: "10px" }}>
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.Benefit
                                     .content[4].subtitle
-                                }
+                                )}
                               </div>
                               <div className="author"></div>
                             </div>
@@ -802,17 +810,17 @@ class Testimonials extends React.Component {
                                   src={this.state.supportImg}
                                   style={{ marginRight: "5%" }}
                                 />
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.Benefit
                                     .content[5].title
-                                }
+                                )}
                               </div>
 
                               <div style={{ marginLeft: "10px" }}>
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Landing.Benefit
                                     .content[5].subtitle
-                                }
+                                )}
                               </div>
                               <div className="author"></div>
                             </div>

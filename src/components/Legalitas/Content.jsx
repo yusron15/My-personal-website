@@ -42,7 +42,11 @@ import DarkNavbar from "../../components/Navbars/DarkNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 
@@ -112,17 +116,21 @@ class Projects extends React.Component {
                           md="8"
                         >
                           <h2 className="title font-black">
-                            {
-                              this.props.pageStore.Landing.Legality.content[0]
-                                .title
-                            }
+                            <div style={{ color: "black" }}>
+                              {ReactHtmlParser(
+                                this.props.pageStore.Landing.Legality.content[0]
+                                  .title
+                              )}
+                            </div>
                           </h2>
                           <p className="description mb-5 font-black">
                             {/* {this.state.content[0].bappebti} */}
-                            {
-                              this.props.pageStore.Landing.Legality.content[0]
-                                .content
-                            }
+                            <div style={{ color: "black" }}>
+                              {ReactHtmlParser(
+                                this.props.pageStore.Landing.Legality.content[0]
+                                  .content
+                              )}
+                            </div>
                           </p>
                         </Col>
                       </TabPane>
@@ -133,15 +141,16 @@ class Projects extends React.Component {
                         >
                           <p className="description mb-5 font-black">
                             <h2 className="title font-black">
-                              {
+                              {ReactHtmlParser(
                                 this.props.pageStore.Landing.Legality.content[1]
                                   .title
-                              }
+                              )}
                             </h2>
-                            {
+
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Legality.content[1]
                                 .content
-                            }
+                            )}
                           </p>
                         </Col>
                       </TabPane>
@@ -152,15 +161,16 @@ class Projects extends React.Component {
                         >
                           <p className="description mb-5 font-black">
                             <h2 className="title font-black">
-                              {
+                              {ReactHtmlParser(
                                 this.props.pageStore.Landing.Legality.content[2]
                                   .title
-                              }
+                              )}
                             </h2>
-                            {
+
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Legality.content[2]
                                 .content
-                            }
+                            )}
                           </p>
                         </Col>
                       </TabPane>
@@ -170,16 +180,16 @@ class Projects extends React.Component {
                           md="8"
                         >
                           <h2 className="title font-black">
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Legality.content[3]
                                 .title
-                            }
+                            )}
                           </h2>
                           <p className="description mb-5 font-black">
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Legality.content[3]
                                 .content
-                            }
+                            )}
                           </p>
                         </Col>
                       </TabPane>
@@ -189,20 +199,20 @@ class Projects extends React.Component {
                           md="8"
                         >
                           <h2 className="title font-black">
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Legality.content[4]
                                 .title
-                            }
+                            )}
                           </h2>
                           <p className="description mb-5 font-black">
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Legality.content[4]
                                 .content
-                            }
+                            )}
                           </p>
                         </Col>
                       </TabPane>
-                    </TabContent>
+                    </TabContent>{" "}
                   </Col>
                   <Col style={{ marginTop: "32vh" }}>
                     <Nav
@@ -394,17 +404,21 @@ class Projects extends React.Component {
                           md="8"
                         >
                           <h2 className="title font-black">
-                            {
-                              this.props.pageStore.Landing.Legality.content[0]
-                                .title
-                            }
+                            <div style={{ color: "black" }}>
+                              {ReactHtmlParser(
+                                this.props.pageStore.Landing.Legality.content[0]
+                                  .title
+                              )}
+                            </div>
                           </h2>
                           <p className="description mb-5 font-black">
                             {/* {this.state.content[0].bappebti} */}
-                            {
-                              this.props.pageStore.Landing.Legality.content[0]
-                                .content
-                            }
+                            <div style={{ color: "black" }}>
+                              {ReactHtmlParser(
+                                this.props.pageStore.Landing.Legality.content[0]
+                                  .content
+                              )}
+                            </div>
                           </p>
                         </Col>
                       </TabPane>
@@ -415,15 +429,16 @@ class Projects extends React.Component {
                         >
                           <p className="description mb-5 font-black">
                             <h2 className="title font-black">
-                              {
+                              {ReactHtmlParser(
                                 this.props.pageStore.Landing.Legality.content[1]
                                   .title
-                              }
+                              )}
                             </h2>
-                            {
+
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Legality.content[1]
                                 .content
-                            }
+                            )}
                           </p>
                         </Col>
                       </TabPane>
@@ -434,15 +449,16 @@ class Projects extends React.Component {
                         >
                           <p className="description mb-5 font-black">
                             <h2 className="title font-black">
-                              {
+                              {ReactHtmlParser(
                                 this.props.pageStore.Landing.Legality.content[2]
                                   .title
-                              }
+                              )}
                             </h2>
-                            {
+
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Legality.content[2]
                                 .content
-                            }
+                            )}
                           </p>
                         </Col>
                       </TabPane>
@@ -452,16 +468,16 @@ class Projects extends React.Component {
                           md="8"
                         >
                           <h2 className="title font-black">
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Legality.content[3]
                                 .title
-                            }
+                            )}
                           </h2>
                           <p className="description mb-5 font-black">
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Legality.content[3]
                                 .content
-                            }
+                            )}
                           </p>
                         </Col>
                       </TabPane>
@@ -471,16 +487,16 @@ class Projects extends React.Component {
                           md="8"
                         >
                           <h2 className="title font-black">
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Legality.content[4]
                                 .title
-                            }
+                            )}
                           </h2>
                           <p className="description mb-5 font-black">
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.Landing.Legality.content[4]
                                 .content
-                            }
+                            )}
                           </p>
                         </Col>
                       </TabPane>

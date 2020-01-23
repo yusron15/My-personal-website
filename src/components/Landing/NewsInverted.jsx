@@ -37,31 +37,15 @@ import nextButton from "../../assets/img/nextbutton.png";
 import leftButton from "../../assets/img/blue-right.png";
 import rightButton from "../../assets/img/blue-left.png";
 
-import sungaigerong from "../../assets/img/sumgaigerong.png";
+import bg from "../../assets/img/header-trader.png";
 
 const items2 = [
   {
     content: (
-      // <div className="info info-primary">
-      //   <div className="card-avatar">
-      //     <a href="#pablo" onClick={e => e.preventDefault()}>
-      //       <img
-      //         alt="..."
-      //         className="img img-raised rounded"
-      //         src={require("assets/img/michael.jpg")}
-      //       />
-      //     </a>
-      //   </div>
-      //   <h4 className="info-title">Best Quality</h4>
-      //   <p className="description">
-      //     Gain access to the demographics, psychographics, and location of
-      //     unique people.
-      //   </p>
-      // </div>
       <div
-        className="info info-warning broken-white header-filter"
+        className="info info-warning broken-white"
         style={{
-          backgroundImage: `url(${sungaigerong})`,
+          backgroundImage: `url(${bg})`,
           backgroundColor: "rgba(0, 0, 0, 0.25)",
           backgroundSize: "cover"
         }}
@@ -83,10 +67,16 @@ const items2 = [
     content: (
       <div
         className="info info-warning broken-white"
-        style={{ backgroundImage: `url(${sungaigerong})` }}
+        style={{
+          backgroundImage: `url(${bg})`,
+          backgroundColor: "rgba(0, 0, 0, 0.25)",
+          backgroundSize: "cover"
+        }}
       >
-        <h4 className="title font-black">Best Quality</h4>
-        <p className="font-black" style={{ color: "black" }}>
+        <h4 className="title" style={{ color: "white" }}>
+          Best Quality
+        </h4>
+        <p style={{ color: "white" }}>
           Gain access to the demographics, psychographics, and location of
           unique people.
         </p>
@@ -94,7 +84,7 @@ const items2 = [
     ),
     altText: "",
     caption: "",
-    src: "1"
+    src: "0"
   }
 ];
 

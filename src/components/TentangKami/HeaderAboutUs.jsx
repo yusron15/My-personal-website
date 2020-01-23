@@ -33,7 +33,11 @@ import ColoredNavbar from "../Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "components/Navbars/BlurryNavbar";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import { LangContext } from "../MyContext";
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import { connect } from "react-redux";
 import { fetchPage, getContent } from "../../redux/ducks/actions.js";
 
@@ -75,7 +79,7 @@ class HeaderAboutUs extends React.Component {
                   className="title-header-mobile"
                   // style={{ marginTop: "11vh", fontSize: "2rem" }}
                 >
-                  {this.props.pageStore.tentangkami.header}
+                  {ReactHtmlParser(this.props.pageStore.tentangkami.header)}
                 </div>
               </div>
               <div className="content-center broken-white">
@@ -90,7 +94,9 @@ class HeaderAboutUs extends React.Component {
                           lineHeight: "30px"
                         }}
                       >
-                        {this.props.pageStore.tentangkami.content}
+                        {ReactHtmlParser(
+                          this.props.pageStore.tentangkami.content
+                        )}
                       </p>
                     </Col>
                   </Row>
@@ -120,7 +126,7 @@ class HeaderAboutUs extends React.Component {
                     <BlurryNavbar />
                     <ColoredNavbar location={{ ...this.props.location }} />
                     <div className="title title-header">
-                      {this.props.pageStore.tentangkami.header}
+                      {ReactHtmlParser(this.props.pageStore.tentangkami.header)}
                     </div>
                   </div>
                   <div className="content-center broken-white">
@@ -135,7 +141,9 @@ class HeaderAboutUs extends React.Component {
                               lineHeight: "30px"
                             }}
                           >
-                            {this.props.pageStore.tentangkami.content}
+                            {ReactHtmlParser(
+                              this.props.pageStore.tentangkami.content
+                            )}
                           </p>
                         </Col>
                       </Row>

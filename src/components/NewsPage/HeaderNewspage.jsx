@@ -26,29 +26,59 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 import bg from "../../assets/img/header-newspage.png";
+import { isMobile } from "react-device-detect";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import BreakingNews from "../../components/Landing/BreakingNews";
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
+import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 
 class HeaderNewsPage extends Component {
-  render() {
-    return (
-      <div
-        className=" background-header"
-        style={{
-          backgroundImage: `url(${bg})`,
-          padding: 0,
-          backgroundSize: "cover",
-          minHeight: "60vh"
-        }}
-      >
-        <BlurryNavbar />
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+          <div
+            className=" background-header-mobile"
+            style={{
+              backgroundImage: `url(${bg})`,
+              padding: 0,
+              backgroundSize: "cover"
+            }}
+          >
+            <SidebarMobile />
 
-        <div className="title title-header">Newspage</div>
-        {/* <div style={{ marginTop: "11vh" }}> */}
-        <BreakingNews />
-        {/* </div> */}
-      </div>
+            <div className="title title-header-mobile">Newspage</div>
+            {/* <div style={{ marginTop: "11vh" }}> */}
+            {/* <BreakingNews /> */}
+            {/* </div> */}
+          </div>
+        </>
+      );
+    }
+    return (
+      <>
+        <div
+          className=" background-header"
+          style={{
+            backgroundImage: `url(${bg})`,
+            padding: 0,
+            backgroundSize: "cover",
+            minHeight: "60vh"
+          }}
+        >
+          <BlurryNavbar />
+          <ColoredNavbar location={{ ...this.props.location }} />
+          <div className="title title-header">Newspage</div>
+          {/* <div style={{ marginTop: "11vh" }}> */}
+          <BreakingNews />
+          {/* </div> */}
+        </div>
+      </>
     );
+  };
+
+  render() {
+    return this.renderContent();
   }
 }
 
