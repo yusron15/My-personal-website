@@ -1,21 +1,11 @@
-// import { GetNews } from "../api/news";
+import { GetNews } from "../api/news";
 
-// export function getNews() {
-//   return async dispatch => {
-//     const result = await GetNews();
-//     dispatch({
-//       type: "GET_NEWS",
-//       payload: result
-//     });
-//     return result;
-//   };
-// }
-
-export function getNews(data) {
+export function getNews(type) {
   return async dispatch => {
+    let result = await GetNews(type);
     dispatch({
-      type: "GET_NEWS",
-      payload: data
+      type: `GET_NEWS_${type.toUpperCase()}`,
+      payload: result
     });
   };
 }

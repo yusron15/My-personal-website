@@ -1,5 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import moment from "moment";
+
+import { getNews } from "../../redux/ducks/actions";
+
 // reactstrap components
 import {
   Button,
@@ -31,10 +36,18 @@ class Blogs extends React.Component {
   state = {
     dataSelect: ""
   };
-  componentDidMount = () => {
-    window.scroll(0, 0);
+
+  componentDidMount = async () => {
+    try {
+      window.scroll(0, 0);
+      await this.props.getNews("market");
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   render() {
+    console.log(this.props.news.market, "this.props.news.market");
     return (
       <>
         <div className="cd-section broken-white" id="blogs">
@@ -62,6 +75,23 @@ class Blogs extends React.Component {
             >
               <div className="features-3" style={{ paddingTop: 0 }}>
                 <div>
+                  {this.props.news.market.map((item, index) => {
+                    return (
+                      <Link to="/stock-index-inside">
+                        <Content
+                          image={item.featured_image_src}
+                          title={item.title.rendered}
+                          posted={`Posted ${moment(item.date).format(
+                            "DD MMMM YYYY HH:ss"
+                          )} WIB`}
+                          description={`${item.excerpt.rendered
+                            .replace(/(<([^>]+)>)/gi, "")
+                            .substring(0, 100)}...`}
+                        />
+                      </Link>
+                    );
+                  })}
+
                   <Link to="/market-outlook-inside">
                     <Content
                       image={news1}
@@ -117,4 +147,12 @@ class Blogs extends React.Component {
   }
 }
 
-export default Blogs;
+const mapStateToProps = state => ({
+  news: state.newsStore.news
+});
+
+const mapDispatchToProps = dispatch => ({
+  getNews: type => dispatch(getNews(type))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blogs);
