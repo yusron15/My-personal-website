@@ -57,6 +57,14 @@ const intermezzo = {
   color: "black"
 };
 
+const descHeader = {
+  textAlign: "center",
+  fontStyle: "Helvetica Bold",
+  margin: 0,
+  fontSize: "1rem",
+  color: "white"
+};
+
 const titleTable = {
   fontWeight: "bold",
   color: "white",
@@ -358,35 +366,37 @@ class Features extends React.Component {
                 >
                   <BlurryNavbar />
                   <ColoredNavbar location={{ ...this.props.location }} />
-                  <div className="title title-header">
+                  <div
+                    className="title title-header"
+                    style={{ marginBottom: 0 }}
+                  >
                     {ReactHtmlParser(this.props.pageStore.Forex.header)}
                   </div>
+                  <Container>
+                    <div style={descHeader}>
+                      {ReactHtmlParser(this.props.pageStore.Forex.top)}
+                    </div>
+                  </Container>
                 </div>
                 <div className="features-3" style={{ paddingTop: 0 }}>
                   <Container fluid>
-                    <Row>
+                    {/* <Row>
                       <Col className="ml-auto mr-auto text-center" md="8">
-                        {/* <div
-                    // className="title"
-                    style={textTitle}
-                  >
-                    FOREX
-                  </div> */}
+                  
                         <div className="space-50" />
                         <p style={intermezzo}>
                           {ReactHtmlParser(this.props.pageStore.Forex.top)}
                         </p>
-                        {/* <Col className="mr-auto ml-auto" md="5"> */}
-                        {/* </Col> */}
+                     
                       </Col>
-                    </Row>
+                    </Row> */}
                     <Row>
                       <Col
                         sm={{ size: 10, order: 2, offset: 1 }}
                         style={{ marginTop: "50px" }}
                       >
                         <Row>
-                          <Col lg="4">
+                          <Col lg="6">
                             <div className="card-image">
                               <a
                                 href="#pablo"
@@ -400,7 +410,7 @@ class Features extends React.Component {
                               </a>
                             </div>
                           </Col>
-                          <Col lg="8">
+                          <Col lg="6">
                             <div style={textContent}>
                               <div
                                 className="title-content"
@@ -422,7 +432,7 @@ class Features extends React.Component {
                         </Row>
 
                         <Row style={{ marginTop: "50px" }}>
-                          <Col lg="8">
+                          <Col lg="6">
                             <div style={textContent}>
                               <div
                                 className="title-content"
@@ -441,7 +451,7 @@ class Features extends React.Component {
                               </p>{" "}
                             </div>
                           </Col>
-                          <Col lg="4">
+                          <Col lg="6">
                             <div className="card-image">
                               <a
                                 href="#pablo"
@@ -478,7 +488,10 @@ class Features extends React.Component {
                                 )}
                               </p>
                             </div>
-
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col>
                             <div style={{ marginTop: "20px" }}>
                               <div style={textTitle}>
                                 {ReactHtmlParser(
@@ -548,7 +561,8 @@ class Features extends React.Component {
                                 </tbody>
                               </Table>
                             </div>
-
+                          </Col>
+                          <Col>
                             <div style={{ marginTop: "20px" }}>
                               <div style={textTitle}>
                                 {this.props.pageStore.Forex.content[4].title}

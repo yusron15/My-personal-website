@@ -91,7 +91,7 @@ class BreakingNews extends Component {
           }}
         >
           <Row>
-            <Col md="3">
+            <Col md="2 ">
               <Row>
                 <Col md="4" style={{ padding: 0 }}>
                   <Nav tabs vertical pills style={{ padding: "0 0 0 15px" }}>

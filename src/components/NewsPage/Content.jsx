@@ -623,9 +623,9 @@ class Carding extends React.Component {
                       // md={{ size: 10, order: 0, offset: 1 }}
                       md="10"
                     >
-                      <h2 className="title font-black">
+                      <h4 className="title font-black">
                         {this.props.pageStore.berita.outlook}
-                      </h2>
+                      </h4>
                     </div>
                     <div>
                       <Link to="/market-outlook">
@@ -639,42 +639,6 @@ class Carding extends React.Component {
                     </div>
                   </Row>
                   <Row>
-                    {/* <Carousel
-                    activeIndex={this.state.activeIndex}
-                    next={this.next}
-                    previous={this.previous}
-                    //   className="carousel-team"
-                    style={{
-                      borderRadius: "20px",
-                      backgroundColor: "transparent"
-                    }}
-                  >
-                    <CarouselIndicators
-                      items={items}
-                      activeIndex={this.state.activeIndex}
-                    />
-                    {cardMarketNews.map((item, key) => {
-                      return (
-                        <CarouselItem
-                          onExiting={this.onExiting}
-                          onExited={this.onExited}
-                          key={key}
-                        >
-                          {item.content}
-                        </CarouselItem>
-                      );
-                    })}
-
-                    <Col
-                      sm="12"
-                      style={{
-                        position: "absolute",
-                        paddingLeft: "80%",
-                        bottom: "8%"
-                      }}
-                    ></Col>
-                  </Carousel> */}
-
                     <Col>
                       <CardNews
                         title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
@@ -722,9 +686,9 @@ class Carding extends React.Component {
                       // md={{ size: 10, order: 0, offset: 1 }}
                       md="10"
                     >
-                      <h2 className="title font-black">
+                      <h4 className="title font-black">
                         {this.props.pageStore.berita.forex}
-                      </h2>
+                      </h4>
                     </div>
                     <div>
                       <Link to="/market-outlook">
@@ -785,9 +749,9 @@ class Carding extends React.Component {
                       // md={{ size: 10, order: 0, offset: 1 }}
                       md="10"
                     >
-                      <h2 className="title font-black">
+                      <h4 className="title font-black">
                         {this.props.pageStore.berita.stock}
-                      </h2>
+                      </h4>
                     </div>
                     <div>
                       <Link to="/market-outlook">
@@ -1143,9 +1107,9 @@ class Carding extends React.Component {
                     // md={{ size: 10, order: 0, offset: 1 }}
                     md="10"
                   >
-                    <h4 className="title-mobile font-black">
+                    <h2 className="title font-black">
                       {this.props.pageStore.berita.outlook}
-                    </h4>
+                    </h2>
                   </Col>
                   <Col md="1">
                     <Link to="/market-outlook">
@@ -1239,9 +1203,9 @@ class Carding extends React.Component {
                 <Row>
                   <Col md="1" />
                   <Col className="ml-auto mr-auto text-center" md="8">
-                    <h4 className="title-mobile font-black">
+                    <h2 className="title font-black">
                       {this.props.pageStore.berita.forex}
-                    </h4>
+                    </h2>
                   </Col>
                   <Col md="1">
                     <Link to="/forex-commodity">
@@ -1299,9 +1263,9 @@ class Carding extends React.Component {
                 <Row>
                   <Col md="1" />
                   <Col className="ml-auto mr-auto text-center" md="8">
-                    <h4 className="title-mobile font-black">
+                    <h2 className="title font-black">
                       {this.props.pageStore.berita.stock}
-                    </h4>
+                    </h2>
                   </Col>
                   <Col md="1">
                     <Link to="/stock-index">

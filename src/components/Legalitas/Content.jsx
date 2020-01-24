@@ -413,12 +413,10 @@ class Projects extends React.Component {
                           </h2>
                           <p className="description mb-5 font-black">
                             {/* {this.state.content[0].bappebti} */}
-                            <div style={{ color: "black" }}>
-                              {ReactHtmlParser(
-                                this.props.pageStore.Landing.Legality.content[0]
-                                  .content
-                              )}
-                            </div>
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Legality.content[0]
+                                .content
+                            )}
                           </p>
                         </Col>
                       </TabPane>

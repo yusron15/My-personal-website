@@ -291,7 +291,6 @@ class Features extends React.Component {
                                   style={{
                                     paddingLeft: 0,
                                     paddingRight: 0,
-                                    minHeight: "15vh"
                                   }}
                                 >
                                   <div className="icon icon-success">
@@ -308,7 +307,6 @@ class Features extends React.Component {
                                   style={{
                                     paddingLeft: 0,
                                     paddingRight: 0,
-                                    minHeight: "15vh"
                                   }}
                                 >
                                   <div className="description">
@@ -352,7 +350,6 @@ class Features extends React.Component {
                                   style={{
                                     paddingLeft: 0,
                                     paddingRight: 0,
-                                    minHeight: "15vh"
                                   }}
                                 >
                                   <div className="icon icon-success">
@@ -369,7 +366,6 @@ class Features extends React.Component {
                                   style={{
                                     paddingLeft: 0,
                                     paddingRight: 0,
-                                    minHeight: "15vh"
                                   }}
                                 >
                                   <div className="description">

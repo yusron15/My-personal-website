@@ -23,10 +23,10 @@ function LangTogglerButton(props) {
           defaultCountry={props.lang}
           countries={["ID", "GB", "CN", "HK"]}
           customLabels={{
-            ID: "Indonesian",
+            ID: "Bahasa",
             GB: "English",
-            CN: "Mandarin",
-            HK: "Mandarin Traditional"
+            CN: "中国人",
+            HK: "Chinese Traditional"
           }}
           showSelectedLabel={false}
           showOptionLabel={true}
