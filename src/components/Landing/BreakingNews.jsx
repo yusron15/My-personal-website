@@ -93,7 +93,7 @@ class BreakingNews extends Component {
           <Row>
             <Col md="2 ">
               <Row>
-                <Col md="4" style={{ padding: 0 }}>
+                <Col md="6" style={{ padding: 0 }}>
                   <Nav tabs vertical pills style={{ padding: "0 0 0 15px" }}>
                     <NavItem>
                       <div
@@ -107,7 +107,8 @@ class BreakingNews extends Component {
                             color:
                               this.state.activeTab === "1" ? "white" : "white",
                             backgroundColor:
-                              this.state.activeTab === "1" ? "grey" : "black"
+                              this.state.activeTab === "1" ? "grey" : "black",
+                            paddingTop: "5px"
                           }}
                         >
                           Komoditi
@@ -126,7 +127,8 @@ class BreakingNews extends Component {
                             color:
                               this.state.activeTab === "2" ? "white" : "white",
                             backgroundColor:
-                              this.state.activeTab === "2" ? "grey" : "black"
+                              this.state.activeTab === "2" ? "grey" : "black",
+                            paddingTop: "5px"
                           }}
                         >
                           Index
@@ -145,7 +147,8 @@ class BreakingNews extends Component {
                             color:
                               this.state.activeTab === "3" ? "white" : "white",
                             backgroundColor:
-                              this.state.activeTab === "3" ? "grey" : "black"
+                              this.state.activeTab === "3" ? "grey" : "black",
+                            paddingTop: "5px"
                           }}
                         >
                           FX
@@ -154,7 +157,7 @@ class BreakingNews extends Component {
                     </NavItem>
                   </Nav>
                 </Col>
-                <Col md="8" style={{ padding: 0 }}>
+                <Col md="6" style={{ padding: 0 }}>
                   <TabContent activeTab={this.state.activeTab}>
                     <TabPane tabId="1">
                       <div style={tabContent}>Komoditi</div>

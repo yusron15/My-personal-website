@@ -21,10 +21,12 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
 import bg from "../../assets/img/header-forexcommodity.png";
 import Footer from "../Footers/Footer";
 import "../../assets/css/main.css";
-import Content from "../RelatedPost/LayoutForexCommodity";
+// import Content from "../RelatedPost/LayoutForexCommodity";
+import Content from "../RelatedPost/Layout";
 import NewsTicker from "./NewsTicker";
 import BreakingNews from "../../components/Landing/BreakingNews";
-
+import { isMobile } from "react-device-detect";
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import fc1 from "../../assets/img/fc1.png";
 import fc2 from "../../assets/img/fc2.png";
 import fc5 from "../../assets/img/fc5.png";
@@ -45,7 +47,61 @@ class Blogs extends React.Component {
     }
   };
 
-  render() {
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+          <div className="cd-section broken-white" id="blogs">
+            {/* ********* END BLOGS 5 ********* */}
+
+            <div>
+              <div
+                className="team-1 background-header-mobile"
+                style={{
+                  backgroundImage: `url(${bg})`,
+                  padding: 0
+                }}
+              >
+                <SidebarMobile />
+                <div className="title title-header-mobile">Forex Commodity</div>
+              </div>
+
+              {/* <Container> */}
+              <div
+                className="cd-section broken-white"
+                id="features"
+                // style={{ backgroundColor: "#D4D4D4" }}
+              >
+                <div className="features-3" style={{ paddingTop: 0 }}>
+                  <div>
+                    {this.props.news.forex.map((item, index) => {
+                      return (
+                        <Link to="/forex-commodity-inside">
+                          <Content
+                            image={item.featured_image_src}
+                            title={item.title.rendered}
+                            posted={`Posted ${moment(item.date).format(
+                              "DD MMMM YYYY HH:ss"
+                            )} WIB`}
+                            description={`${item.excerpt.rendered
+                              .replace(/(<([^>]+)>)/gi, "")
+                              .substring(0, 100)}...`}
+                          />
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+              {/* </Container> */}
+            </div>
+            <NewsLetter />
+            <Footer />
+            {/* ********* END BLOGS 5 ********* */}
+          </div>{" "}
+        </>
+      );
+    }
     return (
       <>
         <div className="cd-section broken-white" id="blogs">
@@ -100,6 +156,10 @@ class Blogs extends React.Component {
         </div>{" "}
       </>
     );
+  };
+
+  render() {
+    return this.renderContent();
   }
 }
 

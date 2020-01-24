@@ -47,7 +47,9 @@ class ColorNavbar extends React.Component {
       bgButton: "transparent",
       color: "white",
       activeTab: "1",
-      logo: require("../../assets/img/white-logo-hd.png")
+      logo: require("../../assets/img/white-logo-hd.png"),
+      logoWhite: require("../../assets/img/white-logo-hd.png"),
+      logoBlue: require("../../assets/img/logo-topgrowth.png")
     };
   }
 
@@ -218,6 +220,26 @@ class ColorNavbar extends React.Component {
       }
     };
     const { containerStyle, colorStyle } = styles;
+
+    const logoImage =
+      document.documentElement.scrollTop > 30 || document.body.scrollTop > 30;
+    let image;
+
+    if (logoImage) {
+      image = (
+        <img
+          src={this.state.logoBlue}
+          style={{ height: "7vh", width: "auto" }}
+        />
+      );
+    } else {
+      image = (
+        <img
+          src={this.state.logoWhite}
+          style={{ height: "8vh", width: "auto" }}
+        />
+      );
+    }
     return (
       <>
         <Container
@@ -235,10 +257,14 @@ class ColorNavbar extends React.Component {
               <div className="navbar-translate">
                 <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
                   <Link to="/landing">
-                    <img
+                    {/* <img
                       src={this.state.logo}
                       style={{ height: "7vh", width: "auto" }}
-                    />
+                    /> */}
+                    <div>
+                      <img logoImage={logoImage} />
+                      {image}
+                    </div>
                     {/* TGF */}
                   </Link>
                 </NavbarBrand>

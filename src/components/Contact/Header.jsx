@@ -60,7 +60,11 @@ class ContactUs extends React.Component {
               <div className="page-header-image" />
               <Container>
                 <Row>
-                  <Col className="text-center title-header-mobile" md="12">
+                  <Col
+                    className="text-center title-header"
+                    md="12"
+                    style={{ paddingTop: "7vh" }}
+                  >
                     <h1 className="title">
                       {this.props.pageStore.hubungikami.header.title}
                     </h1>

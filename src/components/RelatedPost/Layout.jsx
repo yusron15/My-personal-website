@@ -16,6 +16,7 @@ import {
 
 import "../../assets/css/main.css";
 import { Route } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 
 import NewsMarketOutlook from "../NewsContent/NewsMarketOutlook";
 import ShowMoreText from "react-show-more-text";
@@ -40,9 +41,72 @@ const textContent = {
   transform: "translateY(-50%)"
 };
 
+const textContentMobile = {
+  textAlign: "justify",
+  fontStyle: "Helvetica Bold",
+  // margin: "0 20px 0 20px",
+  // marginLeft: "20px",
+  // marginRight: "20px",
+  // position: "absolute",
+  top: "2%",
+  fontSize: "1rem",
+  color: "black"
+};
+
 class Content extends React.Component {
-  render() {
+  renderContent = () => {
     const { image, title, posted, description } = this.props;
+
+    if (isMobile) {
+      return (
+        <>
+          <Container>
+            <Col>
+              <div style={{ marginTop: "20px" }}>
+                <div className="card-image">
+                  <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <img alt="..." className="img rounded" src={image} />
+                  </a>
+                </div>
+              </div>
+              <div>
+                <Col style={textContentMobile}>
+                  <div
+                    className="title-post font-black"
+                    style={{ color: "black", marginTop: "1vh" }}
+                  >
+                    {title}
+                  </div>
+                  <div
+                    className="text-posted font-black tag-space"
+                    style={{ color: "black" }}
+                  >
+                    {posted}
+                  </div>
+                  <p className="font-black">
+                    {`${description.substring(0, 190)} `}
+                    <br />
+                    <Link
+                      // to={`/newspage/${title}`}
+                      to="/stock-index-inside"
+                      state={{
+                        data: {
+                          title,
+                          posted,
+                          description
+                        }
+                      }}
+                    >
+                      Read More
+                    </Link>
+                  </p>
+                </Col>
+              </div>
+            </Col>
+          </Container>
+        </>
+      );
+    }
     return (
       <>
         <Container fluid>
@@ -98,6 +162,10 @@ class Content extends React.Component {
         </Container>
       </>
     );
+  };
+
+  render() {
+    return this.renderContent();
   }
 }
 

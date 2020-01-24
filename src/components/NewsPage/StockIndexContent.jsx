@@ -23,6 +23,8 @@ import "../../assets/css/main.css";
 import Content from "../RelatedPost/Layout";
 import NewsTicker from "./NewsTicker";
 import BreakingNews from "../../components/Landing/BreakingNews";
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
+import { isMobile } from "react-device-detect";
 
 import news1 from "../../assets/img/newscontent1.png";
 import news2 from "../../assets/img/newscontent2.png";
@@ -46,7 +48,61 @@ class Blogs extends Component {
     }
   };
 
-  render() {
+  renderContent = () => {
+    if (isMobile) {
+      return (
+        <>
+          <div className="cd-section broken-white" id="blogs">
+            {/* ********* END BLOGS 5 ********* */}
+
+            <div>
+              <div
+                className="team-1 background-header-mobile"
+                style={{
+                  backgroundImage: `url(${bg})`,
+                  padding: 0
+                }}
+              >
+                <SidebarMobile />
+                <div className="title title-header-mobile">Stock Index</div>
+              </div>
+
+              {/* <Container> */}
+              <div
+                className="cd-section broken-white"
+                id="features"
+                // style={{ backgroundColor: "#D4D4D4" }}
+              >
+                <div className="features-3" style={{ paddingTop: 0 }}>
+                  <div>
+                    {this.props.news.stock.map((item, index) => {
+                      return (
+                        <Link to="/stock-index-inside">
+                          <Content
+                            image={item.featured_image_src}
+                            title={item.title.rendered}
+                            posted={`Posted ${moment(item.date).format(
+                              "DD MMMM YYYY HH:ss"
+                            )} WIB`}
+                            description={`${item.excerpt.rendered
+                              .replace(/(<([^>]+)>)/gi, "")
+                              .substring(0, 100)}...`}
+                          />
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+              {/* </Container> */}
+            </div>
+            <NewsLetter />
+            <Footer />
+            {/* ********* END BLOGS 5 ********* */}
+          </div>
+        </>
+      );
+    }
     return (
       <>
         <div className="cd-section broken-white" id="blogs">
@@ -101,6 +157,9 @@ class Blogs extends Component {
         </div>
       </>
     );
+  };
+  render() {
+    return this.renderContent();
   }
 }
 
