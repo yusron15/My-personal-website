@@ -412,7 +412,8 @@ class Projects extends React.Component {
                             </div> */}
                             <div style={{ color: "black" }}>
                               {ReactHtmlParser(
-                                this.props.pageStore.Landing.Legality.header
+                                this.props.pageStore.Landing.Legality.content[0]
+                                  .title
                               )}
                             </div>
                           </h2>
@@ -422,9 +423,10 @@ class Projects extends React.Component {
                               className="font-black"
                               style={{ color: "black" }}
                             >
-                              {ReactHtmlParser(this.props.pageStore.Landing.Legality.content[0]
-                                  .content)
-                              }
+                              {ReactHtmlParser(
+                                this.props.pageStore.Landing.Legality.content[0]
+                                  .content
+                              )}
                             </p>
                           </div>
                         </Col>
