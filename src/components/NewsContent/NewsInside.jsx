@@ -62,7 +62,7 @@ const textContentMobile = {
   margin: "0 20px 0 20px"
 };
 
-class NewsStockIndex extends React.Component {
+class NewsInside extends React.Component {
   async componentDidMount() {
     try {
       window.scroll(0, 0);
@@ -269,4 +269,4 @@ const mapDispatchToProps = dispatch => ({
   getNews: type => dispatch(getNews(type))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewsStockIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(NewsInside);

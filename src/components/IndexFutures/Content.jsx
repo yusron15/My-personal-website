@@ -78,7 +78,8 @@ const items = [
               <Col md="11" className="offset-md-1">
                 <div
                   style={{
-                    backgroundColor: "rgba(0, 0, 0, 0.66)"
+                    backgroundColor: "rgba(0, 0, 0, 0.66)",
+                    marginBottom: "5%"
                   }}
                 >
                   <div className="space-50" />
@@ -128,7 +129,8 @@ const items = [
               <Col md="11" className="offset-md-1">
                 <div
                   style={{
-                    backgroundColor: "rgba(0, 0, 0, 0.66)"
+                    backgroundColor: "rgba(0, 0, 0, 0.66)",
+                    marginBottom: "5%"
                   }}
                 >
                   <div className="space-50" />
@@ -178,7 +180,8 @@ const items = [
               <Col md="11" className="offset-md-1">
                 <div
                   style={{
-                    backgroundColor: "rgba(0, 0, 0, 0.66)"
+                    backgroundColor: "rgba(0, 0, 0, 0.66)",
+                    marginBottom: "5%"
                   }}
                 >
                   <div className="space-50" />
@@ -309,11 +312,6 @@ class Content extends React.Component {
                     next={this.next}
                     previous={this.previous}
                   >
-                    <CarouselIndicators
-                      items={items}
-                      activeIndex={this.state.activeIndex}
-                      onClickHandler={this.goToIndex}
-                    />
                     {items.map((item, key) => {
                       return (
                         <CarouselItem
@@ -327,6 +325,11 @@ class Content extends React.Component {
                     })}
                   </Carousel>
                 </ScrollAnimation>
+                <CarouselIndicators
+                  items={items}
+                  activeIndex={this.state.activeIndex}
+                  onClickHandler={this.goToIndex}
+                />
               </div>
             </div>
           </div>{" "}

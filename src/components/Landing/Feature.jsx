@@ -64,7 +64,11 @@ class Features extends React.Component {
                       <div className="icon icon-success">
                         <img
                           alt="..."
-                          src={require("assets/img/blue-foreign.png")}
+                          // src={require("assets/img/blue-foreign.png")}
+                          src={
+                            this.props.pageStore.Landing.Feature.content[0]
+                              .image
+                          }
                           height="60"
                           width="60"
                         />
@@ -109,7 +113,11 @@ class Features extends React.Component {
                       <div className="icon icon-success">
                         <img
                           alt="..."
-                          src={require("assets/img/blue-cfd.png")}
+                          // src={require("assets/img/blue-cfd.png")}
+                          src={
+                            this.props.pageStore.Landing.Feature.content[2]
+                              .image
+                          }
                           height="60"
                           width="60"
                         />
@@ -154,7 +162,11 @@ class Features extends React.Component {
                       <div className="icon icon-success">
                         <img
                           alt="..."
-                          src={require("assets/img/blue-komoditi.png")}
+                          // src={require("assets/img/blue-komoditi.png")}
+                          src={
+                            this.props.pageStore.Landing.Feature.content[1]
+                              .image
+                          }
                           height="60"
                           width="60"
                         />
@@ -199,7 +211,11 @@ class Features extends React.Component {
                       <div className="icon icon-success">
                         <img
                           alt="..."
-                          src={require("assets/img/blue-future.png")}
+                          // src={require("assets/img/blue-future.png")}
+                          src={
+                            this.props.pageStore.Landing.Feature.content[3]
+                              .image
+                          }
                           height="60"
                           width="60"
                         />
@@ -274,15 +290,13 @@ class Features extends React.Component {
                       </Col>
                     </Row>
                     <Row>
+
                       <Col
-                        // className="ml-auto mr-auto"
                         md={{ size: 7, offset: 1 }}
-                        // md={{ size: 12, order: 2, offset: 2 }}
                         style={{ left: "3%" }}
                       >
-                        <Row>
-                          {/* <Col> */}
-                          <Col>
+                        <Col>
+                          <Row>
                             <div className="info">
                               {/* foreign Exchange */}
                               <Row>
@@ -290,13 +304,16 @@ class Features extends React.Component {
                                   md="3"
                                   style={{
                                     paddingLeft: 0,
-                                    paddingRight: 0,
+                                    paddingRight: 0
                                   }}
                                 >
                                   <div className="icon icon-success">
                                     <img
                                       alt="..."
-                                      src={require("assets/img/blue-foreign.png")}
+                                      src={
+                                        this.props.pageStore.Landing.Feature
+                                          .content[0].image
+                                      }
                                       height="60"
                                       width="60"
                                     />
@@ -306,12 +323,11 @@ class Features extends React.Component {
                                   md="9"
                                   style={{
                                     paddingLeft: 0,
-                                    paddingRight: 0,
+                                    paddingRight: 0
                                   }}
                                 >
                                   <div className="description">
                                     <h3
-                                      // className="info-title"
                                       style={{
                                         color: "black",
                                         fontSize: "1.2rem",
@@ -349,13 +365,16 @@ class Features extends React.Component {
                                   md="3"
                                   style={{
                                     paddingLeft: 0,
-                                    paddingRight: 0,
+                                    paddingRight: 0
                                   }}
                                 >
                                   <div className="icon icon-success">
                                     <img
                                       alt="..."
-                                      src={require("assets/img/blue-cfd.png")}
+                                      src={
+                                        this.props.pageStore.Landing.Feature
+                                          .content[2].image
+                                      }
                                       height="60"
                                       width="60"
                                     />
@@ -365,12 +384,11 @@ class Features extends React.Component {
                                   md="9"
                                   style={{
                                     paddingLeft: 0,
-                                    paddingRight: 0,
+                                    paddingRight: 0
                                   }}
                                 >
                                   <div className="description">
                                     <h3
-                                      // className="info-title"
                                       style={{
                                         color: "black",
                                         fontSize: "1.2rem",
@@ -401,11 +419,10 @@ class Features extends React.Component {
                                 </Col>
                               </Row>
                             </div>
-                          </Col>
-                          {/* </Col> */}
+                          </Row>
 
-                          {/* <Col> */}
-                          <Col>
+
+                          <Row>
                             <div className="info">
                               {/* future Index */}
                               <Row>
@@ -416,7 +433,10 @@ class Features extends React.Component {
                                   <div className="icon icon-success">
                                     <img
                                       alt="..."
-                                      src={require("assets/img/blue-komoditi.png")}
+                                      src={
+                                        this.props.pageStore.Landing.Feature
+                                          .content[1].image
+                                      }
                                       height="60"
                                       width="60"
                                     />
@@ -428,7 +448,6 @@ class Features extends React.Component {
                                 >
                                   <div className="description">
                                     <h3
-                                      // className="info-title"
                                       style={{
                                         color: "black",
                                         fontSize: "1.2rem",
@@ -436,7 +455,6 @@ class Features extends React.Component {
                                         textAlign: "left"
                                       }}
                                     >
-                                      {/* komoditi */}
                                       {ReactHtmlParser(
                                         this.props.pageStore.Landing.Feature
                                           .content[1].title
@@ -469,7 +487,10 @@ class Features extends React.Component {
                                   <div className="icon icon-success">
                                     <img
                                       alt="..."
-                                      src={require("assets/img/blue-future.png")}
+                                      src={
+                                        this.props.pageStore.Landing.Feature
+                                          .content[3].image
+                                      }
                                       height="60"
                                       width="60"
                                     />
@@ -481,7 +502,6 @@ class Features extends React.Component {
                                 >
                                   <div className="description">
                                     <h3
-                                      // className="info-title"
                                       style={{
                                         color: "black",
                                         fontSize: "1.2rem",
@@ -512,8 +532,9 @@ class Features extends React.Component {
                                 </Col>
                               </Row>
                             </div>
-                          </Col>
-                        </Row>
+                          </Row>
+                        </Col>
+
                       </Col>
                       <Col
                         md="4"
@@ -529,7 +550,6 @@ class Features extends React.Component {
                             style={{
                               width: "100%",
                               height: "auto"
-                              // marginLeft: "10%"
                             }}
                           />
                         </ScrollAnimation>
