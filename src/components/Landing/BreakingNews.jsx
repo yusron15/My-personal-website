@@ -39,7 +39,7 @@ import Select from "react-select";
 const tabItem = {
   fontSize: "0.8rem",
   paddingLeft: "5px",
-  height: "30px"
+  height: "20px"
 };
 
 const tabContent = {
@@ -47,10 +47,10 @@ const tabContent = {
   opacity: "0.8",
   border: "1px",
   color: "white",
-  minHeight: "10.7vh",
+  minHeight: "7.7vh",
   fontWeight: "bold",
   textAlign: "center",
-  paddingTop: "30px"
+  paddingTop: "20px"
 };
 
 class BreakingNews extends Component {
@@ -77,7 +77,7 @@ class BreakingNews extends Component {
     return (
       <div
         style={{
-          height: "10.8vh",
+          height: "7.8vh",
           overflow: "hidden",
           backgroundColor: "transparent",
           bottom: 0
@@ -108,7 +108,7 @@ class BreakingNews extends Component {
                               this.state.activeTab === "1" ? "white" : "white",
                             backgroundColor:
                               this.state.activeTab === "1" ? "grey" : "black",
-                            paddingTop: "5px"
+                            cursor: "pointer"
                           }}
                         >
                           Komoditi
@@ -128,7 +128,7 @@ class BreakingNews extends Component {
                               this.state.activeTab === "2" ? "white" : "white",
                             backgroundColor:
                               this.state.activeTab === "2" ? "grey" : "black",
-                            paddingTop: "5px"
+                            cursor: "pointer"
                           }}
                         >
                           Index
@@ -148,7 +148,7 @@ class BreakingNews extends Component {
                               this.state.activeTab === "3" ? "white" : "white",
                             backgroundColor:
                               this.state.activeTab === "3" ? "grey" : "black",
-                            paddingTop: "5px"
+                            cursor: "pointer"
                           }}
                         >
                           FX
@@ -176,7 +176,7 @@ class BreakingNews extends Component {
               <marquee scrollamount="5">
                 <Row
                   style={{
-                    paddingTop: "2.5%"
+                    paddingTop: "1.35%"
                   }}
                   // classname="vertical-center"
                 >

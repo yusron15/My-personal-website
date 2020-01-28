@@ -3,6 +3,12 @@ import React from "react";
 import classnames from "classnames";
 // ReactJS plugin for a nice carousel
 import Slick from "react-slick";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import moment from "moment";
+import { isMobile } from "react-device-detect";
+
+import { getNews } from "../../redux/ducks/actions";
 // reactstrap components
 import {
   Button,
@@ -65,6 +71,16 @@ const style = {
 
 class NewsMarketOutlook extends React.Component {
   state = {};
+
+  componentDidMount = async () => {
+    try {
+      window.scroll(0, 0);
+      await this.props.getNews("market");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   render() {
     return (
       <>
@@ -258,4 +274,12 @@ class NewsMarketOutlook extends React.Component {
   }
 }
 
-export default NewsMarketOutlook;
+const mapStateToProps = state => ({
+  news: state.newsStore.news
+});
+
+const mapDispatchToProps = dispatch => ({
+  getNews: type => dispatch(getNews(type))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewsMarketOutlook);

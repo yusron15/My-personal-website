@@ -71,7 +71,7 @@ class DropdownBerita extends React.Component {
                 <Col>
                   <div class="row">
                     <div style={{ marginLeft: "40px", marginTop: "25px" }}>
-                      <div style={DropdownBeritaText}>
+                      <div style={{ ...DropdownBeritaText }}>
                         <Link className="font-black" to="/newspage">
                           {this.props.pageStore.Header.m4.dropdown[0].title}
                         </Link>

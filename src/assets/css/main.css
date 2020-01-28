@@ -200,7 +200,7 @@ html, body {
   font-size: 2.5rem;
   color: white;
   margin-top:12%;
-  margin-bottom: 6%;
+  margin-bottom: 8%;
 }
 
 .title-header-black {
@@ -759,8 +759,15 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-
-
 .font-black > p {
   color: black;
+}
+
+span > .arrow-down{
+  padding :12px;
+  /* padding-top: 50px !important; */
+}
+
+.lang-button {
+  /* margin-top:20px; */
 }

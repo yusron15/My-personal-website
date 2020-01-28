@@ -49,6 +49,14 @@ const textContent = {
   color: "black"
 };
 
+const textContentMobile = {
+  textAlign: "left",
+  fontStyle: "Helvetica Bold",
+  margin: 0,
+  fontSize: "1rem",
+  color: "black"
+};
+
 const intermezzo = {
   textAlign: "center",
   fontStyle: "Helvetica Bold",
@@ -118,10 +126,10 @@ class Features extends React.Component {
                 </Row>
               </Container>
               {/* <Col> */}
-              <Container>
+              <Container style={{ marginTop: "5vh" }}>
                 <Col
                   sm={{ size: 10, order: 2, offset: 1 }}
-                  style={{ marginTop: "50px" }}
+                  // style={{ marginTop: "50px" }}
                 >
                   <Row>
                     <Col lg="4">
@@ -132,7 +140,7 @@ class Features extends React.Component {
                       </div>
                     </Col>
                     <Col lg="8">
-                      <div style={textContent}>
+                      <div style={textContentMobile}>
                         <div
                           className="title-content"
                           style={{ color: "black" }}
@@ -147,7 +155,7 @@ class Features extends React.Component {
                   </Row>
                 </Col>
               </Container>
-              <Container style={{ marginTop: "55vh" }}>
+              <Container style={{ marginTop: "5vh" }}>
                 <Col
                   sm={{ size: 10, order: 2, offset: 1 }}
                   style={{ marginTop: "50px" }}
@@ -161,7 +169,7 @@ class Features extends React.Component {
                       </div>
                     </Col>
                     <Col lg="8">
-                      <div style={textContent}>
+                      <div style={textContentMobile}>
                         <div
                           className="title-content"
                           style={{ color: "black" }}
@@ -178,7 +186,7 @@ class Features extends React.Component {
               </Container>
               {/* </Col> */}
               {/* <Col> */}
-              <Container style={{ marginTop: "55vh" }}>
+              <Container style={{ marginTop: "5vh" }}>
                 <Col sm={{ size: 10, order: 2, offset: 1 }}>
                   <Row>
                     <Col lg="12">

@@ -396,9 +396,12 @@ class ColorNavbar extends React.Component {
                         color: this.coloringNav([
                           "/newspage",
                           "/stock-index",
+                          "/stock-index-inside",
                           "/forex-commodity",
+                          "/forex-commodity-inside",
                           "/economic-calendar",
                           "/market-outlook",
+                          "/market-outlook-inside",
                           "/video-content"
                         ]),
                         // backgroundColor: this.coloringButton([
@@ -412,9 +415,12 @@ class ColorNavbar extends React.Component {
                         fontWeight: this.fontBold([
                           "/newspage",
                           "/stock-index",
+                          "/stock-index-inside",
                           "/forex-commodity",
+                          "/forex-commodity-inside",
                           "/economic-calendar",
                           "/market-outlook",
+                          "/market-outlook-inside",
                           "/video-content"
                         ])
                       }}

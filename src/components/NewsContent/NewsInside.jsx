@@ -99,6 +99,12 @@ class NewsInside extends React.Component {
                           >
                             {title}
                           </div>
+                          <div
+                            className="text-posted font-black tag-space"
+                            style={{ color: "black" }}
+                          >
+                            {posted}
+                          </div>
 
                           <p style={{ color: "black" }}>{desc}</p>
                         </div>
@@ -172,7 +178,12 @@ class NewsInside extends React.Component {
                           {title}
                           {/* Pasar Saham Asia Tunggu Komentar Terkait Trade War */}
                         </div>
-
+                        <div
+                          className="text-posted font-black tag-space"
+                          style={{ color: "black" }}
+                        >
+                          {posted}
+                        </div>
                         <p style={{ color: "black" }}>
                           {/* <ReadMoreReact style={{}}
                             text={

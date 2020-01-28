@@ -12,7 +12,7 @@ import eng from "../lang/eng.json";
 import id from "../lang/id.json";
 import cn from "../lang/cn.json";
 import cn_tr from "../lang/cn_tr.json";
-
+import "../assets/css/main.css";
 import { getContent } from "../redux/ducks/actions";
 
 function LangTogglerButton(props) {
@@ -30,7 +30,7 @@ function LangTogglerButton(props) {
           }}
           showSelectedLabel={false}
           showOptionLabel={true}
-          className="menu-flags"
+          className="menu-flags lang-button"
           // onSelect={countryCode => toggleLang(countryCode)}
           onSelect={async a => {
             let data = id;
