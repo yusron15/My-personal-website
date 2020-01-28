@@ -522,7 +522,7 @@ class Content extends React.Component {
                             paddingLeft: "10px",
                             paddingTop: "25px",
                             fontWeight: "bold",
-                            height: "80px",
+                            cursor:"pointer", height: "80px",
                             color:
                               this.state.activeTab === "1" ? "white" : "black",
                             backgroundColor:
@@ -548,7 +548,7 @@ class Content extends React.Component {
                             paddingTop: "25px",
                             fontWeight: "bold",
                             height: "80px",
-
+                            cursor:"pointer",
                             color:
                               this.state.activeTab === "2" ? "white" : "black",
                             backgroundColor:
@@ -574,7 +574,7 @@ class Content extends React.Component {
                             paddingTop: "25px",
                             fontWeight: "bold",
                             height: "80px",
-
+                            cursor:"pointer",
                             color:
                               this.state.activeTab === "3" ? "white" : "black",
                             backgroundColor:
@@ -600,7 +600,7 @@ class Content extends React.Component {
                             paddingTop: "25px",
                             fontWeight: "bold",
                             height: "80px",
-
+                            cursor:"pointer",
                             color:
                               this.state.activeTab === "4" ? "white" : "black",
                             backgroundColor:

@@ -86,103 +86,102 @@ class Blogs extends React.Component {
                 }}
               >
                 <Col>
-
-                    <Nav >
-                      <Col> 
-                        <NavItem>
+                  <Nav>
+                    <Col>
+                      <NavItem>
+                        <div
+                          onClick={() => {
+                            this.toggle("1");
+                          }}
+                        >
                           <div
-                            onClick={() => {
-                              this.toggle("1");
+                            style={{
+                              textAlign: "center",
+                              fontSize: "0.8rem",
+                              paddingLeft: "10px",
+                              paddingTop: "15px",
+                              paddingRight: "10px",
+                              fontWeight: "bold",
+                              height: "50px",
+                              color:
+                                this.state.activeTab === "1"
+                                  ? "white"
+                                  : "black",
+                              backgroundColor:
+                                this.state.activeTab === "1"
+                                  ? "#063980"
+                                  : "transparent",
+                              opacity: "0.90"
                             }}
                           >
-                            <div
-                              style={{
-                                textAlign:"center",
-                                fontSize: "0.8rem",
-                                paddingLeft: "10px",
-                                paddingTop: "15px",
-                                paddingRight: "10px",
-                                fontWeight: "bold",
-                                height: "50px",
-                                color:
-                                  this.state.activeTab === "1"
-                                    ? "white"
-                                    : "black",
-                                backgroundColor:
-                                  this.state.activeTab === "1"
-                                    ? "#063980"
-                                    : "transparent",
-                                opacity: "0.90"
-                              }}
-                            >
-                              Market Updates
-                            </div>
+                            Market Updates
                           </div>
-                        </NavItem>
-                        <NavItem>
+                        </div>
+                      </NavItem>
+                      <NavItem>
+                        <div
+                          onClick={() => {
+                            this.toggle("2");
+                          }}
+                        >
                           <div
-                            onClick={() => {
-                              this.toggle("2");
+                            style={{
+                              textAlign: "center",
+                              fontSize: "0.8rem",
+                              paddingLeft: "10px",
+                              paddingTop: "15px",
+                              paddingRight: "10px",
+                              fontWeight: "bold",
+                              height: "50px",
+
+                              color:
+                                this.state.activeTab === "2"
+                                  ? "white"
+                                  : "black",
+                              backgroundColor:
+                                this.state.activeTab === "2"
+                                  ? "#063980"
+                                  : "transparent",
+                              opacity: "0.90"
                             }}
                           >
-                            <div
-                              style={{
-                                textAlign:"center",
-                                fontSize: "0.8rem",
-                                paddingLeft: "10px",
-                                paddingTop: "15px",
-                                paddingRight: "10px",
-                                fontWeight: "bold",
-                                height: "50px",
-
-                                color:
-                                  this.state.activeTab === "2"
-                                    ? "white"
-                                    : "black",
-                                backgroundColor:
-                                  this.state.activeTab === "2"
-                                    ? "#063980"
-                                    : "transparent",
-                                opacity: "0.90"
-                              }}
-                            >
-                              Morning News
-                            </div>
+                            Morning News
                           </div>
-                        </NavItem>
-                        <NavItem>
+                        </div>
+                      </NavItem>
+                      <NavItem>
+                        <div
+                          onClick={() => {
+                            this.toggle("3");
+                          }}
+                        >
                           <div
-                            onClick={() => {
-                              this.toggle("3");
+                            style={{
+                              textAlign: "center",
+                              fontSize: "0.8rem",
+                              paddingLeft: "10px",
+                              paddingTop: "15px",
+                              paddingRight: "10px",
+                              fontWeight: "bold",
+                              height: "50px",
+
+                              color:
+                                this.state.activeTab === "3"
+                                  ? "white"
+                                  : "black",
+                              backgroundColor:
+                                this.state.activeTab === "3"
+                                  ? "#063980"
+                                  : "transparent",
+                              opacity: "0.90"
                             }}
                           >
-                            <div
-                              style={{
-                                textAlign:"center",
-                                fontSize: "0.8rem",
-                                paddingLeft: "10px",
-                                paddingTop: "15px",
-                                paddingRight: "10px",
-                                fontWeight: "bold",
-                                height: "50px",
-
-                                color:
-                                  this.state.activeTab === "3"
-                                    ? "white"
-                                    : "black",
-                                backgroundColor:
-                                  this.state.activeTab === "3"
-                                    ? "#063980"
-                                    : "transparent",
-                                opacity: "0.90"
-                              }}
-                            >
-                              PM Market
-                            </div>
+                            PM Market
                           </div>
-                        </NavItem>
-                      </Col>
-                    </Nav>
+                        </div>
+                      </NavItem>
+                    </Col>
+                  </Nav>
 
                   <Col md="12">
                     <TabContent activeTab={this.state.activeTab}>
@@ -514,7 +513,8 @@ class Blogs extends React.Component {
                                 this.state.activeTab === "1"
                                   ? "#063980"
                                   : "transparent",
-                              opacity: "0.90"
+                              opacity: "0.90",
+                              cursor: "pointer"
                             }}
                           >
                             Market Updates
@@ -544,7 +544,8 @@ class Blogs extends React.Component {
                                 this.state.activeTab === "2"
                                   ? "#063980"
                                   : "transparent",
-                              opacity: "0.90"
+                              opacity: "0.90",
+                              cursor: "pointer"
                             }}
                           >
                             Morning News
@@ -574,7 +575,8 @@ class Blogs extends React.Component {
                                 this.state.activeTab === "3"
                                   ? "#063980"
                                   : "transparent",
-                              opacity: "0.90"
+                              opacity: "0.90",
+                              cursor: "pointer"
                             }}
                           >
                             PM Market

@@ -70,11 +70,14 @@ class Landing extends React.Component {
           <Pricing />
         </VizSensor>
 
-        <VizSensor
+        {/* <VizSensor
           scrollCheck
           minTopValue={200}
           onChange={this.onChange("black")}
         >
+          <Feature />
+        </VizSensor> */}
+        <VizSensor scrollCheck onChange={this.onChange("black")}>
           <Feature />
         </VizSensor>
 

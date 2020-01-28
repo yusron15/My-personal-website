@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { getNews } from "../../redux/ducks/actions";
 import moment from "moment";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
-import NewsTicker from "./NewsTicker";
+import BreakingNews from "../../components/Landing/BreakingNews";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import Comment from "../../components/Comments/Comment";
 import Content from "../../components/NewsPage/Content.jsx";
@@ -84,6 +84,24 @@ class StockIndexInside extends React.Component {
                           protes anti-pemerintah di Hong Kong dapat semakin
                           memperumit pembicaraan. "
             />
+            {/* <div>
+            {this.props.news.stock.map((item, index) => {
+              return (
+                <Link to="/stock-index-inside">
+                  <NewsStockIndex
+                    img={item.featured_image_src}
+                    title={item.title.rendered}
+                    posted={`Posted ${moment(item.date).format(
+                      "DD MMMM YYYY HH:ss"
+                    )} WIB`}
+                    desc={`${item.excerpt.rendered
+                      .replace(/(<([^>]+)>)/gi, "")
+                      .replace(/(&#8230;)/gi, "")}`}
+                  />
+                </Link>
+              );
+            })}
+          </div> */}
             <Footer />
           </div>
         </>
@@ -102,11 +120,11 @@ class StockIndexInside extends React.Component {
             <BlurryNavbar />
 
             <div className="title title-header">Stock Index </div>
+            <BreakingNews />
           </div>
           {/* <BlurryNavbar /> */}
           <ColoredNavbar location={{ ...this.props.location }} />
-          <NewsTicker />
-          {/* <div>
+          <div>
             {this.props.news.stock.map((item, index) => {
               return (
                 <Link to="/stock-index-inside">
@@ -123,21 +141,21 @@ class StockIndexInside extends React.Component {
                 </Link>
               );
             })}
-          </div> */}
-          <div>
+          </div>
+          {/* <div>
             <Link to="/stock-index-inside">
               <NewsStockIndex
                 img={this.props.news.stock.featured_image_src}
-                // title={this.props.news.stock.title.rendered}
+                title={this.props.news.stock.title.rendered}
                 posted={`Posted ${moment(this.props.news.stock.date).format(
                   "DD MMMM YYYY HH:ss"
                 )} WIB`}
-                // desc={`${this.props.news.stock.excerpt.rendered
-                //   .replace(/(<([^>]+)>)/gi, "")
-                //   .replace(/(&#8230;)/gi, "")}`}
+                desc={`${this.props.news.stock.excerpt.rendered
+                  .replace(/(<([^>]+)>)/gi, "")
+                  .replace(/(&#8230;)/gi, "")}`}
               />
             </Link>
-          </div>
+          </div> */}
           <Footer />
         </div>
       </>

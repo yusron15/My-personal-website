@@ -8,6 +8,8 @@ import moment from "moment";
 
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import NewsTicker from "./NewsTicker";
+import BreakingNews from "../../components/Landing/BreakingNews";
+
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import Comment from "../../components/Comments/Comment";
 // import Content from "../../components/NewsPage/Content.jsx";
@@ -110,10 +112,11 @@ class ForexCommodityInside extends React.Component {
             <BlurryNavbar />
 
             <div className="title title-header">Forex Commodity </div>
+            <BreakingNews />
           </div>
           {/* <BlurryNavbar /> */}
           <ColoredNavbar location={{ ...this.props.location }} />
-          <NewsTicker />
+          {/* <NewsTicker /> */}
           <div>
             {this.props.news.forex.map((item, index) => {
               return (

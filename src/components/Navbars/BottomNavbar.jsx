@@ -83,7 +83,7 @@ class BottomNavbar extends React.Component {
     const styles = {
       containerStyle: {
         position: this.state.position,
-        maxHeight: "150px",
+        maxHeight: "350px",
         backgroundImage:
           "url(" + require("assets/img/ebook-background.png") + ")"
       }
@@ -99,7 +99,7 @@ class BottomNavbar extends React.Component {
             //   backgroundImage:
             //     "url(" + require("assets/img/bg-bottom-navbar.png") + ")"
             // }}
-            style={{ maxHeight: "150px" }}
+            style={{ minHeight: "90px" }}
           >
             <div
               style={{
