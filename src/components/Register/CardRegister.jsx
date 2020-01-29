@@ -75,7 +75,9 @@ class CardRegister extends React.Component {
                       </InputGroupAddon>
                       <Input
                         style={{ borderColor: "#FFFFFF" }}
-                        placeholder="Full Name"
+                        placeholder={
+                          this.props.pageStore.register.form.fullname
+                        }
                         type="text"
                         onFocus={e => this.setState({ lastNameFocus: true })}
                         onBlur={e =>
@@ -97,7 +99,9 @@ class CardRegister extends React.Component {
                       </InputGroupAddon>
                       <Input
                         style={{ borderColor: "#FFFFFF" }}
-                        placeholder="Hanphone Number"
+                        placeholder={
+                          this.props.pageStore.register.form.handphone
+                        }
                         type="number"
                         onFocus={e => this.setState({ lastNameFocus: true })}
                         onBlur={e =>
@@ -119,7 +123,7 @@ class CardRegister extends React.Component {
                       </InputGroupAddon>
                       <Input
                         style={{ borderColor: "#FFFFFF" }}
-                        placeholder="Email Address"
+                        placeholder={this.props.pageStore.register.form.email}
                         type="email"
                         onFocus={e => this.setState({ lastNameFocus: true })}
                         onBlur={e =>
@@ -141,7 +145,9 @@ class CardRegister extends React.Component {
                       </InputGroupAddon>
                       <Input
                         style={{ borderColor: "#FFFFFF" }}
-                        placeholder="Password"
+                        placeholder={
+                          this.props.pageStore.register.form.password
+                        }
                         type="text"
                         onFocus={e => this.setState({ lastNameFocus: true })}
                         onBlur={e =>

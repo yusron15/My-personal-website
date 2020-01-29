@@ -138,7 +138,9 @@ class Login extends React.Component {
                                   </InputGroupAddon>
                                   <Input
                                     style={{ borderColor: "#FFFFFF" }}
-                                    placeholder="First Name..."
+                                    placeholder={
+                                      this.props.pageStore.login.form.firstname
+                                    }
                                     type="text"
                                     onFocus={e =>
                                       this.setState({
@@ -167,7 +169,9 @@ class Login extends React.Component {
                                   </InputGroupAddon>
                                   <Input
                                     style={{ borderColor: "#FFFFFF" }}
-                                    placeholder="Last Name..."
+                                    placeholder={
+                                      this.props.pageStore.login.form.lastname
+                                    }
                                     type="text"
                                     onFocus={e =>
                                       this.setState({ lastNameFocus: true })
@@ -280,7 +284,9 @@ class Login extends React.Component {
                                 </InputGroupAddon>
                                 <Input
                                   style={{ borderColor: "#FFFFFF" }}
-                                  placeholder="First Name..."
+                                  placeholder={
+                                    this.props.pageStore.login.form.firstname
+                                  }
                                   type="text"
                                   onFocus={e =>
                                     this.setState({
@@ -308,7 +314,9 @@ class Login extends React.Component {
                                 </InputGroupAddon>
                                 <Input
                                   style={{ borderColor: "#FFFFFF" }}
-                                  placeholder="Last Name..."
+                                  placeholder={
+                                    this.props.pageStore.login.form.lastname
+                                  }
                                   type="text"
                                   onFocus={e =>
                                     this.setState({ lastNameFocus: true })

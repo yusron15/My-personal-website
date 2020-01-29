@@ -43,6 +43,9 @@ import kbi from "../../assets/img/legalitas4.png";
 import ich from "../../assets/img/legalitas5.png";
 import bg from "../../assets/img/edukasi-header.png";
 
+import { getContent } from "../../redux/ducks/actions.js";
+import { connect } from "react-redux";
+
 import DarkNavbar from "../../components/Navbars/DarkNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
@@ -57,6 +60,10 @@ class Content extends React.Component {
     this.state = {
       activeTab: "1"
     };
+  }
+
+  async componentDidMount() {
+    await this.props.getContent("edukasi", "id");
   }
 
   toggle = tab => {
@@ -74,406 +81,412 @@ class Content extends React.Component {
     if (isMobile) {
       return (
         <>
-        <div className="cd-section" id="projects">
-          <div
-            className="project-raised broken-white"
-            // style={{ backgroundColor: "#D4D4D4" }}
-          >
+          <div className="cd-section" id="projects">
             <div
-              className="team-1 bg-header background-header-mobile"
-              style={{
-                backgroundImage: `url(${bg})`,
-                padding: 0
-              }}
+              className="project-raised broken-white"
+              // style={{ backgroundColor: "#D4D4D4" }}
             >
-            <SidebarMobile />
-              <div className="title title-header-mobile">Edukasi</div>
+              <div
+                className="team-1 bg-header background-header-mobile"
+                style={{
+                  backgroundImage: `url(${bg})`,
+                  padding: 0
+                }}
+              >
+                <SidebarMobile />
+                <div className="title title-header-mobile">Edukasi</div>
+              </div>
+
+              <div
+                className="broken-white"
+                style={{
+                  // backgroundColor: "#D4D4D4",
+                  padding: "0 2% 2% 2%"
+                }}
+              >
+                <ReactPlayer
+                  url={videos}
+                  controls={true}
+                  height="300"
+                  width="100%"
+                  style={{ margin: "20px 0 20px 0" }}
+                />
+                <Row>
+                  <Col md="4">
+                    <Nav tabs vertical pills>
+                      <NavItem>
+                        <div
+                          // className={classnames({
+                          //   active: this.state.activeTab === "1"
+                          // })}
+                          onClick={() => {
+                            this.toggle("1");
+                          }}
+                        >
+                          <div
+                            style={{
+                              fontSize: "1.2rem",
+                              paddingLeft: "10px",
+                              paddingTop: "25px",
+                              fontWeight: "bold",
+                              height: "80px",
+                              color:
+                                this.state.activeTab === "1"
+                                  ? "white"
+                                  : "black",
+                              backgroundColor:
+                                this.state.activeTab === "1"
+                                  ? "#063980"
+                                  : "transparent"
+                            }}
+                          >
+                            Pengenalan Topgrowth Futures
+                          </div>
+                        </div>
+                      </NavItem>
+                      <NavItem>
+                        <div
+                          onClick={() => {
+                            this.toggle("2");
+                          }}
+                        >
+                          <div
+                            style={{
+                              fontSize: "1.2rem",
+                              paddingLeft: "10px",
+                              paddingTop: "25px",
+                              fontWeight: "bold",
+                              height: "80px",
+
+                              color:
+                                this.state.activeTab === "2"
+                                  ? "white"
+                                  : "black",
+                              backgroundColor:
+                                this.state.activeTab === "2"
+                                  ? "#063980"
+                                  : "transparent"
+                            }}
+                          >
+                            Trading Untuk Pemula
+                          </div>
+                        </div>
+                      </NavItem>
+                      <NavItem>
+                        <div
+                          onClick={() => {
+                            this.toggle("3");
+                          }}
+                        >
+                          <div
+                            style={{
+                              fontSize: "1.2rem",
+                              paddingLeft: "10px",
+                              paddingTop: "25px",
+                              fontWeight: "bold",
+                              height: "80px",
+
+                              color:
+                                this.state.activeTab === "3"
+                                  ? "white"
+                                  : "black",
+                              backgroundColor:
+                                this.state.activeTab === "3"
+                                  ? "#063980"
+                                  : "transparent"
+                            }}
+                          >
+                            Platform Topgrowth Trader & ProTrader
+                          </div>
+                        </div>
+                      </NavItem>
+                      <NavItem>
+                        <div
+                          onClick={() => {
+                            this.toggle("4");
+                          }}
+                        >
+                          <div
+                            style={{
+                              fontSize: "1.2rem",
+                              paddingLeft: "10px",
+                              paddingTop: "25px",
+                              fontWeight: "bold",
+                              height: "80px",
+
+                              color:
+                                this.state.activeTab === "4"
+                                  ? "white"
+                                  : "black",
+                              backgroundColor:
+                                this.state.activeTab === "4"
+                                  ? "#063980"
+                                  : "transparent"
+                            }}
+                          >
+                            Webinar
+                          </div>
+                        </div>
+                      </NavItem>
+                    </Nav>
+                  </Col>
+                  <Col md="8">
+                    <TabContent activeTab={this.state.activeTab}>
+                      <TabPane tabId="1">
+                        <Row>
+                          <Col md="4">
+                            <Card style={{ backgroundColor: "white" }}>
+                              <ReactPlayer
+                                url={videos}
+                                controls={true}
+                                height="200"
+                                width="250"
+                              />
+                              <CardBody>
+                                <CardTitle
+                                  style={{ color: "black", fontWeight: "bold" }}
+                                >
+                                  Course 1: Pengenalan Trading
+                                </CardTitle>
+                                <CardText>
+                                  <small className="text-muted">
+                                    Last updated 3 mins ago
+                                  </small>
+                                </CardText>
+                              </CardBody>
+                            </Card>
+                          </Col>
+
+                          <Col md="4">
+                            <Card style={{ backgroundColor: "white" }}>
+                              <ReactPlayer
+                                url={videos}
+                                controls={true}
+                                height="200"
+                                width="250"
+                              />
+                              <CardBody>
+                                <CardTitle
+                                  style={{ color: "black", fontWeight: "bold" }}
+                                >
+                                  Course 1: Pengenalan Trading
+                                </CardTitle>
+                                <CardText>
+                                  <small className="text-muted">
+                                    Last updated 3 mins ago
+                                  </small>
+                                </CardText>
+                              </CardBody>
+                            </Card>
+                          </Col>
+
+                          <Col md="4">
+                            <Card style={{ backgroundColor: "white" }}>
+                              <ReactPlayer
+                                url={videos}
+                                controls={true}
+                                height="200"
+                                width="250"
+                              />
+                              <CardBody>
+                                <CardTitle
+                                  style={{ color: "black", fontWeight: "bold" }}
+                                >
+                                  Course 1: Pengenalan Trading
+                                </CardTitle>
+                                <CardText>
+                                  <small className="text-muted">
+                                    Last updated 3 mins ago
+                                  </small>
+                                </CardText>
+                              </CardBody>
+                            </Card>
+                          </Col>
+                        </Row>
+                      </TabPane>
+                      <TabPane tabId="2">
+                        <Row>
+                          <Col md="4">
+                            <Card style={{ backgroundColor: "white" }}>
+                              <ReactPlayer
+                                url={videos}
+                                controls={true}
+                                height="200"
+                                width="250"
+                              />
+                              <CardBody>
+                                <CardTitle
+                                  style={{ color: "black", fontWeight: "bold" }}
+                                >
+                                  Course 1: Pengenalan Trading
+                                </CardTitle>
+                                <CardText>
+                                  <small className="text-muted">
+                                    Last updated 3 mins ago
+                                  </small>
+                                </CardText>
+                              </CardBody>
+                            </Card>
+                          </Col>
+
+                          <Col md="4">
+                            <Card style={{ backgroundColor: "white" }}>
+                              <ReactPlayer
+                                url={videos}
+                                controls={true}
+                                height="200"
+                                width="250"
+                              />
+                              <CardBody>
+                                <CardTitle
+                                  style={{ color: "black", fontWeight: "bold" }}
+                                >
+                                  Course 1: Pengenalan Trading
+                                </CardTitle>
+                                <CardText>
+                                  <small className="text-muted">
+                                    Last updated 3 mins ago
+                                  </small>
+                                </CardText>
+                              </CardBody>
+                            </Card>
+                          </Col>
+                        </Row>
+                      </TabPane>
+                      <TabPane tabId="3">
+                        <Row>
+                          <Col md="4">
+                            <Card style={{ backgroundColor: "white" }}>
+                              <ReactPlayer
+                                url={videos}
+                                controls={true}
+                                height="200"
+                                width="250"
+                              />
+                              <CardBody>
+                                <CardTitle
+                                  style={{ color: "black", fontWeight: "bold" }}
+                                >
+                                  Course 1: Pengenalan Trading
+                                </CardTitle>
+                                <CardText>
+                                  <small className="text-muted">
+                                    Last updated 3 mins ago
+                                  </small>
+                                </CardText>
+                              </CardBody>
+                            </Card>
+                          </Col>
+
+                          <Col md="4">
+                            <Card style={{ backgroundColor: "white" }}>
+                              <ReactPlayer
+                                url={videos}
+                                controls={true}
+                                height="200"
+                                width="250"
+                              />
+                              <CardBody>
+                                <CardTitle
+                                  style={{ color: "black", fontWeight: "bold" }}
+                                >
+                                  Course 1: Pengenalan Trading
+                                </CardTitle>
+                                <CardText>
+                                  <small className="text-muted">
+                                    Last updated 3 mins ago
+                                  </small>
+                                </CardText>
+                              </CardBody>
+                            </Card>
+                          </Col>
+
+                          <Col md="4">
+                            <Card style={{ backgroundColor: "white" }}>
+                              <ReactPlayer
+                                url={videos}
+                                controls={true}
+                                height="200"
+                                width="250"
+                              />
+                              <CardBody>
+                                <CardTitle
+                                  style={{ color: "black", fontWeight: "bold" }}
+                                >
+                                  Course 1: Pengenalan Trading
+                                </CardTitle>
+                                <CardText>
+                                  <small className="text-muted">
+                                    Last updated 3 mins ago
+                                  </small>
+                                </CardText>
+                              </CardBody>
+                            </Card>
+                          </Col>
+                        </Row>
+                      </TabPane>
+                      <TabPane tabId="4">
+                        <Row>
+                          <Col md="4">
+                            <Card style={{ backgroundColor: "white" }}>
+                              <ReactPlayer
+                                url={videos}
+                                controls={true}
+                                height="200"
+                                width="250"
+                              />
+                              <CardBody>
+                                <CardTitle
+                                  style={{ color: "black", fontWeight: "bold" }}
+                                >
+                                  Course 1: Pengenalan Trading
+                                </CardTitle>
+                                <CardText>
+                                  <small className="text-muted">
+                                    Last updated 3 mins ago
+                                  </small>
+                                </CardText>
+                              </CardBody>
+                            </Card>
+                          </Col>
+
+                          <Col md="4">
+                            <Card style={{ backgroundColor: "white" }}>
+                              <ReactPlayer
+                                url={videos}
+                                controls={true}
+                                height="200"
+                                width="250"
+                              />
+                              <CardBody>
+                                <CardTitle
+                                  style={{ color: "black", fontWeight: "bold" }}
+                                >
+                                  Course 1: Pengenalan Trading
+                                </CardTitle>
+                                <CardText>
+                                  <small className="text-muted">
+                                    Last updated 3 mins ago
+                                  </small>
+                                </CardText>
+                              </CardBody>
+                            </Card>
+                          </Col>
+                        </Row>
+                      </TabPane>
+                    </TabContent>
+                  </Col>
+                </Row>
+              </div>
             </div>
-
-            <div
-              className="broken-white"
-              style={{
-                // backgroundColor: "#D4D4D4",
-                padding: "0 2% 2% 2%"
-              }}
-            >
-              <ReactPlayer
-                url={videos}
-                controls={true}
-                height="300"
-                width="100%"
-                style={{ margin: "20px 0 20px 0" }}
-              />
-              <Row>
-                <Col md="4">
-                  <Nav tabs vertical pills>
-                    <NavItem>
-                      <div
-                        // className={classnames({
-                        //   active: this.state.activeTab === "1"
-                        // })}
-                        onClick={() => {
-                          this.toggle("1");
-                        }}
-                      >
-                        <div
-                          style={{
-                            fontSize: "1.2rem",
-                            paddingLeft: "10px",
-                            paddingTop: "25px",
-                            fontWeight: "bold",
-                            height: "80px",
-                            color:
-                              this.state.activeTab === "1" ? "white" : "black",
-                            backgroundColor:
-                              this.state.activeTab === "1"
-                                ? "#063980"
-                                : "transparent"
-                          }}
-                        >
-                          Pengenalan Topgrowth Futures
-                        </div>
-                      </div>
-                    </NavItem>
-                    <NavItem>
-                      <div
-                        onClick={() => {
-                          this.toggle("2");
-                        }}
-                      >
-                        <div
-                          style={{
-                            fontSize: "1.2rem",
-                            paddingLeft: "10px",
-                            paddingTop: "25px",
-                            fontWeight: "bold",
-                            height: "80px",
-
-                            color:
-                              this.state.activeTab === "2" ? "white" : "black",
-                            backgroundColor:
-                              this.state.activeTab === "2"
-                                ? "#063980"
-                                : "transparent"
-                          }}
-                        >
-                          Trading Untuk Pemula
-                        </div>
-                      </div>
-                    </NavItem>
-                    <NavItem>
-                      <div
-                        onClick={() => {
-                          this.toggle("3");
-                        }}
-                      >
-                        <div
-                          style={{
-                            fontSize: "1.2rem",
-                            paddingLeft: "10px",
-                            paddingTop: "25px",
-                            fontWeight: "bold",
-                            height: "80px",
-
-                            color:
-                              this.state.activeTab === "3" ? "white" : "black",
-                            backgroundColor:
-                              this.state.activeTab === "3"
-                                ? "#063980"
-                                : "transparent"
-                          }}
-                        >
-                          Platform Topgrowth Trader & ProTrader
-                        </div>
-                      </div>
-                    </NavItem>
-                    <NavItem>
-                      <div
-                        onClick={() => {
-                          this.toggle("4");
-                        }}
-                      >
-                        <div
-                          style={{
-                            fontSize: "1.2rem",
-                            paddingLeft: "10px",
-                            paddingTop: "25px",
-                            fontWeight: "bold",
-                            height: "80px",
-
-                            color:
-                              this.state.activeTab === "4" ? "white" : "black",
-                            backgroundColor:
-                              this.state.activeTab === "4"
-                                ? "#063980"
-                                : "transparent"
-                          }}
-                        >
-                          Webinar
-                        </div>
-                      </div>
-                    </NavItem>
-                  </Nav>
-                </Col>
-                <Col md="8">
-                  <TabContent activeTab={this.state.activeTab}>
-                    <TabPane tabId="1">
-                      <Row>
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
-
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
-
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
-                      </Row>
-                    </TabPane>
-                    <TabPane tabId="2">
-                      <Row>
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
-
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
-                      </Row>
-                    </TabPane>
-                    <TabPane tabId="3">
-                      <Row>
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
-
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
-
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
-                      </Row>
-                    </TabPane>
-                    <TabPane tabId="4">
-                      <Row>
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
-
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
-                      </Row>
-                    </TabPane>
-                  </TabContent>
-                </Col>
-              </Row>
-            </div>
-          </div>
-          {/* ********* END PROJECTS 2 ********* */}
-        </div>{" "}
-    
+            {/* ********* END PROJECTS 2 ********* */}
+          </div>{" "}
         </>
       );
     }
     return (
-        <>
-
-<div className="cd-section" id="projects">
+      <>
+        <div className="cd-section" id="projects">
           <div
             className="project-raised broken-white"
             // style={{ backgroundColor: "#D4D4D4" }}
@@ -522,7 +535,8 @@ class Content extends React.Component {
                             paddingLeft: "10px",
                             paddingTop: "25px",
                             fontWeight: "bold",
-                            cursor:"pointer", height: "80px",
+                            cursor: "pointer",
+                            height: "80px",
                             color:
                               this.state.activeTab === "1" ? "white" : "black",
                             backgroundColor:
@@ -548,7 +562,7 @@ class Content extends React.Component {
                             paddingTop: "25px",
                             fontWeight: "bold",
                             height: "80px",
-                            cursor:"pointer",
+                            cursor: "pointer",
                             color:
                               this.state.activeTab === "2" ? "white" : "black",
                             backgroundColor:
@@ -574,7 +588,7 @@ class Content extends React.Component {
                             paddingTop: "25px",
                             fontWeight: "bold",
                             height: "80px",
-                            cursor:"pointer",
+                            cursor: "pointer",
                             color:
                               this.state.activeTab === "3" ? "white" : "black",
                             backgroundColor:
@@ -600,7 +614,7 @@ class Content extends React.Component {
                             paddingTop: "25px",
                             fontWeight: "bold",
                             height: "80px",
-                            cursor:"pointer",
+                            cursor: "pointer",
                             color:
                               this.state.activeTab === "4" ? "white" : "black",
                             backgroundColor:
@@ -866,15 +880,21 @@ class Content extends React.Component {
           </div>
           {/* ********* END PROJECTS 2 ********* */}
         </div>{" "}
-    
-        </>
+      </>
     );
   };
 
   render() {
     return this.renderContent();
-
   }
 }
 
-export default Content;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  getContent: (section, lang) => dispatch(getContent(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

@@ -50,7 +50,7 @@ const tabContent = {
   minHeight: "7.7vh",
   fontWeight: "bold",
   textAlign: "center",
-  paddingTop: "20px"
+  paddingTop: "18px"
 };
 
 class BreakingNews extends Component {

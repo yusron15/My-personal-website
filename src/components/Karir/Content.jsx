@@ -19,11 +19,9 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
 import bg from "../../assets/img/header-karir.png";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import ReactSearchBox from "react-search-box";
+import { connect } from "react-redux";
+import { getContent } from "../../redux/ducks/actions.js";
 import "../../assets/css/main.css";
-
-const searchStyle = {
-  minWidth: "100vw"
-};
 
 const customStyles = {
   control: (base, state) => ({
@@ -61,6 +59,10 @@ class Blogs extends React.Component {
   state = {
     dataSelect: ""
   };
+
+  async componentDidMount() {
+    await this.props.getContent("karir", "id");
+  }
 
   renderContent = () => {
     if (isMobile) {
@@ -304,4 +306,14 @@ class Blogs extends React.Component {
   }
 }
 
-export default Blogs;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  getContent: (section, lang) => dispatch(getContent(section, lang))
+
+  // fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blogs);

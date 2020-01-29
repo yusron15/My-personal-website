@@ -130,6 +130,10 @@ class News extends React.Component {
     activeSlide2: 0
   };
 
+  async componentDidMount() {
+    await this.props.getContent("cabang", "id");
+  }
+
   toggle = tab => {
     if (this.state.activeTab !== tab) {
       this.setState({
@@ -414,7 +418,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  // fetchPage: (section, lang) => dispatch(fetchPage(section, lang)),
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
-export default connect(mapStateToProps, null)(News);
+export default connect(mapStateToProps, mapDispatchToProps)(News);

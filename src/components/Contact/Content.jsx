@@ -127,7 +127,12 @@ class Content extends React.Component {
                         <CardBody>
                           <Row>
                             <Col md="6">
-                              <label>First name</label>
+                              <label>
+                                {
+                                  this.props.pageStore.hubungikami.form
+                                    .firstname
+                                }
+                              </label>
                               <InputGroup
                                 className={classnames({
                                   "input-group-focus": this.state.firstNameFocus
@@ -161,7 +166,13 @@ class Content extends React.Component {
                             </Col>
                             <Col md="6">
                               <FormGroup>
-                                <label>Last name</label>
+                                <label>
+                                  {" "}
+                                  {
+                                    this.props.pageStore.hubungikami.form
+                                      .lastname
+                                  }
+                                </label>
                                 <InputGroup
                                   className={classnames({
                                     "input-group-focus": this.state
@@ -200,7 +211,13 @@ class Content extends React.Component {
                             </Col>
                           </Row>
                           <FormGroup>
-                            <label>Email address</label>
+                            <label>
+                              {" "}
+                              {
+                                this.props.pageStore.hubungikami.form
+                                  .emailaddress
+                              }
+                            </label>
                             <InputGroup
                               className={classnames({
                                 "input-group-focus": this.state.emailFocus
@@ -228,7 +245,13 @@ class Content extends React.Component {
                             </InputGroup>
                           </FormGroup>
                           <FormGroup>
-                            <label>Your message</label>
+                            <label>
+                              {" "}
+                              {
+                                this.props.pageStore.hubungikami.form
+                                  .yourmessage
+                              }
+                            </label>
                             <Input
                               style={{ color: "black" }}
                               id="message"
@@ -243,7 +266,7 @@ class Content extends React.Component {
                                 className="btn-round pull-right"
                                 color="info"
                               >
-                                Send Message
+                                {this.props.pageStore.hubungikami.form.button}
                               </Button>
                             </Col>
                           </Row>
