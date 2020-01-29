@@ -39,7 +39,7 @@ function LangTogglerButton(props) {
             }
 
             if (a == "CN") {
-              data = "";
+              data = "MD";
             }
 
             if (a == "HK") {
