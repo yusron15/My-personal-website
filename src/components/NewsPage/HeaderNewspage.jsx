@@ -70,7 +70,11 @@ class HeaderNewsPage extends Component {
           <ColoredNavbar location={{ ...this.props.location }} />
           <div className="title title-header">Newspage</div>
           {/* <div style={{ marginTop: "11vh" }}> */}
-          <BreakingNews />
+          {/* <BreakingNews /> */}
+         
+                    <BreakingNews />
+
+
           {/* </div> */}
         </div>
       </>

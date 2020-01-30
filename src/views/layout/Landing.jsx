@@ -14,6 +14,8 @@ import Legality from "../../components/Landing/Legality.jsx";
 import Footer from "../../components/Footers/Footer.jsx";
 import NewsLetter from "../../components/NewsLetter/NewsLetter.jsx";
 import BottomNavbar from "../../components/Navbars/BottomNavbar.jsx";
+
+import { isMobile } from "react-device-detect";
 import "../../assets/css/main.css";
 import VizSensor from "react-visibility-sensor";
 import { connect } from "react-redux";
@@ -49,6 +51,7 @@ class Landing extends React.Component {
       });
     }
   };
+
   render() {
     return (
       <>
@@ -93,8 +96,13 @@ class Landing extends React.Component {
 
         <NewsLetter />
         <Footer />
-        <BottomNavbar />
-        <div className="space-50" />
+        {isMobile ? null : (
+          <div>
+            <BottomNavbar />
+            <div className="space-50" />
+          </div>
+        )}
+        {/* <BottomNavbar /> */}
       </>
     );
   }

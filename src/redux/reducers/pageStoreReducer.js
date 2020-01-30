@@ -648,7 +648,6 @@ export default (state = defaultState, action = {}) => {
 
     case "GET_CONTENT": {
       let keys = Object.keys(action.payload)[0];
-      // alert(keys);
       return {
         ...state,
         [keys]: action.payload[keys]

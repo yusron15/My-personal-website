@@ -50,7 +50,11 @@ const tabContent = {
   minHeight: "7.7vh",
   fontWeight: "bold",
   textAlign: "center",
-  paddingTop: "18px"
+  paddingTop: "15px"
+  // position: "absolute",
+  // top: "50%"
+  // -ms-transform: translateY(-50%),
+  // transform: translateY(-50%),
 };
 
 class BreakingNews extends Component {

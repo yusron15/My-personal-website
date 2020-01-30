@@ -236,7 +236,7 @@ class ColorNavbar extends React.Component {
       image = (
         <img
           src={this.state.logoWhite}
-          style={{ height: "8vh", width: "auto" }}
+          style={{ height: "7.7pvh", width: "auto" }}
         />
       );
     }

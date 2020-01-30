@@ -48,7 +48,7 @@ import iphone3 from "../../assets/img/iphone3.png";
 import headerimage from "../../assets/img/header-image1.png";
 
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 import VizSensor from "react-visibility-sensor";
 import { throwStatement } from "@babel/types";
@@ -71,7 +71,7 @@ class HeaderLanding extends React.Component {
   }
 
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    await this.props.getContent("landing", "id");
   }
 
   renderContent = () => {
@@ -444,7 +444,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderLanding);

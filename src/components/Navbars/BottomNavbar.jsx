@@ -29,6 +29,7 @@ import bg from "../../assets/img/bg-bottom-navbar.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import Radium, { StyleRoot } from "radium";
+import { isMobile } from "react-device-detect";
 
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
@@ -79,16 +80,128 @@ class BottomNavbar extends React.Component {
     }
   };
 
-  render() {
+  renderContent = () => {
     const styles = {
       containerStyle: {
         position: this.state.position,
         maxHeight: "350px",
+        bacckgroundSize: "cover",
         backgroundImage:
           "url(" + require("assets/img/ebook-background.png") + ")"
       }
     };
-    const EbookShow = this.state.position;
+    if (isMobile) {
+      return (
+        <>
+          <div class="navbar-bottom" style={styles.containerStyle}>
+            <div style={{ minHeight: "90px" }}>
+              <div
+                style={{
+                  margin: "15px 10px 10px 10px"
+                }}
+              >
+                <Col className="ml-auto mr-auto" md="12">
+                  <Col>
+                    <div>
+                      <div
+                        style={{
+                          fontWeight: "bold",
+                          textAlign: "center",
+                          fontSize: "1.2rem",
+                          color: "white",
+                          marginTop: "5px"
+                        }}
+                      >
+                        {this.props.pageStore.Landing.BottomNavbar.title}
+                      </div>
+                    </div>
+                    <div>
+                      <Row>
+                        <Col>
+                          <div>
+                            <Input
+                              style={{
+                                backgroundColor: "rgba(10, 10, 10, 0.49)",
+                                color: "white",
+                                border: "none"
+                              }}
+                              placeholder="Full Name"
+                              type="text"
+                              onFocus={e => this.setState({ emailFocus: true })}
+                              onBlur={e => this.setState({ emailFocus: false })}
+                            />
+                          </div>
+                          <div>
+                            <Input
+                              style={{
+                                backgroundColor: "rgba(10, 10, 10, 0.49)",
+                                color: "white",
+                                border: "none"
+                              }}
+                              placeholder="Email"
+                              type="text"
+                              onFocus={e => this.setState({ emailFocus: true })}
+                              onBlur={e => this.setState({ emailFocus: false })}
+                            />
+                          </div>
+                        </Col>
+                        <Col>
+                          <div>
+                            <Input
+                              style={{
+                                backgroundColor: "rgba(10, 10, 10, 0.49)",
+                                color: "white",
+                                border: "none"
+                              }}
+                              color="white"
+                              placeholder="+62"
+                              type="text"
+                              onFocus={e => this.setState({ emailFocus: true })}
+                              onBlur={e => this.setState({ emailFocus: false })}
+                            />
+                          </div>
+                          <div>
+                            <Input
+                              style={{
+                                backgroundColor: "rgba(10, 10, 10, 0.49)",
+                                color: "white",
+                                border: "none"
+                              }}
+                              placeholder="Telepon"
+                              type="text"
+                              onFocus={e => this.setState({ emailFocus: true })}
+                              onBlur={e => this.setState({ emailFocus: false })}
+                            />
+                          </div>
+                        </Col>
+                      </Row>
+                    </div>
+                    <div>
+                      <div>
+                        <Button block color="info" type="button">
+                          Download EBook
+                        </Button>
+                      </div>
+                    </div>
+                  </Col>
+
+                  <Row style={{ marginLeft: "12px" }}>
+                    <Col style={{ color: "#FFFFFF" }}>
+                      <Input type="checkbox" />
+                      {this.props.pageStore.Landing.BottomNavbar.form.leftTick}
+                    </Col>
+                    <Col style={{ color: "#FFFFFF" }}>
+                      <Input type="checkbox" />
+                      {this.props.pageStore.Landing.BottomNavbar.form.rightTick}
+                    </Col>
+                  </Row>
+                </Col>
+              </div>
+            </div>
+          </div>
+        </>
+      );
+    }
     return (
       <>
         <div class="navbar-bottom" style={styles.containerStyle}>
@@ -202,6 +315,10 @@ class BottomNavbar extends React.Component {
         </div>
       </>
     );
+  };
+
+  render() {
+    return this.renderContent();
   }
 }
 
