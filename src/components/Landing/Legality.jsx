@@ -348,10 +348,10 @@ class Projects extends React.Component {
                   <DarkNavbar />
                   <Container
                     style={{
-                      height: "75vh",
                       minWidth: "100vw",
                       backgroundSize: "cover",
-                      backgroundImage: `url(${bglegalitas})`
+                      backgroundImage: `url(${bglegalitas})`,
+                      paddingBottom: 40
                     }}
                   >
                     <Row>
