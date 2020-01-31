@@ -107,7 +107,7 @@ class BreakingNews extends Component {
                       cursor: "pointer"
                     }}
                   >
-                    FX
+                    Komoditi
                   </div>
                 </div>
               </NavItem>
@@ -145,7 +145,7 @@ class BreakingNews extends Component {
                       cursor: "pointer"
                     }}
                   >
-                    Komoditi
+                    FX
                   </div>
                 </div>
               </NavItem>
@@ -154,51 +154,16 @@ class BreakingNews extends Component {
           <div style={{ flex: 1 }}>
             <TabContent activeTab={this.state.activeTab}>
               <TabPane tabId="1">
-                <div style={tabContent}>FX</div>
+                <div style={tabContent}>Komoditi</div>
               </TabPane>
               <TabPane tabId="2">
                 <div style={tabContent}>Index</div>
               </TabPane>
               <TabPane tabId="3">
-                <div style={tabContent}>Komoditi</div>
+                <div style={tabContent}>FX</div>
               </TabPane>
             </TabContent>
           </div>
-        </div>
-        <div
-          style={{
-            flex: 1,
-            display: "flex",
-            alignItems: "center",
-            color: "white",
-            fontSize: "1rem",
-            verticalAlign: "middle"
-          }}
-        >
-          <marquee scrollamount="5">
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <div style={{ marginLeft: 20 }}>
-                <img src={Up} />
-                {` Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit`}
-              </div>
-              <div style={{ marginLeft: 8 }}>
-                <img src={Down} />
-                {` Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit`}
-              </div>
-              <div style={{ marginLeft: 20 }}>
-                <img src={Up} />
-                {` Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit`}
-              </div>
-              <div style={{ marginLeft: 20 }}>
-                <img src={Down} />
-                {` Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit`}
-              </div>
-            </div>
-          </marquee>
         </div>
       </div>
       // <div
@@ -299,24 +264,24 @@ class BreakingNews extends Component {
       //         </Row>
       //       </Col>
       //       <Col style={{ padding: 0 }}>
-      // <marquee scrollamount="5">
-      //   <Row
-      //     style={{
-      //       paddingTop: "1.35%"
-      //     }}
-      //     // classname="vertical-center"
-      //   >
-      //     <div>
-      //       <img src={Up} /> Lorem ipsum dolor sit amet, consectetur
-      //       adipiscing elit
-      //     </div>
+      //         <marquee scrollamount="5">
+      //           <Row
+      //             style={{
+      //               paddingTop: "1.35%"
+      //             }}
+      //             // classname="vertical-center"
+      //           >
+      //             <div>
+      //               <img src={Up} /> Lorem ipsum dolor sit amet, consectetur
+      //               adipiscing elit
+      //             </div>
 
-      //     <div>
-      //       <img src={Down} /> Lorem ipsum dolor sit amet, consectetur
-      //       adipiscing elit
-      //     </div>
-      //   </Row>
-      // </marquee>
+      //             <div>
+      //               <img src={Down} /> Lorem ipsum dolor sit amet, consectetur
+      //               adipiscing elit
+      //             </div>
+      //           </Row>
+      //         </marquee>
       //       </Col>
       //     </Row>
       //   </div>

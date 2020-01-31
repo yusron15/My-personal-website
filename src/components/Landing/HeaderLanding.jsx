@@ -415,18 +415,18 @@ class HeaderLanding extends React.Component {
                   >
                     <CardRegister />
                   </Col>
-                  <Col
-                    md="12"
-                    style={{
-                      position: "absolute",
-                      bottom: 0,
-                      paddingRight: 0,
-                      paddingLeft: 0
-                    }}
-                  >
-                    <BreakingNews />
-                  </Col>
                 </div>
+                <Col
+                  md="12"
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    paddingRight: 0,
+                    paddingLeft: 0
+                  }}
+                >
+                  <BreakingNews />
+                </Col>
               </div>
             </>
           );
