@@ -33,7 +33,7 @@ class Landing extends React.Component {
   async componentDidMount() {
     // await this.props.fetchPage("landing", "id");
     await this.props.getContent("landing", this.props.currentLang, true);
-    window.scroll(0, 0);
+    // window.scroll(0, 0);
   }
 
   onChange = id => async isVisible => {

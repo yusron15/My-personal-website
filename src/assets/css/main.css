@@ -779,3 +779,19 @@ span > .arrow-down {
   display: flex;
   flex: 1;
 }
+
+.card-pricing {
+  min-height: 460px;
+}
+
+.btn-round.pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.card-pricing > .card-body {
+  display: flex;
+  flex-direction: column;
+}
