@@ -21,8 +21,10 @@ import {
 } from "reactstrap";
 import Sidebar from "react-sidebar";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
+import SidebarTablet from "../../components/Navbars/SidebarTablet";
+
 import ScrollAnimation from "react-animate-on-scroll";
-import { isMobile } from "react-device-detect";
+import { isMobile, isTablet, isIPad13 } from "react-device-detect";
 import DropdownTentangKami from "../DropdownContent/DropdownTentangKami";
 import DropdownTrading from "../DropdownContent/DropdownTrading";
 import DropdownBerita from "../DropdownContent/DropdownBerita";
@@ -221,196 +223,172 @@ class ColorNavbar extends React.Component {
     };
     const { containerStyle, colorStyle } = styles;
     if (isMobile) {
+      console.log("Mobile")
       return (
         <>
           <SidebarMobile />
         </>
       );
     }
+    if (isIPad13) {
+      console.log("Tablet")
+      return (
+        <>
+          <SidebarTablet />
+        </>
+      );
+    }
     return (
-      <LangContext.Consumer>
-        {({ lang }) => {
-          return (
-            <>
-              <Container
-                className={`fixed-top  + ${
-                  this.props.navbarColor === "black"
-                    ? "black-newsletter"
-                    : "broken-white"
-                }`}
-                expand="lg"
-                style={containerStyle}
-              >
-                {/* <BlurryNavbar /> */}
-                <Navbar
-                  className={`fixed-top  + ${
-                    this.props.navbarColor === "black"
-                      ? "black-newsletter"
-                      : "broken-white"
-                  }`}
-                  expand="lg"
-                  style={containerStyle}
+      <>
+        <Container
+          className={`fixed-top  + ${
+            this.props.navbarColor === "black"
+              ? "black-newsletter"
+              : "broken-white"
+          }`}
+          expand="lg"
+          style={containerStyle}
+        >
+          {/* <BlurryNavbar /> */}
+          <Navbar
+            className={`fixed-top  + ${
+              this.props.navbarColor === "black"
+                ? "black-newsletter"
+                : "broken-white"
+            }`}
+            expand="lg"
+            style={containerStyle}
+          >
+            <Container>
+              <div className="navbar-translate">
+                <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+                  {/* <Link to="/landing"> */}
+                  <img src={logo} style={{ height: "7vh", width: "auto" }} />
+                  {/* TGF */}
+                  {/* </Link> */}
+                </NavbarBrand>
+                <button
+                  className="navbar-toggler"
+                  id="example-navbar-transparent"
                 >
-                  <Container>
-                    <div className="navbar-translate">
-                      <NavbarBrand
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                      >
-                        {/* <Link to="/landing"> */}
-                        <img
-                          src={logo}
-                          style={{ height: "7vh", width: "auto" }}
-                        />
-                        {/* TGF */}
-                        {/* </Link> */}
-                      </NavbarBrand>
-                      <button
-                        className="navbar-toggler"
-                        id="example-navbar-transparent"
-                      >
-                        <span className="navbar-toggler-bar bar1" />
-                        <span className="navbar-toggler-bar bar2" />
-                        <span className="navbar-toggler-bar bar3" />
-                      </button>
-                    </div>
-                    <UncontrolledCollapse
-                      navbar
-                      toggler="#example-navbar-transparent"
-                    >
-                      <Nav
-                        className="nav-pills-info nav-pills-icons nav-pills-lg ml-auto"
-                        pills
-                        role="tablist"
-                        navbar
-                      >
-                        <Link to="/landing">
-                          <NavItem>
-                            <div onMouseEnter={() => this.onLeaveAll()}>
-                              <button
-                                className="dropdown dropbtn"
-                                style={{
-                                  color: this.coloringNav("/landing"),
-                                  fontWeight: "bold"
-                                }}
-                              >
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Header.m1.title
-                                )}
-                              </button>
-                            </div>
-                          </NavItem>
-                        </Link>
-
-                        {/* TENTANG KAMI */}
-                        <div
-                          class="dropdown "
-                          style={colorStyle}
-                          onMouseEnter={() => this.onClick()}
-                          // onMouseLeave={() => this.onLeave()}
+                  <span className="navbar-toggler-bar bar1" />
+                  <span className="navbar-toggler-bar bar2" />
+                  <span className="navbar-toggler-bar bar3" />
+                </button>
+              </div>
+              <UncontrolledCollapse
+                navbar
+                toggler="#example-navbar-transparent"
+              >
+                <Nav
+                  className="nav-pills-info nav-pills-icons nav-pills-lg ml-auto"
+                  pills
+                  role="tablist"
+                  navbar
+                >
+                  <Link to="/landing">
+                    <NavItem>
+                      <div onMouseEnter={() => this.onLeaveAll()}>
+                        <button
+                          className="dropdown dropbtn"
+                          style={{
+                            color: this.coloringNav("/landing"),
+                            fontWeight: "bold"
+                          }}
                         >
-                          <button class="dropbtn" style={colorStyle}>
-                            {ReactHtmlParser(
-                              this.props.pageStore.Header.m2.title
-                            )}
-                          </button>
-                        </div>
+                          {ReactHtmlParser(
+                            this.props.pageStore.Header.m1.title
+                          )}
+                        </button>
+                      </div>
+                    </NavItem>
+                  </Link>
 
-                        {/* TRADING ONLINE */}
-                        <div
-                          class="dropdown "
-                          onMouseEnter={() => this.onClickTrading()}
-                        >
-                          <button class="dropbtn" style={colorStyle}>
-                            {ReactHtmlParser(
-                              this.props.pageStore.Header.m3.title
-                            )}
-                          </button>
-                        </div>
-
-                        {/* BERITA */}
-                        <div
-                          class="dropdown"
-                          onMouseEnter={() => this.onClickBerita()}
-                        >
-                          <button class="dropbtn" style={colorStyle}>
-                            {ReactHtmlParser(
-                              this.props.pageStore.Header.m4.title
-                            )}
-                          </button>
-                        </div>
-
-                        <Link to="/edukasi">
-                          <NavItem>
-                            <div onMouseEnter={() => this.onLeaveAll()}>
-                              <button class="dropbtn" style={colorStyle}>
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Header.m5.title
-                                )}
-                              </button>
-                            </div>
-                          </NavItem>
-                        </Link>
-
-                        <Link to="/karir" style={colorStyle}>
-                          <NavItem>
-                            <div onMouseEnter={() => this.onLeaveAll()}>
-                              <button class="dropbtn" style={colorStyle}>
-                                {this.props.pageStore.Header.m6.title}
-                              </button>
-                            </div>
-                          </NavItem>
-                        </Link>
-
-                        <Link to="/contact">
-                          <NavItem>
-                            <div onMouseEnter={() => this.onLeaveAll()}>
-                              <button class="dropbtn" style={colorStyle}>
-                                {this.props.pageStore.Header.m7.title}
-                              </button>
-                            </div>
-                          </NavItem>
-                        </Link>
-                      </Nav>
-                    </UncontrolledCollapse>
-                  </Container>
-                  <div onMouseLeave={() => this.onLeave()}>
-                    {/* <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut"> */}
-                    {this.state.childVisible ? <DropdownTentangKami /> : null}
-                    {/* </ScrollAnimation> */}
+                  {/* TENTANG KAMI */}
+                  <div
+                    class="dropdown "
+                    style={colorStyle}
+                    onMouseEnter={() => this.onClick()}
+                    // onMouseLeave={() => this.onLeave()}
+                  >
+                    <button class="dropbtn" style={colorStyle}>
+                      {ReactHtmlParser(this.props.pageStore.Header.m2.title)}
+                    </button>
                   </div>
-                  <div onMouseLeave={() => this.onLeaveTrading()}>
-                    {this.state.childVisibleTrading ? (
-                      <DropdownTrading />
-                    ) : null}
+
+                  {/* TRADING ONLINE */}
+                  <div
+                    class="dropdown "
+                    onMouseEnter={() => this.onClickTrading()}
+                  >
+                    <button class="dropbtn" style={colorStyle}>
+                      {ReactHtmlParser(this.props.pageStore.Header.m3.title)}
+                    </button>
                   </div>
-                  <div onMouseLeave={() => this.onLeaveBerita()}>
-                    {this.state.childVisibleBerita ? <DropdownBerita /> : null}
+
+                  {/* BERITA */}
+                  <div
+                    class="dropdown"
+                    onMouseEnter={() => this.onClickBerita()}
+                  >
+                    <button class="dropbtn" style={colorStyle}>
+                      {ReactHtmlParser(this.props.pageStore.Header.m4.title)}
+                    </button>
                   </div>
-                </Navbar>
-                {/* {this.state.childVisible ? <DropdownTentangKami /> : null} */}
-              </Container>
-            </>
-          );
-        }}
-      </LangContext.Consumer>
+
+                  <Link to="/edukasi">
+                    <NavItem>
+                      <div onMouseEnter={() => this.onLeaveAll()}>
+                        <button class="dropbtn" style={colorStyle}>
+                          {ReactHtmlParser(
+                            this.props.pageStore.Header.m5.title
+                          )}
+                        </button>
+                      </div>
+                    </NavItem>
+                  </Link>
+
+                  <Link to="/karir" style={colorStyle}>
+                    <NavItem>
+                      <div onMouseEnter={() => this.onLeaveAll()}>
+                        <button class="dropbtn" style={colorStyle}>
+                          {this.props.pageStore.Header.m6.title}
+                        </button>
+                      </div>
+                    </NavItem>
+                  </Link>
+
+                  <Link to="/contact">
+                    <NavItem>
+                      <div onMouseEnter={() => this.onLeaveAll()}>
+                        <button class="dropbtn" style={colorStyle}>
+                          {this.props.pageStore.Header.m7.title}
+                        </button>
+                      </div>
+                    </NavItem>
+                  </Link>
+                </Nav>
+              </UncontrolledCollapse>
+            </Container>
+            <div onMouseLeave={() => this.onLeave()}>
+              {/* <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut"> */}
+              {this.state.childVisible ? <DropdownTentangKami /> : null}
+              {/* </ScrollAnimation> */}
+            </div>
+            <div onMouseLeave={() => this.onLeaveTrading()}>
+              {this.state.childVisibleTrading ? <DropdownTrading /> : null}
+            </div>
+            <div onMouseLeave={() => this.onLeaveBerita()}>
+              {this.state.childVisibleBerita ? <DropdownBerita /> : null}
+            </div>
+          </Navbar>
+          {/* {this.state.childVisible ? <DropdownTentangKami /> : null} */}
+        </Container>
+      </>
     );
   };
 
   render() {
-    // const styles = {
-    //   containerStyle: {
-    //     marginTop: this.state.marginTop,
-    //     bgButton: this.state.bgButton,
-    //     fontBold: this.state.fontBold,
-    //     zIndex: 999
-    //   },
-    //   colorStyle: {
-    //     color: this.props.navbarColor == "white" ? "black" : "white"
-    //     // color: this.state.color
-    //   }
-    // };
-    // const { containerStyle, colorStyle } = styles;
     return this.renderContent();
   }
 }

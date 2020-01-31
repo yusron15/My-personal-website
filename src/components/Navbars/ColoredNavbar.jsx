@@ -32,7 +32,7 @@ import DropdownTrading from "../DropdownContent/DropdownTrading";
 import DropdownBerita from "../DropdownContent/DropdownBerita";
 
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 class ColorNavbar extends React.Component {
   constructor(props) {
@@ -53,9 +53,6 @@ class ColorNavbar extends React.Component {
     };
   }
 
-  async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
-  }
 
   onClick() {
     this.setState({ childVisible: !this.state.childVisible });
@@ -111,8 +108,10 @@ class ColorNavbar extends React.Component {
     }
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     window.addEventListener("scroll", this.changeNavbarColor);
+    await this.props.getContent("edukasi", "id");
+
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeNavbarTop);
@@ -236,7 +235,7 @@ class ColorNavbar extends React.Component {
       image = (
         <img
           src={this.state.logoWhite}
-          style={{ height: "7.7pvh", width: "auto" }}
+          style={{ height: "7.7vh", width: "auto" }}
         />
       );
     }
@@ -514,7 +513,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ColorNavbar);

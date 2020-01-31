@@ -98,13 +98,13 @@ class Projects extends React.Component {
               <Container
                 className="center"
                 style={{
-                  height: "100vh",
+                  // height: "1vh",
                   minWidth: "100vw",
                   backgroundSize: "cover",
                   backgroundImage: `url(${bglegalitas})`
                 }}
               >
-                <Col>
+                <div>
                   <Col>
                     <TabContent
                       className="tab-space"
@@ -124,13 +124,10 @@ class Projects extends React.Component {
                             </div>
                           </h2>
                           <p className="description mb-5 font-black">
-                            {/* {this.state.content[0].bappebti} */}
-                            <div style={{ color: "black" }}>
-                              {ReactHtmlParser(
-                                this.props.pageStore.Landing.Legality.content[0]
-                                  .content
-                              )}
-                            </div>
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Legality.content[3]
+                                .content
+                            )}
                           </p>
                         </Col>
                       </TabPane>
@@ -214,7 +211,7 @@ class Projects extends React.Component {
                       </TabPane>
                     </TabContent>{" "}
                   </Col>
-                  <Col style={{ marginTop: "32vh" }}>
+                  <Col style={{ marginTop: "15vh" }}>
                     <Nav
                       className="nav-pills-info nav-pills-icons nav-pills-lg"
                       pills
@@ -222,123 +219,98 @@ class Projects extends React.Component {
                       // style={{marginTop:"50px"}}
                     >
                       <NavItem className="m-auto">
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOutDown"
-                        >
-                          <img
-                            src={
-                              this.state.activeTab === "1"
-                                ? require('"../../assets/img/colored-bappebti.png')
-                                : require('"../../assets/img/grey-bappebti.png')
-                            }
-                            style={{ margin: "10px" }}
-                            width={this.state.activeTab === "1" ? "100" : "100"}
-                            auto="auto"
-                            className={
-                              this.state.activeTab === "1" ? "active" : ""
-                            }
-                            onClick={() => {
-                              this.toggle("1");
-                            }}
-                          />
-                        </ScrollAnimation>
+                        <img
+                          src={
+                            this.state.activeTab === "1"
+                              ? require('"../../assets/img/colored-bappebti.png')
+                              : require('"../../assets/img/grey-bappebti.png')
+                          }
+                          style={{ margin: "10px" }}
+                          width={this.state.activeTab === "1" ? "100" : "100"}
+                          auto="auto"
+                          className={
+                            this.state.activeTab === "1" ? "active" : ""
+                          }
+                          onClick={() => {
+                            this.toggle("1");
+                          }}
+                        />
                       </NavItem>
                       <NavItem className="m-auto">
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOutDown"
-                        >
-                          <img
-                            src={
-                              this.state.activeTab === "2"
-                                ? require('"../../assets/img/colored-jfx.png')
-                                : require('"../../assets/img/grey-jfx.png')
-                            }
-                            style={{ margin: "10px" }}
-                            width={this.state.activeTab === "2" ? "100" : "100"}
-                            auto="auto"
-                            className={
-                              this.state.activeTab === "2" ? "active" : ""
-                            }
-                            onClick={() => {
-                              this.toggle("2");
-                            }}
-                          />
-                        </ScrollAnimation>
+                        <img
+                          src={
+                            this.state.activeTab === "2"
+                              ? require('"../../assets/img/colored-jfx.png')
+                              : require('"../../assets/img/grey-jfx.png')
+                          }
+                          style={{ margin: "10px" }}
+                          width={this.state.activeTab === "2" ? "100" : "100"}
+                          auto="auto"
+                          className={
+                            this.state.activeTab === "2" ? "active" : ""
+                          }
+                          onClick={() => {
+                            this.toggle("2");
+                          }}
+                        />
                       </NavItem>
                       <NavItem className="m-auto">
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOutDown"
-                        >
-                          <img
-                            src={
-                              this.state.activeTab === "3"
-                                ? require('"../../assets/img/colored-kbi.png')
-                                : require('"../../assets/img/grey-kbi.png')
-                            }
-                            style={{ margin: "10px" }}
-                            width={this.state.activeTab === "3" ? "100" : "100"}
-                            auto="auto"
-                            className={
-                              this.state.activeTab === "3" ? "active" : ""
-                            }
-                            onClick={() => {
-                              this.toggle("3");
-                            }}
-                          />
-                        </ScrollAnimation>
+                        <img
+                          src={
+                            this.state.activeTab === "3"
+                              ? require('"../../assets/img/colored-kbi.png')
+                              : require('"../../assets/img/grey-kbi.png')
+                          }
+                          style={{ margin: "10px" }}
+                          width={this.state.activeTab === "3" ? "100" : "100"}
+                          auto="auto"
+                          className={
+                            this.state.activeTab === "3" ? "active" : ""
+                          }
+                          onClick={() => {
+                            this.toggle("3");
+                          }}
+                        />
                       </NavItem>
                       <NavItem className="m-auto">
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOutDown"
-                        >
-                          <img
-                            src={
-                              this.state.activeTab === "4"
-                                ? require('"../../assets/img/colored-ich.png')
-                                : require('"../../assets/img/grey-ich.png')
-                            }
-                            style={{ margin: "10px" }}
-                            width={this.state.activeTab === "4" ? "100" : "100"}
-                            auto="auto"
-                            className={
-                              this.state.activeTab === "4" ? "active" : ""
-                            }
-                            onClick={() => {
-                              this.toggle("4");
-                            }}
-                          />
-                        </ScrollAnimation>
+                        <img
+                          src={
+                            this.state.activeTab === "4"
+                              ? require('"../../assets/img/colored-ich.png')
+                              : require('"../../assets/img/grey-ich.png')
+                          }
+                          style={{ margin: "10px" }}
+                          width={this.state.activeTab === "4" ? "100" : "100"}
+                          auto="auto"
+                          className={
+                            this.state.activeTab === "4" ? "active" : ""
+                          }
+                          onClick={() => {
+                            this.toggle("4");
+                          }}
+                        />
                       </NavItem>
                       <NavItem className="m-auto">
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOutDown"
-                        >
-                          <img
-                            src={
-                              this.state.activeTab === "5"
-                                ? require('"../../assets/img/colored-icdx.png')
-                                : require('"../../assets/img/grey-icdx.png')
-                            }
-                            style={{ margin: "10px" }}
-                            width={this.state.activeTab === "5" ? "100" : "100"}
-                            auto="auto"
-                            className={
-                              this.state.activeTab === "5" ? "active" : ""
-                            }
-                            onClick={() => {
-                              this.toggle("5");
-                            }}
-                          />
-                        </ScrollAnimation>
+                        <img
+                          src={
+                            this.state.activeTab === "5"
+                              ? require('"../../assets/img/colored-icdx.png')
+                              : require('"../../assets/img/grey-icdx.png')
+                          }
+                          style={{ margin: "10px" }}
+                          width={this.state.activeTab === "5" ? "100" : "100"}
+                          auto="auto"
+                          className={
+                            this.state.activeTab === "5" ? "active" : ""
+                          }
+                          onClick={() => {
+                            this.toggle("5");
+                          }}
+                        />
                       </NavItem>
                     </Nav>
                   </Col>
-                </Col>
+                </div>
               </Container>
             </div>
             {/* ********* END PROJECTS 2 ********* */}

@@ -312,6 +312,11 @@ class Content extends React.Component {
                     next={this.next}
                     previous={this.previous}
                   >
+                    <CarouselIndicators
+                      items={items}
+                      activeIndex={this.state.activeIndex}
+                      onClickHandler={this.goToIndex}
+                    />
                     {items.map((item, key) => {
                       return (
                         <CarouselItem

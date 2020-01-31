@@ -233,7 +233,7 @@ class HeaderLanding extends React.Component {
                                 <Col>
                                   <img
                                     src={playstore}
-                                    style={{ marginLeft: "20px" }}
+                                    style={{ marginLeft: "10px" }}
                                   />
                                 </Col>
                               </Row>

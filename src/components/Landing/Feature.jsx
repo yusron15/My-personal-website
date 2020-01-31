@@ -292,246 +292,249 @@ class Features extends React.Component {
               <Row>
                 <Col md={{ size: 7, offset: 1 }} style={{ left: "3%" }}>
                   <Col>
-                    <Row>
-                      <div className="info">
-                        {/* foreign Exchange */}
-                        <Row>
-                          <Col
-                            md="3"
-                            style={{
-                              paddingLeft: 0,
-                              paddingRight: 0
-                            }}
-                          >
-                            <div className="icon icon-success">
-                              <img
-                                alt="..."
-                                src={
-                                  this.props.pageStore.Landing.Feature
-                                    .content[0].image
-                                }
-                                height="60"
-                                width="60"
-                              />
-                            </div>
-                          </Col>
-                          <Col
-                            md="9"
-                            style={{
-                              paddingLeft: 0,
-                              paddingRight: 0
-                            }}
-                          >
-                            <div className="description">
-                              <h3
-                                style={{
-                                  color: "black",
-                                  fontSize: "1.2rem",
-                                  marginBottom: 0,
-                                  marginLeft: "15px",
-                                  textAlign: "left"
-                                }}
-                              >
-                                {/* Foreign Exchange */}
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Landing.Feature
-                                    .content[0].title
-                                )}
-                              </h3>
-                              <p
-                                style={{
-                                  textAlign: "left",
-                                  fontSize: "0.8rem",
-                                  padding: 0
-                                  // paddingRight: "10px"
-                                }}
-                              >
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Landing.Feature
-                                    .content[0].subtitle
-                                )}
-                              </p>
-                            </div>
-                          </Col>
-                        </Row>
-                      </div>
-                      <div className="info">
-                        {/* cfd */}
-                        <Row>
-                          <Col
-                            md="3"
-                            style={{
-                              paddingLeft: 0,
-                              paddingRight: 0
-                            }}
-                          >
-                            <div className="icon icon-success">
-                              <img
-                                alt="..."
-                                src={
-                                  this.props.pageStore.Landing.Feature
-                                    .content[2].image
-                                }
-                                height="60"
-                                width="60"
-                              />
-                            </div>
-                          </Col>
-                          <Col
-                            md="9"
-                            style={{
-                              paddingLeft: 0,
-                              paddingRight: 0
-                            }}
-                          >
-                            <div className="description">
-                              <h3
-                                style={{
-                                  color: "black",
-                                  fontSize: "1.2rem",
-                                  marginBottom: 0,
-                                  marginLeft: "15px",
-                                  textAlign: "left"
-                                }}
-                              >
-                                {/* CFD */}
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Landing.Feature
-                                    .content[2].title
-                                )}
-                              </h3>
-                              <p
-                                style={{
-                                  textAlign: "left",
-                                  fontSize: "0.8rem",
-                                  padding: 0,
-                                  paddingRight: "10px"
-                                }}
-                              >
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Landing.Feature
-                                    .content[2].subtitle
-                                )}
-                              </p>
-                            </div>
-                          </Col>
-                        </Row>
-                      </div>
-                    </Row>
-
-                    <Row>
-                      <div className="info">
-                        {/* future Index */}
-                        <Row>
-                          <Col
-                            md="3"
-                            style={{ paddingLeft: 0, paddingRight: 0 }}
-                          >
-                            <div className="icon icon-success">
-                              <img
-                                alt="..."
-                                src={
-                                  this.props.pageStore.Landing.Feature
-                                    .content[1].image
-                                }
-                                height="60"
-                                width="60"
-                              />
-                            </div>
-                          </Col>
-                          <Col
-                            md="9"
-                            style={{ paddingLeft: 0, paddingRight: 0 }}
-                          >
-                            <div className="description">
-                              <h3
-                                style={{
-                                  color: "black",
-                                  fontSize: "1.2rem",
-                                  marginBottom: 0,
-                                  marginLeft: "15px",
-                                  textAlign: "left"
-                                }}
-                              >
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Landing.Feature
-                                    .content[1].title
-                                )}
-                              </h3>
-                              <p
-                                style={{
-                                  textAlign: "left",
-                                  fontSize: "0.8rem",
-                                  padding: 0,
-                                  paddingRight: "10px"
-                                }}
-                              >
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Landing.Feature
-                                    .content[1].subtitle
-                                )}
-                              </p>
-                            </div>
-                          </Col>
-                        </Row>
-                      </div>
-                      <div className="info">
-                        {/* komoditi */}
-                        <Row>
-                          <Col
-                            md="3"
-                            style={{ paddingLeft: 0, paddingRight: 0 }}
-                          >
-                            <div className="icon icon-success">
-                              <img
-                                alt="..."
-                                src={
-                                  this.props.pageStore.Landing.Feature
-                                    .content[3].image
-                                }
-                                height="60"
-                                width="60"
-                              />
-                            </div>
-                          </Col>
-                          <Col
-                            md="9"
-                            style={{ paddingLeft: 0, paddingRight: 0 }}
-                          >
-                            <div className="description">
-                              <h3
-                                style={{
-                                  color: "black",
-                                  fontSize: "1.2rem",
-                                  marginBottom: 0,
-                                  marginLeft: "15px",
-                                  textAlign: "left"
-                                }}
-                              >
-                                {/* Future Index */}
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Landing.Feature
-                                    .content[3].title
-                                )}
-                              </h3>
-                              <p
-                                style={{
-                                  textAlign: "left",
-                                  fontSize: "0.8rem",
-                                  padding: 0,
-                                  paddingRight: "10px"
-                                }}
-                              >
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Landing.Feature
-                                    .content[3].subtitle
-                                )}
-                              </p>
-                            </div>
-                          </Col>
-                        </Row>
-                      </div>
-                    </Row>
+                    <div>
+                      <Row>
+                        <div className="info" md="6">
+                          {/* foreign Exchange */}
+                          <Row>
+                            <Col
+                              md="3"
+                              style={{
+                                paddingLeft: 0,
+                                paddingRight: 0
+                              }}
+                            >
+                              <div className="icon icon-success">
+                                <img
+                                  alt="..."
+                                  src={
+                                    this.props.pageStore.Landing.Feature
+                                      .content[0].image
+                                  }
+                                  height="60"
+                                  width="60"
+                                />
+                              </div>
+                            </Col>
+                            <Col
+                              md="9"
+                              style={{
+                                paddingLeft: 0,
+                                paddingRight: 0
+                              }}
+                            >
+                              <div className="description">
+                                <h3
+                                  style={{
+                                    color: "black",
+                                    fontSize: "1.2rem",
+                                    marginBottom: 0,
+                                    marginLeft: "15px",
+                                    textAlign: "left"
+                                  }}
+                                >
+                                  {/* Foreign Exchange */}
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Landing.Feature
+                                      .content[0].title
+                                  )}
+                                </h3>
+                                <p
+                                  style={{
+                                    textAlign: "left",
+                                    fontSize: "0.8rem",
+                                    padding: 0
+                                    // paddingRight: "10px"
+                                  }}
+                                >
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Landing.Feature
+                                      .content[0].subtitle
+                                  )}
+                                </p>
+                              </div>
+                            </Col>
+                          </Row>
+                        </div>
+                        <div className="info" md="6">
+                          {/* cfd */}
+                          <Row>
+                            <Col
+                              md="3"
+                              style={{
+                                paddingLeft: 0,
+                                paddingRight: 0
+                              }}
+                            >
+                              <div className="icon icon-success">
+                                <img
+                                  alt="..."
+                                  src={
+                                    this.props.pageStore.Landing.Feature
+                                      .content[2].image
+                                  }
+                                  height="60"
+                                  width="60"
+                                />
+                              </div>
+                            </Col>
+                            <Col
+                              md="9"
+                              style={{
+                                paddingLeft: 0,
+                                paddingRight: 0
+                              }}
+                            >
+                              <div className="description">
+                                <h3
+                                  style={{
+                                    color: "black",
+                                    fontSize: "1.2rem",
+                                    marginBottom: 0,
+                                    marginLeft: "15px",
+                                    textAlign: "left"
+                                  }}
+                                >
+                                  {/* CFD */}
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Landing.Feature
+                                      .content[2].title
+                                  )}
+                                </h3>
+                                <p
+                                  style={{
+                                    textAlign: "left",
+                                    fontSize: "0.8rem",
+                                    padding: 0,
+                                    paddingRight: "10px"
+                                  }}
+                                >
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Landing.Feature
+                                      .content[2].subtitle
+                                  )}
+                                </p>
+                              </div>
+                            </Col>
+                          </Row>
+                        </div>
+                      </Row>
+                    </div>
+                    <div>
+                      <Row>
+                        <div className="info" md="6">
+                          {/* future Index */}
+                          <Row>
+                            <Col
+                              md="3"
+                              style={{ paddingLeft: 0, paddingRight: 0 }}
+                            >
+                              <div className="icon icon-success">
+                                <img
+                                  alt="..."
+                                  src={
+                                    this.props.pageStore.Landing.Feature
+                                      .content[1].image
+                                  }
+                                  height="60"
+                                  width="60"
+                                />
+                              </div>
+                            </Col>
+                            <Col
+                              md="9"
+                              style={{ paddingLeft: 0, paddingRight: 0 }}
+                            >
+                              <div className="description">
+                                <h3
+                                  style={{
+                                    color: "black",
+                                    fontSize: "1.2rem",
+                                    marginBottom: 0,
+                                    marginLeft: "15px",
+                                    textAlign: "left"
+                                  }}
+                                >
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Landing.Feature
+                                      .content[1].title
+                                  )}
+                                </h3>
+                                <p
+                                  style={{
+                                    textAlign: "left",
+                                    fontSize: "0.8rem",
+                                    padding: 0,
+                                    paddingRight: "10px"
+                                  }}
+                                >
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Landing.Feature
+                                      .content[1].subtitle
+                                  )}
+                                </p>
+                              </div>
+                            </Col>
+                          </Row>
+                        </div>
+                        <div className="info" md="6">
+                          {/* komoditi */}
+                          <Row>
+                            <Col
+                              md="3"
+                              style={{ paddingLeft: 0, paddingRight: 0 }}
+                            >
+                              <div className="icon icon-success">
+                                <img
+                                  alt="..."
+                                  src={
+                                    this.props.pageStore.Landing.Feature
+                                      .content[3].image
+                                  }
+                                  height="60"
+                                  width="60"
+                                />
+                              </div>
+                            </Col>
+                            <Col
+                              md="9"
+                              style={{ paddingLeft: 0, paddingRight: 0 }}
+                            >
+                              <div className="description">
+                                <h3
+                                  style={{
+                                    color: "black",
+                                    fontSize: "1.2rem",
+                                    marginBottom: 0,
+                                    marginLeft: "15px",
+                                    textAlign: "left"
+                                  }}
+                                >
+                                  {/* Future Index */}
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Landing.Feature
+                                      .content[3].title
+                                  )}
+                                </h3>
+                                <p
+                                  style={{
+                                    textAlign: "left",
+                                    fontSize: "0.8rem",
+                                    padding: 0,
+                                    paddingRight: "10px"
+                                  }}
+                                >
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Landing.Feature
+                                      .content[3].subtitle
+                                  )}
+                                </p>
+                              </div>
+                            </Col>
+                          </Row>
+                        </div>
+                      </Row>
+                    </div>
                   </Col>
                 </Col>
                 <Col md="4" style={{ paddingRight: 0, paddingTop: "50px" }}>

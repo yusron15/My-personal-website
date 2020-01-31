@@ -174,7 +174,9 @@ class Blogs extends React.Component {
             >
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
-              <div className="title title-header">Karir</div>
+              <div className="title title-header">
+                {this.props.pageStore.karir.Header}
+                </div>
             </div>
             <Container>
               <Row>
@@ -183,8 +185,8 @@ class Blogs extends React.Component {
                     className="description font-black"
                     style={{ marginTop: "10%", marginBottom: "2%" }}
                   >
-                    Berikut ini lowongan kerja yang tersedia di Topgrowth
-                    Futures saat ini:
+                  Berikut ini lowongan kerja yang tersedia di Topgrowth Futures saat ini:
+                    {/* {this.props.pageStore.karir.content.title} */}
                   </p>
                   <Row style={{ marginBottom: "10%" }}>
                     <Col md="6">
@@ -311,7 +313,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getContent: (section, lang) => dispatch(getContent(section, lang))
+  getContent: (page, lang) => dispatch(getContent(page, lang))
 
   // fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
 });

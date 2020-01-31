@@ -539,7 +539,23 @@ const defaultState = {
     stock: "Stock Index News",
     button: "Indeks Berita"
   },
-  edukasi: {},
+  edukasi: {
+    Header: "Edukasi",
+    video: [
+      {
+        videoButton: "Pengenalan Topgrowth Futures"
+      },
+      {
+        videoButton: "Trading Untuk Pemula"
+      },
+      {
+        videoButton: "Platform Topgrowth Trader & ProTrader"
+      },
+      {
+        videoButton: "Webinar"
+      }
+    ]
+  },
   karir: {},
   hubungikami: {
     header: {

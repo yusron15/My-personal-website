@@ -182,7 +182,7 @@ class Content extends React.Component {
                             style={{
                               fontSize: "1.2rem",
                               paddingLeft: "10px",
-                              paddingTop: "25px",
+                              paddingTop: "15px",
                               fontWeight: "bold",
                               height: "80px",
 
@@ -500,7 +500,10 @@ class Content extends React.Component {
             >
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
-              <div className="title title-header">Edukasi</div>
+              <div className="title title-header">
+              Edukasi
+                {/* {this.props.pageStore.edukasi.Header} */}
+              </div>
             </div>
 
             <div
@@ -894,7 +897,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getContent: (section, lang) => dispatch(getContent(section, lang))
+  getContent: (page, lang) => dispatch(getContent(page, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);
+
+// export default Content;

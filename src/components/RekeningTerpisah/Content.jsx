@@ -94,7 +94,7 @@ class Content extends React.Component {
                         <br />
 
                         {ReactHtmlParser(
-                          this.props.pageStore.rekeningterpisah.subContent[0]
+                          this.props.pageStore.rekeningterpisah.subContent
                         )}
                       </p>
                     </Col>
@@ -112,7 +112,7 @@ class Content extends React.Component {
                           >
                             {ReactHtmlParser(
                               this.props.pageStore.rekeningterpisah
-                                .subContent[1]
+                                .subContent
                             )}
                           </p>
                         </Col>
@@ -130,7 +130,7 @@ class Content extends React.Component {
                           >
                             {ReactHtmlParser(
                               this.props.pageStore.rekeningterpisah
-                                .subContent[2]
+                                .subContent
                             )}
                           </p>
                         </Col>
