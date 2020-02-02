@@ -141,6 +141,10 @@ body {
   color: black;
 }
 
+.font-black > .card-body {
+  padding: 0;
+}
+
 .font-black-html {
   color: black !important;
 }
@@ -794,4 +798,12 @@ span > .arrow-down {
 .card-pricing > .card-body {
   display: flex;
   flex-direction: column;
+}
+
+#features > div.features-3 > div > div > div > div > div > div > p > p {
+  color: black;
+}
+
+#teams > div.team-2 > div > div > div > div > div > div > div > p > p {
+  color: black;
 }

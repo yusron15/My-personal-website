@@ -51,6 +51,11 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 
 import "../../assets/css/main.css";
+import moment from "moment";
+
+const PLAYLIST_ID = "PLzeWDGNIcxbFRu8k6ee7nIngLotBGKgx1";
+const MAX_RESULT = 20;
+const API_KEY = "AIzaSyD_yfX0r6bhW5G3Kq2w9LGWym7TEf1M5q0";
 
 class Content extends React.Component {
   constructor(props) {
@@ -58,12 +63,30 @@ class Content extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      activeTab: "1"
+      activeTab: "1",
+      loading: true,
+      pageToken: "",
+      videos: []
     };
   }
 
   async componentDidMount() {
-    await this.props.getContent("edukasi", "id");
+    let url = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${PLAYLIST_ID}&part=snippet%2CcontentDetails&key=${API_KEY}`;
+
+    try {
+      await this.props.getContent("edukasi", "id");
+
+      await this.setState({ loading: true });
+      const response = await fetch(url);
+      const json = await response.json();
+      let dataVideos = [...this.state.videos, ...json["items"]];
+      this.setState({
+        pageToken: json.nextPageToken,
+        videos: dataVideos
+      });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   toggle = tab => {
@@ -78,6 +101,8 @@ class Content extends React.Component {
   // };
 
   renderContent = () => {
+    let youtubeUrl = "https://www.youtube.com/watch?v=";
+    console.log(this.state.videos[0]);
     if (isMobile) {
       return (
         <>
@@ -510,13 +535,24 @@ class Content extends React.Component {
                 padding: "0 2% 2% 2%"
               }}
             >
-              <ReactPlayer
-                url={videos}
-                controls={true}
-                height="300"
-                width="100%"
-                style={{ margin: "20px 0 20px 0" }}
-              />
+              <Row>
+                <Col md={12}>
+                  <ReactPlayer
+                    url={
+                      this.state.videos.length > 0
+                        ? `${youtubeUrl}${this.state.videos[0].contentDetails.videoId}`
+                        : ""
+                    }
+                    width="100"
+                    controls={true}
+                    style={{
+                      margin: "20px 0 20px 0"
+                      // height: "100%",
+                      // width: "100%"
+                    }}
+                  />
+                </Col>
+              </Row>
               <Row>
                 <Col md="4">
                   <Nav tabs vertical pills>
@@ -633,74 +669,42 @@ class Content extends React.Component {
                   <TabContent activeTab={this.state.activeTab}>
                     <TabPane tabId="1">
                       <Row>
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
-
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
-
-                        <Col md="4">
-                          <Card style={{ backgroundColor: "white" }}>
-                            <ReactPlayer
-                              url={videos}
-                              controls={true}
-                              height="200"
-                              width="250"
-                            />
-                            <CardBody>
-                              <CardTitle
-                                style={{ color: "black", fontWeight: "bold" }}
-                              >
-                                Course 1: Pengenalan Trading
-                              </CardTitle>
-                              <CardText>
-                                <small className="text-muted">
-                                  Last updated 3 mins ago
-                                </small>
-                              </CardText>
-                            </CardBody>
-                          </Card>
-                        </Col>
+                        {this.state.videos.length > 0 &&
+                          this.state.videos
+                            .filter((item, index) => index !== 0)
+                            .map((item, index) => {
+                              console.log();
+                              return (
+                                <Col md="4" key={item.contentDetails.videoId}>
+                                  <Card style={{ backgroundColor: "white" }}>
+                                    <ReactPlayer
+                                      key={item.contentDetails.videoId}
+                                      url={`${youtubeUrl}${item.contentDetails.videoId}`}
+                                      controls={true}
+                                      height="200"
+                                      width="250"
+                                    />
+                                    <CardBody>
+                                      <CardTitle
+                                        style={{
+                                          color: "black",
+                                          fontWeight: "bold"
+                                        }}
+                                      >
+                                        {item.snippet.title}
+                                      </CardTitle>
+                                      <CardText>
+                                        <small className="text-muted">
+                                          {moment(
+                                            item.snippet.publishedAt
+                                          ).format("DD MM YYYY HH:mm") + " WIB"}
+                                        </small>
+                                      </CardText>
+                                    </CardBody>
+                                  </Card>
+                                </Col>
+                              );
+                            })}
                       </Row>
                     </TabPane>
                     <TabPane tabId="2">
