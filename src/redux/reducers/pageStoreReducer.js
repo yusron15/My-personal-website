@@ -612,6 +612,37 @@ const defaultState = {
     m6: { title: "Karir" },
     m7: { title: "Hubungi Kami" }
   },
+  Footer: [
+    {
+      title: "PT. Topgrowth Futures",
+      content: [
+        "Didirikan sejak tahun 2003, saat ini telah berkembang menjadi perusahaan pialang berjangka terbaik dan terbesar di Indonesia yang menyediakan sarana serta layanan untuk transaksi produk forex, index, dan komoditi dengan spread yang kompetitif."
+      ]
+    },
+    {
+      title: "Tentang Kami",
+      content: [
+        "Tentang Topgrowth Futures",
+        "Legalitas",
+        "Rekening Terpisah",
+        "Cabang Kami"
+      ]
+    },
+    {
+      title: "Layanan",
+      content: ["Berita"]
+    },
+    {
+      title: "Hubungi Kami",
+      content: [
+        "Sahid Sudirman Center, Lantai 40, Unit F G",
+        "Jl.Jend Sudirman Kav. 86",
+        "Jakarta 10220, Indonesia",
+        "Email: customerservices@topgrowthfutures.com",
+        "Tel: (+62)21 2788-9393"
+      ]
+    }
+  ],
   currentLang: "ID",
   activePage: "landing"
 };

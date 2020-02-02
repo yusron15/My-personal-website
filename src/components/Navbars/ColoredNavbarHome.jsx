@@ -60,11 +60,11 @@ class ColorNavbar extends React.Component {
     };
   }
 
-  async componentDidUpdate(prevProps, prevState) {
-    if (this.props.currentLang !== prevProps.currentLang) {
-      await this.props.getContent("Header", this.props.currentLang, true);
-    }
-  }
+  // async componentDidUpdate(prevProps, prevState) {
+  //   if (this.props.currentLang !== prevProps.currentLang) {
+  //     await this.props.getContent("Header", this.props.currentLang, true);
+  //   }
+  // }
 
   onClick() {
     this.setState({ childVisible: !this.state.childVisible });
