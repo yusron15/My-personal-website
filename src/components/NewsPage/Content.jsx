@@ -52,7 +52,9 @@ import { isMobile } from "react-device-detect";
 import HorizontalScroll from "react-scroll-horizontal";
 
 import { connect } from "react-redux";
-import { getContent } from "../../redux/ducks/actions.js";
+import moment from "moment";
+
+import ReactHtmlParser from "react-html-parser";
 
 const textTitle = {
   fontWeight: "bold",
@@ -289,17 +291,12 @@ const cardMarketNews = [
 ];
 
 class Carding extends React.Component {
-  state = {
-    activeIndex: 0
-  };
-
-  async componentDidMount() {
-    await this.props.getContent("Berita", "id");
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeIndex: 0
+    };
   }
-
-  onExiting = () => {
-    this.animating = true;
-  };
 
   onExited = () => {
     this.animating = false;
@@ -329,6 +326,122 @@ class Carding extends React.Component {
   };
 
   renderContent = () => {
+    let itemsBeritaTerkini = [];
+    let itemsBeritaTerpopuler = [];
+    let itemsBeritaMarketOutlook = [];
+
+    if (this.props.allNews.length > 0) {
+      itemsBeritaTerkini = this.props.allNews.slice(0, 3).map((item, index) => {
+        return {
+          content: (
+            <div
+              style={{
+                display: "flex",
+                flex: 1,
+                position: "relative",
+                height: "100%",
+                width: "100%"
+              }}
+            >
+              <img
+                src={item.featured_image_src}
+                style={{ position: "absolute", height: "100%", width: "100%" }}
+              />
+              <div
+                style={{
+                  display: "flex",
+                  alignSelf: "flex-end",
+                  flexDirection: "column",
+                  padding: 20,
+                  zIndex: 999,
+                  marginBottom: 30
+                }}
+              >
+                <div style={textTitle}>
+                  <b>{item.title.rendered}</b>
+                </div>
+                <div className="description" style={textDesc}>
+                  {ReactHtmlParser(item.excerpt.rendered.slice(0, 120))}
+                </div>
+              </div>
+              <div
+                style={{
+                  backgroundImage:
+                    "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
+                  position: "absolute",
+                  height: "100%",
+                  width: "100%"
+                }}
+              ></div>
+            </div>
+            // <div
+            //   key={index.toString()}
+            //   className="team-1"
+            //   style={{
+            //     backgroundImage: "url(" + item.featured_image_src + ") ",
+            //     backgroundSize: "cover",
+            //     height: "70vh",
+            //     borderRadius: "10px"
+            //   }}
+            // >
+            //   <Container style={{ position: "relative" }}>
+            //     <Row>
+            //       <Col md="12">
+            // <div style={textTitle}>
+            //   <b>{item.title.rendered}</b>
+            // </div>
+            //       </Col>
+            //       <Col md="12">
+            // <div className="description" style={textDesc}>
+            //   {item.content.rendered}
+            // </div>
+            //       </Col>
+            //     </Row>
+            //     <div
+            //       style={{
+            //         position: "absolute",
+            //         height: 500,
+            //         widht: 500,
+            //         zIndex: 999,
+            //         backgroundColor: "red"
+            //       }}
+            //     ></div>
+            //   </Container>
+            // </div>
+          ),
+          altText: "",
+          caption: "",
+          src: "2"
+        };
+      });
+
+      itemsBeritaTerpopuler = this.props.allNews
+        .filter((item, index) => {
+          return index == 8 || index == 4;
+        })
+        .map((item, index) => {
+          return (
+            <div>
+              <CardImg
+                top
+                width="100%"
+                height="50%"
+                src={item.featured_image_src}
+                alt="Card image cap"
+              />
+
+              <div className="font-black">
+                <CardTitle>{item.title.rendered}</CardTitle>
+              </div>
+            </div>
+          );
+        });
+
+      itemsBeritaMarketOutlook = this.props.allNews.filter(item => {
+        return item.categories.includes(138);
+      });
+    }
+
     if (isMobile) {
       return (
         <>
@@ -369,12 +482,12 @@ class Carding extends React.Component {
                           }}
                         >
                           <CarouselIndicators
-                            items={items}
+                            items={itemsBeritaTerkini}
                             activeIndex={this.state.activeIndex}
                             onClickHandler={this.goToIndex}
                           />
 
-                          {items.map((item, key) => {
+                          {itemsBeritaTerkini.map((item, key) => {
                             return (
                               <CarouselItem
                                 onExiting={this.onExiting}
@@ -408,39 +521,7 @@ class Carding extends React.Component {
                         >
                           {this.props.pageStore.berita.terpopuler}
                         </div>
-                        <Col>
-                          <div>
-                            <CardImg
-                              top
-                              width="100%"
-                              height="50%"
-                              src={tractor}
-                              alt="Card image cap"
-                            />
-                            <div className="font-black">
-                              <CardTitle>
-                                Belum Terpengaruh Iran-AS, Pasar SUN Masih
-                                Menguat
-                              </CardTitle>
-                            </div>
-                          </div>
-
-                          <div>
-                            <CardImg
-                              top
-                              width="100%"
-                              height="50%"
-                              src={futuristic}
-                              alt="Card image cap"
-                            />
-                            <div className="font-black">
-                              <CardTitle>
-                                Belum Terpengaruh Iran-AS, Pasar SUN Masih
-                                Menguat
-                              </CardTitle>
-                            </div>
-                          </div>
-                        </Col>
+                        <Col>{itemsBeritaTerpopuler}</Col>
                       </Col>
                     </Row>
                     <Col>
@@ -639,33 +720,17 @@ class Carding extends React.Component {
                     </div>
                   </Row>
                   <Row>
-                    <Col>
-                      <CardNews
-                        title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                        image={pc}
-                        person="person"
-                        date="dd/mm/yyyy"
-                      />
-                    </Col>
-                    <Col>
-                      <CardNews
-                        title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                        image={pc2}
-                        person="person"
-                        date="dd/mm/yyyy"
-                      />
-                    </Col>
-                    <Col>
-                      <CardNews
-                        title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                        image={pc3}
-                        person="person"
-                        date="dd/mm/yyyy"
-                      />
-                    </Col>
+                    {this.props.news.market.map((item, index) => (
+                      <Col key={index.toString()}>
+                        <CardNews
+                          title={item.title.rendered}
+                          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+                          image={item.featured_image_src}
+                          person="person"
+                          date="dd/mm/yyyy"
+                        />
+                      </Col>
+                    ))}
                   </Row>
                 </div>
               </Container>
@@ -845,16 +910,11 @@ class Carding extends React.Component {
                         //   className="carousel-team"
                         style={{
                           borderRadius: "20px",
-                          backgroundColor: "transparent"
+                          backgroundColor: "transparent",
+                          height: "100%"
                         }}
                       >
-                        <CarouselIndicators
-                          items={items}
-                          activeIndex={this.state.activeIndex}
-                          onClickHandler={this.goToIndex}
-                        />
-
-                        {items.map((item, key) => {
+                        {itemsBeritaTerkini.map((item, key) => {
                           return (
                             <CarouselItem
                               onExiting={this.onExiting}
@@ -865,15 +925,11 @@ class Carding extends React.Component {
                             </CarouselItem>
                           );
                         })}
-
-                        <Col
-                          sm="12"
-                          style={{
-                            position: "absolute",
-                            paddingLeft: "80%",
-                            bottom: "8%"
-                          }}
-                        ></Col>
+                        <CarouselIndicators
+                          items={itemsBeritaTerkini}
+                          activeIndex={this.state.activeIndex}
+                          onClickHandler={this.goToIndex}
+                        />
                       </Carousel>
                     </Col>
 
@@ -888,37 +944,7 @@ class Carding extends React.Component {
                       >
                         {this.props.pageStore.berita.terpopuler}
                       </div>
-                      <Col>
-                        <div>
-                          <CardImg
-                            top
-                            width="100%"
-                            height="50%"
-                            src={tractor}
-                            alt="Card image cap"
-                          />
-                          <div className="font-black">
-                            <CardTitle>
-                              Belum Terpengaruh Iran-AS, Pasar SUN Masih Menguat
-                            </CardTitle>
-                          </div>
-                        </div>
-
-                        <div>
-                          <CardImg
-                            top
-                            width="100%"
-                            height="50%"
-                            src={futuristic}
-                            alt="Card image cap"
-                          />
-                          <div className="font-black">
-                            <CardTitle>
-                              Belum Terpengaruh Iran-AS, Pasar SUN Masih Menguat
-                            </CardTitle>
-                          </div>
-                        </div>
-                      </Col>
+                      <Col>{itemsBeritaTerpopuler}</Col>
                     </Col>
                   </Row>
                   <Row>
@@ -1123,69 +1149,21 @@ class Carding extends React.Component {
                   </Col>
                 </Row>
                 <Row>
-                  {/* <Carousel
-                    activeIndex={this.state.activeIndex}
-                    next={this.next}
-                    previous={this.previous}
-                    //   className="carousel-team"
-                    style={{
-                      borderRadius: "20px",
-                      backgroundColor: "transparent"
-                    }}
-                  >
-                    <CarouselIndicators
-                      items={items}
-                      activeIndex={this.state.activeIndex}
-                    />
-                    {cardMarketNews.map((item, key) => {
-                      return (
-                        <CarouselItem
-                          onExiting={this.onExiting}
-                          onExited={this.onExited}
-                          key={key}
-                        >
-                          {item.content}
-                        </CarouselItem>
-                      );
-                    })}
-
-                    <Col
-                      sm="12"
-                      style={{
-                        position: "absolute",
-                        paddingLeft: "80%",
-                        bottom: "8%"
-                      }}
-                    ></Col>
-                  </Carousel> */}
-
-                  <Col>
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-                  </Col>
-                  <Col>
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc2}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-                  </Col>
-                  <Col>
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc3}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-                  </Col>
+                  {this.props.news.market.slice(0, 3).map((item, index) => (
+                    <Col key={index.toString()}>
+                      <CardNews
+                        title={item.title.rendered}
+                        description={ReactHtmlParser(
+                          item.excerpt.rendered.slice(0, 120)
+                        )}
+                        image={item.featured_image_src}
+                        person="person"
+                        date={`${moment(item.date).format(
+                          "DD/MM/YY HH:mm"
+                        )} WIB`}
+                      />
+                    </Col>
+                  ))}
                 </Row>
               </div>
             </Container>
@@ -1202,7 +1180,7 @@ class Carding extends React.Component {
               >
                 <Row>
                   <Col md="1" />
-                  <Col className="ml-auto mr-auto text-center" md="8">
+                  <Col className="ml-auto mr-auto text-center" md="10">
                     <h2 className="title font-black">
                       {this.props.pageStore.berita.forex}
                     </h2>
@@ -1219,33 +1197,21 @@ class Carding extends React.Component {
                   </Col>
                 </Row>
                 <Row>
-                  <Col>
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-                  </Col>
-                  <Col>
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc2}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-                  </Col>
-                  <Col>
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc3}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-                  </Col>
+                  {this.props.news.forex.slice(0, 3).map((item, index) => (
+                    <Col key={index.toString()}>
+                      <CardNews
+                        title={item.title.rendered}
+                        description={ReactHtmlParser(
+                          item.excerpt.rendered.slice(0, 120)
+                        )}
+                        image={item.featured_image_src}
+                        person="person"
+                        date={`${moment(item.date).format(
+                          "DD/MM/YY HH:mm"
+                        )} WIB`}
+                      />
+                    </Col>
+                  ))}
                 </Row>
               </div>
             </Container>
@@ -1279,47 +1245,26 @@ class Carding extends React.Component {
                   </Col>
                 </Row>
                 <Row>
-                  <Col>
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-                  </Col>
-                  <Col>
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc2}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-                  </Col>
-                  <Col>
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc3}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-                  </Col>
+                  {this.props.news.stock.slice(0, 3).map((item, index) => (
+                    <Col key={index.toString()}>
+                      <CardNews
+                        title={item.title.rendered}
+                        description={ReactHtmlParser(
+                          item.excerpt.rendered.slice(0, 120)
+                        )}
+                        image={item.featured_image_src}
+                        person="person"
+                        date={`${moment(item.date).format(
+                          "DD/MM/YY HH:mm"
+                        )} WIB`}
+                      />
+                    </Col>
+                  ))}
                 </Row>
               </div>
             </Container>
-            {/* <div
-              className="center"
-              style={{ position: "absolute", left: "50%", right: "50%" }}
-            >
-              <Button color="info" style={{ minWidth: "300px" }}>
-                Indeks Berita
-              </Button>
-            </div> */}
           </div>
           <NewsLetter />
-          {/* ********* END TEAM 2 ********* */}
         </div>{" "}
       </>
     );
@@ -1331,11 +1276,9 @@ class Carding extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  allNews: state.newsStore.allNews,
+  news: state.newsStore.news
 });
 
-const mapDispatchToProps = dispatch => ({
-  getContent: (section, lang) => dispatch(getContent(section, lang))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Carding);
+export default connect(mapStateToProps, null)(Carding);
