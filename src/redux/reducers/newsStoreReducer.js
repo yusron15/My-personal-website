@@ -3,7 +3,8 @@ const defaultState = {
     stock: [],
     forex: [],
     market: []
-  }
+  },
+  allNews: []
 };
 
 export default (state = defaultState, action = {}) => {
@@ -33,6 +34,13 @@ export default (state = defaultState, action = {}) => {
           ...state.news,
           forex: action.payload
         }
+      };
+    }
+
+    case "GET_ALL_NEWS": {
+      return {
+        ...state,
+        allNews: action.payload
       };
     }
 

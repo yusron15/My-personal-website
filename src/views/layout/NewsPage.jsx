@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import bg from "../../assets/img/header-newspage.png";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
@@ -16,6 +18,13 @@ import ForexCommodity from "../../components/NewsContent/ForexCommodity";
 import Footer from "../../components/Footers/Footer.jsx";
 import HeaderNewsPage from "../../components/NewsPage/HeaderNewspage";
 
+import {
+  fetchPage,
+  getContent,
+  getAllNews,
+  getNews
+} from "../../redux/ducks/actions.js";
+
 class NewsPage extends React.Component {
   state = {
     activeTab: "1"
@@ -29,190 +38,23 @@ class NewsPage extends React.Component {
     }
   };
 
-  componentDidMount = () => {
+  componentDidMount = async () => {
+    await this.props.getContent("Berita", this.props.currentLang, true);
+
+    await this.props.getAllNews();
+    await this.props.getNews("forex");
+    await this.props.getNews("market");
+    await this.props.getNews("stock");
+
     window.scroll(0, 0);
   };
   render() {
     return (
-      // <>
-      //   <ColoredNavbar />
-      //   <Content />
-      //   <Footer />
-      // </>
       <>
         <div style={{ backgroundColor: "#1D1E1F" }}>
           <HeaderNewsPage location={{ ...this.props.location }} />
 
-          {/* <ColoredNavbar location={{ ...this.props.location }} /> */}
-
-          {/* <Nav
-            className="nav-pills-info nav-pills-icons nav-pills-lg"
-            pills
-            role="tablist"
-            style={{
-              backgroundColor: "#1D1E1F",
-              paddingTop: "10px",
-              justifyContent: "center",
-              paddingBottom: "20px"
-            }}
-          >
-            <NavItem clssName="black-newsletter">
-              <div
-                style={{
-                  backgroundColor: "#1D1E1F",
-                  margin: "0 15px 0 15px",
-                  cursor: "pointer",
-                  color: "#FFFFFF",
-                  ...(this.state.activeTab === "1"
-                    ? { color: "#FFFFFF" }
-                    : { color: "#585858" })
-                }}
-                className={this.state.activeTab === "1" ? "active" : ""}
-                onClick={() => {
-                  this.toggle("1");
-                }}
-              >
-                News Highlight
-              </div>
-            </NavItem>
-            <NavItem clssName="black-newsletter">
-              <div
-                style={{
-                  backgroundColor: "#1D1E1F",
-                  margin: "0 15px 0 15px",
-                  cursor: "pointer",
-                  color: "#FFFFFF",
-                  ...(this.state.activeTab === "2"
-                    ? { color: "#FFFFFF" }
-                    : { color: "#585858" })
-                }}
-                className={this.state.activeTab === "2" ? "active" : ""}
-                onClick={() => {
-                  this.toggle("2");
-                }}
-              >
-                Stock Index
-              </div>
-            </NavItem>
-            <NavItem clssName="black-newsletter">
-              <div
-                style={{
-                  backgroundColor: "#1D1E1F",
-                  margin: "0 15px 0 15px",
-                  cursor: "pointer",
-                  color: "#FFFFFF",
-                  ...(this.state.activeTab === "3"
-                    ? { color: "#FFFFFF" }
-                    : { color: "#585858" })
-                }}
-                className={this.state.activeTab === "3" ? "active" : ""}
-                onClick={() => {
-                  this.toggle("3");
-                }}
-              >
-                Forex Commodity
-              </div>
-            </NavItem>
-
-            <NavItem clssName="black-newsletter">
-              <div
-                style={{
-                  backgroundColor: "#1D1E1F",
-                  margin: "0 15px 0 15px",
-                  cursor: "pointer",
-                  color: "#FFFFFF",
-                  ...(this.state.activeTab === "4"
-                    ? { color: "#FFFFFF" }
-                    : { color: "#585858" })
-                }}
-                color={this.state.activeTab === "4" ? "#FFFFFF" : "#585858"}
-                className={this.state.activeTab === "4" ? "active" : ""}
-                onClick={() => {
-                  this.toggle("4");
-                }}
-              >
-                Economic Calendar
-              </div>
-            </NavItem>
-            <NavItem clssName="black-newsletter">
-              <div
-                style={{
-                  backgroundColor: "#1D1E1F",
-                  margin: "0 15px 0 15px",
-                  cursor: "pointer",
-                  color: "#FFFFFF",
-                  ...(this.state.activeTab === "5"
-                    ? { color: "#FFFFFF" }
-                    : { color: "#585858" })
-                }}
-                color={this.state.activeTab === "5" ? "#FFFFFF" : "#585858"}
-                className={this.state.activeTab === "5" ? "active" : ""}
-                onClick={() => {
-                  this.toggle("5");
-                }}
-              >
-                Market Outlook
-              </div>
-            </NavItem>
-            <NavItem clssName="black-newsletter">
-              <div className={this.state.activeTab === "7" ? "active" : ""}>
-                <Link
-                  style={{
-                    backgroundColor: "#1D1E1F",
-                    margin: "0 15px 0 15px",
-                    cursor: "pointer",
-                    color: "#FFFFFF",
-                    ...(this.state.activeTab === "7"
-                      ? { color: "#FFFFFF" }
-                      : { color: "#585858" })
-                  }}
-                  color={this.state.activeTab === "7" ? "#FFFFFF" : "#585858"}
-                  to="/edukasi"
-                >
-                  Video
-                </Link>
-              </div>
-            </NavItem>
-          </Nav> */}
-
-          {/* <NewsTicker /> */}
-          {/* <BreakingNews /> */}
           <Content />
-
-          {/* <TabContent activeTab={"project" + this.state.activeTab}>
-            <TabPane tabId="project1">
-              <Content />
-            </TabPane>
-            <TabPane tabId="project2">
-              <Route exact path="/newspage" component={StockIndex}></Route>
-              <Route path="/newspage/:title" component={NewsStockIndex}></Route>
-            </TabPane>
-            <TabPane tabId="project3">
-              <Route exact path="/newspage" component={ForexCommodity}></Route>
-              <Route
-                path="/newspage/:title"
-                component={NewsForexCommodity}
-              ></Route>
-            </TabPane>
-            <TabPane tabId="project4">
-              <Route
-                exact
-                path="/newspage"
-                component={EconomicCalendar}
-              ></Route>
-              <Route
-                path="/newspage/:time"
-                component={EconomicCalendarInside}
-              ></Route>
-            </TabPane>
-            <TabPane tabId="project5">
-              <Route exact path="/newspage" component={MarketOutlook}></Route>
-              <Route
-                path="/newspage/:title"
-                component={NewsMarketOutlook}
-              ></Route>
-            </TabPane>
-          </TabContent> */}
 
           <Footer />
         </div>
@@ -221,4 +63,17 @@ class NewsPage extends React.Component {
   }
 }
 
-export default NewsPage;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
+});
+
+const mapDispatchToProps = dispatch => ({
+  // fetchPage: (section, lang) => dispatch(fetchPage(section, lang)),
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle)),
+  getAllNews: () => dispatch(getAllNews()),
+  getNews: type => dispatch(getNews(type))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewsPage);

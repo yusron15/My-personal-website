@@ -39,7 +39,7 @@ class CardNews extends React.Component {
                 }}
               >
                 <h4 style={{ color: "black" }}>{title}</h4>
-                <p style={{ color: "black" }}>{description}</p>
+                <p style={{ color: "black" }}>{`${description} ...`}</p>
                 <Container>
                   <Row>
                     <Col>
@@ -80,63 +80,74 @@ class CardNews extends React.Component {
     }
     return (
       <>
-        <div>
+        <div
+          style={{ display: "flex", height: "100%", flexDirection: "column" }}
+        >
           <CardImg
             top
             width="100%"
-            height="50%"
+            style={{ height: 180 }}
             src={image}
             alt="Card image cap"
           />
-          <div className=" font-black">
+          <div className="font-black" style={{ height: "100%" }}>
             <CardBody
-              // className="broken-white"
               style={{
-                textAlign: "left"
-                // backgroundColor: "#D4D4D4"
+                display: "flex",
+                flexDirection: "column",
+                height: "100%"
               }}
             >
-              <h4 style={{ color: "black" }}>{title}</h4>
-              <p style={{ color: "black" }}>{description}</p>
-              <Container>
-                <Row>
-                  <Col md="6">
-                    <Row>
-                      <img
-                        src={user}
-                        style={{ height: "20px", width: "auto" }}
-                      />
-                      <p
-                        className="vertical-center font-black"
-                        style={{ color: "black", paddingLeft: "30px" }}
-                      >
-                        {person}
-                      </p>
-                    </Row>
-                  </Col>
-                  <Col md="6">
-                    <Row>
-                      <img
-                        src={calendar}
-                        style={{ height: "20px", width: "auto" }}
-                      />
-                      <p
-                        className="vertical-center font-black"
-                        style={{ color: "black", paddingLeft: "30px" }}
-                      >
-                        {date}
-                      </p>
-                    </Row>
-                  </Col>
-                </Row>
-              </Container>
+              <h4 style={{ color: "black", flexGrow: 1, display: "flex" }}>
+                {title}
+              </h4>
+              <p style={{ color: "black", flexGrow: 1, display: "flex" }}>
+                {description}
+              </p>
+              <div style={{ display: "flex", marginTop: 15 }}>
+                {/* <div
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "row"
+                  }}
+                >
+                  <img src={user} style={{ height: "20px", width: "auto" }} />
+                  <p
+                    className="font-black"
+                    style={{ color: "black", paddingLeft: "10px" }}
+                  >
+                    {person}
+                  </p>
+                </div> */}
+                <div
+                  style={{
+                    flex: 1,
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "row",
+                    justifyContent: "flex-end"
+                  }}
+                >
+                  <img
+                    src={calendar}
+                    style={{ height: "20px", width: "auto" }}
+                  />
+                  <p
+                    className="font-black"
+                    style={{ color: "black", paddingLeft: "10px" }}
+                  >
+                    {date}
+                  </p>
+                </div>
+              </div>
             </CardBody>
           </div>
         </div>
       </>
     );
   };
-
   render() {
     return this.renderContent();
   }

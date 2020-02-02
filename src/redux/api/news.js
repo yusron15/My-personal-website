@@ -1,7 +1,7 @@
 import fetchJson from "../../utils/fetchJson";
-
-let url = "http://rest.learncode.academy/api/ucon/news/";
+import { func } from "prop-types";
 export async function GetNews(type) {
+  let url = "";
   if (type === "forex") {
     url = "http://news.topgrowthfutures.co.id/wp-json/wp/v2/posts?categories=8";
   } else if (type === "stock") {
@@ -10,6 +10,18 @@ export async function GetNews(type) {
     url =
       "http://news.topgrowthfutures.co.id/wp-json/wp/v2/posts?categories=138";
   }
+  try {
+    const response = await fetch(url);
+    const json = await response.json();
+    return json;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function GetAllNews() {
+  let url = "http://news.topgrowthfutures.co.id/wp-json/wp/v2/posts";
+
   try {
     const response = await fetch(url);
     const json = await response.json();
