@@ -78,8 +78,12 @@
         }
       ]
     },
-    "News": {},
-    "NewsInverted": {},
+    "News": {
+      "title": "Berita Ekonomi"
+    },
+    "NewsInverted": {
+      "title": "Analisa Harian"
+    },
     "Benefit": {
       "title": "Kenapa bertransaksi di Topgrowth Futures",
       "content": [

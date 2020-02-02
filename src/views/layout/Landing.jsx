@@ -20,7 +20,7 @@ import "../../assets/css/main.css";
 import VizSensor from "react-visibility-sensor";
 import { connect } from "react-redux";
 
-import { fetchPage, getContent } from "../../redux/ducks/actions.js";
+import { fetchPage, getContent, getNews } from "../../redux/ducks/actions.js";
 
 class Landing extends React.Component {
   constructor() {
@@ -33,6 +33,8 @@ class Landing extends React.Component {
   async componentDidMount() {
     // await this.props.fetchPage("landing", "id");
     await this.props.getContent("landing", this.props.currentLang, true);
+    await this.props.getNews("market");
+    await this.props.getNews("stock");
     // window.scroll(0, 0);
   }
 
@@ -116,7 +118,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   // fetchPage: (section, lang) => dispatch(fetchPage(section, lang)),
   getContent: (section, lang, toggle) =>
-    dispatch(getContent(section, lang, toggle))
+    dispatch(getContent(section, lang, toggle)),
+  getNews: type => dispatch(getNews(type))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Landing);

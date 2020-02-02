@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 // ReactJS plugin for a nice carousel
 import Slick from "react-slick";
 import { useSpring, animated } from "react-spring";
@@ -157,14 +158,20 @@ class NewsInverted extends React.Component {
   onExited = carousel => {
     this["carousel" + carousel + "Animating"] = false;
   };
-  next = (carousel, items, tab) => {
-    console.log(this.state["carousel" + carousel + "Index"]);
+
+  next = async (carousel, items, tab) => {
     if (this["carousel" + carousel + "Animating"]) return;
+
+    console.log(
+      this.state["carousel" + carousel + "Index"],
+      items.length,
+      'this.state["carousel" + carousel + "Index"]'
+    );
     const nextIndex =
       this.state["carousel" + carousel + "Index"] === items.length - 1
         ? 0
         : this.state["carousel" + carousel + "Index"] + 1;
-    this.setState({
+    await this.setState({
       ["carousel" + carousel + "Index"]: nextIndex,
       activeTab: nextIndex
     });
@@ -243,15 +250,15 @@ class NewsInverted extends React.Component {
                 <Col md="12">
                   <Carousel
                     activeIndex={this.state.carousel2Index}
-                    next={() => this.next(2, items2)}
-                    previous={() => this.previous(2, items2)}
+                    next={() => this.next(2, this.props.news.market)}
+                    previous={() => this.previous(2, this.props.news.market)}
                   >
                     <CarouselIndicators
-                      items={items2}
+                      items={this.props.news.market}
                       activeIndex={this.state.carousel2Index}
                       onClickHandler={newIndex => this.goToIndex(newIndex, 2)}
                     />
-                    {items2.map((item, key) => {
+                    {this.props.news.market.map((item, key) => {
                       return (
                         <CarouselItem
                           onExiting={() => this.onExiting(2)}
@@ -259,7 +266,24 @@ class NewsInverted extends React.Component {
                           key={key}
                           className="justify-content-center"
                         >
-                          {item.content}
+                          <div
+                            className="info info-warning broken-white"
+                            style={{
+                              backgroundImage:
+                                "url(" + item.featured_image_src + ")",
+                              backgroundColor: "rgba(0, 0, 0, 0.25)",
+                              backgroundSize: "cover",
+                              height: 200,
+                              display: "flex",
+                              flexDirection: "column",
+                              justifyContent: "flex-end",
+                              alignItems: "flex-end"
+                            }}
+                          >
+                            <h4 className="title" style={{ color: "black" }}>
+                              {item.title.rendered}
+                            </h4>
+                          </div>
                         </CarouselItem>
                       );
                     })}
@@ -311,41 +335,20 @@ class NewsInverted extends React.Component {
               <Row>
                 <Col md="12" className="positioned-right">
                   <Slick {...slickSettings}>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 0 ? "scaled" : ""}
-                        style={{
-                          ...styleCard
-                        }}
-                      ></NavLink>
-                    </div>
-
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 1 ? "scaled" : ""}
-                        style={{
-                          ...styleCard
-                        }}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 2 ? "scaled" : ""}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 3 ? "scaled" : ""}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 4 ? "scaled" : ""}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
+                    {this.props.news.market.map(item => (
+                      <div>
+                        <NavLink
+                          // className={this.state.activeSlide === 0 ? "scaled" : ""}
+                          style={{
+                            backgroundImage:
+                              "url(" + item.featured_image_src + ")",
+                            height: "30vh",
+                            backgroundSize: "cover"
+                            // borderRadius: 12
+                          }}
+                        ></NavLink>
+                      </div>
+                    ))}
                   </Slick>
                 </Col>
                 <Col
@@ -359,43 +362,15 @@ class NewsInverted extends React.Component {
                     style={{ minHeight: "20vh" }}
                   >
                     <TabContent activeTab={"project" + this.state.activeSlide}>
-                      <TabPane tabId="project0">
-                        {/* <Col> */}
-                        <p className="description mb-5">
-                          Pasangan mata uang USDCHF terus naik setelah awal sesi
-                          Amerika kemarin dan terus memuncak pada 0,9934, level
-                          tertinggi sejak Rabu lalu.
-                        </p>
-                        {/* </Col> */}
-                      </TabPane>
-                      <TabPane tabId="project1">
-                        <Col>
+                      {this.props.news.market.map((item, index) => (
+                        <TabPane tabId={`project${index}`}>
                           <p className="description mb-5">
-                            Add your information here for News 1.
+                            {`${item.excerpt.rendered
+                              .replace(/(<([^>]+)>)/gi, "")
+                              .substring(0, 100)}...`}
                           </p>
-                        </Col>
-                      </TabPane>
-                      <TabPane tabId="project2">
-                        <Col>
-                          <p className="description mb-5">
-                            Add your information here for News 2.
-                          </p>
-                        </Col>
-                      </TabPane>
-                      <TabPane tabId="project3">
-                        <Col>
-                          <p className="description mb-5">
-                            Add your information here for News 3.
-                          </p>
-                        </Col>
-                      </TabPane>
-                      <TabPane tabId="project4">
-                        <Col>
-                          <p className="description mb-5">
-                            Add your information here for News 4.
-                          </p>
-                        </Col>
-                      </TabPane>
+                        </TabPane>
+                      ))}
                     </TabContent>
                   </p>
                   <Link to="/newspage">
@@ -415,7 +390,13 @@ class NewsInverted extends React.Component {
   }
 }
 
-export default NewsInverted;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang,
+  news: state.newsStore.news
+});
+
+export default connect(mapStateToProps, null)(NewsInverted);
 
 // const PrevButton = props => {
 //   return (

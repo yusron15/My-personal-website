@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+
 // ReactJS plugin for a nice carousel
 import Slick from "react-slick";
 import "../../assets/css/helper.css";
@@ -428,7 +430,13 @@ class News extends React.Component {
   }
 }
 
-export default News;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang,
+  news: state.newsStore.news
+});
+
+export default connect(mapStateToProps, null)(News);
 
 // const PrevButton = props => {
 //   return (
