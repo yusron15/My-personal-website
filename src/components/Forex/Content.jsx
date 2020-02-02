@@ -88,8 +88,15 @@ const text = {
 };
 
 class Features extends React.Component {
-  async componentDidMount() {
-    await this.props.getContent("Forex", "id");
+  async componentDidMount() {}
+
+  transform(node) {
+    // do not render any <span> tags
+    console.log(node);
+    if (node.name === "p") {
+      alert(node.name);
+      return null;
+    }
   }
 
   renderContent = () => {
@@ -113,7 +120,9 @@ class Features extends React.Component {
               {/* <BlurryNavbar /> */}
 
               <div className="title-header-mobile">
-                {ReactHtmlParser(this.props.pageStore.Forex.header)}
+                {ReactHtmlParser(this.props.pageStore.Forex.header, {
+                  decodeEntities: false
+                })}
               </div>
             </div>
             <div className="features-3" style={{ paddingTop: 0 }}>
@@ -145,10 +154,17 @@ class Features extends React.Component {
                           className="title-content"
                           style={{ color: "black" }}
                         >
-                          {this.props.pageStore.Forex.content[0].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.Forex.content[0].title
+                          )}
                         </div>
                         <p style={{ color: "black", textAlign: "justify" }}>
-                          {this.props.pageStore.Forex.content[0].content}
+                          {
+                            (ReactHtmlParser(
+                              this.props.pageStore.Forex.content[0].content
+                            ),
+                            { replace: this.transform })
+                          }
                         </p>
                       </div>
                     </Col>
