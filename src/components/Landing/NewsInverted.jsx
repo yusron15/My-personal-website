@@ -326,14 +326,22 @@ class NewsInverted extends React.Component {
     }
     return (
       <>
-        <div className="cd-section" id="testimonials">
+        <div
+          className="cd-section"
+          id="testimonials"
+          style={{ minHeight: "40vh" }}
+        >
           <div
             className="testimonials-4"
             style={{ backgroundColor: "#1D1E1F", padding: "20px 15vw 0 0" }}
           >
             <Container>
               <Row>
-                <Col md="12" className="positioned-right">
+                <Col
+                  md="12"
+                  className="positioned-right"
+                  style={{ minHeight: "50vh" }}
+                >
                   <Slick {...slickSettings}>
                     {this.props.news.market.map(item => (
                       <div>
