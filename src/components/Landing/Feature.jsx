@@ -10,6 +10,7 @@ import laptop from "../../assets/img/macbook.png";
 import feature from "../../assets/img/all-device.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
+import TopgrowthAnmation from "../../assets/img/topgrowthanimation.gif";
 import "../../assets/css/main.css";
 import ReactHtmlParser, {
   processNodes,
@@ -272,8 +273,8 @@ class Features extends React.Component {
         <div className="cd-section" id="projects">
           {/* ********* PROJECTS 2 ********* */}
           <div
-            className="project-raised broken-white"
-            // style={{ backgroundColor: "#D4D4D4" }}
+            className="project-raised"
+            style={{ backgroundColor: "#FCFCFC" }}
           >
             <Container fluid>
               <Row>
@@ -303,6 +304,7 @@ class Features extends React.Component {
                     size: 6,
                     offset: 2
                   }}
+                  style={{ zIndex: "9" }}
                 >
                   <Row>
                     <Col md={6} lg={6}>
@@ -561,27 +563,32 @@ class Features extends React.Component {
                 </Col>
 
                 <Col
-                  md={4}
+                  md={{
+                    size: 6,
+                    offset: 8
+                  }}
                   lg={4}
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "flex-end"
+                    justifyContent: "flex-end",
+
+                    position: "absolute"
                   }}
                 >
-                  <ScrollAnimation
+                  {/* <ScrollAnimation
                     offset={100}
                     animateIn="fadeInRight"
                     animateOut="fadeOut"
-                  >
-                    <img
-                      src={feature}
-                      style={{
-                        width: "100%",
-                        height: "auto"
-                      }}
-                    />
-                  </ScrollAnimation>
+                  > */}
+                  <img
+                    src={TopgrowthAnmation}
+                    style={{
+                      minWidth: "50vw",
+                      height: "60vh"
+                    }}
+                  />
+                  {/* </ScrollAnimation> */}
                 </Col>
               </Row>
             </Container>

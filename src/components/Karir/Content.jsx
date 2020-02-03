@@ -93,18 +93,17 @@ class Blogs extends React.Component {
                     </p>
                     <Row style={{ marginBottom: "10%" }}>
                       <Col md="6">
-                        {/* <SearchField
-                          styles={searchStyle}
+                        <SearchField
                           className="react-search-field-input"
                           placeholder="Cari "
-                        /> */}
-                        <ReactSearchBox
+                        />
+                        {/* <ReactSearchBox
                           style={{ color: "black" }}
                           placeholder="Search"
                           value="Doe"
                           data={data}
                           callback={record => console.log(record)}
-                        />
+                        /> */}
                       </Col>
 
                       <Col md="5">
@@ -176,7 +175,7 @@ class Blogs extends React.Component {
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">
                 {this.props.pageStore.karir.Header}
-                </div>
+              </div>
             </div>
             <Container>
               <Row>
@@ -185,7 +184,8 @@ class Blogs extends React.Component {
                     className="description font-black"
                     style={{ marginTop: "10%", marginBottom: "2%" }}
                   >
-                  Berikut ini lowongan kerja yang tersedia di Topgrowth Futures saat ini:
+                    Berikut ini lowongan kerja yang tersedia di Topgrowth
+                    Futures saat ini:
                     {/* {this.props.pageStore.karir.content.title} */}
                   </p>
                   <Row style={{ marginBottom: "10%" }}>
