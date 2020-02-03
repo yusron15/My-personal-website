@@ -49,25 +49,38 @@ class HeaderContent extends Component {
   }
 }
 
+class HeaderContentMobile extends Component {
+  render() {
+    return (
+      <>
+        <div
+          className=" background-header-mobile"
+          style={{
+            padding: 0
+          }}
+        >
+          <SidebarMobile />
+          <div className="title title-header-mobile">Newspage</div>
+        </div>
+      </>
+    );
+  }
+}
+
 class HeaderNewsPage extends Component {
   renderContent = () => {
     if (isMobile) {
       return (
         <>
           <div
-            className=" background-header-mobile"
             style={{
               backgroundImage: `url(${bg})`,
               padding: 0,
               backgroundSize: "cover"
             }}
           >
-            <SidebarMobile />
-
-            <div className="title title-header-mobile">Newspage</div>
-            {/* <div style={{ marginTop: "11vh" }}> */}
-            {/* <BreakingNews /> */}
-            {/* </div> */}
+            <HeaderContentMobile />
+            <BreakingNews />
           </div>
         </>
       );
@@ -82,10 +95,7 @@ class HeaderNewsPage extends Component {
           }}
         >
           <HeaderContent />
-          {/* <div style={{ marginTop: "11vh" }}> */}
           <BreakingNews />
-
-          {/* </div> */}
         </div>
       </>
     );

@@ -50,6 +50,24 @@ class HeaderContent extends React.Component {
   }
 }
 
+class HeaderContentMobile extends React.Component {
+  render() {
+    return (
+      <>
+        <div
+          className=" background-header-mobile"
+          style={{
+            padding: 0
+          }}
+        >
+          <SidebarMobile />
+          <div className="title title-header-mobile">Forex Commodity</div>
+        </div>
+      </>
+    );
+  }
+}
+
 class Blogs extends React.Component {
   state = {
     dataSelect: ""
@@ -73,14 +91,13 @@ class Blogs extends React.Component {
 
             <div>
               <div
-                className="team-1 background-header-mobile"
                 style={{
                   backgroundImage: `url(${bg})`,
                   padding: 0
                 }}
               >
-                <SidebarMobile />
-                <div className="title title-header-mobile">Forex Commodity</div>
+                <HeaderContentMobile />
+                <BreakingNews />
               </div>
 
               {/* <Container> */}

@@ -56,6 +56,7 @@ class BottomNavbar extends React.Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.changeNavbarPosition);
+    window.addEventListener("scroll", this.changeNavbarPositionMobile);
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeNavbarTop);
@@ -80,9 +81,47 @@ class BottomNavbar extends React.Component {
     }
   };
 
+  changeNavbarPositionMobile = () => {
+    if (
+      document.documentElement.scrollTop > 6000 ||
+      document.body.scrollTop > 6000
+    ) {
+      this.setState({
+        position: "fixed"
+      });
+    } else if (
+      document.documentElement.scrollTop < 300 ||
+      document.body.scrollTop < 300
+    ) {
+      this.setState({
+        position: ""
+      });
+    } else if (
+      document.documentElement.scrollTop > 6000 ||
+      (document.body.scrollTop > 6000 && this.removeButton() === true)
+    ) {
+      this.setState({
+        position: ""
+      });
+    }
+  };
+
+  removeButton = () => {
+    this.setState({
+      position: ""
+    });
+  };
+
   renderContent = () => {
     const styles = {
       containerStyle: {
+        position: this.state.position,
+        maxHeight: "350px",
+        bacckgroundSize: "cover",
+        backgroundImage:
+          "url(" + require("assets/img/ebook-background.png") + ")"
+      },
+      containerStyleMobile: {
         position: this.state.position,
         maxHeight: "350px",
         bacckgroundSize: "cover",
@@ -93,7 +132,7 @@ class BottomNavbar extends React.Component {
     if (isMobile) {
       return (
         <>
-          <div class="navbar-bottom" style={styles.containerStyle}>
+          <div class="navbar-bottom" style={styles.containerStyleMobile}>
             <div style={{ minHeight: "90px" }}>
               <div
                 style={{
@@ -123,7 +162,8 @@ class BottomNavbar extends React.Component {
                               style={{
                                 backgroundColor: "rgba(10, 10, 10, 0.49)",
                                 color: "white",
-                                border: "none"
+                                border: "none",
+                                marginBottom: "10px"
                               }}
                               placeholder="Full Name"
                               type="text"
@@ -151,7 +191,8 @@ class BottomNavbar extends React.Component {
                               style={{
                                 backgroundColor: "rgba(10, 10, 10, 0.49)",
                                 color: "white",
-                                border: "none"
+                                border: "none",
+                                marginBottom: "10px"
                               }}
                               color="white"
                               placeholder="+62"
@@ -178,7 +219,14 @@ class BottomNavbar extends React.Component {
                     </div>
                     <div>
                       <div>
-                        <Button block color="info" type="button">
+                        <Button
+                          block
+                          color="info"
+                          type="button"
+                          onClick={() => {
+                            this.removeButton();
+                          }}
+                        >
                           Download EBook
                         </Button>
                       </div>

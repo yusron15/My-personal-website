@@ -51,6 +51,24 @@ class HeaderStockIndex extends Component {
   }
 }
 
+class HeaderContentMobile extends Component {
+  render() {
+    return (
+      <>
+        <div
+          className=" background-header-mobile"
+          style={{
+            padding: 0
+          }}
+        >
+          <SidebarMobile />
+          <div className="title title-header-mobile">Stock Index</div>
+        </div>
+      </>
+    );
+  }
+}
+
 class Blogs extends Component {
   state = {
     dataSelect: ""
@@ -74,14 +92,13 @@ class Blogs extends Component {
 
             <div>
               <div
-                className="team-1 background-header-mobile"
                 style={{
                   backgroundImage: `url(${bg})`,
                   padding: 0
                 }}
               >
-                <SidebarMobile />
-                <div className="title title-header-mobile">Stock Index</div>
+                <HeaderContentMobile />
+                <BreakingNews />
               </div>
 
               {/* <Container> */}

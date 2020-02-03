@@ -354,15 +354,6 @@ class Features extends React.Component {
                 </Col>
               </Container>
               {/* </Col> */}
-              {/* <hr
-              style={{
-                color: "grey",
-                backgroundColor: "grey",
-                height: 0.5,
-                width: "100vw",
-                borderColor: "grey"
-              }}
-            /> */}
             </div>
 
             {/* ********* END FEATURES 3 ********* */}

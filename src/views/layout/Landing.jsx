@@ -98,13 +98,13 @@ class Landing extends React.Component {
 
         <NewsLetter />
         <Footer />
-        {isMobile ? null : (
+        {/* {isMobile ? null : (
           <div>
             <BottomNavbar />
             <div className="space-50" />
           </div>
-        )}
-        {/* <BottomNavbar /> */}
+        )} */}
+        <BottomNavbar />
       </>
     );
   }

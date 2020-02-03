@@ -39,6 +39,25 @@ class HeaderContent extends React.Component {
     );
   }
 }
+
+class HeaderContentMobile extends React.Component {
+  render() {
+    return (
+      <>
+        <div
+          className=" background-header-mobile"
+          style={{
+            padding: 0
+          }}
+        >
+          <SidebarMobile />
+          <div className="title title-header-mobile">Forex Commodity</div>
+        </div>
+      </>
+    );
+  }
+}
+
 class ForexCommodityInside extends React.Component {
   state = {
     activeTab: "1"
@@ -70,15 +89,13 @@ class ForexCommodityInside extends React.Component {
         <>
           <div style={{ backgroundColor: "#1D1E1F" }}>
             <div
-              className="team-1 background-header-mobile"
               style={{
                 backgroundImage: `url(${bg})`,
                 padding: 0
               }}
             >
-              <SidebarMobile />
-
-              <div className="title title-header-mobile">Forex Commodity </div>
+              <HeaderContentMobile />
+              <BreakingNews />
             </div>
             <NewsForexCommodity
               img={news1}

@@ -721,7 +721,7 @@ class Carding extends React.Component {
                   </Row>
                   <Row>
                     {this.props.news.market.map((item, index) => (
-                      <Col key={index.toString()}>
+                      <Row key={index.toString()}>
                         <CardNews
                           title={item.title.rendered}
                           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
@@ -729,7 +729,7 @@ class Carding extends React.Component {
                           person="person"
                           date="dd/mm/yyyy"
                         />
-                      </Col>
+                      </Row>
                     ))}
                   </Row>
                 </div>
@@ -746,6 +746,8 @@ class Carding extends React.Component {
                   }}
                 >
                   <Row>
+                    {/* <Col md="1"/> */}
+
                     <div
                       className="ml-auto mr-auto text-center"
                       // md={{ size: 10, order: 0, offset: 1 }}
@@ -756,7 +758,7 @@ class Carding extends React.Component {
                       </h4>
                     </div>
                     <div>
-                      <Link to="/market-outlook">
+                      <Link to="/forex-commodity">
                         <img
                           style={{
                             paddingTop: "4vh"
@@ -767,33 +769,29 @@ class Carding extends React.Component {
                     </div>
                   </Row>
                   <Row>
-                    <Col>
-                      <CardNews
-                        title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                        image={pc}
-                        person="person"
-                        date="dd/mm/yyyy"
-                      />
-                    </Col>
-                    <Col>
-                      <CardNews
-                        title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                        image={pc2}
-                        person="person"
-                        date="dd/mm/yyyy"
-                      />
-                    </Col>
-                    <Col>
-                      <CardNews
-                        title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                        image={pc3}
-                        person="person"
-                        date="dd/mm/yyyy"
-                      />
-                    </Col>
+                    <CardNews
+                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+                      image={pc}
+                      person="person"
+                      date="dd/mm/yyyy"
+                    />
+
+                    <CardNews
+                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+                      image={pc2}
+                      person="person"
+                      date="dd/mm/yyyy"
+                    />
+
+                    <CardNews
+                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+                      image={pc3}
+                      person="person"
+                      date="dd/mm/yyyy"
+                    />
                   </Row>
                 </div>
               </Container>
@@ -809,6 +807,8 @@ class Carding extends React.Component {
                   }}
                 >
                   <Row>
+                    {/* <Col md="1"/> */}
+
                     <div
                       className="ml-auto mr-auto text-center"
                       // md={{ size: 10, order: 0, offset: 1 }}
@@ -830,44 +830,32 @@ class Carding extends React.Component {
                     </div>
                   </Row>
                   <Row>
-                    <Col>
-                      <CardNews
-                        title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                        image={pc}
-                        person="person"
-                        date="dd/mm/yyyy"
-                      />
-                    </Col>
-                    <Col>
-                      <CardNews
-                        title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                        image={pc2}
-                        person="person"
-                        date="dd/mm/yyyy"
-                      />
-                    </Col>
-                    <Col>
-                      <CardNews
-                        title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                        image={pc3}
-                        person="person"
-                        date="dd/mm/yyyy"
-                      />
-                    </Col>
+                    <CardNews
+                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+                      image={pc}
+                      person="person"
+                      date="dd/mm/yyyy"
+                    />
+
+                    <CardNews
+                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+                      image={pc2}
+                      person="person"
+                      date="dd/mm/yyyy"
+                    />
+
+                    <CardNews
+                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
+                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+                      image={pc3}
+                      person="person"
+                      date="dd/mm/yyyy"
+                    />
                   </Row>
                 </div>
               </Container>
-              {/* <div
-              className="center"
-              style={{ position: "absolute", left: "50%", right: "50%" }}
-            >
-              <Button color="info" style={{ minWidth: "300px" }}>
-                Indeks Berita
-              </Button>
-            </div> */}
             </div>
             <NewsLetter />
             {/* ********* END TEAM 2 ********* */}

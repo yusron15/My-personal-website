@@ -33,6 +33,24 @@ class HeaderContent extends React.Component {
   }
 }
 
+class HeaderContentMobile extends React.Component {
+  render() {
+    return (
+      <>
+        <div
+          className=" background-header-mobile"
+          style={{
+            padding: 0
+          }}
+        >
+          <SidebarMobile />
+          <div className="title title-header-mobile">Stock Index</div>
+        </div>
+      </>
+    );
+  }
+}
+
 class StockIndexInside extends React.Component {
   state = {
     activeTab: "1"
@@ -61,15 +79,13 @@ class StockIndexInside extends React.Component {
         <>
           <div style={{ backgroundColor: "#1D1E1F" }}>
             <div
-              className="team-1 background-header-mobile"
               style={{
                 backgroundImage: `url(${bg})`,
                 padding: 0
               }}
             >
-              <SidebarMobile />
-
-              <div className="title title-header-mobile">Stock Index </div>
+              <HeaderContentMobile />
+              <BreakingNews />
             </div>
             <NewsStockIndex
               img={news1}
@@ -94,24 +110,6 @@ class StockIndexInside extends React.Component {
                           protes anti-pemerintah di Hong Kong dapat semakin
                           memperumit pembicaraan. "
             />
-            {/* <div>
-            {this.props.news.stock.map((item, index) => {
-              return (
-                <Link to="/stock-index-inside">
-                  <NewsStockIndex
-                    img={item.featured_image_src}
-                    title={item.title.rendered}
-                    posted={`Posted ${moment(item.date).format(
-                      "DD MMMM YYYY HH:ss"
-                    )} WIB`}
-                    desc={`${item.excerpt.rendered
-                      .replace(/(<([^>]+)>)/gi, "")
-                      .replace(/(&#8230;)/gi, "")}`}
-                  />
-                </Link>
-              );
-            })}
-          </div> */}
             <Footer />
           </div>
         </>

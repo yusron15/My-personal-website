@@ -247,6 +247,17 @@ class HeaderLanding extends React.Component {
               </Col>
             </div>
           </div>
+          <Col
+            md="12"
+            style={{
+              position: "absolute",
+              bottom: 0,
+              paddingRight: 0,
+              paddingLeft: 0
+            }}
+          >
+            <BreakingNews />
+          </Col>
         </>
       );
     }
