@@ -27,12 +27,9 @@ import {
 } from "reactstrap";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
-import NewsStockIndex from "../../components/NewsContent/NewsStockIndex.jsx";
-import NewsForexCommodity from "../../components/NewsContent/NewsForexCommodity";
+
 import EconomicCalendar from "../../components/NewsContent/EconomicCalendar";
 import EconomicCalendarInside from "../../components/NewsContent/EconomicCalendarInside";
-import StockIndex from "../../components/NewsContent/StockIndex.jsx";
-import ForexCommodity from "../../components/NewsContent/ForexCommodity";
 import Footer from "../../components/Footers/Footer.jsx";
 import "../../assets/css/main.css";
 
@@ -195,12 +192,8 @@ class NewsPage extends React.Component {
             <TabPane tabId="project2">
               <NewsForexCommodity />
             </TabPane> */}
-            <TabPane tabId="project1">
-              <StockIndex />
-            </TabPane>
-            <TabPane tabId="project2">
-              <ForexCommodity />
-            </TabPane>
+            <TabPane tabId="project1"></TabPane>
+            <TabPane tabId="project2"></TabPane>
             <TabPane tabId="project3">
               <EconomicCalendarInside />
             </TabPane>

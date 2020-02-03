@@ -33,6 +33,24 @@ import news2 from "../../assets/img/marketoutlook2.png";
 import news3 from "../../assets/img/marketoutlook3.png";
 import news4 from "../../assets/img/marketoutlook4.png";
 import news5 from "../../assets/img/makretoutlook5.png";
+import Header from "components/Contact/Header";
+
+class HeaderContent extends React.Component {
+  render() {
+    return (
+      <div
+        className="team-1"
+        style={{
+          padding: 0
+        }}
+      >
+        <BlurryNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
+        <div className="title title-header">Market Outlook</div>
+      </div>
+    );
+  }
+}
 
 class Blogs extends React.Component {
   state = {
@@ -111,15 +129,13 @@ class Blogs extends React.Component {
 
           <div>
             <div
-              className="team-1 background-header"
+              className="team-1"
               style={{
                 backgroundImage: `url(${bg})`,
                 padding: 0
               }}
             >
-              <BlurryNavbar />
-              <ColoredNavbar location={{ ...this.props.location }} />
-              <div className="title title-header">Market Outlook</div>
+              <HeaderContent />
               <BreakingNews />
             </div>
 

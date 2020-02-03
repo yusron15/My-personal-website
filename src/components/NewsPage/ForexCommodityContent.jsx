@@ -33,6 +33,23 @@ import fc5 from "../../assets/img/fc5.png";
 import fc3 from "../../assets/img/fc3.png";
 import fc4 from "../../assets/img/fc4.png";
 
+class HeaderContent extends React.Component {
+  render() {
+    return (
+      <div
+        className="team-1"
+        style={{
+          padding: 0
+        }}
+      >
+        <BlurryNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
+        <div className="title title-header">Forex Commodity</div>
+      </div>
+    );
+  }
+}
+
 class Blogs extends React.Component {
   state = {
     dataSelect: ""
@@ -109,15 +126,13 @@ class Blogs extends React.Component {
 
           <div>
             <div
-              className="team-1 background-header"
+              className="team-1"
               style={{
                 backgroundImage: `url(${bg})`,
                 padding: 0
               }}
             >
-              <BlurryNavbar />
-              <ColoredNavbar location={{ ...this.props.location }} />
-              <div className="title title-header">Forex Commodity</div>
+              <HeaderContent />
               <BreakingNews />
             </div>
 

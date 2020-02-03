@@ -18,7 +18,6 @@ import "../../assets/css/main.css";
 import { Route } from "react-router-dom";
 import { isMobile } from "react-device-detect";
 
-import NewsMarketOutlook from "../NewsContent/NewsMarketOutlook";
 import ShowMoreText from "react-show-more-text";
 import ReadMoreReact from "read-more-react";
 const textTitle = {

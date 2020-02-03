@@ -42,6 +42,7 @@ const tabItem = {
   paddingLeft: "5px",
   flex: 1,
   justifyContent: "center"
+
   // height: "20px"
 };
 
@@ -87,7 +88,7 @@ class BreakingNews extends Component {
         <div
           style={{
             display: "flex",
-            width: "20%"
+            width: "15%"
           }}
         >
           <div style={{ flex: 1 }}>

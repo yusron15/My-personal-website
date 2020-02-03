@@ -32,6 +32,23 @@ import BreakingNews from "../../components/Landing/BreakingNews";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 
+class HeaderContent extends Component {
+  render() {
+    return (
+      <div
+        className="team-1"
+        style={{
+          padding: 0
+        }}
+      >
+        <BlurryNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
+        <div className="title title-header">Newspage</div>
+      </div>
+    );
+  }
+}
+
 class HeaderNewsPage extends Component {
   renderContent = () => {
     if (isMobile) {
@@ -58,20 +75,14 @@ class HeaderNewsPage extends Component {
     return (
       <>
         <div
-          className=" background-header"
           style={{
             backgroundImage: `url(${bg})`,
-            padding: 0,
             backgroundSize: "cover",
-            minHeight: "60vh"
+            padding: 0
           }}
         >
-          <BlurryNavbar />
-          <ColoredNavbar location={{ ...this.props.location }} />
-          <div className="title title-header">Newspage</div>
+          <HeaderContent />
           {/* <div style={{ marginTop: "11vh" }}> */}
-          {/* <BreakingNews /> */}
-
           <BreakingNews />
 
           {/* </div> */}

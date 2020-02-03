@@ -34,6 +34,23 @@ import news5 from "../../assets/img/newscontent5.png";
 
 import { getNews } from "../../redux/ducks/actions";
 
+class HeaderStockIndex extends Component {
+  render() {
+    return (
+      <div
+        className="team-1"
+        style={{
+          padding: 0
+        }}
+      >
+        <BlurryNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
+        <div className="title title-header">Stock Index</div>
+      </div>
+    );
+  }
+}
+
 class Blogs extends Component {
   state = {
     dataSelect: ""
@@ -116,9 +133,10 @@ class Blogs extends Component {
                 padding: 0
               }}
             >
-              <BlurryNavbar />
+              {/* <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
-              <div className="title title-header">Stock Index</div>
+              <div className="title title-header">Stock Index</div> */}
+              <HeaderStockIndex />
               <BreakingNews />
             </div>
 

@@ -14,21 +14,31 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import Comment from "../../components/Comments/Comment";
 // import Content from "../../components/NewsPage/Content.jsx";
 import Content from "../RelatedPost/Layout";
-import NewsStockIndex from "../../components/NewsContent/NewsStockIndex.jsx";
 // import NewsForexCommodity from "../../components/NewsContent/NewsForexCommodity";
 import NewsForexCommodity from "../../components/NewsContent/NewsInside";
 import { isMobile } from "react-device-detect";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
-import NewsMarketOutlook from "../../components/NewsContent/NewsMarketOutlook";
-import EconomicCalendar from "../../components/NewsContent/EconomicCalendar";
-import EconomicCalendarInside from "../../components/NewsContent/EconomicCalendarInside";
-import StockIndex from "../../components/NewsContent/StockIndex.jsx";
-import MarketOutlook from "../../components/NewsContent/MarketOutlook.jsx";
 // import NewsTicker from "../../components/NewsPage/NewsTicker.jsx";
-import ForexCommodity from "../../components/NewsContent/ForexCommodity";
+
 import Footer from "../../components/Footers/Footer.jsx";
 import news1 from "../../assets/img/newscontent1.png";
 
+class HeaderContent extends React.Component {
+  render() {
+    return (
+      <div
+        className="team-1"
+        style={{
+          padding: 0
+        }}
+      >
+        <BlurryNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
+        <div className="title title-header">Forex Commodity</div>
+      </div>
+    );
+  }
+}
 class ForexCommodityInside extends React.Component {
   state = {
     activeTab: "1"
@@ -103,15 +113,13 @@ class ForexCommodityInside extends React.Component {
       <>
         <div style={{ backgroundColor: "#1D1E1F" }}>
           <div
-            className="team-1 background-header"
+            className="team-1 "
             style={{
               backgroundImage: `url(${bg})`,
               padding: 0
             }}
           >
-            <BlurryNavbar />
-
-            <div className="title title-header">Forex Commodity </div>
+            <HeaderContent />
             <BreakingNews />
           </div>
           {/* <BlurryNavbar /> */}

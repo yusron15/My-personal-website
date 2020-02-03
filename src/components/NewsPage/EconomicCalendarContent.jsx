@@ -33,6 +33,22 @@ import span from "../../assets/img/flag-span.png";
 import japan from "../../assets/img/flag-japan.png";
 import singapore from "../../assets/img/flag-singapore.png";
 
+class HeaderContent extends React.Component {
+  render() {
+    return (
+      <div
+        className="team-1"
+        style={{
+          padding: 0
+        }}
+      >
+        <BlurryNavbar />
+        <ColoredNavbar location={{ ...this.props.location }} />
+        <div className="title title-header">Economic Calendar</div>
+      </div>
+    );
+  }
+}
 class Blogs extends React.Component {
   state = {
     dataSelect: ""
@@ -356,15 +372,13 @@ class Blogs extends React.Component {
 
           <div>
             <div
-              className="team-1 background-header"
+              className="team-1"
               style={{
                 backgroundImage: `url(${bg})`,
                 padding: 0
               }}
             >
-              <BlurryNavbar />
-              <ColoredNavbar location={{ ...this.props.location }} />
-              <div className="title title-header">Economic Calendar</div>
+              <HeaderContent />
               <BreakingNews />
             </div>
 
