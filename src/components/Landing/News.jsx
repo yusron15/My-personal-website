@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+
 // ReactJS plugin for a nice carousel
 import Slick from "react-slick";
 import "../../assets/css/helper.css";
@@ -299,68 +301,23 @@ class News extends React.Component {
                 <Col
                   md="12"
                   // style={{ paddingTop: "15vh" }}
+                  style={{ minHeight: "50vh" }}
                 >
                   <Slick {...slickSettings}>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 0 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("1");
-                        // }}
-                        style={{
-                          backgroundImage:
-                            "url(" +
-                            require("assets/img/kantorpusat.png") +
-                            ")",
-                          height: "30vh",
-                          backgroundSize: "cover"
-                        }}
-                      ></NavLink>
-                    </div>
-
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 1 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("2");
-                        // }}
-                        style={{
-                          backgroundImage:
-                            "url(" +
-                            require("assets/img/sumgaigerong.png") +
-                            ")",
-                          height: "30vh",
-                          backgroundSize: "cover"
-                        }}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 2 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("3");
-                        // }}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 3 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("4");
-                        // }}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        className={this.state.activeSlide === 4 ? "scaled" : ""}
-                        // onClick={() => {
-                        //   this.toggle("5");
-                        // }}
-                        style={styleCard}
-                      ></NavLink>
-                    </div>
+                    {this.props.news.stock.map(item => (
+                      <div>
+                        <NavLink
+                          // className={this.state.activeSlide === 0 ? "scaled" : ""}
+                          style={{
+                            backgroundImage:
+                              "url(" + item.featured_image_src + ")",
+                            height: "30vh",
+                            backgroundSize: "cover"
+                            // borderRadius: 12
+                          }}
+                        ></NavLink>
+                      </div>
+                    ))}
                   </Slick>
                 </Col>
                 <Col
@@ -379,36 +336,17 @@ class News extends React.Component {
                     style={{ margin: 0, minHeight: "20vh" }}
                   >
                     <TabContent activeTab={"project" + this.state.activeSlide}>
-                      <TabPane tabId="project0">
-                        {/* <Col> */}
-                        <p className="description  font-black">
-                          Pesanan industri Jerman naik melebihi dari yang
-                          diperkirakan pada bulan September, dibantu oleh
-                          permintaan domestik yang kuat, data yang dirilis
-                          pada...
-                        </p>
-                        {/* </Col> */}
-                      </TabPane>
-                      <TabPane tabId="project1">
-                        <p className="description mb-5 font-black">
-                          Add your information here for News 2.
-                        </p>
-                      </TabPane>
-                      <TabPane tabId="project2">
-                        <p className="description mb-5 font-black">
-                          Add your information here for News 3.
-                        </p>
-                      </TabPane>
-                      <TabPane tabId="project3">
-                        <p className="description mb-5 font-black">
-                          Add your information here for News 4.
-                        </p>
-                      </TabPane>
-                      <TabPane tabId="project4">
-                        <p className="description mb-5 font-black">
-                          Add your information here for News 5.
-                        </p>
-                      </TabPane>
+                      {this.props.news.stock.map((item, index) => (
+                        <TabPane tabId={`project${index}`}>
+                          {/* <Col> */}
+                          <p className="description font-black">
+                            {`${item.excerpt.rendered
+                              .replace(/(<([^>]+)>)/gi, "")
+                              .substring(0, 100)}...`}
+                          </p>
+                          {/* </Col> */}
+                        </TabPane>
+                      ))}
                     </TabContent>
                   </p>
                   <Link to="/newspage">
@@ -428,7 +366,13 @@ class News extends React.Component {
   }
 }
 
-export default News;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang,
+  news: state.newsStore.news
+});
+
+export default connect(mapStateToProps, null)(News);
 
 // const PrevButton = props => {
 //   return (

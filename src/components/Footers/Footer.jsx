@@ -50,13 +50,13 @@ class Footers extends React.Component {
                           <h4>
                             <b style={{ cursor: "default" }}>
                               {ReactHtmlParser(
-                                this.props.pageStore.Landing.Footer[0].title
+                                this.props.pageStore.Footer[0].title
                               )}
                             </b>
                           </h4>
                           <p>
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[0].content[0]
+                              this.props.pageStore.Footer[0].content[0]
                             )}
                           </p>
                         </div>
@@ -64,20 +64,20 @@ class Footers extends React.Component {
                       <Col md="3">
                         <h4 style={{ cursor: "default" }}>
                           {ReactHtmlParser(
-                            this.props.pageStore.Landing.Footer[1].title
+                            this.props.pageStore.Footer[1].title
                           )}
                         </h4>
                         <p>
                           <Link to="/tentang-kami" style={{ color: "white" }}>
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[1].content[0]
+                              this.props.pageStore.Footer[1].content[0]
                             )}
                           </Link>
                         </p>
                         <p>
                           <Link to="/legalitas" style={{ color: "white" }}>
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[1].content[1]
+                              this.props.pageStore.Footer[1].content[1]
                             )}
                           </Link>
                         </p>
@@ -87,14 +87,14 @@ class Footers extends React.Component {
                             style={{ color: "white" }}
                           >
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[1].content[2]
+                              this.props.pageStore.Footer[1].content[2]
                             )}
                           </Link>
                         </p>
                         <p>
                           <Link to="/cabang" style={{ color: "white" }}>
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[1].content[3]
+                              this.props.pageStore.Footer[1].content[3]
                             )}
                           </Link>
                         </p>
@@ -102,12 +102,12 @@ class Footers extends React.Component {
                       <Col md="2">
                         <h4 style={{ cursor: "default" }}>
                           {ReactHtmlParser(
-                            this.props.pageStore.Landing.Footer[2].title
+                            this.props.pageStore.Footer[2].title
                           )}
                         </h4>
                         <Link to="/newspage" style={{ color: "white" }}>
                           {ReactHtmlParser(
-                            this.props.pageStore.Landing.Footer[2].content[0]
+                            this.props.pageStore.Footer[2].content[0]
                           )}
                         </Link>
                       </Col>
@@ -118,49 +118,49 @@ class Footers extends React.Component {
                         >
                           <h4>
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[3].title
+                              this.props.pageStore.Footer[3].title
                             )}
                           </h4>
 
                           <p>
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[3].content[0]
+                              this.props.pageStore.Footer[3].content[0]
                             )}
                           </p>
 
                           <p>
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[3].content[1]
+                              this.props.pageStore.Footer[3].content[1]
                             )}
                           </p>
 
                           <p>
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[3].content[2]
+                              this.props.pageStore.Footer[3].content[2]
                             )}
                           </p>
 
                           <p>
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[3].content[3]
+                              this.props.pageStore.Footer[3].content[3]
                             )}
                           </p>
 
                           <p>
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[3].content[4]
+                              this.props.pageStore.Footer[3].content[4]
                             )}
                           </p>
 
                           <p>
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[3].content[5]
+                              this.props.pageStore.Footer[3].content[5]
                             )}
                           </p>
 
                           <p>
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Footer[3].content[6]
+                              this.props.pageStore.Footer[3].content[6]
                             )}
                           </p>
 

@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   max-width: 100% !important;
   overflow-x: hidden !important;
   background-color: #1d1e1f !important;
@@ -45,7 +46,6 @@ html, body {
   height: 120px;
   justify-content: center;
   align-items: center; */
-
 }
 
 .tentang-kami-left {
@@ -53,14 +53,13 @@ html, body {
 }
 
 .dropdown-content-news {
-
   position: absolute;
   background-color: #fff7f7;
   opacity: 0.98;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease;
   z-index: 1;
-  left: -57.8vw;  
+  left: -57.8vw;
   width: 100vw;
   display: none;
   justify-content: space-around;
@@ -83,7 +82,7 @@ html, body {
 
 .trading-online {
   left: -47.6vw;
-  max-width:100vw
+  max-width: 100vw;
 }
 
 .layanan {
@@ -119,7 +118,6 @@ html, body {
   /* z-index: -1; */
 }
 
-
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -143,6 +141,10 @@ html, body {
   color: black;
 }
 
+.font-black > .card-body {
+  padding: 0;
+}
+
 .font-black-html {
   color: black !important;
 }
@@ -150,7 +152,6 @@ html, body {
 .font-white {
   color: white;
 }
-
 
 .bg-white {
   background-color: #f3f3f3;
@@ -160,7 +161,6 @@ html, body {
   background-size: cover;
   min-height: 60vh;
 }
-
 
 /* @media (min-width: 320px) and (max-width: 480px) {
   
@@ -190,7 +190,7 @@ html, body {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  padding-top:20vh;
+  padding-top: 20vh;
   /* margin-bottom: 3%; */
 }
 
@@ -199,7 +199,7 @@ html, body {
   font-style: Helvetica Bold;
   font-size: 3rem;
   color: white;
-  margin-top:12%;
+  margin-top: 12%;
   margin-bottom: 8%;
 }
 
@@ -276,7 +276,7 @@ html, body {
 
 .dropdown-contents a:hover {
   /* background-color: #ddd; */
-  color:black;
+  color: black;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -338,10 +338,12 @@ html, body {
   transform: translateY(-50%);
 }
 
-.scaled {
-  transform: scale(1.1);
-  width: 20vw; /* Equal to scaleX(0.7) scaleY(0.7) */
+.slick-current {
+  transform: scale(1.2);
   transition: all 0.2s ease-out;
+  /* border-radius: 12px; */
+  object-fit: contain;
+  background-size: contain;
   /* border-radius:30px; */
   /* background-color: pink; */
 }
@@ -407,7 +409,6 @@ hr.grey {
 .vertical-space {
   padding-top: 2px;
   /* padding-bottom: 2px; */
-
 }
 
 .title-navbar {
@@ -602,7 +603,7 @@ hr.grey {
 }
 
 .text-fitur:hover {
-  color: #19447E;
+  color: #19447e;
 }
 
 .image {
@@ -654,24 +655,24 @@ hr.grey {
   z-index: 9999;
 }
 .desc-text {
-  font-size:1rem;
-  color:black;
+  font-size: 1rem;
+  color: black;
 }
 
 .title-text {
-  font-size:2rem;
-  color:black;
+  font-size: 2rem;
+  color: black;
   font-weight: bold;
 }
 
 .filled-button {
   padding: 10px 80px;
   border: none;
-  background: linear-gradient( to left, #f1f1f1 50%,     rgb(139, 139, 139) 50% );
+  background: linear-gradient(to left, #f1f1f1 50%, rgb(139, 139, 139) 50%);
   background-size: 300% 100%;
   background-position: right bottom;
   cursor: pointer;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
   border-radius: 5px;
 }
 
@@ -692,7 +693,7 @@ hr.grey {
 }
 .inner {
   position: absolute;
-  width:10px;
+  width: 10px;
   height: 40%;
   background: grey;
   top: 30%;
@@ -700,40 +701,39 @@ hr.grey {
 }
 
 .vl-img {
-  height:130px;
-  width:20px;
+  height: 130px;
+  width: 20px;
   /* top:50%; */
 }
 .vl-img-tentangkami {
-  height:100px;
-  width:20px;
-  margin-top:15%;
+  height: 100px;
+  width: 20px;
+  margin-top: 15%;
   /* top:50%; */
 }
 
 .vl-img-trading {
-  height:100px;
-  width:20px;
-  margin-top:17%;
+  height: 100px;
+  width: 20px;
+  margin-top: 17%;
   /* top:50%; */
 }
 
 .vl-img-news {
-  height:100px;
-  width:20px;
-  top:10%;
+  height: 100px;
+  width: 20px;
+  top: 10%;
 }
 
 .vertical-tab {
-  background-color:#167AFF;
-  color: #FFFFFF;
+  background-color: #167aff;
+  color: #ffffff;
   border-radius: 5px;
 }
 
-
 .dropdown-contents {
   display: flex;
-  flex:1;
+  flex: 1;
   justify-content: left;
   align-items: left;
 }
@@ -749,25 +749,63 @@ hr.grey {
   padding-top: "30px";
 }
 
-.react-search-field-input{
-  width:300px;
+.react-search-field-input {
+  width: 300px;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .font-black > p {
   color: black;
 }
 
-span > .arrow-down{
-  padding :12px;
+span > .arrow-down {
+  padding: 12px;
   /* padding-top: 50px !important; */
 }
 
 .lang-button {
   /* margin-top:20px; */
+}
+
+.description > p > p {
+  color: black;
+}
+
+.tab-content {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+.tab-pane {
+  display: flex;
+  flex: 1;
+}
+
+.card-pricing {
+  min-height: 460px;
+}
+
+.btn-round.pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.card-pricing > .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+#features > div.features-3 > div > div > div > div > div > div > p > p {
+  color: black;
+}
+
+#teams > div.team-2 > div > div > div > div > div > div > div > p > p {
+  color: black;
 }

@@ -51,6 +51,8 @@ function LangTogglerButton(props) {
             }
             await props.changeLang(a);
             await props.getContent(props.activePage, data, true);
+
+            await props.getContent("Header", data, true);
           }}
         />
       )}

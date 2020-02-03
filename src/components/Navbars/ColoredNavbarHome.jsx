@@ -37,7 +37,7 @@ import Radium, { StyleRoot } from "radium";
 import vl from "../../assets/img/vertical-line.png";
 
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { fetchPage, getContent } from "../../redux/ducks/actions.js";
 
 import ReactHtmlParser, {
   processNodes,
@@ -62,9 +62,11 @@ class ColorNavbar extends React.Component {
     };
   }
 
-  async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
-  }
+  // async componentDidUpdate(prevProps, prevState) {
+  //   if (this.props.currentLang !== prevProps.currentLang) {
+  //     await this.props.getContent("Header", this.props.currentLang, true);
+  //   }
+  // }
 
   onClick() {
     this.setState({ childVisible: !this.state.childVisible });
@@ -116,7 +118,7 @@ class ColorNavbar extends React.Component {
     this.setState({ sidebarOpen: open });
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     window.addEventListener("scroll", this.changeNavbarColor);
   }
   componentWillUnmount() {
@@ -394,11 +396,14 @@ class ColorNavbar extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  fetchPage: (section, lang) => dispatch(fetchPage(section, lang)),
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ColorNavbar);

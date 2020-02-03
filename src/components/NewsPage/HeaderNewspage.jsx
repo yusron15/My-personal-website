@@ -71,9 +71,8 @@ class HeaderNewsPage extends Component {
           <div className="title title-header">Newspage</div>
           {/* <div style={{ marginTop: "11vh" }}> */}
           {/* <BreakingNews /> */}
-         
-                    <BreakingNews />
 
+          <BreakingNews />
 
           {/* </div> */}
         </div>
