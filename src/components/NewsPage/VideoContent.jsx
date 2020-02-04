@@ -115,7 +115,7 @@ class Blogs extends React.Component {
                 // className="broken-white"
                 style={{
                   // backgroundColor: "#D4D4D4",
-                  padding: "0 12% 2% 12%"
+                  padding: "0 5% 2% 5%"
                 }}
               >
                 <Col>
@@ -147,7 +147,7 @@ class Blogs extends React.Component {
                               opacity: "0.90"
                             }}
                           >
-                            Market Updates
+                            Morning News
                           </div>
                         </div>
                       </NavItem>
@@ -178,7 +178,7 @@ class Blogs extends React.Component {
                               opacity: "0.90"
                             }}
                           >
-                            Morning News
+                            Market Updates
                           </div>
                         </div>
                       </NavItem>
@@ -547,7 +547,7 @@ class Blogs extends React.Component {
                               cursor: "pointer"
                             }}
                           >
-                            Market Updates
+                            Morning News
                           </div>
                         </div>
                       </NavItem>
@@ -578,7 +578,7 @@ class Blogs extends React.Component {
                               cursor: "pointer"
                             }}
                           >
-                            Morning News
+                            Market Updates
                           </div>
                         </div>
                       </NavItem>

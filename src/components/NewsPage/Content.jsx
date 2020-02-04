@@ -540,7 +540,7 @@ class Carding extends React.Component {
                                   style={{ objectFit: "cover" }}
                                 />
                                 <h2 className="text-news-mobile">
-                                  <span>Market Updates</span>
+                                  <span>Morning News</span>
                                 </h2>
                               </div>
                             }
@@ -592,7 +592,7 @@ class Carding extends React.Component {
                                   style={{ objectFit: "cover" }}
                                 />
                                 <h2 className="text-news-mobile">
-                                  <span>Morning News</span>
+                                  <span>Market Updates</span>
                                 </h2>
                               </div>
                             }
@@ -951,7 +951,7 @@ class Carding extends React.Component {
                                 style={{ objectFit: "cover" }}
                               />
                               <h2 className="text-news">
-                                <span>Market Updates</span>
+                                <span>Morning News</span>
                               </h2>
                             </div>
                           }
@@ -1005,7 +1005,7 @@ class Carding extends React.Component {
                                 style={{ objectFit: "cover" }}
                               />
                               <h2 className="text-news">
-                                <span>Morning News</span>
+                                <span>Market Updates</span>
                               </h2>
                             </div>
                           }

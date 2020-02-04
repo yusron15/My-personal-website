@@ -136,7 +136,7 @@ class ForexCommodityInside extends React.Component {
               padding: 0
             }}
           >
-            <HeaderContent />
+            <HeaderContent location={{ ...this.props.location }} />
             <BreakingNews />
           </div>
           {/* <BlurryNavbar /> */}

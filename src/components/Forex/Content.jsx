@@ -120,9 +120,7 @@ class Features extends React.Component {
               {/* <BlurryNavbar /> */}
 
               <div className="title-header-mobile">
-                {ReactHtmlParser(this.props.pageStore.Forex.header, {
-                  decodeEntities: false
-                })}
+                {ReactHtmlParser(this.props.pageStore.Forex.header)}
               </div>
             </div>
             <div className="features-3" style={{ paddingTop: 0 }}>
@@ -130,7 +128,9 @@ class Features extends React.Component {
                 <Row>
                   <Col className="ml-auto mr-auto text-center" md="8">
                     <div className="space-50" />
-                    <p style={intermezzo}>{this.props.pageStore.Forex.top}</p>
+                    <p className="font-black" style={intermezzo}>
+                      {ReactHtmlParser(this.props.pageStore.Forex.top)}
+                    </p>
                   </Col>
                 </Row>
               </Container>
@@ -158,13 +158,13 @@ class Features extends React.Component {
                             this.props.pageStore.Forex.content[0].title
                           )}
                         </div>
-                        <p style={{ color: "black", textAlign: "justify" }}>
-                          {
-                            (ReactHtmlParser(
-                              this.props.pageStore.Forex.content[0].content
-                            ),
-                            { replace: this.transform })
-                          }
+                        <p
+                          className="font-black"
+                          style={{ textAlign: "justify" }}
+                        >
+                          {ReactHtmlParser(
+                            this.props.pageStore.Forex.content[0].content
+                          )}
                         </p>
                       </div>
                     </Col>
@@ -192,7 +192,7 @@ class Features extends React.Component {
                         >
                           {this.props.pageStore.Forex.content[1].title}
                         </div>
-                        <p style={{ color: "black", textAlign: "justify" }}>
+                        <p className="font-black" style={{  textAlign: "justify" }}>
                           {this.props.pageStore.Forex.content[1].content}
                         </p>{" "}
                       </div>
@@ -212,7 +212,7 @@ class Features extends React.Component {
                             this.props.pageStore.Forex.content[2].title
                           )}
                         </div>
-                        <p style={intermezzo}>
+                        <p className="font-black" style={intermezzo}>
                           {ReactHtmlParser(
                             this.props.pageStore.Forex.content[2].content
                           )}

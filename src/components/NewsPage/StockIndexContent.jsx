@@ -153,7 +153,7 @@ class Blogs extends Component {
               {/* <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">Stock Index</div> */}
-              <HeaderStockIndex />
+              <HeaderStockIndex location={{ ...this.props.location }} />
               <BreakingNews />
             </div>
 

@@ -11,7 +11,7 @@ import mac from "../../assets/img/download-mac.png";
 import ios from "../../assets/img/download-ios.png";
 import windows from "../../assets/img/windows-download.png";
 import appstore from "../../assets/img/appstore.png";
-
+import googleplay from "../../assets/img/playstore.png";
 import world from "../../assets/img/world.png";
 import bg from "../../assets/img/download-bg.png";
 
@@ -144,8 +144,8 @@ class Features extends React.Component {
                   </Col>
                 </Col>
                 <Col md="6">
-                  <Row className="vertical-center">
-                    <Col md="6">
+                  <Row>
+                    <Col md="4">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -161,7 +161,7 @@ class Features extends React.Component {
                         />
                       </ScrollAnimation>
                     </Col>
-                    <Col md="6">
+                    <Col md="4">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -174,6 +174,44 @@ class Features extends React.Component {
                             height: "auto"
                           }}
                           src={appstore}
+                        />
+                      </ScrollAnimation>
+                    </Col>
+                  </Row>
+                  <Row
+                    style={{
+                      marginTop: "20px"
+                    }}
+                  >
+                    <Col md="4">
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          style={{
+                            width: "10vw",
+                            height: "auto"
+                          }}
+                          src={windows}
+                        />
+                      </ScrollAnimation>
+                    </Col>
+                    <Col md="4">
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          style={{
+                            width: "10vw",
+                            height: "auto"
+                          }}
+                          src={googleplay}
                         />
                       </ScrollAnimation>
                     </Col>
