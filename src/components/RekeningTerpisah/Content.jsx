@@ -111,8 +111,7 @@ class Content extends React.Component {
                             style={{ lineHeight: "25px", textAlign: "justify" }}
                           >
                             {ReactHtmlParser(
-                              this.props.pageStore.rekeningterpisah
-                                .subContent
+                              this.props.pageStore.rekeningterpisah.subContent
                             )}
                           </p>
                         </Col>
@@ -129,8 +128,7 @@ class Content extends React.Component {
                             style={{ lineHeight: "25px", textAlign: "justify" }}
                           >
                             {ReactHtmlParser(
-                              this.props.pageStore.rekeningterpisah
-                                .subContent
+                              this.props.pageStore.rekeningterpisah.subContent
                             )}
                           </p>
                         </Col>
@@ -151,7 +149,6 @@ class Content extends React.Component {
             <>
               <div className="cd-section" id="projects">
                 <div
-                  // className="projects-3"
                   style={{
                     backgroundImage:
                       "url(" + require("assets/img/dollar.png") + ")",
@@ -164,7 +161,8 @@ class Content extends React.Component {
                     className="team-1 background-header"
                     style={{
                       backgroundImage: `url(${dollar})`,
-                      padding: 0
+                      padding: 0,
+                      paddingBottom: 20
                     }}
                   >
                     <BlurryNavbar />
@@ -177,80 +175,76 @@ class Content extends React.Component {
                   </div>
                   <div
                     className="team-1 broken-white"
-                    style={{ height: "50vh", padding: 0 }}
+                    style={{ minHeight: "50vh", padding: 0 }}
                   >
-                    <Col>
-                      <Row style={{ marginLeft: "10%" }}>
-                        <Col md="8">
-                          <h1
-                            className="title"
-                            style={{
-                              fontStyle: "Helvetica Bold",
-                              // fontSize: "2.5rem",
-                              fontWeight: "bold",
-                              color: "black"
-                            }}
-                          >
-                            {ReactHtmlParser(
-                              this.props.pageStore.rekeningterpisah.content
-                                .title
-                            )}
-                          </h1>
-                          <p
-                            className="font-black"
-                            style={{ lineHeight: "25px" }}
-                          >
-                            {ReactHtmlParser(
-                              this.props.pageStore.rekeningterpisah.content
-                                .content
-                            )}
-                            <br />
+                    <Row style={{ marginLeft: "10%" }}>
+                      <Col md="8">
+                        <h1
+                          className="title"
+                          style={{
+                            fontStyle: "Helvetica Bold",
+                            // fontSize: "2.5rem",
+                            fontWeight: "bold",
+                            color: "black"
+                          }}
+                        >
+                          {ReactHtmlParser(
+                            this.props.pageStore.rekeningterpisah.content.title
+                          )}
+                        </h1>
+                        <p
+                          className="font-black"
+                          style={{ lineHeight: "25px" }}
+                        >
+                          {ReactHtmlParser(
+                            this.props.pageStore.rekeningterpisah.content
+                              .content
+                          )}
+                          <br />
 
-                            {ReactHtmlParser(
-                              this.props.pageStore.rekeningterpisah.subContent
-                            )}
-                          </p>
-                        </Col>
-                      </Row>
-                      <Row style={{ marginLeft: "10%" }}>
-                        <Col md="4">
-                          <Row>
-                            <Col md="2">
-                              <img src={check} />
-                            </Col>
-                            <Col>
-                              <p
-                                className="font-black"
-                                style={{ lineHeight: "25px" }}
-                              >
-                                {ReactHtmlParser(
-                                  this.props.pageStore.rekeningterpisah
-                                    .subContent
-                                )}
-                              </p>
-                            </Col>
-                          </Row>
-                        </Col>
-                        <Col md="4">
-                          <Row>
-                            <Col md="2">
-                              <img src={check} />
-                            </Col>
-                            <Col>
-                              <p
-                                className="font-black"
-                                style={{ lineHeight: "25px" }}
-                              >
-                                {ReactHtmlParser(
-                                  this.props.pageStore.rekeningterpisah
-                                    .subContent
-                                )}
-                              </p>
-                            </Col>
-                          </Row>
-                        </Col>
-                      </Row>
-                    </Col>
+                          {ReactHtmlParser(
+                            this.props.pageStore.rekeningterpisah.subContent
+                          )}
+                        </p>
+                        <br /> <br />
+                      </Col>
+                    </Row>
+                    <Row style={{ marginLeft: "10%" }}>
+                      <Col md="4">
+                        <Row>
+                          <Col md="2">
+                            <img src={check} />
+                          </Col>
+                          <Col>
+                            <p
+                              className="font-black"
+                              style={{ lineHeight: "25px" }}
+                            >
+                              {ReactHtmlParser(
+                                this.props.pageStore.rekeningterpisah.subContent
+                              )}
+                            </p>
+                          </Col>
+                        </Row>
+                      </Col>
+                      <Col md="4">
+                        <Row>
+                          <Col md="2">
+                            <img src={check} />
+                          </Col>
+                          <Col>
+                            <p
+                              className="font-black"
+                              style={{ lineHeight: "25px" }}
+                            >
+                              {ReactHtmlParser(
+                                this.props.pageStore.rekeningterpisah.subContent
+                              )}
+                            </p>
+                          </Col>
+                        </Row>
+                      </Col>
+                    </Row>
                   </div>
                 </div>
               </div>
