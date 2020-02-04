@@ -250,55 +250,41 @@ class Features extends React.Component {
                   <BlurryNavbar />
                   <ColoredNavbar location={{ ...this.props.location }} />
 
-                  <div className="title title-header">
+                  <div
+                    className="title title-header"
+                    style={{ padding: "0 15% 0 15%" }}
+                  >
                     {ReactHtmlParser(this.props.pageStore.Gold.header)}
+                    <p style={{ ...intermezzo, color: "white" }}>
+                      {ReactHtmlParser(this.props.pageStore.Gold.top)}
+                    </p>
                   </div>
                 </div>
                 <div className="space-50" />
                 <div className="features-3" style={{ paddingTop: 0 }}>
                   <Container fluid>
                     <Row>
-                      <Col className="ml-auto mr-auto text-center" md="8">
-                        {/* <div
-                    // className="title"
-                    style={textTitle}
-                  >
-                    GOLD
-                  </div> */}
-                        <p style={intermezzo}>
-                          {ReactHtmlParser(this.props.pageStore.Gold.top)}
-                        </p>
-                        {/* <Col className="mr-auto ml-auto" md="5"> */}
-                        {/* </Col> */}
-                      </Col>
-                    </Row>
-                    <Row>
                       <Col
                         sm={{ size: 10, order: 2, offset: 1 }}
-                        style={{ marginTop: "50px" }}
+                        style={{ marginTop: "30px" }}
                       >
                         <Row>
                           <Col lg="4">
-                            <div className="card-image">
-                              <a
-                                href="#pablo"
-                                onClick={e => e.preventDefault()}
-                              >
-                                <img
-                                  alt="..."
-                                  className="img rounded"
-                                  src={fg1}
-                                />
-                              </a>
-                            </div>
-                            <div style={{ marginTop: "30px" }}>
+                            <div
+                              style={{
+                                marginTop: "10px",
+                                paddingBottom: "10px",
+                                height: "100%"
+                              }}
+                            >
                               <Table
                                 // bordered
                                 className="table-shopping"
                                 style={{
                                   backgroundColor: "#224377",
                                   borderRadius: "5px",
-                                  borderCollapse: "inherit"
+                                  borderCollapse: "inherit",
+                                  height: "100%"
                                   // borderWidth: "0.2px"
                                 }}
                               >
