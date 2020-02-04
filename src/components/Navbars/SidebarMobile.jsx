@@ -31,6 +31,7 @@ import { LangContext } from "../MyContext";
 import Collapsible from "react-collapsible";
 import logo from "../../assets/img/logo-topgrowth.png";
 import BurgerIcon from "../../assets/img/burger-icon.png";
+import caret from "../../assets/img/caret.png";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import BlurryNavbarHome from "../../components/Navbars/BlurryNavbarHome";
 import "../../assets/css/main.css";
@@ -244,6 +245,7 @@ class SidebarMobile extends React.Component {
                   trigger={this.props.pageStore.Header.m4.title}
                   triggerStyle={textTrigger}
                 >
+                  {/* <img src={caret} /> */}
                   <Link to="/newspage">
                     <div style={subText}>
                       > {this.props.pageStore.Header.m4.dropdown[0].title}

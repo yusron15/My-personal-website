@@ -285,7 +285,8 @@ class BottomNavbar extends React.Component {
                       style={{
                         backgroundColor: "rgba(10, 10, 10, 0.49)",
                         color: "white",
-                        border: "none"
+                        border: "none",
+                        marginTop: "10px"
                       }}
                       placeholder="Full Name"
                       type="text"
@@ -298,7 +299,8 @@ class BottomNavbar extends React.Component {
                       style={{
                         backgroundColor: "rgba(10, 10, 10, 0.49)",
                         color: "white",
-                        border: "none"
+                        border: "none",
+                        marginTop: "10px"
                       }}
                       placeholder="Email"
                       type="text"
@@ -311,7 +313,8 @@ class BottomNavbar extends React.Component {
                       style={{
                         backgroundColor: "rgba(10, 10, 10, 0.49)",
                         color: "white",
-                        border: "none"
+                        border: "none",
+                        marginTop: "10px"
                       }}
                       color="white"
                       placeholder="+62"
@@ -325,7 +328,8 @@ class BottomNavbar extends React.Component {
                       style={{
                         backgroundColor: "rgba(10, 10, 10, 0.49)",
                         color: "white",
-                        border: "none"
+                        border: "none",
+                        marginTop: "10px"
                       }}
                       placeholder="Telepon"
                       type="text"

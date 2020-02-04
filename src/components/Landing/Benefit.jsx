@@ -182,6 +182,7 @@ class Testimonials extends React.Component {
   };
 
   renderContent = () => {
+    const language = this.props.currentLang ;
     if (isMobile) {
       return (
         <>
@@ -532,13 +533,26 @@ class Testimonials extends React.Component {
                               <div
                                 className="info text-left"
                                 // style={styles.fadeInUp}
-                                style={{
-                                  backgroundColor: "rgba(112, 112, 112, 0.19)",
-                                  color: "white",
-                                  minHeight: "270px",
-                                  minWidth: "200px",
-                                  borderRadius: "10px"
-                                }}
+
+                                style={
+                                  this.props.currentLang === language
+                                    ? {
+                                        height: "330",
+                                        backgroundColor:
+                                          "rgba(112, 112, 112, 0.19)",
+                                        color: "white",
+                                        minWidth: "200px",
+                                        borderRadius: "10px"
+                                      }
+                                    : {
+                                        height: "270",
+                                        backgroundColor:
+                                          "rgba(112, 112, 112, 0.19)",
+                                        color: "white",
+                                        minWidth: "200px",
+                                        borderRadius: "10px"
+                                      }
+                                }
                               >
                                 {/* <p className="title text-benefit" style={{ fontSize: "1.4rem" }}> */}
                                 {/* <img onMouseEnter style={{ marginRight: "5%" }} />
@@ -843,7 +857,8 @@ class Testimonials extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
 });
 
 const mapDispatchToProps = dispatch => ({

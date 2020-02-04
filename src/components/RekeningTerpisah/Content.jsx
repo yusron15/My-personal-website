@@ -64,10 +64,7 @@ class Content extends React.Component {
                   )}
                 </div>
               </div>
-              <div
-                className="team-1 broken-white"
-                style={{ height: "80vh", padding: 0 }}
-              >
+              <div className="team-1 broken-white" style={{ padding: 0 }}>
                 <Col>
                   <Row>
                     <Col md="8">
@@ -125,7 +122,11 @@ class Content extends React.Component {
                         <Col>
                           <p
                             className="font-black"
-                            style={{ lineHeight: "25px", textAlign: "justify" }}
+                            style={{
+                              lineHeight: "25px",
+                              textAlign: "justify",
+                              marginBottom: "25px"
+                            }}
                           >
                             {ReactHtmlParser(
                               this.props.pageStore.rekeningterpisah.subContent
@@ -235,7 +236,9 @@ class Content extends React.Component {
                           <Col>
                             <p
                               className="font-black"
-                              style={{ lineHeight: "25px" }}
+                              style={{
+                                lineHeight: "25px"
+                              }}
                             >
                               {ReactHtmlParser(
                                 this.props.pageStore.rekeningterpisah.subContent

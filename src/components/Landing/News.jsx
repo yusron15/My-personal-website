@@ -45,7 +45,7 @@ const items2 = [
         className="info info-warning broken-white"
         style={{
           backgroundImage: `url(${bg})`,
-          backgroundColor: "rgba(0, 0, 0, 0.25)",
+          // backgroundColor: "rgba(0, 0, 0, 0.25)",
           backgroundSize: "cover"
         }}
       >
@@ -231,7 +231,7 @@ class News extends React.Component {
       return (
         <>
           <h3 className="title center" style={{ textAlign: "center" }}>
-            Berita Ekonomi
+            Analisa Harian
           </h3>
           <div className="testimonials-2" style={{ padding: 0 }}>
             <Container>
@@ -239,15 +239,15 @@ class News extends React.Component {
                 <Col md="12">
                   <Carousel
                     activeIndex={this.state.carousel2Index}
-                    next={() => this.next(2, items2)}
-                    previous={() => this.previous(2, items2)}
+                    next={() => this.next(2, this.props.news.stock)}
+                    previous={() => this.previous(2, this.props.news.stock)}
                   >
                     <CarouselIndicators
-                      items={items2}
+                      items={this.props.news.stock}
                       activeIndex={this.state.carousel2Index}
                       onClickHandler={newIndex => this.goToIndex(newIndex, 2)}
                     />
-                    {items2.map((item, key) => {
+                    {this.props.news.stock.map((item, key) => {
                       return (
                         <CarouselItem
                           onExiting={() => this.onExiting(2)}
@@ -255,7 +255,24 @@ class News extends React.Component {
                           key={key}
                           className="justify-content-center"
                         >
-                          {item.content}
+                          <div
+                            className="info info-warning broken-white"
+                            style={{
+                              backgroundImage:
+                                "url(" + item.featured_image_src + ")",
+                              backgroundColor: "rgba(0, 0, 0, 0.25)",
+                              backgroundSize: "cover",
+                              height: 200,
+                              display: "flex",
+                              flexDirection: "column",
+                              justifyContent: "flex-end",
+                              alignItems: "flex-end"
+                            }}
+                          >
+                            <h4 className="title" style={{ color: "black" }}>
+                              {item.title.rendered}
+                            </h4>
+                          </div>
                         </CarouselItem>
                       );
                     })}
@@ -294,7 +311,10 @@ class News extends React.Component {
     return (
       <>
         <div className="cd-section" id="testimonials">
-          <div className="testimonials-4 broken-white" style={{ padding: 0 }}>
+          <div
+            className="testimonials-4"
+            style={{ padding: 0, backgroundColor: "#FCFCFC" }}
+          >
             {/* <ColoredNavbar /> */}
             <Container>
               <Row>
