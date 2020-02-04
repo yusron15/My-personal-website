@@ -694,10 +694,19 @@ export default (state = defaultState, action = {}) => {
     }
 
     case "GET_CONTENT": {
-      let keys = Object.keys(action.payload)[0];
+      let obj = { ...state };
+      let keys = Object.keys(action.payload);
+
+      let load = keys.map(item => {
+        // return {
+        //   [item]: action.payload[item]
+        // };
+
+        Object.assign(obj, { [item]: action.payload[item] });
+      });
+      console.log("loadload", obj);
       return {
-        ...state,
-        [keys]: action.payload[keys]
+        ...obj
       };
     }
 

@@ -18,11 +18,12 @@ export function getContent(page, lang, toggle) {
         type: "GET_CONTENT",
         payload: result
       });
-
-      dispatch({
-        type: "SET_CURRENT_PAGE",
-        payload: page
-      });
+      if (page !== "Header") {
+        dispatch({
+          type: "SET_CURRENT_PAGE",
+          payload: page
+        });
+      }
     }
   };
 }

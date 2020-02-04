@@ -51,60 +51,60 @@ class BottomNavbar extends React.Component {
   }
 
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    // await this.props.fetchPage("landing", "id");
   }
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.changeNavbarPosition);
-    window.addEventListener("scroll", this.changeNavbarPositionMobile);
-  }
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.changeNavbarTop);
-  }
+  // componentDidMount() {
+  //   window.addEventListener("scroll", this.changeNavbarPosition);
+  //   window.addEventListener("scroll", this.changeNavbarPositionMobile);
+  // }
+  // componentWillUnmount() {
+  //   window.removeEventListener("scroll", this.changeNavbarTop);
+  // }
 
-  changeNavbarPosition = () => {
-    if (
-      document.documentElement.scrollTop > 4000 ||
-      document.body.scrollTop > 4000
-    ) {
-      this.setState({
-        position: "fixed"
-        // display: "block"
-      });
-    } else if (
-      document.documentElement.scrollTop < 300 ||
-      document.body.scrollTop < 300
-    ) {
-      this.setState({
-        position: ""
-      });
-    }
-  };
+  // changeNavbarPosition = () => {
+  //   if (
+  //     document.documentElement.scrollTop > 4000 ||
+  //     document.body.scrollTop > 4000
+  //   ) {
+  //     this.setState({
+  //       position: "fixed"
+  //       // display: "block"
+  //     });
+  //   } else if (
+  //     document.documentElement.scrollTop < 300 ||
+  //     document.body.scrollTop < 300
+  //   ) {
+  //     this.setState({
+  //       position: ""
+  //     });
+  //   }
+  // };
 
-  changeNavbarPositionMobile = () => {
-    if (
-      document.documentElement.scrollTop > 6000 ||
-      document.body.scrollTop > 6000
-    ) {
-      this.setState({
-        position: "fixed"
-      });
-    } else if (
-      document.documentElement.scrollTop < 300 ||
-      document.body.scrollTop < 300
-    ) {
-      this.setState({
-        position: ""
-      });
-    } else if (
-      document.documentElement.scrollTop > 6000 ||
-      (document.body.scrollTop > 6000 && this.removeButton() === true)
-    ) {
-      this.setState({
-        position: ""
-      });
-    }
-  };
+  // changeNavbarPositionMobile = () => {
+  //   if (
+  //     document.documentElement.scrollTop > 6000 ||
+  //     document.body.scrollTop > 6000
+  //   ) {
+  //     this.setState({
+  //       position: "fixed"
+  //     });
+  //   } else if (
+  //     document.documentElement.scrollTop < 300 ||
+  //     document.body.scrollTop < 300
+  //   ) {
+  //     this.setState({
+  //       position: ""
+  //     });
+  //   } else if (
+  //     document.documentElement.scrollTop > 6000 ||
+  //     (document.body.scrollTop > 6000 && this.removeButton() === true)
+  //   ) {
+  //     this.setState({
+  //       position: ""
+  //     });
+  //   }
+  // };
 
   removeButton = () => {
     this.setState({
@@ -115,14 +115,12 @@ class BottomNavbar extends React.Component {
   renderContent = () => {
     const styles = {
       containerStyle: {
-        position: this.state.position,
         maxHeight: "350px",
         bacckgroundSize: "cover",
         backgroundImage:
           "url(" + require("assets/img/ebook-background.png") + ")"
       },
       containerStyleMobile: {
-        position: this.state.position,
         maxHeight: "350px",
         bacckgroundSize: "cover",
         backgroundImage:

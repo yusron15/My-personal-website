@@ -27,7 +27,8 @@ class Landing extends React.Component {
     super();
     this.state = {
       navbarColor: "white",
-      color: "black"
+      color: "black",
+      showEbook: false
     };
   }
   async componentDidMount() {
@@ -91,8 +92,23 @@ class Landing extends React.Component {
           <NewsInverted />
         </VizSensor>
 
-        <Benefit />
-        <VizSensor scrollCheck onChange={this.onChange("black")}>
+        <VizSensor
+          scrollCheck
+          partialVisibility
+          onChange={async isVisible => {
+            if (isVisible) {
+              await this.setState({
+                showEbook: true
+              });
+
+              console.log(this.state.showEbook, "this.state.showEbook");
+            }
+          }}
+        >
+          <Benefit />
+        </VizSensor>
+
+        <VizSensor onChange={this.onChange("black")}>
           <Legality />
         </VizSensor>
 
@@ -104,7 +120,14 @@ class Landing extends React.Component {
             <div className="space-50" />
           </div>
         )} */}
-        <BottomNavbar />
+        {this.state.showEbook && (
+          <div style={{ position: "fixed", bottom: 0 }}>
+            <BottomNavbar />
+            {/* <div
+              style={{ height: 200, width: 200, backgroundColor: "red" }}
+            ></div> */}
+          </div>
+        )}
       </>
     );
   }
