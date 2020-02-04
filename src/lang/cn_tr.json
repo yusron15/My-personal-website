@@ -197,11 +197,14 @@
       "content": "提供具有各種投資產品的最佳交易設施以及最新最受信任的金融市場信息服務 \n 通過創新的網上交易技術為本地和全球範圍內的投資者提供在線交易設施 \n 通過長期教育計劃積極參與建立透明的期貨交易行業 不斷提高和發展專業人力資源質量"
     }
   },
-  "cabang": [
-    { "image": "", "title": "", "content": "" },
-    { "image": "", "title": "", "content": "" },
-    { "image": "", "title": "", "content": "" }
-  ],
+  "cabang": {
+    "title": "我們的分支",
+    "listCabang": [
+      { "image": "", "title": "", "content": "" },
+      { "image": "", "title": "", "content": "" },
+      { "image": "", "title": "", "content": "" }
+    ]
+  },
   "rekeningterpisah": {
     "header": "獨立賬戶",
     "content": {

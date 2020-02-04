@@ -2,6 +2,7 @@
 import { fetchPage, getContent } from "../actions/pagesAction";
 import { fetchLanding } from "../actions/landingActions";
 import { getNews, getAllNews } from "../actions/newsActions";
+import { getCabangs } from "../actions/cabangActions";
 
 export {
   // page action
@@ -9,5 +10,7 @@ export {
   fetchPage,
   getContent,
   getNews,
-  getAllNews
+  getAllNews,
+  // cabang
+  getCabangs
 };

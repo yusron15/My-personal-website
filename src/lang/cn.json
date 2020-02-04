@@ -197,11 +197,14 @@
       "content": "提供具有各种投资产品的最佳交易设施以及最新最受信任的金融市场信息服务\r\n\r\n        通过创新的网上交易技术为本地和全球范围内的投资者提供在线交易设施\r\n        \r\n        通过长期教育计划积极参与建立透明的期货交易行业\r\n        \r\n        不断提高和发展专业人力资源质量\r\n        \r\n        "
     }
   },
-  "cabang": [
-    { "image": "", "title": "", "content": "" },
-    { "image": "", "title": "", "content": "" },
-    { "image": "", "title": "", "content": "" }
-  ],
+  "cabang": {
+    "title": "我们的分支",
+    "listCabang": [
+      { "image": "", "title": "", "content": "" },
+      { "image": "", "title": "", "content": "" },
+      { "image": "", "title": "", "content": "" }
+    ]
+  },
   "rekeningterpisah": {
     "header": "独立账户",
     "content": {

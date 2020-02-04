@@ -207,11 +207,14 @@
       "content": "Providing the best transaction facilities with various investment products as well as the latest and most trusted financial market information services    Providing online trading facilities for investors, both locally and globally, thorugh an innovative online trading technology\r\n        \r\n        Actively participating in building a transparent futures trading industry through continuous education programs\r\n        \r\n        Improving and developing the quality of professional human resources\r\n        \r\n        "
     }
   },
-  "cabang": [
-    { "image": "", "title": "", "content": "" },
-    { "image": "", "title": "", "content": "" },
-    { "image": "", "title": "", "content": "" }
-  ],
+  "cabang": {
+    "title": "Our Branch",
+    "listCabang": [
+      { "image": "", "title": "", "content": "" },
+      { "image": "", "title": "", "content": "" },
+      { "image": "", "title": "", "content": "" }
+    ]
+  },
   "rekeningterpisah": {
     "header": "Segregated Account",
     "content": {

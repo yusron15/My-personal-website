@@ -41,6 +41,9 @@ import { getContent } from "../../redux/ducks/actions";
 
 import "../../assets/css/main.css";
 
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
 const PrevButton = props => {
   return (
     <img
@@ -129,10 +132,6 @@ class News extends React.Component {
     activeSlide: 0,
     activeSlide2: 0
   };
-
-  async componentDidMount() {
-    await this.props.getContent("cabang", "id");
-  }
 
   toggle = tab => {
     if (this.state.activeTab !== tab) {
@@ -253,7 +252,7 @@ class News extends React.Component {
                       activeIndex={this.state.carousel2Index}
                       onClickHandler={newIndex => this.goToIndex(newIndex, 2)}
                     />
-                    {items2.map((item, key) => {
+                    {this.props.cabangList.map((item, key) => {
                       return (
                         <CarouselItem
                           onExiting={() => this.onExiting(2)}
@@ -261,7 +260,22 @@ class News extends React.Component {
                           key={key}
                           className="justify-content-center"
                         >
-                          {item.content}
+                          <div
+                            className="info info-warning broken-white"
+                            style={{
+                              backgroundImage: `url(${bgcard})`,
+                              backgroundColor: "rgba(0, 0, 0, 0.25)",
+                              backgroundSize: "cover"
+                            }}
+                          >
+                            <h4 className="title" style={{ color: "white" }}>
+                              Best Quality
+                            </h4>
+                            <p style={{ color: "white" }}>
+                              Gain access to the demographics, psychographics,
+                              and location of unique people.
+                            </p>
+                          </div>
                         </CarouselItem>
                       );
                     })}
@@ -326,7 +340,7 @@ class News extends React.Component {
                 >
                   {/* <ScrollAnimation animateIn="fadeInRight" animateOut="fadeOut"> */}
                   <Slick {...slickSettings}>
-                    {this.props.pageStore.cabang.map((item, index) => {
+                    {this.props.cabangList.map((item, index) => {
                       return (
                         <div key={index}>
                           <NavLink
@@ -341,7 +355,7 @@ class News extends React.Component {
                                 // "url(" +
                                 // require("assets/img/kantorpusat.png") +
                                 // ")",
-                                "url(" + item.image + ")",
+                                "url(" + item.image_url + ")",
                               height: "30vh",
                               backgroundSize: "cover"
                             }}
@@ -360,42 +374,20 @@ class News extends React.Component {
                   xs="10"
                 >
                   {/* <ScrollAnimation animateIn="fadeInLeft" animateOut="fadeOut"> */}
-                  <h1 className="title font-black">Cabang Kami</h1>
+                  <h1 className="title font-black">
+                    {this.props.pageStore.cabang.title}
+                  </h1>
                   <p className="description text-white">
                     <TabContent activeTab={"project" + this.state.activeSlide}>
-                      <TabPane tabId="project0">
-                        {/* <Col> */}
-                        <div className="title font-black">Kantor Pusat</div>
-                        <p className="description font-black mb-5">
-                          Sahid Sudirman Center, Lantai 40 Jl. Jend Sudirman Kav
-                          86 Jakarta 10220 Indonesia +62.21. 2788 9393
-                        </p>
-                        {/* </Col> */}
-                      </TabPane>
-                      <TabPane tabId="project1">
-                        <div className="title font-black">
-                          Kantor Cabang Sungai Gerong
-                        </div>
-                        <p className="description font-black mb-5">
-                          Sahid Sudirman Center, Lantai 40 Jl. Jend Sudirman Kav
-                          86 Jakarta 10220 Indonesia +62.21. 2788 9393
-                        </p>
-                      </TabPane>
-                      <TabPane tabId="project2">
-                        <p className="description font-black mb-5">
-                          Add your information here for News 3.
-                        </p>
-                      </TabPane>
-                      <TabPane tabId="project3">
-                        <p className="description font-black mb-5">
-                          Add your information here for News 4.
-                        </p>
-                      </TabPane>
-                      <TabPane tabId="project4">
-                        <p className="description font-black mb-5">
-                          Add your information here for News 5.
-                        </p>
-                      </TabPane>
+                      {this.props.cabangList.map((item, index) => (
+                        <TabPane tabId={`project${index}`}>
+                          {/* <Col> */}
+                          <div className="title font-black">{item.nama}</div>
+                          <p className="description font-black mb-5">
+                            {item.alamat}
+                          </p>
+                        </TabPane>
+                      ))}
                     </TabContent>
                   </p>
                   {/* </ScrollAnimation> */}
@@ -414,11 +406,10 @@ class News extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  cabangList: state.cabangStore.cabangList
 });
 
-const mapDispatchToProps = dispatch => ({
-  getContent: (section, lang) => dispatch(getContent(section, lang))
-});
+const mapDispatchToProps = dispatch => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(News);
