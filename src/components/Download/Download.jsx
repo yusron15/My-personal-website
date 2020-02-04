@@ -6,9 +6,13 @@ import { isMobile } from "react-device-detect";
 import { Badge, Button, Container, Row, Col } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 import laptop from "../../assets/img/download-image.png";
-import android from "../../assets/img/download-android.png";
-import mac from "../../assets/img/download-mac.png";
-import ios from "../../assets/img/download-ios.png";
+import pc from "../../assets/img/downloadwindows.png";
+import mac from "../../assets/img/downloadmac.png";
+import android from "../../assets/img/downloadandroid.png";
+import ios from "../../assets/img/downloadios.png";
+import mobile from "../../assets/img/downloadmobile.png";
+import mobilese from "../../assets/img/downloadmobilese.png";
+
 import googleplay from "../../assets/img/playstore.png";
 import appstore from "../../assets/img/appstore.png";
 import windows from "../../assets/img/windows-download.png";
@@ -156,10 +160,10 @@ class Features extends React.Component {
                           alt="..."
                           className="bg-blob"
                           style={{
-                            width: "10vw",
+                            width: "15vw",
                             height: "auto"
                           }}
-                          src={windows}
+                          src={ios}
                         />
                       </ScrollAnimation>
                     </Col>
@@ -172,10 +176,10 @@ class Features extends React.Component {
                           alt="..."
                           className="bg-blob"
                           style={{
-                            width: "10vw",
+                            width: "15vw",
                             height: "auto"
                           }}
-                          src={appstore}
+                          src={mac}
                         />
                       </ScrollAnimation>
                     </Col>
@@ -194,10 +198,10 @@ class Features extends React.Component {
                           alt="..."
                           className="bg-blob"
                           style={{
-                            width: "10vw",
+                            width: "15vw",
                             height: "auto"
                           }}
-                          src={windows}
+                          src={mobile}
                         />
                       </ScrollAnimation>
                     </Col>
@@ -210,10 +214,48 @@ class Features extends React.Component {
                           alt="..."
                           className="bg-blob"
                           style={{
-                            width: "10vw",
+                            width: "15vw",
                             height: "auto"
                           }}
-                          src={googleplay}
+                          src={android}
+                        />
+                      </ScrollAnimation>
+                    </Col>
+                  </Row>
+                  <Row
+                    style={{
+                      marginTop: "20px"
+                    }}
+                  >
+                    <Col md="4">
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          style={{
+                            width: "15vw",
+                            height: "auto"
+                          }}
+                          src={mobilese}
+                        />
+                      </ScrollAnimation>
+                    </Col>
+                    <Col md="4">
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <img
+                          alt="..."
+                          className="bg-blob"
+                          style={{
+                            width: "15vw",
+                            height: "auto"
+                          }}
+                          src={pc}
                         />
                       </ScrollAnimation>
                     </Col>

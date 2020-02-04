@@ -6,12 +6,16 @@ import { isMobile } from "react-device-detect";
 import { Badge, Button, Container, Row, Col } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 import laptop from "../../assets/img/download-pc.png";
-import android from "../../assets/img/download-android.png";
-import mac from "../../assets/img/download-mac.png";
-import ios from "../../assets/img/download-ios.png";
+
 import windows from "../../assets/img/windows-download.png";
 import appstore from "../../assets/img/appstore.png";
 import googleplay from "../../assets/img/playstore.png";
+
+import pc from "../../assets/img/downloadwindows.png";
+import mac from "../../assets/img/downloadmac.png";
+import android from "../../assets/img/downloadandroid.png";
+import ios from "../../assets/img/downloadios.png";
+
 import world from "../../assets/img/world.png";
 import bg from "../../assets/img/download-bg.png";
 
@@ -154,10 +158,10 @@ class Features extends React.Component {
                           alt="..."
                           className="bg-blob"
                           style={{
-                            width: "10vw",
+                            width: "15vw",
                             height: "auto"
                           }}
-                          src={windows}
+                          src={pc}
                         />
                       </ScrollAnimation>
                     </Col>
@@ -170,10 +174,10 @@ class Features extends React.Component {
                           alt="..."
                           className="bg-blob"
                           style={{
-                            width: "10vw",
+                            width: "15vw",
                             height: "auto"
                           }}
-                          src={appstore}
+                          src={mac}
                         />
                       </ScrollAnimation>
                     </Col>
@@ -192,10 +196,10 @@ class Features extends React.Component {
                           alt="..."
                           className="bg-blob"
                           style={{
-                            width: "10vw",
+                            width: "15vw",
                             height: "auto"
                           }}
-                          src={windows}
+                          src={android}
                         />
                       </ScrollAnimation>
                     </Col>
@@ -208,10 +212,10 @@ class Features extends React.Component {
                           alt="..."
                           className="bg-blob"
                           style={{
-                            width: "10vw",
+                            width: "15vw",
                             height: "auto"
                           }}
-                          src={googleplay}
+                          src={ios}
                         />
                       </ScrollAnimation>
                     </Col>

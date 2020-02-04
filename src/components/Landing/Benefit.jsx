@@ -160,6 +160,7 @@ class Testimonials extends React.Component {
   onExited = carousel => {
     this["carousel" + carousel + "Animating"] = false;
   };
+  
   next = (carousel, items) => {
     if (this["carousel" + carousel + "Animating"]) return;
     const nextIndex =
@@ -168,6 +169,8 @@ class Testimonials extends React.Component {
         : this.state["carousel" + carousel + "Index"] + 1;
     this.setState({ ["carousel" + carousel + "Index"]: nextIndex });
   };
+
+
   previous = (carousel, items) => {
     if (this["carousel" + carousel + "Animating"]) return;
     const nextIndex =
@@ -176,6 +179,8 @@ class Testimonials extends React.Component {
         : this.state["carousel" + carousel + "Index"] - 1;
     this.setState({ ["carousel" + carousel + "Index"]: nextIndex });
   };
+
+
   goToIndex = (newIndex, carousel) => {
     if (this["carousel" + carousel + "Animating"]) return;
     this.setState({ ["carousel" + carousel + "Index"]: newIndex });

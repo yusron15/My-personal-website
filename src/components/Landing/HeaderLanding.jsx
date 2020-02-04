@@ -147,7 +147,8 @@ class HeaderLanding extends React.Component {
                           this.props.pageStore.Landing.HeaderLanding.slide[1]
                             .image +
                           ")",
-                        backgroundSize: "cover"
+                        backgroundSize: "auto",
+                        backgroundRepeat: "no-repeat"
                       }}
                     >
                       <Container style={{ paddingTop: 0 }}>

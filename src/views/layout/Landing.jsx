@@ -23,8 +23,8 @@ import { connect } from "react-redux";
 import { fetchPage, getContent, getNews } from "../../redux/ducks/actions.js";
 
 class Landing extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       navbarColor: "white",
       color: "black",
@@ -53,6 +53,12 @@ class Landing extends React.Component {
         color: id
       });
     }
+  };
+
+  removeEbook = () => {
+    this.setState({
+      showEbook: false
+    });
   };
 
   render() {
@@ -105,7 +111,7 @@ class Landing extends React.Component {
             }
           }}
         >
-          <Benefit />
+          <Benefit/>
         </VizSensor>
 
         <VizSensor onChange={this.onChange("black")}>
@@ -122,7 +128,7 @@ class Landing extends React.Component {
         )} */}
         {this.state.showEbook && (
           <div style={{ position: "fixed", bottom: 0 }}>
-            <BottomNavbar />
+            <BottomNavbar sendFunction={this.removeEbook} />
             {/* <div
               style={{ height: 200, width: 200, backgroundColor: "red" }}
             ></div> */}

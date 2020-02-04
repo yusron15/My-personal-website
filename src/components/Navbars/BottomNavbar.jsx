@@ -23,6 +23,7 @@ import {
   InputGroup,
   Input
 } from "reactstrap";
+import Landing from "../../../src/views/layout/Landing";
 import ScrollAnimation from "react-animate-on-scroll";
 import logo from "../../assets/img/Bitmap.png";
 import bg from "../../assets/img/bg-bottom-navbar.png";
@@ -41,6 +42,7 @@ const stylesAnimation = {
   }
 };
 
+
 class BottomNavbar extends React.Component {
   constructor(props) {
     super(props);
@@ -49,6 +51,8 @@ class BottomNavbar extends React.Component {
       display: "none"
     };
   }
+
+  
 
   async componentDidMount() {
     // await this.props.fetchPage("landing", "id");
@@ -107,9 +111,7 @@ class BottomNavbar extends React.Component {
   // };
 
   removeButton = () => {
-    this.setState({
-      position: ""
-    });
+    this.props.sendFunction();
   };
 
   renderContent = () => {
@@ -339,7 +341,14 @@ class BottomNavbar extends React.Component {
                   </Col>
                   <Col md="2">
                     <div className="vertical-center">
-                      <Button block color="info" type="button">
+                      <Button
+                        block
+                        color="info"
+                        type="button"
+                        onClick={() => {
+                          this.removeButton();
+                        }}
+                      >
                         Download EBook
                       </Button>
                     </div>

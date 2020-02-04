@@ -526,7 +526,7 @@ class Content extends React.Component {
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">
-              Edukasi
+                Edukasi
                 {/* {this.props.pageStore.edukasi.Header} */}
               </div>
             </div>
@@ -557,7 +557,7 @@ class Content extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col md="4">
+                <Col md="4" style={{ marginTop: "22px" }}>
                   <Nav tabs vertical pills>
                     <NavItem>
                       <div

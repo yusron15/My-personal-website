@@ -127,6 +127,7 @@ class SidebarMobile extends React.Component {
           </Container>
         </Navbar>
         <Sidebar
+          styles={{ sidebar: { background: "grey" } }}
           touchHandleWidth
           pullRight={true}
           sidebar={
