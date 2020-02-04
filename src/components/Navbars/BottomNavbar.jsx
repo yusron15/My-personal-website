@@ -27,6 +27,8 @@ import Landing from "../../../src/views/layout/Landing";
 import ScrollAnimation from "react-animate-on-scroll";
 import logo from "../../assets/img/Bitmap.png";
 import bg from "../../assets/img/bg-bottom-navbar.png";
+import close from "../../assets/img/closeicon.png";
+
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import Radium, { StyleRoot } from "radium";
@@ -42,7 +44,6 @@ const stylesAnimation = {
   }
 };
 
-
 class BottomNavbar extends React.Component {
   constructor(props) {
     super(props);
@@ -51,8 +52,6 @@ class BottomNavbar extends React.Component {
       display: "none"
     };
   }
-
-  
 
   async componentDidMount() {
     // await this.props.fetchPage("landing", "id");
@@ -136,24 +135,38 @@ class BottomNavbar extends React.Component {
             <div style={{ minHeight: "90px" }}>
               <div
                 style={{
-                  margin: "15px 10px 10px 10px"
+                  margin: "15px 10px 0 10px"
                 }}
               >
-                <Col className="ml-auto mr-auto" md="12">
+                <Col md="12" style={{ padding: "0 2px 0 2px" }}>
                   <Col>
-                    <div>
-                      <div
-                        style={{
-                          fontWeight: "bold",
-                          textAlign: "center",
-                          fontSize: "1.2rem",
-                          color: "white",
-                          marginTop: "5px"
+                    <div
+                      style={{
+                        fontWeight: "bold",
+                        textAlign: "center",
+                        fontSize: "1.2rem",
+                        color: "white",
+                        marginTop: "5px",
+                        marginBottom: "5px"
+                      }}
+                    >
+                      {this.props.pageStore.Landing.BottomNavbar.title}
+                      <img
+                        onClick={() => {
+                          this.removeButton();
                         }}
-                      >
-                        {this.props.pageStore.Landing.BottomNavbar.title}
-                      </div>
+                        style={{
+                          justifyContent: "flex-end",
+                          position: "absolute",
+                          right: 0,
+                          marginTop: "5px",
+                          height: "25px",
+                          width: "25px"
+                        }}
+                        src={close}
+                      />
                     </div>
+
                     <div>
                       <Row>
                         <Col>
@@ -264,11 +277,23 @@ class BottomNavbar extends React.Component {
           >
             <div
               style={{
-                margin: "15px 10px 10px 10px"
+                margin: "15px 10px 0 10px"
               }}
             >
-              <Col className="ml-auto mr-auto" md="11">
+              <Col className="ml-auto mr-auto" md="12">
                 <Row>
+                  <img
+                    onClick={() => {
+                      this.removeButton();
+                    }}
+                    style={{
+                      justifyContent: "flex-end",
+                      margin: "5px 5px 5px 0",
+                      height: "25px",
+                      width: "25px"
+                    }}
+                    src={close}
+                  />
                   <Col md="2">
                     <div
                       style={{
@@ -339,16 +364,9 @@ class BottomNavbar extends React.Component {
                       onBlur={e => this.setState({ emailFocus: false })}
                     />
                   </Col>
-                  <Col md="2">
+                  <Col md="1">
                     <div className="vertical-center">
-                      <Button
-                        block
-                        color="info"
-                        type="button"
-                        onClick={() => {
-                          this.removeButton();
-                        }}
-                      >
+                      <Button block color="info" type="button">
                         Download EBook
                       </Button>
                     </div>
