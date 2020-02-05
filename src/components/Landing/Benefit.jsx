@@ -547,7 +547,7 @@ class Testimonials extends React.Component {
                                         borderRadius: "10px"
                                       }
                                     : {
-                                        height: "280px",
+                                        height: "300px",
                                         backgroundColor:
                                           "rgba(112, 112, 112, 0.19)",
                                         color: "white",
@@ -612,7 +612,7 @@ class Testimonials extends React.Component {
                                       borderRadius: "10px"
                                     }
                                   : {
-                                      height: "280px",
+                                      height: "300px",
                                       backgroundColor:
                                         "rgba(112, 112, 112, 0.19)",
                                       color: "white",
@@ -674,7 +674,7 @@ class Testimonials extends React.Component {
                                       borderRadius: "10px"
                                     }
                                   : {
-                                      height: "280px",
+                                      height: "300px",
                                       backgroundColor:
                                         "rgba(112, 112, 112, 0.19)",
                                       color: "white",
@@ -742,7 +742,7 @@ class Testimonials extends React.Component {
                                       borderRadius: "10px"
                                     }
                                   : {
-                                      height: "280px",
+                                      height: "300px",
                                       backgroundColor:
                                         "rgba(112, 112, 112, 0.19)",
                                       color: "white",
@@ -804,7 +804,7 @@ class Testimonials extends React.Component {
                                       borderRadius: "10px"
                                     }
                                   : {
-                                      height: "280px",
+                                      height: "300px",
                                       backgroundColor:
                                         "rgba(112, 112, 112, 0.19)",
                                       color: "white",
@@ -866,7 +866,7 @@ class Testimonials extends React.Component {
                                       borderRadius: "10px"
                                     }
                                   : {
-                                      height: "280px",
+                                      height: "300px",
                                       backgroundColor:
                                         "rgba(112, 112, 112, 0.19)",
                                       color: "white",

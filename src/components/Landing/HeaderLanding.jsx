@@ -95,7 +95,8 @@ class HeaderLanding extends React.Component {
                           this.props.pageStore.Landing.HeaderLanding.slide[0]
                             .image +
                           ")",
-                        backgroundSize: "cover"
+                        backgroundSize: "cover",
+                        minHeight: "93vh"
                       }}
                     >
                       {/* here */}
@@ -142,8 +143,11 @@ class HeaderLanding extends React.Component {
                           this.props.pageStore.Landing.HeaderLanding.slide[1]
                             .image +
                           ")",
-                        backgroundSize: "auto",
-                        backgroundRepeat: "no-repeat"
+                        backgroundSize: "cover",
+                        minHeight: "93vh"
+
+                        // backgroundSize: "auto",
+                        // backgroundRepeat: "no-repeat"
                       }}
                     >
                       <Container style={{ paddingTop: 0 }}>
@@ -189,7 +193,8 @@ class HeaderLanding extends React.Component {
                           this.props.pageStore.Landing.HeaderLanding.slide[2]
                             .image +
                           ")",
-                        backgroundSize: "cover"
+                        backgroundSize: "cover",
+                        minHeight: "93vh"
                       }}
                     >
                       <Container style={{ paddingTop: 0 }}>

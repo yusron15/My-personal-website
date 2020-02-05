@@ -27,7 +27,7 @@ import Landing from "../../../src/views/layout/Landing";
 import ScrollAnimation from "react-animate-on-scroll";
 import logo from "../../assets/img/Bitmap.png";
 import bg from "../../assets/img/bg-bottom-navbar.png";
-import close from "../../assets/img/closeicon.png";
+import close from "../../assets/img/redclose.png";
 
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
@@ -118,6 +118,8 @@ class BottomNavbar extends React.Component {
       containerStyle: {
         maxHeight: "350px",
         bacckgroundSize: "cover",
+        zIndex: "99",
+        position: "absolute",
         backgroundImage:
           "url(" + require("assets/img/ebook-background.png") + ")"
       },

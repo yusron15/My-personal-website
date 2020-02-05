@@ -450,7 +450,7 @@ class SidebarMobile extends React.Component {
           styles={{
             sidebar: {
               backgroundColor: "#fff7f7",
-              width: "50vw",
+              width: "60vw",
               zIndex: "9999",
               position: "fixed"
             }

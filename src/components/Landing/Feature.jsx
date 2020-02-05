@@ -304,7 +304,8 @@ class Features extends React.Component {
                     size: 6,
                     offset: 2
                   }}
-                  style={{ zIndex: "9" }}
+                  style={{ zIndex: "2" }}
+
                 >
                   <Row>
                     <Col md={6} lg={6}>

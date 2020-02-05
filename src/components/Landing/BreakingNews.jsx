@@ -168,7 +168,8 @@ class BreakingNews extends Component {
                 alignItems: "center",
                 color: "white",
                 fontSize: "1rem",
-                verticalAlign: "middle"
+                verticalAlign: "middle",
+                overflow: "hidden"
               }}
             >
               <marquee scrollamount="5">

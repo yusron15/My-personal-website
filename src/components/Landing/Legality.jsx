@@ -120,6 +120,96 @@ class Projects extends React.Component {
                 </Row>
                 {/* <Col>
                   <div> */}
+                <Nav
+                  className="nav-pills-info nav-pills-icons nav-pills-lg"
+                  pills
+                  role="tablist"
+                  // style={{marginTop:"50px"}}
+                >
+                  <Row>
+                    <NavItem className="m-auto">
+                      <img
+                        src={
+                          this.state.activeTab === "1"
+                            ? require('"../../assets/img/colored-bappebti.png')
+                            : require('"../../assets/img/grey-bappebti.png')
+                        }
+                        style={{ margin: "10px" }}
+                        width={this.state.activeTab === "1" ? "100" : "100"}
+                        auto="auto"
+                        className={this.state.activeTab === "1" ? "active" : ""}
+                        onClick={() => {
+                          this.toggle("1");
+                        }}
+                      />
+                    </NavItem>
+                    <NavItem className="m-auto">
+                      <img
+                        src={
+                          this.state.activeTab === "2"
+                            ? require('"../../assets/img/colored-jfx.png')
+                            : require('"../../assets/img/grey-jfx.png')
+                        }
+                        style={{ margin: "10px" }}
+                        width={this.state.activeTab === "2" ? "100" : "100"}
+                        auto="auto"
+                        className={this.state.activeTab === "2" ? "active" : ""}
+                        onClick={() => {
+                          this.toggle("2");
+                        }}
+                      />
+                    </NavItem>
+                    <NavItem className="m-auto">
+                      <img
+                        src={
+                          this.state.activeTab === "3"
+                            ? require('"../../assets/img/colored-kbi.png')
+                            : require('"../../assets/img/grey-kbi.png')
+                        }
+                        style={{ margin: "10px" }}
+                        width={this.state.activeTab === "3" ? "100" : "100"}
+                        auto="auto"
+                        className={this.state.activeTab === "3" ? "active" : ""}
+                        onClick={() => {
+                          this.toggle("3");
+                        }}
+                      />
+                    </NavItem>
+                    <NavItem className="m-auto">
+                      <img
+                        src={
+                          this.state.activeTab === "4"
+                            ? require('"../../assets/img/colored-ich.png')
+                            : require('"../../assets/img/grey-ich.png')
+                        }
+                        style={{ margin: "10px" }}
+                        width={this.state.activeTab === "4" ? "100" : "100"}
+                        auto="auto"
+                        className={this.state.activeTab === "4" ? "active" : ""}
+                        onClick={() => {
+                          this.toggle("4");
+                        }}
+                      />
+                    </NavItem>
+                    <NavItem className="m-auto">
+                      <img
+                        src={
+                          this.state.activeTab === "5"
+                            ? require('"../../assets/img/colored-icdx.png')
+                            : require('"../../assets/img/grey-icdx.png')
+                        }
+                        style={{ margin: "10px" }}
+                        width={this.state.activeTab === "5" ? "100" : "100"}
+                        auto="auto"
+                        className={this.state.activeTab === "5" ? "active" : ""}
+                        onClick={() => {
+                          this.toggle("5");
+                        }}
+                      />
+                    </NavItem>
+                  </Row>
+                </Nav>
+
                 <TabContent
                   className="tab-space"
                   style={{ height: "60%" }}
@@ -209,93 +299,6 @@ class Projects extends React.Component {
                 </TabContent>
                 {/* </div>
                   <div style={{ marginTop: "30vh" }}> */}
-                <Nav
-                  className="nav-pills-info nav-pills-icons nav-pills-lg"
-                  pills
-                  role="tablist"
-                  // style={{marginTop:"50px"}}
-                >
-                  <NavItem className="m-auto">
-                    <img
-                      src={
-                        this.state.activeTab === "1"
-                          ? require('"../../assets/img/colored-bappebti.png')
-                          : require('"../../assets/img/grey-bappebti.png')
-                      }
-                      style={{ margin: "10px" }}
-                      width={this.state.activeTab === "1" ? "100" : "100"}
-                      auto="auto"
-                      className={this.state.activeTab === "1" ? "active" : ""}
-                      onClick={() => {
-                        this.toggle("1");
-                      }}
-                    />
-                  </NavItem>
-                  <NavItem className="m-auto">
-                    <img
-                      src={
-                        this.state.activeTab === "2"
-                          ? require('"../../assets/img/colored-jfx.png')
-                          : require('"../../assets/img/grey-jfx.png')
-                      }
-                      style={{ margin: "10px" }}
-                      width={this.state.activeTab === "2" ? "100" : "100"}
-                      auto="auto"
-                      className={this.state.activeTab === "2" ? "active" : ""}
-                      onClick={() => {
-                        this.toggle("2");
-                      }}
-                    />
-                  </NavItem>
-                  <NavItem className="m-auto">
-                    <img
-                      src={
-                        this.state.activeTab === "3"
-                          ? require('"../../assets/img/colored-kbi.png')
-                          : require('"../../assets/img/grey-kbi.png')
-                      }
-                      style={{ margin: "10px" }}
-                      width={this.state.activeTab === "3" ? "100" : "100"}
-                      auto="auto"
-                      className={this.state.activeTab === "3" ? "active" : ""}
-                      onClick={() => {
-                        this.toggle("3");
-                      }}
-                    />
-                  </NavItem>
-                  <NavItem className="m-auto">
-                    <img
-                      src={
-                        this.state.activeTab === "4"
-                          ? require('"../../assets/img/colored-ich.png')
-                          : require('"../../assets/img/grey-ich.png')
-                      }
-                      style={{ margin: "10px" }}
-                      width={this.state.activeTab === "4" ? "100" : "100"}
-                      auto="auto"
-                      className={this.state.activeTab === "4" ? "active" : ""}
-                      onClick={() => {
-                        this.toggle("4");
-                      }}
-                    />
-                  </NavItem>
-                  <NavItem className="m-auto">
-                    <img
-                      src={
-                        this.state.activeTab === "5"
-                          ? require('"../../assets/img/colored-icdx.png')
-                          : require('"../../assets/img/grey-icdx.png')
-                      }
-                      style={{ margin: "10px" }}
-                      width={this.state.activeTab === "5" ? "100" : "100"}
-                      auto="auto"
-                      className={this.state.activeTab === "5" ? "active" : ""}
-                      onClick={() => {
-                        this.toggle("5");
-                      }}
-                    />
-                  </NavItem>
-                </Nav>
 
                 {/* </div>
                 </Col> */}
