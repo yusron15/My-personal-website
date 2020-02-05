@@ -520,7 +520,7 @@ hr.grey {
 }
 
 .minHeight {
-  min-height: 86vh;
+  min-height: calc(100vh - 90px);
 }
 
 .navbar-bottom {

@@ -265,7 +265,7 @@ class ColorNavbar extends React.Component {
               <div className="navbar-translate">
                 <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
                   {/* <Link to="/landing"> */}
-                  <img src={logo} style={{ height: "7vh", width: "auto" }} />
+                  <img src={logo} style={{ height: 50, width: "auto" }} />
                   {/* TGF */}
                   {/* </Link> */}
                 </NavbarBrand>

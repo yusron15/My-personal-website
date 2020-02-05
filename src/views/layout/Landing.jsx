@@ -111,7 +111,7 @@ class Landing extends React.Component {
             }
           }}
         >
-          <Benefit/>
+          <Benefit />
         </VizSensor>
 
         <VizSensor onChange={this.onChange("black")}>
@@ -127,7 +127,7 @@ class Landing extends React.Component {
           </div>
         )} */}
         {this.state.showEbook && (
-          <div style={{ position: "fixed", bottom: 0 }}>
+          <div style={{ position: "fixed", zIndex: 999, bottom: 0 }}>
             <BottomNavbar sendFunction={this.removeEbook} />
             {/* <div
               style={{ height: 200, width: 200, backgroundColor: "red" }}

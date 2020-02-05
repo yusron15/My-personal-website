@@ -21,14 +21,6 @@ class TableBody extends React.Component {
     } = this.props;
     return (
       <tbody style={{ backgroundColor: "#D1D1D1" }}>
-        {/* <Link
-          to={`/newspage/${time}`}
-          state={{
-            data: {
-              time
-            }
-          }}
-        > */}
         <tr className="even">
           <td>
             <Link

@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 
 // reactstrap components
 import {
@@ -7,6 +8,8 @@ import {
   CardBody,
   CardFooter,
   CardTitle,
+  FormGroup,
+  FormText,
   Container,
   Row,
   Table,
@@ -33,7 +36,18 @@ import span from "../../assets/img/flag-span.png";
 import japan from "../../assets/img/flag-japan.png";
 import singapore from "../../assets/img/flag-singapore.png";
 
+import DatePicker from "react-datepicker";
+
 class HeaderContent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataTabel: [],
+      date: "",
+      time: ""
+    };
+  }
+
   render() {
     return (
       <div
@@ -68,13 +82,58 @@ class HeaderContentMobile extends React.Component {
   }
 }
 
-class Blogs extends React.Component {
+class EconomicCalendar extends React.Component {
   state = {
-    dataSelect: ""
+    dataSelect: "",
+    dataTabel: []
   };
-  componentDidMount = () => {
-    window.scroll(0, 0);
-  };
+
+  async componentDidMount() {
+    try {
+      let countriesUrl =
+        "http://restcountries.eu/rest/v2/all?fields=currencies;name;alpha2Code";
+      let url = `https://api.tradingeconomics.com/calendar/country/All/2016-12-02/2016-12-03?c=guest:guest&format=json`;
+
+      let result = await fetch(url);
+      let countries = await fetch(countriesUrl);
+
+      countries = await countries.json();
+      result = await result.json();
+
+      // console.log(result, countries);
+
+      await this.setState({
+        dataTabel: result.map(item => {
+          let matchCountry = countries.filter(itemCt => {
+            return item.Country == itemCt.name;
+          })[0];
+
+          return {
+            time: moment(item.Date).format("HH:mm"),
+            flag:
+              item.Country == "East Timor"
+                ? "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_East_Timor.svg/250px-Flag_of_East_Timor.svg.png"
+                : `https://www.countryflags.io/${
+                    matchCountry ? matchCountry.alpha2Code : "0"
+                  }/flat/64.png`,
+            currency:
+              item.Country == "East Timor"
+                ? "USD"
+                : countries.filter(itemCt => {
+                    return item.Country == itemCt.name;
+                  })[0].currencies[0].code,
+            event: item.Event,
+            actual: item.Actual,
+            forecast: item.Forecast,
+            previous: item.Previous
+          };
+        })
+      });
+      // console.log(this.state.dataTabel, "result.json()");
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   renderContent = () => {
     if (isMobile) {
@@ -111,52 +170,18 @@ class Blogs extends React.Component {
                     <Container>
                       <Col style={{ marginTop: "30px", marginBottom: "30px" }}>
                         <Row>
-                          <div>
-                            <Label
-                              style={{
-                                color: "black",
-                                fontSize: "18px",
-                                marginRight: "10px",
-                                marginLeft: "10px"
+                          <Col md={6}>
+                            {/* <FormGroup>
+                              <Label>My Date Picker</Label>
+                            </FormGroup> */}
+                            <DatePicker
+                              id="example-datepicker"
+                              value={this.state.value}
+                              onChange={(v, f) => {
+                                console.log(v, f);
                               }}
-                              for="Date"
-                            >
-                              Date
-                            </Label>
-                          </div>
-                          <div>
-                            <Input
-                              type="date"
-                              name="date"
-                              id="date"
-                              placeholder="10/06/2019"
-                              style={{ width: "200px", color: "black" }}
                             />
-                          </div>
-                        </Row>
-                        <Row style={{ marginTop: "20px" }}>
-                          <div>
-                            <Label
-                              style={{
-                                color: "black",
-                                fontSize: "18px",
-                                marginRight: "10px",
-                                marginLeft: "10px"
-                              }}
-                              for="Time"
-                            >
-                              Time
-                            </Label>
-                          </div>
-                          <div>
-                            <Input
-                              type="text"
-                              name="text"
-                              id="text"
-                              placeholder="10:05 AM"
-                              style={{ width: "200px" }}
-                            />
-                          </div>
+                          </Col>
                         </Row>
                       </Col>
                       <Table
@@ -198,171 +223,9 @@ class Blogs extends React.Component {
                           </tr>
                         </thead>
 
-                        <TableBody
-                          time="7:00"
-                          flag={canada}
-                          currency="CAD"
-                          event="BoC Governor Poloz Speech"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-
-                        <TableBody
-                          time="7:00"
-                          flag={japan}
-                          currency="JPY"
-                          event="Coincident Index"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-
-                        <TableBody
-                          time="12:00"
-                          flag={japan}
-                          currency="JPY"
-                          event="Leading Index"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-
-                        <TableBody
-                          time="12:00"
-                          flag={japan}
-                          currency="JPY"
-                          event="Coincident Index m/m"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-
-                        <TableBody
-                          time="12:00"
-                          flag={japan}
-                          currency="JPY"
-                          event="Leading Index m/m"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-
-                        <TableBody
-                          time="12:00"
-                          flag={singapore}
-                          currency="SGD"
-                          event="CPI y/y"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-
-                        <TableBody
-                          time="15:00"
-                          flag={span}
-                          currency="EUR"
-                          event="PPI y/y"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-
-                        <TableBody
-                          time="16:30"
-                          flag={germany}
-                          currency="EUR"
-                          event="Ifo Business Expectations"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-                        {/* </Table>
-
-            <Table
-              responsive
-              className="table-shopping"
-              style={{ backgroundColor: "#484D4F", borderRadius: "5px" }}
-            > */}
-                        <thead>
-                          <tr
-                            style={{
-                              backgroundColor: "#484D4F",
-                              borderRadius: "5px"
-                            }}
-                          >
-                            <td
-                              colspan="6"
-                              className="text-center title"
-                              style={{
-                                fontSize: "20px",
-                                backgroundColor: "#19447E"
-                              }}
-                            >
-                              26 November 2019, Tuesday
-                            </td>
-                          </tr>
-                        </thead>
-
-                        <TableBody
-                          time="7:00"
-                          flag={canada}
-                          currency="CAD"
-                          event="BoC Governor Poloz Speech"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-
-                        <TableBody
-                          time="7:00"
-                          flag={japan}
-                          currency="JPY"
-                          event="Coincident Index"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-
-                        <TableBody
-                          time="12:00"
-                          flag={japan}
-                          currency="JPY"
-                          event="Leading Index"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-
-                        <TableBody
-                          time="12:00"
-                          flag={singapore}
-                          currency="SGD"
-                          event="Coincident Index m/m"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-
-                        <TableBody
-                          time="12:00"
-                          flag={span}
-                          currency="EUR"
-                          event="Leading Index m/m"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
-
-                        <TableBody
-                          time="12:00"
-                          flag={germany}
-                          currency="EUR"
-                          event="Leading Index m/m"
-                          actual="101.1"
-                          forecast="101"
-                          previous="101"
-                        />
+                        {this.state.dataTabel.map(item => (
+                          <TableBody {...item} />
+                        ))}
                       </Table>
                     </Container>
                   </div>
@@ -409,13 +272,20 @@ class Blogs extends React.Component {
               <div className="features-3" style={{ paddingTop: 0 }}>
                 <div>
                   <Container>
-                    <Row style={{ marginTop: "30px", marginBottom: "30px" }}>
+                    {/* <Row style={{ marginTop: "30px", marginBottom: "30px" }}> */}
+                    <FormGroup
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginTop: 20
+                      }}
+                    >
                       <Label
                         style={{
                           color: "black",
                           fontSize: "18px",
-                          marginRight: "10px",
-                          marginLeft: "10px"
+                          margin: 0,
+                          marginRight: 10
                         }}
                         for="Date"
                       >
@@ -425,28 +295,16 @@ class Blogs extends React.Component {
                         type="date"
                         name="date"
                         id="date"
+                        defaultValue={new Date()}
                         placeholder="10/06/2019"
+                        onChange={date => {
+                          console.log(date.target.value);
+                        }}
                         style={{ width: "200px", color: "black" }}
                       />
-                      <Label
-                        style={{
-                          color: "black",
-                          fontSize: "18px",
-                          marginRight: "10px",
-                          marginLeft: "10px"
-                        }}
-                        for="Time"
-                      >
-                        Time
-                      </Label>
-                      <Input
-                        type="text"
-                        name="text"
-                        id="text"
-                        placeholder="10:05 AM"
-                        style={{ width: "200px" }}
-                      />
-                    </Row>
+                    </FormGroup>
+                    {/* </Row> */}
+
                     <Table
                       responsive
                       className="table-shopping"
@@ -486,171 +344,9 @@ class Blogs extends React.Component {
                         </tr>
                       </thead>
 
-                      <TableBody
-                        time="7:00"
-                        flag={canada}
-                        currency="CAD"
-                        event="BoC Governor Poloz Speech"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-
-                      <TableBody
-                        time="7:00"
-                        flag={japan}
-                        currency="JPY"
-                        event="Coincident Index"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-
-                      <TableBody
-                        time="12:00"
-                        flag={japan}
-                        currency="JPY"
-                        event="Leading Index"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-
-                      <TableBody
-                        time="12:00"
-                        flag={japan}
-                        currency="JPY"
-                        event="Coincident Index m/m"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-
-                      <TableBody
-                        time="12:00"
-                        flag={japan}
-                        currency="JPY"
-                        event="Leading Index m/m"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-
-                      <TableBody
-                        time="12:00"
-                        flag={singapore}
-                        currency="SGD"
-                        event="CPI y/y"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-
-                      <TableBody
-                        time="15:00"
-                        flag={span}
-                        currency="EUR"
-                        event="PPI y/y"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-
-                      <TableBody
-                        time="16:30"
-                        flag={germany}
-                        currency="EUR"
-                        event="Ifo Business Expectations"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-                      {/* </Table>
-
-            <Table
-              responsive
-              className="table-shopping"
-              style={{ backgroundColor: "#484D4F", borderRadius: "5px" }}
-            > */}
-                      <thead>
-                        <tr
-                          style={{
-                            backgroundColor: "#484D4F",
-                            borderRadius: "5px"
-                          }}
-                        >
-                          <td
-                            colspan="6"
-                            className="text-center title"
-                            style={{
-                              fontSize: "20px",
-                              backgroundColor: "#19447E"
-                            }}
-                          >
-                            26 November 2019, Tuesday
-                          </td>
-                        </tr>
-                      </thead>
-
-                      <TableBody
-                        time="7:00"
-                        flag={canada}
-                        currency="CAD"
-                        event="BoC Governor Poloz Speech"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-
-                      <TableBody
-                        time="7:00"
-                        flag={japan}
-                        currency="JPY"
-                        event="Coincident Index"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-
-                      <TableBody
-                        time="12:00"
-                        flag={japan}
-                        currency="JPY"
-                        event="Leading Index"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-
-                      <TableBody
-                        time="12:00"
-                        flag={singapore}
-                        currency="SGD"
-                        event="Coincident Index m/m"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-
-                      <TableBody
-                        time="12:00"
-                        flag={span}
-                        currency="EUR"
-                        event="Leading Index m/m"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
-
-                      <TableBody
-                        time="12:00"
-                        flag={germany}
-                        currency="EUR"
-                        event="Leading Index m/m"
-                        actual="101.1"
-                        forecast="101"
-                        previous="101"
-                      />
+                      {this.state.dataTabel.map(item => (
+                        <TableBody {...item} />
+                      ))}
                     </Table>
                   </Container>
                 </div>
@@ -671,4 +367,4 @@ class Blogs extends React.Component {
   }
 }
 
-export default Blogs;
+export default EconomicCalendar;

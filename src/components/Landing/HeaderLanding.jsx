@@ -69,11 +69,6 @@ class HeaderLanding extends React.Component {
   constructor(props) {
     super(props);
   }
-
-  async componentDidMount() {
-    await this.props.getContent("landing", "id");
-  }
-
   renderContent = () => {
     if (isMobile) {
       return (
@@ -432,7 +427,7 @@ class HeaderLanding extends React.Component {
                   md="12"
                   style={{
                     position: "absolute",
-                    bottom: 0,
+                    bottom: -10,
                     paddingRight: 0,
                     paddingLeft: 0
                   }}
@@ -452,7 +447,8 @@ class HeaderLanding extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
 });
 
 const mapDispatchToProps = dispatch => ({
