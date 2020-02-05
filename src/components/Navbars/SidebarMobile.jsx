@@ -23,7 +23,9 @@ import {
 import ScrollAnimation from "react-animate-on-scroll";
 import { isMobile } from "react-device-detect";
 import Sidebar from "react-sidebar";
+
 // import { Accordion, AccordionPanel, styles } from "react-accordion";
+import useCollapse from "react-collapsed";
 import DropdownTentangKami from "../DropdownContent/DropdownTentangKami";
 import DropdownTrading from "../DropdownContent/DropdownTrading";
 import DropdownBerita from "../DropdownContent/DropdownBerita";
@@ -37,7 +39,6 @@ import BlurryNavbarHome from "../../components/Navbars/BlurryNavbarHome";
 import "../../assets/css/main.css";
 import Radium, { StyleRoot } from "radium";
 import vl from "../../assets/img/vertical-line.png";
-
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
 
@@ -72,6 +73,20 @@ class SidebarMobile extends React.Component {
 
   async componentDidMount() {
     await this.props.fetchPage("landing", "id");
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
   }
 
   onSetSidebarOpen = open => {
@@ -127,7 +142,6 @@ class SidebarMobile extends React.Component {
           </Container>
         </Navbar>
         <Sidebar
-          styles={{ sidebar: { background: "grey" } }}
           touchHandleWidth
           pullRight={true}
           sidebar={
@@ -139,8 +153,34 @@ class SidebarMobile extends React.Component {
                   </div>
                 </Link>
               </div>
+
               {/* TENTANG KAMI */}
-              <div>
+              <button class="accordion">
+                {this.props.pageStore.Header.m2.title}
+              </button>
+              <div class="panel">
+                <Link to="/tentang-kami">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m2.dropdown[0].title}
+                  </div>
+                </Link>
+                <Link to="/cabang">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m2.dropdown[1].title}
+                  </div>
+                </Link>
+                <Link to="/rekening-terpisah">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m2.dropdown[2].title}
+                  </div>
+                </Link>
+                <Link to="/legalitas">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m2.dropdown[3].title}
+                  </div>
+                </Link>
+              </div>
+              {/* <div>
                 <Collapsible
                   trigger={this.props.pageStore.Header.m2.title}
                   triggerStyle={textTrigger}
@@ -166,9 +206,77 @@ class SidebarMobile extends React.Component {
                     </div>
                   </Link>
                 </Collapsible>
-              </div>
+              </div> */}
+
               {/* TRADING ONLINE */}
-              <div style={{ marginTop: "20px" }}>
+              <button class="accordion">
+                {this.props.pageStore.Header.m3.title}
+              </button>
+              <div class="panel">
+                <Link to="/forex">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m3.dropdown[0].sub[0]}
+                  </div>
+                </Link>
+                <Link to="/cfd">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m3.dropdown[0].sub[1]}
+                  </div>
+                </Link>
+                <Link to="/gold">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m3.dropdown[0].sub[2]}
+                  </div>
+                </Link>
+                <Link to="/komoditi">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m3.dropdown[0].sub[3]}
+                  </div>
+                </Link>
+                <Link to="/index-futures">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m3.dropdown[0].sub[4]}
+                  </div>
+                </Link>
+
+                <div style={title}>
+                  {this.props.pageStore.Header.m3.dropdown[1].title}
+                </div>
+                <Link to="/jam-perdagangan">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m3.dropdown[1].sub[0]}
+                  </div>
+                </Link>
+
+                <div style={title}>
+                  {this.props.pageStore.Header.m3.dropdown[2].title}
+                </div>
+                <Link to="/pro-trader">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m3.dropdown[2].sub[0]}
+                  </div>
+                </Link>
+                <Link to="/topgrowth-trader">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m3.dropdown[2].sub[1]}
+                  </div>
+                </Link>
+
+                <div style={title}>
+                  {this.props.pageStore.Header.m3.dropdown[3].title}
+                </div>
+                <Link to="/login">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m3.dropdown[3].sub[0]}
+                  </div>
+                </Link>
+                <Link to="/register">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m3.dropdown[3].sub[1]}
+                  </div>
+                </Link>
+              </div>
+              {/* <div style={{ marginTop: "15px" }}>
                 <Collapsible
                   trigger={this.props.pageStore.Header.m3.title}
                   triggerStyle={textTrigger}
@@ -239,14 +347,49 @@ class SidebarMobile extends React.Component {
                     </div>
                   </Link>
                 </Collapsible>
-              </div>
+              </div> */}
+
               {/* BERITA */}
-              <div style={{ marginTop: "20px" }}>
+              <button class="accordion" style={{ paddingBottom: "10px" }}>
+                {this.props.pageStore.Header.m4.title}
+              </button>
+              <div class="panel">
+                <Link to="/newspage">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m4.dropdown[0].title}
+                  </div>
+                </Link>
+                <Link to="/stock-index">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m4.dropdown[1].title}
+                  </div>
+                </Link>
+                <Link to="/forex-commodity">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m4.dropdown[2].title}
+                  </div>
+                </Link>
+                <Link to="/economic-calendar">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m4.dropdown[3].title}
+                  </div>
+                </Link>
+                <Link to="/market-outlook">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m4.dropdown[4].title}
+                  </div>
+                </Link>
+                <Link to="/video-content">
+                  <div style={subText}>
+                    > {this.props.pageStore.Header.m4.dropdown[5].title}
+                  </div>
+                </Link>
+              </div>
+              {/* <div style={{ marginTop: "15px" }}>
                 <Collapsible
                   trigger={this.props.pageStore.Header.m4.title}
                   triggerStyle={textTrigger}
                 >
-                  {/* <img src={caret} /> */}
                   <Link to="/newspage">
                     <div style={subText}>
                       > {this.props.pageStore.Header.m4.dropdown[0].title}
@@ -278,7 +421,7 @@ class SidebarMobile extends React.Component {
                     </div>
                   </Link>
                 </Collapsible>
-              </div>
+              </div> */}
               <div>
                 <Link to="/edukasi">
                   <div style={subText}>
@@ -286,14 +429,14 @@ class SidebarMobile extends React.Component {
                   </div>
                 </Link>
               </div>
-              <div>
+              <div style={{ paddingTop: "1px" }}>
                 <Link to="/karir">
                   <div style={subText}>
                     {this.props.pageStore.Header.m6.title}
                   </div>
                 </Link>
               </div>
-              <div>
+              <div style={{ paddingTop: "1px" }}>
                 <Link to="/contact">
                   <div style={subText}>
                     {this.props.pageStore.Header.m7.title}
