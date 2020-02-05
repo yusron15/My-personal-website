@@ -96,7 +96,7 @@ class HeaderLanding extends React.Component {
                             .image +
                           ")",
                         backgroundSize: "cover",
-                        minHeight: "93vh"
+                        minHeight: "93.5vh"
                       }}
                     >
                       {/* here */}
@@ -144,7 +144,7 @@ class HeaderLanding extends React.Component {
                             .image +
                           ")",
                         backgroundSize: "cover",
-                        minHeight: "93vh"
+                        minHeight: "93.5vh"
 
                         // backgroundSize: "auto",
                         // backgroundRepeat: "no-repeat"
@@ -194,7 +194,7 @@ class HeaderLanding extends React.Component {
                             .image +
                           ")",
                         backgroundSize: "cover",
-                        minHeight: "93vh"
+                        minHeight: "93.5vh"
                       }}
                     >
                       <Container style={{ paddingTop: 0 }}>

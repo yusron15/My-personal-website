@@ -838,7 +838,6 @@ span > .arrow-down {
 
 .active:after {
   content: "\2212";
-  background-color: transparent;
   color: transparent;
 
 }

@@ -61,42 +61,80 @@ class Features extends React.Component {
                     </Row>
                   </div>
                   <div>
-                    <Row>
-                      <Col md="6">
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOut"
-                        >
-                          <img
-                            alt="..."
-                            className="bg-blob"
-                            style={{
-                              width: "30vw",
-                              marginTop: "20px",
-                              height: "auto"
-                            }}
-                            src={windows}
-                          />
-                        </ScrollAnimation>
-                      </Col>
-                      <Col md="6">
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOut"
-                        >
-                          <img
-                            alt="..."
-                            className="bg-blob"
-                            style={{
-                              width: "30vw",
-                              marginTop: "20px",
-                              height: "auto"
-                            }}
-                            src={appstore}
-                          />
-                        </ScrollAnimation>
-                      </Col>
-                    </Row>
+                    <Col>
+                      <Row>
+                        <Col>
+                          <ScrollAnimation
+                            animateIn="fadeInUp"
+                            animateOut="fadeOut"
+                          >
+                            <img
+                              alt="..."
+                              className="bg-blob"
+                              style={{
+                                width: "70vw",
+                                marginTop: "20px",
+                                height: "auto"
+                              }}
+                              src={pc}
+                            />
+                          </ScrollAnimation>
+                        </Col>
+                        <Col>
+                          <ScrollAnimation
+                            animateIn="fadeInUp"
+                            animateOut="fadeOut"
+                          >
+                            <img
+                              alt="..."
+                              className="bg-blob"
+                              style={{
+                                width: "70vw",
+                                marginTop: "20px",
+                                height: "auto"
+                              }}
+                              src={mac}
+                            />
+                          </ScrollAnimation>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col>
+                          <ScrollAnimation
+                            animateIn="fadeInUp"
+                            animateOut="fadeOut"
+                          >
+                            <img
+                              alt="..."
+                              className="bg-blob"
+                              style={{
+                                width: "70vw",
+                                marginTop: "20px",
+                                height: "auto"
+                              }}
+                              src={android}
+                            />
+                          </ScrollAnimation>
+                        </Col>
+                        <Col>
+                          <ScrollAnimation
+                            animateIn="fadeInUp"
+                            animateOut="fadeOut"
+                          >
+                            <img
+                              alt="..."
+                              className="bg-blob"
+                              style={{
+                                width: "70vw",
+                                marginTop: "20px",
+                                height: "auto"
+                              }}
+                              src={ios}
+                            />
+                          </ScrollAnimation>
+                        </Col>
+                      </Row>
+                    </Col>
                   </div>
                 </Col>
               </Container>

@@ -260,7 +260,9 @@ class News extends React.Component {
                             style={{
                               backgroundImage:
                                 "url(" + item.featured_image_src + ")",
-                              backgroundColor: "rgba(0, 0, 0, 0.25)",
+                              // backgroundColor: "rgba(0, 0, 0, 0.25)",
+                              backgroundColor:
+                                "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
                               backgroundSize: "cover",
                               height: 200,
                               display: "flex",
@@ -269,8 +271,23 @@ class News extends React.Component {
                               alignItems: "flex-end"
                             }}
                           >
-                            <h4 className="title" style={{ color: "black" }}>
+                            <h4
+                              className="title"
+                              style={{
+                                color: "white"
+                              }}
+                            >
+                              {/* <div
+                                style={{
+                                  backgroundImage:
+                                    "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
+                                  position: "absolute",
+                                  height: "100%",
+                                  width: "100%"
+                                }}
+                              > */}
                               {item.title.rendered}
+                              {/* </div> */}
                             </h4>
                           </div>
                         </CarouselItem>
