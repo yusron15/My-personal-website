@@ -824,12 +824,13 @@ span > .arrow-down {
   transition: 0.4s;
 }
 
-.active, .accordion:hover {
+.active,
+.accordion:hover {
   background-color: transparent;
 }
 
 .accordion:after {
-  content: '\002B';
+  content: "\002B";
   color: #444;
   font-weight: bold;
   float: right;
@@ -839,7 +840,6 @@ span > .arrow-down {
 .active:after {
   content: "\2212";
   color: transparent;
-
 }
 
 .panel {
@@ -852,4 +852,29 @@ span > .arrow-down {
 
 span > .arrow-down {
   margin-top: 15px !important;
+}
+
+.card-karir {
+  background-color: white;
+  color: black;
+  height: 300px;
+  /* max-height: 300px; */
+  overflow: hidden;
+  transition: height 1s;
+}
+
+.card-karir.expand {
+  height: 100%;
+  transition: height 1s;
+}
+
+.card-karir:hover {
+  transform: translateY(-0.25em);
+  box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-body > .card-text > p,
+ol > li,
+ul li {
+  color: black;
 }

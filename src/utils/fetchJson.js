@@ -33,8 +33,7 @@ export default async function fetchJson(
         headers: {
           Accept: "application/json",
           "Access-Control-Allow-Origin": "*",
-          Authorization:
-            "ftGaJ9rRQ05rc7saGDt4OVsjkG54BhBxCd3wjDXCvnrqmM8BZlhu4H9zSkNRoA43",
+          Authorization: token,
           "Content-Type": "application/json"
         },
         body: JSON.stringify(data)

@@ -11,10 +11,12 @@ class Karir extends React.Component {
   state = {};
   async componentDidMount() {
     try {
-      // await this.props.getContent("karir", this.props.currentLang, true);
+      await this.props.getContent("karir", this.props.currentLang, true);
       await this.props.getAllKarir(this.props.currentLang);
       window.scroll(0, 0);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   }
   render() {
     return (

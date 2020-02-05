@@ -9,7 +9,10 @@ import {
   CardTitle,
   Container,
   Row,
-  Col
+  Col,
+  CardHeader,
+  CardText,
+  CardSubtitle
 } from "reactstrap";
 import { isMobile } from "react-device-detect";
 import SearchField from "react-search-field";
@@ -21,6 +24,9 @@ import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import ReactSearchBox from "react-search-box";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
+import ReactHtmlParser from "react-html-parser";
+
+import _ from "lodash";
 import "../../assets/css/main.css";
 
 const customStyles = {
@@ -57,14 +63,44 @@ const data = [
 
 class Blogs extends React.Component {
   state = {
-    dataSelect: ""
+    dataSelect: "",
+    stateKarir: [],
+    openedCardIndex: ""
   };
 
   async componentDidMount() {
-    await this.props.getContent("karir", "id");
+    try {
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async componentDidUpdate(prevProps, prevState) {
+    if (prevProps.karirList !== this.props.karirList) {
+      await this.setState({
+        stateKarir: this.props.karirList.map(item => {
+          return {
+            ...item,
+            open: false
+          };
+        })
+      });
+    }
   }
 
   renderContent = () => {
+    let a = _.uniqBy(this.props.karirList, "devisi");
+    console.log(a, "karirList");
+    let divisions;
+    if (a.length > 0) {
+      divisions = a.map(item => {
+        return {
+          label: item.devisi,
+          value: item.devisi
+        };
+      });
+      console.log(divisions, "karirList");
+    }
     if (isMobile) {
       return (
         <>
@@ -93,39 +129,198 @@ class Blogs extends React.Component {
                     </p>
                     <Row style={{ marginBottom: "10%" }}>
                       <Col md="6">
-                        <SearchField
-                          className="react-search-field-input"
-                          placeholder="Cari "
-                        />
+                        {/* <Card className="card-blog card-plain">
+                        <div className="card-image">
+                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <img
+                              alt="..."
+                              className="img rounded"
+                              src={require("assets/img/karir1.jpg")}
+                            />
+                          </a>
+                        </div>
+                      </Card> */}
+                        <div
+                          style={{
+                            marginTop: "30px"
+                          }}
+                        >
+                          <SearchField
+                            className="react-search-field-input"
+                            placeholder="Cari "
+                          />
+                        </div>
                       </Col>
 
                       <Col md="5">
+                        {/* <Card className="card-blog card-plain">
+                        <div className="card-image">
+                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <img
+                              alt="..."
+                              className="img rounded"
+                              src={require("assets/img/karir2.jpg")}
+                            />
+                          </a>
+                        </div>
+                      </Card> */}
+                        {/* <div style={{ maxHeight: "10px" }}> */}
                         <Select
                           styles={customStyles}
                           value="index "
-                          options={[
-                            {
-                              label: "Job Example",
-                              value: "Job Example"
-                            }
-                          ]}
+                          options={divisions}
                           value={this.state.dataSelect}
                           onChange={async data => {
                             await this.setState({
                               dataSelect: data
                             });
-                            let dataSelect = [
-                              {
-                                label: "Job Example",
-                                value: "Job Example"
-                              }
-                            ];
-                            return dataSelect.filter(
-                              item => this.state.dataSelect.value === item.value
-                            )[0];
                           }}
                         />
+                        {/* </div> */}
                       </Col>
+                      {this.state.stateKarir.map((item, index) => (
+                        <Col lg="4" xs="12">
+                          <Card
+                            className={`card-karir mobile ${
+                              item.open ? "expand" : ""
+                            }`}
+                          >
+                            <CardBody>
+                              <CardTitle
+                                className="text-center"
+                                style={{
+                                  color: "black",
+                                  fontSize: "1rem",
+                                  fontWeight: "bold",
+                                  marginBottom: 10
+                                }}
+                              >
+                                {item.devisi}
+                              </CardTitle>
+                              <CardSubtitle
+                                className="text-center"
+                                style={{
+                                  color: "black",
+                                  fontSize: "1rem",
+                                  marginBottom: 30
+                                }}
+                              >
+                                {item.description}
+                              </CardSubtitle>
+                              <CardText style={{ color: "black" }}>
+                                {item.detail.map(itemDetail =>
+                                  ReactHtmlParser(itemDetail.description)
+                                )}
+                              </CardText>
+                              <CardText style={{ color: "black" }}>
+                                {item.detail.map(itemDetail =>
+                                  ReactHtmlParser(itemDetail.qualification)
+                                )}
+                              </CardText>
+                              <div
+                                style={{
+                                  width: "100%",
+                                  display: "flex",
+                                  justifyContent: "center"
+                                }}
+                              ></div>
+                            </CardBody>
+                            {!item.open && (
+                              <CardFooter
+                                style={{
+                                  position: "absolute",
+                                  bottom: 0,
+                                  width: "100%",
+                                  display: "flex",
+                                  flex: 1,
+                                  justifyContent: "center",
+                                  backgroundColor: "white"
+                                }}
+                              >
+                                <Button
+                                  className="text-center"
+                                  onClick={async () => {
+                                    await this.setState({
+                                      stateKarir: this.state.stateKarir.map(
+                                        item => {
+                                          return { ...item, open: false };
+                                        }
+                                      )
+                                    });
+
+                                    setTimeout(() => {
+                                      this.setState({
+                                        stateKarir: this.state.stateKarir.map(
+                                          (item, stateIndex) => {
+                                            if (stateIndex !== index)
+                                              return item;
+                                            return {
+                                              ...item,
+                                              open: !item.open
+                                            };
+                                          }
+                                        )
+                                      });
+                                    }, 1000);
+                                    // await this.setState({
+                                    //   openedCardIndex: index
+                                    // });
+
+                                    // if (index !== this.state.openedCardIndex) {
+                                    //   await this.setState({
+                                    //     stateKarir
+                                    //   })
+                                    // }
+                                    // await this.setState({
+                                    //   stateKarir: this.state.stateKarir.map((item, stateIndex) => {
+                                    //     if ()
+                                    //   })
+                                    // })
+
+                                    // this.state.stateKarir.map(
+                                    //   async (item, indexState) => {
+                                    //     if (indexState !== index) {
+                                    //       await this.setState({
+                                    //         stateKarir: { ...item, open: false }
+                                    //       });
+                                    //     } else {
+                                    //       setTimeout(() => {
+                                    //         this.setState({
+                                    //           stateKarir: {
+                                    //             ...item,
+                                    //             open: !item.open
+                                    //           }
+                                    //         });
+                                    //       }, 500);
+                                    //     }
+                                    //   }
+                                    // );
+                                    // if (indexState !== index) {
+                                    //   await this.setState({
+                                    //     stateKarir: this.state.stateKarir.map(
+                                    //       item => {
+                                    //         return { ...item, open: false };
+                                    //       }
+                                    //     )
+                                    //   });
+                                    // } else {
+                                    //   await this.setState({
+                                    //     stateKarir: this.state.stateKarir.map(
+                                    //       item => {
+                                    //         return { ...item, open: !item.open };
+                                    //       }
+                                    //     )
+                                    //   });
+                                    // }
+                                  }}
+                                >
+                                  Show More
+                                </Button>
+                              </CardFooter>
+                            )}
+                          </Card>
+                        </Col>
+                      ))}
                     </Row>
                   </Col>
                 </Row>
@@ -138,8 +333,6 @@ class Blogs extends React.Component {
     return (
       <>
         <div className="cd-section broken-white" id="blogs">
-          {/* ********* END BLOGS 5 ********* */}
-
           <div>
             <div
               className="team-1 background-header"
@@ -206,60 +399,153 @@ class Blogs extends React.Component {
                       <Select
                         styles={customStyles}
                         value="index "
-                        options={[
-                          {
-                            label: "Job Example",
-                            value: "Job Example"
-                          },
-                          {
-                            label: "Job Example",
-                            value: "Job Example"
-                          },
-                          {
-                            label: "Job Example",
-                            value: "Job Example"
-                          }
-                        ]}
+                        options={divisions}
                         value={this.state.dataSelect}
                         onChange={async data => {
                           await this.setState({
                             dataSelect: data
                           });
-                          let dataSelect = [
-                            {
-                              label: "Job Example",
-                              value: "Job Example"
-                            },
-                            {
-                              label: "Job Example",
-                              value: "Job Example"
-                            },
-                            {
-                              label: "Job Example",
-                              value: "Job Example"
-                            }
-                          ];
-                          return dataSelect.filter(
-                            item => this.state.dataSelect.value === item.value
-                          )[0];
                         }}
                       />
                       {/* </div> */}
                     </Col>
+                    {this.state.stateKarir.map((item, index) => (
+                      <Col lg="4" xs="12">
+                        <Card
+                          className={`card-karir ${item.open ? "expand" : ""}`}
+                        >
+                          <CardBody>
+                            <CardTitle
+                              className="text-center"
+                              style={{
+                                color: "black",
+                                fontSize: "1rem",
+                                fontWeight: "bold",
+                                marginBottom: 10
+                              }}
+                            >
+                              {item.devisi}
+                            </CardTitle>
+                            <CardSubtitle
+                              className="text-center"
+                              style={{
+                                color: "black",
+                                fontSize: "1rem",
+                                marginBottom: 30
+                              }}
+                            >
+                              {item.description}
+                            </CardSubtitle>
+                            <CardText style={{ color: "black" }}>
+                              {item.detail.map(itemDetail =>
+                                ReactHtmlParser(itemDetail.description)
+                              )}
+                            </CardText>
+                            <CardText style={{ color: "black" }}>
+                              {item.detail.map(itemDetail =>
+                                ReactHtmlParser(itemDetail.qualification)
+                              )}
+                            </CardText>
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                justifyContent: "center"
+                              }}
+                            ></div>
+                          </CardBody>
+                          {!item.open && (
+                            <CardFooter
+                              style={{
+                                position: "absolute",
+                                bottom: 0,
+                                width: "100%",
+                                display: "flex",
+                                flex: 1,
+                                justifyContent: "center",
+                                backgroundColor: "white"
+                              }}
+                            >
+                              <Button
+                                className="text-center"
+                                onClick={async () => {
+                                  await this.setState({
+                                    stateKarir: this.state.stateKarir.map(
+                                      item => {
+                                        return { ...item, open: false };
+                                      }
+                                    )
+                                  });
 
-                    {/* <Col lg="4" xs="12">
-                      <Card className="card-blog card-plain">
-                        <div className="card-image">
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img
-                              alt="..."
-                              className="img rounded"
-                              src={require("assets/img/newscard.png")}
-                            />
-                          </a>
-                        </div>
-                      </Card>
-                    </Col> */}
+                                  setTimeout(() => {
+                                    this.setState({
+                                      stateKarir: this.state.stateKarir.map(
+                                        (item, stateIndex) => {
+                                          if (stateIndex !== index) return item;
+                                          return { ...item, open: !item.open };
+                                        }
+                                      )
+                                    });
+                                  }, 1000);
+                                  // await this.setState({
+                                  //   openedCardIndex: index
+                                  // });
+
+                                  // if (index !== this.state.openedCardIndex) {
+                                  //   await this.setState({
+                                  //     stateKarir
+                                  //   })
+                                  // }
+                                  // await this.setState({
+                                  //   stateKarir: this.state.stateKarir.map((item, stateIndex) => {
+                                  //     if ()
+                                  //   })
+                                  // })
+
+                                  // this.state.stateKarir.map(
+                                  //   async (item, indexState) => {
+                                  //     if (indexState !== index) {
+                                  //       await this.setState({
+                                  //         stateKarir: { ...item, open: false }
+                                  //       });
+                                  //     } else {
+                                  //       setTimeout(() => {
+                                  //         this.setState({
+                                  //           stateKarir: {
+                                  //             ...item,
+                                  //             open: !item.open
+                                  //           }
+                                  //         });
+                                  //       }, 500);
+                                  //     }
+                                  //   }
+                                  // );
+                                  // if (indexState !== index) {
+                                  //   await this.setState({
+                                  //     stateKarir: this.state.stateKarir.map(
+                                  //       item => {
+                                  //         return { ...item, open: false };
+                                  //       }
+                                  //     )
+                                  //   });
+                                  // } else {
+                                  //   await this.setState({
+                                  //     stateKarir: this.state.stateKarir.map(
+                                  //       item => {
+                                  //         return { ...item, open: !item.open };
+                                  //       }
+                                  //     )
+                                  //   });
+                                  // }
+                                }}
+                              >
+                                Show More
+                              </Button>
+                            </CardFooter>
+                          )}
+                        </Card>
+                      </Col>
+                    ))}
                   </Row>
                 </Col>
               </Row>
@@ -277,7 +563,8 @@ class Blogs extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  karirList: state.karirStore.karirList
 });
 
 const mapDispatchToProps = dispatch => ({
