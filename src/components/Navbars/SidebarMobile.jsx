@@ -308,7 +308,7 @@ class SidebarMobile extends React.Component {
                   </div>
                 </Link>
               </div>
-              <div style={{ paddingLeft: "15px", marginTop: "350px" }}>
+              <div style={{ paddingLeft: "15px", marginTop: "20px" }}>
                 <LangTogglerButton />
               </div>
             </Col>

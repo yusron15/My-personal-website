@@ -263,18 +263,34 @@ class News extends React.Component {
                           <div
                             className="info info-warning broken-white"
                             style={{
-                              backgroundImage: `url(${bgcard})`,
+                              backgroundImage: "url(" + item.image_url + ")",
                               backgroundColor: "rgba(0, 0, 0, 0.25)",
-                              backgroundSize: "cover"
+                              backgroundSize: "cover",
+                              margin: 0,
+                              marginBottom: "25px",
+                              padding: 0
                             }}
                           >
-                            <h4 className="title" style={{ color: "white" }}>
-                              Best Quality
-                            </h4>
-                            <p style={{ color: "white" }}>
-                              Gain access to the demographics, psychographics,
-                              and location of unique people.
-                            </p>
+                            <div
+                              style={{
+                                backgroundImage:
+                                  "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
+                                height: "100vh",
+                                width: "100%",
+
+                                zIndex: 99
+                              }}
+                            >
+                              <h4
+                                className="title"
+                                style={{
+                                  color: "white",
+                                  paddingTop: "50px"
+                                }}
+                              >
+                                {item.nama}
+                              </h4>
+                            </div>
                           </div>
                         </CarouselItem>
                       );
