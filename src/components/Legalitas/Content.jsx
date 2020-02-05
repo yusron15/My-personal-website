@@ -106,10 +106,7 @@ class Projects extends React.Component {
               >
                 <div>
                   <Col>
-                    <TabContent
-                      className="tab-space"
-                      activeTab={"project" + this.state.activeTab}
-                    >
+                    <TabContent activeTab={"project" + this.state.activeTab}>
                       <TabPane tabId="project1" style={{ height: "200px" }}>
                         <Col
                           className="ml-auto mr-auto text-center mt-4"
@@ -211,7 +208,7 @@ class Projects extends React.Component {
                       </TabPane>
                     </TabContent>{" "}
                   </Col>
-                  <Col style={{ marginTop: "15vh" }}>
+                  <Col style={{ marginTop: "18vh" }}>
                     <Nav
                       className="nav-pills-info nav-pills-icons nav-pills-lg"
                       pills

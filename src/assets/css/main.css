@@ -847,3 +847,7 @@ span > .arrow-down {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+
+span > .arrow-down {
+  margin-top: 15px !important;
+}
