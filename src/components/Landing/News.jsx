@@ -256,35 +256,37 @@ class News extends React.Component {
                           className="justify-content-center"
                         >
                           <div
+                            className="info info-warning broken-white"
                             style={{
                               backgroundImage:
-                                "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
-                              position: "absolute",
-                              height: "100%",
-                              width: "100%"
+                                "url(" + item.featured_image_src + ")",
+                              backgroundColor: "rgba(0, 0, 0, 0.25)",
+                              backgroundSize: "cover",
+                              height: 200,
+                              display: "flex",
+                              flexDirection: "column",
+                              justifyContent: "flex-end",
+                              alignItems: "flex-end",
+                              margin: 0,
+                              marginBottom: "25px",
+                              padding: 0
                             }}
                           >
                             <div
-                              className="info info-warning broken-white"
                               style={{
                                 backgroundImage:
-                                  "url(" + item.featured_image_src + ")",
-                                // backgroundColor: "rgba(0, 0, 0, 0.25)",
-                                backgroundColor:
                                   "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
-                                backgroundSize: "cover",
-                                height: 200,
-                                display: "flex",
-                                flexDirection: "column",
-                                justifyContent: "flex-end",
-                                alignItems: "flex-end"
+                                height: "100vh",
+                                width: "100%",
+
+                                zIndex: 99
                               }}
                             >
                               <h4
                                 className="title"
                                 style={{
                                   color: "white",
-                                  paddingTop: "20px"
+                                  paddingTop: "50px"
                                 }}
                               >
                                 {item.title.rendered}
