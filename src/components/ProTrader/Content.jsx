@@ -20,6 +20,11 @@ import {
   Carousel,
   CarouselItem
 } from "reactstrap";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import { LangContext } from "../MyContext";
 import { isMobile } from "react-device-detect";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -193,10 +198,6 @@ class Content extends React.Component {
     demand: require("../../assets/img/demand.png"),
     sorting: require("../../assets/img/sorting.png")
   };
-
-  async componentDidMount() {
-    await this.props.getContent("protrader", "id");
-  }
 
   handleRatingEnter = () => {
     this.setState({
@@ -490,7 +491,7 @@ class Content extends React.Component {
                   <BlurryNavbar />
                   <ColoredNavbar location={{ ...this.props.location }} />
                   <div className="title title-header">
-                    {this.props.pageStore.protrader.header}
+                    {ReactHtmlParser(this.props.pageStore.protrader.header)}
                   </div>
                 </div>
                 <div className="team-1 broken-white">
@@ -501,7 +502,7 @@ class Content extends React.Component {
                           className="description font-black"
                           style={textDesc}
                         >
-                          {this.props.pageStore.protrader.top}
+                          {ReactHtmlParser(this.props.pageStore.protrader.top)}
                         </div>
                       </Col>
                     </Row>
@@ -515,7 +516,7 @@ class Content extends React.Component {
                     style={{ marginRight: 0, marginLeft: 0 }}
                   >
                     <h1 className="title">
-                      {this.props.pageStore.protrader.title}
+                      {ReactHtmlParser(this.props.pageStore.protrader.title)}
                     </h1>
                   </Col>
                   {/* </Row> */}
@@ -532,7 +533,9 @@ class Content extends React.Component {
                             src={this.state.rating}
                           />
                           <div>
-                            {this.props.pageStore.protrader.content[0].content}
+                            {ReactHtmlParser(
+                              this.props.pageStore.protrader.content[0].content
+                            )}
                           </div>
                         </div>
                       </Col>
@@ -547,7 +550,9 @@ class Content extends React.Component {
                             src={this.state.report}
                           />
                           <div>
-                            {this.props.pageStore.protrader.content[1].content}
+                            {ReactHtmlParser(
+                              this.props.pageStore.protrader.content[1].content
+                            )}
                           </div>
                         </div>
                       </Col>
@@ -562,7 +567,9 @@ class Content extends React.Component {
                             src={this.state.demand}
                           />
                           <div>
-                            {this.props.pageStore.protrader.content[2].content}
+                            {ReactHtmlParser(
+                              this.props.pageStore.protrader.content[2].content
+                            )}
                           </div>
                         </div>
                       </Col>
@@ -583,7 +590,9 @@ class Content extends React.Component {
                             src={this.state.list}
                           />
                           <div>
-                            {this.props.pageStore.protrader.content[3].content}
+                            {ReactHtmlParser(
+                              this.props.pageStore.protrader.content[3].content
+                            )}
                           </div>
                         </div>
                       </Col>
@@ -598,7 +607,9 @@ class Content extends React.Component {
                             src={this.state.sorting}
                           />
                           <div style={{ marginTop: "35px" }}>
-                            {this.props.pageStore.protrader.content[4].content}
+                            {ReactHtmlParser(
+                              this.props.pageStore.protrader.content[4].content
+                            )}
                           </div>
                         </div>
                       </Col>
@@ -613,7 +624,9 @@ class Content extends React.Component {
                             src={this.state.submit}
                           />
                           <div>
-                            {this.props.pageStore.protrader.content[5].content}
+                            {ReactHtmlParser(
+                              this.props.pageStore.protrader.content[5].content
+                            )}
                           </div>
                         </div>
                       </Col>

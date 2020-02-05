@@ -806,7 +806,9 @@ span > .arrow-down {
   color: black;
 }
 
-#teams > div.team-2 > div > div > div > div > div > div > div > p > p {
+#teams > div.team-2 > div > div > div > div > div > div > div > p > p,
+#teams > div.team-1.broken-white > div > div > div > div > p,
+#root > div.header.header-4.broken-white > div > div > div > p > p {
   color: black;
 }
 
@@ -824,12 +826,13 @@ span > .arrow-down {
   transition: 0.4s;
 }
 
-.active, .accordion:hover {
+.active,
+.accordion:hover {
   background-color: transparent;
 }
 
 .accordion:after {
-  content: '\002B';
+  content: "\002B";
   color: #444;
   font-weight: bold;
   float: right;

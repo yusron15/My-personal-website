@@ -20,6 +20,11 @@ import {
   Carousel,
   CarouselItem
 } from "reactstrap";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import { LangContext } from "../MyContext";
 import { isMobile } from "react-device-detect";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -177,10 +182,6 @@ class Content extends React.Component {
     demand: require("../../assets/img/demand.png"),
     sorting: require("../../assets/img/sorting.png")
   };
-
-  async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
-  }
 
   handleRatingEnter = () => {
     this.setState({
@@ -488,7 +489,9 @@ class Content extends React.Component {
                   <BlurryNavbar />
                   <ColoredNavbar location={{ ...this.props.location }} />
                   <div className="title title-header">
-                    {this.props.pageStore.topgrowthtrader.header}
+                    {ReactHtmlParser(
+                      this.props.pageStore.topgrowthtrader.header
+                    )}
                   </div>
                 </div>
                 <div className="team-1 broken-white">
@@ -499,7 +502,9 @@ class Content extends React.Component {
                           className="description font-black"
                           style={{ ...textDesc, textAlign: "justify" }}
                         >
-                          {this.props.pageStore.topgrowthtrader.top}
+                          {ReactHtmlParser(
+                            this.props.pageStore.topgrowthtrader.top
+                          )}
                         </div>
                       </Col>
                     </Row>
@@ -509,7 +514,9 @@ class Content extends React.Component {
                   <Row>
                     <Col className="ml-auto mr-auto text-center" md="9">
                       <h1 className="title">
-                        {this.props.pageStore.topgrowthtrader.title}
+                        {ReactHtmlParser(
+                          this.props.pageStore.topgrowthtrader.title
+                        )}
                       </h1>
                     </Col>
                   </Row>
@@ -526,10 +533,10 @@ class Content extends React.Component {
                             src={this.state.rating}
                           />
                           <div>
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.topgrowthtrader.content[0]
                                 .content
-                            }
+                            )}
                           </div>
                         </div>
                       </Col>
@@ -544,10 +551,10 @@ class Content extends React.Component {
                             src={this.state.report}
                           />
                           <div>
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.topgrowthtrader.content[1]
                                 .content
-                            }
+                            )}
                           </div>
                         </div>
                       </Col>
@@ -562,10 +569,10 @@ class Content extends React.Component {
                             src={this.state.demand}
                           />
                           <div>
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.topgrowthtrader.content[2]
                                 .content
-                            }
+                            )}
                           </div>
                         </div>
                       </Col>
@@ -586,10 +593,10 @@ class Content extends React.Component {
                             src={this.state.list}
                           />
                           <div>
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.topgrowthtrader.content[3]
                                 .content
-                            }
+                            )}
                           </div>
                         </div>
                       </Col>
@@ -604,10 +611,10 @@ class Content extends React.Component {
                             src={this.state.sorting}
                           />
                           <div style={{ marginTop: "35px" }}>
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.topgrowthtrader.content[4]
                                 .content
-                            }
+                            )}
                           </div>
                         </div>
                       </Col>
@@ -622,10 +629,10 @@ class Content extends React.Component {
                             src={this.state.submit}
                           />
                           <div>
-                            {
+                            {ReactHtmlParser(
                               this.props.pageStore.topgrowthtrader.content[5]
                                 .content
-                            }
+                            )}
                           </div>
                         </div>
                       </Col>

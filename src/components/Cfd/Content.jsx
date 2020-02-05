@@ -20,6 +20,11 @@ import {
   Carousel,
   CarouselItem
 } from "reactstrap";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import { isMobile } from "react-device-detect";
 import { LangContext } from "../MyContext";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -153,409 +158,6 @@ class Content extends React.Component {
                   </Col>
                 </Row>
               </Container>
-              {/* <div className="space-50" />
-              <Container>
-                <Row>
-                  <Col md="12">
-                    <div style={textTitle}>
-                      {this.props.pageStore.CFD.content[4].title}
-                    </div>
-                  </Col>
-                  <Col md="12">
-                    <Table
-                      bordered
-                      className="table-shopping"
-                      style={{
-                        backgroundColor: "#224377",
-                        borderRadius: "5px",
-                        borderCollapse: "inherit"
-                        // borderWidth: "0.2px"
-                      }}
-                    >
-                      <thead>
-                        <tr>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .prefix1
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .prefix2
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .prefix3
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .prefix4
-                            }
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                        <tr>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .tableData[0].prefix1
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .tableData[0].prefix2
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .tableData[0].prefix3
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .tableData[0].prefix4
-                            }
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .tableData[1].prefix1
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .tableData[1].prefix2
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .tableData[1].prefix3
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .tableData[1].prefix4
-                            }
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .tableData[2].prefix1
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .tableData[2].prefix2
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .tableData[2].prefix3
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[0]
-                                .tableData[2].prefix4
-                            }
-                          </td>
-                        </tr>
-                      </tbody>
-                    </Table>
-                  </Col>
-                  <Col md="12">
-                    <Table
-                      bordered
-                      className="table-shopping"
-                      style={{
-                        backgroundColor: "#224377",
-                        borderRadius: "5px",
-                        borderCollapse: "inherit"
-                        // borderWidth: "0.2px"
-                      }}
-                    >
-                      <thead>
-                        <tr>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .prefix1
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .prefix2
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .prefix3
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .prefix4
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .prefix5
-                            }
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                        <tr>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .tableData[0].prefix1
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .tableData[0].prefix2
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .tableData[0].prefix3
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .tableData[0].prefix4
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .tableData[0].prefix5
-                            }
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .tableData[1].prefix1
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .tableData[1].prefix2
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .tableData[1].prefix3
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .tableData[1].prefix4
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[1]
-                                .tableData[1].prefix5
-                            }
-                          </td>
-                        </tr>
-                      </tbody>
-                    </Table>
-                  </Col>
-                </Row>
-              </Container>
-              <div className="space-50" />
-              <Container>
-                <Row>
-                  <Col md="12">
-                    <div style={textTitle}>
-                      {this.props.pageStore.CFD.content[5].title}
-                    </div>
-                  </Col>
-                  <Col md="12">
-                    <Table
-                      bordered
-                      className="table-shopping"
-                      style={{
-                        backgroundColor: "#224377",
-                        borderRadius: "5px",
-                        borderCollapse: "inherit"
-                        // borderWidth: "0.2px"
-                      }}
-                    >
-                      <thead>
-                        <tr>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[2]
-                                .table[0].prefix1
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[2]
-                                .table[0].prefix2
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[2]
-                                .table[0].prefix3
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[2]
-                                .table[0].prefix4
-                            }
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                        <tr>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[2]
-                                .table[0].tableData[0].prefix1
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[2]
-                                .table[0].tableData[0].prefix2
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[2]
-                                .table[0].tableData[0].prefix3
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[2]
-                                .table[0].tableData[0].prefix4
-                            }
-                          </td>
-                        </tr>
-                      </tbody>
-                    </Table>
-                  </Col>
-                </Row>
-              </Container>
-              <div className="space-50" />
-              <Container>
-                <Row>
-                  <Col md="12">
-                    <div style={textTitle}>
-                      {this.props.pageStore.CFD.content[6].title}
-                    </div>
-                  </Col>
-                  <Col md="12">
-                    <Table
-                      bordered
-                      className="table-shopping"
-                      style={{
-                        backgroundColor: "#224377",
-                        borderRadius: "5px",
-                        borderCollapse: "inherit"
-                        // borderWidth: "0.2px"
-                      }}
-                    >
-                      <thead>
-                        <tr>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[3]
-                                .table[0].prefix1
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[3]
-                                .table[0].prefix2
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[3]
-                                .table[0].prefix3
-                            }
-                          </th>
-                          <th style={titleTable}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[3]
-                                .table[0].prefix4
-                            }
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                        <tr>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[3]
-                                .table[0].tableData[0].prefix1
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[3]
-                                .table[0].tableData[0].prefix2
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[3]
-                                .table[0].tableData[0].prefix3
-                            }
-                          </td>
-                          <td style={text}>
-                            {
-                              this.props.pageStore.CFD.content[4].table[3]
-                                .table[0].tableData[0].prefix4
-                            }
-                          </td>
-                        </tr>
-                      </tbody>
-                    </Table>
-                  </Col>
-                </Row>
-              </Container>
-           */}
               <div className="space-50" />
               <Container>
                 <Row>
@@ -789,12 +391,16 @@ class Content extends React.Component {
                     <Row>
                       <Col md="12">
                         <div style={textTitle}>
-                          {this.props.pageStore.CFD.content[0].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[0].title
+                          )}
                         </div>
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {this.props.pageStore.CFD.content[0].content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[0].content
+                          )}
                         </div>
                       </Col>
                     </Row>
@@ -804,12 +410,16 @@ class Content extends React.Component {
                     <Row>
                       <Col md="12">
                         <div style={textTitle}>
-                          {this.props.pageStore.CFD.content[1].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[1].title
+                          )}
                         </div>
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {this.props.pageStore.CFD.content[1].content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[1].content
+                          )}
                         </div>
                       </Col>
                     </Row>
@@ -819,12 +429,16 @@ class Content extends React.Component {
                     <Row>
                       <Col md="12">
                         <div style={textTitle}>
-                          {this.props.pageStore.CFD.content[2].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[2].title
+                          )}
                         </div>
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {this.props.pageStore.CFD.content[2].content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[2].content
+                          )}
                         </div>
                       </Col>
                     </Row>
@@ -834,12 +448,16 @@ class Content extends React.Component {
                     <Row>
                       <Col md="12">
                         <div style={textTitle}>
-                          {this.props.pageStore.CFD.content[3].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[3].title
+                          )}
                         </div>
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {this.props.pageStore.CFD.content[3].content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[3].content
+                          )}
                         </div>
                       </Col>
                     </Row>
@@ -849,12 +467,16 @@ class Content extends React.Component {
                     <Row>
                       <Col md="12">
                         <div style={textTitle}>
-                          {this.props.pageStore.CFD.content[1].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[1].title
+                          )}
                         </div>
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {this.props.pageStore.CFD.content[1].content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[1].content
+                          )}
                         </div>
                       </Col>
                     </Row>
@@ -864,12 +486,16 @@ class Content extends React.Component {
                     <Row>
                       <Col md="12">
                         <div style={textTitle}>
-                          {this.props.pageStore.CFD.content[2].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[2].title
+                          )}
                         </div>
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {this.props.pageStore.CFD.content[2].content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[2].content
+                          )}
                         </div>
                       </Col>
                     </Row>
@@ -879,12 +505,16 @@ class Content extends React.Component {
                     <Row>
                       <Col md="12">
                         <div style={textTitle}>
-                          {this.props.pageStore.CFD.content[3].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[3].title
+                          )}
                         </div>
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {this.props.pageStore.CFD.content[3].content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[3].content
+                          )}
                         </div>
                       </Col>
                     </Row>
@@ -894,7 +524,9 @@ class Content extends React.Component {
                     <Row>
                       <Col md="12">
                         <div style={textTitle}>
-                          {this.props.pageStore.CFD.content[4].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[4].title
+                          )}
                         </div>
                       </Col>
                       <Col md="12">
@@ -996,7 +628,9 @@ class Content extends React.Component {
                     <Row>
                       <Col md="12">
                         <div style={textTitle}>
-                          {this.props.pageStore.CFD.content[5].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[5].title
+                          )}
                         </div>
                       </Col>
                       <Col md="12">
@@ -1038,7 +672,9 @@ class Content extends React.Component {
                     <Row>
                       <Col md="12">
                         <div style={textTitle}>
-                          {this.props.pageStore.CFD.content[6].title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.CFD.content[6].title
+                          )}
                         </div>
                       </Col>
                       <Col md="12">
@@ -1074,7 +710,7 @@ class Content extends React.Component {
                         </Table>
                       </Col>
                     </Row>
-                  </Container>{" "}
+                  </Container>
                 </div>
                 {/* ********* END TEAM 1 ********* */}
               </div>{" "}

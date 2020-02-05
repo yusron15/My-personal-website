@@ -6,10 +6,13 @@ import { getContent } from "../../redux/ducks/actions.js";
 import { connect } from "react-redux";
 
 class Cfd extends React.Component {
-  state = {};
   async componentDidMount() {
-    await this.props.getContent("CFD", "id");
-    window.scroll(0, 0);
+    try {
+      await this.props.getContent("CFD", this.props.currentLang, true);
+      window.scroll(0, 0);
+    } catch (error) {
+      console.log(error);
+    }
   }
   render() {
     return (
@@ -23,11 +26,13 @@ class Cfd extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
 });
 
 const mapDispatchToProps = dispatch => ({
-  getContent: (section, lang) => dispatch(getContent(section, lang))
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cfd);
