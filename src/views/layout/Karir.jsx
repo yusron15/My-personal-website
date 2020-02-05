@@ -1,13 +1,20 @@
 import React from "react";
 import Footer from "../../components/Footers/Footer.jsx";
 import Content from "../../components/Karir/Content.jsx";
-import { fetchPage, getContent } from "../../redux/ducks/actions.js";
+import {
+  fetchPage,
+  getContent,
+  getAllKarir
+} from "../../redux/ducks/actions.js";
 import { connect } from "react-redux";
 class Karir extends React.Component {
   state = {};
   async componentDidMount() {
-    await this.props.getContent("edukasi", "id");
-    window.scroll(0, 0);
+    try {
+      // await this.props.getContent("karir", this.props.currentLang, true);
+      await this.props.getAllKarir(this.props.currentLang);
+      window.scroll(0, 0);
+    } catch (error) {}
   }
   render() {
     return (
@@ -20,14 +27,13 @@ class Karir extends React.Component {
   }
 }
 
-
 const mapStateToProps = state => ({
   currentLang: state.pageStore.currentLang
 });
 
 const mapDispatchToProps = dispatch => ({
-  getContent: (page, lang, toggle) =>
-    dispatch(getContent(page, lang, toggle))
+  getContent: (page, lang, toggle) => dispatch(getContent(page, lang, toggle)),
+  getAllKarir: lang => dispatch(getAllKarir(lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Karir);

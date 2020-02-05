@@ -256,39 +256,40 @@ class News extends React.Component {
                           className="justify-content-center"
                         >
                           <div
-                            className="info info-warning broken-white"
                             style={{
                               backgroundImage:
-                                "url(" + item.featured_image_src + ")",
-                              // backgroundColor: "rgba(0, 0, 0, 0.25)",
-                              backgroundColor:
                                 "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
-                              backgroundSize: "cover",
-                              height: 200,
-                              display: "flex",
-                              flexDirection: "column",
-                              justifyContent: "flex-end",
-                              alignItems: "flex-end"
+                              position: "absolute",
+                              height: "100%",
+                              width: "100%"
                             }}
                           >
-                            <h4
-                              className="title"
+                            <div
+                              className="info info-warning broken-white"
                               style={{
-                                color: "white"
+                                backgroundImage:
+                                  "url(" + item.featured_image_src + ")",
+                                // backgroundColor: "rgba(0, 0, 0, 0.25)",
+                                backgroundColor:
+                                  "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
+                                backgroundSize: "cover",
+                                height: 200,
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "flex-end",
+                                alignItems: "flex-end"
                               }}
                             >
-                              {/* <div
+                              <h4
+                                className="title"
                                 style={{
-                                  backgroundImage:
-                                    "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
-                                  position: "absolute",
-                                  height: "100%",
-                                  width: "100%"
+                                  color: "white",
+                                  paddingTop: "20px"
                                 }}
-                              > */}
-                              {item.title.rendered}
-                              {/* </div> */}
-                            </h4>
+                              >
+                                {item.title.rendered}
+                              </h4>
+                            </div>
                           </div>
                         </CarouselItem>
                       );

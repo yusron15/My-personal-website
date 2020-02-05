@@ -97,13 +97,6 @@ class Blogs extends React.Component {
                           className="react-search-field-input"
                           placeholder="Cari "
                         />
-                        {/* <ReactSearchBox
-                          style={{ color: "black" }}
-                          placeholder="Search"
-                          value="Doe"
-                          data={data}
-                          callback={record => console.log(record)}
-                        /> */}
                       </Col>
 
                       <Col md="5">
@@ -111,14 +104,6 @@ class Blogs extends React.Component {
                           styles={customStyles}
                           value="index "
                           options={[
-                            {
-                              label: "Job Example",
-                              value: "Job Example"
-                            },
-                            {
-                              label: "Job Example",
-                              value: "Job Example"
-                            },
                             {
                               label: "Job Example",
                               value: "Job Example"
@@ -130,14 +115,6 @@ class Blogs extends React.Component {
                               dataSelect: data
                             });
                             let dataSelect = [
-                              {
-                                label: "Job Example",
-                                value: "Job Example"
-                              },
-                              {
-                                label: "Job Example",
-                                value: "Job Example"
-                              },
                               {
                                 label: "Job Example",
                                 value: "Job Example"
@@ -154,7 +131,7 @@ class Blogs extends React.Component {
                 </Row>
               </Container>
             </div>
-          </div>{" "}
+          </div>
         </>
       );
     }
@@ -227,15 +204,6 @@ class Blogs extends React.Component {
                       </Card> */}
                       {/* <div style={{ maxHeight: "10px" }}> */}
                       <Select
-                        // styles={{
-                        //   control: styles => ({
-                        //     ...styles,
-                        //     height: "10px"
-                        //   }),
-                        //   option: () => ({
-                        //     zIndex: 999
-                        //   })
-                        // }}
                         styles={customStyles}
                         value="index "
                         options={[
@@ -298,7 +266,7 @@ class Blogs extends React.Component {
             </Container>
           </div>
           {/* ********* END BLOGS 5 ********* */}
-        </div>{" "}
+        </div>
       </>
     );
   };

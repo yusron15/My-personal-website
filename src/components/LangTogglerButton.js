@@ -7,7 +7,7 @@ import ReactFlagsSelect from "react-flags-select";
 
 //import css module
 import "react-flags-select/css/react-flags-select.css";
-
+import { isMobile } from "react-device-detect";
 import eng from "../lang/eng.json";
 import id from "../lang/id.json";
 import cn from "../lang/cn.json";
@@ -16,47 +16,96 @@ import "../assets/css/main.css";
 import { getContent } from "../redux/ducks/actions";
 
 function LangTogglerButton(props) {
+  if (isMobile) {
+    return (
+      <>
+        <LangContext.Consumer>
+          {({ lang, toggleLang }) => (
+            <ReactFlagsSelect
+              alignOptions="right"
+              defaultCountry={props.lang}
+              countries={["ID", "GB", "CN", "HK"]}
+              customLabels={{
+                ID: "Bahasa",
+                GB: "English",
+                CN: "中国人",
+                HK: "Chinese Traditional"
+              }}
+              showSelectedLabel={true}
+              showOptionLabel={true}
+              className="menu-flags lang-button"
+              // onSelect={countryCode => toggleLang(countryCode)}
+              onSelect={async a => {
+                let data = id;
+                if (a == "GB") {
+                  data = "EN";
+                }
+
+                if (a == "CN") {
+                  data = "MD";
+                }
+
+                if (a == "HK") {
+                  data = "HK";
+                }
+
+                if (a == "ID") {
+                  data = "ID";
+                }
+                await props.changeLang(a);
+                await props.getContent(props.activePage, data, true);
+
+                await props.getContent("Header", data, true);
+              }}
+            />
+          )}
+        </LangContext.Consumer>
+      </>
+    );
+  }
   return (
-    <LangContext.Consumer>
-      {({ lang, toggleLang }) => (
-        <ReactFlagsSelect
-          defaultCountry={props.lang}
-          countries={["ID", "GB", "CN", "HK"]}
-          customLabels={{
-            ID: "Bahasa",
-            GB: "English",
-            CN: "中国人",
-            HK: "Chinese Traditional"
-          }}
-          showSelectedLabel={false}
-          showOptionLabel={true}
-          className="menu-flags lang-button"
-          // onSelect={countryCode => toggleLang(countryCode)}
-          onSelect={async a => {
-            let data = id;
-            if (a == "GB") {
-              data = "EN";
-            }
+    <>
+      <LangContext.Consumer>
+        {({ lang, toggleLang }) => (
+          <ReactFlagsSelect
+            defaultCountry={props.lang}
+            countries={["ID", "GB", "CN", "HK"]}
+            customLabels={{
+              ID: "Bahasa",
+              GB: "English",
+              CN: "中国人",
+              HK: "Chinese Traditional"
+            }}
+            showSelectedLabel={false}
+            showOptionLabel={true}
+            className="menu-flags lang-button"
+            // onSelect={countryCode => toggleLang(countryCode)}
+            onSelect={async a => {
+              let data = id;
+              if (a == "GB") {
+                data = "EN";
+              }
 
-            if (a == "CN") {
-              data = "MD";
-            }
+              if (a == "CN") {
+                data = "MD";
+              }
 
-            if (a == "HK") {
-              data = "HK";
-            }
+              if (a == "HK") {
+                data = "HK";
+              }
 
-            if (a == "ID") {
-              data = "ID";
-            }
-            await props.changeLang(a);
-            await props.getContent(props.activePage, data, true);
+              if (a == "ID") {
+                data = "ID";
+              }
+              await props.changeLang(a);
+              await props.getContent(props.activePage, data, true);
 
-            await props.getContent("Header", data, true);
-          }}
-        />
-      )}
-    </LangContext.Consumer>
+              await props.getContent("Header", data, true);
+            }}
+          />
+        )}
+      </LangContext.Consumer>
+    </>
   );
 }
 
