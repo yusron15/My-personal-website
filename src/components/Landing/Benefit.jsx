@@ -41,13 +41,6 @@ import { getContent } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
 
-const styles = {
-  bounce: {
-    animation: "x 1s",
-    animationName: Radium.keyframes(bounce, "bounce")
-  }
-};
-
 const PrevButton = props => {
   return (
     <img
@@ -160,7 +153,7 @@ class Testimonials extends React.Component {
   onExited = carousel => {
     this["carousel" + carousel + "Animating"] = false;
   };
-  
+
   next = (carousel, items) => {
     if (this["carousel" + carousel + "Animating"]) return;
     const nextIndex =
@@ -169,7 +162,6 @@ class Testimonials extends React.Component {
         : this.state["carousel" + carousel + "Index"] + 1;
     this.setState({ ["carousel" + carousel + "Index"]: nextIndex });
   };
-
 
   previous = (carousel, items) => {
     if (this["carousel" + carousel + "Animating"]) return;
@@ -180,14 +172,13 @@ class Testimonials extends React.Component {
     this.setState({ ["carousel" + carousel + "Index"]: nextIndex });
   };
 
-
   goToIndex = (newIndex, carousel) => {
     if (this["carousel" + carousel + "Animating"]) return;
     this.setState({ ["carousel" + carousel + "Index"]: newIndex });
   };
 
   renderContent = () => {
-    const language = this.props.currentLang ;
+    const language = this.props.currentLang;
     if (isMobile) {
       return (
         <>
@@ -538,11 +529,17 @@ class Testimonials extends React.Component {
                               <div
                                 className="info text-left"
                                 // style={styles.fadeInUp}
-
+                                // style={{
+                                //   height: "270",
+                                //   backgroundColor: "rgba(112, 112, 112, 0.19)",
+                                //   color: "white",
+                                //   minWidth: "200px",
+                                //   borderRadius: "10px"
+                                // }}
                                 style={
-                                  this.props.currentLang === language
+                                  this.props.currentLang === "CN"
                                     ? {
-                                        height: "330",
+                                        height: "370px",
                                         backgroundColor:
                                           "rgba(112, 112, 112, 0.19)",
                                         color: "white",
@@ -550,7 +547,7 @@ class Testimonials extends React.Component {
                                         borderRadius: "10px"
                                       }
                                     : {
-                                        height: "270",
+                                        height: "280px",
                                         backgroundColor:
                                           "rgba(112, 112, 112, 0.19)",
                                         color: "white",
@@ -604,13 +601,25 @@ class Testimonials extends React.Component {
                           >
                             <div
                               className="info text-left"
-                              style={{
-                                backgroundColor: "rgba(112, 112, 112, 0.19)",
-                                color: "white",
-                                minHeight: "270px",
-                                minWidth: "200px",
-                                borderRadius: "10px"
-                              }}
+                              style={
+                                this.props.currentLang === "CN"
+                                  ? {
+                                      height: "370px",
+                                      backgroundColor:
+                                        "rgba(112, 112, 112, 0.19)",
+                                      color: "white",
+                                      minWidth: "200px",
+                                      borderRadius: "10px"
+                                    }
+                                  : {
+                                      height: "280px",
+                                      backgroundColor:
+                                        "rgba(112, 112, 112, 0.19)",
+                                      color: "white",
+                                      minWidth: "200px",
+                                      borderRadius: "10px"
+                                    }
+                              }
                             >
                               <div
                                 style={{
@@ -654,13 +663,25 @@ class Testimonials extends React.Component {
                           >
                             <div
                               className="info text-left"
-                              style={{
-                                backgroundColor: "rgba(112, 112, 112, 0.19)",
-                                color: "white",
-                                minHeight: "270px",
-                                minWidth: "200px",
-                                borderRadius: "10px"
-                              }}
+                              style={
+                                this.props.currentLang === "CN"
+                                  ? {
+                                      height: "370px",
+                                      backgroundColor:
+                                        "rgba(112, 112, 112, 0.19)",
+                                      color: "white",
+                                      minWidth: "200px",
+                                      borderRadius: "10px"
+                                    }
+                                  : {
+                                      height: "280px",
+                                      backgroundColor:
+                                        "rgba(112, 112, 112, 0.19)",
+                                      color: "white",
+                                      minWidth: "200px",
+                                      borderRadius: "10px"
+                                    }
+                              }
                             >
                               <div
                                 style={{
@@ -710,13 +731,25 @@ class Testimonials extends React.Component {
                           >
                             <div
                               className="info text-left"
-                              style={{
-                                backgroundColor: "rgba(112, 112, 112, 0.19)",
-                                color: "white",
-                                minHeight: "270px",
-                                minWidth: "200px",
-                                borderRadius: "10px"
-                              }}
+                              style={
+                                this.props.currentLang === "CN"
+                                  ? {
+                                      height: "370px",
+                                      backgroundColor:
+                                        "rgba(112, 112, 112, 0.19)",
+                                      color: "white",
+                                      minWidth: "200px",
+                                      borderRadius: "10px"
+                                    }
+                                  : {
+                                      height: "280px",
+                                      backgroundColor:
+                                        "rgba(112, 112, 112, 0.19)",
+                                      color: "white",
+                                      minWidth: "200px",
+                                      borderRadius: "10px"
+                                    }
+                              }
                             >
                               <div
                                 style={{
@@ -760,13 +793,25 @@ class Testimonials extends React.Component {
                           >
                             <div
                               className="info text-left"
-                              style={{
-                                backgroundColor: "rgba(112, 112, 112, 0.19)",
-                                color: "white",
-                                minHeight: "270px",
-                                minWidth: "200px",
-                                borderRadius: "10px"
-                              }}
+                              style={
+                                this.props.currentLang === "CN"
+                                  ? {
+                                      height: "370px",
+                                      backgroundColor:
+                                        "rgba(112, 112, 112, 0.19)",
+                                      color: "white",
+                                      minWidth: "200px",
+                                      borderRadius: "10px"
+                                    }
+                                  : {
+                                      height: "280px",
+                                      backgroundColor:
+                                        "rgba(112, 112, 112, 0.19)",
+                                      color: "white",
+                                      minWidth: "200px",
+                                      borderRadius: "10px"
+                                    }
+                              }
                             >
                               <div
                                 style={{
@@ -810,13 +855,25 @@ class Testimonials extends React.Component {
                           >
                             <div
                               className="info text-left"
-                              style={{
-                                backgroundColor: "rgba(112, 112, 112, 0.19)",
-                                color: "white",
-                                minHeight: "270px",
-                                minWidth: "200px",
-                                borderRadius: "10px"
-                              }}
+                              style={
+                                this.props.currentLang === "CN"
+                                  ? {
+                                      height: "370px",
+                                      backgroundColor:
+                                        "rgba(112, 112, 112, 0.19)",
+                                      color: "white",
+                                      minWidth: "200px",
+                                      borderRadius: "10px"
+                                    }
+                                  : {
+                                      height: "280px",
+                                      backgroundColor:
+                                        "rgba(112, 112, 112, 0.19)",
+                                      color: "white",
+                                      minWidth: "200px",
+                                      borderRadius: "10px"
+                                    }
+                              }
                             >
                               <div
                                 style={{
