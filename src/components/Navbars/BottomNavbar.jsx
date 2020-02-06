@@ -140,7 +140,7 @@ class BottomNavbar extends React.Component {
                   margin: "15px 10px 0 10px"
                 }}
               >
-                <Col md="12" style={{ padding: "0 2px 0 2px" }}>
+                <Col md="12" style={{ padding: "5px 2px 0 2px" }}>
                   <Col>
                     <div
                       style={{

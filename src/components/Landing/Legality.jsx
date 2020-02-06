@@ -215,7 +215,7 @@ class Projects extends React.Component {
                   style={{ height: "60%" }}
                   activeTab={"project" + this.state.activeTab}
                 >
-                  <TabPane tabId="project1" style={{ height: "200px" }}>
+                  <TabPane tabId="project1" style={{ height: "60vh" }}>
                     <Col className="ml-auto mr-auto text-center mt-4" md="8">
                       <h4 className="title font-black">
                         {ReactHtmlParser(

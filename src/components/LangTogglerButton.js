@@ -22,6 +22,7 @@ function LangTogglerButton(props) {
         <LangContext.Consumer>
           {({ lang, toggleLang }) => (
             <ReactFlagsSelect
+              direction="up"
               alignOptions="right"
               defaultCountry={props.lang}
               countries={["ID", "GB", "CN", "HK"]}

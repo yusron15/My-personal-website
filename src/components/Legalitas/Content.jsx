@@ -211,7 +211,7 @@ class Projects extends React.Component {
                       activeTab={"project" + this.state.activeTab}
                       style={{ height: "50vh" }}
                     >
-                      <TabPane tabId="project1">
+                      <TabPane tabId="project1" style={{ height: "60vh" }}>
                         <Col
                           className="ml-auto mr-auto text-center mt-4"
                           md="8"
@@ -232,7 +232,7 @@ class Projects extends React.Component {
                           </p>
                         </Col>
                       </TabPane>
-                      <TabPane tabId="project2" style={{ height: "200px" }}>
+                      <TabPane tabId="project2" style={{ height: "60vh" }}>
                         <Col
                           className="ml-auto mr-auto text-center mt-4"
                           md="8"
@@ -252,7 +252,7 @@ class Projects extends React.Component {
                           </p>
                         </Col>
                       </TabPane>
-                      <TabPane tabId="project3" style={{ height: "200px" }}>
+                      <TabPane tabId="project3" style={{ height: "60vh" }}>
                         <Col
                           className="ml-auto mr-auto text-center mt-4"
                           md="8"
@@ -272,7 +272,7 @@ class Projects extends React.Component {
                           </p>
                         </Col>
                       </TabPane>
-                      <TabPane tabId="project4" style={{ height: "200px" }}>
+                      <TabPane tabId="project4" style={{ height: "60vh" }}>
                         <Col
                           className="ml-auto mr-auto text-center mt-4"
                           md="8"
@@ -291,7 +291,7 @@ class Projects extends React.Component {
                           </p>
                         </Col>
                       </TabPane>
-                      <TabPane tabId="project5" style={{ height: "200px" }}>
+                      <TabPane tabId="project5" style={{ height: "60vh" }}>
                         <Col
                           className="ml-auto mr-auto text-center mt-4"
                           md="8"
