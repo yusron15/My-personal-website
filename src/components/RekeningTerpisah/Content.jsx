@@ -176,7 +176,7 @@ class Content extends React.Component {
                   </div>
                   <div
                     className="team-1 broken-white"
-                    style={{ minHeight: "50vh", padding: 0 }}
+                    style={{ minHeight: "70vh", padding: 0 }}
                   >
                     <Row style={{ marginLeft: "10%" }}>
                       <Col md="8">

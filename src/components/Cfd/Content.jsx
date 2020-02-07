@@ -397,7 +397,7 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description" style={textDesc}>
+                        <div className="description font-black" style={textDesc}>
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[0].content
                           )}
@@ -416,7 +416,7 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description" style={textDesc}>
+                        <div className="description font-black" style={textDesc}>
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[1].content
                           )}
@@ -435,7 +435,7 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description" style={textDesc}>
+                        <div className="description font-black" style={textDesc}>
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[2].content
                           )}
@@ -454,7 +454,7 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description" style={textDesc}>
+                        <div className="description font-black" style={textDesc}>
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[3].content
                           )}
@@ -473,7 +473,7 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description" style={textDesc}>
+                        <div className="description font-black" style={textDesc}>
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[1].content
                           )}
@@ -492,7 +492,7 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description" style={textDesc}>
+                        <div className="description font-black" style={textDesc}>
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[2].content
                           )}
@@ -511,7 +511,7 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description" style={textDesc}>
+                        <div className="description font-black" style={textDesc}>
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[3].content
                           )}

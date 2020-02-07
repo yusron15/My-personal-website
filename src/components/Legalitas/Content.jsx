@@ -350,7 +350,6 @@ class Projects extends React.Component {
                   <Container
                     className="center"
                     style={{
-                      height: "65vh",
                       minWidth: "100vw",
                       backgroundSize: "cover",
                       backgroundImage: `url(${bglegalitas})`
@@ -473,18 +472,13 @@ class Projects extends React.Component {
                         </Col>
                       </TabPane>
                     </TabContent>
-
-                    <Nav
-                      className="nav-pills-info nav-pills-icons nav-pills-lg"
-                      pills
-                      role="tablist"
-                      // style={{marginTop:"50px"}}
-                    >
-                      <NavItem className="m-auto">
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOutDown"
-                        >
+                    <Container style={{ paddingBottom: "50px" }}>
+                      <Nav
+                        className="nav-pills-info nav-pills-icons nav-pills-lg"
+                        pills
+                        role="tablist"
+                      >
+                        <NavItem className="m-auto">
                           <img
                             src={
                               this.state.activeTab === "1"
@@ -500,13 +494,8 @@ class Projects extends React.Component {
                               this.toggle("1");
                             }}
                           />
-                        </ScrollAnimation>
-                      </NavItem>
-                      <NavItem className="m-auto">
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOutDown"
-                        >
+                        </NavItem>
+                        <NavItem className="m-auto">
                           <img
                             src={
                               this.state.activeTab === "2"
@@ -522,13 +511,8 @@ class Projects extends React.Component {
                               this.toggle("2");
                             }}
                           />
-                        </ScrollAnimation>
-                      </NavItem>
-                      <NavItem className="m-auto">
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOutDown"
-                        >
+                        </NavItem>
+                        <NavItem className="m-auto">
                           <img
                             src={
                               this.state.activeTab === "3"
@@ -544,13 +528,8 @@ class Projects extends React.Component {
                               this.toggle("3");
                             }}
                           />
-                        </ScrollAnimation>
-                      </NavItem>
-                      <NavItem className="m-auto">
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOutDown"
-                        >
+                        </NavItem>
+                        <NavItem className="m-auto">
                           <img
                             src={
                               this.state.activeTab === "4"
@@ -566,13 +545,8 @@ class Projects extends React.Component {
                               this.toggle("4");
                             }}
                           />
-                        </ScrollAnimation>
-                      </NavItem>
-                      <NavItem className="m-auto">
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOutDown"
-                        >
+                        </NavItem>
+                        <NavItem className="m-auto">
                           <img
                             src={
                               this.state.activeTab === "5"
@@ -588,9 +562,9 @@ class Projects extends React.Component {
                               this.toggle("5");
                             }}
                           />
-                        </ScrollAnimation>
-                      </NavItem>
-                    </Nav>
+                        </NavItem>
+                      </Nav>
+                    </Container>
                   </Container>
                 </div>
                 {/* ********* END PROJECTS 2 ********* */}
