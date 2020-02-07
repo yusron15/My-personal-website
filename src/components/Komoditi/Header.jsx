@@ -75,9 +75,8 @@ class Headers extends React.Component {
               >
                 <Container style={{ paddingTop: 0 }}>
                   <p
-                    className="description"
+                    className="description font-black"
                     style={{
-                      color: "black",
                       marginTop: "20px",
                       textAlign: "justify"
                     }}

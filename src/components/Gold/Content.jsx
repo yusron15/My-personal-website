@@ -200,9 +200,9 @@ class Features extends React.Component {
                               )}
                             </div>
                             <p
+                              className="font-black"
                               style={{
                                 textAlign: "left",
-                                color: "black",
                                 textAlign: "justify"
                               }}
                             >

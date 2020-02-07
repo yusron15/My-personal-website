@@ -552,7 +552,7 @@ class Pricing extends React.Component {
                 >
                   <Container>
                     <Row>
-                      <Col className="" md="6">
+                      <Col className="" md="12">
                         <h2
                           className="title"
                           style={{
