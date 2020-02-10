@@ -585,8 +585,8 @@ class Features extends React.Component {
                   <img
                     src={TopgrowthAnmation}
                     style={{
-                      minWidth: "55vw",
-                      height: "65vh"
+                      minWidth: "50vw",
+                      height: "60vh"
                     }}
                   />
                   {/* </ScrollAnimation> */}

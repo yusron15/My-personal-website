@@ -154,8 +154,8 @@ class Content extends React.Component {
                     backgroundImage:
                       "url(" + require("assets/img/dollar.png") + ")",
                     backgroundSize: "cover",
-                    backgroundColor: "rgba(52, 52, 52, 0.8)",
-                    minHeight: "80vh"
+                    backgroundColor: "rgba(52, 52, 52, 0.8)"
+                    // minHeight: "80vh"
                   }}
                 >
                   <div
@@ -237,7 +237,8 @@ class Content extends React.Component {
                             <p
                               className="font-black"
                               style={{
-                                lineHeight: "25px"
+                                lineHeight: "25px",
+                                paddingBottom: "30px"
                               }}
                             >
                               {ReactHtmlParser(

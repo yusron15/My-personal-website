@@ -58,7 +58,7 @@ class Pricing extends React.Component {
             <div
               className="pricing-3"
               id="pricing-3"
-              style={{ backgroundColor: "#1D1E1F", paddingTop:"10px" }}
+              style={{ backgroundColor: "#1D1E1F", paddingTop: "10px" }}
             >
               <Container>
                 <Row>
@@ -595,10 +595,10 @@ class Pricing extends React.Component {
                               animateOut="fadeOut"
                             >
                               <Card
-                                className="card-pricing card-plain zoom free"
+                                className="card-pricing card-plain zoom "
                                 style={{
                                   textAlign: "left",
-                                  backgroundColor: "#1D1E1F",
+                                  backgroundColor: "#323436",
                                   borderRadius: "10px"
                                 }}
                               >
@@ -740,7 +740,7 @@ class Pricing extends React.Component {
                                 className="card-pricing card-plain zoom"
                                 style={{
                                   textAlign: "left",
-                                  backgroundColor: "#323436",
+                                  backgroundColor: "#0076ba",
                                   borderRadius: "10px"
                                 }}
                               >

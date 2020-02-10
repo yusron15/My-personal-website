@@ -284,6 +284,7 @@ class HeaderLanding extends React.Component {
                         <div
                           className="page-header minHeight header-filter"
                           style={{
+                            minHeight: "87vh",
                             backgroundImage:
                               "url(" +
                               this.props.pageStore.Landing.HeaderLanding
@@ -327,6 +328,7 @@ class HeaderLanding extends React.Component {
                         <div
                           className="page-header minHeight"
                           style={{
+                            minHeight: "87vh",
                             backgroundImage:
                               "url(" +
                               this.props.pageStore.Landing.HeaderLanding
@@ -367,6 +369,7 @@ class HeaderLanding extends React.Component {
                         <div
                           className="page-header minHeight"
                           style={{
+                            minHeight: "87vh",
                             backgroundImage:
                               "url(" +
                               this.props.pageStore.Landing.HeaderLanding
@@ -432,7 +435,7 @@ class HeaderLanding extends React.Component {
                   md="12"
                   style={{
                     position: "absolute",
-                    bottom: -10,
+                    bottom: 0,
                     paddingRight: 0,
                     paddingLeft: 0
                   }}
