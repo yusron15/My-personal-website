@@ -236,7 +236,9 @@ class News extends React.Component {
               }}
             >
               <SidebarMobile />
-              <div className="title title-header-mobile">Cabang Kami</div>
+              <div className="title title-header-mobile">
+                {this.props.pageStore.cabang.heading}
+              </div>
             </div>
             <div className="space-50" />
             <Container>
@@ -343,7 +345,9 @@ class News extends React.Component {
           >
             <BlurryNavbar />
             <ColoredNavbar location={{ ...this.props.location }} />
-            <div className="title title-header">Cabang Kami</div>
+            <div className="title title-header">
+              {this.props.pageStore.cabang.heading}
+            </div>
           </div>
 
           <div className="testimonials-4">
@@ -391,7 +395,7 @@ class News extends React.Component {
                 >
                   {/* <ScrollAnimation animateIn="fadeInLeft" animateOut="fadeOut"> */}
                   <h1 className="title font-black">
-                    {this.props.pageStore.cabang.title}
+                    {this.props.pageStore.cabang.heading}
                   </h1>
                   <p className="description text-white">
                     <TabContent activeTab={"project" + this.state.activeSlide}>

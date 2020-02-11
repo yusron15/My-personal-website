@@ -53,7 +53,7 @@ import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import "../../assets/css/main.css";
 import moment from "moment";
 
-const PLAYLIST_ID = "PLzeWDGNIcxbFRu8k6ee7nIngLotBGKgx1";
+const PLAYLIST_ID = "PLzeWDGNIcxbHeQhDrk-kHvBOrPJJHffen";
 const MAX_RESULT = 20;
 const API_KEY = "AIzaSyD_yfX0r6bhW5G3Kq2w9LGWym7TEf1M5q0";
 
