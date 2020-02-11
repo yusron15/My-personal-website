@@ -53,7 +53,7 @@ const MapWithAMarker = withGoogleMap(props => (
 class Content extends React.Component {
   state = {};
   async componentDidMount() {
-    await this.props.getContent("hubungikami", "id");
+    await this.props.getContent("hubungikami", this.props.currentLang, true);
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.wrapper.scrollTop = 0;
@@ -127,7 +127,7 @@ class Content extends React.Component {
                         <CardBody>
                           <Row>
                             <Col md="6">
-                              <label>
+                              <label style={{ color: "black" }}>
                                 {
                                   this.props.pageStore.hubungikami.form
                                     .firstname
@@ -149,7 +149,11 @@ class Content extends React.Component {
                                 <Input
                                   style={{ color: "black" }}
                                   aria-label="First Name..."
-                                  placeholder="First Name..."
+                                  // placeholder={
+                                  //   this.props.pageStore.hubungikami.form
+                                  //     .firstname
+                                  // }
+                                  placeholder="First Name ..."
                                   type="text"
                                   onFocus={e =>
                                     this.setState({
@@ -166,8 +170,7 @@ class Content extends React.Component {
                             </Col>
                             <Col md="6">
                               <FormGroup>
-                                <label>
-                                  {" "}
+                                <label style={{ color: "black" }}>
                                   {
                                     this.props.pageStore.hubungikami.form
                                       .lastname
@@ -193,7 +196,11 @@ class Content extends React.Component {
                                   <Input
                                     style={{ color: "black" }}
                                     aria-label="Last Name..."
-                                    placeholder="Last Name..."
+                                    // placeholder={
+                                    //   this.props.pageStore.hubungikami.form
+                                    //     .lastname
+                                    // }
+                                    placeholder="Last Name ..."
                                     type="text"
                                     onFocus={e =>
                                       this.setState({
@@ -211,8 +218,7 @@ class Content extends React.Component {
                             </Col>
                           </Row>
                           <FormGroup>
-                            <label>
-                              {" "}
+                            <label style={{ color: "black" }}>
                               {
                                 this.props.pageStore.hubungikami.form
                                   .emailaddress
@@ -233,7 +239,11 @@ class Content extends React.Component {
                               </InputGroupAddon>
                               <Input
                                 style={{ color: "black" }}
-                                placeholder="Email Here..."
+                                // placeholder={
+                                //   this.props.pageStore.hubungikami.form
+                                //     .emailaddress
+                                // }
+                                placeholder="Email..."
                                 type="text"
                                 onFocus={e =>
                                   this.setState({ emailFocus: true })
@@ -245,8 +255,7 @@ class Content extends React.Component {
                             </InputGroup>
                           </FormGroup>
                           <FormGroup>
-                            <label>
-                              {" "}
+                            <label style={{ color: "black" }}>
                               {
                                 this.props.pageStore.hubungikami.form
                                   .yourmessage
@@ -256,6 +265,7 @@ class Content extends React.Component {
                               style={{ color: "black" }}
                               id="message"
                               name="message"
+                              placeholder="message"
                               rows="6"
                               type="textarea"
                             />

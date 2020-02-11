@@ -69,10 +69,7 @@ class Blogs extends React.Component {
   };
 
   async componentDidMount() {
-    try {
-    } catch (error) {
-      console.log(error);
-    }
+    await this.props.getContent("karir", this.props.currentLang, true);
   }
 
   async componentDidUpdate(prevProps, prevState) {

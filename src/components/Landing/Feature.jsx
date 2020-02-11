@@ -10,7 +10,7 @@ import laptop from "../../assets/img/macbook.png";
 import feature from "../../assets/img/all-device.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
-import TopgrowthAnmation from "../../assets/img/topgrowthanimation.gif";
+import TopgrowthAnmation from "../../assets/img/appanimation.gif";
 import "../../assets/css/main.css";
 import ReactHtmlParser, {
   processNodes,

@@ -91,7 +91,7 @@ class Projects extends React.Component {
                 <SidebarMobile />
 
                 <div className="title-header-mobile">
-                  {this.props.pageStore.Landing.Legality.header}
+                  {this.props.pageStore.legalitas.header}
                 </div>
               </div>
               {/* <DarkNavbar /> */}
@@ -219,15 +219,13 @@ class Projects extends React.Component {
                           <h2 className="title font-black">
                             <div style={{ color: "black" }}>
                               {ReactHtmlParser(
-                                this.props.pageStore.Landing.Legality.content[0]
-                                  .title
+                                this.props.pageStore.legalitas.content[0].title
                               )}
                             </div>
                           </h2>
                           <p className="description mb-5 font-black">
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[3]
-                                .content
+                              this.props.pageStore.legalitas.content[3].content
                             )}
                           </p>
                         </Col>
@@ -240,14 +238,12 @@ class Projects extends React.Component {
                           <p className="description mb-5 font-black">
                             <h2 className="title font-black">
                               {ReactHtmlParser(
-                                this.props.pageStore.Landing.Legality.content[1]
-                                  .title
+                                this.props.pageStore.legalitas.content[1].title
                               )}
                             </h2>
 
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[1]
-                                .content
+                              this.props.pageStore.legalitas.content[1].content
                             )}
                           </p>
                         </Col>
@@ -260,14 +256,12 @@ class Projects extends React.Component {
                           <p className="description mb-5 font-black">
                             <h2 className="title font-black">
                               {ReactHtmlParser(
-                                this.props.pageStore.Landing.Legality.content[2]
-                                  .title
+                                this.props.pageStore.legalitas.content[2].title
                               )}
                             </h2>
 
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[2]
-                                .content
+                              this.props.pageStore.legalitas.content[2].content
                             )}
                           </p>
                         </Col>
@@ -279,14 +273,12 @@ class Projects extends React.Component {
                         >
                           <h2 className="title font-black">
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[3]
-                                .title
+                              this.props.pageStore.legalitas.content[3].title
                             )}
                           </h2>
                           <p className="description mb-5 font-black">
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[3]
-                                .content
+                              this.props.pageStore.legalitas.content[3].content
                             )}
                           </p>
                         </Col>
@@ -298,14 +290,12 @@ class Projects extends React.Component {
                         >
                           <h2 className="title font-black">
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[4]
-                                .title
+                              this.props.pageStore.legalitas.content[4].title
                             )}
                           </h2>
                           <p className="description mb-5 font-black">
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[4]
-                                .content
+                              this.props.pageStore.legalitas.content[4].content
                             )}
                           </p>
                         </Col>
@@ -343,7 +333,7 @@ class Projects extends React.Component {
                     <ColoredNavbar location={{ ...this.props.location }} />
 
                     <div className="title title-header">
-                      {this.props.pageStore.Landing.Legality.header}
+                      {this.props.pageStore.legalitas.header}
                     </div>
                   </div>
 
@@ -367,16 +357,14 @@ class Projects extends React.Component {
                           <h2 className="title font-black">
                             <div style={{ color: "black" }}>
                               {ReactHtmlParser(
-                                this.props.pageStore.Landing.Legality.content[0]
-                                  .title
+                                this.props.pageStore.legalitas.content[0].title
                               )}
                             </div>
                           </h2>
                           <p className="description mb-5 font-black">
                             {/* {this.state.content[0].bappebti} */}
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[0]
-                                .content
+                              this.props.pageStore.legalitas.content[0].content
                             )}
                           </p>
                         </Col>
@@ -389,14 +377,12 @@ class Projects extends React.Component {
                           <p className="description mb-5 font-black">
                             <h2 className="title font-black">
                               {ReactHtmlParser(
-                                this.props.pageStore.Landing.Legality.content[1]
-                                  .title
+                                this.props.pageStore.legalitas.content[1].title
                               )}
                             </h2>
 
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[1]
-                                .content
+                              this.props.pageStore.legalitas.content[1].content
                             )}
                           </p>
                         </Col>
@@ -409,14 +395,12 @@ class Projects extends React.Component {
                           <p className="description mb-5 font-black">
                             <h2 className="title font-black">
                               {ReactHtmlParser(
-                                this.props.pageStore.Landing.Legality.content[2]
-                                  .title
+                                this.props.pageStore.legalitas.content[2].title
                               )}
                             </h2>
 
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[2]
-                                .content
+                              this.props.pageStore.legalitas.content[2].content
                             )}
                           </p>
                         </Col>
@@ -428,14 +412,12 @@ class Projects extends React.Component {
                         >
                           <h2 className="title font-black">
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[3]
-                                .title
+                              this.props.pageStore.legalitas.content[3].title
                             )}
                           </h2>
                           <p className="description mb-5 font-black">
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[3]
-                                .content
+                              this.props.pageStore.legalitas.content[3].content
                             )}
                           </p>
                         </Col>
@@ -447,14 +429,12 @@ class Projects extends React.Component {
                         >
                           <h2 className="title font-black">
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[4]
-                                .title
+                              this.props.pageStore.legalitas.content[4].title
                             )}
                           </h2>
                           <p className="description mb-5 font-black">
                             {ReactHtmlParser(
-                              this.props.pageStore.Landing.Legality.content[4]
-                                .content
+                              this.props.pageStore.legalitas.content[4].content
                             )}
                           </p>
                         </Col>
