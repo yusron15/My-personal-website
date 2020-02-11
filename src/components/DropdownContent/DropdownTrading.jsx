@@ -54,9 +54,6 @@ const DropdownTradingText = {
 };
 
 class DropdownTrading extends React.Component {
-  async componentDidMount() {
-    await this.props.getContent("landing", "id");
-  }
   render() {
     return (
       <LangContext.Consumer>
