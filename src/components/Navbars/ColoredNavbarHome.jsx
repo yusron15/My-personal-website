@@ -119,7 +119,12 @@ class ColorNavbar extends React.Component {
   };
 
   async componentDidMount() {
-    window.addEventListener("scroll", this.changeNavbarColor);
+    try {
+      await this.props.getContent("Header", this.props.currentLang, true);
+      window.addEventListener("scroll", this.changeNavbarColor);
+    } catch (error) {
+      console.log(error);
+    }
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeNavbarTop);

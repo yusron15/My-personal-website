@@ -37,7 +37,8 @@ function LangTogglerButton(props) {
               className="menu-flags lang-button"
               // onSelect={countryCode => toggleLang(countryCode)}
               onSelect={async a => {
-                let data = id;
+                let data;
+                let lng;
                 if (a == "GB") {
                   data = "EN";
                 }
@@ -82,7 +83,7 @@ function LangTogglerButton(props) {
             className="menu-flags lang-button"
             // onSelect={countryCode => toggleLang(countryCode)}
             onSelect={async a => {
-              let data = id;
+              let data;
               if (a == "GB") {
                 data = "EN";
               }
@@ -98,7 +99,7 @@ function LangTogglerButton(props) {
               if (a == "ID") {
                 data = "ID";
               }
-              await props.changeLang(a);
+              await props.changeLang(data);
               await props.getContent(props.activePage, data, true);
 
               await props.getContent("Header", data, true);
