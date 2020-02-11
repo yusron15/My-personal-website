@@ -334,21 +334,58 @@ class Content extends React.Component {
                     previous={this.previous}
                   >
                     <CarouselIndicators
-                      items={items}
+                      // items={items}
+                      items={this.props.pageStore.indexfutures.slide.map(
+                        (item, index) => index
+                      )}
                       activeIndex={this.state.activeIndex}
                       onClickHandler={this.goToIndex}
                     />
-                    {items.map((item, key) => {
-                      return (
-                        <CarouselItem
-                          onExiting={this.onExiting}
-                          onExited={this.onExited}
-                          key={key}
-                        >
-                          {item.content}
-                        </CarouselItem>
-                      );
-                    })}
+                    {this.props.pageStore.indexfutures.slide.map(
+                      (item, key) => {
+                        return (
+                          <CarouselItem
+                            onExiting={this.onExiting}
+                            onExited={this.onExited}
+                            key={key}
+                          >
+                            <Row>
+                              <Col md="11" className="offset-md-1">
+                                <div
+                                  style={{
+                                    backgroundColor: "rgba(0, 0, 0, 0.66)",
+                                    marginBottom: "5%"
+                                  }}
+                                >
+                                  <div className="space-50" />
+                                  <Container>
+                                    <Row>
+                                      <Col md="12">
+                                        <div style={textTitle}>
+                                          <b>{item.title}</b>
+                                        </div>
+                                        <div style={textSubtitle}>
+                                          <b>{item.subtitle}</b>
+                                        </div>
+                                      </Col>
+                                      <Col md="12">
+                                        <div
+                                          className="description"
+                                          style={textDesc}
+                                        >
+                                          {item.content}
+                                        </div>
+                                      </Col>
+                                    </Row>
+                                  </Container>
+                                  <div className="space-50" />
+                                </div>
+                              </Col>
+                            </Row>
+                          </CarouselItem>
+                        );
+                      }
+                    )}
                   </Carousel>
                 </ScrollAnimation>
                 <CarouselIndicators
@@ -529,7 +566,9 @@ class Content extends React.Component {
                         {/* </Col> */}
                         <CarouselIndicators
                           // items={this.props.pageStore.indexfutures.slide}
-                          items={this.props.pageStore.indexfutures.slide.map((item,index) => index)}
+                          items={this.props.pageStore.indexfutures.slide.map(
+                            (item, index) => index
+                          )}
                           activeIndex={this.state.activeIndex}
                           onClickHandler={this.goToIndex}
                         />

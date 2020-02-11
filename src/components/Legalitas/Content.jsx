@@ -206,12 +206,12 @@ class Projects extends React.Component {
                       </Row>
                     </Nav>
                   </Col>
-                  <Col>
+                  <Col style={{ paddingBottom: "50px" }}>
                     <TabContent
                       activeTab={"project" + this.state.activeTab}
                       style={{ height: "50vh" }}
                     >
-                      <TabPane tabId="project1" style={{ height: "60vh" }}>
+                      <TabPane tabId="project1">
                         <Col
                           className="ml-auto mr-auto text-center mt-4"
                           md="8"
@@ -225,7 +225,7 @@ class Projects extends React.Component {
                           </h2>
                           <p className="description mb-5 font-black">
                             {ReactHtmlParser(
-                              this.props.pageStore.legalitas.content[3].content
+                              this.props.pageStore.legalitas.content[0].content
                             )}
                           </p>
                         </Col>

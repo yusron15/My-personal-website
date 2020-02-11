@@ -23,9 +23,13 @@ import {
   InputGroupText,
   InputGroup
 } from "reactstrap";
-
+import { getContent } from "../../redux/ducks/actions.js";
+import { connect } from "react-redux";
 import "../../assets/css/main.css";
 class NewsLetter extends Component {
+  async componentDidMount() {
+    await this.props.getContent("landing", this.props.currentLang, true);
+  }
   render() {
     return (
       <div style={{ backgroundColor: "#1D1E1F" }}>
@@ -34,10 +38,11 @@ class NewsLetter extends Component {
             <Row>
               <Col className="ml-auto mr-auto" lg="8" xs="10">
                 <div className="text-center">
-                  <h4 className="title">Subscribe to our Newsletter</h4>
+                  <h4 className="title">
+                    {this.props.pageStore.Landing.NewsLetter.title}
+                  </h4>
                   <p className="description">
-                    Join our newsletter and get news in your inbox every week!
-                    We hate spam too, so no worries about this.
+                    {this.props.pageStore.Landing.NewsLetter.subtitle}
                   </p>
                 </div>
               </Col>
@@ -85,4 +90,13 @@ class NewsLetter extends Component {
   }
 }
 
-export default NewsLetter;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
+});
+
+const mapDispatchToProps = dispatch => ({
+  getContent: (section, lang) => dispatch(getContent(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewsLetter);

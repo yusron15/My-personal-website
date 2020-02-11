@@ -350,15 +350,12 @@ class News extends React.Component {
             </div>
           </div>
 
-          <div className="testimonials-4">
-            {/* <ColoredNavbar /> */}
+          {/* <div className="testimonials-4">
             <Container>
               <Row>
                 <Col
                   md="12"
-                  // style={{ paddingTop: "15vh" }}
                 >
-                  {/* <ScrollAnimation animateIn="fadeInRight" animateOut="fadeOut"> */}
                   <Slick {...slickSettings}>
                     {this.props.cabangList.map((item, index) => {
                       return (
@@ -367,14 +364,8 @@ class News extends React.Component {
                             className={
                               this.state.activeSlide === index ? "scaled" : ""
                             }
-                            // onClick={() => {
-                            //   this.toggle("1");
-                            // }}
                             style={{
                               backgroundImage:
-                                // "url(" +
-                                // require("assets/img/kantorpusat.png") +
-                                // ")",
                                 "url(" + item.image_url + ")",
                               height: "30vh",
                               backgroundSize: "cover"
@@ -384,7 +375,7 @@ class News extends React.Component {
                       );
                     })}
                   </Slick>
-                  {/* </ScrollAnimation> */}
+
                 </Col>
                 <Col
                   className="positioned"
@@ -393,7 +384,7 @@ class News extends React.Component {
                   md="8"
                   xs="10"
                 >
-                  {/* <ScrollAnimation animateIn="fadeInLeft" animateOut="fadeOut"> */}
+
                   <h1 className="title font-black">
                     {this.props.pageStore.cabang.heading}
                   </h1>
@@ -401,7 +392,7 @@ class News extends React.Component {
                     <TabContent activeTab={"project" + this.state.activeSlide}>
                       {this.props.cabangList.map((item, index) => (
                         <TabPane tabId={`project${index}`}>
-                          {/* <Col> */}
+
                           <div className="title font-black">{item.nama}</div>
                           <p className="description font-black mb-5">
                             {item.alamat}
@@ -410,10 +401,80 @@ class News extends React.Component {
                       ))}
                     </TabContent>
                   </p>
-                  {/* </ScrollAnimation> */}
+
                 </Col>
               </Row>
             </Container>
+          </div> */}
+
+          <div className="cd-section" id="testimonials">
+            <div
+              className="testimonials-4"
+              style={{ padding: 0, backgroundColor: "#FCFCFC" }}
+            >
+              {/* <ColoredNavbar /> */}
+              <Container>
+                <Row>
+                  <Col
+                    md={{ size: 12, offset: 5 }}
+                    // style={{ paddingTop: "15vh" }}
+                    style={{ minHeight: "50vh" }}
+                  >
+                    <Slick {...slickSettings}>
+                      {this.props.cabangList.map((item, index) => {
+                        return (
+                          <div>
+                            <NavLink
+                              // className={this.state.activeSlide === 0 ? "scaled" : ""}
+                              style={{
+                                backgroundImage: "url(" + item.image_url + ")",
+                                height: "30vh",
+                                backgroundSize: "cover"
+                                // borderRadius: 12
+                              }}
+                            ></NavLink>
+                          </div>
+                        );
+                      })}
+                    </Slick>
+                  </Col>
+                  <Col
+                    className="positioned"
+                    style={{
+                      backgroundColor: "transparent",
+                      marginTop: "5%"
+                    }}
+                    lg="4"
+                    md="8"
+                    xs="10"
+                  >
+                    <h1 className="title font-black">
+                      {this.props.pageStore.cabang.heading}
+                    </h1>
+                    <p
+                      className="description"
+                      style={{ margin: 0, minHeight: "20vh" }}
+                    >
+                      <TabContent
+                        activeTab={"project" + this.state.activeSlide}
+                      >
+                        {this.props.cabangList.map((item, index) => (
+                          <TabPane tabId={`project${index}`}>
+                            {/* <Col> */}
+                            <div className="title font-black">{item.nama}</div>
+
+                            <p className="description font-black">
+                              {item.alamat}
+                            </p>
+                            {/* </Col> */}
+                          </TabPane>
+                        ))}
+                      </TabContent>
+                    </p>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
           </div>
         </div>
       </>

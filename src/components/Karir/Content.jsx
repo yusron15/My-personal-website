@@ -38,29 +38,6 @@ const customStyles = {
   })
 };
 
-const data = [
-  {
-    key: "john",
-    value: "John Doe"
-  },
-  {
-    key: "jane",
-    value: "Jane Doe"
-  },
-  {
-    key: "mary",
-    value: "Mary Phillips"
-  },
-  {
-    key: "robert",
-    value: "Robert"
-  },
-  {
-    key: "karius",
-    value: "Karius"
-  }
-];
-
 class Blogs extends React.Component {
   state = {
     dataSelect: "",
@@ -68,35 +45,36 @@ class Blogs extends React.Component {
     openedCardIndex: ""
   };
 
-  async componentDidMount() {
-    await this.props.getContent("karir", this.props.currentLang, true);
-  }
-
   async componentDidUpdate(prevProps, prevState) {
     if (prevProps.karirList !== this.props.karirList) {
-      await this.setState({
-        stateKarir: this.props.karirList.map(item => {
-          return {
-            ...item,
-            open: false
-          };
-        })
-      });
+      console.log("karirList", this.props.karirList);
+      if (this.props.karirList.karirlist) {
+        await this.setState({
+          stateKarir: this.props.karirList.karirlist.map(item => {
+            return {
+              ...item,
+              open: false
+            };
+          })
+        });
+      }
     }
   }
 
   renderContent = () => {
-    let a = _.uniqBy(this.props.karirList, "devisi");
-    console.log(a, "karirList");
     let divisions;
-    if (a.length > 0) {
-      divisions = a.map(item => {
-        return {
-          label: item.devisi,
-          value: item.devisi
-        };
-      });
-      console.log(divisions, "karirList");
+    if (this.props.karirList) {
+      let a = _.uniqBy(this.props.karirList.karirlist, "devisi");
+      console.log(a, "karirList");
+      if (a.length > 0) {
+        divisions = a.map(item => {
+          return {
+            label: item.devisi,
+            value: item.devisi
+          };
+        });
+        console.log(divisions, "karirList");
+      }
     }
     if (isMobile) {
       return (
@@ -112,7 +90,9 @@ class Blogs extends React.Component {
                 }}
               >
                 <SidebarMobile />
-                <div className="title title-header-mobile">Karir</div>
+                <div className="title title-header-mobile">
+                  {this.props.pageStore.karir.Header}
+                </div>
               </div>
               <Container>
                 <Row>
@@ -121,8 +101,11 @@ class Blogs extends React.Component {
                       className="description font-black"
                       style={{ marginTop: "10%", marginBottom: "2%" }}
                     >
-                      Berikut ini lowongan kerja yang tersedia di Topgrowth
-                      Futures saat ini:
+                      {ReactHtmlParser(
+                        this.props.pageStore.karir.content
+                          ? this.props.pageStore.karir.content.title
+                          : "Berikut ini lowongan kerja yang tersedia di Topgrowth Futures saat ini"
+                      )}
                     </p>
                     <Row style={{ marginBottom: "10%" }}>
                       <Col md="6">
@@ -351,9 +334,13 @@ class Blogs extends React.Component {
                     className="description font-black"
                     style={{ marginTop: "10%", marginBottom: "2%" }}
                   >
-                    Berikut ini lowongan kerja yang tersedia di Topgrowth
-                    Futures saat ini:
-                    {/* {this.props.pageStore.karir.content.title} */}
+                    {/* Berikut ini lowongan kerja yang tersedia di Topgrowth
+                    Futures saat ini: */}
+                    {ReactHtmlParser(
+                      this.props.pageStore.karir.content
+                        ? this.props.pageStore.karir.content.title
+                        : "Berikut ini lowongan kerja yang tersedia di Topgrowth Futures saat ini"
+                    )}
                   </p>
                   <Row style={{ marginBottom: "10%" }}>
                     <Col md="6">
@@ -565,8 +552,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getContent: (page, lang) => dispatch(getContent(page, lang))
-
   // fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
 });
 

@@ -582,7 +582,13 @@ const defaultState = {
       }
     ]
   },
-  karir: {},
+  karir: {
+    Header: "Karir",
+    content: {
+      title:
+        "<p>Berikut ini lowongan kerja yang tersedia di Topgrowth Futures saat ini:</p>"
+    }
+  },
   hubungikami: {
     header: {
       title: "Ada pertanyaan?",
@@ -733,7 +739,8 @@ export default (state = defaultState, action = {}) => {
         // return {
         //   [item]: action.payload[item]
         // };
-
+        console.log(item);
+        console.log(action.payload[item]);
         Object.assign(obj, { [item]: action.payload[item] });
       });
       return {

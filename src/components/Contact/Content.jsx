@@ -53,7 +53,7 @@ const MapWithAMarker = withGoogleMap(props => (
 class Content extends React.Component {
   state = {};
   async componentDidMount() {
-    await this.props.getContent("hubungikami", this.props.currentLang, true);
+    // await this.props.getContent("hubungikami", this.props.currentLang, true);
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.wrapper.scrollTop = 0;
@@ -310,7 +310,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getContent: (section, lang) => dispatch(getContent(section, lang))
+  // getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);

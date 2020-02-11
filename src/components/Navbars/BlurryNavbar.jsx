@@ -29,7 +29,8 @@ import flag from "../../assets/img/flag-uk.png";
 import "../../assets/css/main.css";
 
 const font = {
-  color: "white"
+  color: "white",
+  cursor: "default"
 };
 
 class BlurryNavbar extends React.Component {

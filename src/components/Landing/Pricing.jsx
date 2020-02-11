@@ -153,7 +153,7 @@ class Pricing extends React.Component {
                               >
                                 <span
                                   style={{
-                                  color: "white",
+                                    color: "white",
                                     textAlign: "center"
                                   }}
                                 >
@@ -291,7 +291,7 @@ class Pricing extends React.Component {
                               >
                                 <span
                                   style={{
-                                  color: "white",
+                                    color: "white",
                                     textAlign: "center"
                                   }}
                                 >
@@ -436,7 +436,7 @@ class Pricing extends React.Component {
                               >
                                 <span
                                   style={{
-                                  color: "white",
+                                    color: "white",
                                     textAlign: "center"
                                   }}
                                 >
@@ -782,7 +782,7 @@ class Pricing extends React.Component {
                                   >
                                     <span
                                       style={{
-                                      color: "white",
+                                        color: "white",
                                         textAlign: "center"
                                       }}
                                     >
@@ -929,7 +929,7 @@ class Pricing extends React.Component {
                                   >
                                     <span
                                       style={{
-                                      color: "white",
+                                        color: "white",
                                         textAlign: "center"
                                       }}
                                     >
