@@ -660,6 +660,7 @@ const defaultState = {
     }
   ],
   currentLang: "ID",
+  currentLangFlag: "ID",
   activePage: "landing"
 };
 
@@ -676,6 +677,12 @@ export default (state = defaultState, action = {}) => {
       return {
         ...state,
         currentLang: action.payload
+      };
+    }
+    case "CHANGE_FLAG_LANG": {
+      return {
+        ...state,
+        currentLangFlag: action.payload
       };
     }
 

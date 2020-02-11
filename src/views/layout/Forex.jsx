@@ -10,7 +10,7 @@ import { getContent } from "../../redux/ducks/actions.js";
 class Forex extends React.Component {
   state = {};
   componentDidMount = async () => {
-    await this.props.getContent("Forex", "id", true);
+    await this.props.getContent("Forex", this.props.currentLang, true);
 
     window.scroll(0, 0);
   };
@@ -29,7 +29,8 @@ class Forex extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
 });
 
 const mapDispatchToProps = dispatch => ({
