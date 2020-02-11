@@ -25,7 +25,7 @@ import "../../assets/css/main.css";
 import vl from "../../assets/img/vertical-line.png";
 
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 const title = {
   fontSize: "15px",
@@ -55,7 +55,7 @@ const DropdownTradingText = {
 
 class DropdownTrading extends React.Component {
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
+    await this.props.getContent("landing", "id");
   }
   render() {
     return (
@@ -228,7 +228,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DropdownTrading);

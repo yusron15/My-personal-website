@@ -108,11 +108,11 @@ class Pricing extends React.Component {
                           animateOut="fadeOut"
                         >
                           <Card
-                            className="card-pricing card-plain zoom free"
+                            className="card-pricing card-plain zoom "
                             style={{
                               marginTop: "20px",
                               textAlign: "left",
-                              backgroundColor: "#1D1E1F",
+                              backgroundColor: "#313335",
                               borderRadius: "10px"
                             }}
                           >
@@ -153,7 +153,7 @@ class Pricing extends React.Component {
                               >
                                 <span
                                   style={{
-                                    color: "#81878D",
+                                  color: "white",
                                     textAlign: "center"
                                   }}
                                 >
@@ -252,7 +252,7 @@ class Pricing extends React.Component {
                             style={{
                               marginTop: "20px",
                               textAlign: "left",
-                              backgroundColor: "#323436",
+                              backgroundColor: "#0075b9",
                               borderRadius: "10px"
                             }}
                           >
@@ -291,7 +291,7 @@ class Pricing extends React.Component {
                               >
                                 <span
                                   style={{
-                                    color: "#81878D",
+                                  color: "white",
                                     textAlign: "center"
                                   }}
                                 >
@@ -395,7 +395,7 @@ class Pricing extends React.Component {
                             style={{
                               marginTop: "20px",
                               textAlign: "left",
-                              backgroundColor: "#063980",
+                              backgroundColor: "#05387f",
                               borderRadius: "10px"
                             }}
                           >
@@ -436,7 +436,7 @@ class Pricing extends React.Component {
                               >
                                 <span
                                   style={{
-                                    color: "#81878D",
+                                  color: "white",
                                     textAlign: "center"
                                   }}
                                 >
@@ -642,7 +642,7 @@ class Pricing extends React.Component {
                                   >
                                     <span
                                       style={{
-                                        color: "#81878D",
+                                        color: "white",
                                         textAlign: "center"
                                       }}
                                     >
@@ -782,7 +782,7 @@ class Pricing extends React.Component {
                                   >
                                     <span
                                       style={{
-                                        color: "#81878D",
+                                      color: "white",
                                         textAlign: "center"
                                       }}
                                     >
@@ -929,7 +929,7 @@ class Pricing extends React.Component {
                                   >
                                     <span
                                       style={{
-                                        color: "#81878D",
+                                      color: "white",
                                         textAlign: "center"
                                       }}
                                     >

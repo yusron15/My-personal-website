@@ -352,12 +352,6 @@ class Projects extends React.Component {
                           md="8"
                         >
                           <h2 className="title font-black">
-                            {/* <div style={{ color: "black" }}>
-                              {ReactHtmlParser(
-                                this.props.pageStore.Landing.Legality.content[0]
-                                  .title
-                              )}
-                            </div> */}
                             <div style={{ color: "black" }}>
                               {ReactHtmlParser(
                                 this.props.pageStore.Landing.Legality.content[0]
@@ -365,18 +359,13 @@ class Projects extends React.Component {
                               )}
                             </div>
                           </h2>
-                          <div className="description mb-5 font-black">
+                          <p className="description mb-5 font-black">
                             {/* {this.state.content[0].bappebti} */}
-                            <p
-                              className="font-black"
-                              style={{ color: "black" }}
-                            >
-                              {ReactHtmlParser(
-                                this.props.pageStore.Landing.Legality.content[0]
-                                  .content
-                              )}
-                            </p>
-                          </div>
+                            {ReactHtmlParser(
+                              this.props.pageStore.Landing.Legality.content[0]
+                                .content
+                            )}
+                          </p>
                         </Col>
                       </TabPane>
                       <TabPane tabId="project2" style={{ height: "200px" }}>

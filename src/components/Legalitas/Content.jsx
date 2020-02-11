@@ -58,7 +58,7 @@ class Projects extends React.Component {
   };
 
   async componentDidMount() {
-    await this.props.getContent("legalitas", "id");
+    await this.props.getContent("legalitas", this.props.currentLang, true);
   }
 
   toggle = tab => {
@@ -346,7 +346,7 @@ class Projects extends React.Component {
                       {this.props.pageStore.Landing.Legality.header}
                     </div>
                   </div>
-                  {/* <DarkNavbar /> */}
+
                   <Container
                     className="center"
                     style={{
@@ -355,18 +355,6 @@ class Projects extends React.Component {
                       backgroundImage: `url(${bglegalitas})`
                     }}
                   >
-                    {/* <Row>
-                <Col className="ml-auto mr-auto text-center" lg="8">
-                  <h2
-                    className="title font-black"
-                    style={{ paddingTop: "7rem" }}
-                  >
-                    Legalitas
-                  </h2>
-                  <div className="section-space" />
-                </Col>
-              </Row> */}
-
                     <TabContent
                       className="tab-space"
                       activeTab={"project" + this.state.activeTab}

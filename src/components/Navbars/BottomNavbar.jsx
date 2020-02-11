@@ -54,7 +54,7 @@ class BottomNavbar extends React.Component {
   }
 
   async componentDidMount() {
-    // await this.props.fetchPage("landing", "id");
+    await this.props.fetchPage("landing", "id");
   }
 
   // componentDidMount() {
@@ -378,7 +378,9 @@ class BottomNavbar extends React.Component {
                 <Row style={{ marginLeft: "12px" }}>
                   <Col style={{ color: "#FFFFFF" }}>
                     <Input type="checkbox" />
-                    {this.props.pageStore.Landing.BottomNavbar.form.leftTick}
+                    <p style={{ color: "white" }}>
+                      {this.props.pageStore.Landing.BottomNavbar.form.leftTick}
+                    </p>
                   </Col>
                   <Col style={{ color: "#FFFFFF" }}>
                     <Input type="checkbox" />

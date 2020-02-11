@@ -184,19 +184,37 @@ class Content extends React.Component {
                     >
                       <thead>
                         <tr>
-                          <th style={titleTable}>
-                            {/* {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .prefix1
-                                } */}
-                            Product
-                          </th>
+                          <th style={titleTable}>Product</th>
                           <th style={titleTable}>Tick Size</th>
                           <th style={titleTable}>Tick Value</th>
                           <th style={titleTable}>
                             Margin yang diperlukan Per Lot (Day & Trade
                             Overnight)
                           </th>
+                          {/* <th style={titleTable}>
+                            {
+                              this.props.pageStore.CFD.content[4].table[0]
+                                .prefix1
+                            }
+                          </th>
+                          <th style={titleTable}>
+                            {
+                              this.props.pageStore.CFD.content[4].table[0]
+                                .prefix2
+                            }
+                          </th>
+                          <th style={titleTable}>
+                            {
+                              this.props.pageStore.CFD.content[4].table[0]
+                                .prefix3
+                            }
+                          </th>
+                          <th style={titleTable}>
+                            {
+                              this.props.pageStore.CFD.content[4].table[0]
+                                .prefix4
+                            }
+                          </th> */}
                         </tr>
                       </thead>
                       <tbody style={{ backgroundColor: "#D1D1D1" }}>
@@ -397,7 +415,10 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description font-black" style={textDesc}>
+                        <div
+                          className="description font-black"
+                          style={textDesc}
+                        >
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[0].content
                           )}
@@ -416,7 +437,10 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description font-black" style={textDesc}>
+                        <div
+                          className="description font-black"
+                          style={textDesc}
+                        >
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[1].content
                           )}
@@ -435,7 +459,10 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description font-black" style={textDesc}>
+                        <div
+                          className="description font-black"
+                          style={textDesc}
+                        >
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[2].content
                           )}
@@ -454,7 +481,10 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description font-black" style={textDesc}>
+                        <div
+                          className="description font-black"
+                          style={textDesc}
+                        >
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[3].content
                           )}
@@ -473,7 +503,10 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description font-black" style={textDesc}>
+                        <div
+                          className="description font-black"
+                          style={textDesc}
+                        >
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[1].content
                           )}
@@ -492,7 +525,10 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description font-black" style={textDesc}>
+                        <div
+                          className="description font-black"
+                          style={textDesc}
+                        >
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[2].content
                           )}
@@ -511,7 +547,10 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <div className="description font-black" style={textDesc}>
+                        <div
+                          className="description font-black"
+                          style={textDesc}
+                        >
                           {ReactHtmlParser(
                             this.props.pageStore.CFD.content[3].content
                           )}
@@ -542,13 +581,7 @@ class Content extends React.Component {
                         >
                           <thead>
                             <tr>
-                              <th style={titleTable}>
-                                {/* {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .prefix1
-                                } */}
-                                Product
-                              </th>
+                              <th style={titleTable}>Product</th>
                               <th style={titleTable}>Tick Size</th>
                               <th style={titleTable}>Tick Value</th>
                               <th style={titleTable}>
