@@ -401,22 +401,71 @@
         }
     ]
 },
-  "Gold": {
-    "header": "Gold",
-    "top": "London Bullion Market adalah grosir pasar over-the-counter untuk perdagangan emas dan perak. Perdagangan dilakukan di antara anggota Asosiasi Pasar Bullion London (LBMA), diawasi secara longgar oleh Bank of England. Sebagian besar anggotanya adalah bank atau dealer emas batangan dan penyuling utama.",
-    "content": [
+"Gold": {
+  "header": "Gold",
+  "top": "<p>London Bullion Market is an over-the-counter wholesale market intended for gold and silver trading. Trading is carried out between members of the London Bullion Market Association (LBMA), the majority of whose members are banks or major gold bar dealers and refiners, and supervised by the Bank of England.</p>",
+  "content": [
       {
-        "title": "Keuntungan Transaksi Forex",
-        "table": [],
-        "image": "",
-        "content": "Secara internasional, emas diperdagangkan terutama melalui transaksi over-the-counter (OTC) dengan perdagangan dalam jumlah terbatas di New York Mercantile Exchange (NYMEX) dan Tokyo Commodity Exchange (TOCOM).\r\n\r\n            Kontrak forward ini dikenal sebagai kontrak emas berjangka. Spot emas diperdagangkan untuk penyelesaian dua hari kerja setelah tanggal perdagangan, dengan hari kerja ketika kedua pasar New York dan London buka untuk bisnis.\r\n            \r\n            Tidak seperti layaknya pasar komoditas, pasar forward untuk emas didorong oleh harga spot dan selisih suku bunga, mirip dengan pasar valuta asing, dan bukan didasari oleh dinamika pasokan dan permintaan (supply & demand). Ini karena emas, seperti mata uang, dipinjam dan dipinjamkan oleh bank sentral dan di pasar antar bank. Pinjaman Emas lebih menarik karena suku bunga untuk emas cenderung lebih rendah daripada suku bunga domestik AS – sehingga bank-bank sentral dapat memperoleh bunga atas kepemilikan emas mereka yang besar – kecuali dalam situasi khusus pasar emas cenderung berada dalam contango, yaitu harga forward dari emas lebih tinggi dari harga spot. Secara historis ini menjadikannya pasar yang menarik untuk penjualan ke depan oleh produsen emas dan berkontribusi pada pasar derivatif yang aktif dan relatif likuid."
+          "title": "Gold Trading",
+          "table": [
+              {
+                  "id": 14,
+                  "prefix1": "Product",
+                  "prefix2": "LLG",
+                  "prefix3": "",
+                  "prefix4": "",
+                  "prefix5": "",
+                  "prefix6": "",
+                  "SectionId": 311,
+                  "tableData": [
+                      {
+                          "id": 68,
+                          "prefix1": "Contract Size",
+                          "prefix2": "100 Troy Ounces",
+                          "prefix3": "",
+                          "prefix4": "",
+                          "prefix5": "",
+                          "tableId": 14
+                      },
+                      {
+                          "id": 132,
+                          "prefix1": "Fixed Exchanged Rate\t",
+                          "prefix2": "USD 1.00 = Rp. 10,000-",
+                          "prefix3": "",
+                          "prefix4": "",
+                          "prefix5": "",
+                          "tableId": 14
+                      },
+                      {
+                          "id": 133,
+                          "prefix1": "Minimum Tick\t",
+                          "prefix2": "10 cents",
+                          "prefix3": "",
+                          "prefix4": "",
+                          "prefix5": "",
+                          "tableId": 14
+                      },
+                      {
+                          "id": 134,
+                          "prefix1": "Value Per 10 Cents\t",
+                          "prefix2": "Rp. 100,000",
+                          "prefix3": "",
+                          "prefix4": "",
+                          "prefix5": "",
+                          "tableId": 14
+                      }
+                  ]
+              }
+          ],
+          "image": "",
+          "content": "<p>Internationally, gold is traded through over-the-counter transcations with a limited number of trades on the New York Mercantile Exchange (NYMEX) and Tokyo Commodity Exchange (TOCOM). Forward contracts are known as gold futures contracts, and gold spot is traded to be settled two working days after the trading date when both New York and London markets are open for business. Unlike the commodity market, the forward market for gold is driven by spot prices and interest rate differences, similar to that of foreign exchange market, and is not based on the dynamics of supply and demand. Like currencies, gold is borrowed and lent by the central bank. Gold loans are more attractive due to the lower interest rate than that of the US, except in special situations where the market tends to be in contango, in which the forward price of gold is higher than the spot price. Historically, this has made gold trading an attractive market option.</p>"
       },
       {
-        "title": "Market Size",
-        "content": "Sebagian besar perdagangan global dalam emas dan perak dilakukan di pasar over-the-counter (OTC). London sejauh ini merupakan pusat global terbesar untuk transaksi OTC yang diikuti oleh New York, Zurich, dan Tokyo. Perdagangan dalam bursa telah berkembang dalam beberapa tahun terakhir dengan Comex di New York dan Tocom di Tokyo menghasilkan sebagian besar aktivitas.\r\n\r\n            Emas juga diperdagangkan dalam bentuk surat berharga, seperti dana yang diperdagangkan di bursa (ETF), di London, New York, Johannesburg, dan bursa saham Australia. Meskipun pasar fisik untuk emas dan perak didistribusikan secara global, Kliring sebagian besar perdagangan OTC grosir dilakukan melalui London. Volume Kliring harian rata-rata emas dan perak di London Bullion Market Association (LBMA) pada November 2008 adalah 18,3 juta ons (senilai $ 13,9 miliar) dan 107,6 juta ons (senilai $ 1,1 miliar) masing-masing. Ini berarti bahwa jumlah kliring selam 4,4 hari di LBMA sama dengan produksi tambang emas tahunan, dan untuk produksi perak tahunan setiap 6,2 hari."
+          "title": "Market Size",
+          "content": "<p>So far, London is the largest global center for over-the-counter transactions, followed by New York, Zurich, and Tokyo. However, trading has grown in recent years with Comex in New York and Tocom in Tokyo generating the most activity. Gold is also traded in the form of securities, such as funds traded in London, New York, Johannesburg, and Australia. Although the physical market for gold and silver is distributed globally, clearing most of the over-the-counter wholesale trade is done through London. The average daily clearing volume of gold and silver at the LBMA back in November 2008 was 18.3 million ounces (worth $13.9 billion) and 107.6 million ounces (worth $1.1 billion). This means that the clearing amount for 4.4 days at LBMA is the same as the annual gold mine production and 6.2 days for annual silver production.</p>"
       }
-    ]
-  },
+  ]
+},
   "Komoditi": {
     "header": "Komoditi",
     "top": "Sebagai salah satu instrumen yang paling populer bagi sebagian besar manajer investasi global, transaksi komoditi mengakibatkan perputaran uang di pasar komoditas menjadi cukup tinggi.\r\n\r\n        Komoditas dapat diinterpretasikan sebagai sesuatu dari substansi fisik dan dibagi menjadi dua, yaitu komoditi hasil pertambangan, seperti emas, perak, minyak dan lainnya, dan komoditi hasil pertanian, seperti gula, beras, kakao, kopi dan lainnya.\r\n        \r\n        Komoditas lebih mudah dipahami karena banyak bergantung pada kondisi fundamental permintaan dan penawaran. Volatilitas harga komoditas lebih kecil dibandingkan saham dan obligasi sehingga menyediakan pilihan diversifikasi portofolio yang efisien untuk pelaku pasar. Yang membuat komoditas lebih menarik dan lebih berisiko dalam transaksi dibandingkan saham adalah jumlah leverage atau daya ungkit. Akan tetapi pada kenyataannya, risiko perdagangan di pasar komoditas tidak akan lebih dari risiko yang ditentukan pengguna.\r\n        \r\n        JFX (Jakarta Futures Exchange) dan ICDX (Indonesia Commodity & Derivatives Exchange) sebagai bursa berjangka di Indonesia berfungsi untuk mengembangkan pasar berjangka melalui sistem yang lebih dinamis, transparan, dan likuid. Transaksi multilateral memungkinkan banyak pihak untuk membeli dan menjual instrumen keuangan di bursa melalui sarana elektronik.",

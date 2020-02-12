@@ -291,30 +291,72 @@ class Features extends React.Component {
                                 <thead>
                                   <tr style={{ backgroundColor: "#224377" }}>
                                     <td className="text-white">
-                                      <b>Product</b>
+                                      <b>
+                                      {
+                                  this.props.pageStore.Gold.content[0].table[0].prefix1
+                                }
+                                      </b>
                                     </td>
                                     <td className="text-white">
-                                      <b>LLG</b>
+                                      <b>
+                                      {
+                                  this.props.pageStore.Gold.content[0].table[0].prefix2
+                                }
+                                      </b>
                                     </td>
                                   </tr>
                                 </thead>
 
                                 <tbody style={{ backgroundColor: "#D1D1D1" }}>
                                   <tr>
-                                    <td style={text}>Contract Size</td>
-                                    <td style={text}>100 Troy Ounces</td>
+                                    <td style={text}>
+                                    {
+                                  this.props.pageStore.Gold.content[0].table[0].tableData[0].prefix1
+                                }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                  this.props.pageStore.Gold.content[0].table[0].tableData[0].prefix2
+                                }
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <td style={text}>Fixed Exchanged Rate </td>
-                                    <td style={text}>USD 1.00 = Rp. 10,000-</td>
+                                    <td style={text}>
+                                    {
+                                  this.props.pageStore.Gold.content[0].table[0].tableData[1].prefix1
+                                }
+                                       </td>
+                                    <td style={text}>
+                                    {
+                                  this.props.pageStore.Gold.content[0].table[0].tableData[1].prefix2
+                                }
+                                      </td>
                                   </tr>
                                   <tr>
-                                    <td style={text}>Minimum Tick </td>
-                                    <td style={text}>10 cents</td>
+                                    <td style={text}>
+                                    {
+                                  this.props.pageStore.Gold.content[0].table[0].tableData[2].prefix1
+                                }
+                                       </td>
+                                    <td style={text}>
+
+                                    {
+                                  this.props.pageStore.Gold.content[0].table[0].tableData[2].prefix2
+                                }
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <td style={text}>Value Per 10 Cents </td>
-                                    <td style={text}>Rp. 100,000</td>
+                                    <td style={text}>
+                                    {
+                                  this.props.pageStore.Gold.content[0].table[0].tableData[3].prefix1
+                                }
+                                       </td>
+                                    <td style={text}>
+
+                                    {
+                                  this.props.pageStore.Gold.content[0].table[0].tableData[3].prefix2
+                                }
+                                    </td>
                                   </tr>
                                 </tbody>
                               </Table>
