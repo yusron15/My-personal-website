@@ -238,16 +238,25 @@ class SidebarMobile extends React.Component {
                 <div style={title}>
                   {this.props.pageStore.Header.m3.dropdown[3].title}
                 </div>
-                <Link to="/login">
+                <a
+                  href="http://cabinet.topgrowthfutures.com/users/register"
+                  target="_blank"
+                 
+                >
                   <div style={subText}>
                     {this.props.pageStore.Header.m3.dropdown[3].sub[0]}
                   </div>
-                </Link>
-                <Link to="/register">
+                </a>
+
+                <a
+                  href="http://cabinet.topgrowthfutures.com/users/register"
+                  target="_blank"
+                 
+                >
                   <div style={subText}>
                     {this.props.pageStore.Header.m3.dropdown[3].sub[1]}
                   </div>
-                </Link>
+                </a>
               </div>
 
               {/* BERITA */}

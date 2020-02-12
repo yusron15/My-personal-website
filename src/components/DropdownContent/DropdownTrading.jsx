@@ -190,6 +190,7 @@ class DropdownTrading extends React.Component {
                   </div>
                 </div>
               </div>
+
               <div className="dropdown-contents">
                 <div class="row">
                   <div>
@@ -200,14 +201,22 @@ class DropdownTrading extends React.Component {
                       {this.props.pageStore.Header.m3.dropdown[3].title}
                     </div>
                     <div style={DropdownTradingText}>
-                      <Link className="font-black" to="/login">
+                      <a
+                        className="font-black"
+                        href="http://cabinet.topgrowthfutures.com/users/register"
+                        target="_blank"
+                      >
                         {this.props.pageStore.Header.m3.dropdown[3].sub[0]}
-                      </Link>
+                      </a>
                     </div>
                     <div style={DropdownTradingText}>
-                      <Link className="font-black" to="/register">
+                      <a
+                        className="font-black"
+                        href="http://cabinet.topgrowthfutures.com/users/register"
+                        target="_blank"
+                      >
                         {this.props.pageStore.Header.m3.dropdown[3].sub[1]}
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>

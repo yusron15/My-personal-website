@@ -106,7 +106,7 @@ class Content extends React.Component {
                               >
                                 {this.props.pageStore.Komoditi.content[0].title}
                               </div>
-                              <div>
+                              <div style={{ marginLeft: "10px" }}>
                                 {/* </p> */}
                                 {/* <p className="text-benefit"> */}
                                 {
@@ -202,7 +202,7 @@ class Content extends React.Component {
                                 style={{
                                   fontSize: "1.4rem",
                                   fontWeight: "bold",
-                                  margin: "30px 0 30px 10px"
+                                  margin: "40px 0 30px 10px"
                                 }}
                               >
                                 {this.props.pageStore.Komoditi.content[2].title}

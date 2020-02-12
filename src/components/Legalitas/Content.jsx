@@ -545,7 +545,7 @@ class Projects extends React.Component {
   };
 
   render() {
-    // console.log(this.state.content[2].kbi);
+    console.log(this.props.pageStore.legalitas.header, "headerlegalitas");
     return this.renderContent();
   }
 }
