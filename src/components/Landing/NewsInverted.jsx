@@ -242,8 +242,7 @@ class NewsInverted extends React.Component {
       return (
         <>
           <h3 className="title center" style={{ textAlign: "center" }}>
-          {this.props.pageStore.Landing.NewsInverted.title}
-
+            {this.props.pageStore.Landing.NewsInverted.title}
           </h3>
           <div className="testimonials-2" style={{ padding: 0 }}>
             <Container>
@@ -354,7 +353,7 @@ class NewsInverted extends React.Component {
         >
           <div
             className="testimonials-4"
-            style={{ backgroundColor: "#1D1E1F", padding: "20px 15vw 0 0" }}
+            style={{ backgroundColor: "#1D1E1F", padding: "20px 12vw 0 0" }}
           >
             <Container>
               <Row>
@@ -383,11 +382,10 @@ class NewsInverted extends React.Component {
                 <Col
                   md="6"
                   className="positioned-text-right"
-                  style={{ padding: "10vh 20vw 0 0" }}
+                  style={{ padding: "10vh 10vw 0 5vw" }}
                 >
                   <h1 className="title">
-          {this.props.pageStore.Landing.NewsInverted.title}
-
+                    {this.props.pageStore.Landing.NewsInverted.title}
                   </h1>
                   <p
                     className="description text-white"

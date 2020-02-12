@@ -48,14 +48,14 @@ class BottomNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      position: "",
-      display: "none"
+      // position: ""
+      // display: "none"
     };
   }
 
-  async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
-  }
+  // async componentDidMount() {
+  //   await this.props.fetchPage("landing", "id");
+  // }
 
   // componentDidMount() {
   //   window.addEventListener("scroll", this.changeNavbarPosition);
@@ -117,15 +117,14 @@ class BottomNavbar extends React.Component {
     const styles = {
       containerStyle: {
         maxHeight: "350px",
-        bacckgroundSize: "cover",
-        zIndex: "99",
+        backgroundSize: "cover",
         position: "absolute",
         backgroundImage:
           "url(" + require("assets/img/ebook-background.png") + ")"
       },
       containerStyleMobile: {
         maxHeight: "350px",
-        bacckgroundSize: "cover",
+        backgroundSize: "cover",
         backgroundImage:
           "url(" + require("assets/img/ebook-background.png") + ")"
       }
@@ -242,7 +241,10 @@ class BottomNavbar extends React.Component {
                             this.removeButton();
                           }}
                         >
-                          Download EBook
+                          {
+                            this.props.pageStore.Landing.BottomNavbar.form[0]
+                              .button
+                          }
                         </Button>
                       </div>
                     </div>
@@ -251,11 +253,17 @@ class BottomNavbar extends React.Component {
                   <Row style={{ marginLeft: "12px" }}>
                     <Col style={{ color: "#FFFFFF" }}>
                       <Input type="checkbox" />
-                      {this.props.pageStore.Landing.BottomNavbar.form.leftTick}
+                      {
+                        this.props.pageStore.Landing.BottomNavbar.form[0]
+                          .leftTick
+                      }
                     </Col>
                     <Col style={{ color: "#FFFFFF" }}>
                       <Input type="checkbox" />
-                      {this.props.pageStore.Landing.BottomNavbar.form.rightTick}
+                      {
+                        this.props.pageStore.Landing.BottomNavbar.form[0]
+                          .rightTick
+                      }
                     </Col>
                   </Row>
                 </Col>
@@ -369,7 +377,10 @@ class BottomNavbar extends React.Component {
                   <Col md="1">
                     <div className="vertical-center">
                       <Button block color="info" type="button">
-                        {this.props.pageStore.Landing.BottomNavbar.form.button}
+                        {
+                          this.props.pageStore.Landing.BottomNavbar.form[0]
+                            .button
+                        }
                       </Button>
                     </div>
                   </Col>
@@ -378,13 +389,15 @@ class BottomNavbar extends React.Component {
                 <Row style={{ marginLeft: "12px" }}>
                   <Col style={{ color: "#FFFFFF" }}>
                     <Input type="checkbox" />
-                    <p style={{ color: "white" }}>
-                      {this.props.pageStore.Landing.BottomNavbar.form.leftTick}
-                    </p>
+
+                    {this.props.pageStore.Landing.BottomNavbar.form[0].leftTick}
                   </Col>
                   <Col style={{ color: "#FFFFFF" }}>
                     <Input type="checkbox" />
-                    {this.props.pageStore.Landing.BottomNavbar.form.rightTick}
+                    {
+                      this.props.pageStore.Landing.BottomNavbar.form[0]
+                        .rightTick
+                    }
                   </Col>
                 </Row>
               </Col>
@@ -399,6 +412,10 @@ class BottomNavbar extends React.Component {
   };
 
   render() {
+    console.log(
+      this.props.pageStore.Landing.BottomNavbar.form.leftTick,
+      "adsfasdf"
+    );
     return this.renderContent();
   }
 }

@@ -688,7 +688,7 @@ class Content extends React.Component {
                                       height="200"
                                       width="250"
                                     />
-                                    <CardBody>
+                                    <CardBody style={{ minHeight: "150px" }}>
                                       <CardTitle
                                         style={{
                                           color: "black",
