@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import Iframe from "react-iframe";
 
 // reactstrap components
 import {
@@ -85,14 +86,16 @@ class HeaderContentMobile extends React.Component {
 class EconomicCalendar extends React.Component {
   state = {
     dataSelect: "",
-    dataTabel: []
+    dataTabel: [],
+    selectedDate: moment().format()
   };
 
-  async componentDidMount() {
+  fetchDataEconomicCalendar = async date => {
     try {
       let countriesUrl =
         "http://restcountries.eu/rest/v2/all?fields=currencies;name;alpha2Code";
-      let url = `https://api.tradingeconomics.com/calendar/country/All/2016-12-02/2016-12-03?c=guest:guest&format=json`;
+      // let url = `https://api.tradingeconomics.com/calendar/country/All/${date}/${date}?c=guest:guest&format=json`;
+      let url = `https://api.tradingeconomics.com/calendar/country/All/${date}/${date}?c=guest:guest&format=json`;
 
       let result = await fetch(url);
       let countries = await fetch(countriesUrl);
@@ -105,6 +108,9 @@ class EconomicCalendar extends React.Component {
       await this.setState({
         dataTabel: result.map(item => {
           let matchCountry = countries.filter(itemCt => {
+            if (item.Country == "South Korea") {
+              item.Country = "Korea (Republic of)";
+            }
             return item.Country == itemCt.name;
           })[0];
 
@@ -120,6 +126,9 @@ class EconomicCalendar extends React.Component {
               item.Country == "East Timor"
                 ? "USD"
                 : countries.filter(itemCt => {
+                    if (item.Country == "South Korea") {
+                      item.Country = "Korea (Republic of)";
+                    }
                     return item.Country == itemCt.name;
                   })[0].currencies[0].code,
             event: item.Event,
@@ -130,6 +139,15 @@ class EconomicCalendar extends React.Component {
         })
       });
       // console.log(this.state.dataTabel, "result.json()");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  async componentDidMount() {
+    try {
+      let date = moment(this.state.selectedDate).format("YYYY-MM-DD");
+      await this.fetchDataEconomicCalendar(date);
     } catch (error) {
       console.log(error);
     }
@@ -157,7 +175,6 @@ class EconomicCalendar extends React.Component {
                 <BreakingNews />
               </div>
 
-              {/* <Container> */}
               <div
                 className="cd-section broken-white"
                 id="features"
@@ -168,65 +185,15 @@ class EconomicCalendar extends React.Component {
                 <div className="features-3" style={{ paddingTop: 0 }}>
                   <div>
                     <Container>
-                      <Col style={{ marginTop: "30px", marginBottom: "30px" }}>
-                        <Row>
-                          <Col md={6}>
-                            {/* <FormGroup>
-                              <Label>My Date Picker</Label>
-                            </FormGroup> */}
-                            <DatePicker
-                              id="example-datepicker"
-                              value={this.state.value}
-                              onChange={(v, f) => {
-                                console.log(v, f);
-                              }}
-                            />
-                          </Col>
-                        </Row>
-                      </Col>
-                      <Table
-                        responsive
-                        className="table-shopping"
-                        style={{
-                          backgroundColor: "#2C2F31",
-                          borderRadius: "5px",
-                          borderCollapse: "inherit"
-                          // borderWidth: "0.2px"
-                        }}
-                      >
-                        <thead>
-                          <tr>
-                            <th className="text-center">Time</th>
-                            <th className="text-center">Currency</th>
-                            <th>Event</th>
-                            <th className="text-center">Actual</th>
-                            <th className="text-center">Forecast</th>
-                            <th className="text-center">Previous</th>
-                          </tr>
-                          <tr
-                            style={{
-                              // backgroundColor: "#484D4F",
-                              backgroundColor: "#19447E",
-                              borderRadius: "5px"
-                            }}
-                          >
-                            <td
-                              colspan="6"
-                              className="text-center title"
-                              style={{
-                                fontSize: "20px",
-                                backgroundColor: "#19447E"
-                              }}
-                            >
-                              25 November 2019, Monday
-                            </td>
-                          </tr>
-                        </thead>
-
-                        {this.state.dataTabel.map(item => (
-                          <TableBody {...item} />
-                        ))}
-                      </Table>
+                      <Iframe
+                        url="https://www.mql5.com/en/economic-calendar/widget?mode=2&amp;utm_source=news.topgrowthfutures.co.id"
+                        width="100%"
+                        height="900px"
+                        id="myId"
+                        className="myClassname"
+                        display="initial"
+                        position="relative"
+                      />
                     </Container>
                   </div>
                 </div>
@@ -271,83 +238,16 @@ class EconomicCalendar extends React.Component {
             >
               <div className="features-3" style={{ paddingTop: 0 }}>
                 <div>
-                  <Container>
-                    {/* <Row style={{ marginTop: "30px", marginBottom: "30px" }}> */}
-                    <FormGroup
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        marginTop: 20
-                      }}
-                    >
-                      <Label
-                        style={{
-                          color: "black",
-                          fontSize: "18px",
-                          margin: 0,
-                          marginRight: 10
-                        }}
-                        for="Date"
-                      >
-                        Date
-                      </Label>
-                      <Input
-                        type="date"
-                        name="date"
-                        id="date"
-                        defaultValue={new Date()}
-                        placeholder="10/06/2019"
-                        onChange={date => {
-                          console.log(date.target.value);
-                        }}
-                        style={{ width: "200px", color: "black" }}
-                      />
-                    </FormGroup>
-                    {/* </Row> */}
-
-                    <Table
-                      responsive
-                      className="table-shopping"
-                      style={{
-                        backgroundColor: "#2C2F31",
-                        borderRadius: "5px",
-                        borderCollapse: "inherit"
-                        // borderWidth: "0.2px"
-                      }}
-                    >
-                      <thead>
-                        <tr>
-                          <th className="text-center">Time</th>
-                          <th className="text-center">Currency</th>
-                          <th>Event</th>
-                          <th className="text-center">Actual</th>
-                          <th className="text-center">Forecast</th>
-                          <th className="text-center">Previous</th>
-                        </tr>
-                        <tr
-                          style={{
-                            // backgroundColor: "#484D4F",
-                            backgroundColor: "#19447E",
-                            borderRadius: "5px"
-                          }}
-                        >
-                          <td
-                            colspan="6"
-                            className="text-center title"
-                            style={{
-                              fontSize: "20px",
-                              backgroundColor: "#19447E"
-                            }}
-                          >
-                            25 November 2019, Monday
-                          </td>
-                        </tr>
-                      </thead>
-
-                      {this.state.dataTabel.map(item => (
-                        <TableBody {...item} />
-                      ))}
-                    </Table>
+                  <Container style={{ paddingTop: 20 }}>
+                    <Iframe
+                      url="https://www.mql5.com/en/economic-calendar/widget?mode=2&amp;utm_source=news.topgrowthfutures.co.id"
+                      width="100%"
+                      height="900px"
+                      id="myId"
+                      className="myClassname"
+                      display="initial"
+                      position="relative"
+                    />
                   </Container>
                 </div>
               </div>
@@ -357,7 +257,7 @@ class EconomicCalendar extends React.Component {
           <NewsLetter />
           <Footer />
           {/* ********* END BLOGS 5 ********* */}
-        </div>{" "}
+        </div>
       </>
     );
   };

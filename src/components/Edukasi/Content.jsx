@@ -74,8 +74,6 @@ class Content extends React.Component {
     let url = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${PLAYLIST_ID}&part=snippet%2CcontentDetails&key=${API_KEY}`;
 
     try {
-      await this.props.getContent("edukasi", this.props.currentLang, true);
-
       await this.setState({ loading: true });
       const response = await fetch(url);
       const json = await response.json();
@@ -640,7 +638,6 @@ class Content extends React.Component {
                         >
                           {/* {this.props.pageStore.edukasi.video[2].videoButton} */}
                           {this.props.pageStore.edukasi.video[2].videoButton}
-
                         </div>
                       </div>
                     </NavItem>
@@ -667,7 +664,6 @@ class Content extends React.Component {
                           }}
                         >
                           {this.props.pageStore.edukasi.video[3].videoButton}
-
                         </div>
                       </div>
                     </NavItem>
