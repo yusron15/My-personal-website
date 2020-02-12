@@ -1,5 +1,9 @@
 import React from "react";
 import bg from "../../assets/img/header-marketoutlook.png";
+import { Link } from "react-router-dom";
+import moment from "moment";
+import { getNews } from "../../redux/ducks/actions";
+import { connect } from "react-redux";
 
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import NewsTicker from "./NewsTicker";
@@ -63,8 +67,13 @@ class MarketOutlookInside extends React.Component {
     }
   };
 
-  componentDidMount = () => {
-    window.scroll(0, 0);
+  componentDidMount = async () => {
+    try {
+      window.scroll(0, 0);
+      await this.props.getNews("market");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   renderContent = () => {
@@ -103,7 +112,35 @@ class MarketOutlookInside extends React.Component {
           {/* <BlurryNavbar /> */}
           <ColoredNavbar location={{ ...this.props.location }} />
           {/* <NewsTicker /> */}
-          <NewsMarketOutlook />
+          {/* <NewsMarketOutlook 
+            image={item.featured_image_src}
+            title={item.title.rendered}
+            posted={`Posted ${moment(item.date).format(
+              "DD MMMM YYYY HH:ss"
+            )} WIB`}
+            description={`${item.excerpt.rendered
+              .replace(/(<([^>]+)>)/gi, "")
+              }...`}
+          /> */}
+          <div>
+            {this.props.news.market.map((item, index) => {
+              return (
+                <Link to="/market-outlook-inside">
+                  <NewsMarketOutlook
+                    image={item.featured_image_src}
+                    title={item.title.rendered}
+                    posted={`Posted ${moment(item.date).format(
+                      "DD MMMM YYYY HH:ss"
+                    )} WIB`}
+                    desc={`${item.excerpt.rendered.replace(
+                      /(<([^>]+)>)/gi,
+                      ""
+                    )}...`}
+                  />
+                </Link>
+              );
+            })}
+          </div>
           <Footer />
         </div>
       </>
@@ -115,4 +152,15 @@ class MarketOutlookInside extends React.Component {
   }
 }
 
-export default MarketOutlookInside;
+const mapStateToProps = state => ({
+  news: state.newsStore.news
+});
+
+const mapDispatchToProps = dispatch => ({
+  getNews: type => dispatch(getNews(type))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MarketOutlookInside);

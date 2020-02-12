@@ -59,6 +59,7 @@ const style = {
 class NewsMarketOutlook extends React.Component {
   state = {};
   render() {
+    const { title, image, posted, desc } = this.props;
     return (
       <>
         <div className="cd-section" id="headers">
@@ -74,20 +75,19 @@ class NewsMarketOutlook extends React.Component {
               <Container>
                 {/* <Row className="align-items-center text-left"> */}
                 <h1 className="title font-black" style={{ color: "black" }}>
-                  Pasar Saham Asia Tunggu Komentar Terkait Trade War
+                  {title}
                   <div
                     className="text-posted font-black"
                     style={{ color: "black", marginTop: "10px" }}
                   >
-                    Posted by Aris Nugroho | Jum’at 22 November 2019 | 0
-                    comments | 3 views
+                    {posted}
                   </div>
                 </h1>
                 <Col>
                   <StyleRoot>
                     <div style={styles.fadeIn}>
                       <img
-                        src={marketoutlook}
+                        src={image}
                         style={{
                           minHeight: "60vh",
                           width: "auto",
@@ -106,29 +106,7 @@ class NewsMarketOutlook extends React.Component {
                     className="description font-black"
                     style={{ color: "black", textAlign: "left" }}
                   >
-                    Harga minyak naik pada hari Selasa di tengah harapan
-                    kemajuan menuju perjanjian perdagangan antara Amerika
-                    Serikat dan China, pengguna minyak terbesar dunia, dan
-                    prediksi penarikan pada persediaan minyak mentah AS.
-                    <br />
-                    <br />
-                    Perunding perdagangan AS dan China terkemuka mengadakan
-                    panggilan telepon pada Selasa pagi, kata Kementerian
-                    Perdagangan China, ketika kedua belah pihak mencoba untuk
-                    menuntaskan apa yang disebut kesepakatan Tahap 1 dalam
-                    perang dagang yang telah berlangsung selama 16 bulan.
-                    <br />
-                    <br />
-                    Di sisi penawaran, Organisasi Negara-negara Pengekspor
-                    Minyak (OPEC) bertemu di Wina pada 5 Desember, diikuti
-                    dengan pembicaraan dengan kelompok OPEC + yang lebih luas
-                    yang menampilkan produsen lain yang telah sepakat untuk
-                    memangkas produksi, termasuk Rusia.
-                    <br />
-                    <br />
-                    Kepala Badan Energi Internasional mengatakan kepada Reuters
-                    bahwa negara-negara OPEC harus membuat keputusan yang tepat
-                    untuk ekonomi global yang “sangat rapuh”.
+                    {desc}
                   </p>
                   {/* </ScrollAnimation> */}
                 </Col>
