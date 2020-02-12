@@ -242,7 +242,8 @@ class NewsInverted extends React.Component {
       return (
         <>
           <h3 className="title center" style={{ textAlign: "center" }}>
-            Analisa Harian
+          {this.props.pageStore.Landing.NewsInverted.title}
+
           </h3>
           <div className="testimonials-2" style={{ padding: 0 }}>
             <Container>
@@ -384,7 +385,10 @@ class NewsInverted extends React.Component {
                   className="positioned-text-right"
                   style={{ padding: "10vh 20vw 0 0" }}
                 >
-                  <h1 className="title">Analisa Harian</h1>
+                  <h1 className="title">
+          {this.props.pageStore.Landing.NewsInverted.title}
+
+                  </h1>
                   <p
                     className="description text-white"
                     style={{ minHeight: "20vh" }}

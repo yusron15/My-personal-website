@@ -97,20 +97,16 @@ class Content extends React.Component {
                                   style={{ marginTop: "50px" }}
                                 />
                               </div>
-                              <p
+                              <div
                                 style={{
                                   fontSize: "1.4rem",
                                   fontWeight: "bold",
                                   margin: "30px 0 30px 10px"
                                 }}
-                                className="font-black"
                               >
                                 {this.props.pageStore.Komoditi.content[0].title}
-                              </p>
-                              <p
-                                className="font-black"
-                                style={{ marginLeft: "10px" }}
-                              >
+                              </div>
+                              <div style={{ marginLeft: "10px" }}>
                                 {/* </p> */}
                                 {/* <p className="text-benefit"> */}
                                 {
@@ -118,7 +114,7 @@ class Content extends React.Component {
                                     .content
                                 }
                                 {/* </p> */}
-                              </p>
+                              </div>
                               <div className="author"></div>
                             </div>
                           </div>

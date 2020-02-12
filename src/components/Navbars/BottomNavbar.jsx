@@ -369,7 +369,7 @@ class BottomNavbar extends React.Component {
                   <Col md="1">
                     <div className="vertical-center">
                       <Button block color="info" type="button">
-                        Download EBook
+                        {this.props.pageStore.Landing.BottomNavbar.form.button}
                       </Button>
                     </div>
                   </Col>

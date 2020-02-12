@@ -78,7 +78,7 @@ const items = [
               <Col md="11" className="offset-md-1">
                 <div
                   style={{
-                    backgroundColor: "rgba(0, 0, 0, 0.66)",
+                    backgroundColor: "rgba(0, 0, 0, 0.66)"
                   }}
                 >
                   <div className="space-50" />
@@ -192,7 +192,7 @@ const items = [
               <Col md="11" className="offset-md-1">
                 <div
                   style={{
-                    backgroundColor: "rgba(0, 0, 0, 0.66)",
+                    backgroundColor: "rgba(0, 0, 0, 0.66)"
                   }}
                 >
                   <div className="space-50" />
@@ -421,7 +421,10 @@ class Content extends React.Component {
                         {/* <h1 className="title" style={font}>
                     INDEX FUTURES
                   </h1> */}
-                        <p className="description font-black">
+                        <p
+                          className="description font-black"
+                          style={{ textAlign: "justify" }}
+                        >
                           {ReactHtmlParser(
                             this.props.pageStore.indexfutures.content
                           )}

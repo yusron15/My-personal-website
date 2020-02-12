@@ -453,7 +453,7 @@ const defaultState = {
       {
         title: "Apa Itu CFD?",
         content:
-          "<p>Perdagangan CFD secara online adalah salah satu alat paling fleksibel untuk memanfaatkan pergerakan pasar tanpa mengikat dana dengan memperdagangkan instrumen yang mendasarinya. Tidak seperti perdagangan saham, CFD dapat dibeli dan dijual dan memungkinkan Anda untuk mencari keuntungan dari kenaikan maupun penurunan harga pasar. \\r\\n CFD menawarkan kesempatan untuk membangun beragam portofolio multi-produk dari satu akun.</p>"
+          "<p>Perdagangan CFD secara online adalah salah satu alat paling fleksibel untuk memanfaatkan pergerakan pasar tanpa mengikat dana dengan memperdagangkan instrumen yang mendasarinya. Tidak seperti perdagangan saham, CFD dapat dibeli dan dijual dan memungkinkan Anda untuk mencari keuntungan dari kenaikan maupun penurunan harga pasar.  CFD menawarkan kesempatan untuk membangun beragam portofolio multi-produk dari satu akun.</p>"
       },
       {
         title: "Mengapa Bertransaksi CFD?",

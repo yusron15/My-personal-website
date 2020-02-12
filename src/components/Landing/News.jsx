@@ -231,7 +231,7 @@ class News extends React.Component {
       return (
         <>
           <h3 className="title center" style={{ textAlign: "center" }}>
-            Analisa Harian
+            {this.props.pageStore.Landing.News.title}
           </h3>
           <div className="testimonials-2" style={{ padding: 0 }}>
             <Container>
@@ -370,7 +370,9 @@ class News extends React.Component {
                   md="8"
                   xs="10"
                 >
-                  <h1 className="title font-black">Berita Ekonomi</h1>
+                  <h1 className="title font-black">
+                    {this.props.pageStore.Landing.News.title}
+                  </h1>
                   <p
                     className="description"
                     style={{ margin: 0, minHeight: "20vh" }}

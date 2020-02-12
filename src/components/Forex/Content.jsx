@@ -190,13 +190,13 @@ class Features extends React.Component {
                           className="title-content"
                           style={{ color: "black" }}
                         >
-                          {this.props.pageStore.Forex.content[1].title}
+                          {ReactHtmlParser(this.props.pageStore.Forex.content[1].title)}
                         </div>
                         <p
                           className="font-black"
                           style={{ textAlign: "justify" }}
                         >
-                          {this.props.pageStore.Forex.content[1].content}
+                          {ReactHtmlParser(this.props.pageStore.Forex.content[1].content)}
                         </p>{" "}
                       </div>
                     </Col>
