@@ -73,7 +73,6 @@ class SidebarMobile extends React.Component {
   }
 
   async componentDidMount() {
-    await this.props.fetchPage("landing", "id");
     var acc = document.getElementsByClassName("accordion");
     var i;
 
