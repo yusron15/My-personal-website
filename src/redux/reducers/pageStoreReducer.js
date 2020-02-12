@@ -269,7 +269,7 @@ const defaultState = {
         image: "",
         title: "Kliring Berjangka Indonesia ( KBI )",
         content:
-          "PT. Kliring Berjangka Indonesia (KBI) adalah perusahaan Badan Usaha Milik Pemerintah (BUMN) yang berfungsi sebagai lembaga Kliring dan Penjaminan berdasarkan keputusan BAPPEBTI dengan nomor No.128/BAPPEBTI/IX/2001. Seluruh penyelesaian transaksi kontrak berjangka yang didaftarkan oleh anggota kliring dilaksanakan oleh KBI. Selain sebagai pialang anggota bursa, PT. Topgrowth Futures juga merupakan anggota dari Kliring Berjangka Indonesia dengan nomor: 21/AK-KBI/III/2004"
+          "ICH (Indonesia Clearing House) Kliring adalah perusahaan non BUMN yang yang mendapatkan izin sebagai lembaga kliring berdasarkan keputusan Kepala BAPPEBTI No. 30/BAPPEBTI/KP/7/2009. Sehingga dengan demikian ICH Kliring dapat menyelesaikan transaksi kontrak berjangka yang didaftarkan oleh anggotanya."
       },
       {
         image: "",

@@ -79,7 +79,6 @@ const items = [
                 <div
                   style={{
                     backgroundColor: "rgba(0, 0, 0, 0.66)",
-                    marginBottom: "5%"
                   }}
                 >
                   <div className="space-50" />
@@ -136,8 +135,7 @@ const items = [
               <Col md="11" className="offset-md-1">
                 <div
                   style={{
-                    backgroundColor: "rgba(0, 0, 0, 0.66)",
-                    marginBottom: "5%"
+                    backgroundColor: "rgba(0, 0, 0, 0.66)"
                   }}
                 >
                   <div className="space-50" />
@@ -195,7 +193,6 @@ const items = [
                 <div
                   style={{
                     backgroundColor: "rgba(0, 0, 0, 0.66)",
-                    marginBottom: "5%"
                   }}
                 >
                   <div className="space-50" />
@@ -388,11 +385,6 @@ class Content extends React.Component {
                     )}
                   </Carousel>
                 </ScrollAnimation>
-                <CarouselIndicators
-                  items={items}
-                  activeIndex={this.state.activeIndex}
-                  onClickHandler={this.goToIndex}
-                />
               </div>
             </div>
           </div>{" "}
@@ -505,18 +497,16 @@ class Content extends React.Component {
                           }
                         )}
 
-                        {/* <Col
-                sm="12"
-                //  md={{ size: 6, offset: 10 }}
-              > */}
-                        <div
-                          style={{
-                            position: "absolute",
-                            left: "80%",
-                            top: "450px"
-                          }}
-                        >
-                          {/* <Button
+                        <CarouselIndicators
+                          // items={this.props.pageStore.indexfutures.slide}
+                          items={this.props.pageStore.indexfutures.slide.map(
+                            (item, index) => index
+                          )}
+                          activeIndex={this.state.activeIndex}
+                          onClickHandler={this.goToIndex}
+                        />
+
+                        {/* <Button
                             className="btn-round btn-icon btn-simple slick-prev slick-arrow"
                             data-slide="prev"
                             href="#pablo"
@@ -529,7 +519,7 @@ class Content extends React.Component {
                             <img src={prevButton} />
                           </Button> */}
 
-                          {/* <img
+                        {/* <img
                             className="slick-prev slick-arrow"
                             data-slide="prev"
                             src={prevButton}
@@ -549,7 +539,7 @@ class Content extends React.Component {
                             style={{ height: "30px", width: "auto" }}
                           /> */}
 
-                          {/* <Button
+                        {/* <Button
                             className="btn-round btn-icon btn-simple slick-arrow"
                             data-slide="next"
                             href="#pablo"
@@ -562,20 +552,13 @@ class Content extends React.Component {
 
                             <img src={nextButton} />
                           </Button>  */}
-                        </div>
+
                         {/* </Col> */}
-                        <CarouselIndicators
-                          // items={this.props.pageStore.indexfutures.slide}
-                          items={this.props.pageStore.indexfutures.slide.map(
-                            (item, index) => index
-                          )}
-                          activeIndex={this.state.activeIndex}
-                          onClickHandler={this.goToIndex}
-                        />
                       </Carousel>
                     </ScrollAnimation>
                   </div>
                 </div>
+
                 {/* ********* END TEAM 1 ********* */}
               </div>{" "}
             </>

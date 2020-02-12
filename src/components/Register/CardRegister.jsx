@@ -164,14 +164,26 @@ class CardRegister extends React.Component {
               {/* </CardFooter> */}
               <Row>
                 <Col md="6">
-                  <Button block color="info" type="button">
-                    {this.props.pageStore.register.form.leftButton}
-                  </Button>
+                  <a
+                    href="http://cabinet.topgrowthfutures.com/users/register"
+                    target="_blank"
+                    style={{ color: "white" }}
+                  >
+                    <Button block color="info" type="button">
+                      {this.props.pageStore.register.form.leftButton}
+                    </Button>
+                  </a>
                 </Col>
                 <Col md="6">
-                  <Button block color="info" type="button">
-                    {this.props.pageStore.register.form.rightButton}
-                  </Button>
+                  <a
+                    href="http://cabinet.topgrowthfutures.com/users/register"
+                    target="_blank"
+                    style={{ color: "white" }}
+                  >
+                    <Button block color="info" type="button">
+                      {this.props.pageStore.register.form.rightButton}
+                    </Button>
+                  </a>
                 </Col>
               </Row>
             </CardBody>
