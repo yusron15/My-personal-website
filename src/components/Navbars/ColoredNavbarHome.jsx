@@ -119,12 +119,13 @@ class ColorNavbar extends React.Component {
   };
 
   async componentDidMount() {
-    try {
-      await this.props.getContent("Header", this.props.currentLang, true);
-      window.addEventListener("scroll", this.changeNavbarColor);
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    await this.props.getContent("Header", this.props.currentLang, true);
+    window.addEventListener("scroll", this.changeNavbarColor);
+    // } catch (error) {
+    //   console.log(error);
+    // }
+    console.log("COMPONEENT DID MOUNT");
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeNavbarTop);
@@ -234,14 +235,6 @@ class ColorNavbar extends React.Component {
       return (
         <>
           <SidebarMobile />
-        </>
-      );
-    }
-    if (isIPad13) {
-      console.log("Tablet");
-      return (
-        <>
-          <SidebarTablet />
         </>
       );
     }

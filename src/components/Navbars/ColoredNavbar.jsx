@@ -53,7 +53,6 @@ class ColorNavbar extends React.Component {
     };
   }
 
-
   onClick() {
     this.setState({ childVisible: !this.state.childVisible });
     this.setState({ childVisibleBerita: false });
@@ -111,7 +110,6 @@ class ColorNavbar extends React.Component {
   async componentDidMount() {
     window.addEventListener("scroll", this.changeNavbarColor);
     await this.props.getContent("edukasi", "id");
-
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeNavbarTop);

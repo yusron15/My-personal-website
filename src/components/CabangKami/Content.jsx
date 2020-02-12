@@ -51,7 +51,12 @@ const PrevButton = props => {
       aria-label="Previous"
       onClick={props.onClick}
       src={prevButton}
-      style={{ height: "50px", width: "auto", paddingLeft: "50%" }}
+      style={{
+        height: "50px",
+        width: "auto",
+        marginBottom: "20px",
+        paddingLeft: "30%"
+      }}
     />
   );
 };
@@ -63,7 +68,12 @@ const NextButton = props => {
       // aria-label="Next"
       onClick={props.onClick}
       src={nextButton}
-      style={{ height: "50px", width: "auto", paddingLeft: "52%" }}
+      style={{
+        height: "50px",
+        width: "auto",
+        marginBottom: "20px",
+        paddingLeft: "32%"
+      }}
     />
   );
 };
@@ -416,7 +426,7 @@ class News extends React.Component {
               <Container>
                 <Row>
                   <Col
-                    md={{ size: 12, offset: 5 }}
+                    md={{ size: 12, offset: 3 }}
                     // style={{ paddingTop: "15vh" }}
                     style={{ minHeight: "50vh" }}
                   >
