@@ -123,9 +123,9 @@ class Headers extends React.Component {
                     <Container style={{ paddingTop: 0 }}>
                       <p
                         className="description font-black"
-                        style={{ textAlign: "justify" }}
+                        style={{ textAlign: "justify", color: "black" }}
                       >
-                        {ReactHtmlParser(this.props.pageStore.Komoditi.top)}
+                        {this.props.pageStore.Komoditi.top}
                       </p>
                     </Container>
                   </div>

@@ -287,30 +287,166 @@ const defaultState = {
   },
   Forex: {
     header: "Forex",
-    top:
-      "Saat ini, Foreign Exchange (Forex) merupakan pasar terbesar dan paling likuid di dunia dengan perputaran nilai transaksi yang tiga kali lipat lebih besar dari jumlah gabungan pasar saham dan obligasi. Pasar forex atau valuta asing ini beroperasi selama 24 jam penuh melalui jaringan bank global, dari kawasan Asia, Eropa, hingga Amerika, tanpa bursa terpusat sehingga disebut sebagai produk OTC (Over the Counter). Transaksi ini dilakukan dengan cara membeli atau menjual mata uang dengan memanfaatkan fluktuasi harga.",
+    top: "<p>As of right now, Foreign Exhange (Forex) is the world's largest market with a transaction value three times greater than the number of stock and bond market combined.</p>",
     content: [
-      {
-        title: "Keuntungan Transaksi Forex",
-        image: "",
-        content:
-          "Likuiditas tinggi karena selalu adanya penawaran dan permintaan, Potensi keuntungan dua arah yang didapatkan pada saat harga naik maupun turun karena tidak adanya batasan untuk perdagangan terarah, Biaya investasi awal yang relatif rendah karena forex diperdagangkan dengan leverage, Transparansi akibat berdagang secara langsung dengan pasar yang bertanggung jawab atas harga pasangan mata uang, Biaya perdagangan yang rendah karena biaya tersebut dihitung ke dalam spread, Dapat dilakukan di manapun dan kapanpun selama ada koneksi internet."
-      },
-      {
-        title: "Keunggulan Transaksi Forex Bersama Topgrowth",
-        image: "",
-        content:
-          "Transaksi bisa dilakukan kapan dan dimana saja,\nData dan informasi terbuka untuk seluruh nasabah,\nDidukung oleh tim Research dan Development baik online maupun offline,\nAdanya modul pelatihan untuk meningkatkan kemampuan sebagai trader profesional,\nKeamanan dana investasi terjamin dengan adanya Segregated Account,\nProses penarikan dana (withdrawal) yang cepat dan efisien,\nEksekusi instan order yang superior,\nSpread yang tetap pada segala kondisi,\nTeknologi trading yang unggul dan terpercaya. "
-      },
-      {
-        title: "Ragam Produk Forex",
-        content:
-          "Trading forex dengan TOPGROWTH memberi Anda akses untuk bertransaksi ke banyak produk valuta asing, terlepas dari apakah Anda mengunduh Pro-I Trading pada PC atau Mac Anda, bertransaksi menggunakan gadget Anda melalui Pro-I Trader yang tersedia untuk Android maupun iOS, atau melakukan transaksi melalui telepon.\r\n            Di bawah ini adalah ragam pasangan mata uang yang dapat Anda perdagangkan."
-      },
-      { title: "Major Pairs", table: [] },
-      { title: "Cross Pairs", table: [] }
+        {
+            title: "The Benefits of Forex Transaction",
+            image: "",
+            content: "<p>High liquidity due to a never-ending supply and demand, A potential two-way profit gained whether the prices move up or fall, as there is no limit to direct trade, A relatively low initial investment cost, as forex is traded through leverage, Transparency resulted from trading directly with markets responsible for the price of currencies, Low trading costs since they are calculated into spreads, Can be easily done whenever and wherever as long as there is an internet connection.</p>"
+        },
+        {
+            title: "The Benefits of Forex Transaction with Topgrowth",
+            image: "",
+            content: "<p>Can be easily done whenever and wherever Every data and information is accessible for customers Supported by our Research and Development team, both online and offline An available training module to improve our customers' skills as professional traders Secured and guaranteed investment funds due to the existing Segregated Account A fast and efficient withdrawal process A superior execution of instant order Fixed spreads during all conditions An excellent and trusted trading technology.</p>"
+        },
+        {
+            title: "Variety of Forex Products",
+            content: "<p>Forex trading with Topgrowth Futures allows customers to trade many foreign exchange products, regardless of the platforms or gadgets used. Below are the various currency pairs that customers are able to trade.</p>"
+        },
+        {
+            title: "Major Pairs",
+            table: [
+                {
+                    id: 12,
+                    prefix1: "Cross Currency Pairs",
+                    prefix2: "Nickname",
+                    prefix3: "Contract Size",
+                    prefix4: "",
+                    prefix5: "",
+                    prefix6: "",
+                    SectionId: 308,
+                    tableData: [
+                        {
+                            id: 62,
+                            prefix1: "EUR / USD",
+                            prefix2: "Euro",
+                            prefix3: "EUR 100,000",
+                            prefix4: "",
+                            prefix5: "",
+                            tableId: 12
+                        },
+                        {
+                            id: 63,
+                            prefix1: "USD / JPY",
+                            prefix2: "Japanese Yen",
+                            prefix3: "USD 100,000",
+                            prefix4: "",
+                            prefix5: "",
+                            tableId: 12
+                        },
+                        {
+                            id: 67,
+                            prefix1: "GBP / USD",
+                            prefix2: "Poundsterling",
+                            prefix3: "GBP 100,000",
+                            prefix4: "",
+                            prefix5: "",
+                            tableId: 12
+                        },
+                        {
+                            id: 93,
+                            prefix1: "USD / CHF",
+                            prefix2: "Swiss Franc",
+                            prefix3: "USD 100,000",
+                            prefix4: "",
+                            prefix5: "",
+                            tableId: 12
+                        },
+                        {
+                            id: 94,
+                            prefix1: "AUD / USD",
+                            prefix2: "Australian Dollar",
+                            prefix3: "AUD 100,000",
+                            prefix4: "",
+                            prefix5: "",
+                            tableId: 12
+                        },
+                        {
+                            id: 95,
+                            prefix1: "NZD / USD",
+                            prefix2: "New Zealand Dollar",
+                            prefix3: "NZD 100,000",
+                            prefix4: "",
+                            prefix5: "",
+                            tableId: 12
+                        },
+                        {
+                            id: 96,
+                            prefix1: "USD / CAD",
+                            prefix2: "Canadian Dollar",
+                            prefix3: "USD 100,000",
+                            prefix4: "",
+                            prefix5: "",
+                            tableId: 12
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            title: "Cross Pairs",
+            table: [
+                {
+                    id: 13,
+                    prefix1: "Cross Currency Pairs",
+                    prefix2: "Nickname",
+                    prefix3: "Contract Size",
+                    prefix4: "",
+                    prefix5: "",
+                    prefix6: "",
+                    SectionId: 309,
+                    tableData: [
+                        {
+                            id: 64,
+                            prefix1: "EURGBP",
+                            prefix2: "Euro / British Pound",
+                            prefix3: "EUR 100,000",
+                            prefix4: "",
+                            prefix5: "",
+                            tableId: 13
+                        },
+                        {
+                            id: 97,
+                            prefix1: "EURJPY",
+                            prefix2: "Euro / Japanese Yen",
+                            prefix3: "EUR 100,000",
+                            prefix4: "",
+                            prefix5: "",
+                            tableId: 13
+                        },
+                        {
+                            id: 105,
+                            prefix1: "GBPJPY\t\t",
+                            prefix2: "British Pound / Japanese Yen",
+                            prefix3: "GBP 100,000",
+                            prefix4: "",
+                            prefix5: "",
+                            tableId: 13
+                        },
+                        {
+                            id: 106,
+                            prefix1: "CHFJPY\t",
+                            prefix2: "Swiss Franc / Japanese Yen",
+                            prefix3: "CHF 100,000",
+                            prefix4: "",
+                            prefix5: "",
+                            tableId: 13
+                        },
+                        {
+                            id: 107,
+                            prefix1: "AUDJPY\t\t",
+                            prefix2: "Australian Dollar / Japanese Yen",
+                            prefix3: "AUD 100,000",
+                            prefix4: "",
+                            prefix5: "",
+                            tableId: 13
+                        }
+                    ]
+                }
+            ]
+        }
     ]
-  },
+},
   CFD: {
     header: "Contract For Difference",
     content: [

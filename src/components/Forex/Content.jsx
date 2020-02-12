@@ -192,7 +192,10 @@ class Features extends React.Component {
                         >
                           {this.props.pageStore.Forex.content[1].title}
                         </div>
-                        <p className="font-black" style={{  textAlign: "justify" }}>
+                        <p
+                          className="font-black"
+                          style={{ textAlign: "justify" }}
+                        >
                           {this.props.pageStore.Forex.content[1].content}
                         </p>{" "}
                       </div>
@@ -227,66 +230,187 @@ class Features extends React.Component {
                         </div>
 
                         <Table
-                          // bordered
-                          className="table-shopping"
-                          style={{
-                            backgroundColor: "#224377",
-                            borderRadius: "5px",
-                            borderCollapse: "inherit"
-                            // borderWidth: "0.2px"
-                          }}
-                        >
-                          <thead>
-                            <tr>
-                              <td className="text-white">
-                                <b>Cross Currency Pairs </b>
-                              </td>
-                              <td className="text-white">
-                                <b>Nickname</b>
-                              </td>
-                              <td className="text-white">
-                                <b>Contract Size </b>
-                              </td>
-                            </tr>
-                          </thead>
-                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                            <tr>
-                              <td style={text}>EUR / USD</td>
-                              <td style={text}>Euro</td>
-                              <td style={text}>EUR 100,000</td>
-                            </tr>
-                            <tr>
-                              <td style={text}>USD / JPY </td>
-                              <td style={text}> Japanese Yen</td>
-                              <td style={text}>USD 100,000 </td>
-                            </tr>
-                            <tr>
-                              <td style={text}> GBP / USD</td>
-                              <td style={text}> Poundsterling</td>
-                              <td style={text}> GBP 100,000</td>
-                            </tr>
-                            <tr>
-                              <td style={text}> USD / CHF</td>
-                              <td style={text}> Swiss Franc</td>
-                              <td style={text}> USD 100,000</td>
-                            </tr>
-                            <tr>
-                              <td style={text}> AUD / USD</td>
-                              <td style={text}> Australian Dollar</td>
-                              <td style={text}> AUD 100,000</td>
-                            </tr>
-                            <tr>
-                              <td style={text}> NZD / USD</td>
-                              <td style={text}> New Zealand Dollar</td>
-                              <td style={text}> NZD 100,000</td>
-                            </tr>
-                            <tr>
-                              <td style={text}>USD / CAD </td>
-                              <td style={text}> Canadian Dollar</td>
-                              <td style={text}>USD 100,000 </td>
-                            </tr>
-                          </tbody>
-                        </Table>
+                                // bordered
+                                className="table-shopping"
+                                style={{
+                                  backgroundColor: "#224377",
+                                  borderRadius: "5px",
+                                  borderCollapse: "inherit"
+                                  // borderWidth: "0.2px"
+                                }}
+                              >
+                                <thead>
+                                  <tr>
+                                    <td className="text-white">
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[3]
+                                            .table[0].prefix1
+                                        }
+                                      </b>
+                                    </td>
+                                    <td className="text-white">
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[3]
+                                            .table[0].prefix2
+                                        }
+                                      </b>
+                                    </td>
+                                    <td className="text-white">
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[3]
+                                            .table[0].prefix3
+                                        }
+                                      </b>
+                                    </td>
+                                  </tr>
+                                </thead>
+                                <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                                  <tr>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[0].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[0].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[0].prefix3
+                                      }
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[1].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[1].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[1].prefix3
+                                      }
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[2].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {" "}
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[2].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[2].prefix2
+                                      }
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[3].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[3].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[3].prefix3
+                                      }
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[4].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[4].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[4].prefix3
+                                      }
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[5].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[5].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[5].prefix3
+                                      }
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[6].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[6].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[6].prefix3
+                                      }
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </Table>
                       </div>
 
                       <div style={{ marginTop: "20px" }}>
@@ -295,59 +419,147 @@ class Features extends React.Component {
                         </div>
 
                         <Table
-                          // bordered
-                          className="table-shopping"
-                          style={{
-                            backgroundColor: "#224377",
-                            borderRadius: "5px",
-                            borderCollapse: "inherit"
-                            // borderWidth: "0.2px"
-                          }}
-                        >
-                          <thead>
-                            <tr style={{ backgroundColor: "#224377" }}>
-                              <td className="text-white">
-                                <b>Cross Currency Pairs </b>
-                              </td>
-                              <td className="text-white">
-                                <b>Nickname</b>
-                              </td>
-                              <td className="text-white">
-                                <b>Contract Size </b>
-                              </td>
-                            </tr>
-                          </thead>
+                                // bordered
+                                className="table-shopping"
+                                style={{
+                                  backgroundColor: "#224377",
+                                  borderRadius: "5px",
+                                  borderCollapse: "inherit"
+                                  // borderWidth: "0.2px"
+                                }}
+                              >
+                                <thead>
+                                  <tr style={{ backgroundColor: "#224377" }}>
+                                    <td className="text-white">
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].prefix1
+                                        }
+                                      </b>
+                                    </td>
+                                    <td className="text-white">
+                                      <b>
+                                      {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].prefix2
+                                        }
+                                      </b>
+                                    </td>
+                                    <td className="text-white">
+                                      <b>
+                                      {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].prefix3
+                                        }  
+                                       </b>
+                                    </td>
+                                  </tr>
+                                </thead>
 
-                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                            <tr>
-                              <td style={text}>EURGBP</td>
-                              <td style={text}>Euro / British Pound </td>
-                              <td style={text}>EUR 100,000</td>
-                            </tr>
-                            <tr>
-                              <td style={text}>EURJPY</td>
-                              <td style={text}>Euro / Japanese Yen </td>
-                              <td style={text}>EUR 100,000</td>
-                            </tr>
-                            <tr>
-                              <td style={text}>GBPJPY</td>
-                              <td style={text}>British Pound / Japanese Yen</td>
-                              <td style={text}>GBP 100,000</td>
-                            </tr>
-                            <tr>
-                              <td style={text}>CHFJPY</td>
-                              <td style={text}>Swiss Franc / Japanese Yen</td>
-                              <td style={text}>CHF 100,000</td>
-                            </tr>
-                            <tr>
-                              <td style={text}>AUDJPY</td>
-                              <td style={text}>
-                                Australian Dollar / Japanese Yen
-                              </td>
-                              <td style={text}>AUD 100,000</td>
-                            </tr>
-                          </tbody>
-                        </Table>
+                                <tbody style={{ backgroundColor: "#D1D1D1" }}>
+                                  <tr>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[0].prefix1
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[0].prefix2
+                                        }  
+                                     </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[0].prefix3
+                                        }
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[1].prefix1
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[1].prefix2
+                                        }  
+                                     </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[1].prefix3
+                                        }
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[2].prefix1
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[2].prefix2
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[2].prefix3
+                                        }
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[3].prefix1
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[3].prefix2
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[3].prefix3
+                                        }
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[4].prefix1
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[4].prefix2
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[4].prefix3
+                                        }
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </Table>
                       </div>
                     </Col>
                   </Row>
@@ -527,51 +739,172 @@ class Features extends React.Component {
                                 <thead>
                                   <tr>
                                     <td className="text-white">
-                                      <b>Cross Currency Pairs </b>
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[3]
+                                            .table[0].prefix1
+                                        }
+                                      </b>
                                     </td>
                                     <td className="text-white">
-                                      <b>Nickname</b>
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[3]
+                                            .table[0].prefix2
+                                        }
+                                      </b>
                                     </td>
                                     <td className="text-white">
-                                      <b>Contract Size </b>
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[3]
+                                            .table[0].prefix3
+                                        }
+                                      </b>
                                     </td>
                                   </tr>
                                 </thead>
                                 <tbody style={{ backgroundColor: "#D1D1D1" }}>
                                   <tr>
-                                    <td style={text}>EUR / USD</td>
-                                    <td style={text}>Euro</td>
-                                    <td style={text}>EUR 100,000</td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[0].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[0].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[0].prefix3
+                                      }
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <td style={text}>USD / JPY </td>
-                                    <td style={text}> Japanese Yen</td>
-                                    <td style={text}>USD 100,000 </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[1].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[1].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[1].prefix3
+                                      }
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <td style={text}> GBP / USD</td>
-                                    <td style={text}> Poundsterling</td>
-                                    <td style={text}> GBP 100,000</td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[2].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {" "}
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[2].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[2].prefix2
+                                      }
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <td style={text}> USD / CHF</td>
-                                    <td style={text}> Swiss Franc</td>
-                                    <td style={text}> USD 100,000</td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[3].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[3].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[3].prefix3
+                                      }
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <td style={text}> AUD / USD</td>
-                                    <td style={text}> Australian Dollar</td>
-                                    <td style={text}> AUD 100,000</td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[4].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[4].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[4].prefix3
+                                      }
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <td style={text}> NZD / USD</td>
-                                    <td style={text}> New Zealand Dollar</td>
-                                    <td style={text}> NZD 100,000</td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[5].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[5].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[5].prefix3
+                                      }
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <td style={text}>USD / CAD </td>
-                                    <td style={text}> Canadian Dollar</td>
-                                    <td style={text}>USD 100,000 </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[6].prefix1
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[6].prefix2
+                                      }
+                                    </td>
+                                    <td style={text}>
+                                      {
+                                        this.props.pageStore.Forex.content[3]
+                                          .table[0].tableData[6].prefix3
+                                      }
+                                    </td>
                                   </tr>
                                 </tbody>
                               </Table>
@@ -596,48 +929,132 @@ class Features extends React.Component {
                                 <thead>
                                   <tr style={{ backgroundColor: "#224377" }}>
                                     <td className="text-white">
-                                      <b>Cross Currency Pairs </b>
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].prefix1
+                                        }
+                                      </b>
                                     </td>
                                     <td className="text-white">
-                                      <b>Nickname</b>
+                                      <b>
+                                      {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].prefix2
+                                        }
+                                      </b>
                                     </td>
                                     <td className="text-white">
-                                      <b>Contract Size </b>
+                                      <b>
+                                      {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].prefix3
+                                        }  
+                                       </b>
                                     </td>
                                   </tr>
                                 </thead>
 
                                 <tbody style={{ backgroundColor: "#D1D1D1" }}>
                                   <tr>
-                                    <td style={text}>EURGBP</td>
-                                    <td style={text}>Euro / British Pound </td>
-                                    <td style={text}>EUR 100,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td style={text}>EURJPY</td>
-                                    <td style={text}>Euro / Japanese Yen </td>
-                                    <td style={text}>EUR 100,000</td>
-                                  </tr>
-                                  <tr>
-                                    <td style={text}>GBPJPY</td>
                                     <td style={text}>
-                                      British Pound / Japanese Yen
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[0].prefix1
+                                        }
                                     </td>
-                                    <td style={text}>GBP 100,000</td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[0].prefix2
+                                        }  
+                                     </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[0].prefix3
+                                        }
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <td style={text}>CHFJPY</td>
                                     <td style={text}>
-                                      Swiss Franc / Japanese Yen
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[1].prefix1
+                                        }
                                     </td>
-                                    <td style={text}>CHF 100,000</td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[1].prefix2
+                                        }  
+                                     </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[1].prefix3
+                                        }
+                                    </td>
                                   </tr>
                                   <tr>
-                                    <td style={text}>AUDJPY</td>
                                     <td style={text}>
-                                      Australian Dollar / Japanese Yen
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[2].prefix1
+                                        }
                                     </td>
-                                    <td style={text}>AUD 100,000</td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[2].prefix2
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[2].prefix3
+                                        }
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[3].prefix1
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[3].prefix2
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[3].prefix3
+                                        }
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[4].prefix1
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[4].prefix2
+                                        }
+                                    </td>
+                                    <td style={text}>
+                                    {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].tableData[4].prefix3
+                                        }
+                                    </td>
                                   </tr>
                                 </tbody>
                               </Table>
