@@ -74,7 +74,7 @@ class Content extends React.Component {
     let url = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${PLAYLIST_ID}&part=snippet%2CcontentDetails&key=${API_KEY}`;
 
     try {
-      await this.props.getContent("edukasi", "id");
+      await this.props.getContent("edukasi", this.props.currentLang, true);
 
       await this.setState({ loading: true });
       const response = await fetch(url);
@@ -119,7 +119,9 @@ class Content extends React.Component {
                 }}
               >
                 <SidebarMobile />
-                <div className="title title-header-mobile">Edukasi</div>
+                <div className="title title-header-mobile">
+                  {this.props.pageStore.edukasi.Header}
+                </div>
               </div>
 
               <div
@@ -526,8 +528,7 @@ class Content extends React.Component {
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">
-                Edukasi
-                {/* {this.props.pageStore.edukasi.Header} */}
+                {this.props.pageStore.edukasi.Header}
               </div>
             </div>
 
@@ -584,7 +585,7 @@ class Content extends React.Component {
                                 : "transparent"
                           }}
                         >
-                          Pengenalan Topgrowth Futures
+                          {this.props.pageStore.edukasi.video[0].videoButton}
                         </div>
                       </div>
                     </NavItem>
@@ -610,7 +611,8 @@ class Content extends React.Component {
                                 : "transparent"
                           }}
                         >
-                          Trading Untuk Pemula
+                          {/* {this.props.pageStore.edukasi.video[1].videoButton} */}
+                          {this.props.pageStore.edukasi.video[1].videoButton}
                         </div>
                       </div>
                     </NavItem>
@@ -636,7 +638,9 @@ class Content extends React.Component {
                                 : "transparent"
                           }}
                         >
-                          Platform Topgrowth Trader & ProTrader
+                          {/* {this.props.pageStore.edukasi.video[2].videoButton} */}
+                          {this.props.pageStore.edukasi.video[2].videoButton}
+
                         </div>
                       </div>
                     </NavItem>
@@ -662,7 +666,8 @@ class Content extends React.Component {
                                 : "transparent"
                           }}
                         >
-                          Webinar
+                          {this.props.pageStore.edukasi.video[3].videoButton}
+
                         </div>
                       </div>
                     </NavItem>
@@ -892,6 +897,10 @@ class Content extends React.Component {
   };
 
   render() {
+    // console.log(
+    //   "Edukasiiiiiii",
+    //   this.props.pageStore.edukasi.video[0].videoButton
+    // );
     return this.renderContent();
   }
 }
@@ -901,7 +910,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getContent: (page, lang) => dispatch(getContent(page, lang))
+  // getContent: (page, lang) => dispatch(getContent(page, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);

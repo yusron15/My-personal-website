@@ -11,6 +11,7 @@ class Cfd extends React.Component {
       await this.props.getContent("CFD", this.props.currentLang, true);
       window.scroll(0, 0);
     } catch (error) {
+      alert("asdsad");
       console.log(error);
     }
   }

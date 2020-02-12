@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 class Edukasi extends React.Component {
   state = {};
   async componentDidMount() {
-    await this.props.getContent("edukasi", "id");
+    await this.props.getContent("edukasi", this.props.currentLang, true);
     window.scroll(0, 0);
   }
 
@@ -21,7 +21,6 @@ class Edukasi extends React.Component {
     );
   }
 }
-
 
 const mapStateToProps = state => ({
   currentLang: state.pageStore.currentLang

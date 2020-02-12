@@ -73,7 +73,7 @@ class Content extends React.Component {
   };
 
   async componentDidMount() {
-    await this.props.getContent("CFD", "id");
+    await this.props.getContent("CFD", this.props.currentLang, true);
   }
   renderContent = () => {
     if (isMobile) {
@@ -581,33 +581,111 @@ class Content extends React.Component {
                         >
                           <thead>
                             <tr>
-                              <th style={titleTable}>Product</th>
-                              <th style={titleTable}>Tick Size</th>
-                              <th style={titleTable}>Tick Value</th>
                               <th style={titleTable}>
-                                Margin yang diperlukan Per Lot (Day & Trade
-                                Overnight)
+                                {/* Product */}
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .prefix1
+                                }
+                              </th>
+                              <th style={titleTable}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .prefix2
+                                }
+                              </th>
+                              <th style={titleTable}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .prefix3
+                                }
+                              </th>
+                              <th style={titleTable}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .prefix4
+                                }
                               </th>
                             </tr>
                           </thead>
                           <tbody style={{ backgroundColor: "#D1D1D1" }}>
                             <tr>
-                              <td style={text}>Dow Jones Index</td>
-                              <td style={text}>1 Indeks poin</td>
-                              <td style={text}>Rp 50.000</td>
-                              <td style={text}>Rp 10.000.000</td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .tableData[0].prefix1
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .tableData[0].prefix2
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .tableData[0].prefix3
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .tableData[0].prefix4
+                                }
+                              </td>
                             </tr>
                             <tr>
-                              <td style={text}>Indeks S & P 500 </td>
-                              <td style={text}>0,25 Indeks poin</td>
-                              <td style={text}>Rp 500.000 </td>
-                              <td style={text}>Rp 10.000.000</td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .tableData[1].prefix1
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .tableData[1].prefix2
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .tableData[1].prefix3
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .tableData[1].prefix4
+                                }
+                              </td>
                             </tr>
                             <tr>
-                              <td style={text}>NASDAQ Index</td>
-                              <td style={text}>0,25 Indeks poin</td>
-                              <td style={text}>Rp 200.000 </td>
-                              <td style={text}>Rp 10.000.000</td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .tableData[2].prefix1
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .tableData[2].prefix2
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .tableData[2].prefix3
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[0]
+                                    .tableData[2].prefix4
+                                }
+                              </td>
                             </tr>
                           </tbody>
                         </Table>
@@ -625,31 +703,102 @@ class Content extends React.Component {
                         >
                           <thead>
                             <tr>
-                              <th style={titleTable}>Product</th>
-                              <th style={titleTable}>Tick Size</th>
-                              <th style={titleTable}>Tick Value</th>
                               <th style={titleTable}>
-                                Margin yang diperlukan Per Lot (Day Trade)
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .prefix1
+                                }
                               </th>
                               <th style={titleTable}>
-                                Margin yang diperlukan Per Lot (Overnight)
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .prefix2
+                                }
+                              </th>
+                              <th style={titleTable}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .prefix3
+                                }
+                              </th>
+                              <th style={titleTable}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .prefix4
+                                }
+                              </th>
+                              <th style={titleTable}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .prefix5
+                                }
                               </th>
                             </tr>
                           </thead>
                           <tbody style={{ backgroundColor: "#D1D1D1" }}>
                             <tr>
-                              <td style={text}>FTSE Index </td>
-                              <td style={text}>0,50 Indeks poin</td>
-                              <td style={text}>Rp 150.000 </td>
-                              <td style={text}>Rp 10.000.000</td>
-                              <td style={text}>Rp 20.000.000</td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .tableData[0].prefix1
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .tableData[0].prefix2
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .tableData[0].prefix3
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .tableData[0].prefix4
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .tableData[0].prefix5
+                                }
+                              </td>
                             </tr>
                             <tr>
-                              <td style={text}>DAX Index</td>
-                              <td style={text}>0,50 Indeks poin</td>
-                              <td style={text}>Rp 300.000 </td>
-                              <td style={text}>Rp 20.000.000</td>
-                              <td style={text}>Rp 40.000.000</td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .tableData[1].prefix1
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .tableData[1].prefix2
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .tableData[1].prefix3
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .tableData[1].prefix4
+                                }{" "}
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[4].table[1]
+                                    .tableData[1].prefix5
+                                }
+                              </td>
                             </tr>
                           </tbody>
                         </Table>
@@ -679,21 +828,58 @@ class Content extends React.Component {
                         >
                           <thead>
                             <tr>
-                              <th style={titleTable}>Product</th>
-                              <th style={titleTable}>Tick Size</th>
-                              <th style={titleTable}>Tick Value</th>
                               <th style={titleTable}>
-                                Margin yang diperlukan Per Lot (Day & Trade
-                                Overnight)
+                                {
+                                  this.props.pageStore.CFD.content[5].table[0]
+                                    .prefix1
+                                }
+                              </th>
+                              <th style={titleTable}>
+                                {
+                                  this.props.pageStore.CFD.content[5].table[0]
+                                    .prefix2
+                                }
+                              </th>
+                              <th style={titleTable}>
+                                {
+                                  this.props.pageStore.CFD.content[5].table[0]
+                                    .prefix3
+                                }
+                              </th>
+                              <th style={titleTable}>
+                                {
+                                  this.props.pageStore.CFD.content[5].table[0]
+                                    .prefix4
+                                }
                               </th>
                             </tr>
                           </thead>
                           <tbody style={{ backgroundColor: "#D1D1D1" }}>
                             <tr>
-                              <td style={text}>Minyak mentah</td>
-                              <td style={text}>US$ 0.01 </td>
-                              <td style={text}>Rp 120.000 </td>
-                              <td style={text}>Rp 24.000.000 (USD 2,000)</td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[5].table[0]
+                                    .tableData[0].prefix1
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[5].table[0]
+                                    .tableData[0].prefix2
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[5].table[0]
+                                    .tableData[0].prefix3
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[5].table[0]
+                                    .tableData[0].prefix4
+                                }
+                              </td>
                             </tr>
                           </tbody>
                         </Table>
@@ -723,21 +909,58 @@ class Content extends React.Component {
                         >
                           <thead>
                             <tr>
-                              <th style={titleTable}>Product</th>
-                              <th style={titleTable}>Tick Size</th>
-                              <th style={titleTable}>Tick Value</th>
                               <th style={titleTable}>
-                                Margin yang diperlukan Per Lot (Day & Trade
-                                Overnight)
+                                {
+                                  this.props.pageStore.CFD.content[6].table[0]
+                                    .prefix1
+                                }
+                              </th>
+                              <th style={titleTable}>
+                                {
+                                  this.props.pageStore.CFD.content[6].table[0]
+                                    .prefix2
+                                }
+                              </th>
+                              <th style={titleTable}>
+                                {
+                                  this.props.pageStore.CFD.content[6].table[0]
+                                    .prefix3
+                                }
+                              </th>
+                              <th style={titleTable}>
+                                {
+                                  this.props.pageStore.CFD.content[6].table[0]
+                                    .prefix4
+                                }
                               </th>
                             </tr>
                           </thead>
                           <tbody style={{ backgroundColor: "#D1D1D1" }}>
                             <tr>
-                              <td style={text}>Spot Perak </td>
-                              <td style={text}>US$ 0.001 </td>
-                              <td style={text}>Rp 600.000 </td>
-                              <td style={text}>Rp 36.000.000 (USD 3,000)</td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[6].table[0]
+                                    .tableData[0].prefix1
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[6].table[0]
+                                    .tableData[0].prefix2
+                                }{" "}
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[6].table[0]
+                                    .tableData[0].prefix3
+                                }
+                              </td>
+                              <td style={text}>
+                                {
+                                  this.props.pageStore.CFD.content[6].table[0]
+                                    .tableData[0].prefix4
+                                }
+                              </td>
                             </tr>
                           </tbody>
                         </Table>

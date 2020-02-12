@@ -257,27 +257,150 @@
   "CFD": {
     "header": "Contract For Difference",
     "content": [
-      {
-        "title": "Apa Itu CFD?",
-        "content": "Perdagangan CFD secara online adalah salah satu alat paling fleksibel untuk memanfaatkan pergerakan pasar tanpa mengikat dana dengan memperdagangkan instrumen yang mendasarinya. \r\n            Tidak seperti perdagangan saham, CFD dapat dibeli dan dijual dan memungkinkan Anda untuk mencari keuntungan dari kenaikan maupun penurunan harga pasar. \r\n            CFD menawarkan kesempatan untuk membangun beragam portofolio multi-produk dari satu akun."
-      },
-      {
-        "title": "Mengapa Bertransaksi CFD?",
-        "content": "CFD (Contract for Difference) adalah perjanjian untuk menukarkan selisih nilai dari instrumen yang mendasari, misalnya saham, antara waktu saat order dibuka dan ditutup. Perdagangan CFD secara online merupakan cara praktis untuk memperdagangkan pasar bull dan bear yang memungkinkan untuk sell short. Saham dapat dijual dengan harga untung sebelum harga saham tersebut jatuh.\r\n            Produk-produk CFD dapat membantu untuk memanfaatkan modal investasi secara efektif. Akan tetapi, jumlah risiko yang dihadapi juga lebih besar dibandingkan produk konvensional.\r\n            CFD adalah produk yang diperdagangkan dengan menggunakan margin. Dengan demikian, potensi investasi menjadi jauh lebih besar hanya dengan menyetor sebagian kecil dari keseluruhan untuk memperdagangkan nilai kontrak penuh dari produk. Sama seperti perdagangan saham, laba atau rugi ditentukan oleh perbedaan antara harga yang dibeli dan dijual. Tingkat margin yang diperlukan akan bervariasi antara produk CFD.\r\n            Topgrowth menawarkan CFD pada berbagai produk mendasar yang komprehensif, termasuk indeks global, futures, komoditas, dan mata uang."
-      },
-      {
-        "title": "CFD Trading Strategis",
-        "content": "CFD adalah alat perdagangan yang menggunakan leverage untuk hampir semua produk keuangan. Produk CFD yang ditawarkan meliputi komoditas berjangka (logam dan produk energi) serta indeks yang terdaftar di berbagai pasar keuangan internasional.\r\n            Satu keuntungan besar yang ditawarkan adalah pengguna tidak perlu menyediakan dana 100% dari nilai nominal produk. Dengan membeli CFD, pengguna sebenarnya tidak memiliki produk yang mendasarinya, tetapi pengguna memiliki hak 100% atas keuntungan atau kerugian dari nilai penuh kontrak.\r\n            Terlepas dari gaya investasi, produk CFD adalah alat yang berharga untuk mengembangkan dan melindungi keseluruhan portofolio. Dengan CFD, pengguna dapat berspekulasi pada pergerakan jangka pendek harga produk keuangan, atau pengguna dapat melindungi posisi portofolio secara keseluruhan untuk meminimalkan pergerakan pasar negatif. Selain itu, pengguna dapat memanfaatkan penggunaan leverage yang ada, yang bergantung pada arah pasar, dan secara signifikan dapat meningkatkan laba pada ekuitas pengguna."
-      },
-      {
-        "title": "Daftar Produk CFD",
-        "content": "Trading CFD dengan Topgrowth berarti pengguna dapat membeli dan menjual saham Amerika, Inggris, Eropa, Cina, dan Jepang dari platform yang sama. Seluruh produk CFD yang dapat diperdagangkan melalui Topgrowth tercantum pada tabel di bawah ini. Selain itu, Topgrowth juga menyertakan informasi untuk setiap produk, mata uang yang relevan, dan persyaratan margin untuk memperdagangkan setiap kontrak.\r\n            "
-      },
-      { "title": "CFDs Pada Index", "table": [] },
-      { "title": "CFDs Pada Produk Energi", "table": [] },
-      { "title": "CFDs Pada Bullion Produk / Precious Metal", "table": [] }
+        {
+            "title": "Apa Itu CFD?",
+            "content": "<p>Perdagangan CFD secara online adalah salah satu alat paling fleksibel untuk memanfaatkan pergerakan pasar tanpa mengikat dana dengan memperdagangkan instrumen yang mendasarinya. Tidak seperti perdagangan saham, CFD dapat dibeli dan dijual dan memungkinkan Anda untuk mencari keuntungan dari kenaikan maupun penurunan harga pasar. \\r\\n CFD menawarkan kesempatan untuk membangun beragam portofolio multi-produk dari satu akun.</p>"
+        },
+        {
+            "title": "Mengapa Bertransaksi CFD?",
+            "content": "<p>CFD (Contract for Difference) adalah perjanjian untuk menukarkan selisih nilai dari instrumen yang mendasari, misalnya saham, antara waktu saat order dibuka dan ditutup. Perdagangan CFD secara online merupakan cara praktis untuk memperdagangkan pasar bull dan bear yang memungkinkan untuk sell short. Saham dapat dijual dengan harga untung sebelum harga saham tersebut jatuh. Produk-produk CFD dapat membantu untuk memanfaatkan modal investasi secara efektif. Akan tetapi, jumlah risiko yang dihadapi juga lebih besar dibandingkan produk konvensional. CFD adalah produk yang diperdagangkan dengan menggunakan margin. Dengan demikian, potensi investasi menjadi jauh lebih besar hanya dengan menyetor sebagian kecil dari keseluruhan untuk memperdagangkan nilai kontrak penuh dari produk. Sama seperti perdagangan saham, laba atau rugi ditentukan oleh perbedaan antara harga yang dibeli dan dijual. Tingkat margin yang diperlukan akan bervariasi antara produk CFD. Topgrowth menawarkan CFD pada berbagai produk mendasar yang komprehensif, termasuk indeks global, futures, komoditas, dan mata uang.</p>"
+        },
+        {
+            "title": "Trading CFD Strategis",
+            "content": "<p>CFD adalah alat perdagangan yang menggunakan leverage untuk hampir semua produk keuangan. Produk CFD yang ditawarkan meliputi komoditas berjangka (logam dan produk energi) serta indeks yang terdaftar di berbagai pasar keuangan internasional. Satu keuntungan besar yang ditawarkan adalah pengguna tidak perlu menyediakan dana 100% dari nilai nominal produk. Dengan membeli CFD, pengguna sebenarnya tidak memiliki produk yang mendasarinya, tetapi pengguna memiliki hak 100% atas keuntungan atau kerugian dari nilai penuh kontrak. Terlepas dari gaya investasi, produk CFD adalah alat yang berharga untuk mengembangkan dan melindungi keseluruhan portofolio. Dengan CFD, pengguna dapat berspekulasi pada pergerakan jangka pendek harga produk keuangan, atau pengguna dapat melindungi posisi portofolio secara keseluruhan untuk meminimalkan pergerakan pasar negatif. Selain itu, pengguna dapat memanfaatkan penggunaan leverage yang ada, yang bergantung pada arah pasar, dan secara signifikan dapat meningkatkan laba pada ekuitas pengguna.</p>"
+        },
+        {
+            "title": "Daftar Produk CFD",
+            "content": "<p>Trading CFD dengan Topgrowth berarti pengguna dapat membeli dan menjual saham Amerika, Inggris, Eropa, Cina, dan Jepang dari platform yang sama. Seluruh produk CFD yang dapat diperdagangkan melalui Topgrowth tercantum pada tabel di bawah ini. Selain itu, Topgrowth juga menyertakan informasi untuk setiap produk, mata uang yang relevan, dan persyaratan margin untuk memperdagangkan setiap kontrak.</p>"
+        },
+        {
+            "title": "CFDs Pada Index",
+            "table": [
+                {
+                    "id": 6,
+                    "prefix1": "Product",
+                    "prefix2": "TICK SIZE",
+                    "prefix3": "TICK VALUE",
+                    "prefix4": "MARGIN YANG DIPERLUKAN PER LOT (DAY & TRADE OVERNIGHT)",
+                    "prefix5": "",
+                    "prefix6": "",
+                    "SectionId": 245,
+                    "tableData": [
+                        {
+                            "id": 23,
+                            "prefix1": "Dow Jones Index",
+                            "prefix2": "1 Indeks poin",
+                            "prefix3": "Rp 50.000",
+                            "prefix4": "Rp 10.000.000",
+                            "prefix5": "",
+                            "tableId": 6
+                        },
+                        {
+                            "id": 147,
+                            "prefix1": "Indeks S & P 500",
+                            "prefix2": "0,25 Indeks poin",
+                            "prefix3": "Rp 500.000",
+                            "prefix4": "Rp 10.000.000",
+                            "prefix5": "",
+                            "tableId": 6
+                        },
+                        {
+                            "id": 150,
+                            "prefix1": "NASDAQ Index",
+                            "prefix2": "0,25 Indeks poin",
+                            "prefix3": "Rp 200.000",
+                            "prefix4": "Rp 10.000.000",
+                            "prefix5": "",
+                            "tableId": 6
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "prefix1": "Product",
+                    "prefix2": "TICK SIZE",
+                    "prefix3": "TICK VALUE",
+                    "prefix4": "MARGIN YANG DIPERLUKAN PER LOT (DAY & TRADE OVERNIGHT)",
+                    "prefix5": "MARGIN YANG DIPERLUKAN PER LOT (OVERNIGHT)",
+                    "prefix6": "",
+                    "SectionId": 245,
+                    "tableData": [
+                        {
+                            "id": 24,
+                            "prefix1": "FTSE Index",
+                            "prefix2": "0,50 Indeks poin",
+                            "prefix3": "Rp 150.000",
+                            "prefix4": "Rp 10.000.000",
+                            "prefix5": "Rp 20.000.000",
+                            "tableId": 7
+                        },
+                        {
+                            "id": 33,
+                            "prefix1": "DAX Index",
+                            "prefix2": "0,50 Indeks poin",
+                            "prefix3": "Rp 300.000",
+                            "prefix4": "Rp 20.000.000",
+                            "prefix5": "Rp 40.000.000",
+                            "tableId": 7
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "CFDs Pada Produk Energi",
+            "table": [
+                {
+                    "id": 8,
+                    "prefix1": "Product",
+                    "prefix2": "TICK SIZE",
+                    "prefix3": "TICK VALUE",
+                    "prefix4": "MARGIN YANG DIPERLUKAN PER LOT (DAY & TRADE OVERNIGHT)",
+                    "prefix5": "",
+                    "prefix6": "",
+                    "SectionId": 246,
+                    "tableData": [
+                        {
+                            "id": 34,
+                            "prefix1": "Minyak mentah",
+                            "prefix2": "US$ 0.01",
+                            "prefix3": "Rp 120.000",
+                            "prefix4": "Rp 24.000.000 (USD 2,000)",
+                            "prefix5": "",
+                            "tableId": 8
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "CFDs Pada Bullion Produk / Precious Metal",
+            "table": [
+                {
+                    "id": 10,
+                    "prefix1": "PRODUCT",
+                    "prefix2": "TICK SIZE",
+                    "prefix3": "TICK VALUE",
+                    "prefix4": "MARGIN YANG DIPERLUKAN PER LOT (DAY TRADE)",
+                    "prefix5": "MARGIN YANG DIPERLUKAN PER LOT (OVERNIGHT)",
+                    "prefix6": "",
+                    "SectionId": 247,
+                    "tableData": [
+                        {
+                            "id": 31,
+                            "prefix1": "Spot Perak\t\t\t",
+                            "prefix2": "US$ 0.001",
+                            "prefix3": "Rp 600.000",
+                            "prefix4": "Rp 36.000.000 (USD 3,000)",
+                            "prefix5": "",
+                            "tableId": 10
+                        }
+                    ]
+                }
+            ]
+        }
     ]
-  },
+},
   "Gold": {
     "header": "Gold",
     "top": "London Bullion Market adalah grosir pasar over-the-counter untuk perdagangan emas dan perak. Perdagangan dilakukan di antara anggota Asosiasi Pasar Bullion London (LBMA), diawasi secara longgar oleh Bank of England. Sebagian besar anggotanya adalah bank atau dealer emas batangan dan penyuling utama.",
@@ -476,7 +599,23 @@
     "stock": "Stock Index News",
     "button": "Indeks Berita"
   },
-  "edukasi": {},
+  "edukasi": {
+    "Header": "Edukasi",
+    "video": [
+        {
+            "videoButton": "Pengenalan Topgrowth Futures"
+        },
+        {
+            "videoButton": "Trading Untuk Pemula"
+        },
+        {
+            "videoButton": "Platform Topgrowth Trader & ProTrader"
+        },
+        {
+            "videoButton": "Webinar"
+        }
+    ]
+  },
   "karir": {},
   "hubungikami": {
     "header": {
