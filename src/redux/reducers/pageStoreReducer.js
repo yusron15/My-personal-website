@@ -287,20 +287,20 @@ const defaultState = {
   },
   Forex: {
     header: "Forex",
-    top: "<p>As of right now, Foreign Exhange (Forex) is the world's largest market with a transaction value three times greater than the number of stock and bond market combined.</p>",
+    top: "<p>Pasar terbesar dan paling likuid di dunia dengan perputaran nilai transaksi yang tiga kali lipat lebih besar dari jumlah gabungan pasar saham dan obligasi</p>",
     content: [
         {
-            title: "The Benefits of Forex Transaction",
+            title: "Keuntungan Transaksi Forex",
             image: "",
-            content: "<p>High liquidity due to a never-ending supply and demand, A potential two-way profit gained whether the prices move up or fall, as there is no limit to direct trade, A relatively low initial investment cost, as forex is traded through leverage, Transparency resulted from trading directly with markets responsible for the price of currencies, Low trading costs since they are calculated into spreads, Can be easily done whenever and wherever as long as there is an internet connection.</p>"
+            content: "<p>Likuiditas tinggi karena selalu adanya penawaran dan permintaan, Potensi keuntungan dua arah karena tidak ada batasan untuk perdangangan terarah, Biaya investasi awal yang relatif rendah karena diperdagangkan dengan leverage, Transparansi akibat transaksi langsung dengan pasar yang bertanggung jawab atas harga pasangan mata uang, Biaya perdagangan yang rendah, Dapat dilakukan di manapun dan kapanpun selama ada koneksi internet.</p>"
         },
         {
-            title: "The Benefits of Forex Transaction with Topgrowth",
+            title: "Keunggulan Transaksi Forex Bersama Topgrowth",
             image: "",
-            content: "<p>Can be easily done whenever and wherever Every data and information is accessible for customers Supported by our Research and Development team, both online and offline An available training module to improve our customers' skills as professional traders Secured and guaranteed investment funds due to the existing Segregated Account A fast and efficient withdrawal process A superior execution of instant order Fixed spreads during all conditions An excellent and trusted trading technology.</p>"
+            content: "<p>Bertransaksi forex dengan Topgrowth Futures memberikan Anda akses untuk bertransaksi kepada banyak produk valuta asing, terlepas dari platform dan gadget yang digunakan. Di bawah ini adalah ragam pasangan mata uang yang dapat Anda perdagangkan.</p>"
         },
         {
-            title: "Variety of Forex Products",
+            title: "Ragam Produk Forex",
             content: "<p>Forex trading with Topgrowth Futures allows customers to trade many foreign exchange products, regardless of the platforms or gadgets used. Below are the various currency pairs that customers are able to trade.</p>"
         },
         {
