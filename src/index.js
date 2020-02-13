@@ -144,6 +144,8 @@ class App extends Component {
       type: "CHANGE_LANG",
       payload: "ID"
     });
+
+    localStorage.getItem("@currentLang");
   };
 
   render() {
