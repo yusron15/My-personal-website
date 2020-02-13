@@ -58,7 +58,7 @@ class Projects extends React.Component {
   };
 
   async componentDidMount() {
-    await this.props.getContent("legalitas", this.props.currentLang, true);
+    // await this.props.getContent("legalitas", this.props.currentLang, true);
   }
 
   toggle = tab => {
@@ -545,7 +545,10 @@ class Projects extends React.Component {
   };
 
   render() {
-    console.log(this.props.pageStore.legalitas.header, "headerlegalitas");
+    console.log(
+      this.props.pageStore.legalitas.content[4].content,
+      "headerlegalitas"
+    );
     return this.renderContent();
   }
 }
@@ -555,7 +558,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getContent: (section, lang) => dispatch(getContent(section, lang))
+  // getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Projects);

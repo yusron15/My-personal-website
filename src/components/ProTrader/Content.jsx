@@ -491,7 +491,7 @@ class Content extends React.Component {
                   <BlurryNavbar />
                   <ColoredNavbar location={{ ...this.props.location }} />
                   <div className="title title-header">
-                    {ReactHtmlParser(this.props.pageStore.protrader.header)}
+                    {this.props.pageStore.protrader.header}
                   </div>
                 </div>
                 <div className="team-1 broken-white">
