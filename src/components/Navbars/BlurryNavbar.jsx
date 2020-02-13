@@ -84,7 +84,7 @@ class BlurryNavbar extends React.Component {
           <Container>
             <div className="navbar-translate">
               <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                <p style={font}>Call Us : +62 2122 7893 93</p>
+                <p style={font}>Call Us : +62 21 2278 9393</p>
               </NavbarBrand>
               {/* <button
                 className="navbar-toggler"
