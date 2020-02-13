@@ -30,6 +30,7 @@ import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import { connect } from "react-redux";
 import { fetchPage } from "../../redux/ducks/actions.js";
+import { TableContent2 } from "../Table/Table";
 
 import "../../assets/css/main.css";
 
@@ -120,44 +121,43 @@ class Features extends React.Component {
                         </div>
                         <div style={{ marginTop: "30px" }}>
                           <Table
-                            // bordered
                             className="table-shopping"
                             style={{
                               backgroundColor: "#224377",
                               borderRadius: "5px",
                               borderCollapse: "inherit"
-                              // borderWidth: "0.2px"
                             }}
                           >
                             <thead>
                               <tr style={{ backgroundColor: "#224377" }}>
-                                <td className="text-white">
-                                  <b>Product</b>
+                                <td className="text-white text-center">
+                                  <b>
+                                    {
+                                      this.props.pageStore.Gold.content[0]
+                                        .table[0].prefix1
+                                    }
+                                  </b>
                                 </td>
-                                <td className="text-white">
-                                  <b>LLG</b>
+                                <td className="text-white text-center">
+                                  <b>
+                                    {
+                                      this.props.pageStore.Gold.content[0]
+                                        .table[0].prefix2
+                                    }
+                                  </b>
                                 </td>
                               </tr>
                             </thead>
-
-                            <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                              <tr>
-                                <td style={text}>Contract Size</td>
-                                <td style={text}>100 Troy Ounces</td>
-                              </tr>
-                              <tr>
-                                <td style={text}>Fixed Exchanged Rate </td>
-                                <td style={text}>USD 1.00 = Rp. 10,000-</td>
-                              </tr>
-                              <tr>
-                                <td style={text}>Minimum Tick </td>
-                                <td style={text}>10 cents</td>
-                              </tr>
-                              <tr>
-                                <td style={text}>Value Per 10 Cents </td>
-                                <td style={text}>Rp. 100,000</td>
-                              </tr>
-                            </tbody>
+                            {this.props.pageStore.Gold.content[0].table[0].tableData.map(
+                              (item, index) => {
+                                return (
+                                  <TableContent2
+                                    prefix1={item.prefix1}
+                                    prefix2={item.prefix2}
+                                  />
+                                );
+                              }
+                            )}
                           </Table>
                         </div>
                       </Col>
@@ -278,87 +278,43 @@ class Features extends React.Component {
                               }}
                             >
                               <Table
-                                // bordered
                                 className="table-shopping"
                                 style={{
                                   backgroundColor: "#224377",
                                   borderRadius: "5px",
-                                  borderCollapse: "inherit",
-                                  height: "100%"
-                                  // borderWidth: "0.2px"
+                                  borderCollapse: "inherit"
                                 }}
                               >
                                 <thead>
                                   <tr style={{ backgroundColor: "#224377" }}>
-                                    <td className="text-white">
+                                    <td className="text-white text-center">
                                       <b>
-                                      {
-                                  this.props.pageStore.Gold.content[0].table[0].prefix1
-                                }
+                                        {
+                                          this.props.pageStore.Gold.content[0]
+                                            .table[0].prefix1
+                                        }
                                       </b>
                                     </td>
-                                    <td className="text-white">
+                                    <td className="text-white text-center">
                                       <b>
-                                      {
-                                  this.props.pageStore.Gold.content[0].table[0].prefix2
-                                }
+                                        {
+                                          this.props.pageStore.Gold.content[0]
+                                            .table[0].prefix2
+                                        }
                                       </b>
                                     </td>
                                   </tr>
                                 </thead>
-
-                                <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                                  <tr>
-                                    <td style={text}>
-                                    {
-                                  this.props.pageStore.Gold.content[0].table[0].tableData[0].prefix1
-                                }
-                                    </td>
-                                    <td style={text}>
-                                    {
-                                  this.props.pageStore.Gold.content[0].table[0].tableData[0].prefix2
-                                }
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td style={text}>
-                                    {
-                                  this.props.pageStore.Gold.content[0].table[0].tableData[1].prefix1
-                                }
-                                       </td>
-                                    <td style={text}>
-                                    {
-                                  this.props.pageStore.Gold.content[0].table[0].tableData[1].prefix2
-                                }
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                    <td style={text}>
-                                    {
-                                  this.props.pageStore.Gold.content[0].table[0].tableData[2].prefix1
-                                }
-                                       </td>
-                                    <td style={text}>
-
-                                    {
-                                  this.props.pageStore.Gold.content[0].table[0].tableData[2].prefix2
-                                }
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td style={text}>
-                                    {
-                                  this.props.pageStore.Gold.content[0].table[0].tableData[3].prefix1
-                                }
-                                       </td>
-                                    <td style={text}>
-
-                                    {
-                                  this.props.pageStore.Gold.content[0].table[0].tableData[3].prefix2
-                                }
-                                    </td>
-                                  </tr>
-                                </tbody>
+                                {this.props.pageStore.Gold.content[0].table[0].tableData.map(
+                                  (item, index) => {
+                                    return (
+                                      <TableContent2
+                                        prefix1={item.prefix1}
+                                        prefix2={item.prefix2}
+                                      />
+                                    );
+                                  }
+                                )}
                               </Table>
                             </div>
                           </Col>

@@ -79,8 +79,7 @@ class BlurryNavbar extends React.Component {
             // backgroundColor: "#343435",
             backgroundColor: "transparent",
             height: "50px"
-          }}
-        >
+          }}>
           <Container>
             <div className="navbar-translate">
               <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>

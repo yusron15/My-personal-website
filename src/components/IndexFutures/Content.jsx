@@ -101,7 +101,9 @@ const items = [
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {this.props.pageStore.indexfutures.slide[0].content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.indexfutures.slide[0].content
+                          )}
                         </div>
                       </Col>
                     </Row>
@@ -158,7 +160,9 @@ const items = [
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {this.props.pageStore.indexfutures.slide[1].content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.indexfutures.slide[1].content
+                          )}
                         </div>
                       </Col>
                     </Row>
@@ -215,7 +219,9 @@ const items = [
                       </Col>
                       <Col md="12">
                         <div className="description" style={textDesc}>
-                          {this.props.pageStore.indexfutures.slide[2].content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.indexfutures.slide[2].content
+                          )}
                         </div>
                       </Col>
                     </Row>
@@ -485,7 +491,7 @@ class Content extends React.Component {
                                                 className="description"
                                                 style={textDesc}
                                               >
-                                                {item.content}
+                                                {ReactHtmlParser(item.content)}
                                               </div>
                                             </Col>
                                           </Row>

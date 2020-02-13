@@ -87,29 +87,24 @@ class StockIndexInside extends React.Component {
               <HeaderContentMobile />
               <BreakingNews />
             </div>
-            <NewsStockIndex
-              img={news1}
-              title="Pasar Saham Asia Tunggu Komentar Terkait Trade War "
-              desc=" Pasar Saham Asia membuat kenaikan pada hari Senin
-                          karena investor bersiap di minggu ini untukkemungkinan
-                          komentar yang saling bertentangan mengenai perang
-                          perdagangan China-AS, sementara kinerja yang unggul
-                          dari data ekonomi AS baru-baru ini membuat dolar
-                          menguat terhadap rekan-rekannya. Indeks MSCI dari
-                          saham Asia Pasifik di luar Jepang melambung 0,26%,
-                          setelah kehilangan 0,4% minggu lalu. Nikkei Jepang
-                          menguat 0,8% di awal perdagangan, sementara saham
-                          Australia naik 0,5%. Kontrak berjangka E-Mini untuk
-                          S&P 500 bertambah 0,2%. Pada hari Sabtu, penasihat
-                          keamanan nasional AS Robert O’Brien mengatakan
-                          perjanjian perdagangan awal dengan China masih mungkin
-                          dilakukan pada akhir tahun ini, tetapi memperingatkan
-                          Washington tidak akan menutup mata terhadap apa yang
-                          terjadi di Hong Kong. Komentar itu menambah
-                          kekhawatiran bahwa tindakan keras China terhadap
-                          protes anti-pemerintah di Hong Kong dapat semakin
-                          memperumit pembicaraan. "
-            />
+            <div>
+              {this.props.news.stock.map((item, index) => {
+                return (
+                  <Link to="/stock-index-inside">
+                    <NewsStockIndex
+                      img={item.featured_image_src}
+                      title={item.title.rendered}
+                      posted={`Posted ${moment(item.date).format(
+                        "DD MMMM YYYY HH:ss"
+                      )} WIB`}
+                      desc={`${item.excerpt.rendered
+                        .replace(/(<([^>]+)>)/gi, "")
+                        .replace(/(&#8230;)/gi, "")}`}
+                    />
+                  </Link>
+                );
+              })}
+            </div>
             <Footer />
           </div>
         </>

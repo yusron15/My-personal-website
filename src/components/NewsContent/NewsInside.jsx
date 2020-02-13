@@ -113,7 +113,7 @@ class NewsInside extends React.Component {
                   </Col>
                 </Row>
               </Container>
-              <Comment />
+              {/* <Comment /> */}
               <h3 className="title text-center font-black">Related Post</h3>
 
               <div style={{ marginTop: "20px" }}>
@@ -184,41 +184,17 @@ class NewsInside extends React.Component {
                         >
                           {posted}
                         </div>
-                        <p style={{ color: "black" }}>
-                          {/* <ReadMoreReact style={{}}
-                            text={
-                              "   */}
-                          {/* Pasar Saham Asia membuat kenaikan pada hari Senin
-                          karena investor bersiap di minggu ini untukkemungkinan
-                          komentar yang saling bertentangan mengenai perang
-                          perdagangan China-AS, sementara kinerja yang unggul
-                          dari data ekonomi AS baru-baru ini membuat dolar
-                          menguat terhadap rekan-rekannya. Indeks MSCI dari
-                          saham Asia Pasifik di luar Jepang melambung 0,26%,
-                          setelah kehilangan 0,4% minggu lalu. Nikkei Jepang
-                          menguat 0,8% di awal perdagangan, sementara saham
-                          Australia naik 0,5%. Kontrak berjangka E-Mini untuk
-                          S&P 500 bertambah 0,2%. Pada hari Sabtu, penasihat
-                          keamanan nasional AS Robert O’Brien mengatakan
-                          perjanjian perdagangan awal dengan China masih mungkin
-                          dilakukan pada akhir tahun ini, tetapi memperingatkan
-                          Washington tidak akan menutup mata terhadap apa yang
-                          terjadi di Hong Kong. Komentar itu menambah
-                          kekhawatiran bahwa tindakan keras China terhadap
-                          protes anti-pemerintah di Hong Kong dapat semakin
-                          memperumit pembicaraan. */}
-                          {desc}
-                        </p>
+                        <p style={{ color: "black" }}>{desc}</p>
                       </div>
                     </Col>
                   </Row>
                 </Col>
               </Row>
             </Container>
-            <Comment />
-            <h3 className="title text-center font-black">Related Post</h3>
+            {/* <Comment /> */}
+            {/* <h3 className="title text-center font-black">Related Post</h3> */}
 
-            <div style={{ marginTop: "20px" }}>
+            {/* <div style={{ marginTop: "20px" }}>
               <Content
                 image={news2}
                 title="SoftBank Lanjutkan Penawaran Tender Saham WeWork"
@@ -239,27 +215,9 @@ class NewsInside extends React.Component {
                 posted="Posted by Aris Nugroho | Jum’at 22 November 2019 | 0 comments | 3 views"
                 description="Kontrak Futures AS turun sedikit karena ketegangan perdagangan tetap menjadi fokus setelah laporan bahwa China telah mengundang Washington untuk melakukan pembicaraan tat.."
               />
-              {/* <div>
-                {this.props.news.stock.map((item, index) => {
-                  return (
-                    <Link to="/stock-index-inside">
-                      <Content
-                        image={item.featured_image_src}
-                        title={item.title.rendered}
-                        posted={`Posted ${moment(item.date).format(
-                          "DD MMMM YYYY HH:ss"
-                        )} WIB`}
-                        description={`${item.excerpt.rendered
-                          .replace(/(<([^>]+)>)/gi, "")
-                          .substring(0, 100)}...`}
-                      />
-                    </Link>
-                  );
-                })}
-              </div> */}
-            </div>
+            </div> */}
           </div>
-          <NewsLetter />
+          {/* <NewsLetter /> */}
 
           {/* ********* END FEATURES 3 ********* */}
         </div>{" "}

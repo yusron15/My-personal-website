@@ -31,6 +31,7 @@ class Footers extends React.Component {
   }
 
   render() {
+    console.log(this.props.pageStore.Footer[3].content[6], "FOOTETR");
     return (
       <LangContext.Consumer>
         {({ lang }) => {

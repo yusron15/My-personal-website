@@ -545,7 +545,10 @@ class Projects extends React.Component {
   };
 
   render() {
-    console.log(this.props.pageStore.legalitas.header, "headerlegalitas");
+    console.log(
+      this.props.pageStore.legalitas.content[4].content,
+      "headerlegalitas"
+    );
     return this.renderContent();
   }
 }

@@ -736,57 +736,122 @@ const defaultState = {
   jamperdagangan: {
     header: "Jam Perdagangan",
     table: [
-      [
-        ["Product", "Summer", "Winter"],
-        [
-          "FOREX",
-          "Monday 05.00am – Saturday 04:00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
-          "Monday 05.30am – Saturday 05:00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)"
-        ],
-        [
-          "LLG & SILVER",
-          "\tMonday Open at 06.00am Tuesday – Friday Open at 05.00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
-          "Monday – Friday Open at 06.00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)"
-        ],
-        [
-          "DOW JONES, S&P500, NASDAQ",
-          "05.00am – 03.15am next day (all time is Jakarta time)",
-          "06.00am – 04.15am next day (all time is Jakarta time)"
-        ],
-        [
-          "FOREX",
-          "Monday 05.00am – Saturday 04:00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
-          "Monday 05.30am – Saturday 05:00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)"
-        ],
-        [
-          "FTSE",
-          "07:00am – 03:00am next day (all time is Jakarta time)",
-          "08:00am – 04:00am next day (all time is Jakarta time)"
-        ],
-        [
-          "DAX",
-          "07:15am – 03:00am next day (all time is Jakarta time)",
-          "07:15am – 04:00am next day (all time is Jakarta time)"
-        ],
-        [
-          "CRUDE OIL",
-          "05.00am – 04.00am next day (all time is Jakarta time)",
-          "06.00pm – 05.00am next day (all time is Jakarta time)"
-        ]
-      ],
-      [
-        ["Product", "Session 1", "Session 2", "Last Trading Day Closing"],
-        ["KOSPI200", "07.00am – 01.35pm", "", "01.20pm"],
-        [
-          "NIKKEI225",
-          "06.30am – 01.25pm",
-          "01.55pm – 03.45am next day",
-          "01.25pm"
-        ],
-        ["HANGSENG", "08.15am – 11.00am", "12.00pm – 03.30pm", "03.00pm"]
-      ]
+        {
+            id: 9,
+            prefix1: "Product",
+            prefix2: "Summer",
+            prefix3: "Winter",
+            prefix4: "",
+            prefix5: "",
+            prefix6: "",
+            SectionId: 251,
+            tableData: [
+                {
+                    id: 35,
+                    prefix1: "FOREX",
+                    prefix2: "Monday 05.00am – Saturday 04:00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
+                    prefix3: "231Monday 05.30am – Saturday 05:00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)",
+                    prefix4: "",
+                    prefix5: "",
+                    tableId: 9
+                },
+                {
+                    id: 36,
+                    prefix1: "LLG & SILVER",
+                    prefix2: "123Monday Open at 06.00am Tuesday – Friday Open at 05.00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
+                    prefix3: "Monday – Friday Open at 06.00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)",
+                    prefix4: "",
+                    prefix5: "",
+                    tableId: 9
+                },
+                {
+                    id: 37,
+                    prefix1: "DOW JONES, S&P500, NASDAQ",
+                    prefix2: "05.00am – 03.15am next day (all time is Jakarta time)",
+                    prefix3: "06.00am – 04.15am next day (all time is Jakarta time)",
+                    prefix4: "",
+                    prefix5: "",
+                    tableId: 9
+                },
+                {
+                    id: 41,
+                    prefix1: "KOSPI200",
+                    prefix2: "07.00am – 01.35pm",
+                    prefix3: "",
+                    prefix4: "",
+                    prefix5: "",
+                    tableId: 9
+                },
+                {
+                    id: 42,
+                    prefix1: "KOSPI200",
+                    prefix2: "07.00am – 01.35pm",
+                    prefix3: "",
+                    prefix4: "01.20pm",
+                    prefix5: "",
+                    tableId: 9
+                },
+                {
+                    id: 43,
+                    prefix1: "KOSPI200",
+                    prefix2: "07.00am – 01.35pm",
+                    prefix3: "",
+                    prefix4: "01.20pm",
+                    prefix5: "",
+                    tableId: 9
+                },
+                {
+                    id: 44,
+                    prefix1: "KOSPI200",
+                    prefix2: "07.00am – 01.35pm",
+                    prefix3: "",
+                    prefix4: "01.20pm",
+                    prefix5: "",
+                    tableId: 9
+                }
+            ]
+        },
+        {
+            id: 11,
+            prefix1: "Product",
+            prefix2: "Session 1",
+            prefix3: "Session 2",
+            prefix4: "Last Trading Day Closing",
+            prefix5: "",
+            prefix6: "",
+            SectionId: 251,
+            tableData: [
+                {
+                    id: 38,
+                    prefix1: "KOSPI200",
+                    prefix2: "07.00am – 01.35pm",
+                    prefix3: "",
+                    prefix4: "01.20pm",
+                    prefix5: "",
+                    tableId: 11
+                },
+                {
+                    id: 39,
+                    prefix1: "NIKKEI225",
+                    prefix2: "06.30am – 01.25pm",
+                    prefix3: "01.55pm – 03.45am next day",
+                    prefix4: "01.25pm",
+                    prefix5: "",
+                    tableId: 11
+                },
+                {
+                    id: 40,
+                    prefix1: "KOSPI200",
+                    prefix2: "07.00am – 01.35pm",
+                    prefix3: "",
+                    prefix4: "01.20pm",
+                    prefix5: "",
+                    tableId: 11
+                }
+            ]
+        }
     ]
-  },
+},
   protrader: {
     header: "Pro I Trader",
     top:
@@ -925,7 +990,7 @@ const defaultState = {
     }
   },
   Header: {
-    m1: { title: "Home" },
+    m1: { title: "Beranda" },
     m2: {
       title: "Tentang Kami",
       dropdown: [
