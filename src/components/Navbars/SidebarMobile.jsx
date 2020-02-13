@@ -241,7 +241,6 @@ class SidebarMobile extends React.Component {
                 <a
                   href="http://cabinet.topgrowthfutures.com/users/register"
                   target="_blank"
-                 
                 >
                   <div style={subText}>
                     {this.props.pageStore.Header.m3.dropdown[3].sub[0]}
@@ -249,9 +248,8 @@ class SidebarMobile extends React.Component {
                 </a>
 
                 <a
-                  href="http://cabinet.topgrowthfutures.com/users/register"
+                  href="http://cabinet.topgrowthfutures.com/users/login"
                   target="_blank"
-                 
                 >
                   <div style={subText}>
                     {this.props.pageStore.Header.m3.dropdown[3].sub[1]}

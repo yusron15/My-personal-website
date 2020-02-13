@@ -37,6 +37,8 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg from "../../assets/img/bg-cfd.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
+import { TableContent3, TableContent4, TableContent5} from '../Table/Table';
+
 
 import "../../assets/css/main.css";
 import SidebarMobile from "components/Navbars/SidebarMobile";
@@ -191,125 +193,41 @@ class Content extends React.Component {
                     }}
                   >
                     <Table
-                          bordered
-                          className="table-shopping"
-                          style={{
-                            backgroundColor: "#224377",
-                            borderRadius: "5px",
-                            borderCollapse: "inherit"
-                            // borderWidth: "0.2px"
-                          }}
-                        >
-                          <thead>
-                            <tr>
-                              <th style={titleTable}>
-                                {/* Product */}
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .prefix1
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .prefix2
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .prefix3
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .prefix4
-                                }
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[0].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[0].prefix2
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[0].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[0].prefix4
-                                }
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[1].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[1].prefix2
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[1].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[1].prefix4
-                                }
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[2].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[2].prefix2
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[2].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[2].prefix4
-                                }
-                              </td>
-                            </tr>
-                          </tbody>
-                        </Table>
+                             className="table-shopping"
+                             style={{
+                               backgroundColor: "#224377",
+                               borderRadius: "5px",
+                               borderCollapse: "inherit"
+                             }}
+                           >
+                               <thead>
+                               <tr style={{ backgroundColor: "#224377" }}>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[4].table[0].prefix1}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[4].table[0].prefix2}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[4].table[0].prefix3}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[4].table[0].prefix4}</b>
+                                 </td>
+                               </tr>
+                             </thead>
+                          {
+                              this.props.pageStore.CFD.content[4].table[0].tableData.map((item, index) => {
+                              return (
+                               <TableContent4
+                                  prefix1={item.prefix1}
+                                  prefix2={item.prefix2}
+                                  prefix3={item.prefix3}
+                                  prefix4={item.prefix4}
+                                />
+                               );
+                            })}
+                          </Table>
                   </Col>
                   <Col
                     md="12"
@@ -317,117 +235,46 @@ class Content extends React.Component {
                       overflow: "scroll"
                     }}
                   >
-                     <Table
-                          bordered
-                          className="table-shopping"
-                          style={{
-                            backgroundColor: "#224377",
-                            borderRadius: "5px",
-                            borderCollapse: "inherit"
-                            // borderWidth: "0.2px"
-                          }}
-                        >
-                          <thead>
-                            <tr>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .prefix1
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .prefix2
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .prefix3
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .prefix4
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .prefix5
-                                }
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[0].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[0].prefix2
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[0].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[0].prefix4
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[0].prefix5
-                                }
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[1].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[1].prefix2
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[1].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[1].prefix4
-                                }{" "}
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[1].prefix5
-                                }
-                              </td>
-                            </tr>
-                          </tbody>
-                        </Table>
+                      <Table
+                             className="table-shopping"
+                             style={{
+                               backgroundColor: "#224377",
+                               borderRadius: "5px",
+                               borderCollapse: "inherit"
+                             }}
+                           >
+                               <thead>
+                               <tr style={{ backgroundColor: "#224377" }}>
+                                 <td className="text-white text-center">
+                                   <b>{  this.props.pageStore.CFD.content[4].table[1].prefix1}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{  this.props.pageStore.CFD.content[4].table[1].prefix2}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{  this.props.pageStore.CFD.content[4].table[1].prefix3}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{  this.props.pageStore.CFD.content[4].table[1].prefix4}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{  this.props.pageStore.CFD.content[4].table[1].prefix5}</b>
+                                 </td>
+                               </tr>
+                             </thead>
+                          {
+                             this.props.pageStore.CFD.content[4].table[1].tableData.map((item, index) => {
+                              return (
+                               <TableContent5
+                                  prefix1={item.prefix1}
+                                  prefix2={item.prefix2}
+                                  prefix3={item.prefix3}
+                                  prefix4={item.prefix4}
+                                  prefix5={item.prefix5}
+                                />
+                               );
+                            })}
+                          </Table>
                   </Col>
                 </Row>
               </Container>
@@ -441,72 +288,41 @@ class Content extends React.Component {
                   </Col>
                   <Col md="12">
                   <Table
-                          bordered
-                          className="table-shopping"
-                          style={{
-                            backgroundColor: "#224377",
-                            borderRadius: "5px",
-                            borderCollapse: "inherit"
-                            // borderWidth: "0.2px"
-                          }}
-                        >
-                          <thead>
-                            <tr>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .prefix1
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .prefix2
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .prefix3
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .prefix4
-                                }
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .tableData[0].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .tableData[0].prefix2
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .tableData[0].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .tableData[0].prefix4
-                                }
-                              </td>
-                            </tr>
-                          </tbody>
-                        </Table>
+                             className="table-shopping"
+                             style={{
+                               backgroundColor: "#224377",
+                               borderRadius: "5px",
+                               borderCollapse: "inherit"
+                             }}
+                           >
+                               <thead>
+                               <tr style={{ backgroundColor: "#224377" }}>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[5].table[0].prefix1}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[5].table[0].prefix2}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[5].table[0].prefix3}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[5].table[0].prefix4}</b>
+                                 </td>
+                               </tr>
+                             </thead>
+                          {
+                              this.props.pageStore.CFD.content[5].table[0].tableData.map((item, index) => {
+                              return (
+                               <TableContent4
+                                  prefix1={item.prefix1}
+                                  prefix2={item.prefix2}
+                                  prefix3={item.prefix3}
+                                  prefix4={item.prefix4}
+                                />
+                               );
+                            })}
+                          </Table>
                   </Col>
                 </Row>
               </Container>
@@ -520,72 +336,41 @@ class Content extends React.Component {
                   </Col>
                   <Col md="12">
                   <Table
-                          bordered
-                          className="table-shopping"
-                          style={{
-                            backgroundColor: "#224377",
-                            borderRadius: "5px",
-                            borderCollapse: "inherit"
-                            // borderWidth: "0.2px"
-                          }}
-                        >
-                          <thead>
-                            <tr>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .prefix1
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .prefix2
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .prefix3
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .prefix4
-                                }
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .tableData[0].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .tableData[0].prefix2
-                                }{" "}
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .tableData[0].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .tableData[0].prefix4
-                                }
-                              </td>
-                            </tr>
-                          </tbody>
-                        </Table>
+                             className="table-shopping"
+                             style={{
+                               backgroundColor: "#224377",
+                               borderRadius: "5px",
+                               borderCollapse: "inherit"
+                             }}
+                           >
+                               <thead>
+                               <tr style={{ backgroundColor: "#224377" }}>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[6].table[0].prefix1}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[6].table[0].prefix2}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[6].table[0].prefix3}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[6].table[0].prefix4}</b>
+                                 </td>
+                               </tr>
+                             </thead>
+                          {
+                              this.props.pageStore.CFD.content[6].table[0].tableData.map((item, index) => {
+                              return (
+                               <TableContent4
+                                  prefix1={item.prefix1}
+                                  prefix2={item.prefix2}
+                                  prefix3={item.prefix3}
+                                  prefix4={item.prefix4}
+                                />
+                               );
+                            })}
+                          </Table>
                   </Col>
                 </Row>
               </Container>{" "}
@@ -709,73 +494,7 @@ class Content extends React.Component {
                       </Col>
                     </Row>
                   </Container>
-                  <div className="space-50" />
-                  <Container>
-                    <Row>
-                      <Col md="12">
-                        <div style={textTitle}>
-                          {ReactHtmlParser(
-                            this.props.pageStore.CFD.content[1].title
-                          )}
-                        </div>
-                      </Col>
-                      <Col md="12">
-                        <div
-                          className="description font-black"
-                          style={textDesc}
-                        >
-                          {ReactHtmlParser(
-                            this.props.pageStore.CFD.content[1].content
-                          )}
-                        </div>
-                      </Col>
-                    </Row>
-                  </Container>
-                  <div className="space-50" />
-                  <Container>
-                    <Row>
-                      <Col md="12">
-                        <div style={textTitle}>
-                          {ReactHtmlParser(
-                            this.props.pageStore.CFD.content[2].title
-                          )}
-                        </div>
-                      </Col>
-                      <Col md="12">
-                        <div
-                          className="description font-black"
-                          style={textDesc}
-                        >
-                          {ReactHtmlParser(
-                            this.props.pageStore.CFD.content[2].content
-                          )}
-                        </div>
-                      </Col>
-                    </Row>
-                  </Container>
-                  <div className="space-50" />
-                  <Container>
-                    <Row>
-                      <Col md="12">
-                        <div style={textTitle}>
-                          {ReactHtmlParser(
-                            this.props.pageStore.CFD.content[3].title
-                          )}
-                        </div>
-                      </Col>
-                      <Col md="12">
-                        <div
-                          className="description font-black"
-                          style={textDesc}
-                        >
-                          {ReactHtmlParser(
-                            this.props.pageStore.CFD.content[3].content
-                          )}
-                        </div>
-                      </Col>
-                    </Row>
-                  </Container>
-                  <div className="space-50" />
+                <div className="space-50" />
                   <Container>
                     <Row>
                       <Col md="12">
@@ -786,239 +505,86 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <Table
-                          bordered
-                          className="table-shopping"
-                          style={{
-                            backgroundColor: "#224377",
-                            borderRadius: "5px",
-                            borderCollapse: "inherit"
-                            // borderWidth: "0.2px"
-                          }}
-                        >
-                          <thead>
-                            <tr>
-                              <th style={titleTable}>
-                                {/* Product */}
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .prefix1
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .prefix2
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .prefix3
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .prefix4
-                                }
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[0].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[0].prefix2
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[0].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[0].prefix4
-                                }
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[1].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[1].prefix2
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[1].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[1].prefix4
-                                }
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[2].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[2].prefix2
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[2].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[0]
-                                    .tableData[2].prefix4
-                                }
-                              </td>
-                            </tr>
-                          </tbody>
-                        </Table>
+
+                      <Table
+                             className="table-shopping"
+                             style={{
+                               backgroundColor: "#224377",
+                               borderRadius: "5px",
+                               borderCollapse: "inherit"
+                             }}
+                           >
+                               <thead>
+                               <tr style={{ backgroundColor: "#224377" }}>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[4].table[0].prefix1}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[4].table[0].prefix2}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[4].table[0].prefix3}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[4].table[0].prefix4}</b>
+                                 </td>
+                               </tr>
+                             </thead>
+                          {
+                              this.props.pageStore.CFD.content[4].table[0].tableData.map((item, index) => {
+                              return (
+                               <TableContent4
+                                  prefix1={item.prefix1}
+                                  prefix2={item.prefix2}
+                                  prefix3={item.prefix3}
+                                  prefix4={item.prefix4}
+                                />
+                               );
+                            })}
+                          </Table>
                       </Col>
                       <Col md="12">
-                        <Table
-                          bordered
-                          className="table-shopping"
-                          style={{
-                            backgroundColor: "#224377",
-                            borderRadius: "5px",
-                            borderCollapse: "inherit"
-                            // borderWidth: "0.2px"
-                          }}
-                        >
-                          <thead>
-                            <tr>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .prefix1
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .prefix2
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .prefix3
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .prefix4
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .prefix5
-                                }
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[0].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[0].prefix2
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[0].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[0].prefix4
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[0].prefix5
-                                }
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[1].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[1].prefix2
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[1].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[1].prefix4
-                                }{" "}
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[4].table[1]
-                                    .tableData[1].prefix5
-                                }
-                              </td>
-                            </tr>
-                          </tbody>
-                        </Table>
+                      <Table
+                             className="table-shopping"
+                             style={{
+                               backgroundColor: "#224377",
+                               borderRadius: "5px",
+                               borderCollapse: "inherit"
+                             }}
+                           >
+                               <thead>
+                               <tr style={{ backgroundColor: "#224377" }}>
+                                 <td className="text-white text-center">
+                                   <b>{  this.props.pageStore.CFD.content[4].table[1].prefix1}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{  this.props.pageStore.CFD.content[4].table[1].prefix2}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{  this.props.pageStore.CFD.content[4].table[1].prefix3}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{  this.props.pageStore.CFD.content[4].table[1].prefix4}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{  this.props.pageStore.CFD.content[4].table[1].prefix5}</b>
+                                 </td>
+                               </tr>
+                             </thead>
+                          {
+                             this.props.pageStore.CFD.content[4].table[1].tableData.map((item, index) => {
+                              return (
+                               <TableContent5
+                                  prefix1={item.prefix1}
+                                  prefix2={item.prefix2}
+                                  prefix3={item.prefix3}
+                                  prefix4={item.prefix4}
+                                  prefix5={item.prefix5}
+                                />
+                               );
+                            })}
+                          </Table>
+                     
                       </Col>
                     </Row>
                   </Container>
@@ -1033,73 +599,45 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <Table
-                          bordered
-                          className="table-shopping"
-                          style={{
-                            backgroundColor: "#224377",
-                            borderRadius: "5px",
-                            borderCollapse: "inherit"
-                            // borderWidth: "0.2px"
-                          }}
-                        >
-                          <thead>
-                            <tr>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .prefix1
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .prefix2
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .prefix3
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .prefix4
-                                }
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .tableData[0].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .tableData[0].prefix2
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .tableData[0].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[5].table[0]
-                                    .tableData[0].prefix4
-                                }
-                              </td>
-                            </tr>
-                          </tbody>
-                        </Table>
+
+                      <Table
+                             className="table-shopping"
+                             style={{
+                               backgroundColor: "#224377",
+                               borderRadius: "5px",
+                               borderCollapse: "inherit"
+                             }}
+                           >
+                               <thead>
+                               <tr style={{ backgroundColor: "#224377" }}>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[5].table[0].prefix1}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[5].table[0].prefix2}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[5].table[0].prefix3}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[5].table[0].prefix4}</b>
+                                 </td>
+                               </tr>
+                             </thead>
+                          {
+                              this.props.pageStore.CFD.content[5].table[0].tableData.map((item, index) => {
+                              return (
+                               <TableContent4
+                                  prefix1={item.prefix1}
+                                  prefix2={item.prefix2}
+                                  prefix3={item.prefix3}
+                                  prefix4={item.prefix4}
+                                />
+                               );
+                            })}
+                          </Table>
+
+                      
                       </Col>
                     </Row>
                   </Container>
@@ -1114,73 +652,45 @@ class Content extends React.Component {
                         </div>
                       </Col>
                       <Col md="12">
-                        <Table
-                          bordered
-                          className="table-shopping"
-                          style={{
-                            backgroundColor: "#224377",
-                            borderRadius: "5px",
-                            borderCollapse: "inherit"
-                            // borderWidth: "0.2px"
-                          }}
-                        >
-                          <thead>
-                            <tr>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .prefix1
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .prefix2
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .prefix3
-                                }
-                              </th>
-                              <th style={titleTable}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .prefix4
-                                }
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody style={{ backgroundColor: "#D1D1D1" }}>
-                            <tr>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .tableData[0].prefix1
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .tableData[0].prefix2
-                                }{" "}
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .tableData[0].prefix3
-                                }
-                              </td>
-                              <td style={text}>
-                                {
-                                  this.props.pageStore.CFD.content[6].table[0]
-                                    .tableData[0].prefix4
-                                }
-                              </td>
-                            </tr>
-                          </tbody>
-                        </Table>
+
+                      <Table
+                             className="table-shopping"
+                             style={{
+                               backgroundColor: "#224377",
+                               borderRadius: "5px",
+                               borderCollapse: "inherit"
+                             }}
+                           >
+                               <thead>
+                               <tr style={{ backgroundColor: "#224377" }}>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[6].table[0].prefix1}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[6].table[0].prefix2}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[6].table[0].prefix3}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{ this.props.pageStore.CFD.content[6].table[0].prefix4}</b>
+                                 </td>
+                               </tr>
+                             </thead>
+                          {
+                              this.props.pageStore.CFD.content[6].table[0].tableData.map((item, index) => {
+                              return (
+                               <TableContent4
+                                  prefix1={item.prefix1}
+                                  prefix2={item.prefix2}
+                                  prefix3={item.prefix3}
+                                  prefix4={item.prefix4}
+                                />
+                               );
+                            })}
+                          </Table>
+
+                       
                       </Col>
                     </Row>
                   </Container>

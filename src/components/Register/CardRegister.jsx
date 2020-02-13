@@ -176,7 +176,7 @@ class CardRegister extends React.Component {
                 </Col>
                 <Col md="6">
                   <a
-                    href="http://cabinet.topgrowthfutures.com/users/register"
+                    href="http://cabinet.topgrowthfutures.com/users/login"
                     target="_blank"
                     style={{ color: "white" }}
                   >
@@ -190,13 +190,13 @@ class CardRegister extends React.Component {
 
             <div className="pull-left ml-3 mb-3">
               <h6>
-                <Link
-                  to="/login"
-                  // className="link footer-link"
+                <a
+                  href="http://cabinet.topgrowthfutures.com/users/login"
+                  target="_blank"
                   style={{ color: "white" }}
                 >
                   {this.props.pageStore.register.form.signIn}
-                </Link>
+                </a>
               </h6>
             </div>
             {/* <div className="pull-right mr-3 mb-3">
