@@ -29,9 +29,9 @@ class Features extends React.Component {
             <div
               className="features-3 broken-white"
               style={{
-                padding: "50px",
                 paddingTop: "20px",
-                backgroundImage: `url(${bg})`
+                backgroundImage: `url(${bg})`,
+                backgroundSize: "cover"
               }}
             >
               <Container fluid>
@@ -63,75 +63,72 @@ class Features extends React.Component {
                   <div>
                     <Col>
                       <Row>
-                        <Col>
-                          <ScrollAnimation
-                            animateIn="fadeInUp"
-                            animateOut="fadeOut"
+                        <Col style={{ padding: 0 }}>
+                          <a
+                            href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_windows.zip"
+                            target="_blank"
                           >
                             <img
                               alt="..."
-                              className="bg-blob"
+                              md="12"
                               style={{
-                                width: "70vw",
-                                marginTop: "20px",
+                                width: "50vw",
+                                margin: "20px 2px 0 2px",
                                 height: "auto"
                               }}
                               src={pc}
                             />
-                          </ScrollAnimation>
+                          </a>
                         </Col>
-                        <Col>
-                          <ScrollAnimation
-                            animateIn="fadeInUp"
-                            animateOut="fadeOut"
+                        <Col style={{ padding: 0 }}>
+                          <a
+                            href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_macos_5_0_en.zip"
+                            target="_blank"
                           >
                             <img
                               alt="..."
-                              className="bg-blob"
                               style={{
-                                width: "70vw",
-                                marginTop: "20px",
+                                width: "50vw",
+                                margin: "20px 2px 0 2px",
                                 height: "auto"
                               }}
                               src={mac}
                             />
-                          </ScrollAnimation>
+                          </a>
                         </Col>
                       </Row>
                       <Row>
-                        <Col>
-                          <ScrollAnimation
-                            animateIn="fadeInUp"
-                            animateOut="fadeOut"
+                        <Col style={{ padding: 0 }}>
+                          <a
+                            href="https://play.google.com/store/apps/details?id=com.ifx.ProiTrader"
+                            target="_blank"
                           >
                             <img
                               alt="..."
-                              className="bg-blob"
                               style={{
-                                width: "70vw",
+                                width: "50vw",
                                 marginTop: "20px",
                                 height: "auto"
                               }}
                               src={android}
                             />
-                          </ScrollAnimation>
+                          </a>
                         </Col>
-                        <Col>
-                          <ScrollAnimation
-                            animateIn="fadeInUp"
-                            animateOut="fadeOut"
+                        <Col style={{ padding: 0 }}>
+                          <a
+                            href="http://itunes.apple.com/id/app/pro-itrader/id440449403?mt=8"
+                            target="_blank"
                           >
                             <img
                               alt="..."
-                              className="bg-blob"
                               style={{
-                                width: "70vw",
-                                marginTop: "20px",
+                                width: "50vw",
+                                margin: "20px 2px 0 2px",
                                 height: "auto"
                               }}
                               src={ios}
                             />
-                          </ScrollAnimation>
+                          </a>
                         </Col>
                       </Row>
                     </Col>
@@ -192,15 +189,20 @@ class Features extends React.Component {
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          style={{
-                            width: "15vw",
-                            height: "auto"
-                          }}
-                          src={pc}
-                        />
+                        <a
+                          href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_windows.zip"
+                          target="_blank"
+                        >
+                          <img
+                            alt="..."
+                            className="bg-blob"
+                            style={{
+                              width: "15vw",
+                              height: "auto"
+                            }}
+                            src={pc}
+                          />
+                        </a>
                       </ScrollAnimation>
                     </Col>
                     <Col md="4">
@@ -208,15 +210,20 @@ class Features extends React.Component {
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          style={{
-                            width: "15vw",
-                            height: "auto"
-                          }}
-                          src={mac}
-                        />
+                        <a
+                          href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_macos_5_0_en.zip"
+                          target="_blank"
+                        >
+                          <img
+                            alt="..."
+                            className="bg-blob"
+                            style={{
+                              width: "15vw",
+                              height: "auto"
+                            }}
+                            src={mac}
+                          />
+                        </a>
                       </ScrollAnimation>
                     </Col>
                   </Row>
@@ -230,15 +237,20 @@ class Features extends React.Component {
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          style={{
-                            width: "15vw",
-                            height: "auto"
-                          }}
-                          src={android}
-                        />
+                        <a
+                          href="https://play.google.com/store/apps/details?id=com.ifx.ProiTrader"
+                          target="_blank"
+                        >
+                          <img
+                            alt="..."
+                            className="bg-blob"
+                            style={{
+                              width: "15vw",
+                              height: "auto"
+                            }}
+                            src={android}
+                          />
+                        </a>
                       </ScrollAnimation>
                     </Col>
                     <Col md="4">
@@ -246,15 +258,20 @@ class Features extends React.Component {
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          style={{
-                            width: "15vw",
-                            height: "auto"
-                          }}
-                          src={ios}
-                        />
+                        <a
+                          href="http://itunes.apple.com/id/app/pro-itrader/id440449403?mt=8"
+                          target="_blank"
+                        >
+                          <img
+                            alt="..."
+                            className="bg-blob"
+                            style={{
+                              width: "15vw",
+                              height: "auto"
+                            }}
+                            src={ios}
+                          />
+                        </a>
                       </ScrollAnimation>
                     </Col>
                   </Row>

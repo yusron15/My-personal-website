@@ -360,63 +360,6 @@ class News extends React.Component {
             </div>
           </div>
 
-          {/* <div className="testimonials-4">
-            <Container>
-              <Row>
-                <Col
-                  md="12"
-                >
-                  <Slick {...slickSettings}>
-                    {this.props.cabangList.map((item, index) => {
-                      return (
-                        <div key={index}>
-                          <NavLink
-                            className={
-                              this.state.activeSlide === index ? "scaled" : ""
-                            }
-                            style={{
-                              backgroundImage:
-                                "url(" + item.image_url + ")",
-                              height: "30vh",
-                              backgroundSize: "cover"
-                            }}
-                          ></NavLink>
-                        </div>
-                      );
-                    })}
-                  </Slick>
-
-                </Col>
-                <Col
-                  className="positioned"
-                  style={{ marginTop: "60px" }}
-                  lg="4"
-                  md="8"
-                  xs="10"
-                >
-
-                  <h1 className="title font-black">
-                    {this.props.pageStore.cabang.heading}
-                  </h1>
-                  <p className="description text-white">
-                    <TabContent activeTab={"project" + this.state.activeSlide}>
-                      {this.props.cabangList.map((item, index) => (
-                        <TabPane tabId={`project${index}`}>
-
-                          <div className="title font-black">{item.nama}</div>
-                          <p className="description font-black mb-5">
-                            {item.alamat}
-                          </p>
-                        </TabPane>
-                      ))}
-                    </TabContent>
-                  </p>
-
-                </Col>
-              </Row>
-            </Container>
-          </div> */}
-
           <div className="cd-section" id="testimonials">
             <div
               className="testimonials-4"

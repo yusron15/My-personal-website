@@ -31,7 +31,6 @@ class Features extends React.Component {
             <div
               className="features-3 broken-white"
               style={{
-                padding: "50px",
                 paddingTop: "20px",
                 backgroundImage: `url(${bg})`
               }}
@@ -65,110 +64,110 @@ class Features extends React.Component {
                   <div>
                     <Row>
                       <Col>
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOut"
+                        <a
+                          href="https://download.mql5.com/cdn/web/3785/mt4/topgrowth4setup.exe"
+                          target="_blank"
                         >
                           <img
                             alt="..."
                             className="bg-blob"
                             style={{
                               width: "50vw",
-                              marginTop: "20px",
+                              margin: "20px 1px 0 2px",
                               height: "auto"
                             }}
                             src={pc}
                           />
-                        </ScrollAnimation>
+                        </a>
                       </Col>
                       <Col>
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOut"
+                        <a
+                          href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_macos_5_0_en.zip"
+                          target="_blank"
                         >
                           <img
                             alt="..."
                             className="bg-blob"
                             style={{
                               width: "50vw",
-                              marginTop: "20px",
+                              margin: "20px 1px 0 2px",
                               height: "auto"
                             }}
                             src={mac}
                           />
-                        </ScrollAnimation>
+                        </a>
                       </Col>
                     </Row>
                     <Row>
                       <Col>
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOut"
+                        <a
+                          href="https://download.mql5.com/cdn/mobile/mt4/android?server=Topgrowth-Demo"
+                          target="_blank"
                         >
                           <img
                             alt="..."
                             className="bg-blob"
                             style={{
                               width: "50vw",
-                              marginTop: "20px",
+                              margin: "20px 1px 0 2px",
                               height: "auto"
                             }}
                             src={android}
                           />
-                        </ScrollAnimation>
+                        </a>
                       </Col>
                       <Col>
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOut"
+                        <a
+                          href="https://download.mql5.com/cdn/mobile/mt4/ios?server=Topgrowth-Demo"
+                          target="_blank"
                         >
                           <img
                             alt="..."
                             className="bg-blob"
                             style={{
                               width: "50vw",
-                              marginTop: "20px",
+                              margin: "20px 1px 0 2px",
                               height: "auto"
                             }}
                             src={ios}
                           />
-                        </ScrollAnimation>
+                        </a>
                       </Col>
                     </Row>
                     <Row>
                       <Col>
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOut"
+                        <a
+                          href="http://files.metaquotes.net/3785/mt4/topgrowth4mobilesetup.cab"
+                          target="_blank"
                         >
                           <img
                             alt="..."
                             className="bg-blob"
                             style={{
                               width: "50vw",
-                              marginTop: "20px",
+                              margin: "20px 1px 0 2px",
                               height: "auto"
                             }}
                             src={mobile}
                           />
-                        </ScrollAnimation>
+                        </a>
                       </Col>
                       <Col>
-                        <ScrollAnimation
-                          animateIn="fadeInUp"
-                          animateOut="fadeOut"
+                        <a
+                          href="http://files.metaquotes.net/3785/mt4/topgrowth4mobilesetup.se.cab"
+                          target="_blank"
                         >
                           <img
                             alt="..."
                             className="bg-blob"
                             style={{
                               width: "50vw",
-                              marginTop: "20px",
+                              margin: "20px 1px 0 2px",
                               height: "auto"
                             }}
                             src={mobilese}
                           />
-                        </ScrollAnimation>
+                        </a>
                       </Col>
                     </Row>
                   </div>
@@ -228,15 +227,20 @@ class Features extends React.Component {
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          style={{
-                            width: "15vw",
-                            height: "auto"
-                          }}
-                          src={ios}
-                        />
+                        <a
+                          href="https://download.mql5.com/cdn/mobile/mt4/ios?server=Topgrowth-Demo"
+                          target="_blank"
+                        >
+                          <img
+                            alt="..."
+                            className="bg-blob"
+                            style={{
+                              width: "15vw",
+                              height: "auto"
+                            }}
+                            src={ios}
+                          />
+                        </a>
                       </ScrollAnimation>
                     </Col>
                     <Col md="4">
@@ -244,53 +248,20 @@ class Features extends React.Component {
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          style={{
-                            width: "15vw",
-                            height: "auto"
-                          }}
-                          src={mac}
-                        />
-                      </ScrollAnimation>
-                    </Col>
-                  </Row>
-                  <Row
-                    style={{
-                      marginTop: "20px"
-                    }}
-                  >
-                    <Col md="4">
-                      <ScrollAnimation
-                        animateIn="fadeInUp"
-                        animateOut="fadeOut"
-                      >
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          style={{
-                            width: "15vw",
-                            height: "auto"
-                          }}
-                          src={mobile}
-                        />
-                      </ScrollAnimation>
-                    </Col>
-                    <Col md="4">
-                      <ScrollAnimation
-                        animateIn="fadeInUp"
-                        animateOut="fadeOut"
-                      >
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          style={{
-                            width: "15vw",
-                            height: "auto"
-                          }}
-                          src={android}
-                        />
+                        <a
+                          href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_macos_5_0_en.zip"
+                          target="_blank"
+                        >
+                          <img
+                            alt="..."
+                            className="bg-blob"
+                            style={{
+                              width: "15vw",
+                              height: "auto"
+                            }}
+                            src={mac}
+                          />
+                        </a>
                       </ScrollAnimation>
                     </Col>
                   </Row>
@@ -304,15 +275,20 @@ class Features extends React.Component {
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          style={{
-                            width: "15vw",
-                            height: "auto"
-                          }}
-                          src={mobilese}
-                        />
+                        <a
+                          href="http://files.metaquotes.net/3785/mt4/topgrowth4mobilesetup.cab"
+                          target="_blank"
+                        >
+                          <img
+                            alt="..."
+                            className="bg-blob"
+                            style={{
+                              width: "15vw",
+                              height: "auto"
+                            }}
+                            src={mobile}
+                          />
+                        </a>
                       </ScrollAnimation>
                     </Col>
                     <Col md="4">
@@ -320,15 +296,68 @@ class Features extends React.Component {
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
-                        <img
-                          alt="..."
-                          className="bg-blob"
-                          style={{
-                            width: "15vw",
-                            height: "auto"
-                          }}
-                          src={pc}
-                        />
+                        <a
+                          href="https://download.mql5.com/cdn/mobile/mt4/android?server=Topgrowth-Demo"
+                          target="_blank"
+                        >
+                          <img
+                            alt="..."
+                            className="bg-blob"
+                            style={{
+                              width: "15vw",
+                              height: "auto"
+                            }}
+                            src={android}
+                          />
+                        </a>
+                      </ScrollAnimation>
+                    </Col>
+                  </Row>
+                  <Row
+                    style={{
+                      marginTop: "20px"
+                    }}
+                  >
+                    <Col md="4">
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <a
+                          href="http://files.metaquotes.net/3785/mt4/topgrowth4mobilesetup.se.cab"
+                          target="_blank"
+                        >
+                          <img
+                            alt="..."
+                            className="bg-blob"
+                            style={{
+                              width: "15vw",
+                              height: "auto"
+                            }}
+                            src={mobilese}
+                          />
+                        </a>
+                      </ScrollAnimation>
+                    </Col>
+                    <Col md="4">
+                      <ScrollAnimation
+                        animateIn="fadeInUp"
+                        animateOut="fadeOut"
+                      >
+                        <a
+                          href="https://download.mql5.com/cdn/web/3785/mt4/topgrowth4setup.exe"
+                          target="_blank"
+                        >
+                          <img
+                            alt="..."
+                            className="bg-blob"
+                            style={{
+                              width: "15vw",
+                              height: "auto"
+                            }}
+                            src={pc}
+                          />
+                        </a>
                       </ScrollAnimation>
                     </Col>
                   </Row>

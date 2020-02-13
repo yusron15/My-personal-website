@@ -223,18 +223,23 @@ class Pricing extends React.Component {
                                     .card[0][5]
                                 )}
                               </div>
-                              <Button
-                                className="btn-round pricing"
-                                color="info"
-                                type="button"
-                                block
+                              <a
+                                href="http://cabinet.topgrowthfutures.com/users/register"
+                                target="_blank"
                               >
-                                {/* Daftar */}
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Landing.Pricing
-                                    .card[0][6]
-                                )}
-                              </Button>
+                                <Button
+                                  className="btn-round pricing"
+                                  color="info"
+                                  type="button"
+                                  block
+                                >
+                                  {/* Daftar */}
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Landing.Pricing
+                                      .card[0][6]
+                                  )}
+                                </Button>
+                              </a>
                             </CardBody>
                           </Card>
                         </ScrollAnimation>
@@ -366,19 +371,24 @@ class Pricing extends React.Component {
                                 )}
                               </div>
 
-                              <Button
-                                className="btn-round pricing"
-                                color="info"
-                                type="button"
-                                block
-                                style={{ height: 50, fontSize: 18 }}
+                              <a
+                                href="http://cabinet.topgrowthfutures.com/users/register"
+                                target="_blank"
                               >
-                                {/* Daftar */}
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Landing.Pricing
-                                    .card[1][5]
-                                )}
-                              </Button>
+                                <Button
+                                  className="btn-round pricing"
+                                  color="info"
+                                  type="button"
+                                  block
+                                  style={{ height: 50, fontSize: 18 }}
+                                >
+                                  {/* Daftar */}
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Landing.Pricing
+                                      .card[1][5]
+                                  )}
+                                </Button>
+                              </a>
                             </CardBody>
                           </Card>
                         </ScrollAnimation>
@@ -510,19 +520,24 @@ class Pricing extends React.Component {
                                 )}
                               </div>
 
-                              <Button
-                                className="btn-round pricing"
-                                color="info"
-                                type="button"
-                                block
-                                style={{ height: 50, fontSize: 18 }}
+                              <a
+                                href="http://cabinet.topgrowthfutures.com/users/register"
+                                target="_blank"
                               >
-                                {/* Daftar */}
-                                {ReactHtmlParser(
-                                  this.props.pageStore.Landing.Pricing
-                                    .card[2][6]
-                                )}
-                              </Button>
+                                <Button
+                                  className="btn-round pricing"
+                                  color="info"
+                                  type="button"
+                                  block
+                                  style={{ height: 50, fontSize: 18 }}
+                                >
+                                  {/* Daftar */}
+                                  {ReactHtmlParser(
+                                    this.props.pageStore.Landing.Pricing
+                                      .card[2][6]
+                                  )}
+                                </Button>
+                              </a>
                             </CardBody>
                           </Card>
                         </ScrollAnimation>
@@ -712,19 +727,24 @@ class Pricing extends React.Component {
                                         .card[0][5]
                                     )}
                                   </div>
-                                  <Button
-                                    className="btn-round pricing"
-                                    color="info"
-                                    type="button"
-                                    block
-                                    style={{ height: 50, fontSize: 18 }}
+                                  <a
+                                    href="http://cabinet.topgrowthfutures.com/users/register"
+                                    target="_blank"
                                   >
-                                    {/* Daftar */}
-                                    {ReactHtmlParser(
-                                      this.props.pageStore.Landing.Pricing
-                                        .card[0][6]
-                                    )}
-                                  </Button>
+                                    <Button
+                                      className="btn-round pricing"
+                                      color="info"
+                                      type="button"
+                                      block
+                                      style={{ height: 50, fontSize: 18 }}
+                                    >
+                                      {/* Daftar */}
+                                      {ReactHtmlParser(
+                                        this.props.pageStore.Landing.Pricing
+                                          .card[0][6]
+                                      )}
+                                    </Button>
+                                  </a>
                                 </CardBody>
                               </Card>
                             </ScrollAnimation>
@@ -856,20 +876,24 @@ class Pricing extends React.Component {
                                         .card[1][5]
                                     )}
                                   </div>
-
-                                  <Button
-                                    className="btn-round pricing"
-                                    color="info"
-                                    type="button"
-                                    block
-                                    style={{ height: 50, fontSize: 18 }}
+                                  <a
+                                    href="http://cabinet.topgrowthfutures.com/users/register"
+                                    target="_blank"
                                   >
-                                    {/* Daftar */}
-                                    {ReactHtmlParser(
-                                      this.props.pageStore.Landing.Pricing
-                                        .card[1][6]
-                                    )}
-                                  </Button>
+                                    <Button
+                                      className="btn-round pricing"
+                                      color="info"
+                                      type="button"
+                                      block
+                                      style={{ height: 50, fontSize: 18 }}
+                                    >
+                                      {/* Daftar */}
+                                      {ReactHtmlParser(
+                                        this.props.pageStore.Landing.Pricing
+                                          .card[1][6]
+                                      )}
+                                    </Button>
+                                  </a>
                                 </CardBody>
                               </Card>
                             </ScrollAnimation>
@@ -1003,20 +1027,24 @@ class Pricing extends React.Component {
                                         .card[2][5]
                                     )}
                                   </div>
-
-                                  <Button
-                                    className="btn-round pricing"
-                                    color="info"
-                                    type="button"
-                                    block
-                                    style={{ height: 50, fontSize: 18 }}
+                                  <a
+                                    href="http://cabinet.topgrowthfutures.com/users/register"
+                                    target="_blank"
                                   >
-                                    {/* Daftar */}
-                                    {ReactHtmlParser(
-                                      this.props.pageStore.Landing.Pricing
-                                        .card[2][6]
-                                    )}
-                                  </Button>
+                                    <Button
+                                      className="btn-round pricing"
+                                      color="info"
+                                      type="button"
+                                      block
+                                      style={{ height: 50, fontSize: 18 }}
+                                    >
+                                      {/* Daftar */}
+                                      {ReactHtmlParser(
+                                        this.props.pageStore.Landing.Pricing
+                                          .card[2][6]
+                                      )}
+                                    </Button>
+                                  </a>
                                 </CardBody>
                               </Card>
                             </ScrollAnimation>
