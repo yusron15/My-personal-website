@@ -308,7 +308,7 @@ class ColorNavbar extends React.Component {
                   <div
                     class="dropdown "
                     style={colorStyle}
-                    onMouseEnter={() => this.onClick()}
+                    onClick={() => this.onClick()}
                     // onMouseLeave={() => this.onLeave()}
                   >
                     <button class="dropbtn" style={colorStyle}>
@@ -317,20 +317,14 @@ class ColorNavbar extends React.Component {
                   </div>
 
                   {/* TRADING ONLINE */}
-                  <div
-                    class="dropdown "
-                    onMouseEnter={() => this.onClickTrading()}
-                  >
+                  <div class="dropdown " onClick={() => this.onClickTrading()}>
                     <button class="dropbtn" style={colorStyle}>
                       {ReactHtmlParser(this.props.pageStore.Header.m3.title)}
                     </button>
                   </div>
 
                   {/* BERITA */}
-                  <div
-                    class="dropdown"
-                    onMouseEnter={() => this.onClickBerita()}
-                  >
+                  <div class="dropdown" onClick={() => this.onClickBerita()}>
                     <button class="dropbtn" style={colorStyle}>
                       {ReactHtmlParser(this.props.pageStore.Header.m4.title)}
                     </button>

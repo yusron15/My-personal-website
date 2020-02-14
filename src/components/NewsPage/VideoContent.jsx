@@ -530,9 +530,9 @@ class Blogs extends React.Component {
                           <div
                             style={{
                               fontSize: "1.2rem",
-                              paddingLeft: "10px",
                               paddingTop: "25px",
-                              paddingRight: "10px",
+                              minWidth: "200px",
+                              textAlign: "center",
                               fontWeight: "bold",
                               height: "80px",
                               color:
@@ -560,9 +560,9 @@ class Blogs extends React.Component {
                           <div
                             style={{
                               fontSize: "1.2rem",
-                              paddingLeft: "10px",
+                              textAlign: "center",
                               paddingTop: "25px",
-                              paddingRight: "10px",
+                              minWidth: "200px",
                               fontWeight: "bold",
                               height: "80px",
 
@@ -591,9 +591,9 @@ class Blogs extends React.Component {
                           <div
                             style={{
                               fontSize: "1.2rem",
-                              paddingLeft: "10px",
+                              textAlign: "center",
+                              minWidth: "200px",
                               paddingTop: "25px",
-                              paddingRight: "10px",
                               fontWeight: "bold",
                               height: "80px",
 

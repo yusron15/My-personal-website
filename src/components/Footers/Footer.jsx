@@ -113,53 +113,50 @@ class Footers extends React.Component {
                         </Link>
                       </Col>
                       <Col md="4">
-                        <Link
-                          to=""
-                          style={{ color: "white", cursor: "default" }}
-                        >
-                          <h4>
+                        <Link to="" style={{ color: "white" }}>
+                          <h4 style={{ cursor: "default" }}>
                             {ReactHtmlParser(
                               this.props.pageStore.Footer[3].title
                             )}
                           </h4>
 
-                          <p>
+                          <p style={{ cursor: "default" }}>
                             {ReactHtmlParser(
                               this.props.pageStore.Footer[3].content[0]
                             )}
                           </p>
 
-                          <p>
+                          <p style={{ cursor: "default" }}>
                             {ReactHtmlParser(
                               this.props.pageStore.Footer[3].content[1]
                             )}
                           </p>
 
-                          <p>
+                          <p style={{ cursor: "default" }}>
                             {ReactHtmlParser(
                               this.props.pageStore.Footer[3].content[2]
                             )}
                           </p>
 
-                          <p>
+                          <p style={{ cursor: "default" }}>
                             {ReactHtmlParser(
                               this.props.pageStore.Footer[3].content[3]
                             )}
                           </p>
 
-                          <p>
+                          <p style={{ cursor: "default" }}>
                             {ReactHtmlParser(
                               this.props.pageStore.Footer[3].content[4]
                             )}
                           </p>
 
-                          <p>
+                          <p style={{ cursor: "default" }}>
                             {ReactHtmlParser(
                               this.props.pageStore.Footer[3].content[5]
                             )}
                           </p>
 
-                          <p>
+                          <p style={{ cursor: "auto" }}>
                             {ReactHtmlParser(
                               this.props.pageStore.Footer[3].content[6]
                             )}

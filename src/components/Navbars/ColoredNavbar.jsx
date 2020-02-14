@@ -302,7 +302,9 @@ class ColorNavbar extends React.Component {
                   {/* TENTANG KAMI */}
                   <div
                     // class="dropdown"
-                    onMouseEnter={() => this.onClick()}
+                    // onMouseEnter={() => this.onClick()}
+                    onClick={() => this.onClick()}
+
                     // onMouseLeave={() => this.onLeave()}
                   >
                     <button
@@ -335,7 +337,8 @@ class ColorNavbar extends React.Component {
                   {/* TRADING ONLINE */}
                   <div
                     class="dropdown "
-                    onMouseEnter={() => this.onClickTrading()}
+                    // onMouseEnter={() => this.onClickTrading()}
+                    onClick={() => this.onClickTrading()}
                   >
                     <button
                       class="dropbtn"
@@ -385,7 +388,8 @@ class ColorNavbar extends React.Component {
                   {/* BERITA */}
                   <div
                     class="dropdown"
-                    onMouseEnter={() => this.onClickBerita()}
+                    // onMouseEnter={() => this.onClickBerita()}
+                    onClick={() => this.onClickBerita()}
                   >
                     <button
                       class="dropbtn"

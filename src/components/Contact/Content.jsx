@@ -258,6 +258,39 @@ class Content extends React.Component {
                             <label style={{ color: "black" }}>
                               {
                                 this.props.pageStore.hubungikami.form
+                                  .emailaddress
+                              }
+                            </label>
+                            <InputGroup
+                              className={classnames({
+                                "input-group-focus": this.state.emailFocus
+                              })}
+                            >
+                              <InputGroupAddon addonType="prepend">
+                                <InputGroupText>
+                                  <img
+                                    src={subscribe}
+                                    style={{ height: "15px", width: "auto" }}
+                                  />
+                                </InputGroupText>
+                              </InputGroupAddon>
+                              <Input
+                                style={{ color: "black" }}
+                                placeholder="Phone..."
+                                type="text"
+                                onFocus={e =>
+                                  this.setState({ emailFocus: true })
+                                }
+                                onBlur={e =>
+                                  this.setState({ emailFocus: false })
+                                }
+                              />
+                            </InputGroup>
+                          </FormGroup>
+                          <FormGroup>
+                            <label style={{ color: "black" }}>
+                              {
+                                this.props.pageStore.hubungikami.form
                                   .yourmessage
                               }
                             </label>
