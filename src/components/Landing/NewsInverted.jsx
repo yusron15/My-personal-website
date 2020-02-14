@@ -384,25 +384,33 @@ class NewsInverted extends React.Component {
                   className="positioned-text-right"
                   style={{ padding: "10vh 10vw 0 5vw" }}
                 >
-                  <h1 className="title">
-                    {this.props.pageStore.Landing.NewsInverted.title}
-                  </h1>
-                  <p
-                    className="description text-white"
-                    style={{ minHeight: "20vh" }}
-                  >
-                    <TabContent activeTab={"project" + this.state.activeSlide}>
-                      {this.props.news.market.map((item, index) => (
-                        <TabPane tabId={`project${index}`}>
-                          <p className="description mb-5">
-                            {`${item.excerpt.rendered
-                              .replace(/(<([^>]+)>)/gi, "")
-                              .substring(0, 100)}...`}
-                          </p>
-                        </TabPane>
-                      ))}
-                    </TabContent>
-                  </p>
+                  <Link to="/newspage">
+                    <h1 className="title">
+                      {this.props.pageStore.Landing.NewsInverted.title}
+                    </h1>
+                  </Link>
+
+                  <Link to="/newspage">
+                    <p
+                      className="description text-white"
+                      style={{ minHeight: "20vh" }}
+                    >
+                      <TabContent
+                        activeTab={"project" + this.state.activeSlide}
+                      >
+                        {this.props.news.market.map((item, index) => (
+                          <TabPane tabId={`project${index}`}>
+                            <p className="description mb-5">
+                              {`${item.excerpt.rendered
+                                .replace(/(<([^>]+)>)/gi, "")
+                                .substring(0, 100)}...`}
+                            </p>
+                          </TabPane>
+                        ))}
+                      </TabContent>
+                    </p>
+                  </Link>
+
                   <Link to="/newspage">
                     <button className="filled-button">Explore →</button>
                   </Link>

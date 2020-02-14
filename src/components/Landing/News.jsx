@@ -370,27 +370,34 @@ class News extends React.Component {
                   md="8"
                   xs="10"
                 >
-                  <h1 className="title font-black">
-                    {this.props.pageStore.Landing.News.title}
-                  </h1>
-                  <p
-                    className="description"
-                    style={{ margin: 0, minHeight: "20vh" }}
-                  >
-                    <TabContent activeTab={"project" + this.state.activeSlide}>
-                      {this.props.news.stock.map((item, index) => (
-                        <TabPane tabId={`project${index}`}>
-                          {/* <Col> */}
-                          <p className="description font-black">
-                            {`${item.excerpt.rendered
-                              .replace(/(<([^>]+)>)/gi, "")
-                              .substring(0, 100)}...`}
-                          </p>
-                          {/* </Col> */}
-                        </TabPane>
-                      ))}
-                    </TabContent>
-                  </p>
+                  <Link to="/newspage">
+                    <h1 className="title font-black">
+                      {this.props.pageStore.Landing.News.title}
+                    </h1>
+                  </Link>
+                  <Link to="/newspage">
+                    <p
+                      className="description"
+                      style={{ margin: 0, minHeight: "20vh" }}
+                    >
+                      <TabContent
+                        activeTab={"project" + this.state.activeSlide}
+                      >
+                        {this.props.news.stock.map((item, index) => (
+                          <TabPane tabId={`project${index}`}>
+                            {/* <Col> */}
+                            <p className="description font-black">
+                              {`${item.excerpt.rendered
+                                .replace(/(<([^>]+)>)/gi, "")
+                                .substring(0, 100)}...`}
+                            </p>
+                            {/* </Col> */}
+                          </TabPane>
+                        ))}
+                      </TabContent>
+                    </p>
+                  </Link>
+
                   <Link to="/newspage">
                     <button className="filled-button">Explore →</button>
                   </Link>
