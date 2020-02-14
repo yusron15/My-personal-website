@@ -41,8 +41,8 @@ class CardRegister extends React.Component {
         <Card
           style={{
             backgroundColor: "rgba(14,14,14,0.7)",
-            marginTop: "20%",
-            minHeight: "60vh"
+            marginTop: "30%",
+            minHeight: "30vh"
           }}
         >
           <Form
@@ -161,30 +161,38 @@ class CardRegister extends React.Component {
                   </FormGroup>
                 </Col>
               </Row> */}
-              <Col className="vertical-center">
-                <Col>
+              <Row className="vertical-center" style={{ marginTop: "15px" }}>
+                <div>
                   <a
                     href="http://cabinet.topgrowthfutures.com/users/register"
                     target="_blank"
                     style={{ color: "white" }}
                   >
-                    <Button color="info" type="button" style={{ width: "80%" }}>
+                    <Button
+                      color="info"
+                      type="button"
+                      style={{ width: "100%", marginRight: "25px" }}
+                    >
                       {this.props.pageStore.register.form.leftButton}
                     </Button>
                   </a>
-                </Col>
-                <Col>
+                </div>
+                <div>
                   <a
-                    href="http://cabinet.topgrowthfutures.com/users/login"
+                    href="http://cabinet.topgrowthfutures.com/users/register"
                     target="_blank"
                     style={{ color: "white" }}
                   >
-                    <Button color="info" type="button" style={{ width: "80%" }}>
+                    <Button
+                      color="info"
+                      type="button"
+                      style={{ width: "100%", marginLeft: "25px" }}
+                    >
                       {this.props.pageStore.register.form.rightButton}
                     </Button>
                   </a>
-                </Col>
-              </Col>
+                </div>
+              </Row>
             </CardBody>
 
             <div
