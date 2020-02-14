@@ -41,7 +41,8 @@ class CardRegister extends React.Component {
         <Card
           style={{
             backgroundColor: "rgba(14,14,14,0.7)",
-            marginTop: "20%"
+            marginTop: "20%",
+            minHeight: "60vh"
           }}
         >
           <Form
@@ -64,7 +65,7 @@ class CardRegister extends React.Component {
               </CardTitle>
             </CardHeader>
             <CardBody>
-              <Row>
+              {/* <Row>
                 <Col md="12">
                   <FormGroup>
                     <InputGroup>
@@ -159,36 +160,37 @@ class CardRegister extends React.Component {
                     </InputGroup>
                   </FormGroup>
                 </Col>
-              </Row>
-              {/* <CardFooter className="text-center"> */}
-              {/* </CardFooter> */}
-              <Row>
-                <Col md="6">
+              </Row> */}
+              <Col className="vertical-center">
+                <Col>
                   <a
                     href="http://cabinet.topgrowthfutures.com/users/register"
                     target="_blank"
                     style={{ color: "white" }}
                   >
-                    <Button block color="info" type="button">
+                    <Button color="info" type="button" style={{ width: "80%" }}>
                       {this.props.pageStore.register.form.leftButton}
                     </Button>
                   </a>
                 </Col>
-                <Col md="6">
+                <Col>
                   <a
                     href="http://cabinet.topgrowthfutures.com/users/login"
                     target="_blank"
                     style={{ color: "white" }}
                   >
-                    <Button block color="info" type="button">
+                    <Button color="info" type="button" style={{ width: "80%" }}>
                       {this.props.pageStore.register.form.rightButton}
                     </Button>
                   </a>
                 </Col>
-              </Row>
+              </Col>
             </CardBody>
 
-            <div className="pull-left ml-3 mb-3">
+            <div
+              className="pull-left ml-3 mb-3"
+              style={{ position: "absolute", bottom: 0 }}
+            >
               <h6>
                 <a
                   href="http://cabinet.topgrowthfutures.com/users/login"
@@ -199,18 +201,6 @@ class CardRegister extends React.Component {
                 </a>
               </h6>
             </div>
-            {/* <div className="pull-right mr-3 mb-3">
-              <h6>
-                <a
-                  className="link footer-link"
-                  href="#pablo"
-                  onClick={e => e.preventDefault()}
-                  style={{ color: "white" }}
-                >
-                  Need Help?
-                </a>
-              </h6>
-            // </div> */}
           </Form>
         </Card>
       </>

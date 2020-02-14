@@ -31,9 +31,6 @@ const text = {
 };
 
 class Tables extends React.Component {
-  async componentDidMount() {
-    // await this.props.getContent("landing", "id");
-  }
 
   renderContent = () => {
     if (isMobile) {

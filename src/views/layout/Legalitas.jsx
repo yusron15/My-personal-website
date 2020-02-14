@@ -8,8 +8,6 @@ import { getContent } from "../../redux/ducks/actions.js";
 import { connect } from "react-redux";
 
 class LegalitasPage extends React.Component {
-  state = {};
-
   async componentDidMount() {
     await this.props.getContent("legalitas", this.props.currentLang, true);
     window.scroll(0, 0);

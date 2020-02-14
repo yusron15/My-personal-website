@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 
 class JamPerdagangan extends React.Component {
-  state = {};
   async componentDidMount() {
     await this.props.getContent("jamperdagangan", this.props.currentLang, true);
     window.scroll(0, 0);

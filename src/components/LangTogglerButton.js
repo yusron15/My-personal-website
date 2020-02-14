@@ -16,6 +16,8 @@ import "../assets/css/main.css";
 import { getContent } from "../redux/ducks/actions";
 
 function LangTogglerButton(props) {
+  window.sessionStorage.setItem("language", props.currentLangFlag);
+  console.log(window.sessionStorage, "storage");
   if (isMobile) {
     return (
       <>
@@ -72,6 +74,7 @@ function LangTogglerButton(props) {
         {({ lang, toggleLang }) => (
           <ReactFlagsSelect
             defaultCountry={props.currentLangFlag}
+            // defaultCountry={window.sessionStorage.getItem("language")}
             countries={["ID", "GB", "CN", "HK"]}
             customLabels={{
               ID: "Bahasa",

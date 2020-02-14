@@ -1,5 +1,7 @@
 const defaultState = {
-  cabangList: []
+  cabangList: [],
+  currentLang: "ID",
+  currentLangFlag: "ID"
 };
 
 export default (state = defaultState, action = {}) => {
@@ -8,6 +10,12 @@ export default (state = defaultState, action = {}) => {
       return {
         ...state,
         cabangList: action.payload
+      };
+    }
+    case "CHANGE_LANG": {
+      return {
+        ...state,
+        currentLang: action.payload
       };
     }
     default:

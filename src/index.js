@@ -142,10 +142,11 @@ class App extends Component {
 
     store.dispatch({
       type: "CHANGE_LANG",
-      payload: "ID"
+      payload: window.sessionStorage.getItem("language")
     });
 
-    localStorage.getItem("@currentLang");
+    // localStorage.getItem("@currentLang");
+    // alert(window.sessionStorage.getItem("language"));
   };
 
   render() {
