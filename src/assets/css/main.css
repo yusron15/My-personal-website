@@ -318,6 +318,7 @@ body {
   margin: 0;
   position: absolute;
   top: 50%;
+  z-index: 999;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
