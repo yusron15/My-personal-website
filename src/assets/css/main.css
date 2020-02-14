@@ -318,7 +318,7 @@ body {
   margin: 0;
   position: absolute;
   top: 50%;
-  z-index: 999;
+  z-index: 99;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
@@ -507,6 +507,7 @@ hr.grey {
 
 .broken-white {
   background-color: #fff7f7;
+  z-index: 9999;
 }
 
 .icon-biaya {
