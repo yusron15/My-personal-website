@@ -20,11 +20,13 @@ class JamPerdagangan extends React.Component {
   }
 }
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
 });
 
 const mapDispatchToProps = dispatch => ({
-  getContent: (section, lang) => dispatch(getContent(section, lang))
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(JamPerdagangan);
