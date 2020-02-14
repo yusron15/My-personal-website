@@ -880,3 +880,11 @@ ol > li,
 ul li {
   color: black;
 }
+
+.subheader {
+  text-align: "center";
+  font-style: "Helvetica Bold";
+  margin: 0;
+  font-size: "1rem";
+  color: "white" !important;
+}

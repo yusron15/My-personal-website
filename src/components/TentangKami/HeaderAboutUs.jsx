@@ -119,7 +119,11 @@ class HeaderAboutUs extends React.Component {
                   <div
                     className="team-1 background-header"
                     style={{
-                      backgroundImage: `url(${tentangkami})`,
+                      // backgroundImage: `url(${tentangkami})`,
+                      backgroundImage:
+                        "url(" +
+                        this.props.pageStore.tentangkami.image_background +
+                        ")",
                       padding: 0
                     }}
                   >
@@ -128,6 +132,13 @@ class HeaderAboutUs extends React.Component {
                     <div className="title title-header">
                       {ReactHtmlParser(this.props.pageStore.tentangkami.header)}
                     </div>
+                    <Container>
+                      <div className="subheader font-white">
+                        {ReactHtmlParser(
+                          this.props.pageStore.tentangkami.sub_header
+                        )}
+                      </div>
+                    </Container>
                   </div>
                   <div className="content-center broken-white">
                     <Container>
