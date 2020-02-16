@@ -475,6 +475,12 @@ class Content extends React.Component {
                                                   item.contentDetails.videoId,
                                                 animate: true
                                               });
+
+                                              setTimeout(() => {
+                                                this.setState({
+                                                  animate: false
+                                                });
+                                              }, 1000);
                                             }}
                                           ></div>
                                           <CardBody
