@@ -129,7 +129,7 @@ class App extends Component {
     };
 
     this.state = {
-      lang: lang.id,
+      lang: window.sessionStorage.getItem("language"),
       toggleLang: this.toggleLang
     };
   }
@@ -137,7 +137,7 @@ class App extends Component {
   componentDidMount = () => {
     store.dispatch({
       type: "GET_ALL_PAGE",
-      payload: lang.id
+      payload: window.sessionStorage.getItem("language")
     });
 
     store.dispatch({

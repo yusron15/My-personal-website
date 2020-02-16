@@ -33,7 +33,10 @@ class Landing extends React.Component {
   }
   async componentDidMount() {
     // await this.props.fetchPage("landing", "id");
-    await this.props.getContent("landing", this.props.currentLang, true);
+    await this.props.getContent(
+      "landing",
+      window.sessionStorage.getItem("language")
+    );
     await this.props.getNews("market");
     await this.props.getNews("stock");
     // window.scroll(0, 0);
