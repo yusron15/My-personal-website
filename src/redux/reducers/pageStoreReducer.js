@@ -242,13 +242,13 @@ const defaultState = {
     content: {
       title: "Rekening Terpisah",
       content:
-        "Rekening Terpisah (Segregated Account) adalah sebuah rekening bank atas nama perusahaan pialang berjangka yang difungsikan khusus untuk menampung dana kolektif semua nasabah dalam suatu perusahaan pialang berjangka dan hanyadigunakan untuk keperluan transaksi nasabah yang terpisahdari rekening operasional perusahaan. Rekening ini diawasisecara ketat dan berkala oleh Badan Pengawas PerdaganganBerjangka Komoditi (BAPPEBTI).",
-      subContent: [
-        "Berikut ini adalah rekening terpisah resmi yang dimiliki oleh PT. Topgrowth Futures:",
-        "BCA RUPIAH Nomor Akun // Account Number: 035.311.8568 Swiftcode: CENAIDJA a.n. // Account Name: PT. Topgrowth Futures",
-        "BCA Dollar Nomor Akun: // Account Number: 035.317.7718 Swiftcode: CENAIDJA a.n. // Account Name: PT. Topgrowth Futures"
-      ]
-    }
+        "Rekening Terpisah (Segregated Account) adalah sebuah rekening bank atas nama perusahaan pialang berjangka yang difungsikan khusus untuk menampung dana kolektif semua nasabah dalam suatu perusahaan pialang berjangka dan hanyadigunakan untuk keperluan transaksi nasabah yang terpisahdari rekening operasional perusahaan. Rekening ini diawasisecara ketat dan berkala oleh Badan Pengawas PerdaganganBerjangka Komoditi (BAPPEBTI)."
+    },
+    subContent: [
+      "Berikut ini adalah rekening terpisah resmi yang dimiliki oleh PT. Topgrowth Futures:",
+      "BCA RUPIAH Nomor Akun // Account Number: 035.311.8568 Swiftcode: CENAIDJA a.n. // Account Name: PT. Topgrowth Futures",
+      "BCA Dollar Nomor Akun: // Account Number: 035.317.7718 Swiftcode: CENAIDJA a.n. // Account Name: PT. Topgrowth Futures"
+    ]
   },
   legalitas: {
     header: "Legalitas",
@@ -1120,8 +1120,8 @@ export default (state = defaultState, action = {}) => {
         // return {
         //   [item]: action.payload[item]
         // };
-        console.log(item);
-        console.log(action.payload[item]);
+        // console.log(item);
+        // console.log(action.payload[item]);
         Object.assign(obj, { [item]: action.payload[item] });
       });
       return {

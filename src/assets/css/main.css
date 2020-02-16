@@ -892,3 +892,15 @@ ul li {
   font-size: "1rem";
   color: "white" !important;
 }
+
+.fade {
+  animation: fade-in-keyframes 1.5s;
+}
+@keyframes fade-in-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
