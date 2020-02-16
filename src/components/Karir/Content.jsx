@@ -25,6 +25,20 @@ import ReactSearchBox from "react-search-box";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 import ReactHtmlParser from "react-html-parser";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel
+} from "react-accessible-accordion";
+
+// import {
+//   AccordionWithHeader,
+//   AccordionNode,
+//   AccordionHeader,
+//   AccordionPanel
+// } from "react-accordion-with-header";
 
 import _ from "lodash";
 import "../../assets/css/main.css";
@@ -85,13 +99,20 @@ class Blogs extends React.Component {
               <div
                 className="background-header-mobile"
                 style={{
-                  backgroundImage: `url(${bg})`,
+                  backgroundImage:
+                    "url(" + this.props.pageStore.karir.image_background + ")",
                   padding: 0
                 }}
               >
                 <SidebarMobile />
                 <div className="title title-header-mobile">
                   {this.props.pageStore.karir.Header}
+                </div>
+                <div
+                  style={{ textAlign: "center" }}
+                  className="subheader font-white"
+                >
+                  {ReactHtmlParser(this.props.pageStore.karir.subtitle)}
                 </div>
               </div>
               <Container>
@@ -242,56 +263,6 @@ class Blogs extends React.Component {
                                         )
                                       });
                                     }, 1000);
-                                    // await this.setState({
-                                    //   openedCardIndex: index
-                                    // });
-
-                                    // if (index !== this.state.openedCardIndex) {
-                                    //   await this.setState({
-                                    //     stateKarir
-                                    //   })
-                                    // }
-                                    // await this.setState({
-                                    //   stateKarir: this.state.stateKarir.map((item, stateIndex) => {
-                                    //     if ()
-                                    //   })
-                                    // })
-
-                                    // this.state.stateKarir.map(
-                                    //   async (item, indexState) => {
-                                    //     if (indexState !== index) {
-                                    //       await this.setState({
-                                    //         stateKarir: { ...item, open: false }
-                                    //       });
-                                    //     } else {
-                                    //       setTimeout(() => {
-                                    //         this.setState({
-                                    //           stateKarir: {
-                                    //             ...item,
-                                    //             open: !item.open
-                                    //           }
-                                    //         });
-                                    //       }, 500);
-                                    //     }
-                                    //   }
-                                    // );
-                                    // if (indexState !== index) {
-                                    //   await this.setState({
-                                    //     stateKarir: this.state.stateKarir.map(
-                                    //       item => {
-                                    //         return { ...item, open: false };
-                                    //       }
-                                    //     )
-                                    //   });
-                                    // } else {
-                                    //   await this.setState({
-                                    //     stateKarir: this.state.stateKarir.map(
-                                    //       item => {
-                                    //         return { ...item, open: !item.open };
-                                    //       }
-                                    //     )
-                                    //   });
-                                    // }
                                   }}
                                 >
                                   Show More
@@ -317,7 +288,8 @@ class Blogs extends React.Component {
             <div
               className="team-1 background-header"
               style={{
-                backgroundImage: `url(${bg})`,
+                backgroundImage:
+                  "url(" + this.props.pageStore.karir.image_background + ")",
                 padding: 0
               }}
             >
@@ -325,6 +297,12 @@ class Blogs extends React.Component {
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">
                 {this.props.pageStore.karir.Header}
+              </div>
+              <div
+                style={{ textAlign: "center" }}
+                className="subheader font-white"
+              >
+                {ReactHtmlParser(this.props.pageStore.karir.subtitle)}
               </div>
             </div>
             <Container>
@@ -393,29 +371,29 @@ class Blogs extends React.Component {
                       />
                       {/* </div> */}
                     </Col>
-                    {this.state.stateKarir.map((item, index) => (
-                      <Col lg="4" xs="12">
+
+                    {/* {this.state.stateKarir.map((item, index) => (
+                      <Col lg="12" xs="12">
                         <Card
                           className={`card-karir ${item.open ? "expand" : ""}`}
                         >
                           <CardBody>
                             <CardTitle
-                              className="text-center"
                               style={{
                                 color: "black",
                                 fontSize: "1rem",
                                 fontWeight: "bold",
-                                marginBottom: 10
+                                // marginBottom: 10,
+                                textAlign: "left"
                               }}
                             >
                               {item.devisi}
                             </CardTitle>
                             <CardSubtitle
-                              className="text-center"
                               style={{
                                 color: "black",
                                 fontSize: "1rem",
-                                marginBottom: 30
+                                marginBottom: 0
                               }}
                             >
                               {item.description}
@@ -471,56 +449,6 @@ class Blogs extends React.Component {
                                       )
                                     });
                                   }, 1000);
-                                  // await this.setState({
-                                  //   openedCardIndex: index
-                                  // });
-
-                                  // if (index !== this.state.openedCardIndex) {
-                                  //   await this.setState({
-                                  //     stateKarir
-                                  //   })
-                                  // }
-                                  // await this.setState({
-                                  //   stateKarir: this.state.stateKarir.map((item, stateIndex) => {
-                                  //     if ()
-                                  //   })
-                                  // })
-
-                                  // this.state.stateKarir.map(
-                                  //   async (item, indexState) => {
-                                  //     if (indexState !== index) {
-                                  //       await this.setState({
-                                  //         stateKarir: { ...item, open: false }
-                                  //       });
-                                  //     } else {
-                                  //       setTimeout(() => {
-                                  //         this.setState({
-                                  //           stateKarir: {
-                                  //             ...item,
-                                  //             open: !item.open
-                                  //           }
-                                  //         });
-                                  //       }, 500);
-                                  //     }
-                                  //   }
-                                  // );
-                                  // if (indexState !== index) {
-                                  //   await this.setState({
-                                  //     stateKarir: this.state.stateKarir.map(
-                                  //       item => {
-                                  //         return { ...item, open: false };
-                                  //       }
-                                  //     )
-                                  //   });
-                                  // } else {
-                                  //   await this.setState({
-                                  //     stateKarir: this.state.stateKarir.map(
-                                  //       item => {
-                                  //         return { ...item, open: !item.open };
-                                  //       }
-                                  //     )
-                                  //   });
-                                  // }
                                 }}
                               >
                                 Show More
@@ -529,8 +457,43 @@ class Blogs extends React.Component {
                           )}
                         </Card>
                       </Col>
-                    ))}
+                    ))} */}
                   </Row>
+
+                  {/* {this.state.stateKarir.map((item, index) => (
+                    
+                    ))} */}
+                  <Accordion>
+                    <AccordionItem>
+                      <AccordionItemHeading>
+                        <AccordionItemButton>
+                          What harsh truths do you prefer to ignore?
+                        </AccordionItemButton>
+                      </AccordionItemHeading>
+                      <AccordionItemPanel>
+                        <p>
+                          Exercitation in fugiat est ut ad ea cupidatat ut in
+                          cupidatat occaecat ut occaecat consequat est minim
+                          minim esse tempor laborum consequat esse adipisicing
+                          eu reprehenderit enim.
+                        </p>
+                      </AccordionItemPanel>
+                    </AccordionItem>
+                    <AccordionItem>
+                      <AccordionItemHeading>
+                        <AccordionItemButton>
+                          Is free will real or just an illusion?
+                        </AccordionItemButton>
+                      </AccordionItemHeading>
+                      <AccordionItemPanel>
+                        <p>
+                          In ad velit in ex nostrud dolore cupidatat consectetur
+                          ea in ut nostrud velit in irure cillum tempor laboris
+                          sed adipisicing eu esse duis nulla non.
+                        </p>
+                      </AccordionItemPanel>
+                    </AccordionItem>
+                  </Accordion>
                 </Col>
               </Row>
             </Container>

@@ -41,7 +41,7 @@ class CardRegister extends React.Component {
         <Card
           style={{
             backgroundColor: "rgba(14,14,14,0.7)",
-            marginTop: "30%",
+            marginTop: "72%",
             minHeight: "30vh"
           }}
         >

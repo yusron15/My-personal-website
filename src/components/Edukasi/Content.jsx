@@ -42,6 +42,7 @@ import icdx from "../../assets/img/legalitas3.png";
 import kbi from "../../assets/img/legalitas4.png";
 import ich from "../../assets/img/legalitas5.png";
 import bg from "../../assets/img/edukasi-header.png";
+import ReactHtmlParser from "react-html-parser";
 
 import Radium, { StyleRoot } from "radium";
 import { fadeIn } from "react-animations";
@@ -213,13 +214,22 @@ class Content extends React.Component {
               <div
                 className="team-1 bg-header background-header-mobile"
                 style={{
-                  backgroundImage: `url(${bg})`,
+                  backgroundImage:
+                    "url(" +
+                    this.props.pageStore.edukasi.image_background +
+                    ")",
                   padding: 0
                 }}
               >
                 <SidebarMobile />
                 <div className="title title-header-mobile">
                   {this.props.pageStore.edukasi.Header}
+                </div>
+                <div
+                  style={{ textAlign: "center" }}
+                  className="subheader font-white"
+                >
+                  {ReactHtmlParser(this.props.pageStore.edukasi.subtitle)}
                 </div>
               </div>
 
@@ -352,7 +362,8 @@ class Content extends React.Component {
             <div
               className="team-1 bg-header background-header"
               style={{
-                backgroundImage: `url(${bg})`,
+                backgroundImage:
+                  "url(" + this.props.pageStore.edukasi.image_background + ")",
                 padding: 0
               }}
             >
@@ -360,6 +371,12 @@ class Content extends React.Component {
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">
                 {this.props.pageStore.edukasi.Header}
+              </div>
+              <div
+                style={{ textAlign: "center" }}
+                className="subheader font-white"
+              >
+                {ReactHtmlParser(this.props.pageStore.edukasi.subtitle)}
               </div>
             </div>
 

@@ -50,7 +50,9 @@ class ContactUs extends React.Component {
             className="background-header-mobile header-filter"
             style={{
               backgroundImage:
-                "url(" + require("assets/img/header-contact.png") + ")",
+                "url(" +
+                this.props.pageStore.hubungikami.header.image_background +
+                ")",
               padding: 0
             }}
           >
@@ -89,7 +91,9 @@ class ContactUs extends React.Component {
                 className="background-header header-filter"
                 style={{
                   backgroundImage:
-                    "url(" + require("assets/img/header-contact.png") + ")",
+                    "url(" +
+                    this.props.pageStore.hubungikami.header.image_background +
+                    ")",
                   padding: 0
                 }}
               >
