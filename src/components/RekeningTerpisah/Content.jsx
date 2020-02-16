@@ -42,7 +42,9 @@ class Content extends React.Component {
               // className="projects-3"
               style={{
                 backgroundImage:
-                  "url(" + require("assets/img/dollar.png") + ")",
+                  "url(" +
+                  this.props.pageStore.rekeningterpisah.image_background +
+                  ")",
                 backgroundSize: "cover",
                 backgroundColor: "rgba(52, 52, 52, 0.8)",
                 minHeight: "80vh"
@@ -51,7 +53,10 @@ class Content extends React.Component {
               <div
                 className="team-1 background-header-mobile"
                 style={{
-                  backgroundImage: `url(${dollar})`,
+                  backgroundImage:
+                    "url(" +
+                    this.props.pageStore.rekeningterpisah.image_background +
+                    ")",
                   padding: 0
                 }}
               >
@@ -63,6 +68,16 @@ class Content extends React.Component {
                     this.props.pageStore.rekeningterpisah.header
                   )}
                 </div>
+                <Container>
+                  <div
+                    style={{ textAlign: "center" }}
+                    className="subheader font-white"
+                  >
+                    {ReactHtmlParser(
+                      this.props.pageStore.rekeningterpisah.sub_header
+                    )}
+                  </div>
+                </Container>
               </div>
               <div className="team-1 broken-white" style={{ padding: 0 }}>
                 <Col>
@@ -161,7 +176,10 @@ class Content extends React.Component {
                   <div
                     className="team-1 background-header"
                     style={{
-                      backgroundImage: `url(${dollar})`,
+                      backgroundImage:
+                        "url(" +
+                        this.props.pageStore.rekeningterpisah.image_background +
+                        ")",
                       padding: 0,
                       paddingBottom: 20
                     }}
@@ -173,6 +191,16 @@ class Content extends React.Component {
                         this.props.pageStore.rekeningterpisah.header
                       )}
                     </div>
+                    <Container>
+                      <div
+                        style={{ textAlign: "center" }}
+                        className="subheader font-white"
+                      >
+                        {ReactHtmlParser(
+                          this.props.pageStore.rekeningterpisah.sub_header
+                        )}
+                      </div>
+                    </Container>
                   </div>
                   <div
                     className="team-1 broken-white"

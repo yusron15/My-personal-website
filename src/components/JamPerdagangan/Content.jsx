@@ -21,6 +21,12 @@ import bg from "../../assets/img/jamperdagangan-header.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 import { TableContent3, TableContent4} from '../Table/Table';
+
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import "../../assets/css/main.css";
 
 const text = {
@@ -44,7 +50,10 @@ class Tables extends React.Component {
                   <div
                     className="team-1 background-header-mobile"
                     style={{
-                      backgroundImage: `url(${bg})`,
+                      backgroundImage:
+                      "url(" +
+                      this.props.pageStore.jamperdagangan.image_background +
+                      ")",
                       padding: 0
                     }}
                   >
@@ -54,6 +63,16 @@ class Tables extends React.Component {
                     <div className="title title-header-mobile">
                       {this.props.pageStore.jamperdagangan.header}
                     </div>
+                    <Container>
+                  <div
+                    style={{ textAlign: "center" }}
+                    className="subheader font-white"
+                  >
+                    {ReactHtmlParser(
+                      this.props.pageStore.jamperdagangan.sub_header
+                    )}
+                  </div>
+                </Container>
                   </div>
                   <Container style={{ marginTop: "50px" }}>
                     <Row>
@@ -159,7 +178,10 @@ class Tables extends React.Component {
                   <div
                     className="team-1 background-header"
                     style={{
-                      backgroundImage: `url(${bg})`,
+                      backgroundImage:
+                      "url(" +
+                      this.props.pageStore.jamperdagangan.image_background +
+                      ")",
                       padding: 0
                     }}
                   >
@@ -168,6 +190,16 @@ class Tables extends React.Component {
                     <div className="title title-header">
                       {this.props.pageStore.jamperdagangan.header}
                     </div>
+                    <Container>
+                  <div
+                    style={{ textAlign: "center" }}
+                    className="subheader font-white"
+                  >
+                    {ReactHtmlParser(
+                      this.props.pageStore.jamperdagangan.sub_header
+                    )}
+                  </div>
+                </Container>
                   </div>
                   <Container style={{ marginTop: "50px" }}>
                     <Row>

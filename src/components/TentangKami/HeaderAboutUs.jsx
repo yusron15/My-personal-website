@@ -68,7 +68,10 @@ class HeaderAboutUs extends React.Component {
               <div
                 className="team-1 background-header-mobile"
                 style={{
-                  backgroundImage: `url(${tentangkami})`,
+                  backgroundImage:
+                    "url(" +
+                    this.props.pageStore.tentangkami.image_background +
+                    ")",
                   padding: 0
                 }}
               >
@@ -80,6 +83,12 @@ class HeaderAboutUs extends React.Component {
                   // style={{ marginTop: "11vh", fontSize: "2rem" }}
                 >
                   {ReactHtmlParser(this.props.pageStore.tentangkami.header)}
+                </div>
+                <div
+                  style={{ textAlign: "center" }}
+                  className="subheader font-white"
+                >
+                  {ReactHtmlParser(this.props.pageStore.tentangkami.sub_header)}
                 </div>
               </div>
               <div className="content-center broken-white">
@@ -133,7 +142,10 @@ class HeaderAboutUs extends React.Component {
                       {ReactHtmlParser(this.props.pageStore.tentangkami.header)}
                     </div>
                     <Container>
-                      <div className="subheader font-white">
+                      <div
+                        style={{ textAlign: "center" }}
+                        className="subheader font-white"
+                      >
                         {ReactHtmlParser(
                           this.props.pageStore.tentangkami.sub_header
                         )}

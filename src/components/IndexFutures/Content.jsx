@@ -292,7 +292,10 @@ class Content extends React.Component {
           <div
             className="team-1 background-header-mobile"
             style={{
-              backgroundImage: `url(${bg})`,
+              backgroundImage:
+                "url(" +
+                this.props.pageStore.indexfutures.image_background +
+                ")",
               padding: 0
             }}
           >
@@ -303,6 +306,14 @@ class Content extends React.Component {
             <div className="title title-header-mobile">
               {ReactHtmlParser(this.props.pageStore.indexfutures.header)}
             </div>
+            <Container>
+              <div
+                style={{ textAlign: "center" }}
+                className="subheader font-white"
+              >
+                {ReactHtmlParser(this.props.pageStore.indexfutures.sub_header)}
+              </div>
+            </Container>
           </div>
           <div className="cd-section broken-white" id="teams">
             <div className="team-1">
@@ -405,7 +416,10 @@ class Content extends React.Component {
               <div
                 className="team-1 background-header"
                 style={{
-                  backgroundImage: `url(${bg})`,
+                  backgroundImage:
+                    "url(" +
+                    this.props.pageStore.indexfutures.image_background +
+                    ")",
                   padding: 0
                 }}
               >
@@ -414,6 +428,16 @@ class Content extends React.Component {
                 <div className="title title-header">
                   {ReactHtmlParser(this.props.pageStore.indexfutures.header)}
                 </div>
+                <Container>
+                  <div
+                    style={{ textAlign: "center" }}
+                    className="subheader font-white"
+                  >
+                    {ReactHtmlParser(
+                      this.props.pageStore.indexfutures.sub_header
+                    )}
+                  </div>
+                </Container>
               </div>
               <div
                 className="cd-section broken-white"

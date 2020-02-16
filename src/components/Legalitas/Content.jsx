@@ -83,7 +83,10 @@ class Projects extends React.Component {
               <div
                 className="team-1 background-header-mobile"
                 style={{
-                  backgroundImage: `url(${bg})`,
+                  backgroundImage:
+                    "url(" +
+                    this.props.pageStore.legalitas.image_background +
+                    ")",
                   padding: 0
                 }}
               >
@@ -92,6 +95,12 @@ class Projects extends React.Component {
 
                 <div className="title-header-mobile">
                   {this.props.pageStore.legalitas.header}
+                </div>
+                <div
+                  style={{ textAlign: "center" }}
+                  className="subheader font-white"
+                >
+                  {ReactHtmlParser(this.props.pageStore.legalitas.sub_header)}
                 </div>
               </div>
               {/* <DarkNavbar /> */}
@@ -325,7 +334,10 @@ class Projects extends React.Component {
                   <div
                     className="team-1 background-header"
                     style={{
-                      backgroundImage: `url(${bg})`,
+                      backgroundImage:
+                        "url(" +
+                        this.props.pageStore.legalitas.image_background +
+                        ")",
                       padding: 0
                     }}
                   >
@@ -335,6 +347,16 @@ class Projects extends React.Component {
                     <div className="title title-header">
                       {this.props.pageStore.legalitas.header}
                     </div>
+                    <Container>
+                      <div
+                        style={{ textAlign: "center" }}
+                        className="subheader font-white"
+                      >
+                        {ReactHtmlParser(
+                          this.props.pageStore.legalitas.sub_header
+                        )}
+                      </div>
+                    </Container>
                   </div>
 
                   <Container

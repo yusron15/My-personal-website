@@ -90,7 +90,10 @@ class Content extends React.Component {
             <div
               className="team-1 background-header-mobile"
               style={{
-                backgroundImage: `url(${bg})`,
+                backgroundImage:
+                "url(" +
+                this.props.pageStore.CFD.image_background +
+                ")",
                 padding: 0
               }}
             >
@@ -99,6 +102,16 @@ class Content extends React.Component {
               <div className="title title-header-mobile">
                 {this.props.pageStore.CFD.header}
               </div>
+              <Container>
+                      <div
+                        style={{ textAlign: "center" }}
+                        className="subheader font-white"
+                      >
+                        {ReactHtmlParser(
+                          this.props.pageStore.CFD.sub_header
+                        )}
+                      </div>
+                    </Container>
             </div>
             <div className="team-1 broken-white">
               <Container>
@@ -395,7 +408,10 @@ class Content extends React.Component {
                 <div
                   className="team-1 background-header"
                   style={{
-                    backgroundImage: `url(${bg})`,
+                    backgroundImage:
+                    "url(" +
+                    this.props.pageStore.CFD.image_background +
+                    ")",
                     padding: 0
                   }}
                 >
@@ -405,6 +421,16 @@ class Content extends React.Component {
                     {/* {this.props.pageStore.CFD.header} */}
                     {this.props.pageStore.CFD.header}
                   </div>
+                  <Container>
+                      <div
+                        style={{ textAlign: "center" }}
+                        className="subheader font-white"
+                      >
+                        {ReactHtmlParser(
+                          this.props.pageStore.CFD.sub_header
+                        )}
+                      </div>
+                    </Container>
                 </div>
                 <div className="team-1 broken-white">
                   <Container>

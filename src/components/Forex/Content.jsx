@@ -114,7 +114,10 @@ class Features extends React.Component {
             <div
               className="team-1 background-header-mobile"
               style={{
-                backgroundImage: `url(${bg})`,
+                backgroundImage:
+                "url(" +
+                this.props.pageStore.Forex.image_background +
+                ")",
                 padding: 0
               }}
             >
@@ -124,6 +127,11 @@ class Features extends React.Component {
               <div className="title-header-mobile">
                 {ReactHtmlParser(this.props.pageStore.Forex.header)}
               </div>
+              <Container>
+                    <div style={descHeader}>
+                      {ReactHtmlParser(this.props.pageStore.Forex.sub_header)}
+                    </div>
+                  </Container>
             </div>
             <div className="features-3" style={{ paddingTop: 0 }}>
               <Container fluid>
@@ -332,7 +340,10 @@ class Features extends React.Component {
                 <div
                   className="team-1 background-header"
                   style={{
-                    backgroundImage: `url(${bg})`,
+                    backgroundImage:
+                    "url(" +
+                    this.props.pageStore.Forex.image_background +
+                    ")",
                     padding: 0
                   }}
                 >
@@ -346,22 +357,22 @@ class Features extends React.Component {
                   </div>
                   <Container>
                     <div style={descHeader}>
-                      {ReactHtmlParser(this.props.pageStore.Forex.top)}
+                      {ReactHtmlParser(this.props.pageStore.Forex.sub_header)}
                     </div>
                   </Container>
                 </div>
                 <div className="features-3" style={{ paddingTop: 0 }}>
                   <Container fluid>
-                    {/* <Row>
+                    <Row>
                       <Col className="ml-auto mr-auto text-center" md="8">
                   
                         <div className="space-50" />
-                        <p style={intermezzo}>
+                        <p className="font-black" style={intermezzo}>
                           {ReactHtmlParser(this.props.pageStore.Forex.top)}
                         </p>
                      
                       </Col>
-                    </Row> */}
+                    </Row>
                     <Row>
                       <Col
                         sm={{ size: 10, order: 2, offset: 1 }}

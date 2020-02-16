@@ -51,7 +51,8 @@ class Headers extends React.Component {
           <div
             className="team-1 background-header-mobile"
             style={{
-              backgroundImage: `url(${bg})`,
+              backgroundImage:
+                "url(" + this.props.pageStore.Komoditi.image_background + ")",
               padding: 0
             }}
           >
@@ -60,6 +61,14 @@ class Headers extends React.Component {
             <div className="title title-header-mobile">
               {ReactHtmlParser(this.props.pageStore.Komoditi.header)}
             </div>
+            <Container>
+              <div
+                style={{ textAlign: "center" }}
+                className="subheader font-white"
+              >
+                {ReactHtmlParser(this.props.pageStore.Komoditi.sub_header)}
+              </div>
+            </Container>
           </div>
           <div className="header header-4 broken-white">
             <div className="header-wrapper">
@@ -98,7 +107,10 @@ class Headers extends React.Component {
               <div
                 className="team-1 background-header"
                 style={{
-                  backgroundImage: `url(${bg})`,
+                  backgroundImage:
+                    "url(" +
+                    this.props.pageStore.Komoditi.image_background +
+                    ")",
                   padding: 0
                 }}
               >
@@ -107,6 +119,14 @@ class Headers extends React.Component {
                 <div className="title title-header">
                   {ReactHtmlParser(this.props.pageStore.Komoditi.header)}
                 </div>
+                <Container>
+                  <div
+                    style={{ textAlign: "center" }}
+                    className="subheader font-white"
+                  >
+                    {ReactHtmlParser(this.props.pageStore.Komoditi.sub_header)}
+                  </div>
+                </Container>
               </div>
               <div className="header header-4 broken-white">
                 <div className="header-wrapper">

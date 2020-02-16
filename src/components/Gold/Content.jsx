@@ -80,7 +80,8 @@ class Features extends React.Component {
             <div
               className="team-1 background-header-mobile"
               style={{
-                backgroundImage: `url(${bg})`,
+                backgroundImage:
+                  "url(" + this.props.pageStore.Gold.image_background + ")",
                 padding: 0
               }}
             >
@@ -90,6 +91,14 @@ class Features extends React.Component {
               <div className="title title-header-mobile">
                 {ReactHtmlParser(this.props.pageStore.Gold.header)}
               </div>
+              <Container>
+                <div
+                  style={{ textAlign: "center" }}
+                  className="subheader font-white"
+                >
+                  {ReactHtmlParser(this.props.pageStore.Gold.sub_header)}
+                </div>
+              </Container>
             </div>
             <div className="space-50" />
             <div className="features-3" style={{ paddingTop: 0 }}>
@@ -102,7 +111,9 @@ class Features extends React.Component {
             >
               GOLD
             </div> */}
-                    <p style={intermezzo}>{this.props.pageStore.Gold.top}</p>
+                    <p className="font-black" style={{ ...intermezzo }}>
+                      {ReactHtmlParser(this.props.pageStore.Gold.top)}
+                    </p>
                     {/* <Col className="mr-auto ml-auto" md="5"> */}
                     {/* </Col> */}
                   </Col>
@@ -243,7 +254,8 @@ class Features extends React.Component {
                 <div
                   className="team-1 background-header"
                   style={{
-                    backgroundImage: `url(${bg})`,
+                    backgroundImage:
+                      "url(" + this.props.pageStore.Gold.image_background + ")",
                     padding: 0
                   }}
                 >
@@ -255,10 +267,15 @@ class Features extends React.Component {
                     style={{ padding: "0 15% 0 15%" }}
                   >
                     {ReactHtmlParser(this.props.pageStore.Gold.header)}
-                    <p style={{ ...intermezzo, color: "white" }}>
-                      {ReactHtmlParser(this.props.pageStore.Gold.top)}
-                    </p>
                   </div>
+                  <Container>
+                    <div
+                      style={{ textAlign: "center" }}
+                      className="subheader font-white"
+                    >
+                      {ReactHtmlParser(this.props.pageStore.Gold.sub_header)}
+                    </div>
+                  </Container>
                 </div>
                 <div className="space-50" />
                 <div className="features-3" style={{ paddingTop: 0 }}>
@@ -268,11 +285,17 @@ class Features extends React.Component {
                         sm={{ size: 10, order: 2, offset: 1 }}
                         style={{ marginTop: "30px" }}
                       >
-                        <Row>
+                        <p className="font-black" style={{ ...intermezzo }}>
+                          {ReactHtmlParser(this.props.pageStore.Gold.top)}
+                        </p>
+                        <Row
+                          style={{
+                            marginTop: "50px"
+                          }}
+                        >
                           <Col lg="4">
                             <div
                               style={{
-                                marginTop: "10px",
                                 paddingBottom: "10px",
                                 height: "100%"
                               }}
