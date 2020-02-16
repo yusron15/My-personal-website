@@ -112,7 +112,7 @@ class Blogs extends React.Component {
                   <div>
                     {this.props.news.market.map((item, index) => {
                       return (
-                        <Link to="/market-outlook-inside">
+                        <a href={item.link}>
                           <Content
                             image={item.featured_image_src}
                             title={item.title.rendered}
@@ -123,7 +123,7 @@ class Blogs extends React.Component {
                               .replace(/(<([^>]+)>)/gi, "")
                               .substring(0, 100)}...`}
                           />
-                        </Link>
+                        </a>
                       );
                     })}
                   </div>
@@ -165,7 +165,7 @@ class Blogs extends React.Component {
                 <div>
                   {this.props.news.market.map((item, index) => {
                     return (
-                      <Link to="/market-outlook-inside">
+                      <a href={item.link}>
                         <Content
                           image={item.featured_image_src}
                           title={item.title.rendered}
@@ -176,7 +176,7 @@ class Blogs extends React.Component {
                             .replace(/(<([^>]+)>)/gi, "")
                             .substring(0, 100)}...`}
                         />
-                      </Link>
+                      </a>
                     );
                   })}
                 </div>

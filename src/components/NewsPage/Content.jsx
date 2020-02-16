@@ -585,10 +585,15 @@ class Carding extends React.Component {
                       <Row key={index.toString()}>
                         <CardNews
                           title={item.title.rendered}
-                          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
+                          description={ReactHtmlParser(
+                            item.excerpt.rendered.slice(0, 120)
+                          )}
+                          link={item.link}
                           image={item.featured_image_src}
                           person="person"
-                          date="dd/mm/yyyy"
+                          date={`${moment(item.date).format(
+                            "DD/MM/YY HH:mm"
+                          )} WIB`}
                         />
                       </Row>
                     ))}
@@ -630,29 +635,22 @@ class Carding extends React.Component {
                     </div>
                   </Row>
                   <Row>
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc2}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc3}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
+                    {this.props.news.forex.map((item, index) => (
+                      <Row key={index.toString()}>
+                        <CardNews
+                          title={item.title.rendered}
+                          description={ReactHtmlParser(
+                            item.excerpt.rendered.slice(0, 120)
+                          )}
+                          link={item.link}
+                          image={item.featured_image_src}
+                          person="person"
+                          date={`${moment(item.date).format(
+                            "DD/MM/YY HH:mm"
+                          )} WIB`}
+                        />
+                      </Row>
+                    ))}
                   </Row>
                 </div>
               </Container>
@@ -691,29 +689,22 @@ class Carding extends React.Component {
                     </div>
                   </Row>
                   <Row>
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc2}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
-
-                    <CardNews
-                      title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-                      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-                      image={pc3}
-                      person="person"
-                      date="dd/mm/yyyy"
-                    />
+                    {this.props.news.stock.map((item, index) => (
+                      <Row key={index.toString()}>
+                        <CardNews
+                          title={item.title.rendered}
+                          description={ReactHtmlParser(
+                            item.excerpt.rendered.slice(0, 120)
+                          )}
+                          link={item.link}
+                          image={item.featured_image_src}
+                          // person="person"
+                          date={`${moment(item.date).format(
+                            "DD/MM/YY HH:mm"
+                          )} WIB`}
+                        />
+                      </Row>
+                    ))}
                   </Row>
                 </div>
               </Container>

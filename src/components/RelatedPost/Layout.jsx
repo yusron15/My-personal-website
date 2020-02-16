@@ -54,7 +54,7 @@ const textContentMobile = {
 
 class Content extends React.Component {
   renderContent = () => {
-    const { image, title, posted, description } = this.props;
+    const { image, title, posted, description, link } = this.props;
 
     if (isMobile) {
       return (
@@ -117,7 +117,7 @@ class Content extends React.Component {
               <Row>
                 <Col lg="4">
                   <div className="card-image">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <a href={link}>
                       <img alt="..." className="img rounded" src={image} />
                     </a>
                   </div>
@@ -139,19 +139,7 @@ class Content extends React.Component {
                     <p className="font-black">
                       {`${description.substring(0, 190)} `}
                       <br />
-                      <Link
-                        // to={`/newspage/${title}`}
-                        to="/stock-index-inside"
-                        state={{
-                          data: {
-                            title,
-                            posted,
-                            description
-                          }
-                        }}
-                      >
-                        Read More
-                      </Link>
+                      <a href={link}>Read More</a>
                     </p>
                   </div>
                 </Col>

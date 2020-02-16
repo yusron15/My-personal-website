@@ -110,18 +110,17 @@ class Blogs extends React.Component {
                   <div>
                     {this.props.news.forex.map((item, index) => {
                       return (
-                        <Link to="/forex-commodity-inside">
-                          <Content
-                            image={item.featured_image_src}
-                            title={item.title.rendered}
-                            posted={`Posted ${moment(item.date).format(
-                              "DD MMMM YYYY HH:ss"
-                            )} WIB`}
-                            description={`${item.excerpt.rendered
-                              .replace(/(<([^>]+)>)/gi, "")
-                              .substring(0, 100)}...`}
-                          />
-                        </Link>
+                        <Content
+                          link={item.link}
+                          image={item.featured_image_src}
+                          title={item.title.rendered}
+                          posted={`Posted ${moment(item.date).format(
+                            "DD MMMM YYYY HH:ss"
+                          )} WIB`}
+                          description={`${item.excerpt.rendered
+                            .replace(/(<([^>]+)>)/gi, "")
+                            .substring(0, 100)}...`}
+                        />
                       );
                     })}
                   </div>
@@ -163,8 +162,9 @@ class Blogs extends React.Component {
                 <div>
                   {this.props.news.forex.map((item, index) => {
                     return (
-                      <Link to="/forex-commodity-inside">
+                      <a href={item.link}>
                         <Content
+                          link={item.link}
                           image={item.featured_image_src}
                           title={item.title.rendered}
                           posted={`Posted ${moment(item.date).format(
@@ -174,7 +174,7 @@ class Blogs extends React.Component {
                             .replace(/(<([^>]+)>)/gi, "")
                             .substring(0, 100)}...`}
                         />
-                      </Link>
+                      </a>
                     );
                   })}
                 </div>

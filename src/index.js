@@ -220,20 +220,20 @@ class App extends Component {
                   path="/stock-index"
                   render={props => <StockIndex {...props} />}
                 />
-                <Route
+                {/* <Route
                   path="/stock-index-inside"
                   render={props => <StockIndexInside {...props} />}
-                />
+                /> */}
 
-                <Route
+                {/* <Route
                   path="/forex-commodity-inside"
                   render={props => <ForexCommodityInside {...props} />}
-                />
+                /> */}
 
-                <Route
+                {/* <Route
                   path="/market-outlook-inside"
                   render={props => <MarketOutlookInside {...props} />}
-                />
+                /> */}
 
                 <Route
                   path="/forex-commodity"

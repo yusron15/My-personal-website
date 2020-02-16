@@ -111,7 +111,7 @@ class Blogs extends Component {
                   <div>
                     {this.props.news.stock.map((item, index) => {
                       return (
-                        <Link to="/stock-index-inside">
+                        <a href={item.link}>
                           <Content
                             image={item.featured_image_src}
                             title={item.title.rendered}
@@ -122,7 +122,7 @@ class Blogs extends Component {
                               .replace(/(<([^>]+)>)/gi, "")
                               .substring(0, 100)}...`}
                           />
-                        </Link>
+                        </a>
                       );
                     })}
                   </div>
@@ -167,7 +167,7 @@ class Blogs extends Component {
                 <div>
                   {this.props.news.stock.map((item, index) => {
                     return (
-                      <Link to="/stock-index-inside">
+                      <a href={item.link}>
                         <Content
                           image={item.featured_image_src}
                           title={item.title.rendered}
@@ -178,7 +178,7 @@ class Blogs extends Component {
                             .replace(/(<([^>]+)>)/gi, "")
                             .substring(0, 100)}...`}
                         />
-                      </Link>
+                      </a>
                     );
                   })}
                 </div>

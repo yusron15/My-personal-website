@@ -19,6 +19,10 @@ import "../../assets/css/main.css";
 class CardNews extends React.Component {
   renderContent = () => {
     const { title, description, image, person, date, link } = this.props;
+    console.log(
+      { title, description, image, person, date, link },
+      "{ title, description, image, person, date, link }"
+    );
     if (isMobile) {
       return (
         <>
@@ -39,7 +43,7 @@ class CardNews extends React.Component {
                 }}
               >
                 <h4 style={{ color: "black" }}>{title}</h4>
-                <p style={{ color: "black" }}>{`${description} ...`}</p>
+                <p style={{ color: "black" }}>{description}</p>
                 <Container>
                   <Row>
                     <Col>
