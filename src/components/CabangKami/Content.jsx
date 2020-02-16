@@ -3,6 +3,11 @@ import Slick from "react-slick";
 import "../../assets/css/helper.css";
 
 import { connect } from "react-redux";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 
 // reactstrap components
 import {
@@ -400,7 +405,7 @@ class News extends React.Component {
                     xs="10"
                   >
                     <h1 className="title font-black">
-                      {this.props.pageStore.cabang.heading}
+                      {ReactHtmlParser(this.props.pageStore.cabang.heading)}
                     </h1>
                     <p
                       className="description"
@@ -415,7 +420,7 @@ class News extends React.Component {
                             <div className="title font-black">{item.nama}</div>
 
                             <p className="description font-black">
-                              {item.alamat}
+                              {ReactHtmlParser(item.alamat)}
                             </p>
                             {/* </Col> */}
                           </TabPane>
