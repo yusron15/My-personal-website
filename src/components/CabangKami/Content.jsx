@@ -37,8 +37,6 @@ import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import sungaigerong from "../../assets/img/sumgaigerong.png";
 import bgcard from "../../assets/img/header-rekening.png";
 
-import { getContent } from "../../redux/ducks/actions";
-
 import "../../assets/css/main.css";
 
 // import "slick-carousel/slick/slick.css";

@@ -108,8 +108,9 @@ class ColorNavbar extends React.Component {
   };
 
   async componentDidMount() {
+    await this.props.getContent("Header", this.props.currentLang, true);
+
     window.addEventListener("scroll", this.changeNavbarColor);
-    await this.props.getContent("edukasi", "id");
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeNavbarTop);
@@ -515,7 +516,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getContent: (section, lang) => dispatch(getContent(section, lang))
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ColorNavbar);

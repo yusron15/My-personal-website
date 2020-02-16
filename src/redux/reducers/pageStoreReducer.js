@@ -287,166 +287,170 @@ const defaultState = {
   },
   Forex: {
     header: "Forex",
-    top: "<p>Pasar terbesar dan paling likuid di dunia dengan perputaran nilai transaksi yang tiga kali lipat lebih besar dari jumlah gabungan pasar saham dan obligasi</p>",
+    top:
+      "<p>Pasar terbesar dan paling likuid di dunia dengan perputaran nilai transaksi yang tiga kali lipat lebih besar dari jumlah gabungan pasar saham dan obligasi</p>",
     content: [
-        {
-            title: "Keuntungan Transaksi Forex",
-            image: "",
-            content: "<p>Likuiditas tinggi karena selalu adanya penawaran dan permintaan, Potensi keuntungan dua arah karena tidak ada batasan untuk perdangangan terarah, Biaya investasi awal yang relatif rendah karena diperdagangkan dengan leverage, Transparansi akibat transaksi langsung dengan pasar yang bertanggung jawab atas harga pasangan mata uang, Biaya perdagangan yang rendah, Dapat dilakukan di manapun dan kapanpun selama ada koneksi internet.</p>"
-        },
-        {
-            title: "Keunggulan Transaksi Forex Bersama Topgrowth",
-            image: "",
-            content: "<p>Bertransaksi forex dengan Topgrowth Futures memberikan Anda akses untuk bertransaksi kepada banyak produk valuta asing, terlepas dari platform dan gadget yang digunakan. Di bawah ini adalah ragam pasangan mata uang yang dapat Anda perdagangkan.</p>"
-        },
-        {
-            title: "Ragam Produk Forex",
-            content: "<p>Forex trading with Topgrowth Futures allows customers to trade many foreign exchange products, regardless of the platforms or gadgets used. Below are the various currency pairs that customers are able to trade.</p>"
-        },
-        {
-            title: "Major Pairs",
-            table: [
-                {
-                    id: 12,
-                    prefix1: "Cross Currency Pairs",
-                    prefix2: "Nickname",
-                    prefix3: "Contract Size",
-                    prefix4: "",
-                    prefix5: "",
-                    prefix6: "",
-                    SectionId: 308,
-                    tableData: [
-                        {
-                            id: 62,
-                            prefix1: "EUR / USD",
-                            prefix2: "Euro",
-                            prefix3: "EUR 100,000",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 12
-                        },
-                        {
-                            id: 63,
-                            prefix1: "USD / JPY",
-                            prefix2: "Japanese Yen",
-                            prefix3: "USD 100,000",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 12
-                        },
-                        {
-                            id: 67,
-                            prefix1: "GBP / USD",
-                            prefix2: "Poundsterling",
-                            prefix3: "GBP 100,000",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 12
-                        },
-                        {
-                            id: 93,
-                            prefix1: "USD / CHF",
-                            prefix2: "Swiss Franc",
-                            prefix3: "USD 100,000",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 12
-                        },
-                        {
-                            id: 94,
-                            prefix1: "AUD / USD",
-                            prefix2: "Australian Dollar",
-                            prefix3: "AUD 100,000",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 12
-                        },
-                        {
-                            id: 95,
-                            prefix1: "NZD / USD",
-                            prefix2: "New Zealand Dollar",
-                            prefix3: "NZD 100,000",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 12
-                        },
-                        {
-                            id: 96,
-                            prefix1: "USD / CAD",
-                            prefix2: "Canadian Dollar",
-                            prefix3: "USD 100,000",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 12
-                        }
-                    ]
-                }
+      {
+        title: "Keuntungan Transaksi Forex",
+        image: "",
+        content:
+          "<p>Likuiditas tinggi karena selalu adanya penawaran dan permintaan, Potensi keuntungan dua arah karena tidak ada batasan untuk perdangangan terarah, Biaya investasi awal yang relatif rendah karena diperdagangkan dengan leverage, Transparansi akibat transaksi langsung dengan pasar yang bertanggung jawab atas harga pasangan mata uang, Biaya perdagangan yang rendah, Dapat dilakukan di manapun dan kapanpun selama ada koneksi internet.</p>"
+      },
+      {
+        title: "Keunggulan Transaksi Forex Bersama Topgrowth",
+        image: "",
+        content:
+          "<p>Bertransaksi forex dengan Topgrowth Futures memberikan Anda akses untuk bertransaksi kepada banyak produk valuta asing, terlepas dari platform dan gadget yang digunakan. Di bawah ini adalah ragam pasangan mata uang yang dapat Anda perdagangkan.</p>"
+      },
+      {
+        title: "Ragam Produk Forex",
+        content:
+          "<p>Forex trading with Topgrowth Futures allows customers to trade many foreign exchange products, regardless of the platforms or gadgets used. Below are the various currency pairs that customers are able to trade.</p>"
+      },
+      {
+        title: "Major Pairs",
+        table: [
+          {
+            id: 12,
+            prefix1: "Cross Currency Pairs",
+            prefix2: "Nickname",
+            prefix3: "Contract Size",
+            prefix4: "",
+            prefix5: "",
+            prefix6: "",
+            SectionId: 308,
+            tableData: [
+              {
+                id: 62,
+                prefix1: "EUR / USD",
+                prefix2: "Euro",
+                prefix3: "EUR 100,000",
+                prefix4: "",
+                prefix5: "",
+                tableId: 12
+              },
+              {
+                id: 63,
+                prefix1: "USD / JPY",
+                prefix2: "Japanese Yen",
+                prefix3: "USD 100,000",
+                prefix4: "",
+                prefix5: "",
+                tableId: 12
+              },
+              {
+                id: 67,
+                prefix1: "GBP / USD",
+                prefix2: "Poundsterling",
+                prefix3: "GBP 100,000",
+                prefix4: "",
+                prefix5: "",
+                tableId: 12
+              },
+              {
+                id: 93,
+                prefix1: "USD / CHF",
+                prefix2: "Swiss Franc",
+                prefix3: "USD 100,000",
+                prefix4: "",
+                prefix5: "",
+                tableId: 12
+              },
+              {
+                id: 94,
+                prefix1: "AUD / USD",
+                prefix2: "Australian Dollar",
+                prefix3: "AUD 100,000",
+                prefix4: "",
+                prefix5: "",
+                tableId: 12
+              },
+              {
+                id: 95,
+                prefix1: "NZD / USD",
+                prefix2: "New Zealand Dollar",
+                prefix3: "NZD 100,000",
+                prefix4: "",
+                prefix5: "",
+                tableId: 12
+              },
+              {
+                id: 96,
+                prefix1: "USD / CAD",
+                prefix2: "Canadian Dollar",
+                prefix3: "USD 100,000",
+                prefix4: "",
+                prefix5: "",
+                tableId: 12
+              }
             ]
-        },
-        {
-            title: "Cross Pairs",
-            table: [
-                {
-                    id: 13,
-                    prefix1: "Cross Currency Pairs",
-                    prefix2: "Nickname",
-                    prefix3: "Contract Size",
-                    prefix4: "",
-                    prefix5: "",
-                    prefix6: "",
-                    SectionId: 309,
-                    tableData: [
-                        {
-                            id: 64,
-                            prefix1: "EURGBP",
-                            prefix2: "Euro / British Pound",
-                            prefix3: "EUR 100,000",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 13
-                        },
-                        {
-                            id: 97,
-                            prefix1: "EURJPY",
-                            prefix2: "Euro / Japanese Yen",
-                            prefix3: "EUR 100,000",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 13
-                        },
-                        {
-                            id: 105,
-                            prefix1: "GBPJPY\t\t",
-                            prefix2: "British Pound / Japanese Yen",
-                            prefix3: "GBP 100,000",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 13
-                        },
-                        {
-                            id: 106,
-                            prefix1: "CHFJPY\t",
-                            prefix2: "Swiss Franc / Japanese Yen",
-                            prefix3: "CHF 100,000",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 13
-                        },
-                        {
-                            id: 107,
-                            prefix1: "AUDJPY\t\t",
-                            prefix2: "Australian Dollar / Japanese Yen",
-                            prefix3: "AUD 100,000",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 13
-                        }
-                    ]
-                }
+          }
+        ]
+      },
+      {
+        title: "Cross Pairs",
+        table: [
+          {
+            id: 13,
+            prefix1: "Cross Currency Pairs",
+            prefix2: "Nickname",
+            prefix3: "Contract Size",
+            prefix4: "",
+            prefix5: "",
+            prefix6: "",
+            SectionId: 309,
+            tableData: [
+              {
+                id: 64,
+                prefix1: "EURGBP",
+                prefix2: "Euro / British Pound",
+                prefix3: "EUR 100,000",
+                prefix4: "",
+                prefix5: "",
+                tableId: 13
+              },
+              {
+                id: 97,
+                prefix1: "EURJPY",
+                prefix2: "Euro / Japanese Yen",
+                prefix3: "EUR 100,000",
+                prefix4: "",
+                prefix5: "",
+                tableId: 13
+              },
+              {
+                id: 105,
+                prefix1: "GBPJPY\t\t",
+                prefix2: "British Pound / Japanese Yen",
+                prefix3: "GBP 100,000",
+                prefix4: "",
+                prefix5: "",
+                tableId: 13
+              },
+              {
+                id: 106,
+                prefix1: "CHFJPY\t",
+                prefix2: "Swiss Franc / Japanese Yen",
+                prefix3: "CHF 100,000",
+                prefix4: "",
+                prefix5: "",
+                tableId: 13
+              },
+              {
+                id: 107,
+                prefix1: "AUDJPY\t\t",
+                prefix2: "Australian Dollar / Japanese Yen",
+                prefix3: "AUD 100,000",
+                prefix4: "",
+                prefix5: "",
+                tableId: 13
+              }
             ]
-        }
+          }
+        ]
+      }
     ]
-},
+  },
   CFD: {
     header: "Contract For Difference",
     content: [
@@ -600,69 +604,72 @@ const defaultState = {
   },
   Gold: {
     header: "Gold",
-    top: "<p>London Bullion Market is an over-the-counter wholesale market intended for gold and silver trading. Trading is carried out between members of the London Bullion Market Association (LBMA), the majority of whose members are banks or major gold bar dealers and refiners, and supervised by the Bank of England.</p>",
+    top:
+      "<p>London Bullion Market is an over-the-counter wholesale market intended for gold and silver trading. Trading is carried out between members of the London Bullion Market Association (LBMA), the majority of whose members are banks or major gold bar dealers and refiners, and supervised by the Bank of England.</p>",
     content: [
-        {
-            title: "Gold Trading",
-            table: [
-                {
-                    id: 14,
-                    prefix1: "Product",
-                    prefix2: "LLG",
-                    prefix3: "",
-                    prefix4: "",
-                    prefix5: "",
-                    prefix6: "",
-                    SectionId: 311,
-                    tableData: [
-                        {
-                            id: 68,
-                            prefix1: "Contract Size",
-                            prefix2: "100 Troy Ounces",
-                            prefix3: "",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 14
-                        },
-                        {
-                            id: 132,
-                            prefix1: "Fixed Exchanged Rate\t",
-                            prefix2: "USD 1.00 = Rp. 10,000-",
-                            prefix3: "",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 14
-                        },
-                        {
-                            id: 133,
-                            prefix1: "Minimum Tick\t",
-                            prefix2: "10 cents",
-                            prefix3: "",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 14
-                        },
-                        {
-                            id: 134,
-                            prefix1: "Value Per 10 Cents\t",
-                            prefix2: "Rp. 100,000",
-                            prefix3: "",
-                            prefix4: "",
-                            prefix5: "",
-                            tableId: 14
-                        }
-                    ]
-                }
-            ],
-            image: "",
-            content: "<p>Internationally, gold is traded through over-the-counter transcations with a limited number of trades on the New York Mercantile Exchange (NYMEX) and Tokyo Commodity Exchange (TOCOM). Forward contracts are known as gold futures contracts, and gold spot is traded to be settled two working days after the trading date when both New York and London markets are open for business. Unlike the commodity market, the forward market for gold is driven by spot prices and interest rate differences, similar to that of foreign exchange market, and is not based on the dynamics of supply and demand. Like currencies, gold is borrowed and lent by the central bank. Gold loans are more attractive due to the lower interest rate than that of the US, except in special situations where the market tends to be in contango, in which the forward price of gold is higher than the spot price. Historically, this has made gold trading an attractive market option.</p>"
-        },
-        {
-            title: "Market Size",
-            content: "<p>So far, London is the largest global center for over-the-counter transactions, followed by New York, Zurich, and Tokyo. However, trading has grown in recent years with Comex in New York and Tocom in Tokyo generating the most activity. Gold is also traded in the form of securities, such as funds traded in London, New York, Johannesburg, and Australia. Although the physical market for gold and silver is distributed globally, clearing most of the over-the-counter wholesale trade is done through London. The average daily clearing volume of gold and silver at the LBMA back in November 2008 was 18.3 million ounces (worth $13.9 billion) and 107.6 million ounces (worth $1.1 billion). This means that the clearing amount for 4.4 days at LBMA is the same as the annual gold mine production and 6.2 days for annual silver production.</p>"
-        }
+      {
+        title: "Gold Trading",
+        table: [
+          {
+            id: 14,
+            prefix1: "Product",
+            prefix2: "LLG",
+            prefix3: "",
+            prefix4: "",
+            prefix5: "",
+            prefix6: "",
+            SectionId: 311,
+            tableData: [
+              {
+                id: 68,
+                prefix1: "Contract Size",
+                prefix2: "100 Troy Ounces",
+                prefix3: "",
+                prefix4: "",
+                prefix5: "",
+                tableId: 14
+              },
+              {
+                id: 132,
+                prefix1: "Fixed Exchanged Rate\t",
+                prefix2: "USD 1.00 = Rp. 10,000-",
+                prefix3: "",
+                prefix4: "",
+                prefix5: "",
+                tableId: 14
+              },
+              {
+                id: 133,
+                prefix1: "Minimum Tick\t",
+                prefix2: "10 cents",
+                prefix3: "",
+                prefix4: "",
+                prefix5: "",
+                tableId: 14
+              },
+              {
+                id: 134,
+                prefix1: "Value Per 10 Cents\t",
+                prefix2: "Rp. 100,000",
+                prefix3: "",
+                prefix4: "",
+                prefix5: "",
+                tableId: 14
+              }
+            ]
+          }
+        ],
+        image: "",
+        content:
+          "<p>Internationally, gold is traded through over-the-counter transcations with a limited number of trades on the New York Mercantile Exchange (NYMEX) and Tokyo Commodity Exchange (TOCOM). Forward contracts are known as gold futures contracts, and gold spot is traded to be settled two working days after the trading date when both New York and London markets are open for business. Unlike the commodity market, the forward market for gold is driven by spot prices and interest rate differences, similar to that of foreign exchange market, and is not based on the dynamics of supply and demand. Like currencies, gold is borrowed and lent by the central bank. Gold loans are more attractive due to the lower interest rate than that of the US, except in special situations where the market tends to be in contango, in which the forward price of gold is higher than the spot price. Historically, this has made gold trading an attractive market option.</p>"
+      },
+      {
+        title: "Market Size",
+        content:
+          "<p>So far, London is the largest global center for over-the-counter transactions, followed by New York, Zurich, and Tokyo. However, trading has grown in recent years with Comex in New York and Tocom in Tokyo generating the most activity. Gold is also traded in the form of securities, such as funds traded in London, New York, Johannesburg, and Australia. Although the physical market for gold and silver is distributed globally, clearing most of the over-the-counter wholesale trade is done through London. The average daily clearing volume of gold and silver at the LBMA back in November 2008 was 18.3 million ounces (worth $13.9 billion) and 107.6 million ounces (worth $1.1 billion). This means that the clearing amount for 4.4 days at LBMA is the same as the annual gold mine production and 6.2 days for annual silver production.</p>"
+      }
     ]
-},
+  },
   Komoditi: {
     header: "Komoditi",
     top:
@@ -736,122 +743,126 @@ const defaultState = {
   jamperdagangan: {
     header: "Jam Perdagangan",
     table: [
-        {
-            id: 9,
-            prefix1: "Product",
-            prefix2: "Summer",
-            prefix3: "Winter",
+      {
+        id: 9,
+        prefix1: "Product",
+        prefix2: "Summer",
+        prefix3: "Winter",
+        prefix4: "",
+        prefix5: "",
+        prefix6: "",
+        SectionId: 251,
+        tableData: [
+          {
+            id: 35,
+            prefix1: "FOREX",
+            prefix2:
+              "Monday 05.00am – Saturday 04:00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
+            prefix3:
+              "231Monday 05.30am – Saturday 05:00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)",
             prefix4: "",
             prefix5: "",
-            prefix6: "",
-            SectionId: 251,
-            tableData: [
-                {
-                    id: 35,
-                    prefix1: "FOREX",
-                    prefix2: "Monday 05.00am – Saturday 04:00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
-                    prefix3: "231Monday 05.30am – Saturday 05:00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)",
-                    prefix4: "",
-                    prefix5: "",
-                    tableId: 9
-                },
-                {
-                    id: 36,
-                    prefix1: "LLG & SILVER",
-                    prefix2: "123Monday Open at 06.00am Tuesday – Friday Open at 05.00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
-                    prefix3: "Monday – Friday Open at 06.00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)",
-                    prefix4: "",
-                    prefix5: "",
-                    tableId: 9
-                },
-                {
-                    id: 37,
-                    prefix1: "DOW JONES, S&P500, NASDAQ",
-                    prefix2: "05.00am – 03.15am next day (all time is Jakarta time)",
-                    prefix3: "06.00am – 04.15am next day (all time is Jakarta time)",
-                    prefix4: "",
-                    prefix5: "",
-                    tableId: 9
-                },
-                {
-                    id: 41,
-                    prefix1: "KOSPI200",
-                    prefix2: "07.00am – 01.35pm",
-                    prefix3: "",
-                    prefix4: "",
-                    prefix5: "",
-                    tableId: 9
-                },
-                {
-                    id: 42,
-                    prefix1: "KOSPI200",
-                    prefix2: "07.00am – 01.35pm",
-                    prefix3: "",
-                    prefix4: "01.20pm",
-                    prefix5: "",
-                    tableId: 9
-                },
-                {
-                    id: 43,
-                    prefix1: "KOSPI200",
-                    prefix2: "07.00am – 01.35pm",
-                    prefix3: "",
-                    prefix4: "01.20pm",
-                    prefix5: "",
-                    tableId: 9
-                },
-                {
-                    id: 44,
-                    prefix1: "KOSPI200",
-                    prefix2: "07.00am – 01.35pm",
-                    prefix3: "",
-                    prefix4: "01.20pm",
-                    prefix5: "",
-                    tableId: 9
-                }
-            ]
-        },
-        {
-            id: 11,
-            prefix1: "Product",
-            prefix2: "Session 1",
-            prefix3: "Session 2",
-            prefix4: "Last Trading Day Closing",
+            tableId: 9
+          },
+          {
+            id: 36,
+            prefix1: "LLG & SILVER",
+            prefix2:
+              "123Monday Open at 06.00am Tuesday – Friday Open at 05.00am Market Close at 04.00am (Tuesday – Saturday) (all time is Jakarta time)",
+            prefix3:
+              "Monday – Friday Open at 06.00am Market Close at 05.00am (Tuesday – Saturday) (all time is Jakarta time)",
+            prefix4: "",
             prefix5: "",
-            prefix6: "",
-            SectionId: 251,
-            tableData: [
-                {
-                    id: 38,
-                    prefix1: "KOSPI200",
-                    prefix2: "07.00am – 01.35pm",
-                    prefix3: "",
-                    prefix4: "01.20pm",
-                    prefix5: "",
-                    tableId: 11
-                },
-                {
-                    id: 39,
-                    prefix1: "NIKKEI225",
-                    prefix2: "06.30am – 01.25pm",
-                    prefix3: "01.55pm – 03.45am next day",
-                    prefix4: "01.25pm",
-                    prefix5: "",
-                    tableId: 11
-                },
-                {
-                    id: 40,
-                    prefix1: "KOSPI200",
-                    prefix2: "07.00am – 01.35pm",
-                    prefix3: "",
-                    prefix4: "01.20pm",
-                    prefix5: "",
-                    tableId: 11
-                }
-            ]
-        }
+            tableId: 9
+          },
+          {
+            id: 37,
+            prefix1: "DOW JONES, S&P500, NASDAQ",
+            prefix2: "05.00am – 03.15am next day (all time is Jakarta time)",
+            prefix3: "06.00am – 04.15am next day (all time is Jakarta time)",
+            prefix4: "",
+            prefix5: "",
+            tableId: 9
+          },
+          {
+            id: 41,
+            prefix1: "KOSPI200",
+            prefix2: "07.00am – 01.35pm",
+            prefix3: "",
+            prefix4: "",
+            prefix5: "",
+            tableId: 9
+          },
+          {
+            id: 42,
+            prefix1: "KOSPI200",
+            prefix2: "07.00am – 01.35pm",
+            prefix3: "",
+            prefix4: "01.20pm",
+            prefix5: "",
+            tableId: 9
+          },
+          {
+            id: 43,
+            prefix1: "KOSPI200",
+            prefix2: "07.00am – 01.35pm",
+            prefix3: "",
+            prefix4: "01.20pm",
+            prefix5: "",
+            tableId: 9
+          },
+          {
+            id: 44,
+            prefix1: "KOSPI200",
+            prefix2: "07.00am – 01.35pm",
+            prefix3: "",
+            prefix4: "01.20pm",
+            prefix5: "",
+            tableId: 9
+          }
+        ]
+      },
+      {
+        id: 11,
+        prefix1: "Product",
+        prefix2: "Session 1",
+        prefix3: "Session 2",
+        prefix4: "Last Trading Day Closing",
+        prefix5: "",
+        prefix6: "",
+        SectionId: 251,
+        tableData: [
+          {
+            id: 38,
+            prefix1: "KOSPI200",
+            prefix2: "07.00am – 01.35pm",
+            prefix3: "",
+            prefix4: "01.20pm",
+            prefix5: "",
+            tableId: 11
+          },
+          {
+            id: 39,
+            prefix1: "NIKKEI225",
+            prefix2: "06.30am – 01.25pm",
+            prefix3: "01.55pm – 03.45am next day",
+            prefix4: "01.25pm",
+            prefix5: "",
+            tableId: 11
+          },
+          {
+            id: 40,
+            prefix1: "KOSPI200",
+            prefix2: "07.00am – 01.35pm",
+            prefix3: "",
+            prefix4: "01.20pm",
+            prefix5: "",
+            tableId: 11
+          }
+        ]
+      }
     ]
-},
+  },
   protrader: {
     header: "Pro I Trader",
     top:
@@ -1063,7 +1074,7 @@ const defaultState = {
   ],
   currentLang: "ID",
   currentLangFlag: "ID",
-  activePage: "landing"
+  activePage: ""
 };
 
 export default (state = defaultState, action = {}) => {

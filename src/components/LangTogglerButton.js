@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { connect } from "react-redux";
 
 import { LangContext } from "./MyContext";
@@ -16,8 +17,20 @@ import "../assets/css/main.css";
 import { getContent } from "../redux/ducks/actions";
 
 function LangTogglerButton(props) {
-  window.sessionStorage.setItem("language", props.currentLangFlag);
-  console.log(window.sessionStorage.getItem("language"), "storage");
+  const currentLang = useSelector(state => state.pageStore.currentLang);
+  const [lng, setLng] = useState("ID");
+  const [load, setLoad] = useState(false);
+
+  const initLang = async () => {
+    let flagLocal = await localStorage.getItem("@currentFlag");
+
+    await setLng(flagLocal || "ID");
+    await setLoad(true);
+  };
+
+  useEffect(() => {
+    initLang();
+  }, [currentLang]);
   if (isMobile) {
     return (
       <>
@@ -68,57 +81,56 @@ function LangTogglerButton(props) {
       </>
     );
   }
+  if (!load) return null;
   return (
     <>
-      <LangContext.Consumer>
-        {({ lang, toggleLang }) => (
-          <ReactFlagsSelect
-            // defaultCountry={props.currentLangFlag}
-            defaultCountry={window.sessionStorage.getItem("language")}
-            countries={["ID", "GB", "CN", "HK"]}
-            customLabels={{
-              ID: "Bahasa",
-              GB: "English",
-              CN: "中国人",
-              HK: "Chinese Traditional"
-            }}
-            showSelectedLabel={false}
-            showOptionLabel={true}
-            className="menu-flags lang-button"
-            // onSelect={countryCode => toggleLang(countryCode)}
-            onSelect={async a => {
-              let data;
-              if (a == "GB") {
-                data = "EN";
-              }
+      <ReactFlagsSelect
+        // defaultCountry={props.currentLangFlag}
+        defaultCountry={lng}
+        countries={["ID", "GB", "CN", "HK"]}
+        customLabels={{
+          ID: "Bahasa",
+          GB: "English",
+          CN: "中国人",
+          HK: "Chinese Traditional"
+        }}
+        showSelectedLabel={false}
+        showOptionLabel={true}
+        className="menu-flags lang-button"
+        // onSelect={countryCode => toggleLang(countryCode)}
+        onSelect={async a => {
+          let data;
+          if (a == "GB") {
+            data = "EN";
+          }
 
-              if (a == "CN") {
-                data = "MD";
-              }
+          if (a == "CN") {
+            data = "MD";
+          }
 
-              if (a == "HK") {
-                data = "HK";
-              }
+          if (a == "HK") {
+            data = "HK";
+          }
 
-              if (a == "ID") {
-                data = "ID";
-              }
-              await props.changeLangFlag(a);
-              await props.changeLang(data);
-              await props.getContent(props.activePage, data, true);
+          if (a == "ID") {
+            data = "ID";
+          }
+          await localStorage.setItem("@currentLang", data);
+          await localStorage.setItem("@currentFlag", a);
+          await props.changeLangFlag(a);
+          await props.changeLang(data);
 
-              await props.getContent("Header", data, true);
-            }}
-          />
-        )}
-      </LangContext.Consumer>
+          await props.getContent(props.activePage, data, true);
+
+          await props.getContent("Header", data, true);
+        }}
+      />
     </>
   );
 }
 
 const mapStateToProps = state => ({
-  // pageStore: state.pageStore
-  lang: window.sessionStorage.getItem("language"),
+  lang: state.pageStore.currentLang,
   currentLangFlag: state.pageStore.currentLangFlag,
   activePage: state.pageStore.activePage
 });

@@ -77,6 +77,8 @@ import StockIndexInside from "./components/NewsPage/StockIndexInside";
 import ForexCommodityInside from "./components/NewsPage/ForexCommodityInside";
 import MarketOutlookInside from "./components/NewsPage/MarketOutlookInside";
 
+import { changeLangFlag, changeLang } from "./redux/ducks/actions";
+
 //
 import "animate.css/animate.min.css";
 
@@ -134,16 +136,28 @@ class App extends Component {
     };
   }
 
-  componentDidMount = () => {
-    store.dispatch({
-      type: "GET_ALL_PAGE",
-      payload: window.sessionStorage.getItem("language")
-    });
+  initLang = async () => {
+    let langLocal = await localStorage.getItem("@currentLang");
+    let flagLocal = await localStorage.getItem("@currentFlag");
+
+    console.log(langLocal, "langLocallangLocal");
 
     store.dispatch({
-      type: "CHANGE_LANG",
-      payload: window.sessionStorage.getItem("language")
+      type: "CHANGE_FLAG_LANG",
+      payload: flagLocal || "id"
     });
+    store.dispatch({
+      type: "CHANGE_LANG",
+      payload: langLocal || "ID"
+    });
+  };
+
+  componentDidMount = async () => {
+    await this.initLang();
+    // await store.dispatch({
+    //   type: "GET_ALL_PAGE",
+    //   payload: window.sessionStorage.getItem("language")
+    // });
 
     // localStorage.getItem("@currentLang");
     // alert(window.sessionStorage.getItem("language"));

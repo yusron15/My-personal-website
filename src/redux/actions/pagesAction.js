@@ -12,8 +12,12 @@ export function fetchPage(section, lang) {
 
 export function getContent(page, lang, toggle) {
   return async dispatch => {
+    let langLocal = await localStorage.getItem("@currentLang");
+    langLocal =
+      langLocal !== null ? langLocal.toLowerCase() : lang.toLowerCase();
+
     if (toggle) {
-      const result = await GetContent(page, lang.toLowerCase());
+      const result = await GetContent(page, langLocal);
       dispatch({
         type: "GET_CONTENT",
         payload: result

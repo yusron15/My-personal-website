@@ -20,7 +20,7 @@ import "../../assets/css/main.css";
 import VizSensor from "react-visibility-sensor";
 import { connect } from "react-redux";
 
-import { fetchPage, getContent, getNews } from "../../redux/ducks/actions.js";
+import { getContent, getNews } from "../../redux/ducks/actions.js";
 
 class Landing extends React.Component {
   constructor(props) {
@@ -32,11 +32,7 @@ class Landing extends React.Component {
     };
   }
   async componentDidMount() {
-    // await this.props.fetchPage("landing", "id");
-    await this.props.getContent(
-      "landing",
-      window.sessionStorage.getItem("language")
-    );
+    await this.props.getContent("landing", this.props.currentLang, true);
     await this.props.getNews("market");
     await this.props.getNews("stock");
     // window.scroll(0, 0);

@@ -48,7 +48,6 @@ import iphone3 from "../../assets/img/iphone3.png";
 import headerimage from "../../assets/img/header-image1.png";
 
 import { connect } from "react-redux";
-import { getContent } from "../../redux/ducks/actions.js";
 
 import VizSensor from "react-visibility-sensor";
 import { throwStatement } from "@babel/types";
@@ -459,8 +458,6 @@ const mapStateToProps = state => ({
   currentLang: state.pageStore.currentLang
 });
 
-const mapDispatchToProps = dispatch => ({
-  getContent: (section, lang) => dispatch(getContent(section, lang))
-});
+const mapDispatchToProps = dispatch => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderLanding);
