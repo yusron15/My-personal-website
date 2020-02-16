@@ -881,6 +881,10 @@ ul li {
   color: black;
 }
 
+#teams > div > div > div > div > div > a > div > div > div > p > p {
+  color: black;
+}
+
 .subheader {
   text-align: "center";
   font-style: "Helvetica Bold";

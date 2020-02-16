@@ -18,7 +18,7 @@ import "../../assets/css/main.css";
 
 class CardNews extends React.Component {
   renderContent = () => {
-    const { title, description, image, person, date } = this.props;
+    const { title, description, image, person, date, link } = this.props;
     if (isMobile) {
       return (
         <>
@@ -80,32 +80,33 @@ class CardNews extends React.Component {
     }
     return (
       <>
-        <div
-          style={{ display: "flex", height: "100%", flexDirection: "column" }}
-        >
-          <CardImg
-            top
-            width="100%"
-            style={{ height: 180 }}
-            src={image}
-            alt="Card image cap"
-          />
-          <div className="font-black" style={{ height: "100%" }}>
-            <CardBody
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                height: "100%"
-              }}
-            >
-              <h4 style={{ color: "black", flexGrow: 1, display: "flex" }}>
-                {title}
-              </h4>
-              <p style={{ color: "black", flexGrow: 1, display: "flex" }}>
-                {description}
-              </p>
-              <div style={{ display: "flex", marginTop: 15 }}>
-                {/* <div
+        <a href={link}>
+          <div
+            style={{ display: "flex", height: "100%", flexDirection: "column" }}
+          >
+            <CardImg
+              top
+              width="100%"
+              style={{ height: 180 }}
+              src={image}
+              alt="Card image cap"
+            />
+            <div className="font-black" style={{ height: "100%" }}>
+              <CardBody
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "100%"
+                }}
+              >
+                <h4 style={{ color: "black", flexGrow: 1, display: "flex" }}>
+                  {title}
+                </h4>
+                <p style={{ color: "black", flexGrow: 1, display: "flex" }}>
+                  {description}
+                </p>
+                <div style={{ display: "flex", marginTop: 15 }}>
+                  {/* <div
                   style={{
                     flex: 1,
                     display: "flex",
@@ -121,30 +122,31 @@ class CardNews extends React.Component {
                     {person}
                   </p>
                 </div> */}
-                <div
-                  style={{
-                    flex: 1,
-                    display: "flex",
-                    alignItems: "center",
-                    flexDirection: "row",
-                    justifyContent: "flex-end"
-                  }}
-                >
-                  <img
-                    src={calendar}
-                    style={{ height: "20px", width: "auto" }}
-                  />
-                  <p
-                    className="font-black"
-                    style={{ color: "black", paddingLeft: "10px" }}
+                  <div
+                    style={{
+                      flex: 1,
+                      display: "flex",
+                      alignItems: "center",
+                      flexDirection: "row",
+                      justifyContent: "flex-end"
+                    }}
                   >
-                    {date}
-                  </p>
+                    <img
+                      src={calendar}
+                      style={{ height: "20px", width: "auto" }}
+                    />
+                    <p
+                      className="font-black"
+                      style={{ color: "black", paddingLeft: "10px" }}
+                    >
+                      {date}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </CardBody>
+              </CardBody>
+            </div>
           </div>
-        </div>
+        </a>
       </>
     );
   };

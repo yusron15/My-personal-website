@@ -173,123 +173,6 @@ const items = [
   }
 ];
 
-const cardMarketNews = [
-  {
-    content: (
-      <div>
-        <Row>
-          <Col>
-            <CardNews
-              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-              image={pc}
-              person="person"
-              date="dd/mm/yyyy"
-            />
-          </Col>
-          <Col>
-            <CardNews
-              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-              image={pc2}
-              person="person"
-              date="dd/mm/yyyy"
-            />
-          </Col>
-          <Col>
-            <CardNews
-              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-              image={pc3}
-              person="person"
-              date="dd/mm/yyyy"
-            />
-          </Col>
-        </Row>
-      </div>
-    ),
-    altText: "",
-    caption: "",
-    src: "0"
-  },
-  {
-    content: (
-      <div>
-        <Row>
-          <Col>
-            <CardNews
-              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-              image={pc}
-              person="person"
-              date="dd/mm/yyyy"
-            />
-          </Col>
-          <Col>
-            <CardNews
-              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-              image={pc2}
-              person="person"
-              date="dd/mm/yyyy"
-            />
-          </Col>
-          <Col>
-            <CardNews
-              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-              image={pc3}
-              person="person"
-              date="dd/mm/yyyy"
-            />
-          </Col>
-        </Row>
-      </div>
-    ),
-    altText: "",
-    caption: "",
-    src: "0"
-  },
-  {
-    content: (
-      <div>
-        <Row>
-          <Col>
-            <CardNews
-              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-              image={pc}
-              person="person"
-              date="dd/mm/yyyy"
-            />
-          </Col>
-          <Col>
-            <CardNews
-              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-              image={pc2}
-              person="person"
-              date="dd/mm/yyyy"
-            />
-          </Col>
-          <Col>
-            <CardNews
-              title="Minyak Jatuh Disebabkan Data Industri China Yang Lemah"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua…"
-              image={pc3}
-              person="person"
-              date="dd/mm/yyyy"
-            />
-          </Col>
-        </Row>
-      </div>
-    ),
-    altText: "",
-    caption: "",
-    src: "0"
-  }
-];
-
 class Carding extends React.Component {
   constructor(props) {
     super(props);
@@ -334,80 +217,56 @@ class Carding extends React.Component {
       itemsBeritaTerkini = this.props.allNews.slice(0, 3).map((item, index) => {
         return {
           content: (
-            <div
-              style={{
-                display: "flex",
-                flex: 1,
-                position: "relative",
-                height: "100%",
-                width: "100%"
-              }}
-            >
-              <img
-                src={item.featured_image_src}
-                style={{ position: "absolute", height: "100%", width: "100%" }}
-              />
+            <a href={item.link}>
               <div
                 style={{
                   display: "flex",
-                  alignSelf: "flex-end",
-                  flexDirection: "column",
-                  padding: 20,
-                  zIndex: 999,
-                  marginBottom: 30
-                }}
-              >
-                <div style={textTitle}>
-                  <b>{item.title.rendered}</b>
-                </div>
-                <div className="description" style={textDesc}>
-                  {ReactHtmlParser(item.excerpt.rendered.slice(0, 120))}
-                </div>
-              </div>
-              <div
-                style={{
-                  backgroundImage:
-                    "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
-                  position: "absolute",
+                  flex: 1,
+                  position: "relative",
                   height: "100%",
                   width: "100%"
                 }}
-              ></div>
-            </div>
-            // <div
-            //   key={index.toString()}
-            //   className="team-1"
-            //   style={{
-            //     backgroundImage: "url(" + item.featured_image_src + ") ",
-            //     backgroundSize: "cover",
-            //     height: "70vh",
-            //     borderRadius: "10px"
-            //   }}
-            // >
-            //   <Container style={{ position: "relative" }}>
-            //     <Row>
-            //       <Col md="12">
-            // <div style={textTitle}>
-            //   <b>{item.title.rendered}</b>
-            // </div>
-            //       </Col>
-            //       <Col md="12">
-            // <div className="description" style={textDesc}>
-            //   {item.content.rendered}
-            // </div>
-            //       </Col>
-            //     </Row>
-            //     <div
-            //       style={{
-            //         position: "absolute",
-            //         height: 500,
-            //         widht: 500,
-            //         zIndex: 999,
-            //         backgroundColor: "red"
-            //       }}
-            //     ></div>
-            //   </Container>
-            // </div>
+              >
+                <a href={item.link}>
+                  <img
+                    src={item.featured_image_src}
+                    style={{
+                      position: "absolute",
+                      height: "100%",
+                      width: "100%"
+                    }}
+                  />
+                </a>
+                <div
+                  style={{
+                    display: "flex",
+                    alignSelf: "flex-end",
+                    flexDirection: "column",
+                    padding: 20,
+                    zIndex: 999,
+                    marginBottom: 30
+                  }}
+                >
+                  <a href={item.link}>
+                    <div style={textTitle}>
+                      <b>{item.title.rendered}</b>
+                    </div>
+                    <div className="description" style={textDesc}>
+                      {ReactHtmlParser(item.excerpt.rendered.slice(0, 120))}
+                    </div>
+                  </a>
+                </div>
+                <div
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
+                    position: "absolute",
+                    height: "100%",
+                    width: "100%"
+                  }}
+                ></div>
+              </div>
+            </a>
           ),
           altText: "",
           caption: "",
@@ -421,19 +280,21 @@ class Carding extends React.Component {
         })
         .map((item, index) => {
           return (
-            <div>
-              <CardImg
-                top
-                width="100%"
-                height="50%"
-                src={item.featured_image_src}
-                alt="Card image cap"
-              />
+            <a href={item.link}>
+              <div>
+                <CardImg
+                  top
+                  width="100%"
+                  height="50%"
+                  src={item.featured_image_src}
+                  alt="Card image cap"
+                />
 
-              <div className="font-black">
-                <CardTitle>{item.title.rendered}</CardTitle>
+                <div className="font-black">
+                  <CardTitle>{item.title.rendered}</CardTitle>
+                </div>
               </div>
-            </div>
+            </a>
           );
         });
 
@@ -1144,6 +1005,7 @@ class Carding extends React.Component {
                         description={ReactHtmlParser(
                           item.excerpt.rendered.slice(0, 120)
                         )}
+                        link={item.link}
                         image={item.featured_image_src}
                         person="person"
                         date={`${moment(item.date).format(
@@ -1192,6 +1054,7 @@ class Carding extends React.Component {
                         description={ReactHtmlParser(
                           item.excerpt.rendered.slice(0, 120)
                         )}
+                        link={item.link}
                         image={item.featured_image_src}
                         person="person"
                         date={`${moment(item.date).format(
@@ -1236,6 +1099,7 @@ class Carding extends React.Component {
                   {this.props.news.stock.slice(0, 3).map((item, index) => (
                     <Col key={index.toString()}>
                       <CardNews
+                        link={item.link}
                         title={item.title.rendered}
                         description={ReactHtmlParser(
                           item.excerpt.rendered.slice(0, 120)

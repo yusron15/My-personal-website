@@ -266,44 +266,46 @@ class NewsInverted extends React.Component {
                           key={key}
                           className="justify-content-center"
                         >
-                          <div
-                            className="info info-warning broken-white"
-                            style={{
-                              backgroundImage:
-                                "url(" + item.featured_image_src + ")",
-                              backgroundColor: "rgba(0, 0, 0, 0.25)",
-                              backgroundSize: "cover",
-                              height: 200,
-                              display: "flex",
-                              flexDirection: "column",
-                              justifyContent: "flex-end",
-                              alignItems: "flex-end",
-                              margin: 0,
-                              marginBottom: "25px",
-                              padding: 0
-                            }}
-                          >
+                          <a href={item.link}>
                             <div
+                              className="info info-warning broken-white"
                               style={{
                                 backgroundImage:
-                                  "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
-                                height: "100vh",
-                                width: "100%",
-
-                                zIndex: 99
+                                  "url(" + item.featured_image_src + ")",
+                                backgroundColor: "rgba(0, 0, 0, 0.25)",
+                                backgroundSize: "cover",
+                                height: 200,
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "flex-end",
+                                alignItems: "flex-end",
+                                margin: 0,
+                                marginBottom: "25px",
+                                padding: 0
                               }}
                             >
-                              <h4
-                                className="title"
+                              <div
                                 style={{
-                                  color: "white",
-                                  paddingTop: "50px"
+                                  backgroundImage:
+                                    "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
+                                  height: "100vh",
+                                  width: "100%",
+
+                                  zIndex: 99
                                 }}
                               >
-                                {item.title.rendered}
-                              </h4>
+                                <h4
+                                  className="title"
+                                  style={{
+                                    color: "white",
+                                    paddingTop: "50px"
+                                  }}
+                                >
+                                  {item.title.rendered}
+                                </h4>
+                              </div>
                             </div>
-                          </div>
+                          </a>
                         </CarouselItem>
                       );
                     })}
@@ -365,16 +367,18 @@ class NewsInverted extends React.Component {
                   <Slick {...slickSettings}>
                     {this.props.news.market.map(item => (
                       <div>
-                        <NavLink
-                          // className={this.state.activeSlide === 0 ? "scaled" : ""}
-                          style={{
-                            backgroundImage:
-                              "url(" + item.featured_image_src + ")",
-                            height: "30vh",
-                            backgroundSize: "cover"
-                            // borderRadius: 12
-                          }}
-                        ></NavLink>
+                        <a href={item.link}>
+                          <NavLink
+                            // className={this.state.activeSlide === 0 ? "scaled" : ""}
+                            style={{
+                              backgroundImage:
+                                "url(" + item.featured_image_src + ")",
+                              height: "30vh",
+                              backgroundSize: "cover"
+                              // borderRadius: 12
+                            }}
+                          ></NavLink>
+                        </a>
                       </div>
                     ))}
                   </Slick>
@@ -390,26 +394,24 @@ class NewsInverted extends React.Component {
                     </h1>
                   </Link>
 
-                  <Link to="/newspage">
-                    <p
-                      className="description text-white"
-                      style={{ minHeight: "20vh" }}
-                    >
-                      <TabContent
-                        activeTab={"project" + this.state.activeSlide}
-                      >
-                        {this.props.news.market.map((item, index) => (
-                          <TabPane tabId={`project${index}`}>
+                  <p
+                    className="description text-white"
+                    style={{ minHeight: "20vh" }}
+                  >
+                    <TabContent activeTab={"project" + this.state.activeSlide}>
+                      {this.props.news.market.map((item, index) => (
+                        <TabPane tabId={`project${index}`}>
+                          <a href={item.link}>
                             <p className="description mb-5">
                               {`${item.excerpt.rendered
                                 .replace(/(<([^>]+)>)/gi, "")
                                 .substring(0, 100)}...`}
                             </p>
-                          </TabPane>
-                        ))}
-                      </TabContent>
-                    </p>
-                  </Link>
+                          </a>
+                        </TabPane>
+                      ))}
+                    </TabContent>
+                  </p>
 
                   <Link to="/newspage">
                     <button className="filled-button">Explore →</button>
