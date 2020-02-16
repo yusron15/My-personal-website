@@ -173,13 +173,47 @@ const items = [
   }
 ];
 
+const API_KEY = "AIzaSyD_yfX0r6bhW5G3Kq2w9LGWym7TEf1M5q0";
+const PLAYLIST_PM_MARKET = "PLzeWDGNIcxbFRu8k6ee7nIngLotBGKgx1";
+const PLAYLIST_MARKET_UPDATE = "PLzeWDGNIcxbHTHWk69y3gvyg_IkeDA-If";
+const PLAYLIST_MORNING_NEWS = "PLzeWDGNIcxbGWpnm0wEHpRkAYIjXh5aAL";
+const PLAYLIST_TOPGROWTH_FUTURES = "PLzeWDGNIcxbHeQhDrk-kHvBOrPJJHffen";
+
 class Carding extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeIndex: 0
+      activeIndex: 0,
+      playListids: [
+        {
+          name: "Morning News",
+          id: PLAYLIST_MORNING_NEWS,
+          videos: [],
+          pageToken: ""
+        },
+        {
+          name: "Market Updates",
+          id: PLAYLIST_MARKET_UPDATE,
+          videos: [],
+          pageToken: ""
+        },
+        {
+          name: "PM Market News",
+          id: PLAYLIST_PM_MARKET,
+          videos: [],
+          pageToken: ""
+        }
+      ]
     };
   }
+
+  componentDidMount = async () => {
+    try {
+      await this.fetchingYoutubeVideos();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   onExited = () => {
     this.animating = false;
@@ -208,7 +242,41 @@ class Carding extends React.Component {
     this.setState({ activeIndex: newIndex });
   };
 
+  fetchingYoutubeVideos = async (next, indexVideos) => {
+    try {
+      await this.setState({ loading: true });
+
+      let dataPlaylist = [...this.state.playListids];
+
+      await Promise.all(
+        dataPlaylist.map(async (item, index) => {
+          let url = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${item.id}&part=snippet%2CcontentDetails&key=${API_KEY}`;
+
+          if (next) {
+            if (indexVideos === index) {
+              url = `${url}&pageToken=${item.pageToken}`;
+              const response = await fetch(url);
+              const json = await response.json();
+              item.videos = [...item.videos, ...json["items"]];
+              item.pageToken = json.nextPageToken;
+            }
+          } else {
+            const response = await fetch(url);
+            const json = await response.json();
+            item.videos = json.items;
+            item.pageToken = json.nextPageToken;
+          }
+
+          return item;
+        })
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   renderContent = () => {
+    console.log(this.state, "asdasdasdsds");
     let itemsBeritaTerkini = [];
     let itemsBeritaTerpopuler = [];
     let itemsBeritaMarketOutlook = [];
@@ -788,61 +856,63 @@ class Carding extends React.Component {
                     </Col>
                   </Row>
                   <Row>
-                    <Col>
-                      <div style={{ marginTop: "50px" }}>
-                        <HoverCard
-                          borderRadius={10}
-                          maxWidth={500}
-                          animationSpeed={500}
-                          height={150}
-                          front={
-                            <div>
-                              <img
-                                src={town}
-                                alt=""
-                                style={{ objectFit: "cover" }}
+                    {this.state.playListids[0].videos.length > 0 &&
+                      this.state.playListids.map((item, index) => {
+                        return (
+                          <Col>
+                            <div style={{ marginTop: "50px" }}>
+                              <HoverCard
+                                borderRadius={10}
+                                maxWidth={500}
+                                animationSpeed={500}
+                                height={150}
+                                front={
+                                  <div>
+                                    <img
+                                      src={
+                                        item.videos[0].snippet.thumbnails.medium
+                                          .url
+                                      }
+                                      alt=""
+                                      style={{ objectFit: "fill" }}
+                                    />
+                                    <h2 className="text-news">
+                                      <span>{item.name}</span>
+                                    </h2>
+                                  </div>
+                                }
+                                back={
+                                  <Container
+                                    style={{
+                                      marginTop: "20px",
+                                      justifyContent: "center"
+                                    }}
+                                  >
+                                    <div
+                                      style={{
+                                        textAlign: "center",
+                                        margintTop: "10px"
+                                      }}
+                                    >
+                                      <div
+                                        style={{
+                                          color: "#167AFF",
+                                          fontWeight: "bold"
+                                        }}
+                                      >
+                                        {item.videos[0].snippet.title}
+                                      </div>
+                                    </div>
+                                  </Container>
+                                }
                               />
-                              <h2 className="text-news">
-                                <span>Morning News</span>
-                              </h2>
                             </div>
-                          }
-                          back={
-                            <Container
-                              style={{
-                                marginTop: "20px",
-                                justifyContent: "center"
-                              }}
-                            >
-                              <div
-                                style={{
-                                  textAlign: "center",
-                                  margintTop: "10px"
-                                }}
-                              >
-                                <div
-                                  style={{
-                                    color: "#167AFF",
-                                    fontWeight: "bold"
-                                  }}
-                                >
-                                  Bursa Asia Ditekan Aksi Ambil Untung
-                                </div>
-                                <div className="font-black">12/31/2019</div>
-                                <div className="font-black">
-                                  Bursa Asia Ditekan Aksi Ambil Untung
-                                  <br />
-                                  Belum Terpengaruh Iran-AS, Pasar SUN Masih
-                                  Mengua
-                                </div>
-                              </div>
-                            </Container>
-                          }
-                        />
-                      </div>
-                      <br />
-                    </Col>
-                    <Col>
+                            <br />
+                          </Col>
+                        );
+                      })}
+
+                    {/* <Col>
                       <div style={{ marginTop: "50px" }}>
                         <HoverCard
                           borderRadius={10}
@@ -950,6 +1020,7 @@ class Carding extends React.Component {
                       </div>
                       <br />
                     </Col>
+                  */}
                   </Row>
                 </div>
               </Container>

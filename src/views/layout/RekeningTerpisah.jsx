@@ -16,13 +16,14 @@ class RekeningTerpisah extends React.Component {
         this.props.currentLang,
         true
       );
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
     window.scroll(0, 0);
   };
   render() {
     return (
       <>
-        {/* <Navbar /> */}
         <Content location={{ ...this.props.location }} />
         <Footer />
       </>
@@ -36,7 +37,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  // fetchPage: (section, lang) => dispatch(fetchPage(section, lang)),
   getContent: (section, lang, toggle) =>
     dispatch(getContent(section, lang, toggle))
 });

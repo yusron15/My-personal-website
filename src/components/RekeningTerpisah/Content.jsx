@@ -28,6 +28,7 @@ import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
+
 class Content extends React.Component {
   async componentDidMount() {
     await this.props.getContent("rekeningterpisah", "id");

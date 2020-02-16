@@ -2,100 +2,37 @@ import React from "react";
 
 // reactstrap components
 import {
-  Badge,
-  Button,
   Card,
-  CardImg,
-  CardHeader,
   CardBody,
-  CardFooter,
   CardTitle,
   CardText,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  Navbar,
   NavItem,
-  NavLink,
   Nav,
-  Pagination,
-  PaginationItem,
-  PaginationLink,
   TabContent,
   TabPane,
-  Container,
   Row,
-  Col,
-  UncontrolledTooltip
+  Col
 } from "reactstrap";
-import Select from "react-select";
-import classnames from "classnames";
-import SidebarMobile from "../../components/Navbars/SidebarMobile";
-import { isMobile } from "react-device-detect";
-import { VideoPlayer } from "react-video-players";
-import ReactPlayer from "react-player";
-import videos from "../../assets/video/nyc-exchange.mp4";
-import bappebti from "../../assets/img/legalitas1.png";
-import jfx from "../../assets/img/legalitas2.png";
-import icdx from "../../assets/img/legalitas3.png";
-import kbi from "../../assets/img/legalitas4.png";
-import ich from "../../assets/img/legalitas5.png";
-import bg from "../../assets/img/edukasi-header.png";
 import ReactHtmlParser from "react-html-parser";
 
-import Radium, { StyleRoot } from "radium";
-import { fadeIn } from "react-animations";
+import SidebarMobile from "../../components/Navbars/SidebarMobile";
+import { isMobile } from "react-device-detect";
+import ReactPlayer from "react-player";
+// import videos from "../../assets/video/nyc-exchange.mp4";
 
-import { getContent } from "../../redux/ducks/actions.js";
 import { connect } from "react-redux";
 
-import DarkNavbar from "../../components/Navbars/DarkNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 
 import "../../assets/css/main.css";
 import moment from "moment";
 
-const PLAYLIST_ID = "PLzeWDGNIcxbHeQhDrk-kHvBOrPJJHffen";
-const MAX_RESULT = 20;
 const API_KEY = "AIzaSyD_yfX0r6bhW5G3Kq2w9LGWym7TEf1M5q0";
-
 const PLAYLIST_PM_MARKET = "PLzeWDGNIcxbFRu8k6ee7nIngLotBGKgx1";
 const PLAYLIST_MARKET_UPDATE = "PLzeWDGNIcxbHTHWk69y3gvyg_IkeDA-If";
 const PLAYLIST_MORNING_NEWS = "PLzeWDGNIcxbGWpnm0wEHpRkAYIjXh5aAL";
 const PLAYLIST_TOPGROWTH_FUTURES = "PLzeWDGNIcxbHeQhDrk-kHvBOrPJJHffen";
-
-const playListids = [
-  {
-    name: "Market News",
-    title: "Pengenalan Topgrowth Futures",
-    id: PLAYLIST_PM_MARKET
-  },
-  {
-    name: "Market Update",
-    title: "Trading Untuk Pemula",
-    id: PLAYLIST_MARKET_UPDATE
-  },
-  {
-    name: "Morning News",
-    title: "Platform",
-    title: "Platform Topgrowth Trader & ProTrader",
-    id: PLAYLIST_MORNING_NEWS
-  },
-  {
-    name: "Topgrowth Futures",
-    title: "Webinar",
-    id: PLAYLIST_TOPGROWTH_FUTURES
-  }
-];
-
-const styles = {
-  fadeIn: {
-    animation: "x 2s",
-    animationName: Radium.keyframes(fadeIn, "fadeIn")
-  }
-};
 
 class Content extends React.Component {
   constructor(props) {
@@ -162,44 +99,45 @@ class Content extends React.Component {
     if (prevProps.pageStore.edukasi !== this.props.pageStore.edukasi) {
       await this.setState({
         playListids: this.state.playListids.map((item, index) => {
-          console.log(
-            this.props.pageStore.edukasi.video[index].videoButton,
-            "asdasdasdas"
-          );
           item.name = this.props.pageStore.edukasi.video[index].videoButton;
           return item;
         })
       });
-
-      await this.fetchingYoutubeVideos();
     }
   };
 
-  fetchingYoutubeVideos = async () => {
+  fetchingYoutubeVideos = async (next, indexVideos) => {
     try {
       await this.setState({ loading: true });
 
-      let dataPlaylist = this.state.playListids;
+      let dataPlaylist = [...this.state.playListids];
+
       await Promise.all(
         dataPlaylist.map(async (item, index) => {
           let url = `https://www.googleapis.com/youtube/v3/playlistItems?playlistId=${item.id}&part=snippet%2CcontentDetails&key=${API_KEY}`;
-          const response = await fetch(url);
-          const json = await response.json();
 
-          item.videos = [...item.videos, ...json["items"]];
+          if (next) {
+            if (indexVideos === index) {
+              url = `${url}&pageToken=${item.pageToken}`;
+              const response = await fetch(url);
+              const json = await response.json();
+              item.videos = [...item.videos, ...json["items"]];
+              item.pageToken = json.nextPageToken;
+            }
+          } else {
+            const response = await fetch(url);
+            const json = await response.json();
+            item.videos = json.items;
+            item.pageToken = json.nextPageToken;
+          }
 
           return item;
         })
       );
-
-      console.log(dataPlaylist, "dataPlaylist");
     } catch (error) {
       console.log(error);
     }
   };
-  // state = {
-  //   dataSelect: "Belajar Forex untuk Pemula"
-  // };
 
   renderContent = () => {
     let youtubeUrl = "https://www.youtube.com/watch?v=";
@@ -240,13 +178,13 @@ class Content extends React.Component {
                   padding: "0 2% 2% 2%"
                 }}
               >
-                <ReactPlayer
+                {/* <ReactPlayer
                   url={videos}
                   controls={true}
                   height="300"
                   width="100%"
                   style={{ margin: "20px 0 20px 0" }}
-                />
+                /> */}
                 <Row>
                   <Col md="4">
                     <Nav tabs vertical pills>
@@ -295,48 +233,46 @@ class Content extends React.Component {
                             <TabPane tabId={index + 1}>
                               <Row>
                                 {item.videos.length > 0 &&
-                                  item.videos
-                                    .filter((item, index) => index !== 0)
-                                    .map((item, index) => {
-                                      return (
-                                        <Col
-                                          md="4"
-                                          key={item.contentDetails.videoId}
+                                  item.videos.map((item, index) => {
+                                    return (
+                                      <Col
+                                        md="4"
+                                        key={item.contentDetails.videoId}
+                                      >
+                                        <Card
+                                          style={{ backgroundColor: "white" }}
                                         >
-                                          <Card
-                                            style={{ backgroundColor: "white" }}
+                                          <ReactPlayer
+                                            key={item.contentDetails.videoId}
+                                            url={`${youtubeUrl}${item.contentDetails.videoId}`}
+                                            controls={true}
+                                            height="200"
+                                            width="250"
+                                          />
+                                          <CardBody
+                                            style={{ minHeight: "150px" }}
                                           >
-                                            <ReactPlayer
-                                              key={item.contentDetails.videoId}
-                                              url={`${youtubeUrl}${item.contentDetails.videoId}`}
-                                              controls={true}
-                                              height="200"
-                                              width="250"
-                                            />
-                                            <CardBody
-                                              style={{ minHeight: "150px" }}
+                                            <CardTitle
+                                              style={{
+                                                color: "black",
+                                                fontWeight: "bold"
+                                              }}
                                             >
-                                              <CardTitle
-                                                style={{
-                                                  color: "black",
-                                                  fontWeight: "bold"
-                                                }}
-                                              >
-                                                {item.snippet.title}
-                                              </CardTitle>
-                                              <CardText>
-                                                <small className="text-muted">
-                                                  {moment(
-                                                    item.snippet.publishedAt
-                                                  ).format("DD MM YYYY HH:mm") +
-                                                    " WIB"}
-                                                </small>
-                                              </CardText>
-                                            </CardBody>
-                                          </Card>
-                                        </Col>
-                                      );
-                                    })}
+                                              {item.snippet.title}
+                                            </CardTitle>
+                                            <CardText>
+                                              <small className="text-muted">
+                                                {moment(
+                                                  item.snippet.publishedAt
+                                                ).format("DD MM YYYY HH:mm") +
+                                                  " WIB"}
+                                              </small>
+                                            </CardText>
+                                          </CardBody>
+                                        </Card>
+                                      </Col>
+                                    );
+                                  })}
                               </Row>
                             </TabPane>
                           </>
@@ -394,6 +330,8 @@ class Content extends React.Component {
                       url={
                         this.state.selectedVideoId !== ""
                           ? `${youtubeUrl}${this.state.selectedVideoId}`
+                          : this.state.playListids[0].videos.length > 0
+                          ? `${youtubeUrl}${this.state.playListids[0].videos[0].contentDetails.videoId}`
                           : ""
                       }
                       width="100"
@@ -453,77 +391,75 @@ class Content extends React.Component {
                           <TabPane tabId={index + 1}>
                             <Row>
                               {item.videos.length > 0 &&
-                                item.videos
-                                  .filter((item, index) => index !== 0)
-                                  .map((item, index) => {
-                                    return (
-                                      <Col
-                                        md="4"
-                                        key={item.contentDetails.videoId}
+                                item.videos.map((item, index) => {
+                                  return (
+                                    <Col
+                                      md="4"
+                                      key={item.contentDetails.videoId}
+                                    >
+                                      <Card
+                                        style={{
+                                          backgroundColor:
+                                            this.state.selectedVideoId ===
+                                            item.contentDetails.videoId
+                                              ? "#cccfcc"
+                                              : "white"
+                                        }}
                                       >
-                                        <Card
+                                        <ReactPlayer
+                                          controls={false}
+                                          playing={false}
+                                          key={item.contentDetails.videoId}
+                                          url={`${youtubeUrl}${item.contentDetails.videoId}`}
+                                          controls={true}
+                                          height="200"
+                                          width="250"
+                                        />
+                                        <div
                                           style={{
-                                            backgroundColor:
-                                              this.state.selectedVideoId ===
-                                              item.contentDetails.videoId
-                                                ? "#cccfcc"
-                                                : "white"
+                                            backgroundColor: "transparent",
+                                            position: "absolute",
+                                            height: "100%",
+                                            width: "100%"
                                           }}
-                                        >
-                                          <ReactPlayer
-                                            controls={false}
-                                            playing={false}
-                                            key={item.contentDetails.videoId}
-                                            url={`${youtubeUrl}${item.contentDetails.videoId}`}
-                                            controls={true}
-                                            height="200"
-                                            width="250"
-                                          />
-                                          <div
-                                            style={{
-                                              backgroundColor: "transparent",
-                                              position: "absolute",
-                                              height: "100%",
-                                              width: "100%"
-                                            }}
-                                            onClick={async () => {
-                                              await this.setState({
-                                                selectedVideoId:
-                                                  item.contentDetails.videoId,
-                                                animate: true
-                                              });
+                                          onClick={async () => {
+                                            await this.setState({
+                                              selectedVideoId:
+                                                item.contentDetails.videoId,
+                                              animate: true
+                                            });
 
-                                              setTimeout(() => {
-                                                this.setState({
-                                                  animate: false
-                                                });
-                                              }, 1000);
+                                            setTimeout(() => {
+                                              this.setState({
+                                                animate: false
+                                              });
+                                            }, 1000);
+                                          }}
+                                        ></div>
+                                        <CardBody
+                                          style={{ minHeight: "150px" }}
+                                        >
+                                          <CardTitle
+                                            style={{
+                                              color: "black",
+                                              fontWeight: "bold"
                                             }}
-                                          ></div>
-                                          <CardBody
-                                            style={{ minHeight: "150px" }}
                                           >
-                                            <CardTitle
-                                              style={{
-                                                color: "black",
-                                                fontWeight: "bold"
-                                              }}
-                                            >
-                                              {item.snippet.title}
-                                            </CardTitle>
-                                            <CardText>
-                                              <small className="text-muted">
-                                                {moment(
-                                                  item.snippet.publishedAt
-                                                ).format("DD MM YYYY HH:mm") +
-                                                  " WIB"}
-                                              </small>
-                                            </CardText>
-                                          </CardBody>
-                                        </Card>
-                                      </Col>
-                                    );
-                                  })}
+                                            {item.snippet.title}
+                                          </CardTitle>
+                                          <CardText>
+                                            <small className="text-muted">
+                                              {moment(
+                                                item.snippet.publishedAt
+                                              ).format("DD MM YYYY HH:mm") +
+                                                " WIB"}
+                                            </small>
+                                          </CardText>
+                                        </CardBody>
+                                      </Card>
+                                    </Col>
+                                  );
+                                })}
                             </Row>
                           </TabPane>
                         </>
@@ -541,10 +477,6 @@ class Content extends React.Component {
   };
 
   render() {
-    // console.log(
-    //   "Edukasiiiiiii",
-    //   this.props.pageStore.edukasi.video[0].videoButton
-    // );
     return this.renderContent();
   }
 }
@@ -558,5 +490,3 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);
-
-// export default Content;

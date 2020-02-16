@@ -1,9 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import bg from "../../assets/img/header-newspage.png";
-import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
-import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import Content from "../../components/NewsPage/Content.jsx";
 import Footer from "../../components/Footers/Footer.jsx";
 import HeaderNewsPage from "../../components/NewsPage/HeaderNewspage";
