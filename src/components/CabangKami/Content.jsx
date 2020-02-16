@@ -285,7 +285,7 @@ class News extends React.Component {
                               style={{
                                 backgroundImage:
                                   "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
-                                height: "100vh",
+                                height: "35vh",
                                 width: "100%",
 
                                 zIndex: 99

@@ -372,7 +372,7 @@ class Blogs extends React.Component {
                       {/* </div> */}
                     </Col>
 
-                    {/* {this.state.stateKarir.map((item, index) => (
+                    {this.state.stateKarir.map((item, index) => (
                       <Col lg="12" xs="12">
                         <Card
                           className={`card-karir ${item.open ? "expand" : ""}`}
@@ -457,13 +457,13 @@ class Blogs extends React.Component {
                           )}
                         </Card>
                       </Col>
-                    ))} */}
+                    ))}
                   </Row>
 
                   {/* {this.state.stateKarir.map((item, index) => (
                     
                     ))} */}
-                  <Accordion>
+                  {/* <Accordion>
                     <AccordionItem>
                       <AccordionItemHeading>
                         <AccordionItemButton>
@@ -493,7 +493,7 @@ class Blogs extends React.Component {
                         </p>
                       </AccordionItemPanel>
                     </AccordionItem>
-                  </Accordion>
+                  </Accordion> */}
                 </Col>
               </Row>
             </Container>
