@@ -5,12 +5,7 @@ import Content from "../../components/NewsPage/Content.jsx";
 import Footer from "../../components/Footers/Footer.jsx";
 import HeaderNewsPage from "../../components/NewsPage/HeaderNewspage";
 
-import {
-  fetchPage,
-  getContent,
-  getAllNews,
-  getNews
-} from "../../redux/ducks/actions.js";
+import { getContent, getAllNews, getNews } from "../../redux/ducks/actions.js";
 
 class NewsPage extends React.Component {
   state = {

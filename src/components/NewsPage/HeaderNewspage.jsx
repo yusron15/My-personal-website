@@ -46,6 +46,7 @@ class HeaderContent extends Component {
         <ColoredNavbar location={{ ...this.props.location }} />
         <div className="title title-header" style={{ marginBottom: "8%" }}>
           {this.props.pageStore.berita.Header}
+          <h4>{this.props.pageStore.berita.subheader}</h4>
         </div>
       </div>
     );
