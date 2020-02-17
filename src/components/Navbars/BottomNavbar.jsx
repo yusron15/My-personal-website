@@ -376,12 +376,21 @@ class BottomNavbar extends React.Component {
                   </Col>
                   <Col md="1">
                     <div className="vertical-center">
-                      <Button block color="info" type="button">
-                        {
+                      <a
+                        target="_blank"
+                        style={{ backgroundColor: "transparent" }}
+                        href={
                           this.props.pageStore.Landing.BottomNavbar.form[0]
-                            .button
+                            .button_link
                         }
-                      </Button>
+                      >
+                        <Button block color="info" type="button">
+                          {
+                            this.props.pageStore.Landing.BottomNavbar.form[0]
+                              .button
+                          }
+                        </Button>
+                      </a>
                     </div>
                   </Col>
                 </Row>

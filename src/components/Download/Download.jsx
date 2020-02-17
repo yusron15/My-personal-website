@@ -20,7 +20,8 @@ import windows from "../../assets/img/windows-download.png";
 // import windows from "../../assets/img/download-windows.png";
 import world from "../../assets/img/world.png";
 import bg from "../../assets/img/download-bg.png";
-
+import { getContent } from "../../redux/ducks/actions.js";
+import { connect } from "react-redux";
 import "../../assets/css/main.css";
 class Features extends React.Component {
   renderContent = () => {
@@ -64,7 +65,7 @@ class Features extends React.Component {
                   <div>
                     <Row>
                       <Col>
-                        <a
+                        {/* <a
                           href="https://download.mql5.com/cdn/web/3785/mt4/topgrowth4setup.exe"
                           target="_blank"
                         >
@@ -78,12 +79,38 @@ class Features extends React.Component {
                             }}
                             src={pc}
                           />
+                        </a> */}
+                        <a
+                          target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.topgrowthtrader.download[0]
+                              .button_link
+                          }
+                        >
+                          <img
+                            alt="..."
+                            style={{
+                              width: "50vw",
+                              margin: "20px 2px 0 2px",
+                              height: "auto"
+                            }}
+                            src={pc}
+                          />
                         </a>
                       </Col>
                       <Col>
-                        <a
+                        {/* <a
                           href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_macos_5_0_en.zip"
                           target="_blank"
+                        > */}
+                        <a
+                          target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.topgrowthtrader.download[1]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
@@ -100,9 +127,17 @@ class Features extends React.Component {
                     </Row>
                     <Row>
                       <Col>
-                        <a
+                        {/* <a
                           href="https://download.mql5.com/cdn/mobile/mt4/android?server=Topgrowth-Demo"
                           target="_blank"
+                        > */}
+                        <a
+                          target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.topgrowthtrader.download[2]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
@@ -117,9 +152,17 @@ class Features extends React.Component {
                         </a>
                       </Col>
                       <Col>
-                        <a
+                        {/* <a
                           href="https://download.mql5.com/cdn/mobile/mt4/ios?server=Topgrowth-Demo"
                           target="_blank"
+                        > */}
+                        <a
+                          target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.topgrowthtrader.download[3]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
@@ -136,9 +179,17 @@ class Features extends React.Component {
                     </Row>
                     <Row>
                       <Col>
-                        <a
+                        {/* <a
                           href="http://files.metaquotes.net/3785/mt4/topgrowth4mobilesetup.cab"
                           target="_blank"
+                        > */}
+                        <a
+                          target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.topgrowthtrader.download[4]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
@@ -153,9 +204,17 @@ class Features extends React.Component {
                         </a>
                       </Col>
                       <Col>
-                        <a
+                        {/* <a
                           href="http://files.metaquotes.net/3785/mt4/topgrowth4mobilesetup.se.cab"
                           target="_blank"
+                        > */}
+                        <a
+                          target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.topgrowthtrader.download[5]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
@@ -249,8 +308,12 @@ class Features extends React.Component {
                         animateOut="fadeOut"
                       >
                         <a
-                          href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_macos_5_0_en.zip"
                           target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.topgrowthtrader.download[0]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
@@ -259,7 +322,7 @@ class Features extends React.Component {
                               width: "15vw",
                               height: "auto"
                             }}
-                            src={mac}
+                            src={pc}
                           />
                         </a>
                       </ScrollAnimation>
@@ -276,8 +339,12 @@ class Features extends React.Component {
                         animateOut="fadeOut"
                       >
                         <a
-                          href="http://files.metaquotes.net/3785/mt4/topgrowth4mobilesetup.cab"
                           target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.topgrowthtrader.download[1]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
@@ -286,7 +353,7 @@ class Features extends React.Component {
                               width: "15vw",
                               height: "auto"
                             }}
-                            src={mobile}
+                            src={mac}
                           />
                         </a>
                       </ScrollAnimation>
@@ -297,8 +364,12 @@ class Features extends React.Component {
                         animateOut="fadeOut"
                       >
                         <a
-                          href="https://download.mql5.com/cdn/mobile/mt4/android?server=Topgrowth-Demo"
                           target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.topgrowthtrader.download[2]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
@@ -324,8 +395,12 @@ class Features extends React.Component {
                         animateOut="fadeOut"
                       >
                         <a
-                          href="http://files.metaquotes.net/3785/mt4/topgrowth4mobilesetup.se.cab"
                           target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.topgrowthtrader.download[4]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
@@ -345,8 +420,12 @@ class Features extends React.Component {
                         animateOut="fadeOut"
                       >
                         <a
-                          href="https://download.mql5.com/cdn/web/3785/mt4/topgrowth4setup.exe"
                           target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.topgrowthtrader.download[5]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
@@ -355,7 +434,7 @@ class Features extends React.Component {
                               width: "15vw",
                               height: "auto"
                             }}
-                            src={pc}
+                            src={mobile}
                           />
                         </a>
                       </ScrollAnimation>
@@ -375,4 +454,11 @@ class Features extends React.Component {
   }
 }
 
-export default Features;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
+});
+
+const mapDispatchToProps = dispatch => ({});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Features);

@@ -154,7 +154,8 @@
       "subtitle": "Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this",
       "form": {
         "email": "Your Email",
-        "button": "Subscribe"
+        "button": "Subscribe",
+        "button_link": null
       }
     },
     "BottomNavbar": {
@@ -166,7 +167,8 @@
         "handphone": "Telepon",
         "leftTick": "Saya setuju untuk menerima berita dan email promosi dari Topgrowth Futures",
         "rightTick": "Saya telah membaca dan setuju kebijakan privasi kebijakan privasi",
-        "button": "Download E-Book"
+        "button": "Download E-Book",
+        "button_link": null
       }
     }
   },
@@ -793,7 +795,33 @@
         "image": "",
         "content": "Catatan Trading Anda dapat diakses dengan cepat."
       }
-    ]
+    ],
+    "download": [
+      {
+          "button": "test",
+          "button_link": null
+      },
+      {
+          "button": "test",
+          "button_link": null
+      },
+      {
+          "button": "test",
+          "button_link": null
+      },
+      {
+          "button": "test",
+          "button_link": null
+      },
+      {
+          "button": "test",
+          "button_link": null
+      },
+      {
+          "button": "test",
+          "button_link": null
+      }
+  ]
   },
   "topgrowthtrader": {
     "header": "Topgrowth Trader",
@@ -821,7 +849,33 @@
         "image": "",
         "content": "Berita real-time untuk bertrading secara fundamental."
       }
-    ]
+    ],
+    "download": [
+      {
+          "button": "test",
+          "button_link": null
+      },
+      {
+          "button": "",
+          "button_link": ""
+      },
+      {
+          "button": "",
+          "button_link": ""
+      },
+      {
+          "button": "",
+          "button_link": ""
+      },
+      {
+          "button": "",
+          "button_link": ""
+      },
+      {
+          "button": "",
+          "button_link": ""
+      }
+  ]
   },
   "login": {
     "form": {

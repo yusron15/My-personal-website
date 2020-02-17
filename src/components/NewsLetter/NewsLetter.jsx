@@ -74,9 +74,19 @@ class NewsLetter extends Component {
                         </InputGroup>
                       </Col>
                       <Col sm="4">
-                        <Button block color="info" type="button">
-                          Subscribe
-                        </Button>
+                        <a
+                          target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.Landing.NewsLetter.form
+                              .button_link
+                          }
+                        >
+                          <Button block color="info" type="button">
+                            {/* {this.props.pageStore.Landing.NewsLetter.button} */}
+                            Subscribe
+                          </Button>
+                        </a>
                       </Col>
                     </Row>
                   </Form>

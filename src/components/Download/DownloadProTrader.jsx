@@ -18,7 +18,8 @@ import ios from "../../assets/img/downloadios.png";
 
 import world from "../../assets/img/world.png";
 import bg from "../../assets/img/download-bg.png";
-
+import { getContent } from "../../redux/ducks/actions.js";
+import { connect } from "react-redux";
 import "../../assets/css/main.css";
 class Features extends React.Component {
   renderContent = () => {
@@ -64,9 +65,17 @@ class Features extends React.Component {
                     <Col>
                       <Row>
                         <Col style={{ padding: 0 }}>
-                          <a
+                          {/* <a
                             href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_windows.zip"
                             target="_blank"
+                          > */}
+                          <a
+                            target="_blank"
+                            style={{ backgroundColor: "transparent" }}
+                            href={
+                              this.props.pageStore.protrader.download[0]
+                                .button_link
+                            }
                           >
                             <img
                               alt="..."
@@ -81,9 +90,17 @@ class Features extends React.Component {
                           </a>
                         </Col>
                         <Col style={{ padding: 0 }}>
-                          <a
+                          {/* <a
                             href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_macos_5_0_en.zip"
                             target="_blank"
+                          > */}
+                          <a
+                            target="_blank"
+                            style={{ backgroundColor: "transparent" }}
+                            href={
+                              this.props.pageStore.protrader.download[1]
+                                .button_link
+                            }
                           >
                             <img
                               alt="..."
@@ -99,9 +116,17 @@ class Features extends React.Component {
                       </Row>
                       <Row>
                         <Col style={{ padding: 0 }}>
-                          <a
+                          {/* <a
                             href="https://play.google.com/store/apps/details?id=com.ifx.ProiTrader"
                             target="_blank"
+                          > */}
+                          <a
+                            target="_blank"
+                            style={{ backgroundColor: "transparent" }}
+                            href={
+                              this.props.pageStore.protrader.download[2]
+                                .button_link
+                            }
                           >
                             <img
                               alt="..."
@@ -115,9 +140,17 @@ class Features extends React.Component {
                           </a>
                         </Col>
                         <Col style={{ padding: 0 }}>
-                          <a
+                          {/* <a
                             href="http://itunes.apple.com/id/app/pro-itrader/id440449403?mt=8"
                             target="_blank"
+                          > */}
+                          <a
+                            target="_blank"
+                            style={{ backgroundColor: "transparent" }}
+                            href={
+                              this.props.pageStore.protrader.download[3]
+                                .button_link
+                            }
                           >
                             <img
                               alt="..."
@@ -189,15 +222,24 @@ class Features extends React.Component {
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
+                        {/* <a
+                            href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_windows.zip"
+                            target="_blank"
+                          > */}
                         <a
-                          href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_windows.zip"
                           target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.protrader.download[0]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
-                            className="bg-blob"
+                            md="12"
                             style={{
-                              width: "15vw",
+                              width: "50vw",
+                              margin: "20px 2px 0 2px",
                               height: "auto"
                             }}
                             src={pc}
@@ -210,15 +252,23 @@ class Features extends React.Component {
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
+                        {/* <a
+                            href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_macos_5_0_en.zip"
+                            target="_blank"
+                          > */}
                         <a
-                          href="http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_macos_5_0_en.zip"
                           target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.protrader.download[1]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
-                            className="bg-blob"
                             style={{
-                              width: "15vw",
+                              width: "50vw",
+                              margin: "20px 2px 0 2px",
                               height: "auto"
                             }}
                             src={mac}
@@ -237,15 +287,23 @@ class Features extends React.Component {
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
+                        {/* <a
+                            href="https://play.google.com/store/apps/details?id=com.ifx.ProiTrader"
+                            target="_blank"
+                          > */}
                         <a
-                          href="https://play.google.com/store/apps/details?id=com.ifx.ProiTrader"
                           target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.protrader.download[2]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
-                            className="bg-blob"
                             style={{
-                              width: "15vw",
+                              width: "50vw",
+                              marginTop: "20px",
                               height: "auto"
                             }}
                             src={android}
@@ -258,15 +316,23 @@ class Features extends React.Component {
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
                       >
+                        {/* <a
+                            href="http://itunes.apple.com/id/app/pro-itrader/id440449403?mt=8"
+                            target="_blank"
+                          > */}
                         <a
-                          href="http://itunes.apple.com/id/app/pro-itrader/id440449403?mt=8"
                           target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.props.pageStore.protrader.download[3]
+                              .button_link
+                          }
                         >
                           <img
                             alt="..."
-                            className="bg-blob"
                             style={{
-                              width: "15vw",
+                              width: "50vw",
+                              margin: "20px 2px 0 2px",
                               height: "auto"
                             }}
                             src={ios}
@@ -290,4 +356,11 @@ class Features extends React.Component {
   }
 }
 
-export default Features;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
+});
+
+const mapDispatchToProps = dispatch => ({});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Features);

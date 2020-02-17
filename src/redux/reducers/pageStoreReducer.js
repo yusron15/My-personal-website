@@ -170,7 +170,8 @@ const defaultState = {
         "Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this",
       form: {
         email: "Your Email",
-        button: "Subscribe"
+        button: "Subscribe",
+        button_link: null
       }
     },
     Footer: [
@@ -213,7 +214,8 @@ const defaultState = {
           "Saya setuju untuk menerima berita dan email promosi dari Topgrowth Futures",
         rightTick:
           "Saya telah membaca dan setuju kebijakan privasi kebijakan privasi",
-        button: "Download E-Book"
+        button: "Download E-Book",
+        button_link: null
       }
     }
   },
@@ -886,6 +888,32 @@ const defaultState = {
       },
       { image: "", content: "Bisa disesuaikan dengan kebutuhan anda." },
       { image: "", content: "Catatan Trading Anda dapat diakses dengan cepat." }
+    ],
+    download: [
+      {
+        button: "test",
+        button_link: null
+      },
+      {
+        button: "test",
+        button_link: null
+      },
+      {
+        button: "test",
+        button_link: null
+      },
+      {
+        button: "test",
+        button_link: null
+      },
+      {
+        button: "test",
+        button_link: null
+      },
+      {
+        button: "test",
+        button_link: null
+      }
     ]
   },
   topgrowthtrader: {
@@ -914,7 +942,33 @@ const defaultState = {
         image: "",
         content: "Berita real-time untuk bertrading secara fundamental."
       }
-    ]
+    ],
+    download: [
+      {
+          button: "test",
+          button_link: null
+      },
+      {
+          button: "",
+          button_link: ""
+      },
+      {
+          button: "",
+          button_link: ""
+      },
+      {
+          button: "",
+          button_link: ""
+      },
+      {
+          button: "",
+          button_link: ""
+      },
+      {
+          button: "",
+          button_link: ""
+      }
+  ]
   },
   login: {
     form: {
