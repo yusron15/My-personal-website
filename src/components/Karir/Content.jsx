@@ -102,13 +102,13 @@ class Blogs extends React.Component {
                 className="background-header-mobile"
                 style={{
                   backgroundImage:
-                    "url(" + this.props.pageStore.karir.image_background + ")",
+                    "url(" + this.props.karirList.background_image + ")",
                   padding: 0
                 }}
               >
                 <SidebarMobile />
                 <div className="title title-header-mobile">
-                  {this.props.pageStore.karir.Header}
+                  {this.props.karirList.title}
                 </div>
                 <div
                   style={{ textAlign: "center" }}
@@ -124,11 +124,7 @@ class Blogs extends React.Component {
                       className="description font-black"
                       style={{ marginTop: "10%", marginBottom: "2%" }}
                     >
-                      {ReactHtmlParser(
-                        this.props.pageStore.karir.content
-                          ? this.props.pageStore.karir.content.title
-                          : "Berikut ini lowongan kerja yang tersedia di Topgrowth Futures saat ini"
-                      )}
+                      {ReactHtmlParser(this.props.karirList.description)}
                     </p>
                     <Row style={{ marginBottom: "10%" }}>
                       <Col md="6">
@@ -291,14 +287,14 @@ class Blogs extends React.Component {
               className="team-1 background-header"
               style={{
                 backgroundImage:
-                  "url(" + this.props.pageStore.karir.image_background + ")",
+                  "url(" + this.props.karirList.background_image + ")",
                 padding: 0
               }}
             >
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">
-                {this.props.pageStore.karir.Header}
+                {this.props.karirList.title}
               </div>
               <div
                 style={{ textAlign: "center" }}
@@ -314,27 +310,10 @@ class Blogs extends React.Component {
                     className="description font-black"
                     style={{ marginTop: "10%", marginBottom: "2%" }}
                   >
-                    {/* Berikut ini lowongan kerja yang tersedia di Topgrowth
-                    Futures saat ini: */}
-                    {ReactHtmlParser(
-                      this.props.pageStore.karir.content
-                        ? this.props.pageStore.karir.content.title
-                        : "Berikut ini lowongan kerja yang tersedia di Topgrowth Futures saat ini"
-                    )}
+                    {ReactHtmlParser(this.props.karirList.description)}
                   </p>
                   <Row style={{ marginBottom: "10%" }}>
                     <Col md="6">
-                      {/* <Card className="card-blog card-plain">
-                        <div className="card-image">
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img
-                              alt="..."
-                              className="img rounded"
-                              src={require("assets/img/karir1.jpg")}
-                            />
-                          </a>
-                        </div>
-                      </Card> */}
                       <div
                         style={{
                           marginTop: "30px",
@@ -344,27 +323,17 @@ class Blogs extends React.Component {
                         <SearchField
                           className="react-search-field-input"
                           placeholder="Cari "
+                          // onChange={this.props.karirList.divisi}
                         />
                       </div>
                     </Col>
 
                     <Col md="5">
-                      {/* <Card className="card-blog card-plain">
-                        <div className="card-image">
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img
-                              alt="..."
-                              className="img rounded"
-                              src={require("assets/img/karir2.jpg")}
-                            />
-                          </a>
-                        </div>
-                      </Card> */}
-                      {/* <div style={{ maxHeight: "10px" }}> */}
                       <Select
                         styles={customStyles}
                         value="index "
-                        options={divisions}
+                        // options={this.props.karirList.karirlist[0].divisi}
+
                         value={this.state.dataSelect}
                         onChange={async data => {
                           await this.setState({
@@ -372,7 +341,6 @@ class Blogs extends React.Component {
                           });
                         }}
                       />
-                      {/* </div> */}
                     </Col>
 
                     {/* {this.state.stateKarir.map((item, index) => (
@@ -486,13 +454,6 @@ class Blogs extends React.Component {
                               )}
                             </p>
                           </AccordionItemPanel>
-                          {/* <AccordionItemPanel>
-                            <p style={{ color: "black" }}>
-                              {item.detail.map(itemDetail =>
-                                ReactHtmlParser(itemDetail.qualification)
-                              )}
-                            </p>
-                          </AccordionItemPanel> */}
                         </AccordionItem>
                       </Accordion>
                     ))}

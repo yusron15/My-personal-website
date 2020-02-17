@@ -904,3 +904,21 @@ ul li {
     opacity: 1;
   }
 }
+
+.textnews{
+
+  color:black
+}
+
+.textnews:hover {
+  color: blue;
+}
+
+p > .textnews{
+
+  color:black
+}
+
+p > .textnews:hover {
+  color: blue;
+}

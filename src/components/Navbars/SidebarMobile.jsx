@@ -41,7 +41,7 @@ import LangTogglerButton from "../LangTogglerButton";
 import Radium, { StyleRoot } from "radium";
 import vl from "../../assets/img/vertical-line.png";
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { getContent } from "../../redux/ducks/actions.js";
 
 const title = {
   fontSize: "15px",
@@ -336,11 +336,13 @@ class SidebarMobile extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SidebarMobile);

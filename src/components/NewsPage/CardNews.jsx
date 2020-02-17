@@ -95,7 +95,7 @@ class CardNews extends React.Component {
               src={image}
               alt="Card image cap"
             />
-            <div className="font-black" style={{ height: "100%" }}>
+            <div className="textnews" style={{ height: "100%" }}>
               <CardBody
                 style={{
                   display: "flex",
@@ -103,10 +103,16 @@ class CardNews extends React.Component {
                   height: "100%"
                 }}
               >
-                <h4 style={{ color: "black", flexGrow: 1, display: "flex" }}>
+                <h4
+                  className="textnews"
+                  style={{ flexGrow: 1, display: "flex" }}
+                >
                   {title}
                 </h4>
-                <p style={{ color: "black", flexGrow: 1, display: "flex" }}>
+                <p
+                  className="textnews"
+                  style={{ flexGrow: 1, display: "flex" }}
+                >
                   {description}
                 </p>
                 <div style={{ display: "flex", marginTop: 15 }}>

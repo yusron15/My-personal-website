@@ -26,6 +26,8 @@ import vimeo from "../../assets/img/vimeo.png";
 import subscribe from "../../assets/img/black-icon-email.png";
 import flag from "../../assets/img/flag-uk.png";
 
+import { connect } from "react-redux";
+import { fetchPage, getContent } from "../../redux/ducks/actions.js";
 import "../../assets/css/main.css";
 
 const font = {
@@ -34,39 +36,9 @@ const font = {
 };
 
 class BlurryNavbar extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     backgroundColor: ""
-  //   };
-  // }
-
-  // state = {
-  //   navbarPosition: "bg-darker"
-  // };
-  // componentDidMount() {
-  //   window.addEventListener("scroll", this.changenavbarPosition);
-  // }
-  // componentWillUnmount() {
-  //   window.removeEventListener("scroll", this.changenavbarPosition);
-  // }
-  // changenavbarPosition = () => {
-  //   if (
-  //     document.documentElement.scrollTop > 299 ||
-  //     document.body.scrollTop > 299
-  //   ) {
-  //     this.setState({
-  //       navbarPosition: "bg-darker"
-  //     });
-  //   } else if (
-  //     document.documentElement.scrollTop < 300 ||
-  //     document.body.scrollTop < 300
-  //   ) {
-  //     this.setState({
-  //       navbarPosition: "navbar-transparent fixed-top "
-  //     });
-  //   }
-  // };
+  async componentDidMount() {
+    await this.props.getContent("landing", "id");
+  }
   render() {
     return (
       <>
@@ -97,18 +69,7 @@ class BlurryNavbar extends React.Component {
             <UncontrolledCollapse navbar toggler="#example-navbar-transparent">
               <Nav className="ml-auto" style={{ marginRight: "25px" }} navbar>
                 <NavItem>
-                  {/* <Link to="/#" className="vertical-center-nav"> */}
-                  {/* <img
-                      src={flag}
-                      style={{
-                        paddingRight: "10px",
-                        height: "10px",
-                        width: "auto"
-                      }}
-                    /> */}
-                  {/* <text style={font}>ENG</text> */}
                   <LangTogglerButton />
-                  {/* </Link> */}
                 </NavItem>
                 <div class="vl"></div>
                 <NavItem style={{ marginTop: "5px" }}>
@@ -163,4 +124,12 @@ class BlurryNavbar extends React.Component {
   }
 }
 
-export default BlurryNavbar;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  getContent: (section, lang) => dispatch(getContent(section, lang))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BlurryNavbar);

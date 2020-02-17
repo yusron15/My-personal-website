@@ -78,6 +78,13 @@
         }
       ]
     },
+    "topbar": {
+      "phone": "+62 21 2788 9393",
+      "link_1": "",
+      "link_2": "",
+      "link_3": "",
+      "link_4": ""
+    },
     "News": {
       "title": "Berita Ekonomi"
     },
@@ -945,13 +952,15 @@
         "Fax: (+62)21 2788-9395"
       ]
     },
-    "form": {
-      "firstname": "First Name",
-      "lastname": "Last Name",
-      "emailaddress": "Email address",
-      "yourmessage": "Your Message",
-      "button": "Send Message"
-    }
+    "form": [
+      {
+        "firstname": "Nama Depan",
+        "lastname": "Nama Belakang",
+        "emailaddress": "Alamat Email",
+        "yourmessage": "Pesan Anda",
+        "button": "Kirim pesan"
+      }
+    ]
   },
   "Header": {
     "m1": { "title": "Beranda" },

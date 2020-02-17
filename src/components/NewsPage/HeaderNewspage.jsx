@@ -31,6 +31,7 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import BreakingNews from "../../components/Landing/BreakingNews";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
+import { connect } from "react-redux";
 
 class HeaderContent extends Component {
   render() {
@@ -44,7 +45,7 @@ class HeaderContent extends Component {
         <BlurryNavbar />
         <ColoredNavbar location={{ ...this.props.location }} />
         <div className="title title-header" style={{ marginBottom: "8%" }}>
-          Newspage
+          NewsPage
         </div>
       </div>
     );
@@ -62,7 +63,7 @@ class HeaderContentMobile extends Component {
           }}
         >
           <SidebarMobile />
-          <div className="title title-header-mobile">Newspage</div>
+          <div className="title title-header-mobile">NewsPage</div>
         </div>
       </>
     );
@@ -108,4 +109,8 @@ class HeaderNewsPage extends Component {
   }
 }
 
-export default HeaderNewsPage;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore
+});
+
+export default connect(mapStateToProps, null)(HeaderNewsPage);

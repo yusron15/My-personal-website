@@ -86,6 +86,13 @@ const defaultState = {
         }
       ]
     },
+    topbar: {
+      phone: "+62 21 2788 9393",
+      link_1: "",
+      link_2: "",
+      link_3: "",
+      link_4: ""
+    },
     News: {},
     NewsInverted: {},
     Benefit: {
@@ -945,30 +952,30 @@ const defaultState = {
     ],
     download: [
       {
-          button: "test",
-          button_link: null
+        button: "test",
+        button_link: null
       },
       {
-          button: "",
-          button_link: ""
+        button: "",
+        button_link: ""
       },
       {
-          button: "",
-          button_link: ""
+        button: "",
+        button_link: ""
       },
       {
-          button: "",
-          button_link: ""
+        button: "",
+        button_link: ""
       },
       {
-          button: "",
-          button_link: ""
+        button: "",
+        button_link: ""
       },
       {
-          button: "",
-          button_link: ""
+        button: "",
+        button_link: ""
       }
-  ]
+    ]
   },
   login: {
     form: {
@@ -1046,13 +1053,15 @@ const defaultState = {
         "Fax: (+62)21 2788-9395"
       ]
     },
-    form: {
-      firstname: "First Name",
-      lastname: "Last Name",
-      emailaddress: "Email address",
-      yourmessage: "Your Message",
-      button: "Send Message"
-    }
+    form: [
+      {
+        firstname: "Nama Depan",
+        lastname: "Nama Belakang",
+        emailaddress: "Alamat Email",
+        yourmessage: "Pesan Anda",
+        button: "Kirim pesan"
+      }
+    ]
   },
   Header: {
     m1: { title: "Beranda" },

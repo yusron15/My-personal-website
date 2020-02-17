@@ -309,9 +309,10 @@ class Content extends React.Component {
                                 className="btn-round pull-right"
                                 color="info"
                               >
-                                {this.props.currentLang == "EN"
-                                  ? "Kirim"
-                                  : "Send"}
+                                {
+                                  this.props.pageStore.hubungikami.form[0]
+                                    .button
+                                }
                               </Button>
                             </Col>
                           </Row>
