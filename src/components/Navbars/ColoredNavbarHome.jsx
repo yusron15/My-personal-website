@@ -123,9 +123,7 @@ class ColorNavbar extends React.Component {
     await this.props.getContent("Header", this.props.currentLang, true);
     window.addEventListener("scroll", this.changeNavbarColor);
     // } catch (error) {
-    //   console.log(error);
     // }
-    console.log("COMPONEENT DID MOUNT");
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeNavbarTop);
@@ -186,8 +184,6 @@ class ColorNavbar extends React.Component {
       : this.state.backgroundColor == "broken-white"
       ? "black"
       : "white";
-
-    // console.log(currentPath, pathLink, "adasdadas");
   };
 
   coloringButton = pathLink => {
@@ -231,7 +227,6 @@ class ColorNavbar extends React.Component {
     };
     const { containerStyle, colorStyle } = styles;
     if (isMobile) {
-      console.log("Mobile");
       return (
         <>
           <SidebarMobile />

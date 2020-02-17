@@ -45,8 +45,7 @@ class HeaderContent extends Component {
         <BlurryNavbar />
         <ColoredNavbar location={{ ...this.props.location }} />
         <div className="title title-header" style={{ marginBottom: "8%" }}>
-          {/* {this.props.pageStore.berita.} */}
-          Newspage
+          {this.props.pageStore.berita.Header}
         </div>
       </div>
     );
@@ -64,7 +63,9 @@ class HeaderContentMobile extends Component {
           }}
         >
           <SidebarMobile />
-          <div className="title title-header-mobile">NewsPage</div>
+          <div className="title title-header-mobile">
+            {this.props.pageStore.berita.Header}
+          </div>
         </div>
       </>
     );
@@ -78,12 +79,12 @@ class HeaderNewsPage extends Component {
         <>
           <div
             style={{
-              backgroundImage: `url(${bg})`,
+              backgroundImage: `url(${this.props.pageStore.berita.backgroun_image})`,
               padding: 0,
               backgroundSize: "cover"
             }}
           >
-            <HeaderContentMobile />
+            <HeaderContentMobile pageStore={{ ...this.props.pageStore }} />
             <BreakingNews />
           </div>
         </>
@@ -93,12 +94,15 @@ class HeaderNewsPage extends Component {
       <>
         <div
           style={{
-            backgroundImage: `url(${bg})`,
+            backgroundImage: `url(${this.props.pageStore.berita.backgroun_image})`,
             backgroundSize: "cover",
             padding: 0
           }}
         >
-          <HeaderContent location={{ ...this.props.location }} />
+          <HeaderContent
+            location={{ ...this.props.location }}
+            pageStore={{ ...this.props.pageStore }}
+          />
           <BreakingNews />
         </div>
       </>
@@ -116,4 +120,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, null)(HeaderNewsPage);
-// export default HeaderNewsPage;

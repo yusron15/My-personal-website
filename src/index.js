@@ -140,8 +140,6 @@ class App extends Component {
     let langLocal = await localStorage.getItem("@currentLang");
     let flagLocal = await localStorage.getItem("@currentFlag");
 
-    console.log(langLocal, "langLocallangLocal");
-
     store.dispatch({
       type: "CHANGE_FLAG_LANG",
       payload: flagLocal || "id"

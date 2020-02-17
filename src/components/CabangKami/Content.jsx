@@ -162,7 +162,6 @@ class News extends React.Component {
     this["carousel" + carousel + "Animating"] = false;
   };
   next = (carousel, items, tab) => {
-    console.log(this.state["carousel" + carousel + "Index"]);
     if (this["carousel" + carousel + "Animating"]) return;
     const nextIndex =
       this.state["carousel" + carousel + "Index"] === items.length - 1
@@ -175,7 +174,6 @@ class News extends React.Component {
   };
 
   previous = (carousel, items) => {
-    console.log(this.state["carousel" + carousel + "Index"]);
     if (this["carousel" + carousel + "Animating"]) return;
     const nextIndex =
       this.state["carousel" + carousel + "Index"] === 0
@@ -188,7 +186,6 @@ class News extends React.Component {
   };
 
   goToIndex = (newIndex, carousel) => {
-    console.log(this.state["carousel" + carousel + "Index"]);
     if (this["carousel" + carousel + "Animating"]) return;
     this.setState({
       ["carousel" + carousel + "Index"]: newIndex,

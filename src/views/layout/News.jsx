@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import {
   Badge,
   Button,
@@ -33,6 +35,8 @@ import EconomicCalendarInside from "../../components/NewsContent/EconomicCalenda
 import Footer from "../../components/Footers/Footer.jsx";
 import "../../assets/css/main.css";
 
+import { getContent, getNews } from "../../redux/ducks/actions.js";
+
 class NewsPage extends React.Component {
   state = {
     activeTab: "1"
@@ -46,8 +50,13 @@ class NewsPage extends React.Component {
     }
   };
 
-  componentDidMount = () => {
-    window.scroll(0, 0);
+  componentDidMount = async () => {
+    try {
+      await this.props.getContent("Berita", this.props.currentLang, true);
+      await window.scroll(0, 0);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   render() {
@@ -208,4 +217,16 @@ class NewsPage extends React.Component {
   }
 }
 
-export default NewsPage;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
+});
+
+const mapDispatchToProps = dispatch => ({
+  // fetchPage: (section, lang) => dispatch(fetchPage(section, lang)),
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle)),
+  getNews: type => dispatch(getNews(type))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewsPage);

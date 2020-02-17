@@ -63,7 +63,6 @@ class Blogs extends React.Component {
 
   async componentDidUpdate(prevProps, prevState) {
     if (prevProps.karirList !== this.props.karirList) {
-      console.log("karirList", this.props.karirList);
       if (this.props.karirList.karirlist) {
         await this.setState({
           stateKarir: this.props.karirList.karirlist.map(item => {
@@ -81,7 +80,6 @@ class Blogs extends React.Component {
     let divisions;
     if (this.props.karirList) {
       let a = _.uniqBy(this.props.karirList.karirlist, "devisi");
-      console.log(a, "karirList");
       if (a.length > 0) {
         divisions = a.map(item => {
           return {
@@ -89,7 +87,6 @@ class Blogs extends React.Component {
             value: item.devisi
           };
         });
-        console.log(divisions, "karirList");
       }
     }
 

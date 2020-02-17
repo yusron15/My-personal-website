@@ -22,8 +22,7 @@ import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import { LangContext } from "../MyContext";
-import { TableContent3, TableContent4} from '../Table/Table';
-
+import { TableContent3, TableContent4 } from "../Table/Table";
 
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
@@ -93,8 +92,6 @@ class Features extends React.Component {
   async componentDidMount() {}
 
   transform(node) {
-    // do not render any <span> tags
-    console.log(node);
     if (node.name === "p") {
       alert(node.name);
       return null;
@@ -115,9 +112,7 @@ class Features extends React.Component {
               className="team-1 background-header-mobile"
               style={{
                 backgroundImage:
-                "url(" +
-                this.props.pageStore.Forex.image_background +
-                ")",
+                  "url(" + this.props.pageStore.Forex.image_background + ")",
                 padding: 0
               }}
             >
@@ -128,10 +123,10 @@ class Features extends React.Component {
                 {ReactHtmlParser(this.props.pageStore.Forex.header)}
               </div>
               <Container>
-                    <div style={descHeader}>
-                      {ReactHtmlParser(this.props.pageStore.Forex.sub_header)}
-                    </div>
-                  </Container>
+                <div style={descHeader}>
+                  {ReactHtmlParser(this.props.pageStore.Forex.sub_header)}
+                </div>
+              </Container>
             </div>
             <div className="features-3" style={{ paddingTop: 0 }}>
               <Container fluid>
@@ -200,13 +195,17 @@ class Features extends React.Component {
                           className="title-content"
                           style={{ color: "black" }}
                         >
-                          {ReactHtmlParser(this.props.pageStore.Forex.content[1].title)}
+                          {ReactHtmlParser(
+                            this.props.pageStore.Forex.content[1].title
+                          )}
                         </div>
                         <p
                           className="font-black"
                           style={{ textAlign: "justify" }}
                         >
-                          {ReactHtmlParser(this.props.pageStore.Forex.content[1].content)}
+                          {ReactHtmlParser(
+                            this.props.pageStore.Forex.content[1].content
+                          )}
                         </p>{" "}
                       </div>
                     </Col>
@@ -240,38 +239,53 @@ class Features extends React.Component {
                         </div>
 
                         <Table
-                            className="table-shopping"
-                            style={{
-                             backgroundColor: "#224377",
-                             borderRadius: "5px",
-                              borderCollapse: "inherit"
-                           }}
-                         >
-                            <thead>
+                          className="table-shopping"
+                          style={{
+                            backgroundColor: "#224377",
+                            borderRadius: "5px",
+                            borderCollapse: "inherit"
+                          }}
+                        >
+                          <thead>
                             <tr style={{ backgroundColor: "#224377" }}>
                               <td className="text-white text-center">
-                                <b>{this.props.pageStore.Forex.content[3].table[0].prefix1}</b>
+                                <b>
+                                  {
+                                    this.props.pageStore.Forex.content[3]
+                                      .table[0].prefix1
+                                  }
+                                </b>
                               </td>
                               <td className="text-white text-center">
-                                <b>{this.props.pageStore.Forex.content[3].table[0].prefix2}</b>
+                                <b>
+                                  {
+                                    this.props.pageStore.Forex.content[3]
+                                      .table[0].prefix2
+                                  }
+                                </b>
                               </td>
                               <td className="text-white text-center">
-                                <b>{this.props.pageStore.Forex.content[3].table[0].prefix3}</b>
+                                <b>
+                                  {
+                                    this.props.pageStore.Forex.content[3]
+                                      .table[0].prefix3
+                                  }
+                                </b>
                               </td>
-                           </tr>
+                            </tr>
                           </thead>
-                          {
-                              this.props.pageStore.Forex.content[3]
-                              .table[0].tableData.map((item, index) => {
-                                return (
+                          {this.props.pageStore.Forex.content[3].table[0].tableData.map(
+                            (item, index) => {
+                              return (
                                 <TableContent3
                                   prefix1={item.prefix1}
                                   prefix2={item.prefix2}
                                   prefix3={item.prefix3}
-                               />
+                                />
                               );
-                            })}
-                          </Table>
+                            }
+                          )}
+                        </Table>
                       </div>
 
                       <div style={{ marginTop: "20px" }}>
@@ -280,39 +294,53 @@ class Features extends React.Component {
                         </div>
 
                         <Table
-                            className="table-shopping"
-                            style={{
-                             backgroundColor: "#224377",
-                             borderRadius: "5px",
-                              borderCollapse: "inherit"
-                           }}
-                         >
-                            <thead>
+                          className="table-shopping"
+                          style={{
+                            backgroundColor: "#224377",
+                            borderRadius: "5px",
+                            borderCollapse: "inherit"
+                          }}
+                        >
+                          <thead>
                             <tr style={{ backgroundColor: "#224377" }}>
                               <td className="text-white text-center">
-                                <b>{this.props.pageStore.Forex.content[4].table[0].prefix1}</b>
+                                <b>
+                                  {
+                                    this.props.pageStore.Forex.content[4]
+                                      .table[0].prefix1
+                                  }
+                                </b>
                               </td>
                               <td className="text-white text-center">
-                                <b>{this.props.pageStore.Forex.content[4].table[0].prefix2}</b>
+                                <b>
+                                  {
+                                    this.props.pageStore.Forex.content[4]
+                                      .table[0].prefix2
+                                  }
+                                </b>
                               </td>
                               <td className="text-white text-center">
-                                <b>{this.props.pageStore.Forex.content[4].table[0].prefix3}</b>
+                                <b>
+                                  {
+                                    this.props.pageStore.Forex.content[4]
+                                      .table[0].prefix3
+                                  }
+                                </b>
                               </td>
-                           </tr>
+                            </tr>
                           </thead>
-                          {
-                              this.props.pageStore.Forex.content[4]
-                              .table[0].tableData.map((item, index) => {
-                                return (
+                          {this.props.pageStore.Forex.content[4].table[0].tableData.map(
+                            (item, index) => {
+                              return (
                                 <TableContent3
                                   prefix1={item.prefix1}
                                   prefix2={item.prefix2}
                                   prefix3={item.prefix3}
-                               />
+                                />
                               );
-                            })}
-                          </Table>
-
+                            }
+                          )}
+                        </Table>
                       </div>
                     </Col>
                   </Row>
@@ -341,9 +369,9 @@ class Features extends React.Component {
                   className="team-1 background-header"
                   style={{
                     backgroundImage:
-                    "url(" +
-                    this.props.pageStore.Forex.image_background +
-                    ")",
+                      "url(" +
+                      this.props.pageStore.Forex.image_background +
+                      ")",
                     padding: 0
                   }}
                 >
@@ -365,12 +393,10 @@ class Features extends React.Component {
                   <Container fluid>
                     <Row>
                       <Col className="ml-auto mr-auto text-center" md="8">
-                  
                         <div className="space-50" />
                         <p className="font-black" style={intermezzo}>
                           {ReactHtmlParser(this.props.pageStore.Forex.top)}
                         </p>
-                     
                       </Col>
                     </Row>
                     <Row>
@@ -483,38 +509,53 @@ class Features extends React.Component {
                               </div>
 
                               <Table
-                            className="table-shopping"
-                            style={{
-                             backgroundColor: "#224377",
-                             borderRadius: "5px",
-                              borderCollapse: "inherit"
-                           }}
-                         >
-                            <thead>
-                            <tr style={{ backgroundColor: "#224377" }}>
-                              <td className="text-white text-center">
-                                <b>{this.props.pageStore.Forex.content[3].table[0].prefix1}</b>
-                              </td>
-                              <td className="text-white text-center">
-                                <b>{this.props.pageStore.Forex.content[3].table[0].prefix2}</b>
-                              </td>
-                              <td className="text-white text-center">
-                                <b>{this.props.pageStore.Forex.content[3].table[0].prefix3}</b>
-                              </td>
-                           </tr>
-                          </thead>
-                          {
-                              this.props.pageStore.Forex.content[3]
-                              .table[0].tableData.map((item, index) => {
-                                return (
-                                <TableContent3
-                                  prefix1={item.prefix1}
-                                  prefix2={item.prefix2}
-                                  prefix3={item.prefix3}
-                               />
-                              );
-                            })}
-                          </Table>
+                                className="table-shopping"
+                                style={{
+                                  backgroundColor: "#224377",
+                                  borderRadius: "5px",
+                                  borderCollapse: "inherit"
+                                }}
+                              >
+                                <thead>
+                                  <tr style={{ backgroundColor: "#224377" }}>
+                                    <td className="text-white text-center">
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[3]
+                                            .table[0].prefix1
+                                        }
+                                      </b>
+                                    </td>
+                                    <td className="text-white text-center">
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[3]
+                                            .table[0].prefix2
+                                        }
+                                      </b>
+                                    </td>
+                                    <td className="text-white text-center">
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[3]
+                                            .table[0].prefix3
+                                        }
+                                      </b>
+                                    </td>
+                                  </tr>
+                                </thead>
+                                {this.props.pageStore.Forex.content[3].table[0].tableData.map(
+                                  (item, index) => {
+                                    return (
+                                      <TableContent3
+                                        prefix1={item.prefix1}
+                                        prefix2={item.prefix2}
+                                        prefix3={item.prefix3}
+                                      />
+                                    );
+                                  }
+                                )}
+                              </Table>
                             </div>
                           </Col>
                           <Col>
@@ -524,38 +565,53 @@ class Features extends React.Component {
                               </div>
 
                               <Table
-                            className="table-shopping"
-                            style={{
-                             backgroundColor: "#224377",
-                             borderRadius: "5px",
-                              borderCollapse: "inherit"
-                           }}
-                         >
-                            <thead>
-                            <tr style={{ backgroundColor: "#224377" }}>
-                              <td className="text-white text-center">
-                                <b>{this.props.pageStore.Forex.content[4].table[0].prefix1}</b>
-                              </td>
-                              <td className="text-white text-center">
-                                <b>{this.props.pageStore.Forex.content[4].table[0].prefix2}</b>
-                              </td>
-                              <td className="text-white text-center">
-                                <b>{this.props.pageStore.Forex.content[4].table[0].prefix3}</b>
-                              </td>
-                           </tr>
-                          </thead>
-                          {
-                              this.props.pageStore.Forex.content[4]
-                              .table[0].tableData.map((item, index) => {
-                                return (
-                                <TableContent3
-                                  prefix1={item.prefix1}
-                                  prefix2={item.prefix2}
-                                  prefix3={item.prefix3}
-                               />
-                              );
-                            })}
-                          </Table>
+                                className="table-shopping"
+                                style={{
+                                  backgroundColor: "#224377",
+                                  borderRadius: "5px",
+                                  borderCollapse: "inherit"
+                                }}
+                              >
+                                <thead>
+                                  <tr style={{ backgroundColor: "#224377" }}>
+                                    <td className="text-white text-center">
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].prefix1
+                                        }
+                                      </b>
+                                    </td>
+                                    <td className="text-white text-center">
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].prefix2
+                                        }
+                                      </b>
+                                    </td>
+                                    <td className="text-white text-center">
+                                      <b>
+                                        {
+                                          this.props.pageStore.Forex.content[4]
+                                            .table[0].prefix3
+                                        }
+                                      </b>
+                                    </td>
+                                  </tr>
+                                </thead>
+                                {this.props.pageStore.Forex.content[4].table[0].tableData.map(
+                                  (item, index) => {
+                                    return (
+                                      <TableContent3
+                                        prefix1={item.prefix1}
+                                        prefix2={item.prefix2}
+                                        prefix3={item.prefix3}
+                                      />
+                                    );
+                                  }
+                                )}
+                              </Table>
                             </div>
                           </Col>
                         </Row>

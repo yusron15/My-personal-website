@@ -19,10 +19,7 @@ import "../../assets/css/main.css";
 class CardNews extends React.Component {
   renderContent = () => {
     const { title, description, image, person, date, link } = this.props;
-    console.log(
-      { title, description, image, person, date, link },
-      "{ title, description, image, person, date, link }"
-    );
+
     if (isMobile) {
       return (
         <>

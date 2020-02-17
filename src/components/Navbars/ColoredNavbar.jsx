@@ -173,8 +173,6 @@ class ColorNavbar extends React.Component {
       : this.state.navbarColor == "broken-white"
       ? "black"
       : "white";
-
-    // console.log(currentPath, pathLink, "adasdadas");
   };
 
   fontBold = pathLink => {

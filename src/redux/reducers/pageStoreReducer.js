@@ -93,7 +93,7 @@ const defaultState = {
         }
       ]
     },
-   
+
     News: {},
     NewsInverted: {},
     Benefit: {
@@ -1001,12 +1001,18 @@ const defaultState = {
     }
   },
   berita: {
-    terkini: "Berita Terkini",
-    terpopuler: "Berita Terpopuler",
-    outlook: "Market Outlook",
-    forex: "Forex & Commodity News",
-    stock: "Stock Index News",
-    button: "Indeks Berita"
+    Header: "Berita",
+    subheader: "",
+    backgroun_image:
+      "https://topgrowth.sgp1.digitaloceanspaces.com/-1581924564385.png",
+    berita: {
+      terkini: "Berita Terkini",
+      terpopuler: "Berita Terpopuler",
+      outlook: "Market Outlook",
+      forex: "Forex & Commodity News",
+      stock: "Stock Index News",
+      button: "Indeks Berita"
+    }
   },
   edukasi: {
     Header: "Edukasi",

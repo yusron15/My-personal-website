@@ -276,7 +276,6 @@ class Carding extends React.Component {
   };
 
   renderContent = () => {
-    console.log(this.state, "asdasdasdsds");
     let itemsBeritaTerkini = [];
     let itemsBeritaTerpopuler = [];
     let itemsBeritaMarketOutlook = [];
@@ -398,7 +397,7 @@ class Carding extends React.Component {
                           className="title font-black"
                           style={{ fontSize: "1.5rem", marginTop: 0 }}
                         >
-                          {this.props.pageStore.berita.terkini}
+                          {this.props.pageStore.berita.berita.terkini}
                         </div>
                         <Carousel
                           activeIndex={this.state.activeIndex}
@@ -448,7 +447,7 @@ class Carding extends React.Component {
                             paddingLeft: "15px"
                           }}
                         >
-                          {this.props.pageStore.berita.terpopuler}
+                          {this.props.pageStore.berita.berita.terpopuler}
                         </div>
                         <Col>{itemsBeritaTerpopuler}</Col>
                       </Col>
@@ -480,28 +479,30 @@ class Carding extends React.Component {
                                     </div>
                                   }
                                   back={
-                                    <Container
-                                      style={{
-                                        marginTop: "20px",
-                                        justifyContent: "center"
-                                      }}
-                                    >
-                                      <div
+                                    <Link to="/video-content">
+                                      <Container
                                         style={{
-                                          textAlign: "center",
-                                          margintTop: "10px"
+                                          marginTop: "20px",
+                                          justifyContent: "center"
                                         }}
                                       >
                                         <div
                                           style={{
-                                            color: "#167AFF",
-                                            fontWeight: "bold"
+                                            textAlign: "center",
+                                            margintTop: "10px"
                                           }}
                                         >
-                                          {item.videos[0].snippet.title}
+                                          <div
+                                            style={{
+                                              color: "#167AFF",
+                                              fontWeight: "bold"
+                                            }}
+                                          >
+                                            {item.videos[0].snippet.title}
+                                          </div>
                                         </div>
-                                      </div>
-                                    </Container>
+                                      </Container>
+                                    </Link>
                                   }
                                 />
                               </div>
@@ -510,7 +511,6 @@ class Carding extends React.Component {
                           );
                         })}
                     </Col>
-                
                   </div>
                 </Container>
               </div>
@@ -534,7 +534,7 @@ class Carding extends React.Component {
                       md="10"
                     >
                       <h4 className="title font-black">
-                        {this.props.pageStore.berita.outlook}
+                        {this.props.pageStore.berita.berita.outlook}
                       </h4>
                     </div>
                     <div>
@@ -588,7 +588,7 @@ class Carding extends React.Component {
                       md="10"
                     >
                       <h4 className="title font-black">
-                        {this.props.pageStore.berita.forex}
+                        {this.props.pageStore.berita.berita.forex}
                       </h4>
                     </div>
                     <div>
@@ -642,7 +642,7 @@ class Carding extends React.Component {
                       md="10"
                     >
                       <h4 className="title font-black">
-                        {this.props.pageStore.berita.stock}
+                        {this.props.pageStore.berita.berita.stock}
                       </h4>
                     </div>
                     <div>
@@ -709,7 +709,7 @@ class Carding extends React.Component {
                         className="title font-black"
                         style={{ fontSize: "1.5rem", marginTop: 0 }}
                       >
-                        {this.props.pageStore.berita.terkini}
+                        {this.props.pageStore.berita.berita.terkini}
                       </div>
                       <Carousel
                         activeIndex={this.state.activeIndex}
@@ -750,7 +750,7 @@ class Carding extends React.Component {
                           paddingLeft: "15px"
                         }}
                       >
-                        {this.props.pageStore.berita.terpopuler}
+                        {this.props.pageStore.berita.berita.terpopuler}
                       </div>
                       <Col>{itemsBeritaTerpopuler}</Col>
                     </Col>
@@ -760,21 +760,26 @@ class Carding extends React.Component {
                       this.state.playListids.map((item, index) => {
                         return (
                           <Col>
-                            <div style={{ marginTop: "50px" }}>
+                            <Link to="/video-content">
                               <HoverCard
                                 borderRadius={10}
                                 maxWidth={500}
                                 animationSpeed={500}
                                 height={150}
                                 front={
-                                  <div>
+                                  <div
+                                    style={{ height: "100%", width: "100%" }}
+                                  >
                                     <img
                                       src={
                                         item.videos[0].snippet.thumbnails.medium
                                           .url
                                       }
                                       alt=""
-                                      style={{ objectFit: "fill" }}
+                                      style={{
+                                        height: "100%",
+                                        width: "100%"
+                                      }}
                                     />
                                     <h2 className="text-news">
                                       <span>{item.name}</span>
@@ -806,8 +811,7 @@ class Carding extends React.Component {
                                   </Container>
                                 }
                               />
-                            </div>
-                            <br />
+                            </Link>
                           </Col>
                         );
                       })}
@@ -835,7 +839,7 @@ class Carding extends React.Component {
                     md="10"
                   >
                     <h2 className="title font-black">
-                      {this.props.pageStore.berita.outlook}
+                      {this.props.pageStore.berita.berita.outlook}
                     </h2>
                   </Col>
                   <Col md="1">
@@ -884,7 +888,7 @@ class Carding extends React.Component {
                   <Col md="1" />
                   <Col className="ml-auto mr-auto text-center" md="10">
                     <h2 className="title font-black">
-                      {this.props.pageStore.berita.forex}
+                      {this.props.pageStore.berita.berita.forex}
                     </h2>
                   </Col>
                   <Col md="1">
@@ -933,7 +937,7 @@ class Carding extends React.Component {
                   <Col md="1" />
                   <Col className="ml-auto mr-auto text-center" md="8">
                     <h2 className="title font-black">
-                      {this.props.pageStore.berita.stock}
+                      {this.props.pageStore.berita.berita.stock}
                     </h2>
                   </Col>
                   <Col md="1">
