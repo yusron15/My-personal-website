@@ -56,7 +56,11 @@ const customStyles = {
 
 class Blogs extends React.Component {
   state = {
-    dataSelect: "",
+    dataSelect: {
+      value: "",
+      label: ""
+    },
+    searchField: "",
     stateKarir: [],
     openedCardIndex: ""
   };
@@ -90,9 +94,35 @@ class Blogs extends React.Component {
       }
     }
 
-    const options = this.props.karirList.karirlist.map((item, index) => {
-      return { value: item.divisi, label: item.divisi };
+    let options = this.props.karirList.karirlist.map((item, index) => {
+      return { value: item.divisi.toLowerCase(), label: item.divisi };
     });
+
+    options = [{ value: "clear", label: "Clear Filter" }, ...options];
+
+    let karirList = [...this.state.stateKarir];
+
+    if (this.state.dataSelect.value !== "") {
+      if (this.state.dataSelect.value !== "clear") {
+        karirList = karirList.filter(
+          (item, index) => item.divisi === this.state.dataSelect.label
+        );
+      }
+    }
+    console.log(
+      karirList,
+      this.state.searchField,
+      this.state.dataSelect.value,
+      "texttexttext"
+    );
+    if (this.state.searchField !== "") {
+      karirList = karirList.filter((item, index) => {
+        return (
+          item.divisi.toLowerCase().includes(this.state.searchField) ||
+          item.description.toLowerCase().includes(this.state.searchField)
+        );
+      });
+    }
 
     if (isMobile) {
       return (
@@ -149,6 +179,11 @@ class Blogs extends React.Component {
                           <SearchField
                             className="react-search-field-input"
                             placeholder="Cari "
+                            onChange={async text => {
+                              await this.setState({
+                                searchField: text
+                              });
+                            }}
                           />
                         </div>
                       </Col>
@@ -171,7 +206,7 @@ class Blogs extends React.Component {
                           value="index "
                           options={options}
                           value={this.state.dataSelect}
-                          onChange={async data => {
+                          onChange={async (data, event) => {
                             await this.setState({
                               dataSelect: data
                             });
@@ -325,6 +360,11 @@ class Blogs extends React.Component {
                         <SearchField
                           className="react-search-field-input"
                           placeholder="Cari "
+                          onChange={text => {
+                            this.setState({
+                              searchField: text
+                            });
+                          }}
                           // onChange={this.props.karirList.divisi}
                         />
                       </div>
@@ -431,7 +471,7 @@ class Blogs extends React.Component {
                         </Card>
                       </Col>
                     ))} */}
-                    {this.state.stateKarir.map((item, index) => (
+                    {karirList.map((item, index) => (
                       <Accordion
                         style={{ border: "none", padding: 0 }}
                         allowMultipleExpanded={true}
