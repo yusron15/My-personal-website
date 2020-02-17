@@ -454,7 +454,63 @@ class Carding extends React.Component {
                       </Col>
                     </Row>
                     <Col>
-                      <Col>
+                      {this.state.playListids[0].videos.length > 0 &&
+                        this.state.playListids.map((item, index) => {
+                          return (
+                            <Col>
+                              <div style={{ marginTop: "50px" }}>
+                                <HoverCard
+                                  borderRadius={10}
+                                  maxWidth={500}
+                                  animationSpeed={500}
+                                  height={150}
+                                  front={
+                                    <div>
+                                      <img
+                                        src={
+                                          item.videos[0].snippet.thumbnails
+                                            .medium.url
+                                        }
+                                        alt=""
+                                        style={{ objectFit: "fill" }}
+                                      />
+                                      <h2 className="text-news">
+                                        <span>{item.name}</span>
+                                      </h2>
+                                    </div>
+                                  }
+                                  back={
+                                    <Container
+                                      style={{
+                                        marginTop: "20px",
+                                        justifyContent: "center"
+                                      }}
+                                    >
+                                      <div
+                                        style={{
+                                          textAlign: "center",
+                                          margintTop: "10px"
+                                        }}
+                                      >
+                                        <div
+                                          style={{
+                                            color: "#167AFF",
+                                            fontWeight: "bold"
+                                          }}
+                                        >
+                                          {item.videos[0].snippet.title}
+                                        </div>
+                                      </div>
+                                    </Container>
+                                  }
+                                />
+                              </div>
+                              <br />
+                            </Col>
+                          );
+                        })}
+                    </Col>
+                    {/* <Col>
                         <div style={{ marginTop: "50px" }}>
                           <HoverCard
                             borderRadius={10}
@@ -610,7 +666,7 @@ class Carding extends React.Component {
                         </div>
                         <br />
                       </Col>
-                    </Col>
+                    </Col> */}
                   </div>
                 </Container>
               </div>

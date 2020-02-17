@@ -43,7 +43,9 @@ class HeaderContent extends Component {
       >
         <BlurryNavbar />
         <ColoredNavbar location={{ ...this.props.location }} />
-        <div className="title title-header">Newspage</div>
+        <div className="title title-header" style={{ marginBottom: "8%" }}>
+          Newspage
+        </div>
       </div>
     );
   }

@@ -45,7 +45,9 @@ class HeaderStockIndex extends Component {
       >
         <BlurryNavbar />
         <ColoredNavbar location={{ ...this.props.location }} />
-        <div className="title title-header">Stock Index</div>
+        <div className="title title-header" style={{ marginBottom: "8%" }}>
+          Stock Index
+        </div>
       </div>
     );
   }
