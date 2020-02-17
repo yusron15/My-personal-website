@@ -922,3 +922,7 @@ p > .textnews{
 p > .textnews:hover {
   color: blue;
 }
+
+.carousel-indicators li {
+  margin-bottom: 60px !important;
+}

@@ -14,7 +14,7 @@ import Legality from "../../components/Landing/Legality.jsx";
 import Footer from "../../components/Footers/Footer.jsx";
 import NewsLetter from "../../components/NewsLetter/NewsLetter.jsx";
 import BottomNavbar from "../../components/Navbars/BottomNavbar.jsx";
-
+import ScrollableAnchor from "react-scrollable-anchor";
 import { isMobile } from "react-device-detect";
 import "../../assets/css/main.css";
 import VizSensor from "react-visibility-sensor";
@@ -28,10 +28,12 @@ class Landing extends React.Component {
     this.state = {
       navbarColor: "white",
       color: "black",
-      showEbook: false
+      showEbook: false,
+      linkSub: ""
     };
   }
   async componentDidMount() {
+    await this.props.getContent("topbar", this.props.currentLang, true);
     await this.props.getContent("landing", this.props.currentLang, true);
     await this.props.getNews("market");
     await this.props.getNews("stock");
@@ -60,6 +62,12 @@ class Landing extends React.Component {
     });
   };
 
+  linkSubs = () => {
+    this.setState({
+      linkSub: "#newsletter"
+    });
+  };
+
   render() {
     return (
       <>
@@ -69,7 +77,7 @@ class Landing extends React.Component {
           location={{ ...this.props.location }}
         />
         <VizSensor scrollCheck onChange={this.onChange("white")}>
-          <HeaderLanding />
+          <HeaderLanding sendLinkSub={this.linkSubs} />
         </VizSensor>
         {/* <BreakingNews /> */}
 
@@ -116,8 +124,9 @@ class Landing extends React.Component {
         <VizSensor onChange={this.onChange("black")}>
           <Legality />
         </VizSensor>
-
-        <NewsLetter />
+        <ScrollableAnchor id={"#newsletter"}>
+          <NewsLetter />
+        </ScrollableAnchor>
         <Footer />
         {/* {isMobile ? null : (
           <div>

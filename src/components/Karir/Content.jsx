@@ -92,6 +92,11 @@ class Blogs extends React.Component {
         console.log(divisions, "karirList");
       }
     }
+
+    const options = this.props.karirList.karirlist.map((item, index) => {
+      return { value: item.divisi, label: item.divisi };
+    });
+
     if (isMobile) {
       return (
         <>
@@ -167,7 +172,7 @@ class Blogs extends React.Component {
                         <Select
                           styles={customStyles}
                           value="index "
-                          options={divisions}
+                          options={options}
                           value={this.state.dataSelect}
                           onChange={async data => {
                             await this.setState({
@@ -332,8 +337,8 @@ class Blogs extends React.Component {
                       <Select
                         styles={customStyles}
                         value="index "
-                        // options={this.props.karirList.karirlist[0].divisi}
-
+                        options={options}
+                        // options={this.props.karirList.karirlist}
                         value={this.state.dataSelect}
                         onChange={async data => {
                           await this.setState({

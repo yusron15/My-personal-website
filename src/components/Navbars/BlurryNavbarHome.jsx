@@ -25,7 +25,7 @@ import instagram from "../../assets/img/instagram.png";
 import vimeo from "../../assets/img/vimeo.png";
 import subscribe from "../../assets/img/black-icon-email.png";
 import flag from "../../assets/img/flag-uk.png";
-
+import ScrollableAnchor from "react-scrollable-anchor";
 import { connect } from "react-redux";
 import { fetchPage, getContent } from "../../redux/ducks/actions.js";
 import "../../assets/css/main.css";
@@ -36,9 +36,15 @@ const font = {
 };
 
 class BlurryNavbar extends React.Component {
-  async componentDidMount() {
-    await this.props.getContent("landing", "id");
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     linkValue: "#newsletter",
+  //   };
+  // }
+  linkValue = () => {
+    this.props.sendLink();
+  };
   render() {
     return (
       <>
@@ -55,16 +61,9 @@ class BlurryNavbar extends React.Component {
           <Container>
             <div className="navbar-translate">
               <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                <p style={font}>Call Us : +62 21 2788 9393</p>
+                {/* <p style={font}>Call Us : +62 21 2788 9393</p> */}
+                <p style={font}>{this.props.pageStore.topbar.phone}</p>
               </NavbarBrand>
-              {/* <button
-                className="navbar-toggler"
-                id="example-navbar-transparent"
-              >
-                <span className="navbar-toggler-bar bar1" />
-                <span className="navbar-toggler-bar bar2" />
-                <span className="navbar-toggler-bar bar3" />
-              </button> */}
             </div>
             <UncontrolledCollapse navbar toggler="#example-navbar-transparent">
               <Nav className="ml-auto" style={{ marginRight: "25px" }} navbar>
@@ -73,7 +72,11 @@ class BlurryNavbar extends React.Component {
                 </NavItem>
                 <div class="vl"></div>
                 <NavItem style={{ marginTop: "5px" }}>
-                  <Link to="/#" className="vertical-center-nav">
+                  <a
+                    onClick={() => {
+                      this.linkValue();
+                    }}
+                  >
                     <img
                       src={subscribe}
                       style={{
@@ -83,28 +86,44 @@ class BlurryNavbar extends React.Component {
                       }}
                     />
                     <text style={font}>Subscribe</text>
-                  </Link>
+                  </a>
                 </NavItem>
                 <div class="vl"></div>
                 <NavItem style={{ marginTop: "5px" }}>
-                  <Link to="/#">
+                  <a
+                    target="_blank"
+                    style={{ backgroundColor: "transparent" }}
+                    href={this.props.pageStore.topbar.link_1}
+                  >
                     <img src={facebook} />
-                  </Link>
+                  </a>
                 </NavItem>
                 <NavItem style={{ marginTop: "5px" }}>
-                  <Link to="/#">
+                  <a
+                    target="_blank"
+                    style={{ backgroundColor: "transparent" }}
+                    href={this.props.pageStore.topbar.link_2}
+                  >
                     <img src={twitter} />
-                  </Link>
+                  </a>
                 </NavItem>
                 <NavItem style={{ marginTop: "5px" }}>
-                  <Link to="/#">
+                  <a
+                    target="_blank"
+                    style={{ backgroundColor: "transparent" }}
+                    href={this.props.pageStore.topbar.link_3}
+                  >
                     <img src={instagram} />
-                  </Link>
+                  </a>
                 </NavItem>
                 <NavItem style={{ marginTop: "5px" }}>
-                  <Link to="/#">
+                  <a
+                    target="_blank"
+                    style={{ backgroundColor: "transparent" }}
+                    href={this.props.pageStore.topbar.link_4}
+                  >
                     <img src={vimeo} />
-                  </Link>
+                  </a>
                 </NavItem>
               </Nav>
             </UncontrolledCollapse>
@@ -125,11 +144,10 @@ class BlurryNavbar extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
 });
 
-const mapDispatchToProps = dispatch => ({
-  getContent: (section, lang) => dispatch(getContent(section, lang))
-});
+const mapDispatchToProps = dispatch => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(BlurryNavbar);

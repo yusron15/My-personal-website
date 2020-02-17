@@ -142,7 +142,7 @@ class News extends React.Component {
     // activeTab: "1,
 
     oldSlide: 0,
-    activeSlide: 0,
+    activeSlide: 1,
     activeSlide2: 0
   };
 
@@ -352,14 +352,16 @@ class News extends React.Component {
           <div
             className="team-1 background-header"
             style={{
-              backgroundImage: `url(${bg})`,
+              // backgroundImage: `url(${bg})`,
+              backgroundImage:
+                "url(" + this.props.cabangStore.image_background + ")",
               padding: 0
             }}
           >
             <BlurryNavbar />
             <ColoredNavbar location={{ ...this.props.location }} />
             <div className="title title-header">
-              {this.props.pageStore.cabang.heading}
+              {this.props.cabangStore.header}
             </div>
           </div>
 
@@ -444,7 +446,8 @@ class News extends React.Component {
 
 const mapStateToProps = state => ({
   pageStore: state.pageStore,
-  cabangList: state.cabangStore.cabangList
+  cabangList: state.cabangStore.cabangList,
+  cabangStore: state.cabangStore
 });
 
 const mapDispatchToProps = dispatch => ({});

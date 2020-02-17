@@ -68,6 +68,11 @@ class HeaderLanding extends React.Component {
   constructor(props) {
     super(props);
   }
+
+  linkValueSub = () => {
+    this.props.sendLinkSub();
+  };
+
   renderContent = () => {
     if (isMobile) {
       return (
@@ -268,11 +273,11 @@ class HeaderLanding extends React.Component {
             <>
               <div className="cd-section " id="headers">
                 <div>
-                  <BlurryNavbar />
+                  <BlurryNavbar sendLink={this.linkValueSub()} />
                   {/* <div className="space-50" /> */}
                   <Col md="12" style={{ paddingRight: 0, paddingLeft: 0 }}>
                     <Carousel
-                      indicators={false}
+                      indicators={true}
                       controls={false}
                       slide={true}
                       touch={true}

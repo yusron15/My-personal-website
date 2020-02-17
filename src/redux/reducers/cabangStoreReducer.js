@@ -1,4 +1,8 @@
 const defaultState = {
+  header: "Cabang",
+  subtitle: "",
+  image_background:
+    "https://topgrowth.sgp1.digitaloceanspaces.com/cabang/Cabang-2.png1581935415",
   cabangList: [],
   currentLang: "ID",
   currentLangFlag: "ID"

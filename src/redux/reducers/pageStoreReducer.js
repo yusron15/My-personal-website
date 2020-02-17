@@ -1,4 +1,11 @@
 const defaultState = {
+  topbar: {
+    phone: "+62 21 2788 9393",
+    link_1: "",
+    link_2: "",
+    link_3: "",
+    link_4: ""
+  },
   Landing: {
     HeaderLanding: {
       slide: [
@@ -86,13 +93,7 @@ const defaultState = {
         }
       ]
     },
-    topbar: {
-      phone: "+62 21 2788 9393",
-      link_1: "",
-      link_2: "",
-      link_3: "",
-      link_4: ""
-    },
+   
     News: {},
     NewsInverted: {},
     Benefit: {

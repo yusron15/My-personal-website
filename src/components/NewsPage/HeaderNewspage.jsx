@@ -45,7 +45,8 @@ class HeaderContent extends Component {
         <BlurryNavbar />
         <ColoredNavbar location={{ ...this.props.location }} />
         <div className="title title-header" style={{ marginBottom: "8%" }}>
-          NewsPage
+          {/* {this.props.pageStore.berita.} */}
+          Newspage
         </div>
       </div>
     );
@@ -110,7 +111,9 @@ class HeaderNewsPage extends Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
 });
 
 export default connect(mapStateToProps, null)(HeaderNewsPage);
+// export default HeaderNewsPage;
