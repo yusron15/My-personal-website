@@ -321,7 +321,7 @@ class News extends React.Component {
                               style={{
                                 backgroundImage:
                                   "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
-                                height: "35vh",
+                                height: "45vh",
                                 width: "100%",
 
                                 zIndex: 99
@@ -331,11 +331,21 @@ class News extends React.Component {
                                 className="title"
                                 style={{
                                   color: "white",
-                                  paddingTop: "50px"
+                                  paddingTop: "150px"
                                 }}
                               >
                                 {item.nama}
                               </h4>
+                              <h5
+                                className="title"
+                                style={{
+                                  color: "white",
+                                  paddingTop: "5px",
+                                  zIndex: 100
+                                }}
+                              >
+                                {ReactHtmlParser(item.alamat)}
+                              </h5>
                             </div>
                           </div>
                         </CarouselItem>
