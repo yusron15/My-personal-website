@@ -32,6 +32,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel
 } from "react-accessible-accordion";
+import "react-accessible-accordion/dist/fancy-example.css";
 
 // import {
 //   AccordionWithHeader,
@@ -48,7 +49,8 @@ const customStyles = {
     ...base,
     minWidth: "300px",
     height: "35px",
-    marginTop: "30px"
+    marginTop: "30px",
+    marginBottom: "30px"
   })
 };
 
@@ -335,7 +337,8 @@ class Blogs extends React.Component {
                       </Card> */}
                       <div
                         style={{
-                          marginTop: "30px"
+                          marginTop: "30px",
+                          marginBottom: "30px"
                         }}
                       >
                         <SearchField
@@ -372,7 +375,7 @@ class Blogs extends React.Component {
                       {/* </div> */}
                     </Col>
 
-                    {this.state.stateKarir.map((item, index) => (
+                    {/* {this.state.stateKarir.map((item, index) => (
                       <Col lg="12" xs="12">
                         <Card
                           className={`card-karir ${item.open ? "expand" : ""}`}
@@ -457,43 +460,43 @@ class Blogs extends React.Component {
                           )}
                         </Card>
                       </Col>
+                    ))} */}
+                    {this.state.stateKarir.map((item, index) => (
+                      <Accordion
+                        style={{ border: "none", padding: 0 }}
+                        allowMultipleExpanded={true}
+                      >
+                        <AccordionItem>
+                          <AccordionItemHeading>
+                            <AccordionItemButton>
+                              {item.description}
+                            </AccordionItemButton>
+                          </AccordionItemHeading>
+                          <AccordionItemPanel
+                            style={{ backgroundColor: "white" }}
+                          >
+                            <p style={{ color: "black" }}>
+                              {item.detail.map(itemDetail =>
+                                ReactHtmlParser(itemDetail.description)
+                              )}
+                            </p>
+                            <p style={{ color: "black" }}>
+                              {item.detail.map(itemDetail =>
+                                ReactHtmlParser(itemDetail.qualification)
+                              )}
+                            </p>
+                          </AccordionItemPanel>
+                          {/* <AccordionItemPanel>
+                            <p style={{ color: "black" }}>
+                              {item.detail.map(itemDetail =>
+                                ReactHtmlParser(itemDetail.qualification)
+                              )}
+                            </p>
+                          </AccordionItemPanel> */}
+                        </AccordionItem>
+                      </Accordion>
                     ))}
                   </Row>
-
-                  {/* {this.state.stateKarir.map((item, index) => (
-                    
-                    ))} */}
-                  {/* <Accordion>
-                    <AccordionItem>
-                      <AccordionItemHeading>
-                        <AccordionItemButton>
-                          What harsh truths do you prefer to ignore?
-                        </AccordionItemButton>
-                      </AccordionItemHeading>
-                      <AccordionItemPanel>
-                        <p>
-                          Exercitation in fugiat est ut ad ea cupidatat ut in
-                          cupidatat occaecat ut occaecat consequat est minim
-                          minim esse tempor laborum consequat esse adipisicing
-                          eu reprehenderit enim.
-                        </p>
-                      </AccordionItemPanel>
-                    </AccordionItem>
-                    <AccordionItem>
-                      <AccordionItemHeading>
-                        <AccordionItemButton>
-                          Is free will real or just an illusion?
-                        </AccordionItemButton>
-                      </AccordionItemHeading>
-                      <AccordionItemPanel>
-                        <p>
-                          In ad velit in ex nostrud dolore cupidatat consectetur
-                          ea in ut nostrud velit in irure cillum tempor laboris
-                          sed adipisicing eu esse duis nulla non.
-                        </p>
-                      </AccordionItemPanel>
-                    </AccordionItem>
-                  </Accordion> */}
                 </Col>
               </Row>
             </Container>
