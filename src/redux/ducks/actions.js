@@ -4,6 +4,7 @@ import { fetchLanding } from "../actions/landingActions";
 import { getNews, getAllNews } from "../actions/newsActions";
 import { getCabangs } from "../actions/cabangActions";
 import { getAllKarir } from "../actions/karirActions";
+import { postKontak } from "../actions/kontakActions";
 
 export {
   // page action
@@ -15,5 +16,7 @@ export {
   // cabang
   getCabangs,
   // karir
-  getAllKarir
+  getAllKarir,
+  // kontak
+  postKontak
 };

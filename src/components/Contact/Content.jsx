@@ -37,7 +37,7 @@ import map from "../../assets/img/map-contact.png";
 import ScrollAnimation from "react-animate-on-scroll";
 
 import { connect } from "react-redux";
-import { getContent } from "../../redux/ducks/actions.js";
+import { postKontak } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
 
@@ -51,7 +51,7 @@ const MapWithAMarker = withGoogleMap(props => (
 ));
 
 class Content extends React.Component {
-  state = {};
+  state = { form: {} };
   async componentDidMount() {
     // await this.props.getContent("hubungikami", this.props.currentLang, true);
     document.documentElement.scrollTop = 0;
@@ -62,7 +62,17 @@ class Content extends React.Component {
   componentWillUnmount() {
     document.body.classList.remove("contact-page");
   }
+
+  handleTextChange = async e => {
+    await this.setState({
+      form: {
+        ...this.state.form,
+        [e.target.name]: e.target.value
+      }
+    });
+  };
   render() {
+    console.log(this.state.form, "asdasdasdasda");
     return (
       // <LangContext.Consumer>
       //   {({ lang }) => {
@@ -149,10 +159,7 @@ class Content extends React.Component {
                                 <Input
                                   style={{ color: "black" }}
                                   aria-label="First Name..."
-                                  // placeholder={
-                                  //   this.props.pageStore.hubungikami.form
-                                  //     .firstname
-                                  // }
+                                  name="firstName"
                                   placeholder="First Name ..."
                                   type="text"
                                   onFocus={e =>
@@ -165,6 +172,7 @@ class Content extends React.Component {
                                       firstNameFocus: false
                                     })
                                   }
+                                  onChange={this.handleTextChange}
                                 />
                               </InputGroup>
                             </Col>
@@ -194,6 +202,7 @@ class Content extends React.Component {
                                     </InputGroupText>
                                   </InputGroupAddon>
                                   <Input
+                                    name="lastName"
                                     style={{ color: "black" }}
                                     aria-label="Last Name..."
                                     // placeholder={
@@ -201,6 +210,7 @@ class Content extends React.Component {
                                     //     .lastname
                                     // }
                                     placeholder="Last Name ..."
+                                    onChange={this.handleTextChange}
                                     type="text"
                                     onFocus={e =>
                                       this.setState({
@@ -243,6 +253,8 @@ class Content extends React.Component {
                                 //   this.props.pageStore.hubungikami.form
                                 //     .emailaddress
                                 // }
+                                onChange={this.handleTextChange}
+                                name="email"
                                 placeholder="Email..."
                                 type="text"
                                 onFocus={e =>
@@ -277,6 +289,8 @@ class Content extends React.Component {
                               <Input
                                 style={{ color: "black" }}
                                 placeholder="Phone..."
+                                onChange={this.handleTextChange}
+                                name="phoneNumber"
                                 type="text"
                                 onFocus={e =>
                                   this.setState({ emailFocus: true })
@@ -298,6 +312,7 @@ class Content extends React.Component {
                               style={{ color: "black" }}
                               id="message"
                               name="message"
+                              onChange={this.handleTextChange}
                               placeholder="message"
                               rows="6"
                               type="textarea"
@@ -308,6 +323,15 @@ class Content extends React.Component {
                               <Button
                                 className="btn-round pull-right"
                                 color="info"
+                                onClick={async () => {
+                                  try {
+                                    await this.props.postKontak(
+                                      this.state.form
+                                    );
+                                  } catch (error) {
+                                    console.log(error);
+                                  }
+                                }}
                               >
                                 {
                                   this.props.pageStore.hubungikami.form[0]
@@ -346,6 +370,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  postKontak: data => dispatch(postKontak(data))
   // getContent: (section, lang) => dispatch(getContent(section, lang))
 });
 
