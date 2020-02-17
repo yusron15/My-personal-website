@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -28,45 +29,25 @@ import flag from "../../assets/img/flag-uk.png";
 
 import "../../assets/css/main.css";
 
+import { getContent, getNews } from "../../redux/ducks/actions.js";
+
 const font = {
   color: "white",
   cursor: "default"
 };
 
 class BlurryNavbar extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     backgroundColor: ""
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+  }
 
   // state = {
   //   navbarPosition: "bg-darker"
   // };
-  // componentDidMount() {
-  //   window.addEventListener("scroll", this.changenavbarPosition);
-  // }
-  // componentWillUnmount() {
-  //   window.removeEventListener("scroll", this.changenavbarPosition);
-  // }
-  // changenavbarPosition = () => {
-  //   if (
-  //     document.documentElement.scrollTop > 299 ||
-  //     document.body.scrollTop > 299
-  //   ) {
-  //     this.setState({
-  //       navbarPosition: "bg-darker"
-  //     });
-  //   } else if (
-  //     document.documentElement.scrollTop < 300 ||
-  //     document.body.scrollTop < 300
-  //   ) {
-  //     this.setState({
-  //       navbarPosition: "navbar-transparent fixed-top "
-  //     });
-  //   }
-  // };
+  async componentDidMount() {
+    await this.props.getContent("topbar", this.props.currentLang, true);
+  }
+
   render() {
     return (
       <>
@@ -83,7 +64,7 @@ class BlurryNavbar extends React.Component {
           <Container>
             <div className="navbar-translate">
               <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                <p style={font}>Call Us : +62 21 2788 9393</p>
+                <p style={font}>{this.props.pageStore.topbar.phone}</p>
               </NavbarBrand>
               {/* <button
                 className="navbar-toggler"
@@ -97,16 +78,6 @@ class BlurryNavbar extends React.Component {
             <UncontrolledCollapse navbar toggler="#example-navbar-transparent">
               <Nav className="ml-auto" style={{ marginRight: "25px" }} navbar>
                 <NavItem>
-                  {/* <Link to="/#" className="vertical-center-nav"> */}
-                  {/* <img
-                      src={flag}
-                      style={{
-                        paddingRight: "10px",
-                        height: "10px",
-                        width: "auto"
-                      }}
-                    />
-                    <text style={font}>ENG</text> */}
                   <LangTogglerButton />
                   {/* </Link> */}
                 </NavItem>
@@ -126,9 +97,13 @@ class BlurryNavbar extends React.Component {
                 </NavItem>
                 <div class="vl"></div>
                 <NavItem style={{ marginTop: "5px" }}>
-                  <Link to="/#">
+                  <a
+                    target="_blank"
+                    style={{ backgroundColor: "transparent" }}
+                    href={this.props.pageStore.topbar.link_1}
+                  >
                     <img src={facebook} />
-                  </Link>
+                  </a>
                 </NavItem>
                 <NavItem style={{ marginTop: "5px" }}>
                   <Link to="/#">
@@ -163,4 +138,16 @@ class BlurryNavbar extends React.Component {
   }
 }
 
-export default BlurryNavbar;
+const mapStateToProps = state => ({
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
+});
+
+const mapDispatchToProps = dispatch => ({
+  // fetchPage: (section, lang) => dispatch(fetchPage(section, lang)),
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle)),
+  getNews: type => dispatch(getNews(type))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BlurryNavbar);
