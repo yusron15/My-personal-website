@@ -142,8 +142,8 @@ class News extends React.Component {
     // activeTab: "1,
 
     oldSlide: 0,
-    activeSlide: 1,
-    activeSlide2: 0
+    mounted: false,
+    activeSlide: 0
   };
 
   toggle = tab => {
@@ -196,19 +196,29 @@ class News extends React.Component {
     });
   };
 
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.setState({
+        mounted: true
+      });
+    }, 500);
+  };
+
   renderContent = () => {
     let slickSettings = {
       dots: false,
-      infinite: true,
-      centerMode: true,
-      slidesToShow: 3,
+      autoplay: true,
+      // infinite: true,
+      slidesToShow: 5,
       slidesToScroll: 1,
+      centerMode: true,
+      initialSlide: 0,
       prevArrow: <PrevButton />,
       nextArrow: <NextButton />,
       afterChange: current => {
         this.setState({ activeSlide: current });
       },
-      className: "center slider",
+      // className: "center slider",
       slide: "section",
       responsive: [
         {
@@ -263,7 +273,31 @@ class News extends React.Component {
                     previous={() => this.previous(2, items2)}
                   >
                     <CarouselIndicators
-                      items={items2}
+                      items={this.props.cabangList.map((item, index) => {
+                        return {
+                          content: (
+                            <div
+                              className="info info-warning broken-white"
+                              style={{
+                                backgroundImage: `url(${bgcard})`,
+                                backgroundColor: "rgba(0, 0, 0, 0.25)",
+                                backgroundSize: "cover"
+                              }}
+                            >
+                              <h4 className="title" style={{ color: "white" }}>
+                                Best Quality
+                              </h4>
+                              <p style={{ color: "white" }}>
+                                Gain access to the demographics, psychographics,
+                                and location of unique people.
+                              </p>
+                            </div>
+                          ),
+                          altText: "",
+                          caption: "",
+                          src: "0"
+                        };
+                      })}
                       activeIndex={this.state.carousel2Index}
                       onClickHandler={newIndex => this.goToIndex(newIndex, 2)}
                     />
@@ -352,16 +386,14 @@ class News extends React.Component {
           <div
             className="team-1 background-header"
             style={{
-              // backgroundImage: `url(${bg})`,
-              backgroundImage:
-                "url(" + this.props.cabangStore.image_background + ")",
+              backgroundImage: `url(${bg})`,
               padding: 0
             }}
           >
             <BlurryNavbar />
             <ColoredNavbar location={{ ...this.props.location }} />
             <div className="title title-header">
-              {this.props.cabangStore.header}
+              {this.props.pageStore.cabang.heading}
             </div>
           </div>
 
@@ -373,63 +405,69 @@ class News extends React.Component {
               {/* <ColoredNavbar /> */}
               <Container>
                 <Row>
-                  <Col
-                    md={{ size: 12, offset: 3 }}
-                    // style={{ paddingTop: "15vh" }}
-                    style={{ minHeight: "50vh" }}
-                  >
-                    <Slick {...slickSettings}>
-                      {this.props.cabangList.map((item, index) => {
-                        return (
-                          <div>
-                            <NavLink
-                              // className={this.state.activeSlide === 0 ? "scaled" : ""}
-                              style={{
-                                backgroundImage: "url(" + item.image_url + ")",
-                                height: "30vh",
-                                backgroundSize: "cover"
-                                // borderRadius: 12
-                              }}
-                            ></NavLink>
-                          </div>
-                        );
-                      })}
-                    </Slick>
-                  </Col>
-                  <Col
-                    className="positioned"
-                    style={{
-                      backgroundColor: "transparent",
-                      marginTop: "5%"
-                    }}
-                    lg="4"
-                    md="8"
-                    xs="10"
-                  >
-                    <h1 className="title font-black">
-                      {ReactHtmlParser(this.props.pageStore.cabang.heading)}
-                    </h1>
-                    <p
-                      className="description"
-                      style={{ margin: 0, minHeight: "20vh" }}
-                    >
-                      <TabContent
-                        activeTab={"project" + this.state.activeSlide}
+                  {this.state.mounted && (
+                    <>
+                      <Col
+                        md={{ size: 12, offset: 3 }}
+                        // style={{ paddingTop: "15vh" }}
+                        style={{ minHeight: "50vh" }}
                       >
-                        {this.props.cabangList.map((item, index) => (
-                          <TabPane tabId={`project${index}`}>
-                            {/* <Col> */}
-                            <div className="title font-black">{item.nama}</div>
+                        <Slick {...slickSettings}>
+                          {this.props.cabangList.map((item, index) => {
+                            return (
+                              <div key={index}>
+                                <NavLink
+                                  style={{
+                                    backgroundImage:
+                                      "url(" + item.image_url + ")",
+                                    height: "30vh",
+                                    backgroundSize: "cover"
+                                    // borderRadius: 12
+                                  }}
+                                ></NavLink>
+                              </div>
+                            );
+                          })}
+                        </Slick>
+                      </Col>
+                      <Col
+                        className="positioned"
+                        style={{
+                          backgroundColor: "transparent",
+                          marginTop: "5%"
+                        }}
+                        lg="4"
+                        md="8"
+                        xs="10"
+                      >
+                        <h1 className="title font-black">
+                          {ReactHtmlParser(this.props.pageStore.cabang.heading)}
+                        </h1>
+                        <p
+                          className="description"
+                          style={{ margin: 0, minHeight: "20vh" }}
+                        >
+                          <TabContent
+                            activeTab={"project" + this.state.activeSlide}
+                          >
+                            {this.props.cabangList.map((item, index) => (
+                              <TabPane tabId={`project${index}`}>
+                                {/* <Col> */}
+                                <div className="title font-black">
+                                  {item.nama}
+                                </div>
 
-                            <p className="description font-black">
-                              {ReactHtmlParser(item.alamat)}
-                            </p>
-                            {/* </Col> */}
-                          </TabPane>
-                        ))}
-                      </TabContent>
-                    </p>
-                  </Col>
+                                <p className="description font-black">
+                                  {ReactHtmlParser(item.alamat)}
+                                </p>
+                                {/* </Col> */}
+                              </TabPane>
+                            ))}
+                          </TabContent>
+                        </p>
+                      </Col>
+                    </>
+                  )}
                 </Row>
               </Container>
             </div>
@@ -446,8 +484,7 @@ class News extends React.Component {
 
 const mapStateToProps = state => ({
   pageStore: state.pageStore,
-  cabangList: state.cabangStore.cabangList,
-  cabangStore: state.cabangStore
+  cabangList: state.cabangStore.cabangList
 });
 
 const mapDispatchToProps = dispatch => ({});
