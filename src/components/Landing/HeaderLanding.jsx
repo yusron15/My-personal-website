@@ -32,6 +32,7 @@ import classnames from "classnames";
 import "../../assets/css/main.css";
 import { Carousel } from "react-bootstrap";
 // import { Carousel } from "react-responsive-carousel";
+import subscribe from "../../assets/img/black-icon-email.png";
 import BreakingNews from "../../components/Landing/BreakingNews.jsx";
 import Navbar from "../../components/Navbars/Navbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbarHome.jsx";
@@ -68,10 +69,6 @@ class HeaderLanding extends React.Component {
   constructor(props) {
     super(props);
   }
-
-  linkValueSub = () => {
-    this.props.sendLinkSub();
-  };
 
   renderContent = () => {
     if (isMobile) {
@@ -273,7 +270,8 @@ class HeaderLanding extends React.Component {
             <>
               <div className="cd-section " id="headers">
                 <div>
-                  <BlurryNavbar sendLink={this.linkValueSub()} />
+                  <BlurryNavbar newsletterLink={this.props.newsletterLink} />
+
                   {/* <div className="space-50" /> */}
                   <Col md="12" style={{ paddingRight: 0, paddingLeft: 0 }}>
                     <Carousel

@@ -19,6 +19,7 @@ import { isMobile } from "react-device-detect";
 import "../../assets/css/main.css";
 import VizSensor from "react-visibility-sensor";
 import { connect } from "react-redux";
+import subscribe from "../../assets/img/black-icon-email.png";
 
 import { getContent, getNews } from "../../redux/ducks/actions.js";
 
@@ -33,6 +34,7 @@ class Landing extends React.Component {
     };
   }
   async componentDidMount() {
+    await this.props.getContent("topbar", this.props.currentLang, true);
     await this.props.getContent("landing", this.props.currentLang, true);
     await this.props.getNews("market");
     await this.props.getNews("stock");
@@ -61,12 +63,6 @@ class Landing extends React.Component {
     });
   };
 
-  linkSubs = () => {
-    this.setState({
-      linkSub: "#newsletter"
-    });
-  };
-
   render() {
     return (
       <>
@@ -76,7 +72,7 @@ class Landing extends React.Component {
           location={{ ...this.props.location }}
         />
         <VizSensor scrollCheck onChange={this.onChange("white")}>
-          <HeaderLanding sendLinkSub={this.linkSubs} />
+          <HeaderLanding newsletterLink={this.newsletterLink} />
         </VizSensor>
         {/* <BreakingNews /> */}
 
@@ -123,9 +119,13 @@ class Landing extends React.Component {
         <VizSensor onChange={this.onChange("black")}>
           <Legality />
         </VizSensor>
-        <ScrollableAnchor id={"#newsletter"}>
+        <section
+          ref={section => {
+            this.newsletterLink = section;
+          }}
+        >
           <NewsLetter />
-        </ScrollableAnchor>
+        </section>
         <Footer />
         {/* {isMobile ? null : (
           <div>

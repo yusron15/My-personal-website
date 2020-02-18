@@ -403,7 +403,7 @@ class NewsInverted extends React.Component {
                         <TabPane tabId={`project${index}`}>
                           <a href={item.link}>
                             <p className="description mb-5">
-                              {`${item.excerpt.rendered
+                              {`${item.title.rendered
                                 .replace(/(<([^>]+)>)/gi, "")
                                 .substring(0, 100)}...`}
                             </p>

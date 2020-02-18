@@ -386,7 +386,7 @@ class News extends React.Component {
                           <a href={item.link}>
                             {/* <Col> */}
                             <p className="description font-black">
-                              {`${item.excerpt.rendered
+                              {`${item.title.rendered
                                 .replace(/(<([^>]+)>)/gi, "")
                                 .substring(0, 100)}...`}
                             </p>
