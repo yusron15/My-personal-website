@@ -200,10 +200,11 @@ class Content extends React.Component {
                               }}
                             >
                               <div
+                                // className="vertical-center"
                                 style={{
-                                  fontSize: "1.2rem",
+                                  fontSize: "0.8rem",
                                   paddingLeft: "10px",
-                                  paddingTop: "25px",
+                                  // paddingTop: "25px",
                                   fontWeight: "bold",
                                   cursor: "pointer",
                                   height: "80px",

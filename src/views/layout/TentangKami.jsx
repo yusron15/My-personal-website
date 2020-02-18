@@ -5,6 +5,7 @@ import VisiMisi from "../../components/TentangKami/VisiMisi.jsx";
 import Footer from "../../components/Footers/Footer.jsx";
 import { fetchPage, getContent } from "../../redux/ducks/actions.js";
 import { connect } from "react-redux";
+import NewsLetter from "../../components/NewsLetter/NewsLetter.jsx";
 
 class TentangKami extends React.Component {
   state = {};
@@ -20,6 +21,7 @@ class TentangKami extends React.Component {
         {/* <Navbar /> */}
         <HeaderAboutUs location={{ ...this.props.location }} />
         <VisiMisi />
+
         <Footer />
       </>
     );

@@ -27,6 +27,7 @@ import instagram from "../../assets/img/instagram.png";
 import vimeo from "../../assets/img/vimeo.png";
 import subscribe from "../../assets/img/subscribe.png";
 import flag from "../../assets/img/flag-uk.png";
+import scrollToComponent from "react-scroll-to-component";
 
 import "../../assets/css/main.css";
 
@@ -88,34 +89,23 @@ class BlurryNavbar extends React.Component {
                 {/* <p style={font}>Call Us : +62 21 2788 9393</p> */}
                 <p style={font}>{this.props.pageStore.topbar.phone}</p>
               </NavbarBrand>
-              {/* <button
-                className="navbar-toggler"
-                id="example-navbar-transparent"
-              >
-                <span className="navbar-toggler-bar bar1" />
-                <span className="navbar-toggler-bar bar2" />
-                <span className="navbar-toggler-bar bar3" />
-              </button> */}
             </div>
             <UncontrolledCollapse navbar toggler="#example-navbar-transparent">
               <Nav className="ml-auto" style={{ marginRight: "25px" }} navbar>
                 <NavItem>
-                  {/* <Link to="/#" className="vertical-center-nav"> */}
-                  {/* <img
-                      src={flag}
-                      style={{
-                        paddingRight: "10px",
-                        height: "10px",
-                        width: "auto"
-                      }}
-                    />
-                    <text style={font}>ENG</text> */}
                   <LangTogglerButton />
-                  {/* </Link> */}
                 </NavItem>
                 <div class="vl"></div>
                 <NavItem style={{ marginTop: "5px" }}>
-                  <Link to="/#" className="vertical-center-nav">
+                  <div
+                    onClick={() =>
+                      scrollToComponent(this.props.newsletterLink, {
+                        offset: 0,
+                        align: "top",
+                        duration: 200
+                      })
+                    }
+                  >
                     <img
                       src={subscribe}
                       style={{
@@ -125,7 +115,7 @@ class BlurryNavbar extends React.Component {
                       }}
                     />
                     <text style={font}>Subscribe</text>
-                  </Link>
+                  </div>
                 </NavItem>
                 <div class="vl"></div>
                 <NavItem style={{ marginTop: "5px" }}>

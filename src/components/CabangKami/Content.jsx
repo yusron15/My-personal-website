@@ -251,13 +251,20 @@ class News extends React.Component {
             <div
               className="team-1 background-header-mobile"
               style={{
-                backgroundImage: `url(${bg})`,
+                backgroundImage:
+                  "url(" + this.props.cabangStore.image_background + ")",
                 padding: 0
               }}
             >
               <SidebarMobile />
               <div className="title title-header-mobile">
-                {this.props.pageStore.cabang.heading}
+                {this.props.cabangStore.header}
+              </div>
+              <div
+                style={{ textAlign: "center" }}
+                className="subheader font-white"
+              >
+                {ReactHtmlParser(this.props.cabangStore.subtitle)}
               </div>
             </div>
             <div className="space-50" />
@@ -393,14 +400,22 @@ class News extends React.Component {
           <div
             className="team-1 background-header"
             style={{
-              backgroundImage: `url(${bg})`,
+              // backgroundImage: `url(${bg})`,
+              backgroundImage:
+                "url(" + this.props.cabangStore.image_background + ")",
               padding: 0
             }}
           >
             <BlurryNavbar />
             <ColoredNavbar location={{ ...this.props.location }} />
             <div className="title title-header">
-              {this.props.pageStore.cabang.heading}
+              {this.props.cabangStore.header}
+            </div>
+            <div
+              style={{ textAlign: "center" }}
+              className="subheader font-white"
+            >
+              {ReactHtmlParser(this.props.cabangStore.subtitle)}
             </div>
           </div>
 
@@ -491,7 +506,8 @@ class News extends React.Component {
 
 const mapStateToProps = state => ({
   pageStore: state.pageStore,
-  cabangList: state.cabangStore.cabangList
+  cabangList: state.cabangStore.cabangList,
+  cabangStore: state.cabangStore
 });
 
 const mapDispatchToProps = dispatch => ({});

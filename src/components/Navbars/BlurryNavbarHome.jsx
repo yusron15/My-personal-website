@@ -29,22 +29,13 @@ import ScrollableAnchor from "react-scrollable-anchor";
 import { connect } from "react-redux";
 import { fetchPage, getContent } from "../../redux/ducks/actions.js";
 import "../../assets/css/main.css";
-
+import scrollToComponent from "react-scroll-to-component";
 const font = {
   color: "black",
   cursor: "default"
 };
 
 class BlurryNavbar extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     linkValue: "#newsletter",
-  //   };
-  // }
-  linkValue = () => {
-    this.props.sendLink();
-  };
   render() {
     return (
       <>
@@ -72,10 +63,14 @@ class BlurryNavbar extends React.Component {
                 </NavItem>
                 <div class="vl"></div>
                 <NavItem style={{ marginTop: "5px" }}>
-                  <a
-                    onClick={() => {
-                      this.linkValue();
-                    }}
+                  <div
+                    onClick={() =>
+                      scrollToComponent(this.props.newsletterLink, {
+                        offset: 0,
+                        align: "top",
+                        duration: 200
+                      })
+                    }
                   >
                     <img
                       src={subscribe}
@@ -86,7 +81,7 @@ class BlurryNavbar extends React.Component {
                       }}
                     />
                     <text style={font}>Subscribe</text>
-                  </a>
+                  </div>
                 </NavItem>
                 <div class="vl"></div>
                 <NavItem style={{ marginTop: "5px" }}>
