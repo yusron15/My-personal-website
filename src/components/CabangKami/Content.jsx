@@ -402,20 +402,20 @@ class News extends React.Component {
             style={{
               // backgroundImage: `url(${bg})`,
               backgroundImage:
-                "url(" + this.props.cabangStore.image_background + ")",
+                "url(" + this.props.cabangList.image_background + ")",
               padding: 0
             }}
           >
             <BlurryNavbar />
             <ColoredNavbar location={{ ...this.props.location }} />
             <div className="title title-header">
-              {this.props.cabangStore.header}
+              {this.props.cabangList.header}
             </div>
             <div
               style={{ textAlign: "center" }}
               className="subheader font-white"
             >
-              {ReactHtmlParser(this.props.cabangStore.subtitle)}
+              {ReactHtmlParser(this.props.cabangList.subtitle)}
             </div>
           </div>
 
@@ -435,21 +435,23 @@ class News extends React.Component {
                         style={{ minHeight: "50vh" }}
                       >
                         <Slick {...slickSettings}>
-                          {this.props.cabangList.map((item, index) => {
-                            return (
-                              <div key={index}>
-                                <NavLink
-                                  style={{
-                                    backgroundImage:
-                                      "url(" + item.image_url + ")",
-                                    height: "30vh",
-                                    backgroundSize: "cover"
-                                    // borderRadius: 12
-                                  }}
-                                ></NavLink>
-                              </div>
-                            );
-                          })}
+                          {this.props.cabangList.cabangList.map(
+                            (item, index) => {
+                              return (
+                                <div key={index}>
+                                  <NavLink
+                                    style={{
+                                      backgroundImage:
+                                        "url(" + item.image_url + ")",
+                                      height: "30vh",
+                                      backgroundSize: "cover"
+                                      // borderRadius: 12
+                                    }}
+                                  ></NavLink>
+                                </div>
+                              );
+                            }
+                          )}
                         </Slick>
                       </Col>
                       <Col
@@ -472,19 +474,21 @@ class News extends React.Component {
                           <TabContent
                             activeTab={"project" + this.state.activeSlide}
                           >
-                            {this.props.cabangList.map((item, index) => (
-                              <TabPane tabId={`project${index}`}>
-                                {/* <Col> */}
-                                <div className="title font-black">
-                                  {item.nama}
-                                </div>
+                            {this.props.cabangList.cabangList.map(
+                              (item, index) => (
+                                <TabPane tabId={`project${index}`}>
+                                  {/* <Col> */}
+                                  <div className="title font-black">
+                                    {item.nama}
+                                  </div>
 
-                                <p className="description font-black">
-                                  {ReactHtmlParser(item.alamat)}
-                                </p>
-                                {/* </Col> */}
-                              </TabPane>
-                            ))}
+                                  <p className="description font-black">
+                                    {ReactHtmlParser(item.alamat)}
+                                  </p>
+                                  {/* </Col> */}
+                                </TabPane>
+                              )
+                            )}
                           </TabContent>
                         </p>
                       </Col>
@@ -506,8 +510,7 @@ class News extends React.Component {
 
 const mapStateToProps = state => ({
   pageStore: state.pageStore,
-  cabangList: state.cabangStore.cabangList,
-  cabangStore: state.cabangStore
+  cabangList: state.cabangStore
 });
 
 const mapDispatchToProps = dispatch => ({});

@@ -24,10 +24,11 @@ import logo from "../../assets/img/Bitmap.png";
 import twitter from "../../assets/img/twitter.png";
 import facebook from "../../assets/img/facebook.png";
 import instagram from "../../assets/img/instagram.png";
-import vimeo from "../../assets/img/vimeo.png";
+import google from "../../assets/img/google.png";
 import subscribe from "../../assets/img/subscribe.png";
 import flag from "../../assets/img/flag-uk.png";
 import scrollToComponent from "react-scroll-to-component";
+import { getContent } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
 
@@ -37,44 +38,10 @@ const font = {
 };
 
 class BlurryNavbar extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     backgroundColor: ""
-  //   };
-  // }
-
-  // state = {
-  //   navbarPosition: "bg-darker"
-  // };
-  // componentDidMount() {
-  //   window.addEventListener("scroll", this.changenavbarPosition);
-  // }
-  // componentWillUnmount() {
-  //   window.removeEventListener("scroll", this.changenavbarPosition);
-  // }
-  // changenavbarPosition = () => {
-  //   if (
-  //     document.documentElement.scrollTop > 299 ||
-  //     document.body.scrollTop > 299
-  //   ) {
-  //     this.setState({
-  //       navbarPosition: "bg-darker"
-  //     });
-  //   } else if (
-  //     document.documentElement.scrollTop < 300 ||
-  //     document.body.scrollTop < 300
-  //   ) {
-  //     this.setState({
-  //       navbarPosition: "navbar-transparent fixed-top "
-  //     });
-  //   }
-  // };
   render() {
     return (
       <>
         <Navbar
-          // className={this.state.navbarPosition}
           expand="lg"
           style={{
             // backgroundColor: "rgba(112, 112, 112, 0.19)",
@@ -151,7 +118,10 @@ class BlurryNavbar extends React.Component {
                     style={{ backgroundColor: "transparent" }}
                     href={this.props.pageStore.topbar.link_4}
                   >
-                    <img src={vimeo} />
+                    <img
+                      style={{ height: "22px", width: "auto" }}
+                      src={google}
+                    />
                   </a>
                 </NavItem>
               </Nav>

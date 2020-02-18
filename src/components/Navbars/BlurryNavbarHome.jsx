@@ -22,7 +22,7 @@ import logo from "../../assets/img/Bitmap.png";
 import twitter from "../../assets/img/twitter.png";
 import facebook from "../../assets/img/facebook.png";
 import instagram from "../../assets/img/instagram.png";
-import vimeo from "../../assets/img/vimeo.png";
+import google from "../../assets/img/google.png";
 import subscribe from "../../assets/img/black-icon-email.png";
 import flag from "../../assets/img/flag-uk.png";
 import ScrollableAnchor from "react-scrollable-anchor";
@@ -117,7 +117,10 @@ class BlurryNavbar extends React.Component {
                     style={{ backgroundColor: "transparent" }}
                     href={this.props.pageStore.topbar.link_4}
                   >
-                    <img src={vimeo} />
+                    <img
+                      style={{ height: "22px", width: "auto" }}
+                      src={google}
+                    />
                   </a>
                 </NavItem>
               </Nav>
