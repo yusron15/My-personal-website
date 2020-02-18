@@ -33,6 +33,7 @@ class Landing extends React.Component {
     };
   }
   async componentDidMount() {
+    await this.props.getContent("topbar", this.props.currentLang, true);
     await this.props.getContent("landing", this.props.currentLang, true);
     await this.props.getNews("market");
     await this.props.getNews("stock");
