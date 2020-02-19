@@ -41,6 +41,7 @@ import { isMobile } from "react-device-detect";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import sungaigerong from "../../assets/img/sumgaigerong.png";
 import bgcard from "../../assets/img/header-rekening.png";
+import { getCabangs } from "../../redux/ducks/actions.js";
 
 import "../../assets/css/main.css";
 
@@ -252,19 +253,19 @@ class News extends React.Component {
               className="team-1 background-header-mobile"
               style={{
                 backgroundImage:
-                  "url(" + this.props.cabangStore.image_background + ")",
+                  "url(" + this.props.cabangList.image_background + ")",
                 padding: 0
               }}
             >
               <SidebarMobile />
               <div className="title title-header-mobile">
-                {this.props.cabangStore.header}
+                {this.props.cabangList.header}
               </div>
               <div
                 style={{ textAlign: "center" }}
                 className="subheader font-white"
               >
-                {ReactHtmlParser(this.props.cabangStore.subtitle)}
+                {ReactHtmlParser(this.props.cabangList.subtitle)}
               </div>
             </div>
             <div className="space-50" />
@@ -277,35 +278,40 @@ class News extends React.Component {
                     previous={() => this.previous(2, items2)}
                   >
                     <CarouselIndicators
-                      items={this.props.cabangList.map((item, index) => {
-                        return {
-                          content: (
-                            <div
-                              className="info info-warning broken-white"
-                              style={{
-                                backgroundImage: `url(${bgcard})`,
-                                backgroundColor: "rgba(0, 0, 0, 0.25)",
-                                backgroundSize: "cover"
-                              }}
-                            >
-                              <h4 className="title" style={{ color: "white" }}>
-                                Best Quality
-                              </h4>
-                              <p style={{ color: "white" }}>
-                                Gain access to the demographics, psychographics,
-                                and location of unique people.
-                              </p>
-                            </div>
-                          ),
-                          altText: "",
-                          caption: "",
-                          src: "0"
-                        };
-                      })}
+                      items={this.props.cabangList.cabangList.map(
+                        (item, index) => {
+                          return {
+                            content: (
+                              <div
+                                className="info info-warning broken-white"
+                                style={{
+                                  backgroundImage: `url(${bgcard})`,
+                                  backgroundColor: "rgba(0, 0, 0, 0.25)",
+                                  backgroundSize: "cover"
+                                }}
+                              >
+                                <h4
+                                  className="title"
+                                  style={{ color: "white" }}
+                                >
+                                  Best Quality
+                                </h4>
+                                <p style={{ color: "white" }}>
+                                  Gain access to the demographics,
+                                  psychographics, and location of unique people.
+                                </p>
+                              </div>
+                            ),
+                            altText: "",
+                            caption: "",
+                            src: "0"
+                          };
+                        }
+                      )}
                       activeIndex={this.state.carousel2Index}
                       onClickHandler={newIndex => this.goToIndex(newIndex, 2)}
                     />
-                    {this.props.cabangList.map((item, key) => {
+                    {this.props.cabangList.cabangList.map((item, key) => {
                       return (
                         <CarouselItem
                           onExiting={() => this.onExiting(2)}
@@ -402,20 +408,20 @@ class News extends React.Component {
             style={{
               // backgroundImage: `url(${bg})`,
               backgroundImage:
-                "url(" + this.props.cabangList.image_background + ")",
+                "url(" + this.props.cabangStore.image_background + ")",
               padding: 0
             }}
           >
             <BlurryNavbar />
             <ColoredNavbar location={{ ...this.props.location }} />
             <div className="title title-header">
-              {this.props.cabangList.header}
+              {this.props.cabangStore.header}
             </div>
             <div
               style={{ textAlign: "center" }}
               className="subheader font-white"
             >
-              {ReactHtmlParser(this.props.cabangList.subtitle)}
+              {ReactHtmlParser(this.props.cabangStore.subtitle)}
             </div>
           </div>
 
@@ -435,23 +441,21 @@ class News extends React.Component {
                         style={{ minHeight: "50vh" }}
                       >
                         <Slick {...slickSettings}>
-                          {this.props.cabangList.cabangList.map(
-                            (item, index) => {
-                              return (
-                                <div key={index}>
-                                  <NavLink
-                                    style={{
-                                      backgroundImage:
-                                        "url(" + item.image_url + ")",
-                                      height: "30vh",
-                                      backgroundSize: "cover"
-                                      // borderRadius: 12
-                                    }}
-                                  ></NavLink>
-                                </div>
-                              );
-                            }
-                          )}
+                          {this.props.cabangStore.cabang.map((item, index) => {
+                            return (
+                              <div key={index}>
+                                <NavLink
+                                  style={{
+                                    backgroundImage:
+                                      "url(" + item.image_url + ")",
+                                    height: "30vh",
+                                    backgroundSize: "cover"
+                                    // borderRadius: 12
+                                  }}
+                                ></NavLink>
+                              </div>
+                            );
+                          })}
                         </Slick>
                       </Col>
                       <Col
@@ -474,7 +478,7 @@ class News extends React.Component {
                           <TabContent
                             activeTab={"project" + this.state.activeSlide}
                           >
-                            {this.props.cabangList.cabangList.map(
+                            {this.props.cabangStore.cabang.map(
                               (item, index) => (
                                 <TabPane tabId={`project${index}`}>
                                   {/* <Col> */}
@@ -510,9 +514,12 @@ class News extends React.Component {
 
 const mapStateToProps = state => ({
   pageStore: state.pageStore,
-  cabangList: state.cabangStore
+  // cabangList: state.cabangStore
+  cabangStore: state.cabangStore
 });
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+  getCabangs: lang => dispatch(getCabangs(lang))
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(News);

@@ -1,11 +1,18 @@
 const defaultState = {
+  // header: "Cabang",
+  // subtitle: "CabangCabangCabang",
+  // image_background:
+  //   "https://topgrowth.sgp1.digitaloceanspaces.com/cabang/Cabang-2.png1581935415",
+  // cabangList: [],
+  // cabangPage: {
   header: "Cabang",
-  subtitle: "CabangCabangCabang",
+  subtitle: "CabangCabang",
   image_background:
     "https://topgrowth.sgp1.digitaloceanspaces.com/cabang/Cabang-2.png1581935415",
-  cabangList: [],
+  cabang: [],
   currentLang: "ID",
   currentLangFlag: "ID"
+  // }
 };
 
 export default (state = defaultState, action = {}) => {
@@ -13,7 +20,9 @@ export default (state = defaultState, action = {}) => {
     case "GET_CABANGS": {
       return {
         ...state,
-        cabangList: action.payload
+        // cabangList: action.payload
+        cabang: action.payload
+        // ...action.payload
       };
     }
     case "CHANGE_LANG": {

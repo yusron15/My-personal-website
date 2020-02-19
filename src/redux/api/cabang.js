@@ -13,7 +13,7 @@ export async function GetCabangs(lang) {
       a = 4;
     }
     let query = `?filter[where][bahasaId]=${a}`;
-    const result = await fetchJson("GET", `/cabangs${query}`);
+    const result = await fetchJson("GET", `/cabangs/${query}`);
     return result;
   } catch (error) {
     throw error;

@@ -483,7 +483,7 @@ class Features extends React.Component {
                         sm={{ size: 10, order: 2, offset: 1 }}
                         //   style={{ marginTop: "50px" }}
                       >
-                        <Row style={{ marginTop: "50px" }}>
+                        <Row style={{ marginTop: "150px" }}>
                           <Col lg="12">
                             <div>
                               <div style={textTitle}>

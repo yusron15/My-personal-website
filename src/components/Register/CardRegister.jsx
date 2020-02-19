@@ -203,7 +203,7 @@ class CardRegister extends React.Component {
                 <a
                   href="http://cabinet.topgrowthfutures.com/users/login"
                   target="_blank"
-                  style={{ color: "white" }}
+                  className="textlink"
                 >
                   {this.props.pageStore.register.form.signIn}
                 </a>

@@ -17,7 +17,7 @@ class Contact extends React.Component {
     return (
       <>
         {/* <BlurryNavbar /> */}
-        <Header location={{ ...this.props.location }} />
+        <Header style={{ zIndex: 999 }} location={{ ...this.props.location }} />
         <Content />
         <Footer />
       </>

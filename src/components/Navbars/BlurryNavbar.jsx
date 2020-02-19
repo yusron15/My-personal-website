@@ -112,18 +112,6 @@ class BlurryNavbar extends React.Component {
                     <img src={instagram} />
                   </a>
                 </NavItem>
-                <NavItem style={{ marginTop: "5px" }}>
-                  <a
-                    target="_blank"
-                    style={{ backgroundColor: "transparent" }}
-                    href={this.props.pageStore.topbar.link_4}
-                  >
-                    <img
-                      style={{ height: "22px", width: "auto" }}
-                      src={google}
-                    />
-                  </a>
-                </NavItem>
               </Nav>
             </UncontrolledCollapse>
           </Container>

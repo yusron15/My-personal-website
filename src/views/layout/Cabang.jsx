@@ -34,6 +34,7 @@ class Cabang extends React.Component {
 
 const mapStateToProps = state => ({
   pageStore: state.pageStore,
+  cabang: state.cabangStore,
   currentLang: state.pageStore.currentLang
 });
 
