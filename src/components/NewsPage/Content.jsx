@@ -74,105 +74,6 @@ const textDesc = {
   fontSize: "1rem"
 };
 
-const items = [
-  {
-    content: (
-      <div
-        className="team-1"
-        style={{
-          backgroundImage: "url(" + require("assets/img/gold-town.png") + ")",
-          backgroundSize: "cover",
-          height: "70vh",
-          borderRadius: "10px"
-        }}
-      >
-        <Container>
-          <Row>
-            <Col md="12">
-              <div style={textTitle}>
-                <b>Bursa Saham Asia Mengawali Tahun Ini Dengan Positif</b>
-              </div>
-            </Col>
-            <Col md="12">
-              <div className="description" style={textDesc}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    ),
-    altText: "",
-    caption: "",
-    src: "0"
-  },
-  {
-    content: (
-      <div
-        className="team-1"
-        style={{
-          backgroundImage: "url(" + require("assets/img/gold-town.png") + ")",
-          backgroundSize: "cover",
-          height: "70vh",
-          borderRadius: "10px"
-        }}
-      >
-        <Container>
-          <Row>
-            <Col md="12">
-              <div style={textTitle}>
-                <b>Lorem Ipsum</b>
-              </div>
-            </Col>
-            <Col md="12">
-              <div className="description" style={textDesc}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    ),
-    altText: "",
-    caption: "",
-    src: "1"
-  },
-  {
-    content: (
-      <div
-        className="team-1"
-        style={{
-          backgroundImage: "url(" + require("assets/img/gold-town.png") + ")",
-          backgroundSize: "cover",
-          height: "70vh",
-          borderRadius: "10px"
-        }}
-      >
-        <Container>
-          <Row>
-            <Col md="12">
-              <div style={textTitle}>
-                <b>Lorem Ipsum</b>
-              </div>
-            </Col>
-            <Col md="12">
-              <div className="description" style={textDesc}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    ),
-    altText: "",
-    caption: "",
-    src: "2"
-  }
-];
-
 const API_KEY = "AIzaSyBK9vHQHrRhSXDhj3K3Elo-yLB0EZxoHMc";
 const PLAYLIST_PM_MARKET = "PLzeWDGNIcxbFRu8k6ee7nIngLotBGKgx1";
 const PLAYLIST_MARKET_UPDATE = "PLzeWDGNIcxbHTHWk69y3gvyg_IkeDA-If";
@@ -209,6 +110,8 @@ class Carding extends React.Component {
 
   componentDidMount = async () => {
     try {
+      window.scroll(0, 0);
+
       await this.fetchingYoutubeVideos();
     } catch (error) {
       console.log(error);
@@ -217,29 +120,6 @@ class Carding extends React.Component {
 
   onExited = () => {
     this.animating = false;
-  };
-
-  next = () => {
-    if (this.animating) return;
-    const nextIndex =
-      this.state.activeIndex === items.length - 1
-        ? 0
-        : this.state.activeIndex + 1;
-    this.setState({ activeIndex: nextIndex });
-  };
-
-  previous = () => {
-    if (this.animating) return;
-    const nextIndex =
-      this.state.activeIndex === 0
-        ? items.length - 1
-        : this.state.activeIndex - 1;
-    this.setState({ activeIndex: nextIndex });
-  };
-
-  goToIndex = newIndex => {
-    if (this.animating) return;
-    this.setState({ activeIndex: newIndex });
   };
 
   fetchingYoutubeVideos = async (next, indexVideos) => {
@@ -452,65 +332,68 @@ class Carding extends React.Component {
                         <Col>{itemsBeritaTerpopuler}</Col>
                       </Col>
                     </Row>
-                    <Col>
-                      {this.state.playListids[0].videos.length > 0 &&
-                        this.state.playListids.map((item, index) => {
-                          return (
-                            <Col>
-                              <div style={{ marginTop: "50px" }}>
-                                <HoverCard
-                                  borderRadius={10}
-                                  maxWidth={500}
-                                  animationSpeed={500}
-                                  height={150}
-                                  front={
-                                    <div>
-                                      <img
-                                        src={
-                                          item.videos[0].snippet.thumbnails
-                                            .medium.url
-                                        }
-                                        alt=""
-                                        style={{ objectFit: "fill" }}
-                                      />
-                                      <h2 className="text-news">
-                                        <span>{item.name}</span>
-                                      </h2>
-                                    </div>
-                                  }
-                                  back={
-                                    <Link to="/video-content">
-                                      <Container
-                                        style={{
-                                          marginTop: "20px",
-                                          justifyContent: "center"
-                                        }}
-                                      >
-                                        <div
-                                          style={{
-                                            textAlign: "center",
-                                            margintTop: "10px"
-                                          }}
-                                        >
-                                          <div
+                    {this.state.playListids.length > 0 &&
+                      this.state.playListids[0].videos.length > 0 && (
+                        <Col>
+                          {this.state.playListids[0].videos.length > 0 &&
+                            this.state.playListids.map((item, index) => {
+                              return (
+                                <Col>
+                                  <div style={{ marginTop: "50px" }}>
+                                    <HoverCard
+                                      borderRadius={10}
+                                      maxWidth={500}
+                                      animationSpeed={500}
+                                      height={150}
+                                      front={
+                                        <div>
+                                          <img
+                                            src={
+                                              item.videos[0].snippet.thumbnails
+                                                .medium.url
+                                            }
+                                            alt=""
+                                            style={{ objectFit: "fill" }}
+                                          />
+                                          <h2 className="text-news">
+                                            <span>{item.name}</span>
+                                          </h2>
+                                        </div>
+                                      }
+                                      back={
+                                        <Link to="/video-content">
+                                          <Container
                                             style={{
-                                              color: "#167AFF",
-                                              fontWeight: "bold"
+                                              marginTop: "20px",
+                                              justifyContent: "center"
                                             }}
                                           >
-                                            {item.videos[0].snippet.title}
-                                          </div>
-                                        </div>
-                                      </Container>
-                                    </Link>
-                                  }
-                                />
-                              </div>
-                              <br />
-                            </Col>
-                          );
-                        })}
-                    </Col>
+                                            <div
+                                              style={{
+                                                textAlign: "center",
+                                                margintTop: "10px"
+                                              }}
+                                            >
+                                              <div
+                                                style={{
+                                                  color: "#167AFF",
+                                                  fontWeight: "bold"
+                                                }}
+                                              >
+                                                {item.videos[0].snippet.title}
+                                              </div>
+                                            </div>
+                                          </Container>
+                                        </Link>
+                                      }
+                                    />
+                                  </div>
+                                  <br />
+                                </Col>
+                              );
+                            })}
+                        </Col>
+                      )}
                   </div>
                 </Container>
               </div>
@@ -760,7 +643,14 @@ class Carding extends React.Component {
                       this.state.playListids.map((item, index) => {
                         return (
                           <Col>
-                            <Link to="/video-content">
+                            <Link
+                              to={{
+                                pathname: "/video-content",
+                                state: {
+                                  data: index + 1
+                                }
+                              }}
+                            >
                               <HoverCard
                                 borderRadius={10}
                                 maxWidth={500}

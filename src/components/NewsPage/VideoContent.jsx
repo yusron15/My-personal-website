@@ -142,6 +142,11 @@ class VideoContent extends React.Component {
   componentDidMount = async () => {
     try {
       await this.fetchingYoutubeVideos();
+      if (this.props.location.state.data) {
+        await this.setState({
+          activeTab: this.props.location.state.data
+        });
+      }
     } catch (error) {
       console.log(error);
     }
