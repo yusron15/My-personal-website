@@ -160,7 +160,10 @@ class Blogs extends React.Component {
               id="features"
               // style={{ backgroundColor: "#D4D4D4" }}
             >
-              <div className="features-3" style={{ paddingTop: 0 }}>
+              <div
+                className="features-3"
+                style={{ paddingTop: 0, cursor: "default" }}
+              >
                 <div>
                   {this.props.news.forex.map((item, index) => {
                     return (

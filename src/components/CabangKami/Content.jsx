@@ -207,7 +207,7 @@ class News extends React.Component {
       dots: false,
       autoplay: true,
       // infinite: true,
-      slidesToShow: 5,
+      slidesToShow: 3,
       slidesToScroll: 1,
       centerMode: true,
       initialSlide: 0,
@@ -430,74 +430,67 @@ class News extends React.Component {
               className="testimonials-4"
               style={{ padding: 0, backgroundColor: "#FCFCFC" }}
             >
-              {/* <ColoredNavbar /> */}
               <Container>
                 <Row>
-                  {this.state.mounted && (
-                    <>
-                      <Col
-                        md={{ size: 12, offset: 3 }}
-                        // style={{ paddingTop: "15vh" }}
-                        style={{ minHeight: "50vh" }}
-                      >
-                        <Slick {...slickSettings}>
-                          {this.props.cabangStore.cabang.map((item, index) => {
-                            return (
-                              <div key={index}>
-                                <NavLink
-                                  style={{
-                                    backgroundImage:
-                                      "url(" + item.image_url + ")",
-                                    height: "30vh",
-                                    backgroundSize: "cover"
-                                    // borderRadius: 12
-                                  }}
-                                ></NavLink>
-                              </div>
-                            );
-                          })}
-                        </Slick>
-                      </Col>
-                      <Col
-                        className="positioned"
-                        style={{
-                          backgroundColor: "transparent",
-                          marginTop: "5%"
-                        }}
-                        lg="4"
-                        md="8"
-                        xs="10"
-                      >
-                        <h1 className="title font-black">
+                  {/* {this.state.mounted && ( */}
+                  <>
+                    <Col
+                      md={{ size: 12, offset: 3 }}
+                      style={{ minHeight: "50vh" }}
+                    >
+                      <Slick {...slickSettings}>
+                        {this.props.cabangStore.cabang.map((item, index) => {
+                          return (
+                            <div key={index}>
+                              <NavLink
+                                style={{
+                                  backgroundImage:
+                                    "url(" + item.image_url + ")",
+                                  height: "30vh",
+                                  backgroundSize: "cover"
+                                }}
+                              ></NavLink>
+                            </div>
+                          );
+                        })}
+                      </Slick>
+                    </Col>
+                    <Col
+                      className="positioned"
+                      style={{
+                        backgroundColor: "transparent",
+                        marginTop: "5%"
+                      }}
+                      lg="4"
+                      md="8"
+                      xs="10"
+                    >
+                      {/* <h1 className="title font-black">
                           {ReactHtmlParser(this.props.pageStore.cabang.heading)}
-                        </h1>
-                        <p
-                          className="description"
-                          style={{ margin: 0, minHeight: "20vh" }}
+                        </h1> */}
+                      <p
+                        className="description"
+                        style={{ margin: 0, minHeight: "20vh" }}
+                      >
+                        <TabContent
+                          activeTab={"project" + this.state.activeSlide}
                         >
-                          <TabContent
-                            activeTab={"project" + this.state.activeSlide}
-                          >
-                            {this.props.cabangStore.cabang.map(
-                              (item, index) => (
-                                <TabPane tabId={`project${index}`}>
-                                  {/* <Col> */}
-                                  <div className="title font-black">
-                                    {item.nama}
-                                  </div>
+                          {this.props.cabangStore.cabang.map((item, index) => (
+                            <TabPane tabId={`project${index}`}>
+                              <div className="title font-black">
+                                {item.nama}
+                              </div>
 
-                                  <p className="description font-black">
-                                    {ReactHtmlParser(item.alamat)}
-                                  </p>
-                                  {/* </Col> */}
-                                </TabPane>
-                              )
-                            )}
-                          </TabContent>
-                        </p>
-                      </Col>
-                    </>
-                  )}
+                              <p className="description font-black">
+                                {ReactHtmlParser(item.alamat)}
+                              </p>
+                            </TabPane>
+                          ))}
+                        </TabContent>
+                      </p>
+                    </Col>
+                  </>
+                  {/* )} */}
                 </Row>
               </Container>
             </div>
@@ -508,6 +501,7 @@ class News extends React.Component {
   };
 
   render() {
+    console.log(this.props.cabangStore, "asdcaax");
     return this.renderContent();
   }
 }

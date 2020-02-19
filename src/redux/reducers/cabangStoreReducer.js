@@ -21,8 +21,8 @@ export default (state = defaultState, action = {}) => {
       return {
         ...state,
         // cabangList: action.payload
-        cabang: action.payload
-        // ...action.payload
+        // cabang: action.payload
+        ...action.payload
       };
     }
     case "CHANGE_LANG": {

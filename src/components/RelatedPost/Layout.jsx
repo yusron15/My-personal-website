@@ -112,13 +112,18 @@ class Content extends React.Component {
           <Row>
             <Col
               sm={{ size: 10, order: 2, offset: 1 }}
-              style={{ marginTop: "50px" }}
+              style={{ marginTop: "50px", cursor: "default" }}
             >
               <Row>
                 <Col lg="4">
                   <div className="card-image">
                     <a href={link}>
-                      <img alt="..." className="img rounded" src={image} />
+                      <img
+                        alt="..."
+                        style={{ cursor: "pointer" }}
+                        className="img rounded"
+                        src={image}
+                      />
                     </a>
                   </div>
                 </Col>
@@ -126,20 +131,25 @@ class Content extends React.Component {
                   <div style={textContent}>
                     <div
                       className="title-post font-black"
-                      style={{ color: "black" }}
+                      style={{ color: "black", cursor: "pointer" }}
                     >
                       {title}
                     </div>
                     <div
                       className="text-posted font-black tag-space"
-                      style={{ color: "black" }}
+                      style={{ color: "black", cursor: "pointer" }}
                     >
                       {posted}
                     </div>
                     <p className="font-black">
                       {`${description.substring(0, 190)} `}
                       <br />
-                      <a href={link}>Read More</a>
+                      <a
+                        href={link}
+                        style={{ color: "#dba1f6", cursor: "pointer" }}
+                      >
+                        Read More
+                      </a>
                     </p>
                   </div>
                 </Col>

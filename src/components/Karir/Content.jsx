@@ -98,7 +98,8 @@ class Blogs extends React.Component {
       return { value: item.divisi.toLowerCase(), label: item.divisi };
     });
 
-    options = [{ value: "clear", label: "Clear Filter" }, ...options];
+    let optios = this.props.karirList.karirlist;
+    optios = [{ value: "clear", label: "Clear Filter" }, ...options];
 
     let karirList = [...this.state.stateKarir];
 
@@ -479,7 +480,7 @@ class Blogs extends React.Component {
                         <AccordionItem>
                           <AccordionItemHeading>
                             <AccordionItemButton>
-                              {item.description}
+                              {item.divisi}
                             </AccordionItemButton>
                           </AccordionItemHeading>
                           <AccordionItemPanel

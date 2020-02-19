@@ -933,5 +933,9 @@ p > .textnews:hover {
 }
 
 .carousel-indicators li {
-  margin-bottom: 60px !important;
+  /* margin-bottom: 60px !important; */
+}
+
+.flag-select img {
+  top : 0 !important;
 }
