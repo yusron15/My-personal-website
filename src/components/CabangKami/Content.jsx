@@ -202,6 +202,7 @@ class News extends React.Component {
       this.setState({
         mounted: true
       });
+      this.mySlick.slickGoTo(5);
     }, 500);
   };
 
@@ -213,10 +214,11 @@ class News extends React.Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       centerMode: true,
-      initialSlide: 4,
+      initialSlide: 5,
       prevArrow: <PrevButton />,
       nextArrow: <NextButton />,
       afterChange: current => {
+        console.log(current, "adasd");
         this.setState({ activeSlide: current });
       },
       slide: "section"
