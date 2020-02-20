@@ -137,15 +137,18 @@ const items2 = [
 ];
 
 class News extends React.Component {
-  state = {
-    carousel1Index: 0,
-    carousel2Index: 0,
-    // activeTab: "1,
+  constructor(props) {
+    super(props);
+    this.state = {
+      carousel1Index: 0,
+      carousel2Index: 0,
+      oldSlide: 0,
+      mounted: false,
+      activeSlide: 4
+    };
 
-    oldSlide: 0,
-    mounted: false,
-    activeSlide: 0
-  };
+    this.mySlick = null;
+  }
 
   toggle = tab => {
     if (this.state.activeTab !== tab) {
@@ -199,49 +202,49 @@ class News extends React.Component {
       this.setState({
         mounted: true
       });
+      this.mySlick.slickGoTo(4);
     }, 500);
   };
 
   renderContent = () => {
     let slickSettings = {
       dots: false,
-      autoplay: true,
-      // infinite: true,
+      // autoplay: true,
+      infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
       centerMode: true,
-      initialSlide: 0,
+      initialSlide: 4,
       prevArrow: <PrevButton />,
       nextArrow: <NextButton />,
       afterChange: current => {
         this.setState({ activeSlide: current });
       },
-      // className: "center slider",
-      slide: "section",
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
+      slide: "section"
+      // responsive: [
+      //   {
+      //     breakpoint: 1024,
+      //     settings: {
+      //       slidesToShow: 3,
+      //       slidesToScroll: 1,
+      //       infinite: true
+      //     }
+      //   },
+      //   {
+      //     breakpoint: 600,
+      //     settings: {
+      //       slidesToShow: 2,
+      //       slidesToScroll: 1
+      //     }
+      //   },
+      //   {
+      //     breakpoint: 480,
+      //     settings: {
+      //       slidesToShow: 1,
+      //       slidesToScroll: 1
+      //     }
+      //   }
+      // ]
     };
     if (isMobile) {
       return (
@@ -432,13 +435,15 @@ class News extends React.Component {
             >
               <Container>
                 <Row>
-                  {/* {this.state.mounted && ( */}
                   <>
                     <Col
                       md={{ size: 12, offset: 3 }}
                       style={{ minHeight: "50vh" }}
                     >
-                      <Slick {...slickSettings}>
+                      <Slick
+                        {...slickSettings}
+                        ref={ref => (this.mySlick = ref)}
+                      >
                         {this.props.cabangStore.cabang.map((item, index) => {
                           return (
                             <div key={index}>
@@ -465,9 +470,6 @@ class News extends React.Component {
                       md="8"
                       xs="10"
                     >
-                      {/* <h1 className="title font-black">
-                          {ReactHtmlParser(this.props.pageStore.cabang.heading)}
-                        </h1> */}
                       <p
                         className="description"
                         style={{ margin: 0, minHeight: "20vh" }}
@@ -501,7 +503,6 @@ class News extends React.Component {
   };
 
   render() {
-    console.log(this.props.cabangStore, "asdcaax");
     return this.renderContent();
   }
 }
