@@ -27,6 +27,17 @@ const defaultState = {
             "Untuk Berita Pasar Keuangan Ter-UPDATE,\r\nRekomendasi TRADING, Ulasan Pasar & SIGNALTRADING REAL TIME",
           image: []
         }
+      ],
+      SignUp: [
+        {
+          title: "Sign Up",
+          leftTick: "Demo akun",
+          link_leftTick: null,
+          rightTick: "Demo akun",
+          link_rightTick: "",
+          content: "<p>Sudah memiliki akun ?</p><p>masuk Disisni</p>",
+          content_link: "https://test.com"
+        }
       ]
     },
     Pricing: {
