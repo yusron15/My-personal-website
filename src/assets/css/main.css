@@ -916,13 +916,7 @@ ul li {
   color: white;
 }
 
-.textlink,
-p:hover {
-  color: rgb(111, 111, 255);
-}
-
-.textlink,
-p:hover {
+.textlink p:hover {
   color: rgb(111, 111, 255);
 }
 
