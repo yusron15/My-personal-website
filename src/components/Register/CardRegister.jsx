@@ -21,6 +21,7 @@ import {
   InputGroupText,
   InputGroup
 } from "reactstrap";
+import ReactHtmlParser from "react-html-parser";
 
 import TextField from "@material-ui/core/TextField";
 import classnames from "classnames";
@@ -61,7 +62,8 @@ class CardRegister extends React.Component {
                   fontWeight: "bold"
                 }}
               >
-                {this.props.pageStore.register.form.title}
+                {/* {this.props.pageStore.register.form.title} */}
+                {this.props.pageStore.Landing.HeaderLanding.SignUp[0].title}
               </CardTitle>
             </CardHeader>
             <CardBody>
@@ -173,7 +175,11 @@ class CardRegister extends React.Component {
                       type="button"
                       style={{ width: "100%", marginRight: "25px" }}
                     >
-                      {this.props.pageStore.register.form.leftButton}
+                      {/* {this.props.pageStore.register.form.leftButton} */}
+                      {
+                        this.props.pageStore.Landing.HeaderLanding.SignUp[0]
+                          .leftTick
+                      }
                     </Button>
                   </a>
                 </div>
@@ -188,7 +194,11 @@ class CardRegister extends React.Component {
                       type="button"
                       style={{ width: "100%", marginLeft: "25px" }}
                     >
-                      {this.props.pageStore.register.form.rightButton}
+                      {/* {this.props.pageStore.register.form.rightButton} */}
+                      {
+                        this.props.pageStore.Landing.HeaderLanding.SignUp[0]
+                          .rightTick
+                      }
                     </Button>
                   </a>
                 </div>
@@ -205,7 +215,9 @@ class CardRegister extends React.Component {
                   target="_blank"
                   className="textlink"
                 >
-                  {this.props.pageStore.register.form.signIn}
+                  {ReactHtmlParser(
+                    this.props.pageStore.Landing.HeaderLanding.SignUp[0].content
+                  )}
                 </a>
               </h6>
             </div>
