@@ -831,7 +831,7 @@ span > .arrow-down {
 }
 
 .accordion:after {
-  content: "\002B";
+  /* content: "\002B"; */
   color: #444;
   font-weight: bold;
   float: right;

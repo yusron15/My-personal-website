@@ -82,8 +82,8 @@ class Blogs extends React.Component {
 
   renderContent = () => {
     let divisions;
-    if (this.props.karirList) {
-      let a = _.uniqBy(this.props.karirList.karirlist, "devisi");
+    if (this.props.pageStore) {
+      let a = _.uniqBy(this.props.pageStore.karir, "devisi");
       if (a.length > 0) {
         divisions = a.map(item => {
           return {
@@ -94,14 +94,13 @@ class Blogs extends React.Component {
       }
     }
 
-    let options = this.props.karirList.karirlist.map((item, index) => {
+    let options = this.props.pageStore.karir.karirList.map((item, index) => {
       return { value: item.divisi.toLowerCase(), label: item.divisi };
     });
 
-    let optios = this.props.karirList.karirlist;
-    optios = [{ value: "clear", label: "Clear Filter" }, ...options];
+    options = [{ value: "clear", label: "Clear Filter" }, ...options];
 
-    let karirList = [...this.state.stateKarir];
+    let karirList = this.props.pageStore.karir.karirList;
 
     if (this.state.dataSelect.value !== "") {
       if (this.state.dataSelect.value !== "clear") {
@@ -215,99 +214,101 @@ class Blogs extends React.Component {
                         />
                         {/* </div> */}
                       </Col>
-                      {this.state.stateKarir.map((item, index) => (
-                        <Col lg="4" xs="12">
-                          <Card
-                            className={`card-karir mobile ${
-                              item.open ? "expand" : ""
-                            }`}
-                          >
-                            <CardBody>
-                              <CardTitle
-                                className="text-center"
-                                style={{
-                                  color: "black",
-                                  fontSize: "1rem",
-                                  fontWeight: "bold",
-                                  marginBottom: 10
-                                }}
-                              >
-                                {item.devisi}
-                              </CardTitle>
-                              <CardSubtitle
-                                className="text-center"
-                                style={{
-                                  color: "black",
-                                  fontSize: "1rem",
-                                  marginBottom: 30
-                                }}
-                              >
-                                {item.description}
-                              </CardSubtitle>
-                              <CardText style={{ color: "black" }}>
-                                {item.detail.map(itemDetail =>
-                                  ReactHtmlParser(itemDetail.description)
-                                )}
-                              </CardText>
-                              <CardText style={{ color: "black" }}>
-                                {item.detail.map(itemDetail =>
-                                  ReactHtmlParser(itemDetail.qualification)
-                                )}
-                              </CardText>
-                              <div
-                                style={{
-                                  width: "100%",
-                                  display: "flex",
-                                  justifyContent: "center"
-                                }}
-                              ></div>
-                            </CardBody>
-                            {!item.open && (
-                              <CardFooter
-                                style={{
-                                  position: "absolute",
-                                  bottom: 0,
-                                  width: "100%",
-                                  display: "flex",
-                                  flex: 1,
-                                  justifyContent: "center",
-                                  backgroundColor: "white"
-                                }}
-                              >
-                                <Button
+                      {this.props.pageStore.karir.karirList.map(
+                        (item, index) => (
+                          <Col lg="4" xs="12">
+                            <Card
+                              className={`card-karir mobile ${
+                                item.open ? "expand" : ""
+                              }`}
+                            >
+                              <CardBody>
+                                <CardTitle
                                   className="text-center"
-                                  onClick={async () => {
-                                    await this.setState({
-                                      stateKarir: this.state.stateKarir.map(
-                                        item => {
-                                          return { ...item, open: false };
-                                        }
-                                      )
-                                    });
-
-                                    setTimeout(() => {
-                                      this.setState({
+                                  style={{
+                                    color: "black",
+                                    fontSize: "1rem",
+                                    fontWeight: "bold",
+                                    marginBottom: 10
+                                  }}
+                                >
+                                  {item.devisi}
+                                </CardTitle>
+                                <CardSubtitle
+                                  className="text-center"
+                                  style={{
+                                    color: "black",
+                                    fontSize: "1rem",
+                                    marginBottom: 30
+                                  }}
+                                >
+                                  {item.description}
+                                </CardSubtitle>
+                                <CardText style={{ color: "black" }}>
+                                  {item.Detailkarir.map(itemDetail =>
+                                    ReactHtmlParser(itemDetail.description)
+                                  )}
+                                </CardText>
+                                <CardText style={{ color: "black" }}>
+                                  {item.Detailkarir.map(itemDetail =>
+                                    ReactHtmlParser(itemDetail.qualification)
+                                  )}
+                                </CardText>
+                                <div
+                                  style={{
+                                    width: "100%",
+                                    display: "flex",
+                                    justifyContent: "center"
+                                  }}
+                                ></div>
+                              </CardBody>
+                              {!item.open && (
+                                <CardFooter
+                                  style={{
+                                    position: "absolute",
+                                    bottom: 0,
+                                    width: "100%",
+                                    display: "flex",
+                                    flex: 1,
+                                    justifyContent: "center",
+                                    backgroundColor: "white"
+                                  }}
+                                >
+                                  <Button
+                                    className="text-center"
+                                    onClick={async () => {
+                                      await this.setState({
                                         stateKarir: this.state.stateKarir.map(
-                                          (item, stateIndex) => {
-                                            if (stateIndex !== index)
-                                              return item;
-                                            return {
-                                              ...item,
-                                              open: !item.open
-                                            };
+                                          item => {
+                                            return { ...item, open: false };
                                           }
                                         )
                                       });
-                                    }, 1000);
-                                  }}
-                                >
-                                  Show More
-                                </Button>
-                              </CardFooter>
-                            )}
-                          </Card>
-                        </Col>
-                      ))}
+
+                                      setTimeout(() => {
+                                        this.setState({
+                                          stateKarir: this.state.stateKarir.map(
+                                            (item, stateIndex) => {
+                                              if (stateIndex !== index)
+                                                return item;
+                                              return {
+                                                ...item,
+                                                open: !item.open
+                                              };
+                                            }
+                                          )
+                                        });
+                                      }, 1000);
+                                    }}
+                                  >
+                                    Show More
+                                  </Button>
+                                </CardFooter>
+                              )}
+                            </Card>
+                          </Col>
+                        )
+                      )}
                     </Row>
                   </Col>
                 </Row>
@@ -325,14 +326,14 @@ class Blogs extends React.Component {
               className="team-1 background-header"
               style={{
                 backgroundImage:
-                  "url(" + this.props.karirList.background_image + ")",
+                  "url(" + this.props.pageStore.karir.image_background + ")",
                 padding: 0
               }}
             >
               <BlurryNavbar />
               <ColoredNavbar location={{ ...this.props.location }} />
               <div className="title title-header">
-                {this.props.karirList.title}
+                {this.props.pageStore.karir.Header}
               </div>
               <div
                 style={{ textAlign: "center" }}
@@ -348,7 +349,7 @@ class Blogs extends React.Component {
                     className="description font-black"
                     style={{ marginTop: "10%", marginBottom: "2%" }}
                   >
-                    {ReactHtmlParser(this.props.karirList.description)}
+                    {ReactHtmlParser(this.props.pageStore.karir.description)}
                   </p>
                   <Row style={{ marginBottom: "10%" }}>
                     <Col md="6">
@@ -472,7 +473,7 @@ class Blogs extends React.Component {
                         </Card>
                       </Col>
                     ))} */}
-                    {karirList.map((item, index) => (
+                    {this.props.pageStore.karir.karirList.map((item, index) => (
                       <Accordion
                         style={{ border: "none", padding: 0 }}
                         allowMultipleExpanded={true}
@@ -487,12 +488,12 @@ class Blogs extends React.Component {
                             style={{ backgroundColor: "white" }}
                           >
                             <p style={{ color: "black" }}>
-                              {item.detail.map(itemDetail =>
+                              {item.Detailkarir.map(itemDetail =>
                                 ReactHtmlParser(itemDetail.description)
                               )}
                             </p>
                             <p style={{ color: "black" }}>
-                              {item.detail.map(itemDetail =>
+                              {item.Detailkarir.map(itemDetail =>
                                 ReactHtmlParser(itemDetail.qualification)
                               )}
                             </p>

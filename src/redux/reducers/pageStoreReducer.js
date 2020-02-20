@@ -242,11 +242,76 @@ const defaultState = {
         "Menyediakan fasilitas transaksi terbaik dengan beragam produk investasi serta layanan informasi pasar keuangan terkini dan terpercaya    Menyediakan fasilitas perdagangan online bagi investor dalam lingkup lokal maupun global melalui teknologi online trading yang inovatif\r\n        \r\n        Aktif berpartisipasi dalam membangun industri perdagangan berjangka yang transparan melalui program edukasi berkesinambungan\r\n        \r\n        Senantiasa meningkatkan dan mengembangkan kualitas sumber daya manusia yang profesional\r\n        \r\n        "
     }
   },
-  cabang: [
-    { image: "", title: "", content: "" },
-    { image: "", title: "", content: "" },
-    { image: "", title: "", content: "" }
-  ],
+  cabang: {
+    header: "Cabang",
+    subTitle: "",
+    image_background:
+      "https://topgrowth.sgp1.digitaloceanspaces.com/cabang/Cabang-2.png1581935415",
+    description: "Section 1",
+    cabang_list_title: "Cabang Kami",
+    cabangList: [
+      {
+        id: 3,
+        nama: "KANTOR CABANG SUNGAI GERONG",
+        subtitle: "asdasdasd",
+        alamat:
+          "<p>Jl. Sungai Gerong No. 5 - 7 Jakarta Pusat 10230 +62.21. 3190 1081</p>",
+        image_url:
+          "https://topgrowth.sgp1.digitaloceanspaces.com/cabang/KANTOR%20CABANG%20SUNGAI%20GERONG-3.png1582133473",
+        bahasaId: 1
+      },
+      {
+        id: 4,
+        nama: "KANTOR CABANG BANDUNG",
+        subtitle: null,
+        alamat:
+          "  Jl. Pasir Kaliki No. 25-27 Ruko Paskal Hyper Square Blok C 42-43 Bandung 40181",
+        image_url:
+          "https://topgrowth.sgp1.digitaloceanspaces.com/cabang/KANTOR%20CABANG%20BANDUNG-4.png1581495031",
+        bahasaId: 1
+      },
+      {
+        id: 5,
+        nama: "KANTOR CABANG SURABAYA 1",
+        subtitle: null,
+        alamat:
+          "Gedung Bumi Mandiri, lantai 5 Jl. Panglima Sudirman 66-68 Surabaya 60271",
+        image_url:
+          "https://topgrowth.sgp1.digitaloceanspaces.com/cabang/KANTOR%20CABANG%20SURABAYA%201-5.png1581495081",
+        bahasaId: 1
+      },
+      {
+        id: 25,
+        nama: "KANTOR CABANG SURABAYA 2",
+        subtitle: null,
+        alamat:
+          "  Trillium Office GF Unit A Jl. Pemuda No. 108 - 116 Surabaya 60271",
+        image_url:
+          "https://topgrowth.sgp1.digitaloceanspaces.com/cabang/KANTOR%20CABANG%20SURABAYA%202-25.png1581495285",
+        bahasaId: 1
+      },
+      {
+        id: 46,
+        nama: "KANTOR CABANG BANJARMASIN",
+        subtitle: "",
+        alamat:
+          "<p>Jl. Ahmad Yani Km 5.5 No. 459 B Banjarmasin 70249 Kalimantan Selatan</p><p>+62.511. 3255 009</p>",
+        image_url:
+          "https://topgrowth.sgp1.digitaloceanspaces.com/cabang/KANTOR%20CABANG%20BANJARMASIN-46.png1581887241",
+        bahasaId: 1
+      },
+      {
+        id: 48,
+        nama: "JAKARTA - SUDIRMAN SAHID CENTER (d.h KANTOR PLASA ASIA )  ",
+        subtitle: "",
+        alamat:
+          "<p>Sahid Sudirman Center, Lantai 40 unit 40C-40D Jl. Jend Sudirman Kav 86 Jakarta 10220 Indonesia</p>",
+        image_url:
+          "https://topgrowth.sgp1.digitaloceanspaces.com/cabang/JAKARTA%20-%20SUDIRMAN%20SAHID%20CENTER%20%28d.h%20KANTOR%20PLASA%20ASIA%20%29-48.png1581962833",
+        bahasaId: 1
+      }
+    ]
+  },
   rekeningterpisah: {
     header: "Rekening Terpisah",
     content: {
@@ -1032,11 +1097,78 @@ const defaultState = {
     ]
   },
   karir: {
-    Header: "Karir",
-    content: {
-      title:
-        "<p>Berikut ini lowongan kerja yang tersedia di Topgrowth Futures saat ini:</p>"
-    }
+    Header: "Karirs",
+    subtitle: "",
+    image_background:
+      "https://topgrowth.sgp1.digitaloceanspaces.com/Karir-1581865906988.png",
+    dedscription:
+      "<p>Berikut ini lowongan kerja yang tersedia di Topgrowth Futures saat ini:</p>",
+    karirList: [
+      {
+        id: 11,
+        divisi: "Finance",
+        subtitle: null,
+        description: "Finance",
+        status: true,
+        order: null,
+        image_url: null,
+        bahasaId: 1,
+        createdAt: "2020-02-12T04:55:05.977Z",
+        Detailkarir: [
+          {
+            id: 14,
+            description:
+              "<p>Minimum Kualifikasi:</p><ul><li>Memiliki sertifikasi financial consultant/planner</li><li>Memiliki pengetahuan yang luas mengenai sosial media</li><li>Handal dalam bercerita / menjelaskan</li><li>Memiliki kepercayaan diri untuk berbicara di depan banyak orang</li><li>Memiliki kemampuan komunikasi dan presentasi yang baik</li></ul>",
+            qualification:
+              "<p>Deskripsi pekerjaan :d</p><ul><li>Sebagai penyedia konten:<ul><li>Memberikan tips dan saran mengenai cara memiliki kehidupan keuangan yang sehat pada sosial media perusahaan (IG, FB, Podcast)</li><li>Memberikan konsultasi melalui sosial media</li><li>Berdiskusi mengenai topik-topik keuangan yang menarik melalui podcast</li></ul></li><li>Memberikan seminar / webinar mengenai cara mencapai tujuan keuangan dan memulai&nbsp;</li></ul>",
+            bahasaId: 1,
+            karirId: 11
+          }
+        ]
+      },
+      {
+        id: 22,
+        divisi: "Commercial",
+        subtitle: null,
+        description: "Commercial Description",
+        status: true,
+        order: null,
+        image_url: "",
+        bahasaId: 1,
+        createdAt: "2020-02-17T00:28:22.755Z",
+        Detailkarir: [
+          {
+            id: 19,
+            description:
+              "<p>Deskripsi pekerjaan :d</p><ul><li>Sebagai penyedia konten:<ul><li>Memberikan tips dan saran mengenai cara memiliki kehidupan keuangan yang sehat pada sosial media perusahaan (IG, FB, Podcast)</li><li>Memberikan konsultasi melalui sosial media</li><li>Berdiskusi mengenai topik-topik keuangan yang menarik melalui podcast</li></ul></li><li>Memberikan seminar / webinar mengenai cara mencapai tujuan keuangan dan memulai investasi</li></ul>",
+            qualification:
+              "<p>Memiliki sertifikasi financial consultant/planner</p><ul><li>Memiliki pengetahuan yang luas mengenai sosial media</li><li>Handal dalam bercerita / menjelaskan</li><li>Memiliki kepercayaan diri untuk berbicara di depan banyak orang</li><li>Memiliki kemampuan komunikasi dan presentasi yang baik</li></ul><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>",
+            bahasaId: 1,
+            karirId: 22
+          }
+        ]
+      },
+      {
+        id: 23,
+        divisi: "Marketing",
+        subtitle: "",
+        description: null,
+        status: true,
+        order: null,
+        image_url: "",
+        bahasaId: 1,
+        createdAt: "2020-02-20T04:12:35.091Z",
+        Detailkarir: [
+          {
+            id: 21,
+            description: "<p>fwefew</p>",
+            qualification: "<p>fewf</p>",
+            bahasaId: 1,
+            karirId: 23
+          }
+        ]
+      }
+    ]
   },
   hubungikami: {
     header: {

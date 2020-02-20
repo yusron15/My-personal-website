@@ -202,7 +202,6 @@ class News extends React.Component {
       this.setState({
         mounted: true
       });
-      this.mySlick.slickGoTo(4);
     }, 500);
   };
 
@@ -256,19 +255,19 @@ class News extends React.Component {
               className="team-1 background-header-mobile"
               style={{
                 backgroundImage:
-                  "url(" + this.props.cabangList.image_background + ")",
+                  "url(" + this.props.pageStore.cabang.image_background + ")",
                 padding: 0
               }}
             >
               <SidebarMobile />
               <div className="title title-header-mobile">
-                {this.props.cabangList.header}
+                {this.props.pageStore.cabang.header}
               </div>
               <div
                 style={{ textAlign: "center" }}
                 className="subheader font-white"
               >
-                {ReactHtmlParser(this.props.cabangList.subtitle)}
+                {ReactHtmlParser(this.props.pageStore.cabang.subTitle)}
               </div>
             </div>
             <div className="space-50" />
@@ -281,7 +280,7 @@ class News extends React.Component {
                     previous={() => this.previous(2, items2)}
                   >
                     <CarouselIndicators
-                      items={this.props.cabangList.cabangList.map(
+                      items={this.props.pageStore.cabang.cabangList.map(
                         (item, index) => {
                           return {
                             content: (
@@ -314,7 +313,7 @@ class News extends React.Component {
                       activeIndex={this.state.carousel2Index}
                       onClickHandler={newIndex => this.goToIndex(newIndex, 2)}
                     />
-                    {this.props.cabangList.cabangList.map((item, key) => {
+                    {this.props.pageStore.cabang.cabangList.map((item, key) => {
                       return (
                         <CarouselItem
                           onExiting={() => this.onExiting(2)}
@@ -411,20 +410,20 @@ class News extends React.Component {
             style={{
               // backgroundImage: `url(${bg})`,
               backgroundImage:
-                "url(" + this.props.cabangStore.image_background + ")",
+                "url(" + this.props.pageStore.cabang.image_background + ")",
               padding: 0
             }}
           >
             <BlurryNavbar />
             <ColoredNavbar location={{ ...this.props.location }} />
             <div className="title title-header">
-              {this.props.cabangStore.header}
+              {this.props.pageStore.cabang.header}
             </div>
             <div
               style={{ textAlign: "center" }}
               className="subheader font-white"
             >
-              {ReactHtmlParser(this.props.cabangStore.subtitle)}
+              {ReactHtmlParser(this.props.pageStore.cabang.subTitle)}
             </div>
           </div>
 
@@ -444,20 +443,22 @@ class News extends React.Component {
                         {...slickSettings}
                         ref={ref => (this.mySlick = ref)}
                       >
-                        {this.props.cabangStore.cabang.map((item, index) => {
-                          return (
-                            <div key={index}>
-                              <NavLink
-                                style={{
-                                  backgroundImage:
-                                    "url(" + item.image_url + ")",
-                                  height: "30vh",
-                                  backgroundSize: "cover"
-                                }}
-                              ></NavLink>
-                            </div>
-                          );
-                        })}
+                        {this.props.pageStore.cabang.cabangList.map(
+                          (item, index) => {
+                            return (
+                              <div key={index}>
+                                <NavLink
+                                  style={{
+                                    backgroundImage:
+                                      "url(" + item.image_url + ")",
+                                    height: "30vh",
+                                    backgroundSize: "cover"
+                                  }}
+                                ></NavLink>
+                              </div>
+                            );
+                          }
+                        )}
                       </Slick>
                     </Col>
                     <Col
@@ -477,17 +478,19 @@ class News extends React.Component {
                         <TabContent
                           activeTab={"project" + this.state.activeSlide}
                         >
-                          {this.props.cabangStore.cabang.map((item, index) => (
-                            <TabPane tabId={`project${index}`}>
-                              <div className="title font-black">
-                                {item.nama}
-                              </div>
+                          {this.props.pageStore.cabang.cabangList.map(
+                            (item, index) => (
+                              <TabPane tabId={`project${index}`}>
+                                <div className="title font-black">
+                                  {item.nama}
+                                </div>
 
-                              <p className="description font-black">
-                                {ReactHtmlParser(item.alamat)}
-                              </p>
-                            </TabPane>
-                          ))}
+                                <p className="description font-black">
+                                  {ReactHtmlParser(item.alamat)}
+                                </p>
+                              </TabPane>
+                            )
+                          )}
                         </TabContent>
                       </p>
                     </Col>
