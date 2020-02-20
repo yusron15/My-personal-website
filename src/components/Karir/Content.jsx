@@ -66,10 +66,13 @@ class Blogs extends React.Component {
   };
 
   async componentDidUpdate(prevProps, prevState) {
-    if (prevProps.karirList !== this.props.karirList) {
-      if (this.props.karirList.karirlist) {
+    if (
+      prevProps.pageStore.karir.karirlist !==
+      this.props.pageStore.karir.karirlist
+    ) {
+      if (this.props.pageStore.karir.karirlist) {
         await this.setState({
-          stateKarir: this.props.karirList.karirlist.map(item => {
+          stateKarir: this.props.pageStore.karir.karirlist.map(item => {
             return {
               ...item,
               open: false
@@ -487,12 +490,12 @@ class Blogs extends React.Component {
                           <AccordionItemPanel
                             style={{ backgroundColor: "white" }}
                           >
-                            <p style={{ color: "black" }}>
+                            <p className="font-black">
                               {item.Detailkarir.map(itemDetail =>
                                 ReactHtmlParser(itemDetail.description)
                               )}
                             </p>
-                            <p style={{ color: "black" }}>
+                            <p className="font-black">
                               {item.Detailkarir.map(itemDetail =>
                                 ReactHtmlParser(itemDetail.qualification)
                               )}

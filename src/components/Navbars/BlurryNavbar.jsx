@@ -62,7 +62,7 @@ class BlurryNavbar extends React.Component {
                 <NavItem>
                   <LangTogglerButton />
                 </NavItem>
-                <div class="vl"></div>
+                {/* <div class="vl"></div>
                 <NavItem style={{ marginTop: "5px" }}>
                   <div
                     onClick={() =>
@@ -83,7 +83,7 @@ class BlurryNavbar extends React.Component {
                     />
                     <text style={font}>Subscribe</text>
                   </div>
-                </NavItem>
+                </NavItem> */}
                 <div class="vl"></div>
                 <NavItem style={{ marginTop: "5px" }}>
                   <a
