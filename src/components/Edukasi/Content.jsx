@@ -32,7 +32,9 @@ const API_KEY = "AIzaSyBK9vHQHrRhSXDhj3K3Elo-yLB0EZxoHMc";
 const PLAYLIST_PM_MARKET = "PLzeWDGNIcxbFRu8k6ee7nIngLotBGKgx1";
 const PLAYLIST_MARKET_UPDATE = "PLzeWDGNIcxbHTHWk69y3gvyg_IkeDA-If";
 const PLAYLIST_MORNING_NEWS = "PLzeWDGNIcxbGWpnm0wEHpRkAYIjXh5aAL";
-const PLAYLIST_TOPGROWTH_FUTURES = "PLzeWDGNIcxbHeQhDrk-kHvBOrPJJHffen";
+const PLAYLIST_TOPGROWTH_FUTURES = "PLzeWDGNIcxbF7ZOVwkJfBqyZO9EgkEg5d";
+const PLAYLIST_TRADING_UNTUK_PEMULA = "PLzeWDGNIcxbG1lnYd77dtbML65JzAX1PS";
+const PLAYLIST_WEBINAR = "PLzeWDGNIcxbGDgekSI4ksYeGkZb1eddU5";
 
 class Content extends React.Component {
   constructor(props) {
@@ -45,25 +47,25 @@ class Content extends React.Component {
       playListids: [
         {
           name: "Pengenalan Topgrowth Futures",
-          id: PLAYLIST_PM_MARKET,
+          id: PLAYLIST_TOPGROWTH_FUTURES,
           videos: [],
           pageToken: ""
         },
         {
           name: "Trading Untuk Pemula",
-          id: PLAYLIST_MARKET_UPDATE,
+          id: PLAYLIST_TRADING_UNTUK_PEMULA,
           videos: [],
           pageToken: ""
         },
         {
           name: "Platform Topgrowth Trader & ProTrader",
-          id: PLAYLIST_MORNING_NEWS,
+          id: PLAYLIST_TOPGROWTH_FUTURES,
           videos: [],
           pageToken: ""
         },
         {
           name: "Webinar",
-          id: PLAYLIST_TOPGROWTH_FUTURES,
+          id: PLAYLIST_WEBINAR,
           videos: [],
           pageToken: ""
         }

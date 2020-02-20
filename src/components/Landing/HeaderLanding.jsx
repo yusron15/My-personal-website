@@ -424,7 +424,11 @@ class HeaderLanding extends React.Component {
                     </Carousel>
                   </Col>
                   <Col
-                    md="4 offset-md-8"
+                    // md="5 offset-md-7"
+                    md={{
+                      size: 4,
+                      offset: 8
+                    }}
                     style={{
                       top: "17vh",
                       position: "absolute"

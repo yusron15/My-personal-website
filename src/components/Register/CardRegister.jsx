@@ -211,7 +211,10 @@ class CardRegister extends React.Component {
             >
               <h6>
                 <a
-                  href="http://cabinet.topgrowthfutures.com/users/login"
+                  href={
+                    this.props.pageStore.Landing.HeaderLanding.SignUp[0]
+                      .content_link
+                  }
                   target="_blank"
                   className="textlink"
                 >
