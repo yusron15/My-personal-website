@@ -144,7 +144,7 @@ class News extends React.Component {
       carousel2Index: 0,
       oldSlide: 0,
       mounted: false,
-      activeSlide: 4
+      activeSlide: 5
     };
 
     this.mySlick = null;
@@ -221,31 +221,31 @@ class News extends React.Component {
         console.log(current, "adasd");
         this.setState({ activeSlide: current });
       },
-      slide: "section"
-      // responsive: [
-      //   {
-      //     breakpoint: 1024,
-      //     settings: {
-      //       slidesToShow: 3,
-      //       slidesToScroll: 1,
-      //       infinite: true
-      //     }
-      //   },
-      //   {
-      //     breakpoint: 600,
-      //     settings: {
-      //       slidesToShow: 2,
-      //       slidesToScroll: 1
-      //     }
-      //   },
-      //   {
-      //     breakpoint: 480,
-      //     settings: {
-      //       slidesToShow: 1,
-      //       slidesToScroll: 1
-      //     }
-      //   }
-      // ]
+      slide: "section",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
     if (isMobile) {
       return (
