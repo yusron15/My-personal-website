@@ -118,6 +118,25 @@ class Carding extends React.Component {
     }
   };
 
+  next = () => {
+    if (this.animating) return;
+    const nextIndex =
+      this.state.activeIndex === 3 - 1 ? 0 : this.state.activeIndex + 1;
+    this.setState({ activeIndex: nextIndex });
+  };
+
+  previous = () => {
+    if (this.animating) return;
+    const nextIndex =
+      this.state.activeIndex === 0 ? 3 - 1 : this.state.activeIndex - 1;
+    this.setState({ activeIndex: nextIndex });
+  };
+
+  goToIndex = newIndex => {
+    if (this.animating) return;
+    this.setState({ activeIndex: newIndex });
+  };
+
   onExited = () => {
     this.animating = false;
   };
@@ -164,56 +183,56 @@ class Carding extends React.Component {
       itemsBeritaTerkini = this.props.allNews.slice(0, 3).map((item, index) => {
         return {
           content: (
-            <a href={item.link}>
+            <div
+              style={{
+                display: "flex",
+                flex: 1,
+                position: "relative",
+                height: "100%",
+                width: "100%"
+              }}
+            >
+              {/* <a href={item.link}> */}
+              <img
+                src={item.featured_image_src}
+                style={{
+                  height: 500,
+                  flex: 1,
+                  // height: "100%",
+                  width: "100%"
+                }}
+              />
+              {/* </a> */}
               <div
                 style={{
                   display: "flex",
-                  flex: 1,
-                  position: "relative",
-                  height: "100%",
-                  width: "100%"
+                  alignSelf: "flex-end",
+                  flexDirection: "column",
+                  position: "absolute",
+                  padding: 20,
+                  zIndex: 999
+                  // marginBottom: 30
                 }}
               >
                 <a href={item.link}>
-                  <img
-                    src={item.featured_image_src}
-                    style={{
-                      position: "absolute",
-                      height: "100%",
-                      width: "100%"
-                    }}
-                  />
+                  <div style={textTitle}>
+                    <b>{item.title.rendered}</b>
+                  </div>
+                  <div className="description" style={textDesc}>
+                    {ReactHtmlParser(item.excerpt.rendered.slice(0, 120))}
+                  </div>
                 </a>
-                <div
-                  style={{
-                    display: "flex",
-                    alignSelf: "flex-end",
-                    flexDirection: "column",
-                    padding: 20,
-                    zIndex: 999,
-                    marginBottom: 30
-                  }}
-                >
-                  <a href={item.link}>
-                    <div style={textTitle}>
-                      <b>{item.title.rendered}</b>
-                    </div>
-                    <div className="description" style={textDesc}>
-                      {ReactHtmlParser(item.excerpt.rendered.slice(0, 120))}
-                    </div>
-                  </a>
-                </div>
-                <div
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
-                    position: "absolute",
-                    height: "100%",
-                    width: "100%"
-                  }}
-                ></div>
               </div>
-            </a>
+              <div
+                style={{
+                  backgroundImage:
+                    "linear-gradient(180deg, rgba(0,0,0,0) 33%, rgba(0,0,0,0.32396708683473385) 56%, rgba(0,0,0,0.6713060224089635) 68%, rgba(0,0,0,0.8346113445378151) 85%)",
+                  position: "absolute",
+                  height: "100%",
+                  width: "100%"
+                }}
+              ></div>
+            </div>
           ),
           altText: "",
           caption: "",
@@ -283,7 +302,7 @@ class Carding extends React.Component {
                           activeIndex={this.state.activeIndex}
                           next={this.next}
                           previous={this.previous}
-                          //   className="carousel-team"
+                          autoPlay={false}
                           style={{
                             borderRadius: "20px",
                             backgroundColor: "transparent"
@@ -599,6 +618,7 @@ class Carding extends React.Component {
                         next={this.next}
                         previous={this.previous}
                         //   className="carousel-team"
+                        autoPlay={false}
                         style={{
                           borderRadius: "20px",
                           backgroundColor: "transparent",

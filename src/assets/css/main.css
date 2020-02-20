@@ -507,7 +507,6 @@ hr.grey {
 
 .broken-white {
   background-color: #fff7f7;
-
 }
 
 .icon-biaya {
@@ -905,27 +904,24 @@ ul li {
   }
 }
 
-.textnews{
-
-  color:black
+.textnews {
+  color: black;
 }
 
 .textnews:hover {
   color: blue;
 }
 
-.textlink{
-
-  color:white
+.textlink {
+  color: white;
 }
 
 .textlink:hover {
   color: rgb(111, 111, 255);
 }
 
-p > .textnews{
-
-  color:black
+p > .textnews {
+  color: black;
 }
 
 p > .textnews:hover {
@@ -937,5 +933,9 @@ p > .textnews:hover {
 }
 
 .flag-select img {
-  top : 0 !important;
+  top: 0 !important;
+}
+
+.carousel-indicators {
+  z-index: 9999;
 }
