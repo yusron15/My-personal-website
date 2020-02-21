@@ -55,6 +55,7 @@ import Cfd from "views/layout/Cfd.jsx";
 import ForexGold from "views/layout/ForexGold.jsx";
 import Komoditi from "views/layout/Komoditi.jsx";
 import IndexFutures from "views/layout/IndexFutures.jsx";
+import Cpo from "views/layout/Cpo.jsx";
 import ProTrader from "views/layout/ProTrader.jsx";
 import TopgrowthTrader from "views/layout/TopgrowthTrader.jsx";
 import NewsPage from "views/layout/NewsPage.jsx";
@@ -200,6 +201,7 @@ class App extends Component {
                   path="/index-futures"
                   render={props => <IndexFutures {...props} />}
                 />
+                <Route path="/cpo" render={props => <Cpo {...props} />} />
                 <Route
                   path="/pro-trader"
                   render={props => <ProTrader {...props} />}
