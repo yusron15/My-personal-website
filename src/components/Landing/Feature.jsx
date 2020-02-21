@@ -304,8 +304,11 @@ class Features extends React.Component {
                     size: 6,
                     offset: 2
                   }}
+                  sm={{
+                    size: 12,
+                    offset: 2
+                  }}
                   style={{ zIndex: "2" }}
-
                 >
                   <Row>
                     <Col md={6} lg={6}>
@@ -569,6 +572,7 @@ class Features extends React.Component {
                     offset: 8
                   }}
                   lg={4}
+                  sm={12}
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -577,11 +581,6 @@ class Features extends React.Component {
                     position: "absolute"
                   }}
                 >
-                  {/* <ScrollAnimation
-                    offset={100}
-                    animateIn="fadeInRight"
-                    animateOut="fadeOut"
-                  > */}
                   <img
                     src={TopgrowthAnmation}
                     style={{
@@ -589,7 +588,6 @@ class Features extends React.Component {
                       height: "60vh"
                     }}
                   />
-                  {/* </ScrollAnimation> */}
                 </Col>
               </Row>
             </Container>

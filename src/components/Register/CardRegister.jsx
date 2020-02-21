@@ -42,8 +42,8 @@ class CardRegister extends React.Component {
         <Card
           style={{
             backgroundColor: "rgba(14,14,14,0.7)",
-            marginTop: "72%",
-            minHeight: "30vh"
+            marginTop: "65%",
+            minHeight: "35vh"
           }}
         >
           <Form
@@ -164,7 +164,7 @@ class CardRegister extends React.Component {
                 </Col>
               </Row> */}
               <Row className="vertical-center" style={{ marginTop: "15px" }}>
-                <div>
+                <Col md="col-auto" style={{ marginRight: "20px" }}>
                   <a
                     href="http://cabinet.topgrowthfutures.com/users/register"
                     target="_blank"
@@ -182,8 +182,9 @@ class CardRegister extends React.Component {
                       }
                     </Button>
                   </a>
-                </div>
-                <div>
+                </Col>
+
+                <Col md="col-auto">
                   <a
                     href="http://cabinet.topgrowthfutures.com/users/register"
                     target="_blank"
@@ -192,7 +193,7 @@ class CardRegister extends React.Component {
                     <Button
                       color="info"
                       type="button"
-                      style={{ width: "100%", marginLeft: "25px" }}
+                      style={{ width: "100%" }}
                     >
                       {/* {this.props.pageStore.register.form.rightButton} */}
                       {
@@ -201,7 +202,7 @@ class CardRegister extends React.Component {
                       }
                     </Button>
                   </a>
-                </div>
+                </Col>
               </Row>
             </CardBody>
 

@@ -602,7 +602,7 @@ class Pricing extends React.Component {
                       <Container>
                         {/* <Card style={{ backgroundColor: "#1D1E1F" }}> */}
                         <Row>
-                          <Col className="pl-0" md="4">
+                          <Col className="pl-0" md="4" lg="4" sm="12">
                             <ScrollAnimation
                               delay={100}
                               offset={100}
@@ -749,7 +749,7 @@ class Pricing extends React.Component {
                               </Card>
                             </ScrollAnimation>
                           </Col>
-                          <Col className="pl-0" md="4">
+                          <Col className="pl-0" md="4" lg="4" sm="12">
                             <ScrollAnimation
                               delay={200}
                               offset={100}
@@ -898,7 +898,7 @@ class Pricing extends React.Component {
                               </Card>
                             </ScrollAnimation>
                           </Col>
-                          <Col className="pl-0" md="4">
+                          <Col className="pl-0" md="4" lg="4" sm="12">
                             <ScrollAnimation
                               delay={300}
                               offset={100}
