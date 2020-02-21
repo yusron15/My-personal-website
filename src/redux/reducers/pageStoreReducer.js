@@ -534,6 +534,87 @@ const defaultState = {
             ]
           }
         ]
+      },
+      {
+        title: "SPOT GOLD & SILVER",
+        content:
+          "<ul><li>Sebagian besar perdagangan global dalam emas dan perak dilakukan di pasar over-the-counter (OTC).&nbsp;</li><li>London sejauh ini merupakan pusat global terbesar untuk transaksi OTC yang diikuti oleh New York, Zurich, dan Tokyo.&nbsp;</li><li>Perdagangan dalam bursa telah berkembang dalam beberapa tahun terakhir dan sebagian besar aktivitas dilakukan di Comex di New York dan Tocom di Tokyo.&nbsp;</li><li>Emas juga diperdagangkan dalam bentuk surat berharga, seperti dana yang diperdagangkan di bursa (ETF), di London, New York, Johannesburg, dan bursa saham Australia.&nbsp;&nbsp;</li><li>Meskipun pasar fisik untuk emas dan perak didistribusikan secara global, Kliring sebagian besar perdagangan pasar OTC dilakukan melalui London.&nbsp;</li><li>Volume Kliring harian rata-rata emas dan perak di London Bullion Market Association (LBMA) pada November 2008 adalah 18,3 juta ons Emas (senilai $ 13,9 miliar) dan 107,6 juta ons Perak (senilai $ 1,1 miliar).</li></ul>",
+        table: [
+          {
+            id: 42,
+            prefix1: "PRODUCT",
+            prefix2: "LOCO LONDON GOLD",
+            prefix3: "SILVER",
+            prefix4: null,
+            prefix5: null,
+            prefix6: null,
+            prefix7: null,
+            prefix8: null,
+            Sectiond: 557,
+            tableData: [
+              {
+                id: 189,
+                prefix1: " Contract Size 100 Troy Ounces 5,000 Troy Ounces",
+                prefix2: "100 Troy Ounces",
+                prefix3: "5,000 Troy Ounces",
+                prefix4: "",
+                prefix5: "",
+                prefix6: null,
+                prefix7: null,
+                prefix8: null,
+                tableId: 42
+              },
+              {
+                id: 190,
+                prefix1: " Fixed Exchanged Rate ",
+                prefix2: "USD 1= Rp. 12.000,- & Rp. 14.000,-",
+                prefix3: "",
+                prefix4: "",
+                prefix5: "",
+                prefix6: null,
+                prefix7: null,
+                prefix8: null,
+                tableId: 42
+              },
+              {
+                id: 191,
+                prefix1: " Minimum Tick ",
+                prefix2: "1 cent",
+                prefix3: "0.1 cent",
+                prefix4: "",
+                prefix5: "",
+                prefix6: null,
+                prefix7: null,
+                prefix8: null,
+                tableId: 42
+              },
+              {
+                id: 192,
+                prefix1: " PIP size",
+                prefix2: "10 cents ",
+                prefix3: "1 cent",
+                prefix4: "",
+                prefix5: "",
+                prefix6: null,
+                prefix7: null,
+                prefix8: null,
+                tableId: 42
+              },
+              {
+                id: 193,
+                prefix1: " Value Per PIP ",
+                prefix2: "USD 10",
+                prefix3: "USD 50",
+                prefix4: "",
+                prefix5: "",
+                prefix6: null,
+                prefix7: null,
+                prefix8: null,
+                tableId: 42
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -685,6 +766,70 @@ const defaultState = {
             ]
           }
         ]
+      },
+      {
+        title: "SPOT GOLD & SILVER",
+        content:
+          "<ul><li>Sebagian besar perdagangan global dalam emas dan perak dilakukan di pasar over-the-counter (OTC).&nbsp;</li><li>London sejauh ini merupakan pusat global terbesar untuk transaksi OTC yang diikuti oleh New York, Zurich, dan Tokyo.&nbsp;</li><li>Perdagangan dalam bursa telah berkembang dalam beberapa tahun terakhir dan sebagian besar aktivitas dilakukan di Comex di New York dan Tocom di Tokyo.&nbsp;</li><li>Emas juga diperdagangkan dalam bentuk surat berharga, seperti dana yang diperdagangkan di bursa (ETF), di London, New York, Johannesburg, dan bursa saham Australia.&nbsp;&nbsp;</li><li>Meskipun pasar fisik untuk emas dan perak didistribusikan secara global, Kliring sebagian besar perdagangan pasar OTC dilakukan melalui London.&nbsp;</li><li>Volume Kliring harian rata-rata emas dan perak di London Bullion Market Association (LBMA) pada November 2008 adalah 18,3 juta ons Emas (senilai $ 13,9 miliar) dan 107,6 juta ons Perak (senilai $ 1,1 miliar).</li></ul>",
+        table: [
+          {
+            id: 42,
+            prefix1: "PRODUCT",
+            prefix2: "LOCO LONDON GOLD",
+            prefix3: "SILVER",
+            prefix4: null,
+            prefix5: null,
+            prefix6: null,
+            SectionId: 557,
+            tableData: [
+              {
+                id: 189,
+                prefix1: " Contract Size 100 Troy Ounces 5,000 Troy Ounces",
+                prefix2: "100 Troy Ounces",
+                prefix3: "5,000 Troy Ounces",
+                prefix4: "",
+                prefix5: "",
+                tableId: 42
+              },
+              {
+                id: 190,
+                prefix1: " Fixed Exchanged Rate ",
+                prefix2: "USD 1= Rp. 12.000,- & Rp. 14.000,-",
+                prefix3: "",
+                prefix4: "",
+                prefix5: "",
+                tableId: 42
+              },
+              {
+                id: 191,
+                prefix1: " Minimum Tick ",
+                prefix2: "1 cent",
+                prefix3: "0.1 cent",
+                prefix4: "",
+                prefix5: "",
+                tableId: 42
+              },
+              {
+                id: 192,
+                prefix1: " PIP size",
+                prefix2: "10 cents ",
+                prefix3: "1 cent",
+                prefix4: "",
+                prefix5: "",
+                tableId: 42
+              },
+              {
+                id: 193,
+                prefix1: " Value Per PIP ",
+                prefix2: "USD 10",
+                prefix3: "USD 50",
+                prefix4: "",
+                prefix5: "",
+                tableId: 42
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -758,71 +903,208 @@ const defaultState = {
   },
   Komoditi: {
     header: "Komoditi",
-    top:
-      "Sebagai salah satu instrumen yang paling populer bagi sebagian besar manajer investasi global, transaksi komoditi mengakibatkan perputaran uang di pasar komoditas menjadi cukup tinggi.\r\n\r\n        Komoditas dapat diinterpretasikan sebagai sesuatu dari substansi fisik dan dibagi menjadi dua, yaitu komoditi hasil pertambangan, seperti emas, perak, minyak dan lainnya, dan komoditi hasil pertanian, seperti gula, beras, kakao, kopi dan lainnya.\r\n        \r\n        Komoditas lebih mudah dipahami karena banyak bergantung pada kondisi fundamental permintaan dan penawaran. Volatilitas harga komoditas lebih kecil dibandingkan saham dan obligasi sehingga menyediakan pilihan diversifikasi portofolio yang efisien untuk pelaku pasar. Yang membuat komoditas lebih menarik dan lebih berisiko dalam transaksi dibandingkan saham adalah jumlah leverage atau daya ungkit. Akan tetapi pada kenyataannya, risiko perdagangan di pasar komoditas tidak akan lebih dari risiko yang ditentukan pengguna.\r\n        \r\n        JFX (Jakarta Futures Exchange) dan ICDX (Indonesia Commodity & Derivatives Exchange) sebagai bursa berjangka di Indonesia berfungsi untuk mengembangkan pasar berjangka melalui sistem yang lebih dinamis, transparan, dan likuid. Transaksi multilateral memungkinkan banyak pihak untuk membeli dan menjual instrumen keuangan di bursa melalui sarana elektronik.",
-    content: [
-      {
-        image: "",
-        title: "Biaya Rendah",
-        content:
-          "Memungkinkan nasabah untuk memaksimalkan keuntungan serta menerapkan money management"
-      },
-      {
-        image: "",
-        title: "Biaya Rendah",
-        content:
-          "Memungkinkan nasabah untuk memaksimalkan keuntungan serta menerapkan money management"
-      },
-      {
-        image: "",
-        title: "Biaya Rendah",
-        content:
-          "Memungkinkan nasabah untuk memaksimalkan keuntungan serta menerapkan money management"
-      }
-    ],
-    footerKomoditi: {
+    sub_header: "Volatilitas harga komoditas lebih kecil dibandingkan saham dan obligasi sehingga menyediakan pilihan diversifikasi portofolio yang efisien untuk pelaku pasar.",
+    image_background: "https://topgrowth.sgp1.digitaloceanspaces.com/-1581822581962.png",
+    top: "<p>Sebagai salah satu instrumen yang paling populer bagi sebagian besar manajer investasi global, transaksi komoditi mengakibatkan perputaran uang di pasar komoditas menjadi cukup tinggi. Komoditas dapat diinterpretasikan sebagai sesuatu dari substansi fisik dan dibagi menjadi dua, yaitu komoditi hasil pertambangan, seperti emas, perak, minyak dan lainnya, dan komoditi hasil pertanian, seperti gula, beras, kakao, kopi dan lainnya. Komoditas lebih mudah dipahami karena banyak bergantung pada kondisi fundamental permintaan dan penawaran. Volatilitas harga komoditas lebih kecil dibandingkan saham dan obligasi sehingga menyediakan pilihan diversifikasi portofolio yang efisien untuk pelaku pasar. Yang membuat komoditas lebih menarik dan lebih berisiko dalam transaksi dibandingkan saham adalah jumlah leverage atau daya ungkit. Akan tetapi pada kenyataannya, risiko perdagangan di pasar komoditas tidak akan lebih dari risiko yang ditentukan pengguna. JFX (Jakarta Futures Exchange) dan ICDX (Indonesia Commodity &amp; Derivatives Exchange) sebagai bursa berjangka di Indonesia berfungsi untuk mengembangkan pasar berjangka melalui sistem yang lebih dinamis, transparan, dan likuid. Transaksi multilateral memungkinkan banyak pihak untuk membeli dan menjual instrumen keuangan di bursa melalui sarana elektronik.</p>",
+    contentList1: {
+      title: "Mengapa Memperdagangkan Komoditi?",
+      content: [
+        {
+          title: "Permintaan Akan Komoditas Terus Meningkat",
+          content: "Seiring berkembangnya dunia, permintaan akan komoditas akan terus meningkat dan berdampak pada kenaikan harga komoditas tersebut"
+        },
+        {
+          title: "Melindungi Portofolio Terhadap Inflasi",
+          content: "Sejalan dengan laju inflasi, harga komoditas akan terus meningkat; para pelaku pasar dapat melindungi harga tersebut terhadap inflasi melalui bursa berjangka"
+        },
+        {
+          title: "Faktor Pergerakan Harga Komoditi",
+          content: "Di antaranya adalah perkiraan cuaca, faktor ekonomi, faktor politik, tekanan internasional, dan spekulasi"
+        }
+      ]
+    },
+    contentList2: {
       title: "Keuntungan Bertransaksi Kontrak Berjangka",
       content: [
         {
-          title: "MARGIN/ LEVERAGE",
-          subtitle:
-            "Semua kontrak berjangka i perdagangkan dengan margin Margin ranges 2%-10% Contoh : Kontrak : GOLDGR Ukuran Kontrak : 1 Lot = 100 gram Misalnya harga emas adalahRp. 495.000. Nilai dari 1 Lot GOLDGR = 100 gram x Rp. 495.000 = Rp. 49.500.000 Margin per lot 4% = 4% x Rp. 49.500.000 = Rp. 1.980.000, dibulatkan menjadi Rp 2.000.000,-"
+          title: "MARGIN/LEVERAGE",
+          content: "<p>Semua kontrak berjangka diperdagangkan dengan margin di kisaran 2%-10%.</p><p><strong>Contoh</strong>:<br>Kontrak: GOLDGR</p><p>Ukuran Kontrak: 1 Lot = 100 gram</p><p>Misalnya harga emas adalah Rp 495.000,-</p><p>Nilai dari 1 Lot GOLDGR = 100 gram x Rp 495.000,- = Rp 49.500.000,-</p><p>Margin per lot 4% = 4% x Rp 49.500.000,- = Rp. 1.980.000,- dibulatkan menjadi Rp 2.000.000,-</p>"
         },
         {
-          title: "2WAYS OPPORTUNITY",
-          subtitle:
-            "BUY position – buying a contract (Investor menginginkan harga terus meningkat SHORT position — selling a contract (Investor menginginkan harga terus menurun)"
+          title: "2-WAYS OPPORTUNITY",
+          content: "<p>BUY position – buying a contract (Investor menginginkan harga terus meningkat)</p><p>SHORT position — selling a contract (Investor menginginkan harga terus menurun)</p>"
         },
         {
           title: "LINDUNG NILAI (HEDGING)",
-          subtitle:
-            "Memberi kesempatan pada produsen untuk melakukan lindung nilai, sehingga tidak perlu menjual saat harga rendah. Komoditas bisa menjadi pilihan lindung nilai asset lainnya pada saat inflasi."
+          content: "<p>Memberi kesempatan pada produsen untuk melakukan lindung nilai, sehingga tidak perlu menjual saat harga rendah. Komoditas bisa menjadi pilihan lindung nilai asset lainnya pada saat inflasi.</p>"
         }
       ]
-    }
+    },
+    contentList3: {
+      title: "PRODUK KOMODITI\nTopgrowth menawarkan Kontrak Berjangka Komoditi GOLDGR dan CPOTR yang merupakan produk dari Bursa Komoditi dan Derivatif Indonesia (BKDI/ICDX).  \n",
+      content: [
+        {
+          title: "Emas Sebagai Sebuah Investasi",
+          content: "<ul><li>Sejak dahulu, emas dipercaya oleh pelaku pasar sebagai investasi yang aman lindung nilainya terhadap apapun, baik dari segi ekonomi, politik, krisis sosial ataupun krisis mata uang.&nbsp;&nbsp;</li><li>Investor juga akan membeli pada kondisi pasar yang sedang bergejolak dan bertujuan untuk menjualnya kembali untuk mendapatkan keuntungan atas investasi mereka. &nbsp;</li></ul>"
+        }
+      ]
+    },
+    tableList: [
+      {
+        title: "Bursa ICDX",
+        table: [
+          {
+            id: 50,
+            prefix1: "KONTRAK",
+            prefix2: "TYPE KONTRAK",
+            prefix3: "DASAR KONTRAK",
+            prefix4: "Denominasi",
+            prefix5: "Besaran Kontrak",
+            prefix6: "Tick Size",
+            prefix7: null,
+            prefix8: null,
+            SectionId: 577,
+            tableData: [
+              {
+                id: 203,
+                prefix1: "GOLDID",
+                prefix2: "Spot",
+                prefix3: "Loco London Spot Gold",
+                prefix4: "IDR",
+                prefix5: "10 Troy Oz",
+                prefix6: "USD 0.10 /Troy Oz",
+                prefix7: "-",
+                prefix8: "07:00 – 04:30 (03:30 selama DST)",
+                tableId: 50
+              },
+              {
+                id: 204,
+                prefix1: "GOLDUD",
+                prefix2: "Spot",
+                prefix3: "Loco London Spot Gold",
+                prefix4: "USD",
+                prefix5: "10 Troy Oz",
+                prefix6: "USD 0.10 /Troy Oz",
+                prefix7: "-",
+                prefix8: "07:00 – 04:30 (03:30",
+                tableId: 50
+              }
+            ]
+          }
+        ]
+      },
+      {
+        title: "Bursa BBJ",
+        table: [
+          {
+            id: 54,
+            prefix1: "KONTRAK",
+            prefix2: "TYPE KONTRAK",
+            prefix3: "DASAR KONTRAK",
+            prefix4: "Denominasi",
+            prefix5: "Besaran Kontrak",
+            prefix6: "Tick Size",
+            prefix7: null,
+            prefix8: null,
+            SectionId: 581,
+            tableData: [
+              {
+                id: 205,
+                prefix1: "Kontrak",
+                prefix2: "Type Kontrak",
+                prefix3: "Dasar Kontrak",
+                prefix4: "Denominasi",
+                prefix5: "Besaran Kontrak",
+                prefix6: "Tick Size",
+                prefix7: "Bulan Kontrak",
+                prefix8: "Jam Perdagangan",
+                tableId: 54
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   indexfutures: {
-    header: "Index Futures",
-    content:
-      "KONTRAK BERJANGKA atau INDEX FUTURES adalah alternatif investasi dalam perdagangan saham yang dapat meminimalkan risiko dan akan melindungi investor dari fluktuasi harga yang merugikan. Kontrak berjangka adalah suatu kewajiban untuk menerima atau untuk menyerahkan suatu instrumen keuangan atau kontrak di masa depan dengan menggunakan harga yang telah disepakati pada hari ini.\r\n\r\n        Di dalam perdagangan kontrak berjangka, investor diberikan peluang untuk mengambil posisi open sell kontrak dengan harapan harga akan turun dan posisi open buy kontrak dengan harapan harga akan naik.\r\n        \r\n        Topgrowth Futures menawarkan investasi pada kontrak berjangka untuk mencari keuntungan dari fluktuasi harga indeks dengan merekomendasikan Kontrak Berjangka Jepang (Nikkei 225), Kontrak Berjangka Hong Kong (Hang Seng) dan Kontrak Berjangka Korea (Kospi 200).",
+    header: "Index Future",
+    sub_header:
+      "Kontrak Berjangka atau Index Futures merupakan alternatif investasi dalam perdagangan saham yang dapat meminimalisasi risiko dan melindungi investor dari fluktuasi harga yang merugikan.",
+    image_background:
+      "https://topgrowth.sgp1.digitaloceanspaces.com/-1581823423047.png",
+    content: [
+      {
+        title: "KONTRAK BERJANGKA INDEX FUTURES ",
+        content:
+          "adalah alternatif investasi dalam perdagangan saham yang dapat meminimalkan risiko kerugian investor dari fluktuasi harga.  Investasi pada Kontrak Berjangka Index Futures mencari keuntungan dari fluktuasi harga indeks"
+      },
+      {
+        title: "KINERJA",
+        content:
+          "<p>Indeks-indeks saham utama di dunia merupakan instrumen investasi&nbsp; yang memiliki kinerja terbaik, bahkan hampir 97% melebihi kinerja investasi seluruh reksadana aktif selama hampir lebih dari 40 tahun&nbsp; terakhir</p>"
+      },
+      {
+        title: "DIVERSIFIKASI",
+        content:
+          "<p>Pergerakan indeks saham mewakili saham-saham yang ada di dalamnya secara menyeluruh, sehingga Kontrak Berjangka Index Futures merupakan instrumen yang sangat ideal untuk melakukan diversifikasi portfolio.</p>"
+      },
+      {
+        title: "SHORT SELLING",
+        content:
+          "<p>Short Selling pada perdagangan Kontrak Berjangka Index Futures memberikan kesempatan pada investor untuk meraih peluang pada saat harga terkoreksi tajam atau bearish market.&nbsp; Dengan kata lain kita dapat melakukan aksi jual kapanpun tanpa harus membeli terlebih dahulu.</p>"
+      },
+      {
+        title: "LEVERAGE",
+        content:
+          "<p>Kontrak Berjangka Index Futures biasanya diperdagangkan dengan menggunakan leverage sekitar 3-10% dari nilai kontraknya.&nbsp; Penggunaan leverage ini memungkinkan investor untuk meningkatkan rasio keuntungannya sehingga tingkat ROI (Return Of Investment) yang dihasilkan sangat besar.</p><p>Di sisi lain juga akan meningkatkan rasio resiko yang mungkin terjadi.</p>"
+      }
+    ],
     slide: [
       {
-        title: "BEBERAPA RAGAM INDEKS FUTURES",
-        subtitle: "INDEKS BERJANGKA JEPANG (NIKKEI 225)",
+        title: "Beberapa Ragam Index Futuresss",
+        subtitle: "Index Berjangka Jepang (NIKKEI 225)ss",
         content:
-          "Indeks Nikkei 225, yang sering disebut sebagai Nikkei, indeks Nikkei, atau Nikkei Stock Average, merupakan indeks pasar saham untuk Bursa Saham Tokyo (TSE) yang dihitung setiap hari menggunakan metode perhitungan rata-rata harga tertimbang dalam yen dan ditinjau setahun sekali oleh surat kabar Nihon Keizai Shimbun (Nikkei) sejak tahun 1950.\r\n            Saat ini, indeks Nikkei paling banyak digunakan untuk menggambarkan kondisi dari saham Jepang; mirip dengan Dow Jones Industrial Average hingga bahkan sempat dijuluki sebagai “Indeks Nikkei Dow Jones” pada era 1975-1985. Nikkei 225 Futures diperkenalkan di Singapore Exchange (SGX) pada tahun 1986, di Osaka Securities Exchange (OSE) pada tahun 1988, dan di Chicago Mercantile Exchange (CME) pada tahun 1990. Hari ini, indeks Nikkei telah menjadi indeks berjangka yang diakui secara internasional dan diperbarui setiap 15 detik selama sesi perdagangan sejak tahun 2010."
+          "<p>Indeks Nikkei 225, yang sering disebut sebagai Nikkei, indeks Nikkei, atau Nikkei Stock Average, merupakan indeks pasar saham untuk Bursa Saham Tokyo (TSE) yang dihitung setiap hari menggunakan metode perhitungan rata-rata harga tertimbang dalam yen dan ditinjau setahun sekali oleh surat kabar Nihon Keizai Shimbun (Nikkei) sejak tahun 1950. Saat ini, indeks Nikkei paling banyak digunakan untuk menggambarkan kondisi dari saham Jepang; mirip dengan Dow Jones Industrial Average hingga bahkan sempat dijuluki sebagai “Indeks Nikkei Dow Jones” pada era 1975-1985. Nikkei 225 Futures diperkenalkan di Singapore Exchange (SGX) pada tahun 1986, di Osaka Securities Exchange (OSE) pada tahun 1988, dan di Chicago Mercantile Exchange (CME) pada tahun 1990. Hari ini, indeks Nikkei telah menjadi indeks berjangka yang diakui secara internasional dan diperbarui setiap 15 detik selama sesi perdagangan sejak tahun 2010.ss</p>"
       },
       {
-        title: "BEBERAPA RAGAM INDEKS FUTURES",
-        subtitle: "INDEKS BERJANGKA JEPANG (NIKKEI 225)",
+        title: "Beberapa Ragam Index Futures",
+        subtitle: "Index Berjangka Hongkong (HANGSENG)",
         content:
-          "Indeks Nikkei 225, yang sering disebut sebagai Nikkei, indeks Nikkei, atau Nikkei Stock Average, merupakan indeks pasar saham untuk Bursa Saham Tokyo (TSE) yang dihitung setiap hari menggunakan metode perhitungan rata-rata harga tertimbang dalam yen dan ditinjau setahun sekali oleh surat kabar Nihon Keizai Shimbun (Nikkei) sejak tahun 1950.\r\n            Saat ini, indeks Nikkei paling banyak digunakan untuk menggambarkan kondisi dari saham Jepang; mirip dengan Dow Jones Industrial Average hingga bahkan sempat dijuluki sebagai “Indeks Nikkei Dow Jones” pada era 1975-1985. Nikkei 225 Futures diperkenalkan di Singapore Exchange (SGX) pada tahun 1986, di Osaka Securities Exchange (OSE) pada tahun 1988, dan di Chicago Mercantile Exchange (CME) pada tahun 1990. Hari ini, indeks Nikkei telah menjadi indeks berjangka yang diakui secara internasional dan diperbarui setiap 15 detik selama sesi perdagangan sejak tahun 2010."
+          "Indeks Hang Seng (HSI) adalah indeks saham pada bursa Hong Kong yang dihitung menggunakan metode freefloat-adjusted market capitalization-weighted. Indeks ini digunakan untuk mencatat dan memonitor perubahan harian dari perusahaan-perusahaan terbesar di pasar saham Hong Kong dan merupakan indikator utama dari kinerja pasar secara keseluruhan di area tersebut. Sebanyak 45 perusahaan yang ada pada indeks Hang Seng mewakili sekitar 60% dari kapitalisasi Hong Kong Stock Exchange. Sejak 7 Maret 2011, HKEx memperpanjang jam perdagangan menjadi 09.30-12.00 dan 13.30-16.00. Selanjutnya, sejak 5 Maret 2012, jam perdagangan diubah kembali menjadi 09.15-12.00 dan 13.00-16.15, disesuaikan dengan waktu perdagangan di daratan Cina. Indeks Hang Seng memulai perdagangannya pada tanggal 24 November 1969. Saat ini penyusunan dan pengelolaannya dilaksanakan oleh Hang Seng Indeks Limited yang merupakan anak perusahaan dari Hang Seng Bank, salah satu bank terbesar dalam kapitalisasi pasar."
       },
       {
-        title: "BEBERAPA RAGAM INDEKS FUTURES",
-        subtitle: "INDEKS BERJANGKA JEPANG (NIKKEI 225)",
+        title: "Beberapa Ragam Index Futures",
+        subtitle: "Index Berjangka Korea (KOSPI 200)",
         content:
-          "Indeks Nikkei 225, yang sering disebut sebagai Nikkei, indeks Nikkei, atau Nikkei Stock Average, merupakan indeks pasar saham untuk Bursa Saham Tokyo (TSE) yang dihitung setiap hari menggunakan metode perhitungan rata-rata harga tertimbang dalam yen dan ditinjau setahun sekali oleh surat kabar Nihon Keizai Shimbun (Nikkei) sejak tahun 1950.\r\n            Saat ini, indeks Nikkei paling banyak digunakan untuk menggambarkan kondisi dari saham Jepang; mirip dengan Dow Jones Industrial Average hingga bahkan sempat dijuluki sebagai “Indeks Nikkei Dow Jones” pada era 1975-1985. Nikkei 225 Futures diperkenalkan di Singapore Exchange (SGX) pada tahun 1986, di Osaka Securities Exchange (OSE) pada tahun 1988, dan di Chicago Mercantile Exchange (CME) pada tahun 1990. Hari ini, indeks Nikkei telah menjadi indeks berjangka yang diakui secara internasional dan diperbarui setiap 15 detik selama sesi perdagangan sejak tahun 2010."
+          "Indeks Harga Saham Gabungan Korea atau KOSPI adalah indeks dari semua saham yang diperdagangkan di Stock Market Division yang sebelumnya dikenal dengan nama Korea Stock Exchange. KOSPI merupakan indeks pasar saham yang mewakili Korea Selatan, seperti Dow Jones Industrial Average atau S&P 500 di AS. KOSPI diperkenalkan pada tahun 1983 dengan nilai dasar 100. Pada tahun 2007, volume harian KOSPI adalah ratusan juta saham atau setara dengan triliunan won. Indeks KOSPI 200 terdiri dari 200 perusahaan besar dari Stock Market Division. KOSPI 200 memiliki nilai pasar lebih dari 70% dari KOSPI, dan bergerak bersama dengan indeks KOSPI. Indeks KOSPI 200 dinilai penting karena diperdagangkan juga di bursa berjangka dan bursa option, serta merupakan salah satu indeks yang paling aktif diperdagangkan di dunia."
+      }
+    ],
+    table: [
+      {
+        id: 46,
+        prefix1: "FUTURE INDEX",
+        prefix2: "JP150 NIKKEI 225",
+        prefix3: "HK 150 HANGSENG",
+        prefix4: "KR150 KOSPI 200",
+        prefix5: null,
+        prefix6: null,
+        prefix7: null,
+        prefix8: null,
+        SectionId: 239,
+        tableData: [
+          {
+            id: 194,
+            prefix1: "Contract Size",
+            prefix2: "PY 500 x Nikkei Index Futures Rate",
+            prefix3: "HKD 50 x HangSeng Index Futures Rate",
+            prefix4: "KRW 500.000 x Kospi Index Futures Rate",
+            prefix5: "",
+            prefix6: null,
+            prefix7: null,
+            prefix8: null,
+            tableId: 46
+          }
+        ]
       }
     ]
   },
@@ -1213,6 +1495,15 @@ const defaultState = {
       }
     ]
   },
+  cpo: {
+    header: "Cpo & Olein",
+    sub_header: null,
+    image_background: null,
+    content: {
+      title: "Cpo & Olein",
+      content: "CPO dan Olein berasal dari tanaman yang sama yaitu spesies palem yang dikenal sebagai E. Guineesis. Tanaman ini tumbuh di Asia Tenggara, Afrika dan Amerika Latin, dan telah dikonsumsi selama lebih dari 5.000 tahun.\nCPO (Minyak kelapa sawit) yang diekstrak dari daging buah E. Guineesis dengan menggunakan tekanan berwarna oranye terang karena tingginya kandungan pigmen karoten.   Minyak sawit secara luas digunakan dalam mentega dan margarin.\nOlein, minyak sawit yang diproses lebih lanjut menghasilkan Olein dan Stearin.  Olein berbentuk cair pada suhu kamar dan sangat tahan panas.  Olein dengan warna keemasan digunakan sebagai minyak untuk menggoreng."
+    }
+  },
   Header: {
     m1: { title: "Beranda" },
     m2: {
@@ -1254,6 +1545,7 @@ const defaultState = {
     m6: { title: "Karir" },
     m7: { title: "Hubungi Kami" }
   },
+
   Footer: [
     {
       title: "PT. Topgrowth Futures",

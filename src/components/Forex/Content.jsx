@@ -41,6 +41,14 @@ const textTitle = {
   color: "black"
 };
 
+const textTitles = {
+  textAlign: "left",
+  fontStyle: "Helvetica Bold",
+  fontSize: "1.8rem",
+  fontWeight: "bold",
+  color: "black"
+};
+
 const textContent = {
   textAlign: "left",
   fontStyle: "Helvetica Bold",
@@ -241,13 +249,13 @@ class Features extends React.Component {
                         <Table
                           className="table-shopping"
                           style={{
-                            backgroundColor: "#224377",
+                            backgroundColor: "#1565ff",
                             borderRadius: "5px",
                             borderCollapse: "inherit"
                           }}
                         >
                           <thead>
-                            <tr style={{ backgroundColor: "#224377" }}>
+                            <tr style={{ backgroundColor: "#1565ff" }}>
                               <td className="text-white text-center">
                                 <b>
                                   {
@@ -296,13 +304,13 @@ class Features extends React.Component {
                         <Table
                           className="table-shopping"
                           style={{
-                            backgroundColor: "#224377",
+                            backgroundColor: "#1565ff",
                             borderRadius: "5px",
                             borderCollapse: "inherit"
                           }}
                         >
                           <thead>
-                            <tr style={{ backgroundColor: "#224377" }}>
+                            <tr style={{ backgroundColor: "#1565ff" }}>
                               <td className="text-white text-center">
                                 <b>
                                   {
@@ -344,6 +352,79 @@ class Features extends React.Component {
                       </div>
                     </Col>
                   </Row>
+                  <Row style={{ marginTop: "50px" }}>
+                          <Col md="12">
+                            <div style={textTitles}>
+                              {ReactHtmlParser(
+                                this.props.pageStore.Forex.content[5].title
+                              )}
+                            </div>
+                          </Col>
+                          <Col md="12">
+                            <div
+                              style={{
+                                textAlign: "left",
+                                fontStyle: "Helvetica Bold",
+                                margin: 0,
+                                fontSize: "1rem"
+                              }}
+                            >
+                              {ReactHtmlParser(
+                                this.props.pageStore.Forex.content[5].content
+                              )}
+                            </div>
+                          </Col>
+                          <Col md="12">
+                            <Table
+                              className="table-shopping"
+                              style={{
+                                backgroundColor: "#1565ff",
+                                borderRadius: "5px",
+                                borderCollapse: "inherit"
+                              }}
+                            >
+                              <thead>
+                                <tr style={{ backgroundColor: "#1565ff" }}>
+                                  <td className="text-white text-center">
+                                    <b>
+                                      {
+                                        this.props.pageStore.Forex.content[5]
+                                          .table[0].prefix1
+                                      }
+                                    </b>
+                                  </td>
+                                  <td className="text-white text-center">
+                                    <b>
+                                      {
+                                        this.props.pageStore.Forex.content[5]
+                                          .table[0].prefix2
+                                      }
+                                    </b>
+                                  </td>
+                                  <td className="text-white text-center">
+                                    <b>
+                                      {
+                                        this.props.pageStore.Forex.content[5]
+                                          .table[0].prefix3
+                                      }
+                                    </b>
+                                  </td>
+                                </tr>
+                              </thead>
+                              {this.props.pageStore.Forex.content[5].table[0].tableData.map(
+                                (item, index) => {
+                                  return (
+                                    <TableContent3
+                                      prefix1={item.prefix1}
+                                      prefix2={item.prefix2}
+                                      prefix3={item.prefix3}
+                                    />
+                                  );
+                                }
+                              )}
+                            </Table>
+                          </Col>
+                        </Row>
                 </Col>
               </Container>
               {/* </Col> */}
@@ -511,13 +592,13 @@ class Features extends React.Component {
                               <Table
                                 className="table-shopping"
                                 style={{
-                                  backgroundColor: "#224377",
+                                  backgroundColor: "#1565ff",
                                   borderRadius: "5px",
                                   borderCollapse: "inherit"
                                 }}
                               >
                                 <thead>
-                                  <tr style={{ backgroundColor: "#224377" }}>
+                                  <tr style={{ backgroundColor: "#1565ff" }}>
                                     <td className="text-white text-center">
                                       <b>
                                         {
@@ -567,13 +648,13 @@ class Features extends React.Component {
                               <Table
                                 className="table-shopping"
                                 style={{
-                                  backgroundColor: "#224377",
+                                  backgroundColor: "#1565ff",
                                   borderRadius: "5px",
                                   borderCollapse: "inherit"
                                 }}
                               >
                                 <thead>
-                                  <tr style={{ backgroundColor: "#224377" }}>
+                                  <tr style={{ backgroundColor: "#1565ff" }}>
                                     <td className="text-white text-center">
                                       <b>
                                         {
@@ -615,9 +696,83 @@ class Features extends React.Component {
                             </div>
                           </Col>
                         </Row>
+                        <Row style={{ marginTop: "50px" }}>
+                          <Col md="12">
+                            <div style={textTitles}>
+                              {ReactHtmlParser(
+                                this.props.pageStore.Forex.content[5].title
+                              )}
+                            </div>
+                          </Col>
+                          <Col md="12">
+                            <div
+                              style={{
+                                textAlign: "left",
+                                fontStyle: "Helvetica Bold",
+                                margin: 0,
+                                fontSize: "1rem"
+                              }}
+                            >
+                              {ReactHtmlParser(
+                                this.props.pageStore.Forex.content[5].content
+                              )}
+                            </div>
+                          </Col>
+                          <Col md="12">
+                            <Table
+                              className="table-shopping"
+                              style={{
+                                backgroundColor: "#1565ff",
+                                borderRadius: "5px",
+                                borderCollapse: "inherit"
+                              }}
+                            >
+                              <thead>
+                                <tr style={{ backgroundColor: "#1565ff" }}>
+                                  <td className="text-white text-center">
+                                    <b>
+                                      {
+                                        this.props.pageStore.Forex.content[5]
+                                          .table[0].prefix1
+                                      }
+                                    </b>
+                                  </td>
+                                  <td className="text-white text-center">
+                                    <b>
+                                      {
+                                        this.props.pageStore.Forex.content[5]
+                                          .table[0].prefix2
+                                      }
+                                    </b>
+                                  </td>
+                                  <td className="text-white text-center">
+                                    <b>
+                                      {
+                                        this.props.pageStore.Forex.content[5]
+                                          .table[0].prefix3
+                                      }
+                                    </b>
+                                  </td>
+                                </tr>
+                              </thead>
+                              {this.props.pageStore.Forex.content[5].table[0].tableData.map(
+                                (item, index) => {
+                                  return (
+                                    <TableContent3
+                                      prefix1={item.prefix1}
+                                      prefix2={item.prefix2}
+                                      prefix3={item.prefix3}
+                                    />
+                                  );
+                                }
+                              )}
+                            </Table>
+                          </Col>
+                        </Row>
                       </Col>
                     </Row>
                   </Container>
+
                   {/* <hr
               style={{
                 color: "grey",

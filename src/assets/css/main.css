@@ -941,7 +941,8 @@ p > .textnews:hover {
 }
 
 .carousel-indicators li {
-  /* margin-bottom: 60px !important; */
+  margin-bottom: 60px !important;
+  height:20px
 }
 
 .flag-select img {

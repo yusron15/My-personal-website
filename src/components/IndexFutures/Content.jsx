@@ -34,6 +34,7 @@ import nextButton from "../../assets/img/nextbutton.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 import { isMobile } from "react-device-detect";
+import { TableContent3, TableContent4} from '../Table/Table';
 
 import ReactHtmlParser, {
   processNodes,
@@ -44,7 +45,13 @@ import "../../assets/css/main.css";
 
 const textTitle = {
   fontWeight: "bold",
-  color: "white",
+  color: "black",
+  fontSize: "1.7rem"
+};
+
+const textTitleSlide = {
+  fontWeight: "bold",
+  color: "White",
   fontSize: "1.7rem"
 };
 
@@ -318,18 +325,27 @@ class Content extends React.Component {
           <div className="cd-section broken-white" id="teams">
             <div className="team-1">
               <Container>
-                <Row>
-                  <Col className="ml-auto mr-auto" md="12">
-                    <p
-                      className="description font-black"
-                      style={{ textAlign: "justify" }}
-                    >
-                      {ReactHtmlParser(
-                        this.props.pageStore.indexfutures.content
-                      )}
-                    </p>
-                  </Col>
-                </Row>
+                {this.props.pageStore.indexfutures.content.map(
+                  (item, index) => {
+                    return (
+                      <Row>
+                        <Col md="12" style={{ marginTop: "30px" }}>
+                          <div className="font-black" style={textTitle}>
+                            {ReactHtmlParser(item.title)}
+                          </div>
+                        </Col>
+                        <Col md="12">
+                          <div
+                            className="description font-black"
+                            style={textDesc}
+                          >
+                            <p> {ReactHtmlParser(item.content)}</p>
+                          </div>
+                        </Col>
+                      </Row>
+                    );
+                  }
+                )}
               </Container>
             </div>
             <div>
@@ -375,7 +391,7 @@ class Content extends React.Component {
                                   <Container>
                                     <Row>
                                       <Col md="12">
-                                        <div style={textTitle}>
+                                        <div style={textTitleSlide}>
                                           <b>{item.title}</b>
                                         </div>
                                         <div style={textSubtitle}>
@@ -404,6 +420,47 @@ class Content extends React.Component {
                 </ScrollAnimation>
               </div>
             </div>
+            <div className="team-1">
+                  <Container>
+                  <Table
+                             className="table-shopping"
+                             style={{
+                               backgroundColor: "#224377",
+                               borderRadius: "5px",
+                               borderCollapse: "inherit"
+                             }}
+                           >
+                               <thead>
+                               <tr style={{ backgroundColor: "#224377" }}>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.indexfutures.table[0].prefix1}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.indexfutures.table[0].prefix2}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.indexfutures.table[0].prefix3}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.indexfutures.table[0].prefix4}</b>
+                                 </td>
+                               </tr>
+                             </thead>
+                          {
+                             this.props.pageStore.indexfutures
+                             .table[0].tableData.map((item, index) => {
+                              return (
+                               <TableContent4
+                                  prefix1={item.prefix1}
+                                  prefix2={item.prefix2}
+                                  prefix3={item.prefix3}
+                                  prefix4={item.prefix4}
+                                />
+                               );
+                            })}
+                          </Table>
+                  </Container>
+                </div>
           </div>{" "}
         </>
       );
@@ -446,21 +503,27 @@ class Content extends React.Component {
               >
                 <div className="team-1">
                   <Container>
-                    <Row>
-                      <Col className="ml-auto mr-auto" md="12">
-                        {/* <h1 className="title" style={font}>
-                    INDEX FUTURES
-                  </h1> */}
-                        <p
-                          className="description font-black"
-                          style={{ textAlign: "justify" }}
-                        >
-                          {ReactHtmlParser(
-                            this.props.pageStore.indexfutures.content
-                          )}
-                        </p>
-                      </Col>
-                    </Row>
+                    {this.props.pageStore.indexfutures.content.map(
+                      (item, index) => {
+                        return (
+                          <Row>
+                            <Col md="12" style={{ marginTop: "30px" }}>
+                              <div className="font-black" style={textTitle}>
+                                {ReactHtmlParser(item.title)}
+                              </div>
+                            </Col>
+                            <Col md="12">
+                              <div
+                                className="description font-black"
+                                style={textDesc}
+                              >
+                                <p> {ReactHtmlParser(item.content)}</p>
+                              </div>
+                            </Col>
+                          </Row>
+                        );
+                      }
+                    )}
                   </Container>
                 </div>
                 <div>
@@ -503,7 +566,7 @@ class Content extends React.Component {
                                         <Container>
                                           <Row>
                                             <Col md="12">
-                                              <div style={textTitle}>
+                                              <div style={textTitleSlide}>
                                                 <b>{item.title}</b>
                                               </div>
                                               <div style={textSubtitle}>
@@ -591,7 +654,47 @@ class Content extends React.Component {
                     </ScrollAnimation>
                   </div>
                 </div>
-
+                <div className="team-1">
+                  <Container>
+                  <Table
+                             className="table-shopping"
+                             style={{
+                               backgroundColor: "#224377",
+                               borderRadius: "5px",
+                               borderCollapse: "inherit"
+                             }}
+                           >
+                               <thead>
+                               <tr style={{ backgroundColor: "#224377" }}>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.indexfutures.table[0].prefix1}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.indexfutures.table[0].prefix2}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.indexfutures.table[0].prefix3}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.indexfutures.table[0].prefix4}</b>
+                                 </td>
+                               </tr>
+                             </thead>
+                          {
+                             this.props.pageStore.indexfutures
+                             .table[0].tableData.map((item, index) => {
+                              return (
+                               <TableContent4
+                                  prefix1={item.prefix1}
+                                  prefix2={item.prefix2}
+                                  prefix3={item.prefix3}
+                                  prefix4={item.prefix4}
+                                />
+                               );
+                            })}
+                          </Table>
+                  </Container>
+                </div>
                 {/* ********* END TEAM 1 ********* */}
               </div>{" "}
             </>

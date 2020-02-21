@@ -104,16 +104,16 @@ class Content extends React.Component {
                                   margin: "30px 0 30px 10px"
                                 }}
                               >
-                                {this.props.pageStore.Komoditi.content[0].title}
+                                {
+                                  this.props.pageStore.Komoditi.contentList1
+                                    .content[0].title
+                                }
                               </div>
                               <div style={{ marginLeft: "10px" }}>
-                                {/* </p> */}
-                                {/* <p className="text-benefit"> */}
                                 {
-                                  this.props.pageStore.Komoditi.content[0]
-                                    .content
+                                  this.props.pageStore.Komoditi.contentList1
+                                    .content[0].content
                                 }
-                                {/* </p> */}
                               </div>
                               <div className="author"></div>
                             </div>
@@ -128,6 +128,7 @@ class Content extends React.Component {
                           animateOut="fadeOut"
                         >
                           <div
+                            // className="card-benefit "
                             onMouseEnter={this.handleMoneyEnter}
                             onMouseLeave={this.handleMoneyLeave}
                           >
@@ -140,9 +141,6 @@ class Content extends React.Component {
                                 justifyContent: "center"
                               }}
                             >
-                              {/* <p className="title text-benefit" style={{ fontSize: "1.4rem" }}> */}
-                              {/* <img onMouseEnter style={{ marginRight: "5%" }} />
-                               */}
                               <div style={{ alignSelf: "center" }}>
                                 <img
                                   src={this.state.money}
@@ -156,16 +154,16 @@ class Content extends React.Component {
                                   margin: "30px 0 30px 10px"
                                 }}
                               >
-                                {this.props.pageStore.Komoditi.content[1].title}
+                                {
+                                  this.props.pageStore.Komoditi.contentList1
+                                    .content[1].title
+                                }
                               </div>
                               <div style={{ marginLeft: "10px" }}>
-                                {/* </p> */}
-                                {/* <p className="text-benefit"> */}
                                 {
-                                  this.props.pageStore.Komoditi.content[1]
-                                    .content
+                                  this.props.pageStore.Komoditi.contentList1
+                                    .content[1].content
                                 }
-                                {/* </p> */}
                               </div>
                               <div className="author"></div>
                             </div>
@@ -180,6 +178,7 @@ class Content extends React.Component {
                           animateOut="fadeOut"
                         >
                           <div
+                            // className="card-benefit "
                             onMouseEnter={this.handleShieldEnter}
                             onMouseLeave={this.handleShieldLeave}
                           >
@@ -202,15 +201,18 @@ class Content extends React.Component {
                                 style={{
                                   fontSize: "1.4rem",
                                   fontWeight: "bold",
-                                  margin: "40px 0 30px 10px"
+                                  margin: "30px 0 30px 10px"
                                 }}
                               >
-                                {this.props.pageStore.Komoditi.content[2].title}
+                                {
+                                  this.props.pageStore.Komoditi.contentList1
+                                    .content[2].title
+                                }
                               </div>
                               <div style={{ marginLeft: "10px" }}>
                                 {
-                                  this.props.pageStore.Komoditi.content[2]
-                                    .content
+                                  this.props.pageStore.Komoditi.contentList1
+                                    .content[2].content
                                 }
                               </div>
                               <div className="author"></div>
