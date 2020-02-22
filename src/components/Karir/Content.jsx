@@ -56,10 +56,7 @@ const customStyles = {
 
 class Blogs extends React.Component {
   state = {
-    dataSelect: {
-      value: "",
-      label: ""
-    },
+    dataSelect: "",
     searchField: "",
     stateKarir: [],
     openedCardIndex: ""
@@ -101,23 +98,15 @@ class Blogs extends React.Component {
       return { value: item.divisi.toLowerCase(), label: item.divisi };
     });
 
-    options = [{ value: "clear", label: "Clear Filter" }, ...options];
+    // options = [{ value: "", label: "Filter By Division" }, ...options];
 
     let karirList = this.props.pageStore.karir.karirList;
 
-    if (this.state.dataSelect.value !== "") {
-      if (this.state.dataSelect.value !== "clear") {
-        karirList = karirList.filter(
-          (item, index) => item.divisi === this.state.dataSelect.label
-        );
-      }
+    if (this.state.dataSelect !== "") {
+      karirList = karirList.filter(
+        (item, index) => item.divisi === this.state.dataSelect.label
+      );
     }
-    console.log(
-      karirList,
-      this.state.searchField,
-      this.state.dataSelect.value,
-      "texttexttext"
-    );
     if (this.state.searchField !== "") {
       karirList = karirList.filter((item, index) => {
         return (
@@ -127,6 +116,12 @@ class Blogs extends React.Component {
       });
     }
 
+    console.log(
+      karirList,
+      this.state.searchField,
+      this.state.dataSelect.value,
+      "texttexttext"
+    );
     if (isMobile) {
       return (
         <>
@@ -206,9 +201,10 @@ class Blogs extends React.Component {
                         {/* <div style={{ maxHeight: "10px" }}> */}
                         <Select
                           styles={customStyles}
-                          value="index "
+                          Placeholder="adasdasd"
+                          placeholder="asdasdas"
                           options={options}
-                          value={this.state.dataSelect}
+                          // value={this.state.dataSelect}
                           onChange={async (data, event) => {
                             await this.setState({
                               dataSelect: data
@@ -355,31 +351,34 @@ class Blogs extends React.Component {
                     {ReactHtmlParser(this.props.pageStore.karir.description)}
                   </p>
                   <Row style={{ marginBottom: "10%" }}>
-                    <Col md="6">
-                      <div
+                    <Col
+                      md="5"
+                      style={{ alignItems: "center", display: "flex" }}
+                    >
+                      {/* <div
                         style={{
                           marginTop: "30px",
                           marginBottom: "30px"
                         }}
-                      >
-                        <SearchField
-                          className="react-search-field-input"
-                          placeholder="Cari "
-                          onChange={text => {
-                            this.setState({
-                              searchField: text
-                            });
-                          }}
-                          // onChange={this.props.karirList.divisi}
-                        />
-                      </div>
+                      > */}
+                      <SearchField
+                        className="react-search-field-input"
+                        placeholder="Cari "
+                        onChange={text => {
+                          this.setState({
+                            searchField: text
+                          });
+                        }}
+                        // onChange={this.props.karirList.divisi}
+                      />
+                      {/* </div> */}
                     </Col>
 
-                    <Col md="5">
+                    <Col md={4}>
                       <Select
                         styles={customStyles}
-                        value="index "
                         options={options}
+                        placeholder={<div>Type to search</div>}
                         // options={this.props.karirList.karirlist}
                         value={this.state.dataSelect}
                         onChange={async data => {
@@ -389,13 +388,30 @@ class Blogs extends React.Component {
                         }}
                       />
                     </Col>
-
-                
-                    {this.props.pageStore.karir.karirList.map((item, index) => (
-                      <Accordion
-                        style={{ border: "none", padding: 0 }}
-                        allowMultipleExpanded={true}
+                    <Col
+                      md={3}
+                      style={{
+                        justifyContent: "center",
+                        alignItems: "center",
+                        display: "flex"
+                      }}
+                    >
+                      <Button
+                        onClick={() => {
+                          this.setState({
+                            dataSelect: "",
+                            searchField: ""
+                          });
+                        }}
                       >
+                        Clear Filter
+                      </Button>
+                    </Col>
+                    <Accordion
+                      style={{ border: "none", padding: 0 }}
+                      allowMultipleExpanded={true}
+                    >
+                      {karirList.map((item, index) => (
                         <AccordionItem>
                           <AccordionItemHeading>
                             <AccordionItemButton>
@@ -417,8 +433,8 @@ class Blogs extends React.Component {
                             </p>
                           </AccordionItemPanel>
                         </AccordionItem>
-                      </Accordion>
-                    ))}
+                      ))}
+                    </Accordion>
                   </Row>
                 </Col>
               </Row>
