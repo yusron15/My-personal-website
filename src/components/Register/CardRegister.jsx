@@ -164,7 +164,7 @@ class CardRegister extends React.Component {
                 </Col>
               </Row> */}
               <Row className="vertical-center" style={{ marginTop: "15px" }}>
-                <Col md="col-auto" style={{ marginRight: "20px" }}>
+                <Col md={6}>
                   <a
                     href="http://cabinet.topgrowthfutures.com/users/register"
                     target="_blank"
@@ -184,7 +184,7 @@ class CardRegister extends React.Component {
                   </a>
                 </Col>
 
-                <Col md="col-auto">
+                <Col md={6}>
                   <a
                     href="http://cabinet.topgrowthfutures.com/users/register"
                     target="_blank"
