@@ -11,9 +11,11 @@ class Cabang extends React.Component {
   async componentDidMount() {
     try {
       await this.props.getContent("cabang", this.props.currentLang, true);
-      await this.props.getCabangs(this.props.currentLang, true);
+      // await this.props.getCabangs(this.props.currentLang, true);
       window.scroll(0, 0);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async componentDidUpdate(prevProps) {

@@ -903,23 +903,29 @@ const defaultState = {
   },
   Komoditi: {
     header: "Komoditi",
-    sub_header: "Volatilitas harga komoditas lebih kecil dibandingkan saham dan obligasi sehingga menyediakan pilihan diversifikasi portofolio yang efisien untuk pelaku pasar.",
-    image_background: "https://topgrowth.sgp1.digitaloceanspaces.com/-1581822581962.png",
-    top: "<p>Sebagai salah satu instrumen yang paling populer bagi sebagian besar manajer investasi global, transaksi komoditi mengakibatkan perputaran uang di pasar komoditas menjadi cukup tinggi. Komoditas dapat diinterpretasikan sebagai sesuatu dari substansi fisik dan dibagi menjadi dua, yaitu komoditi hasil pertambangan, seperti emas, perak, minyak dan lainnya, dan komoditi hasil pertanian, seperti gula, beras, kakao, kopi dan lainnya. Komoditas lebih mudah dipahami karena banyak bergantung pada kondisi fundamental permintaan dan penawaran. Volatilitas harga komoditas lebih kecil dibandingkan saham dan obligasi sehingga menyediakan pilihan diversifikasi portofolio yang efisien untuk pelaku pasar. Yang membuat komoditas lebih menarik dan lebih berisiko dalam transaksi dibandingkan saham adalah jumlah leverage atau daya ungkit. Akan tetapi pada kenyataannya, risiko perdagangan di pasar komoditas tidak akan lebih dari risiko yang ditentukan pengguna. JFX (Jakarta Futures Exchange) dan ICDX (Indonesia Commodity &amp; Derivatives Exchange) sebagai bursa berjangka di Indonesia berfungsi untuk mengembangkan pasar berjangka melalui sistem yang lebih dinamis, transparan, dan likuid. Transaksi multilateral memungkinkan banyak pihak untuk membeli dan menjual instrumen keuangan di bursa melalui sarana elektronik.</p>",
+    sub_header:
+      "Volatilitas harga komoditas lebih kecil dibandingkan saham dan obligasi sehingga menyediakan pilihan diversifikasi portofolio yang efisien untuk pelaku pasar.",
+    image_background:
+      "https://topgrowth.sgp1.digitaloceanspaces.com/-1581822581962.png",
+    top:
+      "<p>Sebagai salah satu instrumen yang paling populer bagi sebagian besar manajer investasi global, transaksi komoditi mengakibatkan perputaran uang di pasar komoditas menjadi cukup tinggi. Komoditas dapat diinterpretasikan sebagai sesuatu dari substansi fisik dan dibagi menjadi dua, yaitu komoditi hasil pertambangan, seperti emas, perak, minyak dan lainnya, dan komoditi hasil pertanian, seperti gula, beras, kakao, kopi dan lainnya. Komoditas lebih mudah dipahami karena banyak bergantung pada kondisi fundamental permintaan dan penawaran. Volatilitas harga komoditas lebih kecil dibandingkan saham dan obligasi sehingga menyediakan pilihan diversifikasi portofolio yang efisien untuk pelaku pasar. Yang membuat komoditas lebih menarik dan lebih berisiko dalam transaksi dibandingkan saham adalah jumlah leverage atau daya ungkit. Akan tetapi pada kenyataannya, risiko perdagangan di pasar komoditas tidak akan lebih dari risiko yang ditentukan pengguna. JFX (Jakarta Futures Exchange) dan ICDX (Indonesia Commodity &amp; Derivatives Exchange) sebagai bursa berjangka di Indonesia berfungsi untuk mengembangkan pasar berjangka melalui sistem yang lebih dinamis, transparan, dan likuid. Transaksi multilateral memungkinkan banyak pihak untuk membeli dan menjual instrumen keuangan di bursa melalui sarana elektronik.</p>",
     contentList1: {
       title: "Mengapa Memperdagangkan Komoditi?",
       content: [
         {
           title: "Permintaan Akan Komoditas Terus Meningkat",
-          content: "Seiring berkembangnya dunia, permintaan akan komoditas akan terus meningkat dan berdampak pada kenaikan harga komoditas tersebut"
+          content:
+            "Seiring berkembangnya dunia, permintaan akan komoditas akan terus meningkat dan berdampak pada kenaikan harga komoditas tersebut"
         },
         {
           title: "Melindungi Portofolio Terhadap Inflasi",
-          content: "Sejalan dengan laju inflasi, harga komoditas akan terus meningkat; para pelaku pasar dapat melindungi harga tersebut terhadap inflasi melalui bursa berjangka"
+          content:
+            "Sejalan dengan laju inflasi, harga komoditas akan terus meningkat; para pelaku pasar dapat melindungi harga tersebut terhadap inflasi melalui bursa berjangka"
         },
         {
           title: "Faktor Pergerakan Harga Komoditi",
-          content: "Di antaranya adalah perkiraan cuaca, faktor ekonomi, faktor politik, tekanan internasional, dan spekulasi"
+          content:
+            "Di antaranya adalah perkiraan cuaca, faktor ekonomi, faktor politik, tekanan internasional, dan spekulasi"
         }
       ]
     },
@@ -928,24 +934,29 @@ const defaultState = {
       content: [
         {
           title: "MARGIN/LEVERAGE",
-          content: "<p>Semua kontrak berjangka diperdagangkan dengan margin di kisaran 2%-10%.</p><p><strong>Contoh</strong>:<br>Kontrak: GOLDGR</p><p>Ukuran Kontrak: 1 Lot = 100 gram</p><p>Misalnya harga emas adalah Rp 495.000,-</p><p>Nilai dari 1 Lot GOLDGR = 100 gram x Rp 495.000,- = Rp 49.500.000,-</p><p>Margin per lot 4% = 4% x Rp 49.500.000,- = Rp. 1.980.000,- dibulatkan menjadi Rp 2.000.000,-</p>"
+          content:
+            "<p>Semua kontrak berjangka diperdagangkan dengan margin di kisaran 2%-10%.</p><p><strong>Contoh</strong>:<br>Kontrak: GOLDGR</p><p>Ukuran Kontrak: 1 Lot = 100 gram</p><p>Misalnya harga emas adalah Rp 495.000,-</p><p>Nilai dari 1 Lot GOLDGR = 100 gram x Rp 495.000,- = Rp 49.500.000,-</p><p>Margin per lot 4% = 4% x Rp 49.500.000,- = Rp. 1.980.000,- dibulatkan menjadi Rp 2.000.000,-</p>"
         },
         {
           title: "2-WAYS OPPORTUNITY",
-          content: "<p>BUY position – buying a contract (Investor menginginkan harga terus meningkat)</p><p>SHORT position — selling a contract (Investor menginginkan harga terus menurun)</p>"
+          content:
+            "<p>BUY position – buying a contract (Investor menginginkan harga terus meningkat)</p><p>SHORT position — selling a contract (Investor menginginkan harga terus menurun)</p>"
         },
         {
           title: "LINDUNG NILAI (HEDGING)",
-          content: "<p>Memberi kesempatan pada produsen untuk melakukan lindung nilai, sehingga tidak perlu menjual saat harga rendah. Komoditas bisa menjadi pilihan lindung nilai asset lainnya pada saat inflasi.</p>"
+          content:
+            "<p>Memberi kesempatan pada produsen untuk melakukan lindung nilai, sehingga tidak perlu menjual saat harga rendah. Komoditas bisa menjadi pilihan lindung nilai asset lainnya pada saat inflasi.</p>"
         }
       ]
     },
     contentList3: {
-      title: "PRODUK KOMODITI\nTopgrowth menawarkan Kontrak Berjangka Komoditi GOLDGR dan CPOTR yang merupakan produk dari Bursa Komoditi dan Derivatif Indonesia (BKDI/ICDX).  \n",
+      title:
+        "PRODUK KOMODITI\nTopgrowth menawarkan Kontrak Berjangka Komoditi GOLDGR dan CPOTR yang merupakan produk dari Bursa Komoditi dan Derivatif Indonesia (BKDI/ICDX).  \n",
       content: [
         {
           title: "Emas Sebagai Sebuah Investasi",
-          content: "<ul><li>Sejak dahulu, emas dipercaya oleh pelaku pasar sebagai investasi yang aman lindung nilainya terhadap apapun, baik dari segi ekonomi, politik, krisis sosial ataupun krisis mata uang.&nbsp;&nbsp;</li><li>Investor juga akan membeli pada kondisi pasar yang sedang bergejolak dan bertujuan untuk menjualnya kembali untuk mendapatkan keuntungan atas investasi mereka. &nbsp;</li></ul>"
+          content:
+            "<ul><li>Sejak dahulu, emas dipercaya oleh pelaku pasar sebagai investasi yang aman lindung nilainya terhadap apapun, baik dari segi ekonomi, politik, krisis sosial ataupun krisis mata uang.&nbsp;&nbsp;</li><li>Investor juga akan membeli pada kondisi pasar yang sedang bergejolak dan bertujuan untuk menjualnya kembali untuk mendapatkan keuntungan atas investasi mereka. &nbsp;</li></ul>"
         }
       ]
     },
@@ -1501,7 +1512,8 @@ const defaultState = {
     image_background: null,
     content: {
       title: "Cpo & Olein",
-      content: "CPO dan Olein berasal dari tanaman yang sama yaitu spesies palem yang dikenal sebagai E. Guineesis. Tanaman ini tumbuh di Asia Tenggara, Afrika dan Amerika Latin, dan telah dikonsumsi selama lebih dari 5.000 tahun.\nCPO (Minyak kelapa sawit) yang diekstrak dari daging buah E. Guineesis dengan menggunakan tekanan berwarna oranye terang karena tingginya kandungan pigmen karoten.   Minyak sawit secara luas digunakan dalam mentega dan margarin.\nOlein, minyak sawit yang diproses lebih lanjut menghasilkan Olein dan Stearin.  Olein berbentuk cair pada suhu kamar dan sangat tahan panas.  Olein dengan warna keemasan digunakan sebagai minyak untuk menggoreng."
+      content:
+        "CPO dan Olein berasal dari tanaman yang sama yaitu spesies palem yang dikenal sebagai E. Guineesis. Tanaman ini tumbuh di Asia Tenggara, Afrika dan Amerika Latin, dan telah dikonsumsi selama lebih dari 5.000 tahun.\nCPO (Minyak kelapa sawit) yang diekstrak dari daging buah E. Guineesis dengan menggunakan tekanan berwarna oranye terang karena tingginya kandungan pigmen karoten.   Minyak sawit secara luas digunakan dalam mentega dan margarin.\nOlein, minyak sawit yang diproses lebih lanjut menghasilkan Olein dan Stearin.  Olein berbentuk cair pada suhu kamar dan sangat tahan panas.  Olein dengan warna keemasan digunakan sebagai minyak untuk menggoreng."
     }
   },
   Header: {
@@ -1621,11 +1633,28 @@ export default (state = defaultState, action = {}) => {
     case "GET_CONTENT": {
       let obj = { ...state };
       let keys = Object.keys(action.payload);
+      if (keys[0] === "cabang") {
+        // action.payload.cabangList = action.payload.cabangList.sort((a, b) => {
+        //   console.log(a, b, "ababaababa");
+        // });
+        console.log(
+          action.payload.cabang.cabangList,
+          "action.payloadaction.payloadaction.payload"
+        );
+
+        action.payload.cabang.cabangList = action.payload.cabang.cabangList.sort(
+          (a, b) => {
+            return a.order < b.order;
+            // console.log(a, b, "asdasdasdasdasdas");
+          }
+        );
+      }
       let load = keys.map(item => {
         // return {
         //   [item]: action.payload[item]
         // };
         // console.log(item);
+
         // console.log(action.payload[item]);
         Object.assign(obj, { [item]: action.payload[item] });
       });

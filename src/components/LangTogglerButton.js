@@ -87,12 +87,16 @@ function LangTogglerButton(props) {
       <ReactFlagsSelect
         // defaultCountry={props.currentLangFlag}
         defaultCountry={lng}
-        countries={["ID", "GB", "CN", "HK"]}
+        countries={[
+          "ID",
+          "GB"
+          // "CN", "HK"
+        ]}
         customLabels={{
           ID: "Bahasa",
-          GB: "English",
-          CN: "中国人",
-          HK: "Chinese Traditional"
+          GB: "English"
+          // CN: "中国人",
+          // HK: "Chinese Traditional"
         }}
         showSelectedLabel={false}
         showOptionLabel={true}

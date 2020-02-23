@@ -197,14 +197,14 @@ class News extends React.Component {
     });
   };
 
-  componentDidMount = () => {
-    setTimeout(() => {
-      this.setState({
-        mounted: true
-      });
-      this.mySlick.slickGoTo(5);
-    }, 500);
-  };
+  // componentDidMount = () => {
+  //   setTimeout(() => {
+  //     this.setState({
+  //       mounted: true
+  //     });
+  //     this.mySlick.slickGoTo(5);
+  //   }, 500);
+  // };
 
   renderContent = () => {
     let slickSettings = {
@@ -400,6 +400,10 @@ class News extends React.Component {
         </>
       );
     }
+    console.log(
+      this.props.pageStore.cabang.cabangList,
+      "this.props.pageStore.cabang.cabangList"
+    );
     return (
       <>
         <div
