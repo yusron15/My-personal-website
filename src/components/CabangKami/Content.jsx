@@ -144,7 +144,7 @@ class News extends React.Component {
       carousel2Index: 0,
       oldSlide: 0,
       mounted: false,
-      activeSlide: 5
+      activeSlide: 0
     };
 
     this.mySlick = null;
@@ -214,7 +214,7 @@ class News extends React.Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       centerMode: true,
-      initialSlide: 5,
+      initialSlide: 0,
       prevArrow: <PrevButton />,
       nextArrow: <NextButton />,
       afterChange: current => {

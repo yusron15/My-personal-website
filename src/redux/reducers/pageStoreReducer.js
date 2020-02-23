@@ -1644,7 +1644,7 @@ export default (state = defaultState, action = {}) => {
 
         action.payload.cabang.cabangList = action.payload.cabang.cabangList.sort(
           (a, b) => {
-            return a.order < b.order;
+            return a.order - b.order;
             // console.log(a, b, "asdasdasdasdasdas");
           }
         );
