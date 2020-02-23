@@ -57,6 +57,7 @@ import ReactHtmlParser, {
   convertNodeToElement,
   htmlparser2
 } from "react-html-parser";
+import zIndex from "@material-ui/core/styles/zIndex";
 
 const styles = {
   fadeInRight: {
@@ -406,13 +407,25 @@ class HeaderLanding extends React.Component {
                                   <br />
                                   <Row>
                                     <Col>
-                                      <img src={appstore} />
+                                      <a
+                                        href="https://download.mql5.com/cdn/mobile/mt4/ios?server=Topgrowth-Demo"
+                                        style={{ display: "block" }}
+                                      >
+                                        <div>
+                                          <img src={appstore} />
+                                        </div>
+                                      </a>
                                     </Col>
                                     <Col>
-                                      <img
-                                        src={playstore}
-                                        style={{ marginLeft: "20px" }}
-                                      />
+                                      <a
+                                        href="https://download.mql5.com/cdn/mobile/mt4/android?server=Topgrowth-Demo"
+                                        style={{ display: "block" }}
+                                      >
+                                        <img
+                                          src={playstore}
+                                          style={{ marginLeft: "20px" }}
+                                        />
+                                      </a>
                                     </Col>
                                   </Row>
                                 </Row>
@@ -431,7 +444,8 @@ class HeaderLanding extends React.Component {
                     }}
                     style={{
                       top: "17vh",
-                      position: "absolute"
+                      position: "absolute",
+                      zIndex: 9999
                     }}
                   >
                     <CardRegister />

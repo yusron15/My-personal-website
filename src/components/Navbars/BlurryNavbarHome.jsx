@@ -32,7 +32,7 @@ import "../../assets/css/main.css";
 import scrollToComponent from "react-scroll-to-component";
 const font = {
   color: "black",
-  cursor: "default"
+  cursor: "cursor"
 };
 
 class BlurryNavbar extends React.Component {

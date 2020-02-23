@@ -34,7 +34,7 @@ import "../../assets/css/main.css";
 
 const font = {
   color: "white",
-  cursor: "default"
+  cursor: "pointer"
 };
 
 class BlurryNavbar extends React.Component {

@@ -942,7 +942,7 @@ p > .textnews:hover {
 
 .carousel-indicators li {
   margin-bottom: 60px !important;
-  height:20px
+  height: 20px;
 }
 
 .flag-select img {
@@ -951,4 +951,23 @@ p > .textnews:hover {
 
 .carousel-indicators {
   z-index: 9999;
+}
+
+#headers
+  > div:nth-child(1)
+  > nav
+  > div
+  > div.collapse.navbar-collapse
+  > ul
+  > li:nth-child(3),
+#headers
+  > div:nth-child(1)
+  > nav
+  > div
+  > div.collapse.navbar-collapse
+  > ul
+  > li:nth-child(3)
+  > div
+  > text {
+  cursor: pointer;
 }

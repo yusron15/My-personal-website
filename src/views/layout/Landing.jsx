@@ -108,8 +108,6 @@ class Landing extends React.Component {
               await this.setState({
                 showEbook: true
               });
-
-              console.log(this.state.showEbook, "this.state.showEbook");
             }
           }}
         >
