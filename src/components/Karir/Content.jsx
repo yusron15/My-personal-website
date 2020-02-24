@@ -112,18 +112,13 @@ class Blogs extends React.Component {
     if (this.state.searchField !== "") {
       karirList = karirList.filter((item, index) => {
         return (
+          item.jobTitle.toLowerCase().includes(this.state.searchField) ||
           item.divisi.toLowerCase().includes(this.state.searchField) ||
           item.description.toLowerCase().includes(this.state.searchField)
         );
       });
     }
 
-    console.log(
-      karirList,
-      this.state.searchField,
-      this.state.dataSelect.value,
-      "texttexttext"
-    );
     if (isMobile) {
       return (
         <>
@@ -375,7 +370,6 @@ class Blogs extends React.Component {
                       />
                       {/* </div> */}
                     </Col>
-
                     <Col md={4}>
                       <Select
                         styles={customStyles}
@@ -409,61 +403,68 @@ class Blogs extends React.Component {
                         Clear Filter
                       </Button>
                     </Col>
-
-                    {/* <Accordion
-                      style={{ border: "none", padding: 0 }}
-                      allowMultipleExpanded={true}
-                    >
-                      {karirList.map((item, index) => (
-                        <AccordionItem>
-                          <AccordionItemHeading>
-                            <AccordionItemButton>
-                              {item.divisi}
-                            </AccordionItemButton>
-                          </AccordionItemHeading>
-                          <AccordionItemPanel
-                            style={{ backgroundColor: "white" }}
-                          >
-                            <p className="font-black">
-                              {item.Detailkarir.map(itemDetail =>
-                                ReactHtmlParser(itemDetail.description)
-                              )}
-                            </p>
-                            <p className="font-black">
-                              {item.Detailkarir.map(itemDetail =>
-                                ReactHtmlParser(itemDetail.qualification)
-                              )}
-                            </p>
-                          </AccordionItemPanel>
-                        </AccordionItem>
-                      ))}
-                    </Accordion>
-                   */}
                   </Row>
                   <Row>
                     <Col md={12}>
-                      <ListGroup>
-                        <ListGroupItem tag="a" href="#">
-                          <div
-                            style={{
-                              display: "flex",
-                              justifyContent: "center"
-                            }}
-                          >
-                            <div style={{ flex: 1 }}>asdasdasd</div>
+                      <ListGroup style={{ marginBottom: 20 }}>
+                        {karirList.map((item, index) => {
+                          return (
+                            <ListGroupItem tag="a" href="#">
+                              <div
+                                style={{
+                                  display: "flex",
+                                  justifyContent: "center"
+                                }}
+                              >
+                                <div
+                                  style={{
+                                    display: "flex",
+                                    flex: 1,
+                                    flexDirection: "column"
+                                  }}
+                                >
+                                  <div style={{ padding: "5px 0 5px 0" }}>
+                                    {item.jobTitle}
+                                  </div>
+                                  <div
+                                    style={{
+                                      padding: "5px 0 5px 0",
+                                      display: "flex",
+                                      alignItems: "center"
+                                    }}
+                                  >
+                                    <span style={{ color: "#0194f3" }}>
+                                      {item.divisi}
+                                    </span>
+                                    <div
+                                      style={{
+                                        height: 5,
+                                        width: 5,
+                                        borderRadius: 5 / 2,
+                                        backgroundColor: "grey",
+                                        margin: "0 10px 0 10px"
+                                      }}
+                                    ></div>
+                                    <span>{item.workType}</span>
+                                  </div>
+                                </div>
 
-                            <div>asdasdasd</div>
-                          </div>
-                        </ListGroupItem>
-                        <ListGroupItem tag="a" href="#">
-                          Morbi leo risus
-                        </ListGroupItem>
-                        <ListGroupItem tag="a" href="#">
-                          Porta ac consectetur ac
-                        </ListGroupItem>
-                        <ListGroupItem tag="a" href="#">
-                          Vestibulum at eros
-                        </ListGroupItem>
+                                <div
+                                  style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center"
+                                  }}
+                                >
+                                  <div style={{ marginRight: 20 }}>
+                                    {item.location}
+                                  </div>
+                                  <Button color="info">Details</Button>
+                                </div>
+                              </div>
+                            </ListGroupItem>
+                          );
+                        })}
                       </ListGroup>
                     </Col>
                   </Row>
