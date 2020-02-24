@@ -117,7 +117,9 @@ class Content extends React.Component {
                   </Col>
                   <Col md="12">
                     <div className="description font-black" style={textDesc}>
-                      {this.props.pageStore.cpo.content.content}
+                      {ReactHtmlParser(
+                        this.props.pageStore.cpo.content.content
+                      )}
                     </div>
                   </Col>
                 </Row>
@@ -369,7 +371,9 @@ class Content extends React.Component {
                           className="description font-black"
                           style={textDesc}
                         >
-                          {this.props.pageStore.cpo.content.content}
+                          {ReactHtmlParser(
+                            this.props.pageStore.cpo.content.content
+                          )}
                         </div>
                       </Col>
                     </Row>

@@ -72,7 +72,7 @@ class Features extends React.Component {
                           <a
                             target="_blank"
                             style={{ backgroundColor: "transparent" }}
-                            href={this.props.pageStore.protrader.download[0][0]}
+                            href={this.props.pageStore.protrader.download[0]}
                           >
                             <img
                               alt="..."
@@ -94,7 +94,7 @@ class Features extends React.Component {
                           <a
                             target="_blank"
                             style={{ backgroundColor: "transparent" }}
-                            href={this.props.pageStore.protrader.download[0][1]}
+                            href={this.props.pageStore.protrader.download[1]}
                           >
                             <img
                               alt="..."
@@ -117,7 +117,7 @@ class Features extends React.Component {
                           <a
                             target="_blank"
                             style={{ backgroundColor: "transparent" }}
-                            href={this.props.pageStore.protrader.download[0][2]}
+                            href={this.props.pageStore.protrader.download[2]}
                           >
                             <img
                               alt="..."
@@ -138,7 +138,7 @@ class Features extends React.Component {
                           <a
                             target="_blank"
                             style={{ backgroundColor: "transparent" }}
-                            href={this.props.pageStore.protrader.download[0][3]}
+                            href={this.props.pageStore.protrader.download[3]}
                           >
                             <img
                               alt="..."
@@ -217,7 +217,7 @@ class Features extends React.Component {
                         <a
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
-                          href={this.props.pageStore.protrader.download[0][0]}
+                          href={this.props.pageStore.protrader.download[0]}
                         >
                           <img
                             alt="..."
@@ -244,7 +244,7 @@ class Features extends React.Component {
                         <a
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
-                          href={this.props.pageStore.protrader.download[0][1]}
+                          href={this.props.pageStore.protrader.download[1]}
                         >
                           <img
                             alt="..."
@@ -276,7 +276,7 @@ class Features extends React.Component {
                         <a
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
-                          href={this.props.pageStore.protrader.download[0][2]}
+                          href={this.props.pageStore.protrader.download[2]}
                         >
                           <img
                             alt="..."
@@ -302,7 +302,7 @@ class Features extends React.Component {
                         <a
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
-                          href={this.props.pageStore.protrader.download[0][3]}
+                          href={this.props.pageStore.protrader.download[3]}
                         >
                           <img
                             alt="..."

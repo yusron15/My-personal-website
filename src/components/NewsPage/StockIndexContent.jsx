@@ -47,6 +47,7 @@ class HeaderStockIndex extends Component {
         <ColoredNavbar location={{ ...this.props.location }} />
         <div className="title title-header" style={{ marginBottom: "8%" }}>
           Stock Index
+          {/* {this.props.pageStore.stockIndex.Header} */}
         </div>
       </div>
     );

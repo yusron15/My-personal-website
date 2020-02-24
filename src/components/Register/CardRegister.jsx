@@ -217,11 +217,13 @@ class CardRegister extends React.Component {
                       .content_link
                   }
                   target="_blank"
-                  className="textlink"
                 >
-                  {ReactHtmlParser(
-                    this.props.pageStore.Landing.HeaderLanding.SignUp[0].content
-                  )}
+                  <div className="textlink">
+                    {ReactHtmlParser(
+                      this.props.pageStore.Landing.HeaderLanding.SignUp[0]
+                        .content
+                    )}
+                  </div>
                 </a>
               </h6>
             </div>
