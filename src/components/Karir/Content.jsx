@@ -155,7 +155,7 @@ class Blogs extends React.Component {
                       {ReactHtmlParser(this.props.karirList.description)}
                     </p>
                     <Row style={{ marginBottom: "10%" }}>
-                      <Col md="6">
+                      <Col sm={12}>
                         {/* <Card className="card-blog card-plain">
                         <div className="card-image">
                           <a href="#pablo" onClick={e => e.preventDefault()}>
@@ -184,7 +184,7 @@ class Blogs extends React.Component {
                         </div>
                       </Col>
 
-                      <Col md="5">
+                      <Col sm={12}>
                         {/* <Card className="card-blog card-plain">
                         <div className="card-image">
                           <a href="#pablo" onClick={e => e.preventDefault()}>
@@ -209,103 +209,75 @@ class Blogs extends React.Component {
                             });
                           }}
                         />
-                        {/* </div> */}
                       </Col>
-                      {this.props.pageStore.karir.karirList.map(
-                        (item, index) => (
-                          <Col lg="4" xs="12">
-                            <Card
-                              className={`card-karir mobile ${
-                                item.open ? "expand" : ""
-                              }`}
-                            >
-                              <CardBody>
-                                <CardTitle
-                                  className="text-center"
-                                  style={{
-                                    color: "black",
-                                    fontSize: "1rem",
-                                    fontWeight: "bold",
-                                    marginBottom: 10
-                                  }}
-                                >
-                                  {item.devisi}
-                                </CardTitle>
-                                <CardSubtitle
-                                  className="text-center"
-                                  style={{
-                                    color: "black",
-                                    fontSize: "1rem",
-                                    marginBottom: 30
-                                  }}
-                                >
-                                  {item.description}
-                                </CardSubtitle>
-                                <CardText style={{ color: "black" }}>
-                                  {item.Detailkarir.map(itemDetail =>
-                                    ReactHtmlParser(itemDetail.description)
-                                  )}
-                                </CardText>
-                                <CardText style={{ color: "black" }}>
-                                  {item.Detailkarir.map(itemDetail =>
-                                    ReactHtmlParser(itemDetail.qualification)
-                                  )}
-                                </CardText>
+                      <Col sm={12}>
+                        <ListGroup style={{ marginBottom: 20 }}>
+                          {karirList.map((item, index) => {
+                            return (
+                              <ListGroupItem>
                                 <div
                                   style={{
-                                    width: "100%",
                                     display: "flex",
                                     justifyContent: "center"
                                   }}
-                                ></div>
-                              </CardBody>
-                              {!item.open && (
-                                <CardFooter
-                                  style={{
-                                    position: "absolute",
-                                    bottom: 0,
-                                    width: "100%",
-                                    display: "flex",
-                                    flex: 1,
-                                    justifyContent: "center",
-                                    backgroundColor: "white"
-                                  }}
                                 >
-                                  <Button
-                                    className="text-center"
-                                    onClick={async () => {
-                                      await this.setState({
-                                        stateKarir: this.state.stateKarir.map(
-                                          item => {
-                                            return { ...item, open: false };
-                                          }
-                                        )
-                                      });
-
-                                      setTimeout(() => {
-                                        this.setState({
-                                          stateKarir: this.state.stateKarir.map(
-                                            (item, stateIndex) => {
-                                              if (stateIndex !== index)
-                                                return item;
-                                              return {
-                                                ...item,
-                                                open: !item.open
-                                              };
-                                            }
-                                          )
-                                        });
-                                      }, 1000);
+                                  <div
+                                    style={{
+                                      display: "flex",
+                                      flex: 1,
+                                      flexDirection: "column"
                                     }}
                                   >
-                                    Show More
-                                  </Button>
-                                </CardFooter>
-                              )}
-                            </Card>
-                          </Col>
-                        )
-                      )}
+                                    <div style={{ padding: "5px 0 5px 0" }}>
+                                      {item.jobTitle}
+                                    </div>
+                                    <div
+                                      style={{
+                                        padding: "5px 0 5px 0",
+                                        display: "flex",
+                                        alignItems: "center"
+                                      }}
+                                    >
+                                      <span style={{ color: "#0194f3" }}>
+                                        {item.divisi}
+                                      </span>
+                                      <div
+                                        style={{
+                                          height: 5,
+                                          width: 5,
+                                          borderRadius: 5 / 2,
+                                          backgroundColor: "grey",
+                                          margin: "0 10px 0 10px"
+                                        }}
+                                      ></div>
+                                      <span>{item.workType}</span>
+                                    </div>
+                                  </div>
+
+                                  <div
+                                    style={{
+                                      display: "flex",
+                                      justifyContent: "center",
+                                      alignItems: "center"
+                                    }}
+                                  >
+                                    <Link
+                                      to={{
+                                        pathname: `/karir/${item.jobTitle}`,
+                                        state: { ...item }
+                                      }}
+                                    >
+                                      <div>
+                                        <Button color="info">Details</Button>
+                                      </div>
+                                    </Link>
+                                  </div>
+                                </div>
+                              </ListGroupItem>
+                            );
+                          })}
+                        </ListGroup>
+                      </Col>
                     </Row>
                   </Col>
                 </Row>

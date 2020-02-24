@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { isMobile } from "react-device-detect";
 
 // reactstrap components
 import {
@@ -73,7 +74,7 @@ class KarirDetail extends Component {
                 display: "flex"
               }}
             >
-              <div style={{ marginTop: "40vh" }}>
+              <div style={{ marginTop: isMobile ? 0 : "40vh" }}>
                 <span className="karir-detail">
                   {ReactHtmlParser(state.contact)}
                 </span>

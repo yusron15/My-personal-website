@@ -987,3 +987,7 @@ h5,
 h6 {
   color: black;
 }
+
+.react-search-field {
+  width: 100%;
+}
