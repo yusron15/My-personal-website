@@ -216,13 +216,13 @@ class CardRegister extends React.Component {
             >
               <h6>
                 <Row>
-                  <div style={{ cursor: "default" }}>
+                  <div style={{ cursor: "default", marginLeft: "10px" }}>
                     {ReactHtmlParser(
                       this.props.pageStore.Landing.HeaderLanding.SignUp[0]
                         .link_name1
                     )}
                   </div>
-                  <div>
+                  <div style={{ marginLeft: "10px" }}>
                     <a
                       className="textlink"
                       href={
