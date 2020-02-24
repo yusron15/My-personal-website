@@ -13,6 +13,7 @@ import {
 
 // reactstrap components
 import {
+  Alert,
   Badge,
   Button,
   CardBody,
@@ -51,7 +52,7 @@ const MapWithAMarker = withGoogleMap(props => (
 ));
 
 class Content extends React.Component {
-  state = { form: {} };
+  state = { form: {}, showAlert: false };
   async componentDidMount() {
     // await this.props.getContent("hubungikami", this.props.currentLang, true);
     document.documentElement.scrollTop = 0;
@@ -63,6 +64,11 @@ class Content extends React.Component {
     document.body.classList.remove("contact-page");
   }
 
+  alertNotification = () => {
+    this.setState({
+      showAlert: true
+    });
+  };
   handleTextChange = async e => {
     await this.setState({
       form: {
@@ -320,11 +326,19 @@ class Content extends React.Component {
                           </FormGroup>
                           <Row>
                             <Col className="ml-auto" md="6">
+                              {this.state.showAlert === true ? (
+                                <Alert color="success">
+                                  {this.props.currentLang === "ID"
+                                    ? "Pesan Terirkirim"
+                                    : "Message sent!"}
+                                </Alert>
+                              ) : null}
                               <Button
                                 className="btn-round pull-right"
                                 color="info"
                                 onClick={async () => {
                                   try {
+                                    await this.alertNotification();
                                     await this.props.postKontak(
                                       this.state.form
                                     );
@@ -366,7 +380,8 @@ class Content extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
 });
 
 const mapDispatchToProps = dispatch => ({

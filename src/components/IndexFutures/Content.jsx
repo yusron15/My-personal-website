@@ -69,15 +69,7 @@ const textDesc = {
 // core components
 const items = [
   {
-    // </div>
     content: (
-      // <div
-      //   className="team-1"
-      //   style={{
-      //     backgroundImage: "url(" + require("assets/img/coin.png") + ")",
-      //     backgroundSize: "cover"
-      //   }}
-      // >
       <LangContext.Consumer>
         {({ lang }) => {
           return (
@@ -128,15 +120,7 @@ const items = [
     src: "0"
   },
   {
-    // </div>
     content: (
-      // <div
-      //   className="team-1"
-      //   style={{
-      //     backgroundImage: "url(" + require("assets/img/business.png") + ")",
-      //     backgroundSize: "cover"
-      //   }}
-      // >
       <LangContext.Consumer>
         {({ lang }) => {
           return (
@@ -187,15 +171,7 @@ const items = [
     src: "1"
   },
   {
-    // </div>
     content: (
-      // <div
-      //   className="team-1"
-      //   style={{
-      //     backgroundImage: "url(" + require("assets/img/social.png") + ")",
-      //     backgroundSize: "cover"
-      //   }}
-      // >
       <LangContext.Consumer>
         {({ lang }) => {
           return (
@@ -542,7 +518,8 @@ class Content extends React.Component {
                     style={{
                       backgroundImage:
                         "url(" + require("assets/img/coin.png") + ")",
-                      backgroundSize: "cover"
+                      backgroundSize: "cover",
+                      minHeight: "600px"
                     }}
                   >
                     <ScrollAnimation
@@ -603,15 +580,6 @@ class Content extends React.Component {
                           }
                         )}
 
-                        <CarouselIndicators
-                          // items={this.props.pageStore.indexfutures.slide}
-                          items={this.props.pageStore.indexfutures.slide.map(
-                            (item, index) => index
-                          )}
-                          activeIndex={this.state.activeIndex}
-                          onClickHandler={this.goToIndex}
-                        />
-
                         {/* <Button
                             className="btn-round btn-icon btn-simple slick-prev slick-arrow"
                             data-slide="prev"
@@ -661,7 +629,15 @@ class Content extends React.Component {
 
                         {/* </Col> */}
                       </Carousel>
+                      <CarouselIndicators
+                      items={this.props.pageStore.indexfutures.slide.map(
+                        (item, index) => index
+                      )}
+                      activeIndex={this.state.activeIndex}
+                      onClickHandler={this.goToIndex}
+                    />
                     </ScrollAnimation>
+                  
                   </div>
                 </div>
                 <div className="team-1">

@@ -88,7 +88,7 @@ class CardNews extends React.Component {
             <CardImg
               top
               width="100%"
-              style={{ height: 180 }}
+              style={{ minHeight: 180 }}
               src={image}
               alt="Card image cap"
             />

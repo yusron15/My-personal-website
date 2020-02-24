@@ -116,11 +116,6 @@ class DropdownTrading extends React.Component {
                           {this.props.pageStore.Header.m3.dropdown[0].sub[4]}
                         </Link>
                       </div>
-                      <div style={DropdownTradingText}>
-                        <Link className="font-black" to="/cpo">
-                          {this.props.pageStore.Header.m3.dropdown[0].sub[5]}
-                        </Link>
-                      </div>
                     </div>
                   </Row>
                 </div>

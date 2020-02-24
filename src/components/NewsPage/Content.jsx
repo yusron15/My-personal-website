@@ -636,12 +636,13 @@ class Carding extends React.Component {
                             </CarouselItem>
                           );
                         })}
-                        <CarouselIndicators
-                          style={{ marginBottom: "0 !important" }}
-                          items={itemsBeritaTerkini}
-                          activeIndex={this.state.activeIndex}
-                          onClickHandler={this.goToIndex}
-                        />
+                        <div>
+                          <CarouselIndicators
+                            items={itemsBeritaTerkini}
+                            activeIndex={this.state.activeIndex}
+                            onClickHandler={this.goToIndex}
+                          />
+                        </div>
                       </Carousel>
                     </Col>
 
