@@ -1351,6 +1351,32 @@ const defaultState = {
       button: "Indeks Berita"
     }
   },
+  stockIndex: {
+    Header: "Stock Index",
+    subheader: "",
+    backgroun_image:
+      "https://topgrowth.sgp1.digitaloceanspaces.com/-1582480790683.jpeg"
+  },
+  forexComodity: {
+    Header: "Forex & Commodity",
+    subheader: "",
+    backgroun_image: ""
+  },
+  economicCalender: {
+    Header: "Economic Calender",
+    subheader: "",
+    backgroun_image: ""
+  },
+  marketOutlock: {
+    Header: "MArket Outlook",
+    subheader: "",
+    backgroun_image: ""
+  },
+  Video: {
+    Header: "Video",
+    subheader: "",
+    backgroun_image: ""
+  },
   edukasi: {
     Header: "Edukasi",
     video: [

@@ -22,6 +22,8 @@ class NewsPage extends React.Component {
 
   componentDidMount = async () => {
     await this.props.getContent("Berita", this.props.currentLang, true);
+    await this.props.getContent("stock-index", this.props.currentLang, true);
+
     await this.props.getAllNews();
     await this.props.getNews("forex");
     await this.props.getNews("market");

@@ -940,17 +940,22 @@ p > .textnews:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.carousel-indicators li {
-  margin-bottom: 60px !important;
-  height: 20px;
-}
+
+@media (min-width: 1281px) {
+  .carousel-indicators li {
+    margin-bottom: 60px !important;
+    height: 20px;
+  }
+} 
+
+
 
 .flag-select img {
   top: 0 !important;
 }
 
 .carousel-indicators {
-  z-index: 9999;
+  z-index: 99;
 }
 
 #headers

@@ -32,7 +32,7 @@ import news3 from "../../assets/img/newscontent3.png";
 import news4 from "../../assets/img/newscontent4.png";
 import news5 from "../../assets/img/newscontent5.png";
 
-import { getNews } from "../../redux/ducks/actions";
+import { getNews, getContent } from "../../redux/ducks/actions";
 
 class HeaderStockIndex extends Component {
   render() {
@@ -201,11 +201,14 @@ class Blogs extends Component {
 }
 
 const mapStateToProps = state => ({
-  news: state.newsStore.news
+  news: state.newsStore.news,
+  pageStore: state.pageStore
 });
 
 const mapDispatchToProps = dispatch => ({
-  getNews: type => dispatch(getNews(type))
+  getNews: type => dispatch(getNews(type)),
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Blogs);

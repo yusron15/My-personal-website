@@ -229,17 +229,20 @@ class HeaderLanding extends React.Component {
                                 )}
                               </h4>
                               <br />
-                              <Row>
-                                <Col>
-                                  <img src={appstore} />
-                                </Col>
-                                <Col>
-                                  <img
-                                    src={playstore}
-                                    style={{ marginLeft: "10px" }}
-                                  />
-                                </Col>
-                              </Row>
+                              <div style={{ justifyContent: "center" }}>
+                                <Row>
+                                  <Col>
+                                    <a href="https://download.mql5.com/cdn/mobile/mt4/ios?server=Topgrowth-Demo">
+                                      <img src={appstore} />
+                                    </a>
+                                  </Col>
+                                  <Col>
+                                    <a href="https://download.mql5.com/cdn/mobile/mt4/android?server=Topgrowth-Demo">
+                                      <img src={playstore} />
+                                    </a>
+                                  </Col>
+                                </Row>
+                              </div>
                             </Row>
                           </Col>
                         </Row>
@@ -445,7 +448,7 @@ class HeaderLanding extends React.Component {
                     style={{
                       top: "17vh",
                       position: "absolute",
-                      zIndex: 9999
+                      zIndex: 99
                     }}
                   >
                     <CardRegister />
