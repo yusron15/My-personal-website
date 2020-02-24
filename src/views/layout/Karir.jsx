@@ -9,7 +9,6 @@ import {
 } from "../../redux/ducks/actions.js";
 import { connect } from "react-redux";
 class Karir extends React.Component {
-  state = {};
   async componentDidMount() {
     try {
       await this.props.getContent("karir", this.props.currentLang, true);
