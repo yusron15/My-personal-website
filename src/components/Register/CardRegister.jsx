@@ -60,7 +60,8 @@ class CardRegister extends React.Component {
                   color: "white",
                   fontSize: "2rem",
                   marginTop: "5%",
-                  fontWeight: "bold"
+                  fontWeight: "bold",
+                  paddingLeft: "15px"
                 }}
               >
                 {/* {this.props.pageStore.register.form.title} */}
@@ -212,17 +213,22 @@ class CardRegister extends React.Component {
 
             <div
               className="pull-left ml-3 mb-3"
-              style={{ position: "absolute", bottom: 0 }}
+              style={{ position: "absolute", bottom: 45 }}
             >
               <h6>
                 <Row>
-                  <div style={{ cursor: "default", marginLeft: "10px" }}>
+                  <div
+                    style={{
+                      cursor: "default",
+                      marginLeft: "30px"
+                    }}
+                  >
                     {ReactHtmlParser(
                       this.props.pageStore.Landing.HeaderLanding.SignUp[0]
                         .link_name1
                     )}
                   </div>
-                  <div style={{ marginLeft: "10px" }}>
+                  <div style={{ marginLeft: "5px" }}>
                     <a
                       className="textlink"
                       href={
