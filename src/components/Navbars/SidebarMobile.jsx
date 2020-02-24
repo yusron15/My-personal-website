@@ -211,7 +211,7 @@ class SidebarMobile extends React.Component {
                     {this.props.pageStore.Header.m3.dropdown[0].sub[4]}
                   </div>
                 </Link>
-                <Link to="/index-futures">
+                <Link to="/cpo">
                   <div style={subText}>
                     {this.props.pageStore.Header.m3.dropdown[0].sub[5]}
                   </div>

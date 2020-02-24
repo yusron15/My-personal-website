@@ -1267,30 +1267,14 @@ const defaultState = {
       { image: "", content: "Catatan Trading Anda dapat diakses dengan cepat." }
     ],
     download: [
-      {
-        button: "test",
-        button_link: null
-      },
-      {
-        button: "test",
-        button_link: null
-      },
-      {
-        button: "test",
-        button_link: null
-      },
-      {
-        button: "test",
-        button_link: null
-      },
-      {
-        button: "test",
-        button_link: null
-      },
-      {
-        button: "test",
-        button_link: null
-      }
+      [
+        "https://download.mql5.com/cdn/web/3785/mt4/topgrowth4setup.exe",
+        "http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_macos_5_0_en.zip",
+        "https://download.mql5.com/cdn/mobile/mt4/android?server=Topgrowth-Demo",
+        "https://download.mql5.com/cdn/mobile/mt4/ios?server=Topgrowth-Demo",
+        "http://files.metaquotes.net/3785/mt4/topgrowth4mobilesetup.cab",
+        "http://files.metaquotes.net/3785/mt4/topgrowth4mobilesetup.se.cab"
+      ]
     ]
   },
   topgrowthtrader: {
@@ -1321,30 +1305,14 @@ const defaultState = {
       }
     ],
     download: [
-      {
-        button: "test",
-        button_link: null
-      },
-      {
-        button: "",
-        button_link: ""
-      },
-      {
-        button: "",
-        button_link: ""
-      },
-      {
-        button: "",
-        button_link: ""
-      },
-      {
-        button: "",
-        button_link: ""
-      },
-      {
-        button: "",
-        button_link: ""
-      }
+      [
+        "https://download.mql5.com/cdn/web/3785/mt4/topgrowth4setup.exe",
+        "http://www.pro-itrading.com/products/proitrading2_5_0/proitradingV5_macos_5_0_en.zip",
+        "https://download.mql5.com/cdn/mobile/mt4/android?server=Topgrowth-Demo",
+        "https://download.mql5.com/cdn/mobile/mt4/ios?server=Topgrowth-Demo",
+        "http://files.metaquotes.net/3785/mt4/topgrowth4mobilesetup.cab",
+        "http://files.metaquotes.net/3785/mt4/topgrowth4mobilesetup.se.cab"
+      ]
     ]
   },
   login: {

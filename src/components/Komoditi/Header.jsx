@@ -165,13 +165,13 @@ class Headers extends React.Component {
                       <Table
                              className="table-shopping"
                              style={{
-                               backgroundColor: "#224377",
+                               backgroundColor: "#1565ff",
                                borderRadius: "5px",
                                borderCollapse: "inherit"
                              }}
                            >
                                <thead>
-                               <tr style={{ backgroundColor: "#224377" }}>
+                               <tr style={{ backgroundColor: "#1565ff" }}>
                                  <td className="text-white text-center">
                                    <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix1}</b>
                                  </td>
@@ -220,13 +220,13 @@ class Headers extends React.Component {
                       <Table
                              className="table-shopping"
                              style={{
-                               backgroundColor: "#224377",
+                               backgroundColor: "#1565ff",
                                borderRadius: "5px",
                                borderCollapse: "inherit"
                              }}
                            >
                                <thead>
-                               <tr style={{ backgroundColor: "#224377" }}>
+                               <tr style={{ backgroundColor: "#1565ff" }}>
                                  <td className="text-white text-center">
                                    <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix1}</b>
                                  </td>
@@ -384,13 +384,13 @@ class Headers extends React.Component {
                       <Table
                              className="table-shopping"
                              style={{
-                               backgroundColor: "#224377",
+                               backgroundColor: "#1565ff",
                                borderRadius: "5px",
                                borderCollapse: "inherit"
                              }}
                            >
                                <thead>
-                               <tr style={{ backgroundColor: "#224377" }}>
+                               <tr style={{ backgroundColor: "#1565ff" }}>
                                  <td className="text-white text-center">
                                    <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix1}</b>
                                  </td>
@@ -435,13 +435,13 @@ class Headers extends React.Component {
                       <Table
                              className="table-shopping"
                              style={{
-                               backgroundColor: "#224377",
+                               backgroundColor: "#1565ff",
                                borderRadius: "5px",
                                borderCollapse: "inherit"
                              }}
                            >
                                <thead>
-                               <tr style={{ backgroundColor: "#224377" }}>
+                               <tr style={{ backgroundColor: "#1565ff" }}>
                                  <td className="text-white text-center">
                                    <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix1}</b>
                                  </td>

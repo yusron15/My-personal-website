@@ -34,7 +34,7 @@ import nextButton from "../../assets/img/nextbutton.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 import { isMobile } from "react-device-detect";
-import { TableContent3, TableContent4} from '../Table/Table';
+import { TableContent3, TableContent4 } from "../Table/Table";
 
 import ReactHtmlParser, {
   processNodes,
@@ -421,46 +421,56 @@ class Content extends React.Component {
               </div>
             </div>
             <div className="team-1">
-                  <Container>
+              <Container>
+                <div style={{ overflow: "scroll" }}>
                   <Table
-                             className="table-shopping"
-                             style={{
-                               backgroundColor: "#224377",
-                               borderRadius: "5px",
-                               borderCollapse: "inherit"
-                             }}
-                           >
-                               <thead>
-                               <tr style={{ backgroundColor: "#224377" }}>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.indexfutures.table[0].prefix1}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.indexfutures.table[0].prefix2}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.indexfutures.table[0].prefix3}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.indexfutures.table[0].prefix4}</b>
-                                 </td>
-                               </tr>
-                             </thead>
-                          {
-                             this.props.pageStore.indexfutures
-                             .table[0].tableData.map((item, index) => {
-                              return (
-                               <TableContent4
-                                  prefix1={item.prefix1}
-                                  prefix2={item.prefix2}
-                                  prefix3={item.prefix3}
-                                  prefix4={item.prefix4}
-                                />
-                               );
-                            })}
-                          </Table>
-                  </Container>
+                    className="table-shopping"
+                    style={{
+                      backgroundColor: "#1565ff",
+                      borderRadius: "5px",
+                      borderCollapse: "inherit"
+                    }}
+                  >
+                    <thead>
+                      <tr style={{ backgroundColor: "#1565ff" }}>
+                        <td className="text-white text-center">
+                          <b>
+                            {this.props.pageStore.indexfutures.table[0].prefix1}
+                          </b>
+                        </td>
+                        <td className="text-white text-center">
+                          <b>
+                            {this.props.pageStore.indexfutures.table[0].prefix2}
+                          </b>
+                        </td>
+                        <td className="text-white text-center">
+                          <b>
+                            {this.props.pageStore.indexfutures.table[0].prefix3}
+                          </b>
+                        </td>
+                        <td className="text-white text-center">
+                          <b>
+                            {this.props.pageStore.indexfutures.table[0].prefix4}
+                          </b>
+                        </td>
+                      </tr>
+                    </thead>
+                    {this.props.pageStore.indexfutures.table[0].tableData.map(
+                      (item, index) => {
+                        return (
+                          <TableContent4
+                            prefix1={item.prefix1}
+                            prefix2={item.prefix2}
+                            prefix3={item.prefix3}
+                            prefix4={item.prefix4}
+                          />
+                        );
+                      }
+                    )}
+                  </Table>
                 </div>
+              </Container>
+            </div>
           </div>{" "}
         </>
       );
@@ -656,43 +666,63 @@ class Content extends React.Component {
                 </div>
                 <div className="team-1">
                   <Container>
-                  <Table
-                             className="table-shopping"
-                             style={{
-                               backgroundColor: "#224377",
-                               borderRadius: "5px",
-                               borderCollapse: "inherit"
-                             }}
-                           >
-                               <thead>
-                               <tr style={{ backgroundColor: "#224377" }}>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.indexfutures.table[0].prefix1}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.indexfutures.table[0].prefix2}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.indexfutures.table[0].prefix3}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.indexfutures.table[0].prefix4}</b>
-                                 </td>
-                               </tr>
-                             </thead>
-                          {
-                             this.props.pageStore.indexfutures
-                             .table[0].tableData.map((item, index) => {
-                              return (
-                               <TableContent4
-                                  prefix1={item.prefix1}
-                                  prefix2={item.prefix2}
-                                  prefix3={item.prefix3}
-                                  prefix4={item.prefix4}
-                                />
-                               );
-                            })}
-                          </Table>
+                    <Table
+                      className="table-shopping"
+                      style={{
+                        backgroundColor: "#1565ff",
+                        borderRadius: "5px",
+                        borderCollapse: "inherit"
+                      }}
+                    >
+                      <thead>
+                        <tr style={{ backgroundColor: "#1565ff" }}>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.indexfutures.table[0]
+                                  .prefix1
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.indexfutures.table[0]
+                                  .prefix2
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.indexfutures.table[0]
+                                  .prefix3
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.indexfutures.table[0]
+                                  .prefix4
+                              }
+                            </b>
+                          </td>
+                        </tr>
+                      </thead>
+                      {this.props.pageStore.indexfutures.table[0].tableData.map(
+                        (item, index) => {
+                          return (
+                            <TableContent4
+                              prefix1={item.prefix1}
+                              prefix2={item.prefix2}
+                              prefix3={item.prefix3}
+                              prefix4={item.prefix4}
+                            />
+                          );
+                        }
+                      )}
+                    </Table>
                   </Container>
                 </div>
                 {/* ********* END TEAM 1 ********* */}
