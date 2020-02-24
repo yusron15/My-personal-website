@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -409,7 +410,7 @@ class Blogs extends React.Component {
                       <ListGroup style={{ marginBottom: 20 }}>
                         {karirList.map((item, index) => {
                           return (
-                            <ListGroupItem tag="a" href="#">
+                            <ListGroupItem>
                               <div
                                 style={{
                                   display: "flex",
@@ -459,7 +460,16 @@ class Blogs extends React.Component {
                                   <div style={{ marginRight: 20 }}>
                                     {item.location}
                                   </div>
-                                  <Button color="info">Details</Button>
+                                  <Link
+                                    to={{
+                                      pathname: `/karir/${item.jobTitle}`,
+                                      state: { ...item }
+                                    }}
+                                  >
+                                    <div>
+                                      <Button color="info">Details</Button>
+                                    </div>
+                                  </Link>
                                 </div>
                               </div>
                             </ListGroupItem>

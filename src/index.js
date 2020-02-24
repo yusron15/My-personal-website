@@ -61,6 +61,8 @@ import TopgrowthTrader from "views/layout/TopgrowthTrader.jsx";
 import NewsPage from "views/layout/NewsPage.jsx";
 import Contact from "views/layout/Contact.jsx";
 import Karir from "views/layout/Karir.jsx";
+import KarirDetail from "views/layout/KarirDetail.jsx";
+
 import Forex from "views/layout/Forex.jsx";
 import Gold from "views/layout/Gold.jsx";
 import JamPerdagangan from "views/layout/JamPerdagangan.jsx";
@@ -261,7 +263,16 @@ class App extends Component {
                   path="/contact"
                   render={props => <Contact {...props} />}
                 />
-                <Route path="/karir" render={props => <Karir {...props} />} />
+                <Route
+                  exact
+                  path="/karir"
+                  render={props => <Karir {...props} />}
+                />
+                <Route
+                  path="/karir/:name"
+                  render={props => <KarirDetail {...props} />}
+                />
+
                 <Route path="/login" render={props => <Login {...props} />} />
                 <Route
                   path="/register"
