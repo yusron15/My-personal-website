@@ -33,6 +33,7 @@ import bg from "../../assets/img/header-komoditi.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 import { TableContent6 } from '../Table/Table';
+import Content from './Content'
 import ReactHtmlParser, {
   processNodes,
   convertNodeToElement,
@@ -483,7 +484,9 @@ class Headers extends React.Component {
                           this.props.pageStore.Komoditi.contentList1.title
                         )}
                       </div>
+
                     </Container>
+
 
                     {/* <Container style={{ paddingTop: 0 }}>
                       <Row>

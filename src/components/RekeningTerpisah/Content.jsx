@@ -167,15 +167,7 @@ class Content extends React.Component {
           return (
             <>
               <div className="cd-section" id="projects">
-                <div
-                  style={{
-                    backgroundImage:
-                      "url(" + require("assets/img/dollar.png") + ")",
-                    backgroundSize: "cover",
-                    backgroundColor: "rgba(52, 52, 52, 0.8)"
-                    // minHeight: "80vh"
-                  }}
-                >
+                <div>
                   <div
                     className="team-1 background-header"
                     style={{

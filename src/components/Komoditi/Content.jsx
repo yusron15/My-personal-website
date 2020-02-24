@@ -1,12 +1,41 @@
 import React from "react";
 import { LangContext } from "../MyContext";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Table } from "reactstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import "../../assets/css/main.css";
+const textTitle = {
+  fontWeight: "bold",
+  color: "black",
+  fontSize: "1.4rem"
+};
 
+const textTitleSub = {
+  fontWeight: "bold",
+  color: "black",
+  fontSize: "1.2rem",
+  marginTop: "20px"
+};
+
+const textDesc = {
+  color: "black",
+  fontSize: "1rem",
+  textAlign: "justify"
+};
+
+const text = {
+  // fontWeight: "bold",
+  color: "black",
+  textAlign: "center",
+  fontSize: "1rem"
+};
 class Content extends React.Component {
   async componentDidMount() {
     await this.props.getContent("Komoditi", "id");
@@ -222,8 +251,213 @@ class Content extends React.Component {
                       </Col>
                     </Row>
                   </Container>
+                  <Container>
+                    <div className="space-50" />
+                    <div style={textTitle}>
+                      {ReactHtmlParser(
+                        this.props.pageStore.Komoditi.contentList4.title
+                      )}
+                    </div>
+                    <div style={textDesc}>
+                      {ReactHtmlParser(
+                        this.props.pageStore.Komoditi.contentList4.content
+                      )}
+                    </div>
+                    <div className="space-50" />
+
+                      <Table
+                        className="table-shopping"
+                        style={{
+                          backgroundColor: "#1565ff",
+                          borderRadius: "5px",
+                          borderCollapse: "inherit"
+                        }}
+                      >
+                        <thead>
+                          <tr style={{ backgroundColor: "#1565ff" }}>
+                            <td className="text-white text-center">
+                              <b>
+                                {this.props.currentLang === "ID"
+                                  ? "Kode Kontrak"
+                                  : "Code Contract"}
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {this.props.currentLang === "ID"
+                                  ? "Denominasi"
+                                  : "Denomination"}
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {this.props.currentLang === "ID"
+                                  ? "Satuan Kontrak"
+                                  : "Contract Unit"}
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {this.props.currentLang === "ID"
+                                  ? "Minimum Perubahan Harga (Tick Size)"
+                                  : "Minimum Price Change (Tick Size)"}
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {this.props.currentLang === "ID"
+                                  ? "Settlement-to-Market "
+                                  : "Settlement-to-Market "}
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {this.props.currentLang === "ID"
+                                  ? "Kualitas"
+                                  : "Quality"}
+                              </b>
+                            </td>
+                          </tr>
+                        </thead>
+                        <tbody style={{ backgroundColor: "#d1d1d1" }}>
+                          <tr>
+                            <td style={text}>CPOTR</td>
+                            <td style={text}>IDR</td>
+                            <td style={text}>10 Metric Ton (10.000 kg)</td>
+                            <td style={text}>Rp. 5,- per Kg</td>
+                            <td style={text}>
+                              {this.props.currentLang === "ID"
+                                ? "Penjual dan pembeli dapat melakukan penyerahan dengan cara: • Exchange-for-Physical (EFP); atau • Alternative Delivery Procedure (ADP) Diluar cara tersebut di atas, penjual dan pembeli sepakat untuk menyelesaikan secara tunai"
+                                : "Sellers and buyers can submit by: Exchange for Physical (EFP) or Alternative Delivery Procedure (ADP); aside from the aforementioned procedures, sellers and buyers agree to settle in cash"}
+                            </td>
+                            <td style={text}>
+                              {this.props.currentLang === "ID"
+                                ? "§ Asam Lemak Bebas (Free Fatty Acid) maks 4,5%; Tingkat Kelembaban dan Kotoran (Moisture and Impurities) maks. 0,5%"
+                                : "Sellers and buyers can submit by: Exchange for Physical (EFP) or Alternative Delivery Procedure (ADP); aside from the aforementioned procedures, sellers and buyers agree to settle in cash"}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </Table>
+
+                      <Table
+                        className="table-shopping"
+                        style={{
+                          backgroundColor: "#1565ff",
+                          borderRadius: "5px",
+                          borderCollapse: "inherit"
+                        }}
+                      >
+                        <thead>
+                          <tr style={{ backgroundColor: "#1565ff" }}>
+                            <td className="text-white text-center">
+                              <b>O L E I N</b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>BBJ</b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>ICDX</b>
+                            </td>
+                          </tr>
+                        </thead>
+                        <tbody style={{ backgroundColor: "#d1d1d1" }}>
+                          <tr>
+                            <td style={text}>Kode Kontrak</td>
+                            <td style={text}>OLEJFX</td>
+                            <td style={text}>OLE10</td>
+                            <td style={text}>OLEINTR</td>
+                          </tr>
+                          <tr>
+                            <td style={text}>Satuan Kontrak</td>
+                            <td style={text}>20 Ton (20.000 Kg)</td>
+                            <td style={text}>10 Ton (10.000 Kg)</td>
+                            <td style={text}>10 Ton (10.000 Kg)</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style={text}>
+                              Denominasi
+                            </td>
+                            <td style={text}>IDR</td>
+                            <td style={text}>IDR</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style={text}>
+                              Minimum Perubahan Harga (Tick Size)
+                            </td>
+                            <td style={text}>Rp. 5/Kg</td>
+                            <td style={text}>Rp. 5/Kg</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style={text}>
+                              Bulan Kontrak
+                            </td>
+                            <td style={text}>6 bulan berturut-turut</td>
+                            <td style={text}>12 bulan berurutan</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style={text}>
+                              Waktu Perdagangan
+                            </td>
+                            <td style={text}>09:30 – 17:30</td>
+                            <td style={text}>09.30 – 17.00</td>
+                          </tr>
+                          <tr>
+                            <td colspan="4" style={text}>
+                              Mutu Standar Pasar
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style={text}>Free Fatty Acids (FFA)</td>
+                            <td style={text}>≤ 0.15%</td>
+                            <td style={text}>AOCS Method Ca 5a-40</td>
+                            <td style={text}>maks 0.1%</td>
+                          </tr>
+                          <tr>
+                            <td style={text}>Moisture & Impurities</td>
+                            <td style={text}>≤ 0.1%</td>
+                            <td style={text}>
+                              AOCS Method Ca 2b-38 AOCS Method Ca 3a-46
+                            </td>
+                            <td style={text}>maks. 0,1%</td>
+                          </tr>
+                          <tr>
+                            <td style={text}>Iodine Value (WIJS)</td>
+                            <td style={text}>≥ 56</td>
+                            <td style={text}>AOCS Method Cd 1d-92</td>
+                            <td style={text}>min. 56</td>
+                          </tr>
+                          <tr>
+                            <td style={text}>Warna Merah (Lovibond 5.25”)</td>
+                            <td style={text}>≤ 4 Red</td>
+                            <td style={text}>AOCS Method Cc 13b-45</td>
+                            <td style={text}>maks. 4 Mera</td>
+                          </tr>
+                          <tr>
+                            <td style={text}>Slip Melt Point</td>
+                            <td style={text}>≤ 24°C</td>
+                            <td style={text}>AOCS Method Cc 1-25</td>
+                            <td style={text}>maks. 24⁰C</td>
+                          </tr>
+                          <tr>
+                            <td style={text}>Cloud Point</td>
+                            <td style={text}>10.75°C</td>
+                            <td style={text}></td>
+                            <td style={text}></td>
+                          </tr>
+                          <tr>
+                            <td style={text}>Satuan Penyerahan Minimum</td>
+                            <td style={text}></td>
+                            <td colspan="2" style={text}>
+                              2 lot (20 Metric Ton) dengan toleransi +/- 2%
+                            </td>
+                          </tr>
+                        </tbody>
+                      </Table>
+
+                  </Container>
                 </div>
               </div>
+
               <div
                 className="section section-footers"
                 style={{ backgroundColor: "#1D1E1F" }}
@@ -299,7 +533,9 @@ class Content extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  pageStore: state.pageStore
+  pageStore: state.pageStore,
+  currentLang: state.pageStore.currentLang
+
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -960,6 +960,10 @@ const defaultState = {
         }
       ]
     },
+    contentList4: {
+      title: "Cpo & Olein",
+      content: "CPO dan Olein berasal dari tanaman yang sama yaitu spesies palem yang dikenal sebagai E. Guineesis. Tanaman ini tumbuh di Asia Tenggara, Afrika dan Amerika Latin, dan telah dikonsumsi selama lebih dari 5.000 tahun.\nCPO (Minyak kelapa sawit) yang diekstrak dari daging buah E. Guineesis dengan menggunakan tekanan berwarna oranye terang karena tingginya kandungan pigmen karoten.   Minyak sawit secara luas digunakan dalam mentega dan margarin.\nOlein, minyak sawit yang diproses lebih lanjut menghasilkan Olein dan Stearin.  Olein berbentuk cair pada suhu kamar dan sangat tahan panas.  Olein dengan warna keemasan digunakan sebagai minyak untuk menggoreng."
+    },
     tableList: [
       {
         title: "Bursa ICDX",
