@@ -43,14 +43,15 @@ class CardRegister extends React.Component {
           style={{
             backgroundColor: "rgba(14,14,14,0.7)",
             marginTop: "65%",
-            minHeight: "35vh"
+            minHeight: "35vh",
+            minWidth: "25vw"
           }}
         >
           <Form
             action=""
             className="form"
             method=""
-            style={{ margin: "0 5% 0 5%" }}
+            style={{ margin: "0 5% 0 0" }}
           >
             <CardHeader>
               <CardTitle
@@ -163,7 +164,10 @@ class CardRegister extends React.Component {
                   </FormGroup>
                 </Col>
               </Row> */}
-              <Row className="vertical-center" style={{ marginTop: "15px" }}>
+              <Row
+                className="vertical-center"
+                style={{ marginTop: "15px", marginRight: "30px" }}
+              >
                 <Col md={6}>
                   <a
                     href="http://cabinet.topgrowthfutures.com/users/register"
@@ -173,7 +177,7 @@ class CardRegister extends React.Component {
                     <Button
                       color="info"
                       type="button"
-                      style={{ width: "100%", marginRight: "25px" }}
+                      style={{ width: "100%", marginRight: "35px" }}
                     >
                       {/* {this.props.pageStore.register.form.leftButton} */}
                       {
@@ -211,20 +215,29 @@ class CardRegister extends React.Component {
               style={{ position: "absolute", bottom: 0 }}
             >
               <h6>
-                <a
-                  href={
-                    this.props.pageStore.Landing.HeaderLanding.SignUp[0]
-                      .content_link
-                  }
-                  target="_blank"
-                >
-                  <div className="textlink">
+                <Row>
+                  <div style={{ cursor: "default" }}>
                     {ReactHtmlParser(
                       this.props.pageStore.Landing.HeaderLanding.SignUp[0]
-                        .content
+                        .link_name1
                     )}
                   </div>
-                </a>
+                  <div>
+                    <a
+                      className="textlink"
+                      href={
+                        this.props.pageStore.Landing.HeaderLanding.SignUp[0]
+                          .content_link
+                      }
+                      target="_blank"
+                    >
+                      {ReactHtmlParser(
+                        this.props.pageStore.Landing.HeaderLanding.SignUp[0]
+                          .link_name2
+                      )}
+                    </a>
+                  </div>
+                </Row>
               </h6>
             </div>
           </Form>

@@ -37,6 +37,11 @@ const font = {
   cursor: "pointer"
 };
 
+const fontNumber = {
+  color: "white",
+  cursor: "default"
+};
+
 class BlurryNavbar extends React.Component {
   render() {
     return (
@@ -54,7 +59,7 @@ class BlurryNavbar extends React.Component {
             <div className="navbar-translate">
               <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
                 {/* <p style={font}>Call Us : +62 21 2788 9393</p> */}
-                <p style={font}>{this.props.pageStore.topbar.phone}</p>
+                <p style={fontNumber}>{this.props.pageStore.topbar.phone}</p>
               </NavbarBrand>
             </div>
             <UncontrolledCollapse navbar toggler="#example-navbar-transparent">
