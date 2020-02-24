@@ -42,8 +42,8 @@ class CardRegister extends React.Component {
         <Card
           style={{
             backgroundColor: "rgba(14,14,14,0.7)",
-            marginTop: "65%",
-            minHeight: "35vh",
+            marginTop: "70%",
+            minHeight: "30vh",
             minWidth: "25vw"
           }}
         >
@@ -213,7 +213,7 @@ class CardRegister extends React.Component {
 
             <div
               className="pull-left ml-3 mb-3"
-              style={{ position: "absolute", bottom: 45 }}
+              style={{ position: "absolute", bottom: 30 }}
             >
               <h6>
                 <Row>
