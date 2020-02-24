@@ -333,7 +333,7 @@ class Content extends React.Component {
                             <td style={text}>
                               {this.props.currentLang === "ID"
                                 ? "§ Asam Lemak Bebas (Free Fatty Acid) maks 4,5%; Tingkat Kelembaban dan Kotoran (Moisture and Impurities) maks. 0,5%"
-                                : "Sellers and buyers can submit by: Exchange for Physical (EFP) or Alternative Delivery Procedure (ADP); aside from the aforementioned procedures, sellers and buyers agree to settle in cash"}
+                                : "§ Free Fatty Acid max. 4.5%; Moisture and Impurities max. 0.5%"}
                             </td>
                           </tr>
                         </tbody>
@@ -363,55 +363,85 @@ class Content extends React.Component {
                       </thead>
                       <tbody style={{ backgroundColor: "#d1d1d1" }}>
                         <tr>
-                          <td style={text}>Kode Kontrak</td>
+                          <td style={text}>
+                            {this.props.currentLang === "ID"
+                              ? "Satuan Kontrak"
+                              : "Contract Unit "}
+                          </td>
                           <td style={text}>OLEJFX</td>
                           <td style={text}>OLE10</td>
                           <td style={text}>OLEINTR</td>
                         </tr>
                         <tr>
-                          <td style={text}>Satuan Kontrak</td>
+                          <td style={text}>
+                            {this.props.currentLang === "ID"
+                              ? "Kode Kontrak"
+                              : "Code Contract"}
+                          </td>
                           <td style={text}>20 Ton (20.000 Kg)</td>
                           <td style={text}>10 Ton (10.000 Kg)</td>
                           <td style={text}>10 Ton (10.000 Kg)</td>
                         </tr>
                         <tr>
                           <td colspan="2" style={text}>
-                            Denominasi
+                            {this.props.currentLang === "ID"
+                              ? "Denominasi"
+                              : "Denomination"}
                           </td>
                           <td style={text}>IDR</td>
                           <td style={text}>IDR</td>
                         </tr>
                         <tr>
                           <td colspan="2" style={text}>
-                            Minimum Perubahan Harga (Tick Size)
+                            {this.props.currentLang === "ID"
+                              ? "Minimum Perubahan Harga (Tick Size)"
+                              : "Minimum Price Change (Tick Size) "}
                           </td>
                           <td style={text}>Rp. 5/Kg</td>
                           <td style={text}>Rp. 5/Kg</td>
                         </tr>
                         <tr>
                           <td colspan="2" style={text}>
-                            Bulan Kontrak
+                            {this.props.currentLang === "ID"
+                              ? "Bulan Kontrak"
+                              : "Contract Term"}
                           </td>
-                          <td style={text}>6 bulan berturut-turut</td>
-                          <td style={text}>12 bulan berurutan</td>
+                          <td style={text}>
+                            {this.props.currentLang === "ID"
+                              ? "6 bulan berturut-turut"
+                              : "6 months in a row"}
+                          </td>
+                          <td style={text}>
+                            {this.props.currentLang === "ID"
+                              ? "12 bulan berturut-turut"
+                              : "12 months in a row"}
+                          </td>
                         </tr>
                         <tr>
                           <td colspan="2" style={text}>
-                            Waktu Perdagangan
+                            {this.props.currentLang === "ID"
+                              ? "Waktu Perdagangan"
+                              : "Trading Hours"}
                           </td>
                           <td style={text}>09:30 – 17:30</td>
                           <td style={text}>09.30 – 17.00</td>
                         </tr>
                         <tr>
                           <td colspan="4" style={text}>
-                            Mutu Standar Pasar
+                            {this.props.currentLang === "ID"
+                              ? "Mutu Standar Pasar"
+                              : "Quality Standards"}
                           </td>
                         </tr>
                         <tr>
                           <td style={text}>Free Fatty Acids (FFA)</td>
                           <td style={text}>≤ 0.15%</td>
                           <td style={text}>AOCS Method Ca 5a-40</td>
-                          <td style={text}>maks 0.1%</td>
+                          <td style={text}>
+                            {this.props.currentLang === "ID"
+                              ? "Maks 0.1%"
+                              : "Max 0.1%"}
+                          </td>
                         </tr>
                         <tr>
                           <td style={text}>Moisture & Impurities</td>
@@ -425,19 +455,36 @@ class Content extends React.Component {
                           <td style={text}>Iodine Value (WIJS)</td>
                           <td style={text}>≥ 56</td>
                           <td style={text}>AOCS Method Cd 1d-92</td>
-                          <td style={text}>min. 56</td>
+                          <td style={text}>Min. 56</td>
                         </tr>
                         <tr>
-                          <td style={text}>Warna Merah (Lovibond 5.25”)</td>
-                          <td style={text}>≤ 4 Red</td>
+                          <td style={text}>
+                            {" "}
+                            {this.props.currentLang === "ID"
+                              ? "Warna Merah"
+                              : "Red Colored"}
+                            (Lovibond 5.25”)
+                          </td>
+                          <td style={text}>
+                            ≤ 4{" "}
+                            {this.props.currentLang === "ID" ? "Merah" : "Red"}
+                          </td>
                           <td style={text}>AOCS Method Cc 13b-45</td>
-                          <td style={text}>maks. 4 Mera</td>
+                          <td style={text}>
+                            {this.props.currentLang === "ID"
+                              ? "Maks 4 Merah"
+                              : "Max 4 Red"}{" "}
+                          </td>
                         </tr>
                         <tr>
                           <td style={text}>Slip Melt Point</td>
                           <td style={text}>≤ 24°C</td>
                           <td style={text}>AOCS Method Cc 1-25</td>
-                          <td style={text}>maks. 24⁰C</td>
+                          <td style={text}>
+                            {this.props.currentLang === "ID"
+                              ? "Maks. 24⁰C"
+                              : "Max 24⁰C"}
+                          </td>
                         </tr>
                         <tr>
                           <td style={text}>Cloud Point</td>
@@ -446,10 +493,16 @@ class Content extends React.Component {
                           <td style={text}></td>
                         </tr>
                         <tr>
-                          <td style={text}>Satuan Penyerahan Minimum</td>
+                          <td style={text}>
+                            {this.props.currentLang === "ID"
+                              ? "Satuan Penyerahan Minimum"
+                              : "Minimum Submission Unit "}{" "}
+                          </td>
                           <td style={text}></td>
                           <td colspan="2" style={text}>
-                            2 lot (20 Metric Ton) dengan toleransi +/- 2%
+                            {this.props.currentLang === "ID"
+                              ? " 2 lot (20 Metric Ton) dengan toleransi +/- 2%"
+                              : "2 lots (20 Metric Ton) with a +/- 2% tolerance"}
                           </td>
                         </tr>
                       </tbody>
