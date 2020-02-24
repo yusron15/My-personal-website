@@ -68,7 +68,16 @@ class Content extends React.Component {
     this.setState({
       showAlert: true
     });
+    setTimeout(
+      function() {
+        this.setState({
+          showAlert: false
+        });
+      }.bind(this),
+      3000
+    );
   };
+
   handleTextChange = async e => {
     await this.setState({
       form: {
