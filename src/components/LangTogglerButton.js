@@ -69,6 +69,8 @@ function LangTogglerButton(props) {
                 if (a == "ID") {
                   data = "ID";
                 }
+                await localStorage.setItem("@currentLang", data);
+                await localStorage.setItem("@currentFlag", a);
                 await props.changeLangFlag(a);
                 await props.changeLang(data);
                 await props.getContent(props.activePage, data, true);

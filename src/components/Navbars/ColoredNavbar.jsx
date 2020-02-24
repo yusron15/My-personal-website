@@ -216,6 +216,7 @@ class ColorNavbar extends React.Component {
       }
     };
     const { containerStyle, colorStyle } = styles;
+    localStorage.setItem("@navbar", containerStyle);
 
     const logoImage =
       document.documentElement.scrollTop > 30 || document.body.scrollTop > 30;
