@@ -3,12 +3,14 @@ import { func } from "prop-types";
 export async function GetNews(type) {
   let url = "";
   if (type === "forex") {
-    url = "http://news.topgrowthfutures.co.id/wp-json/wp/v2/posts?categories=8";
+    url =
+      "https://news.topgrowthfutures.co.id/wp-json/wp/v2/posts?categories=8";
   } else if (type === "stock") {
-    url = "http://news.topgrowthfutures.co.id/wp-json/wp/v2/posts?categories=5";
+    url =
+      "https://news.topgrowthfutures.co.id/wp-json/wp/v2/posts?categories=5";
   } else if (type === "market") {
     url =
-      "http://news.topgrowthfutures.co.id/wp-json/wp/v2/posts?categories=138";
+      "https://news.topgrowthfutures.co.id/wp-json/wp/v2/posts?categories=138";
   }
   try {
     const response = await fetch(url);
@@ -20,8 +22,7 @@ export async function GetNews(type) {
 }
 
 export async function GetAllNews() {
-  let url = "http://news.topgrowthfutures.co.id/wp-json/wp/v2/posts";
-
+  let url = "https://news.topgrowthfutures.co.id/wp-json/wp/v2/posts";
   try {
     const response = await fetch(url);
     const json = await response.json();

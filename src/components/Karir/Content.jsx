@@ -12,7 +12,9 @@ import {
   Col,
   CardHeader,
   CardText,
-  CardSubtitle
+  CardSubtitle,
+  ListGroupItem,
+  ListGroup
 } from "reactstrap";
 import { isMobile } from "react-device-detect";
 import SearchField from "react-search-field";
@@ -407,7 +409,8 @@ class Blogs extends React.Component {
                         Clear Filter
                       </Button>
                     </Col>
-                    <Accordion
+
+                    {/* <Accordion
                       style={{ border: "none", padding: 0 }}
                       allowMultipleExpanded={true}
                     >
@@ -435,6 +438,34 @@ class Blogs extends React.Component {
                         </AccordionItem>
                       ))}
                     </Accordion>
+                   */}
+                  </Row>
+                  <Row>
+                    <Col md={12}>
+                      <ListGroup>
+                        <ListGroupItem tag="a" href="#">
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "center"
+                            }}
+                          >
+                            <div style={{ flex: 1 }}>asdasdasd</div>
+
+                            <div>asdasdasd</div>
+                          </div>
+                        </ListGroupItem>
+                        <ListGroupItem tag="a" href="#">
+                          Morbi leo risus
+                        </ListGroupItem>
+                        <ListGroupItem tag="a" href="#">
+                          Porta ac consectetur ac
+                        </ListGroupItem>
+                        <ListGroupItem tag="a" href="#">
+                          Vestibulum at eros
+                        </ListGroupItem>
+                      </ListGroup>
+                    </Col>
                   </Row>
                 </Col>
               </Row>
