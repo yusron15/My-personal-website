@@ -213,7 +213,7 @@ class CardRegister extends React.Component {
 
             <div
               className="pull-left ml-3 mb-3"
-              style={{ position: "absolute", bottom: 30 }}
+              style={{ position: "absolute", bottom: 10 }}
             >
               <h6>
                 <Row>

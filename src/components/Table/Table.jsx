@@ -33,6 +33,22 @@ export class TableContent2 extends React.Component {
   }
 }
 
+export class TableContent2merge extends React.Component {
+  render() {
+    const { prefix1, prefix2 } = this.props;
+    return (
+      <tbody style={{ backgroundColor: "#D1D1D1" }}>
+        <tr>
+          <td style={text}>{prefix1}</td>
+          <td colspan="2" style={text}>
+            {prefix2}
+          </td>
+        </tr>
+      </tbody>
+    );
+  }
+}
+
 export class TableContent3 extends React.Component {
   render() {
     const { prefix1, prefix2, prefix3 } = this.props;
@@ -101,7 +117,16 @@ export class TableContent6 extends React.Component {
 
 export class TableContent8 extends React.Component {
   render() {
-    const { prefix1, prefix2, prefix3, prefix4, prefix5, prefix6,prefix7, prefix8 } = this.props;
+    const {
+      prefix1,
+      prefix2,
+      prefix3,
+      prefix4,
+      prefix5,
+      prefix6,
+      prefix7,
+      prefix8
+    } = this.props;
     return (
       <tbody style={{ backgroundColor: "#e0e0e0" }}>
         <tr>
