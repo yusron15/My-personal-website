@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Iframe from "react-iframe";
 import Marquee from "react-smooth-marquee";
 import { Input } from "reactstrap";
 import { NavItem, Nav, TabContent, TabPane } from "reactstrap";
@@ -7,7 +8,6 @@ import { Link } from "react-router-dom";
 import Up from "../../assets/img/green-triangle.png";
 import Down from "../../assets/img/red-triangle.png";
 import "../../assets/css/main.css";
-import Iframe from "react-iframe";
 
 import Select from "react-select";
 
@@ -77,7 +77,7 @@ class BreakingNews extends Component {
       return (
         <>
           <div style={{ display: "flex" }}>
-            <div
+            {/* <div
               style={{
                 display: "flex",
                 width: "40%"
@@ -160,7 +160,12 @@ class BreakingNews extends Component {
                   </TabPane>
                 </TabContent>
               </div>
-            </div>
+            </div> */}
+            <iframe
+              style="height: 40px; width:100%"
+              src="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp"
+              height="37"
+            ></iframe>
             <div
               style={{
                 flex: 1,
@@ -205,7 +210,7 @@ class BreakingNews extends Component {
     return (
       <>
         <div style={{ display: "flex" }}>
-          <div
+          {/* <div
             style={{
               display: "flex",
               width: "15%"
@@ -285,7 +290,7 @@ class BreakingNews extends Component {
                 </TabPane>
               </TabContent>
             </div>
-          </div>
+          </div> */}
           <div
             style={{
               flex: 1,
@@ -297,13 +302,10 @@ class BreakingNews extends Component {
             }}
           >
             <Iframe
-              url="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp"
+              url="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp?filter="
+              style={{ height: 40, width: "100%" }}
+              height="37"
               width="100%"
-              height="900px"
-              // id="myId"
-              // className="myClassname"
-              // display="initial"
-              // position="relative"
             />
             {/* <marquee scrollamount="5">
               <div style={{ display: "flex", flexDirection: "row" }}>
