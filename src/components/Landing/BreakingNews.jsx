@@ -163,15 +163,15 @@ class BreakingNews extends Component {
             </div> */}
             <div
               style={{
-                flex: 1,
-                display: "flex",
-                alignItems: "center",
-                color: "white",
-                fontSize: "1rem",
-                verticalAlign: "middle",
-                overflow: "hidden"
+                flex: 1
               }}
             >
+              <Iframe
+                url="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp"
+                style={{ height: 40, width: "100%" }}
+                height="37"
+                width="100%"
+              />
               {/* <marquee scrollamount="5">
                 <div style={{ display: "flex", flexDirection: "row" }}>
                   <div style={{ marginLeft: 20 }}>

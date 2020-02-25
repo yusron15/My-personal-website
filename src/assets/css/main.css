@@ -991,3 +991,11 @@ h6 {
 .react-search-field {
   width: 100%;
 }
+
+#quote_table {
+  font-size: 20px;
+}
+
+body {
+  padding: 0;
+}
