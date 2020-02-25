@@ -37,10 +37,10 @@ export class TableContent2merge extends React.Component {
   render() {
     const { prefix1, prefix2 } = this.props;
     return (
-      <tbody style={{ backgroundColor: "#D1D1D1" }}>
+      <tbody style={{ backgroundColor: "#e0e0e0" }}>
         <tr>
           <td style={text}>{prefix1}</td>
-          <td colspan="2" style={text}>
+          <td style={text} colspan="2">
             {prefix2}
           </td>
         </tr>

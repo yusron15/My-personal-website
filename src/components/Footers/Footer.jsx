@@ -112,59 +112,57 @@ class Footers extends React.Component {
                         </Link>
                       </Col>
                       <Col md="4">
-                        <Link to="" style={{ color: "white" }}>
-                          <h4 style={{ cursor: "default", color: "white" }}>
-                            {ReactHtmlParser(
-                              this.props.pageStore.Footer[3].title
-                            )}
-                          </h4>
+                        <h4 style={{ cursor: "default", color: "white" }}>
+                          {ReactHtmlParser(
+                            this.props.pageStore.Footer[3].title
+                          )}
+                        </h4>
 
-                          <p style={{ cursor: "default" }}>
-                            {ReactHtmlParser(
-                              this.props.pageStore.Footer[3].content[0]
-                            )}
-                          </p>
+                        <p style={{ cursor: "default" }}>
+                          {ReactHtmlParser(
+                            this.props.pageStore.Footer[3].content[0]
+                          )}
+                        </p>
 
-                          <p style={{ cursor: "default" }}>
-                            {ReactHtmlParser(
-                              this.props.pageStore.Footer[3].content[1]
-                            )}
-                          </p>
+                        <p style={{ cursor: "default" }}>
+                          {ReactHtmlParser(
+                            this.props.pageStore.Footer[3].content[1]
+                          )}
+                        </p>
 
-                          <p style={{ cursor: "default" }}>
-                            {ReactHtmlParser(
-                              this.props.pageStore.Footer[3].content[2]
-                            )}
-                          </p>
+                        <p style={{ cursor: "default" }}>
+                          {ReactHtmlParser(
+                            this.props.pageStore.Footer[3].content[2]
+                          )}
+                        </p>
 
-                          <p style={{ cursor: "default" }}>
-                            {ReactHtmlParser(
-                              this.props.pageStore.Footer[3].content[3]
-                            )}
-                          </p>
+                        <p style={{ cursor: "default" }}>
+                          {ReactHtmlParser(
+                            this.props.pageStore.Footer[3].content[3]
+                          )}
+                        </p>
 
-                          <p style={{ cursor: "default" }}>
-                            {ReactHtmlParser(
-                              this.props.pageStore.Footer[3].content[4]
-                            )}
-                          </p>
+                        <p style={{ cursor: "default" }}>
+                          {ReactHtmlParser(
+                            this.props.pageStore.Footer[3].content[4]
+                          )}
+                        </p>
 
-                          <p style={{ cursor: "default" }}>
-                            {ReactHtmlParser(
-                              this.props.pageStore.Footer[3].content[5]
-                            )}
-                          </p>
+                        <p style={{ cursor: "default" }}>
+                          {ReactHtmlParser(
+                            this.props.pageStore.Footer[3].content[5]
+                          )}
+                        </p>
 
-                          <p style={{ cursor: "auto" }}>
-                            {ReactHtmlParser(
-                              this.props.pageStore.Footer[3].content[6]
-                            )}
-                          </p>
+                        <p style={{ cursor: "auto" }}>
+                          {ReactHtmlParser(
+                            this.props.pageStore.Footer[3].content[6]
+                          )}
+                        </p>
 
-                          {/* Sudirman Kav 86 Jakarta 10220 Indonesia Email:
+                        {/* Sudirman Kav 86 Jakarta 10220 Indonesia Email:
                     customerservices@topgrowthfutures.com Tel: 021 2788-9366
                     Fax: 021 2788-9395 */}
-                        </Link>
                       </Col>
                     </Row>
                   </div>

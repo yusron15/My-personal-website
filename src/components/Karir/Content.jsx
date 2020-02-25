@@ -158,17 +158,6 @@ class Blogs extends React.Component {
                     </p>
                     <Row style={{ marginBottom: "10%" }}>
                       <Col sm={12}>
-                        {/* <Card className="card-blog card-plain">
-                        <div className="card-image">
-                          <a href="#pablo" onClick={e => e.preventDefault()}>
-                            <img
-                              alt="..."
-                              className="img rounded"
-                              src={require("assets/img/karir1.jpg")}
-                            />
-                          </a>
-                        </div>
-                      </Card> */}
                         <div
                           style={{
                             marginTop: "30px"
@@ -322,7 +311,7 @@ class Blogs extends React.Component {
                   >
                     {ReactHtmlParser(this.props.pageStore.karir.description)}
                   </p>
-                  <Row style={{ marginBottom: "10%" }}>
+                  <Row style={{ marginBottom: 30 }}>
                     <Col
                       md="5"
                       style={{ alignItems: "center", display: "flex" }}

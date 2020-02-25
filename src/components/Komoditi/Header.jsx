@@ -32,8 +32,8 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg from "../../assets/img/header-komoditi.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
-import { TableContent6, TableContent8 } from '../Table/Table';
-import Content from './Content'
+import { TableContent6, TableContent8 } from "../Table/Table";
+import Content from "./Content";
 import ReactHtmlParser, {
   processNodes,
   convertNodeToElement,
@@ -74,7 +74,9 @@ class Headers extends React.Component {
             className="team-1 background-header-mobile"
             style={{
               backgroundImage:
-                "url(" + this.props.pageStore.Komoditi.image_background_mobile + ")",
+                "url(" +
+                this.props.pageStore.Komoditi.image_background_mobile +
+                ")",
               padding: 0
             }}
           >
@@ -156,137 +158,209 @@ class Headers extends React.Component {
                     )}
                   </div>
                   <div className="space-50" />
-                      <div style={textTitle}>
-                        {ReactHtmlParser(
-                         this.props.pageStore.Komoditi.tableList[0].title
-                        )}
-                      </div>
-                      <div
-                      style={{overflow:"scroll"}}>
-                      <Table
-                             className="table-shopping"
-                             style={{
-                               backgroundColor: "#1565ff",
-                               borderRadius: "5px",
-                               borderCollapse: "inherit"
-                             }}
-                           >
-                               <thead>
-                               <tr style={{ backgroundColor: "#1565ff" }}>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix1}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix2}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix3}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix4}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix5}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix6}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix7}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix8}</b>
-                                 </td>
-                               </tr>
-                             </thead>
-                          {
-                             this.props.pageStore.Komoditi
-                             .tableList[0].table[0].tableData.map((item, index) => {
-                              return (
-                               <TableContent8
-                                  prefix1={item.prefix1}
-                                  prefix2={item.prefix2}
-                                  prefix3={item.prefix3}
-                                  prefix4={item.prefix4}
-                                  prefix5={item.prefix5}
-                                  prefix6={item.prefix6}
-                                  prefix7={item.prefix7}
-                                  prefix8={item.prefix8}
-                                />
-                               );
-                            })}
-                          </Table>
-                          </div>
-                          <div className="space-50" />
-                          <div style={textTitle}>
-                        {ReactHtmlParser(
-                         this.props.pageStore.Komoditi.tableList[1].title
-                        )}
-                      </div>
-                      <div
-                      style={{overflow:"scroll"}}>
-
-                      <Table
-                             className="table-shopping"
-                             style={{
-                               backgroundColor: "#1565ff",
-                               borderRadius: "5px",
-                               borderCollapse: "inherit"
-                             }}
-                           >
-                               <thead>
-                               <tr style={{ backgroundColor: "#1565ff" }}>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix1}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix2}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix3}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix4}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix5}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix6}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix7}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix8}</b>
-                                 </td>
-                               </tr>
-                             </thead>
-                          {
-                             this.props.pageStore.Komoditi
-                             .tableList[1].table[0].tableData.map((item, index) => {
-                              return (
-                               <TableContent8
-                                  prefix1={item.prefix1}
-                                  prefix2={item.prefix2}
-                                  prefix3={item.prefix3}
-                                  prefix4={item.prefix4}
-                                  prefix5={item.prefix5}
-                                  prefix6={item.prefix6}
-                                  prefix7={item.prefix7}
-                                  prefix8={item.prefix8}
-                                />
-                               );
-                            })}
-                          </Table>
-                          </div>
-               
+                  <div style={textTitle}>
+                    {ReactHtmlParser(
+                      this.props.pageStore.Komoditi.tableList[0].title
+                    )}
+                  </div>
+                  <div style={{ overflow: "scroll" }}>
+                    <Table
+                      className="table-shopping"
+                      style={{
+                        backgroundColor: "#1565ff",
+                        borderRadius: "5px",
+                        borderCollapse: "inherit"
+                      }}
+                    >
+                      <thead>
+                        <tr style={{ backgroundColor: "#1565ff" }}>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[0]
+                                  .table[0].prefix1
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[0]
+                                  .table[0].prefix2
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[0]
+                                  .table[0].prefix3
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[0]
+                                  .table[0].prefix4
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[0]
+                                  .table[0].prefix5
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[0]
+                                  .table[0].prefix6
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[0]
+                                  .table[0].prefix7
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[0]
+                                  .table[0].prefix8
+                              }
+                            </b>
+                          </td>
+                        </tr>
+                      </thead>
+                      {this.props.pageStore.Komoditi.tableList[0].table[0].tableData.map(
+                        (item, index) => {
+                          return (
+                            <TableContent8
+                              prefix1={item.prefix1}
+                              prefix2={item.prefix2}
+                              prefix3={item.prefix3}
+                              prefix4={item.prefix4}
+                              prefix5={item.prefix5}
+                              prefix6={item.prefix6}
+                              prefix7={item.prefix7}
+                              prefix8={item.prefix8}
+                            />
+                          );
+                        }
+                      )}
+                    </Table>
+                  </div>
                   <div className="space-50" />
                   <div style={textTitle}>
                     {ReactHtmlParser(
-                      this.props.pageStore.Komoditi.contentList1.title
+                      this.props.pageStore.Komoditi.tableList[1].title
                     )}
                   </div>
+                  <div style={{ overflow: "scroll" }}>
+                    <Table
+                      className="table-shopping"
+                      style={{
+                        backgroundColor: "#1565ff",
+                        borderRadius: "5px",
+                        borderCollapse: "inherit"
+                      }}
+                    >
+                      <thead>
+                        <tr style={{ backgroundColor: "#1565ff" }}>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[1]
+                                  .table[0].prefix1
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[1]
+                                  .table[0].prefix2
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[1]
+                                  .table[0].prefix3
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[1]
+                                  .table[0].prefix4
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[1]
+                                  .table[0].prefix5
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[1]
+                                  .table[0].prefix6
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[1]
+                                  .table[0].prefix7
+                              }
+                            </b>
+                          </td>
+                          <td className="text-white text-center">
+                            <b>
+                              {
+                                this.props.pageStore.Komoditi.tableList[1]
+                                  .table[0].prefix8
+                              }
+                            </b>
+                          </td>
+                        </tr>
+                      </thead>
+                      {this.props.pageStore.Komoditi.tableList[1].table[0].tableData.map(
+                        (item, index) => {
+                          return (
+                            <TableContent8
+                              prefix1={item.prefix1}
+                              prefix2={item.prefix2}
+                              prefix3={item.prefix3}
+                              prefix4={item.prefix4}
+                              prefix5={item.prefix5}
+                              prefix6={item.prefix6}
+                              prefix7={item.prefix7}
+                              prefix8={item.prefix8}
+                            />
+                          );
+                        }
+                      )}
+                    </Table>
+                  </div>
+
+                  <div className="space-50" />
                 </Container>
               </div>
             </div>
@@ -395,50 +469,89 @@ class Headers extends React.Component {
                       <div className="space-50" />
                       <div style={textTitle}>
                         {ReactHtmlParser(
-                         this.props.pageStore.Komoditi.tableList[0].title
+                          this.props.pageStore.Komoditi.tableList[0].title
                         )}
                       </div>
                       <Table
-                             className="table-shopping"
-                             style={{
-                               backgroundColor: "#1565ff",
-                               borderRadius: "5px",
-                               borderCollapse: "inherit"
-                             }}
-                           >
-                               <thead>
-                               <tr style={{ backgroundColor: "#1565ff" }}>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix1}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix2}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix3}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix4}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix5}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix6}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix7}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix8}</b>
-                                 </td>
-                               </tr>
-                             </thead>
-                          {
-                             this.props.pageStore.Komoditi
-                             .tableList[0].table[0].tableData.map((item, index) => {
-                              return (
-                                <TableContent8
+                        className="table-shopping"
+                        style={{
+                          backgroundColor: "#1565ff",
+                          borderRadius: "5px",
+                          borderCollapse: "inherit"
+                        }}
+                      >
+                        <thead>
+                          <tr style={{ backgroundColor: "#1565ff" }}>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[0]
+                                    .table[0].prefix1
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[0]
+                                    .table[0].prefix2
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[0]
+                                    .table[0].prefix3
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[0]
+                                    .table[0].prefix4
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[0]
+                                    .table[0].prefix5
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[0]
+                                    .table[0].prefix6
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[0]
+                                    .table[0].prefix7
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[0]
+                                    .table[0].prefix8
+                                }
+                              </b>
+                            </td>
+                          </tr>
+                        </thead>
+                        {this.props.pageStore.Komoditi.tableList[0].table[0].tableData.map(
+                          (item, index) => {
+                            return (
+                              <TableContent8
                                 prefix1={item.prefix1}
                                 prefix2={item.prefix2}
                                 prefix3={item.prefix3}
@@ -448,77 +561,111 @@ class Headers extends React.Component {
                                 prefix7={item.prefix7}
                                 prefix8={item.prefix8}
                               />
-                               );
-                            })}
-                          </Table>
-                          <div className="space-50" />
-                          <div style={textTitle}>
-                        {ReactHtmlParser(
-                         this.props.pageStore.Komoditi.tableList[1].title
+                            );
+                          }
                         )}
-                      </div>
-                      <Table
-                             className="table-shopping"
-                             style={{
-                               backgroundColor: "#1565ff",
-                               borderRadius: "5px",
-                               borderCollapse: "inherit"
-                             }}
-                           >
-                               <thead>
-                               <tr style={{ backgroundColor: "#1565ff" }}>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix1}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix2}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix3}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix4}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix5}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix6}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix7}</b>
-                                 </td>
-                                 <td className="text-white text-center">
-                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix8}</b>
-                                 </td>
-                               </tr>
-                             </thead>
-                          {
-                             this.props.pageStore.Komoditi
-                             .tableList[1].table[0].tableData.map((item, index) => {
-                              return (
-                                <TableContent8
-                                prefix1={item.prefix1}
-                                prefix2={item.prefix2}
-                                prefix3={item.prefix3}
-                                prefix4={item.prefix4}
-                                prefix5={item.prefix5}
-                                prefix6={item.prefix6}
-                                prefix7={item.prefix7}
-                                prefix8={item.prefix8}
-                              />
-                               );
-                            })}
-                          </Table>
+                      </Table>
                       <div className="space-50" />
                       <div style={textTitle}>
                         {ReactHtmlParser(
-                          this.props.pageStore.Komoditi.contentList1.title
+                          this.props.pageStore.Komoditi.tableList[1].title
                         )}
                       </div>
-
+                      <Table
+                        className="table-shopping"
+                        style={{
+                          backgroundColor: "#1565ff",
+                          borderRadius: "5px",
+                          borderCollapse: "inherit"
+                        }}
+                      >
+                        <thead>
+                          <tr style={{ backgroundColor: "#1565ff" }}>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[1]
+                                    .table[0].prefix1
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[1]
+                                    .table[0].prefix2
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[1]
+                                    .table[0].prefix3
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[1]
+                                    .table[0].prefix4
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[1]
+                                    .table[0].prefix5
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[1]
+                                    .table[0].prefix6
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[1]
+                                    .table[0].prefix7
+                                }
+                              </b>
+                            </td>
+                            <td className="text-white text-center">
+                              <b>
+                                {
+                                  this.props.pageStore.Komoditi.tableList[1]
+                                    .table[0].prefix8
+                                }
+                              </b>
+                            </td>
+                          </tr>
+                        </thead>
+                        {this.props.pageStore.Komoditi.tableList[1].table[0].tableData.map(
+                          (item, index) => {
+                            return (
+                              <TableContent8
+                                prefix1={item.prefix1}
+                                prefix2={item.prefix2}
+                                prefix3={item.prefix3}
+                                prefix4={item.prefix4}
+                                prefix5={item.prefix5}
+                                prefix6={item.prefix6}
+                                prefix7={item.prefix7}
+                                prefix8={item.prefix8}
+                              />
+                            );
+                          }
+                        )}
+                      </Table>
+                      <div className="space-50" />
                     </Container>
-
 
                     {/* <Container style={{ paddingTop: 0 }}>
                       <Row>

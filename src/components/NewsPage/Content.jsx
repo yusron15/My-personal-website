@@ -210,7 +210,7 @@ class Carding extends React.Component {
                   flexDirection: "column",
                   position: "absolute",
                   padding: 20,
-                  zIndex: 999
+                  zIndex: 99
                   // marginBottom: 30
                 }}
               >
@@ -251,7 +251,8 @@ class Carding extends React.Component {
                 <CardImg
                   top
                   width="100%"
-                  height="50%"
+                  // height="280"?
+                  style={{ height: 200 }}
                   src={item.featured_image_src}
                   alt="Card image cap"
                 />
@@ -636,7 +637,7 @@ class Carding extends React.Component {
                             </CarouselItem>
                           );
                         })}
-                        <div>
+                        <div style={{ zIndex: 9999 }}>
                           <CarouselIndicators
                             items={itemsBeritaTerkini}
                             activeIndex={this.state.activeIndex}

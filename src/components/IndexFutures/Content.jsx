@@ -540,104 +540,59 @@ class Content extends React.Component {
                                 key={key}
                               >
                                 {
-                                  <Row>
-                                    <Col md="11" className="offset-md-1">
-                                      <div
-                                        style={{
-                                          backgroundColor:
-                                            "rgba(0, 0, 0, 0.66)",
-                                          marginBottom: "5%"
-                                        }}
-                                      >
-                                        <div className="space-50" />
-                                        <Container>
-                                          <Row>
-                                            <Col md="12">
-                                              <div style={textTitleSlide}>
-                                                <b>{item.title}</b>
-                                              </div>
-                                              <div style={textSubtitle}>
-                                                <b>{item.subtitle}</b>
-                                              </div>
-                                            </Col>
-                                            <Col md="12">
-                                              <div
-                                                className="description"
-                                                style={textDesc}
-                                              >
-                                                {ReactHtmlParser(item.content)}
-                                              </div>
-                                            </Col>
-                                          </Row>
-                                        </Container>
-                                        <div className="space-50" />
-                                      </div>
-                                    </Col>
-                                  </Row>
+                                  <div>
+                                    <Row>
+                                      <Col md="11" className="offset-md-1">
+                                        <div
+                                          style={{
+                                            backgroundColor:
+                                              "rgba(0, 0, 0, 0.66)",
+                                            marginBottom: "5%",
+                                            minHeight: 400
+                                          }}
+                                        >
+                                          <div className="space-50" />
+                                          <Container>
+                                            <Row>
+                                              <Col md="12">
+                                                <div style={textTitleSlide}>
+                                                  <b>{item.title}</b>
+                                                </div>
+                                                <div style={textSubtitle}>
+                                                  <b>{item.subtitle}</b>
+                                                </div>
+                                              </Col>
+                                              <Col md="12">
+                                                <div
+                                                  className="description"
+                                                  style={textDesc}
+                                                >
+                                                  {ReactHtmlParser(
+                                                    item.content
+                                                  )}
+                                                </div>
+                                              </Col>
+                                            </Row>
+                                          </Container>
+                                          <div className="space-50" />
+                                        </div>
+                                      </Col>
+                                    </Row>
+                                  </div>
                                 }
                               </CarouselItem>
                             );
                           }
                         )}
-
-                        {/* <Button
-                            className="btn-round btn-icon btn-simple slick-prev slick-arrow"
-                            data-slide="prev"
-                            href="#pablo"
-                            onClick={e => {
-                              e.preventDefault();
-                              this.previous();
-                            }}
-                          >
-
-                            <img src={prevButton} />
-                          </Button> */}
-
-                        {/* <img
-                            className="slick-prev slick-arrow"
-                            data-slide="prev"
-                            src={prevButton}
-                            onClick={e => {
-                              e.preventDefault();
-                              this.previous();
-                            }}
-                            style={{ height: "30px", width: "auto" }}
-                          />
-                          <img
-                            className="slick-arrow"
-                            src={nextButton}
-                            onClick={e => {
-                              e.preventDefault();
-                              this.next();
-                            }}
-                            style={{ height: "30px", width: "auto" }}
-                          /> */}
-
-                        {/* <Button
-                            className="btn-round btn-icon btn-simple slick-arrow"
-                            data-slide="next"
-                            href="#pablo"
-                            onClick={e => {
-                              e.preventDefault();
-                              this.next();
-                            }}
-                            role="button"
-                          >
-
-                            <img src={nextButton} />
-                          </Button>  */}
-
-                        {/* </Col> */}
                       </Carousel>
                       <CarouselIndicators
-                      items={this.props.pageStore.indexfutures.slide.map(
-                        (item, index) => index
-                      )}
-                      activeIndex={this.state.activeIndex}
-                      onClickHandler={this.goToIndex}
-                    />
+                        items={this.props.pageStore.indexfutures.slide.map(
+                          (item, index) => index
+                        )}
+                        activeIndex={this.state.activeIndex}
+                        onClickHandler={this.goToIndex}
+                      />
                     </ScrollAnimation>
-                  
                   </div>
                 </div>
                 <div className="team-1">
