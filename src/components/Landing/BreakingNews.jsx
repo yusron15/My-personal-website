@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Up from "../../assets/img/green-triangle.png";
 import Down from "../../assets/img/red-triangle.png";
 import "../../assets/css/main.css";
+import Iframe from "react-iframe";
 
 import Select from "react-select";
 
@@ -171,7 +172,7 @@ class BreakingNews extends Component {
                 overflow: "hidden"
               }}
             >
-              <marquee scrollamount="5">
+              {/* <marquee scrollamount="5">
                 <div style={{ display: "flex", flexDirection: "row" }}>
                   <div style={{ marginLeft: 20 }}>
                     <img src={Up} />
@@ -195,6 +196,7 @@ class BreakingNews extends Component {
                   </div>
                 </div>
               </marquee>
+           */}
             </div>
           </div>
         </>
@@ -294,7 +296,16 @@ class BreakingNews extends Component {
               verticalAlign: "middle"
             }}
           >
-            <marquee scrollamount="5">
+            <Iframe
+              url="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp"
+              width="100%"
+              height="900px"
+              // id="myId"
+              // className="myClassname"
+              // display="initial"
+              // position="relative"
+            />
+            {/* <marquee scrollamount="5">
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <div style={{ marginLeft: 20 }}>
                   <img src={Up} />
@@ -318,6 +329,7 @@ class BreakingNews extends Component {
                 </div>
               </div>
             </marquee>
+           */}
           </div>
         </div>
       </>

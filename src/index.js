@@ -171,10 +171,7 @@ class App extends Component {
           <Provider store={store}>
             <LangContext.Provider value={this.state}>
               <Switch>
-                <Route
-                  path="/landing"
-                  render={props => <Landing {...props} />}
-                />
+                <Route path="/" render={props => <Landing {...props} />} />
                 <Route
                   path="/tentang-kami"
                   render={props => <TentangKami {...props} />}
@@ -311,10 +308,6 @@ class App extends Component {
                 <Route
                   path="/contact-us"
                   render={props => <ContactUs {...props} />}
-                />
-                <Route
-                  path="/landing-page"
-                  render={props => <LandingPage {...props} />}
                 />
                 <Route
                   path="/pricing"

@@ -1,4 +1,6 @@
 import React from "react";
+import Iframe from "react-iframe";
+
 import {
   Button,
   Container,
@@ -72,6 +74,17 @@ class HeaderLanding extends React.Component {
   }
 
   renderContent = () => {
+    return (
+      <Iframe
+        url="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp"
+        width="100%"
+        height="900px"
+        // id="myId"
+        // className="myClassname"
+        // display="initial"
+        // position="relative"
+      />
+    );
     if (isMobile) {
       return (
         <>
@@ -85,7 +98,7 @@ class HeaderLanding extends React.Component {
                   controls={false}
                   slide={true}
                   touch={true}
-                  interval="5000"
+                  interval="3000"
                   pauseOnHover={false}
                 >
                   <Carousel.Item>
@@ -446,7 +459,7 @@ class HeaderLanding extends React.Component {
                       offset: 8
                     }}
                     style={{
-                      top: "17vh",
+                      top: "1%",
                       position: "absolute",
                       zIndex: 99
                     }}
