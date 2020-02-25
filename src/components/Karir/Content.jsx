@@ -130,7 +130,9 @@ class Blogs extends React.Component {
                 className="background-header-mobile"
                 style={{
                   backgroundImage:
-                    "url(" + this.props.karirList.background_image + ")",
+                    "url(" +
+                    this.props.pageStore.karir.image_background_mobile +
+                    ")",
                   padding: 0
                 }}
               >

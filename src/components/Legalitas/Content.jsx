@@ -85,7 +85,7 @@ class Projects extends React.Component {
                 style={{
                   backgroundImage:
                     "url(" +
-                    this.props.pageStore.legalitas.image_background +
+                    this.props.pageStore.legalitas.image_background_mobile +
                     ")",
                   padding: 0
                 }}

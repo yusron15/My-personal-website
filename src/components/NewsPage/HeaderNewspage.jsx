@@ -80,7 +80,7 @@ class HeaderNewsPage extends Component {
         <>
           <div
             style={{
-              backgroundImage: `url(${this.props.pageStore.berita.backgroun_image})`,
+              backgroundImage: `url(${this.props.pageStore.berita.image_background_mobile})`,
               padding: 0,
               backgroundSize: "cover"
             }}
@@ -95,7 +95,7 @@ class HeaderNewsPage extends Component {
       <>
         <div
           style={{
-            backgroundImage: `url(${this.props.pageStore.berita.backgroun_image})`,
+            backgroundImage: `url(${this.props.pageStore.berita.background_image})`,
             backgroundSize: "cover",
             padding: 0
           }}

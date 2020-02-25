@@ -74,7 +74,7 @@ class Headers extends React.Component {
             className="team-1 background-header-mobile"
             style={{
               backgroundImage:
-                "url(" + this.props.pageStore.Komoditi.image_background + ")",
+                "url(" + this.props.pageStore.Komoditi.image_background_mobile + ")",
               padding: 0
             }}
           >

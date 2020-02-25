@@ -52,7 +52,7 @@ class Tables extends React.Component {
                     style={{
                       backgroundImage:
                       "url(" +
-                      this.props.pageStore.jamperdagangan.image_background +
+                      this.props.pageStore.jamperdagangan.image_background_mobile +
                       ")",
                       padding: 0
                     }}

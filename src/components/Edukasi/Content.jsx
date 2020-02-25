@@ -156,7 +156,7 @@ class Content extends React.Component {
                 style={{
                   backgroundImage:
                     "url(" +
-                    this.props.pageStore.edukasi.image_background +
+                    this.props.pageStore.edukasi.image_background_mobile +
                     ")",
                   padding: 0
                 }}

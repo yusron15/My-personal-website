@@ -277,7 +277,7 @@ class Content extends React.Component {
             style={{
               backgroundImage:
                 "url(" +
-                this.props.pageStore.indexfutures.image_background +
+                this.props.pageStore.indexfutures.image_background_mobile +
                 ")",
               padding: 0
             }}

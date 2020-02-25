@@ -289,7 +289,7 @@ class Content extends React.Component {
               style={{
                 backgroundImage:
                   "url(" +
-                  this.props.pageStore.topgrowthtrader.image_background +
+                  this.props.pageStore.topgrowthtrader.image_background_mobile +
                   ")",
                 padding: 0,
                 backgroundSize: "cover"
