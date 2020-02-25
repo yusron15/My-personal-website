@@ -100,7 +100,7 @@ class Projects extends React.Component {
               <DarkNavbar />
               <Container
                 style={{
-                  height: "100vh",
+                  // height: "100vh",
                   minWidth: "100vw",
                   backgroundSize: "cover",
                   backgroundImage: `url(${bglegalitas})`
@@ -212,10 +212,10 @@ class Projects extends React.Component {
 
                 <TabContent
                   className="tab-space"
-                  style={{ height: "60%" }}
+                  // style={{ height: "60%" }}
                   activeTab={"project" + this.state.activeTab}
                 >
-                  <TabPane tabId="project1" style={{ height: "60vh" }}>
+                  <TabPane tabId="project1">
                     <Col className="ml-auto mr-auto text-center mt-4" md="8">
                       <h4 className="title font-black">
                         {ReactHtmlParser(
@@ -232,7 +232,7 @@ class Projects extends React.Component {
                       </p>
                     </Col>
                   </TabPane>
-                  <TabPane tabId="project2" style={{ height: "200px" }}>
+                  <TabPane tabId="project2">
                     <Col className="ml-auto mr-auto text-center mt-4" md="8">
                       <p className="description mb-5 font-black">
                         <h4 className="title font-black">
@@ -249,7 +249,7 @@ class Projects extends React.Component {
                       </p>
                     </Col>
                   </TabPane>
-                  <TabPane tabId="project3" style={{ height: "200px" }}>
+                  <TabPane tabId="project3">
                     <Col className="ml-auto mr-auto text-center mt-4" md="8">
                       <p className="description mb-5 font-black">
                         <h4 className="title font-black">
@@ -266,7 +266,7 @@ class Projects extends React.Component {
                       </p>
                     </Col>
                   </TabPane>
-                  <TabPane tabId="project4" style={{ height: "200px" }}>
+                  <TabPane tabId="project4">
                     <Col className="ml-auto mr-auto text-center mt-4" md="8">
                       <h4 className="title font-black">
                         {ReactHtmlParser(
@@ -281,7 +281,7 @@ class Projects extends React.Component {
                       </p>
                     </Col>
                   </TabPane>
-                  <TabPane tabId="project5" style={{ height: "200px" }}>
+                  <TabPane tabId="project5">
                     <Col className="ml-auto mr-auto text-center mt-4" md="8">
                       <h4 className="title font-black">
                         {ReactHtmlParser(

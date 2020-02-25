@@ -206,7 +206,7 @@ class Content extends React.Component {
                                 style={{
                                   fontSize: "0.8rem",
                                   paddingLeft: "10px",
-                                  // paddingTop: "25px",
+                                  paddingTop: "27px",
                                   fontWeight: "bold",
                                   cursor: "pointer",
                                   height: "80px",

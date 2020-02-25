@@ -40,16 +40,7 @@ class Content extends React.Component {
         <>
           <div className="cd-section" id="projects">
             <div
-              // className="projects-3"
-              style={{
-                backgroundImage:
-                  "url(" +
-                  this.props.pageStore.rekeningterpisah.image_background +
-                  ")",
-                backgroundSize: "cover",
-                backgroundColor: "rgba(52, 52, 52, 0.8)",
-                minHeight: "80vh"
-              }}
+            // className="projects-3"
             >
               <div
                 className="team-1 background-header-mobile"

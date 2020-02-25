@@ -48,7 +48,7 @@ class Footers extends React.Component {
                       <Col md="3">
                         <div style={{ cursor: "default" }}>
                           <h4>
-                            <b style={{ cursor: "default" }}>
+                            <b style={{ cursor: "default", color: "white" }}>
                               {ReactHtmlParser(
                                 this.props.pageStore.Footer[0].title
                               )}
@@ -62,7 +62,7 @@ class Footers extends React.Component {
                         </div>
                       </Col>
                       <Col md="3">
-                        <h4 style={{ cursor: "default" }}>
+                        <h4 style={{ cursor: "default", color: "white" }}>
                           {ReactHtmlParser(
                             this.props.pageStore.Footer[1].title
                           )}
@@ -100,7 +100,7 @@ class Footers extends React.Component {
                         </p>
                       </Col>
                       <Col md="2">
-                        <h4 style={{ cursor: "default" }}>
+                        <h4 style={{ cursor: "default", color: "white" }}>
                           {ReactHtmlParser(
                             this.props.pageStore.Footer[2].title
                           )}
@@ -113,7 +113,7 @@ class Footers extends React.Component {
                       </Col>
                       <Col md="4">
                         <Link to="" style={{ color: "white" }}>
-                          <h4 style={{ cursor: "default" }}>
+                          <h4 style={{ cursor: "default", color: "white" }}>
                             {ReactHtmlParser(
                               this.props.pageStore.Footer[3].title
                             )}

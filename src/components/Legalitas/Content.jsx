@@ -218,7 +218,7 @@ class Projects extends React.Component {
                   <Col style={{ paddingBottom: "50px" }}>
                     <TabContent
                       activeTab={"project" + this.state.activeTab}
-                      style={{ height: "50vh" }}
+                      // style={{ height: "50vh" }}
                     >
                       <TabPane tabId="project1">
                         <Col
@@ -239,7 +239,7 @@ class Projects extends React.Component {
                           </p>
                         </Col>
                       </TabPane>
-                      <TabPane tabId="project2" style={{ height: "60vh" }}>
+                      <TabPane tabId="project2">
                         <Col
                           className="ml-auto mr-auto text-center mt-4"
                           md="8"
@@ -257,7 +257,7 @@ class Projects extends React.Component {
                           </p>
                         </Col>
                       </TabPane>
-                      <TabPane tabId="project3" style={{ height: "60vh" }}>
+                      <TabPane tabId="project3">
                         <Col
                           className="ml-auto mr-auto text-center mt-4"
                           md="8"
@@ -275,7 +275,7 @@ class Projects extends React.Component {
                           </p>
                         </Col>
                       </TabPane>
-                      <TabPane tabId="project4" style={{ height: "60vh" }}>
+                      <TabPane tabId="project4">
                         <Col
                           className="ml-auto mr-auto text-center mt-4"
                           md="8"
@@ -292,7 +292,7 @@ class Projects extends React.Component {
                           </p>
                         </Col>
                       </TabPane>
-                      <TabPane tabId="project5" style={{ height: "60vh" }}>
+                      <TabPane tabId="project5">
                         <Col
                           className="ml-auto mr-auto text-center mt-4"
                           md="8"

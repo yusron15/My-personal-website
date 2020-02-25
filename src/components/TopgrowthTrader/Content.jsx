@@ -291,7 +291,8 @@ class Content extends React.Component {
                   "url(" +
                   this.props.pageStore.topgrowthtrader.image_background +
                   ")",
-                padding: 0
+                padding: 0,
+                backgroundSize: "cover"
               }}
             >
               <SidebarMobile />

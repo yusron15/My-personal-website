@@ -339,6 +339,7 @@ class Content extends React.Component {
                         </tbody>
                       </Table>
                     </div>
+                    <div style={{ overflow: "scroll" }}>
 
                     <Table
                       className="table-shopping"
@@ -507,6 +508,8 @@ class Content extends React.Component {
                         </tr>
                       </tbody>
                     </Table>
+                    </div>
+                 
                   </Container>
                 </div>
               </div>
