@@ -120,7 +120,11 @@ class Content extends React.Component {
                     <a href={link}>
                       <img
                         alt="..."
-                        style={{ cursor: "pointer" }}
+                        style={{
+                          cursor: "pointer",
+                          height: 200,
+                          width: "100%"
+                        }}
                         className="img rounded"
                         src={image}
                       />

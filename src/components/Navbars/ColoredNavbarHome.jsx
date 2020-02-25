@@ -287,7 +287,7 @@ class ColorNavbar extends React.Component {
                         <button
                           className="dropdown dropbtn"
                           style={{
-                            color: this.coloringNav("/landing"),
+                            color: this.coloringNav("/"),
                             fontWeight: "bold"
                           }}
                         >

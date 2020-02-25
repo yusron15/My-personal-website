@@ -290,6 +290,7 @@ class BreakingNews extends Component {
             <Iframe
               url="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp?filter="
               style={{ height: 40, width: "100%" }}
+              frameBorder="0"
               height="37"
               width="100%"
             />
