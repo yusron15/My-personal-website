@@ -147,7 +147,7 @@ class SidebarMobile extends React.Component {
           sidebar={
             <Col>
               <div style={{ marginTop: "20px" }}>
-                <Link to="/landing">
+                <Link to="/">
                   <div className="dropdown dropbtn font-black">
                     {this.props.pageStore.Header.m1.title}
                   </div>
@@ -211,7 +211,6 @@ class SidebarMobile extends React.Component {
                     {this.props.pageStore.Header.m3.dropdown[0].sub[4]}
                   </div>
                 </Link>
-             
 
                 <div style={title}>
                   {this.props.pageStore.Header.m3.dropdown[1].title}

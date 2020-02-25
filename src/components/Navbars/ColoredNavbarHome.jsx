@@ -257,7 +257,7 @@ class ColorNavbar extends React.Component {
             <Container>
               <div className="navbar-translate">
                 <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-                  {/* <Link to="/landing"> */}
+                  {/* <Link to="/"> */}
                   <img src={logo} style={{ height: 50, width: "auto" }} />
                   {/* TGF */}
                   {/* </Link> */}
@@ -281,7 +281,7 @@ class ColorNavbar extends React.Component {
                   role="tablist"
                   navbar
                 >
-                  <Link to="/landing">
+                  <Link to="/">
                     <NavItem>
                       <div onMouseEnter={() => this.onLeaveAll()}>
                         <button

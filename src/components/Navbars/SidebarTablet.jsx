@@ -105,7 +105,7 @@ class SidebarTablet extends React.Component {
           <Container>
             <Row>
               <Col>
-                <img src={logo} style={{height:"10px", width:"auto"}}/>
+                <img src={logo} style={{ height: "10px", width: "auto" }} />
               </Col>
               <Col>
                 <div
@@ -131,7 +131,7 @@ class SidebarTablet extends React.Component {
           sidebar={
             <Col>
               <div style={{ marginTop: "20px" }}>
-                <Link to="/landing">
+                <Link to="/">
                   <div className="dropdown dropbtn font-black">
                     {this.props.pageStore.Header.m1.title}
                   </div>

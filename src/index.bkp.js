@@ -320,7 +320,7 @@ class App extends Component {
                   path="/chat-page"
                   render={props => <ChatPage {...props} />}
                 />
-                <Redirect from="/" to="/landing" />
+                <Redirect from="/" to="/" />
               </Switch>
             </LangContext.Provider>
           </Provider>

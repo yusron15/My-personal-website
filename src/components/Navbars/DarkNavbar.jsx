@@ -104,9 +104,9 @@ class Navbars extends React.Component {
                 <Nav className="ml-auto" navbar>
                   <NavItem>
                     <button class="dropbtn">
-                      <Link to="/landing">Home</Link>
+                      <Link to="/">Home</Link>
                     </button>
-                    {/* <Link to="/landing">
+                    {/* <Link to="/">
                       <DropdownToggle>Home</DropdownToggle>
                     </Link> */}
                   </NavItem>
