@@ -32,7 +32,7 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import bg from "../../assets/img/header-komoditi.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
-import { TableContent6 } from '../Table/Table';
+import { TableContent6, TableContent8 } from '../Table/Table';
 import Content from './Content'
 import ReactHtmlParser, {
   processNodes,
@@ -191,19 +191,27 @@ class Headers extends React.Component {
                                  <td className="text-white text-center">
                                    <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix6}</b>
                                  </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix7}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix8}</b>
+                                 </td>
                                </tr>
                              </thead>
                           {
                              this.props.pageStore.Komoditi
                              .tableList[0].table[0].tableData.map((item, index) => {
                               return (
-                               <TableContent6
+                               <TableContent8
                                   prefix1={item.prefix1}
                                   prefix2={item.prefix2}
                                   prefix3={item.prefix3}
                                   prefix4={item.prefix4}
                                   prefix5={item.prefix5}
                                   prefix6={item.prefix6}
+                                  prefix7={item.prefix7}
+                                  prefix8={item.prefix8}
                                 />
                                );
                             })}
@@ -246,19 +254,27 @@ class Headers extends React.Component {
                                  <td className="text-white text-center">
                                    <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix6}</b>
                                  </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix7}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix8}</b>
+                                 </td>
                                </tr>
                              </thead>
                           {
                              this.props.pageStore.Komoditi
                              .tableList[1].table[0].tableData.map((item, index) => {
                               return (
-                               <TableContent6
+                               <TableContent8
                                   prefix1={item.prefix1}
                                   prefix2={item.prefix2}
                                   prefix3={item.prefix3}
                                   prefix4={item.prefix4}
                                   prefix5={item.prefix5}
                                   prefix6={item.prefix6}
+                                  prefix7={item.prefix7}
+                                  prefix8={item.prefix8}
                                 />
                                );
                             })}
@@ -410,20 +426,28 @@ class Headers extends React.Component {
                                  <td className="text-white text-center">
                                    <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix6}</b>
                                  </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix7}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.Komoditi.tableList[0].table[0].prefix8}</b>
+                                 </td>
                                </tr>
                              </thead>
                           {
                              this.props.pageStore.Komoditi
                              .tableList[0].table[0].tableData.map((item, index) => {
                               return (
-                               <TableContent6
-                                  prefix1={item.prefix1}
-                                  prefix2={item.prefix2}
-                                  prefix3={item.prefix3}
-                                  prefix4={item.prefix4}
-                                  prefix5={item.prefix5}
-                                  prefix6={item.prefix6}
-                                />
+                                <TableContent8
+                                prefix1={item.prefix1}
+                                prefix2={item.prefix2}
+                                prefix3={item.prefix3}
+                                prefix4={item.prefix4}
+                                prefix5={item.prefix5}
+                                prefix6={item.prefix6}
+                                prefix7={item.prefix7}
+                                prefix8={item.prefix8}
+                              />
                                );
                             })}
                           </Table>
@@ -461,20 +485,28 @@ class Headers extends React.Component {
                                  <td className="text-white text-center">
                                    <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix6}</b>
                                  </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix7}</b>
+                                 </td>
+                                 <td className="text-white text-center">
+                                   <b>{this.props.pageStore.Komoditi.tableList[1].table[0].prefix8}</b>
+                                 </td>
                                </tr>
                              </thead>
                           {
                              this.props.pageStore.Komoditi
                              .tableList[1].table[0].tableData.map((item, index) => {
                               return (
-                               <TableContent6
-                                  prefix1={item.prefix1}
-                                  prefix2={item.prefix2}
-                                  prefix3={item.prefix3}
-                                  prefix4={item.prefix4}
-                                  prefix5={item.prefix5}
-                                  prefix6={item.prefix6}
-                                />
+                                <TableContent8
+                                prefix1={item.prefix1}
+                                prefix2={item.prefix2}
+                                prefix3={item.prefix3}
+                                prefix4={item.prefix4}
+                                prefix5={item.prefix5}
+                                prefix6={item.prefix6}
+                                prefix7={item.prefix7}
+                                prefix8={item.prefix8}
+                              />
                                );
                             })}
                           </Table>

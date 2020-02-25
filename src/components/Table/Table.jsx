@@ -98,3 +98,23 @@ export class TableContent6 extends React.Component {
     );
   }
 }
+
+export class TableContent8 extends React.Component {
+  render() {
+    const { prefix1, prefix2, prefix3, prefix4, prefix5, prefix6,prefix7, prefix8 } = this.props;
+    return (
+      <tbody style={{ backgroundColor: "#e0e0e0" }}>
+        <tr>
+          <td style={text}>{prefix1}</td>
+          <td style={text}>{prefix2}</td>
+          <td style={text}>{prefix3}</td>
+          <td style={text}>{prefix4}</td>
+          <td style={text}>{prefix5}</td>
+          <td style={text}>{prefix6}</td>
+          <td style={text}>{prefix7}</td>
+          <td style={text}>{prefix8}</td>
+        </tr>
+      </tbody>
+    );
+  }
+}

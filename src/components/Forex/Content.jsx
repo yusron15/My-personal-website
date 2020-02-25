@@ -22,7 +22,7 @@ import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
 import "../../assets/css/main.css";
 import { LangContext } from "../MyContext";
-import { TableContent3, TableContent4 } from "../Table/Table";
+import { TableContent2, TableContent3, TableContent4 } from "../Table/Table";
 
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
@@ -53,7 +53,7 @@ const textContent = {
   textAlign: "left",
   fontStyle: "Helvetica Bold",
   margin: 0,
-  position: "absolute",
+  // position: "absolute",
   fontSize: "1rem",
   color: "black"
 };
@@ -758,11 +758,18 @@ class Features extends React.Component {
                               {this.props.pageStore.Forex.content[5].table[0].tableData.map(
                                 (item, index) => {
                                   return (
+                                    <>
+                                    {/* {if } */}
                                     <TableContent3
                                       prefix1={item.prefix1}
                                       prefix2={item.prefix2}
                                       prefix3={item.prefix3}
                                     />
+                                    {/* <TableContent2
+                                    prefix1={item.prefix1}
+                                    prefix2={item.prefix2}
+                                  /> */}
+                                  </>
                                   );
                                 }
                               )}
