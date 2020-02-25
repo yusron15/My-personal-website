@@ -74,17 +74,6 @@ class HeaderLanding extends React.Component {
   }
 
   renderContent = () => {
-    return (
-      <Iframe
-        url="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp"
-        width="100%"
-        height="900px"
-        // id="myId"
-        // className="myClassname"
-        // display="initial"
-        // position="relative"
-      />
-    );
     if (isMobile) {
       return (
         <>

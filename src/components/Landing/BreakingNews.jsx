@@ -161,11 +161,6 @@ class BreakingNews extends Component {
                 </TabContent>
               </div>
             </div> */}
-            <iframe
-              style="height: 40px; width:100%"
-              src="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp"
-              height="37"
-            ></iframe>
             <div
               style={{
                 flex: 1,
@@ -291,16 +286,7 @@ class BreakingNews extends Component {
               </TabContent>
             </div>
           </div> */}
-          <div
-            style={{
-              flex: 1,
-              display: "flex",
-              alignItems: "center",
-              color: "white",
-              fontSize: "1rem",
-              verticalAlign: "middle"
-            }}
-          >
+          <div style={{ flex: 1 }}>
             <Iframe
               url="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp?filter="
               style={{ height: 40, width: "100%" }}
