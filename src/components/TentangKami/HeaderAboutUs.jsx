@@ -70,7 +70,7 @@ class HeaderAboutUs extends React.Component {
                 style={{
                   backgroundImage:
                     "url(" +
-                    this.props.pageStore.tentangkami.image_background +
+                    this.props.pageStore.tentangkami.image_background_mobile +
                     ")",
                   padding: 0
                 }}

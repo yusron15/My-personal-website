@@ -125,7 +125,9 @@ class Features extends React.Component {
               className="team-1 background-header-mobile"
               style={{
                 backgroundImage:
-                  "url(" + this.props.pageStore.Forex.image_background + ")",
+                  "url(" +
+                  this.props.pageStore.Forex.image_background_mobile +
+                  ")",
                 padding: 0
               }}
             >

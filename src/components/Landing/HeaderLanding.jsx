@@ -108,7 +108,7 @@ class HeaderLanding extends React.Component {
                         backgroundImage:
                           "url(" +
                           this.props.pageStore.Landing.HeaderLanding.slide[0]
-                            .image +
+                            .image_mobile +
                           ")",
                         backgroundSize: "cover",
                         minHeight: "93.5vh"
@@ -156,7 +156,7 @@ class HeaderLanding extends React.Component {
                         backgroundImage:
                           "url(" +
                           this.props.pageStore.Landing.HeaderLanding.slide[1]
-                            .image +
+                            .image_mobile +
                           ")",
                         backgroundSize: "cover",
                         minHeight: "93.5vh"
@@ -206,7 +206,7 @@ class HeaderLanding extends React.Component {
                         backgroundImage:
                           "url(" +
                           this.props.pageStore.Landing.HeaderLanding.slide[2]
-                            .image +
+                            .image_mobile +
                           ")",
                         backgroundSize: "cover",
                         minHeight: "93.5vh"
@@ -307,7 +307,7 @@ class HeaderLanding extends React.Component {
                             backgroundImage:
                               "url(" +
                               this.props.pageStore.Landing.HeaderLanding
-                                .slide[0].image +
+                                .slide[0].image_web +
                               // == null ? :  this.props.pageStore.Landing.HeaderLanding
                               // .slide[0].image
                               ")",
@@ -351,7 +351,7 @@ class HeaderLanding extends React.Component {
                             backgroundImage:
                               "url(" +
                               this.props.pageStore.Landing.HeaderLanding
-                                .slide[1].image +
+                                .slide[1].image_web +
                               ")",
                             backgroundSize: "cover"
                           }}
@@ -392,7 +392,7 @@ class HeaderLanding extends React.Component {
                             backgroundImage:
                               "url(" +
                               this.props.pageStore.Landing.HeaderLanding
-                                .slide[2].image +
+                                .slide[2].image_web +
                               ")",
                             backgroundSize: "cover"
                           }}
