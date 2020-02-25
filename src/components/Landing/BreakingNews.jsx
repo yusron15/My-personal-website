@@ -288,7 +288,7 @@ class BreakingNews extends Component {
           </div> */}
           <div style={{ flex: 1 }}>
             <Iframe
-              url="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp?filter="
+              url="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp"
               style={{ height: 50, width: "100%" }}
               frameBorder="0"
               height="37"
