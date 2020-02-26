@@ -3,7 +3,7 @@ import { fetchPage, getContent } from "../actions/pagesAction";
 import { fetchLanding } from "../actions/landingActions";
 import { getNews, getAllNews } from "../actions/newsActions";
 import { getCabangs } from "../actions/cabangActions";
-import { getAllKarir } from "../actions/karirActions";
+import { getAllKarir, getKarirById } from "../actions/karirActions";
 import { postKontak } from "../actions/kontakActions";
 
 export {
@@ -17,6 +17,7 @@ export {
   getCabangs,
   // karir
   getAllKarir,
+  getKarirById,
   // kontak
   postKontak
 };

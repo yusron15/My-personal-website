@@ -425,8 +425,8 @@ class Blogs extends React.Component {
                                   </div>
                                   <Link
                                     to={{
-                                      pathname: `/karir/${item.jobTitle}`,
-                                      state: { ...item }
+                                      pathname: `/karir/${item.id}/${item.jobTitle}/`
+                                      // state: { ...item }
                                     }}
                                     target="_blank"
                                   >

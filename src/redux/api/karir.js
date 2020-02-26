@@ -8,3 +8,12 @@ export async function GetAllKarir(lang, filter) {
     throw error;
   }
 }
+
+export async function GetKarirById(id) {
+  try {
+    const result = await fetchJson("GET", `karirs/${id}`);
+    return result;
+  } catch (error) {
+    throw error;
+  }
+}
