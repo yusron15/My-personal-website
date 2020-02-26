@@ -100,8 +100,10 @@ class Content extends React.Component {
                   <h3 className="title font-black">
                     {this.props.pageStore.hubungikami.top.title}
                   </h3>
-                  <h4 className="desc font-black">
-                    {this.props.pageStore.hubungikami.top.subtitle}
+                  <h4 className="desc">
+                    <p className="font-black">
+                      {this.props.pageStore.hubungikami.top.subtitle}
+                    </p>
                   </h4>
                 </Col>
               </Row>

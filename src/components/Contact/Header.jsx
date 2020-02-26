@@ -78,7 +78,7 @@ class ContactUs extends React.Component {
                         this.props.pageStore.hubungikami.header.title
                       )}
                     </h1>
-                    <h4 className="desc">
+                    <h4 className="desc font-black">
                       {ReactHtmlParser(
                         this.props.pageStore.hubungikami.header.subtitle
                       )}
@@ -120,7 +120,7 @@ class ContactUs extends React.Component {
                             this.props.pageStore.hubungikami.header.title
                           )}
                         </h1>
-                        <h4 className="desc">
+                        <h4 className="desc font-black">
                           {this.props.pageStore.hubungikami.header.subtitle}
                         </h4>
                       </Col>

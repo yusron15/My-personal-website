@@ -1003,3 +1003,5 @@ body {
 .desc {
   color: white;
 }
+
+.file-viewer * {color:unset} 

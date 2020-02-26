@@ -121,7 +121,6 @@ class ColorNavbar extends React.Component {
   }
 
   changeNavbarColor = () => {
-    console.log(document);
     if (
       document.documentElement.scrollTop > 30 ||
       document.body.scrollTop > 30

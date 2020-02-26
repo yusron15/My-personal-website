@@ -160,6 +160,16 @@ class Footers extends React.Component {
                           )}
                         </p>
 
+                        <p style={{ cursor: "auto" }}>
+                          <Link
+                            to="/privacy-policy"
+                            target="_blank"
+                            style={{ color: "white" }}
+                          >
+                            Privacy Policy
+                          </Link>
+                        </p>
+
                         {/* Sudirman Kav 86 Jakarta 10220 Indonesia Email:
                     customerservices@topgrowthfutures.com Tel: 021 2788-9366
                     Fax: 021 2788-9395 */}
