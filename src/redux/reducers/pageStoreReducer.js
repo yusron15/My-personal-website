@@ -967,7 +967,7 @@ const defaultState = {
     },
     tableList: [
       {
-        title: "Bursa ICDX",
+        title: "ICDX",
         table: [
           {
             id: 50,
@@ -1010,7 +1010,7 @@ const defaultState = {
         ]
       },
       {
-        title: "Bursa BBJ",
+        title: "BBJ",
         table: [
           {
             id: 54,

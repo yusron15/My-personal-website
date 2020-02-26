@@ -39,9 +39,7 @@ class Content extends React.Component {
       return (
         <>
           <div className="cd-section" id="projects">
-            <div
-            // className="projects-3"
-            >
+            <div>
               <div
                 className="team-1 background-header-mobile"
                 style={{
@@ -189,10 +187,7 @@ class Content extends React.Component {
                       </div>
                     </Container>
                   </div>
-                  <div
-                    className="team-1 broken-white"
-                    style={{ minHeight: "70vh", padding: 0 }}
-                  >
+                  <div className="team-1 broken-white" style={{ padding: 0 }}>
                     <Row style={{ marginLeft: "10%" }}>
                       <Col md="8">
                         <h1

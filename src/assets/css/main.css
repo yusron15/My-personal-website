@@ -838,6 +838,18 @@ span > .arrow-down {
   margin-left: 5px;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .accordion:after {
+    content: "\002B";
+    color: #444;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+}
+
 .active:after {
   content: "\2212";
   color: transparent;
