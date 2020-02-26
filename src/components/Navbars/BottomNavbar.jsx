@@ -21,7 +21,8 @@ import {
   InputGroupAddon,
   InputGroupText,
   InputGroup,
-  Input
+  Input,
+  Alert
 } from "reactstrap";
 import Landing from "../../../src/views/layout/Landing";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -48,69 +49,25 @@ class BottomNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // position: ""
-      // display: "none"
+      checked: false,
+      checked2: false
     };
   }
 
-  // async componentDidMount() {
-  //   await this.props.fetchPage("landing", "id");
-  // }
-
-  // componentDidMount() {
-  //   window.addEventListener("scroll", this.changeNavbarPosition);
-  //   window.addEventListener("scroll", this.changeNavbarPositionMobile);
-  // }
-  // componentWillUnmount() {
-  //   window.removeEventListener("scroll", this.changeNavbarTop);
-  // }
-
-  // changeNavbarPosition = () => {
-  //   if (
-  //     document.documentElement.scrollTop > 4000 ||
-  //     document.body.scrollTop > 4000
-  //   ) {
-  //     this.setState({
-  //       position: "fixed"
-  //       // display: "block"
-  //     });
-  //   } else if (
-  //     document.documentElement.scrollTop < 300 ||
-  //     document.body.scrollTop < 300
-  //   ) {
-  //     this.setState({
-  //       position: ""
-  //     });
-  //   }
-  // };
-
-  // changeNavbarPositionMobile = () => {
-  //   if (
-  //     document.documentElement.scrollTop > 6000 ||
-  //     document.body.scrollTop > 6000
-  //   ) {
-  //     this.setState({
-  //       position: "fixed"
-  //     });
-  //   } else if (
-  //     document.documentElement.scrollTop < 300 ||
-  //     document.body.scrollTop < 300
-  //   ) {
-  //     this.setState({
-  //       position: ""
-  //     });
-  //   } else if (
-  //     document.documentElement.scrollTop > 6000 ||
-  //     (document.body.scrollTop > 6000 && this.removeButton() === true)
-  //   ) {
-  //     this.setState({
-  //       position: ""
-  //     });
-  //   }
-  // };
-
   removeButton = () => {
     this.props.sendFunction();
+  };
+
+  checkbox = async e => {
+    await this.setState({
+      checked: e.target.value
+    });
+  };
+
+  checkbox2 = async e => {
+    await this.setState({
+      checked2: e.target.value
+    });
   };
 
   renderContent = () => {
@@ -232,40 +189,78 @@ class BottomNavbar extends React.Component {
                       </Row>
                     </div>
                     <div>
-                      <div>
+                      {/* <div>
+                        <a
+                          target="_blank"
+                          style={{ backgroundColor: "transparent" }}
+                          href={
+                            this.state.checked && this.state.checked2 === true
+                              ? this.props.pageStore.Landing.BottomNavbar
+                                  .form[0].button_link
+                              : null
+                          }
+                        >
+                          {this.state.checked &&
+                          this.state.checked2 === true ? (
+                            <Button  color="info" type="button">
+                              {
+                                this.props.pageStore.Landing.BottomNavbar
+                                  .form[0].button
+                              }
+                            </Button>
+                          ) : (
+                            <Button  color="info" type="button" disabled>
+                              {
+                                this.props.pageStore.Landing.BottomNavbar
+                                  .form[0].button
+                              }
+                            </Button>
+                          )}
+                        </a>
+                      </div> */}
+                    </div>
+                    <Row style={{ marginLeft: "12px", marginRight: "12px" }}>
+                      <Col style={{ color: "#FFFFFF" }}>
+                        <Input
+                          type="checkbox"
+                          checked={this.state.checked}
+                          onChange={e =>
+                            this.setState({ checked: e.target.checked })
+                          }
+                        />
+                        {
+                          this.props.pageStore.Landing.BottomNavbar.form[0]
+                            .leftTick
+                        }
+                      </Col>
+                      <Col style={{ color: "#FFFFFF" }}>
+                        <Input
+                          type="checkbox"
+                          ß
+                          checked={this.state.checked2}
+                          onChange={e =>
+                            this.setState({ checked2: e.target.checked })
+                          }
+                        />
+                        {
+                          this.props.pageStore.Landing.BottomNavbar.form[0]
+                            .rightTick
+                        }
+                      </Col>
+                      <Col>
                         <Button
-                          block
                           color="info"
                           type="button"
-                          onClick={() => {
-                            this.removeButton();
-                          }}
+                          style={{ minWidth: "260px" }}
                         >
                           {
                             this.props.pageStore.Landing.BottomNavbar.form[0]
                               .button
                           }
                         </Button>
-                      </div>
-                    </div>
+                      </Col>
+                    </Row>
                   </Col>
-
-                  <Row style={{ marginLeft: "12px" }}>
-                    <Col style={{ color: "#FFFFFF" }}>
-                      <Input type="checkbox" />
-                      {
-                        this.props.pageStore.Landing.BottomNavbar.form[0]
-                          .leftTick
-                      }
-                    </Col>
-                    <Col style={{ color: "#FFFFFF" }}>
-                      <Input type="checkbox" />
-                      {
-                        this.props.pageStore.Landing.BottomNavbar.form[0]
-                          .rightTick
-                      }
-                    </Col>
-                  </Row>
                 </Col>
               </div>
             </div>
@@ -380,16 +375,27 @@ class BottomNavbar extends React.Component {
                         target="_blank"
                         style={{ backgroundColor: "transparent" }}
                         href={
-                          this.props.pageStore.Landing.BottomNavbar.form[0]
-                            .button_link
+                          this.state.checked && this.state.checked2 === true
+                            ? this.props.pageStore.Landing.BottomNavbar.form[0]
+                                .button_link
+                            : null
                         }
                       >
-                        <Button block color="info" type="button">
-                          {
-                            this.props.pageStore.Landing.BottomNavbar.form[0]
-                              .button
-                          }
-                        </Button>
+                        {this.state.checked && this.state.checked2 === true ? (
+                          <Button block color="info" type="button">
+                            {
+                              this.props.pageStore.Landing.BottomNavbar.form[0]
+                                .button
+                            }
+                          </Button>
+                        ) : (
+                          <Button block color="info" type="button" disabled>
+                            {
+                              this.props.pageStore.Landing.BottomNavbar.form[0]
+                                .button
+                            }
+                          </Button>
+                        )}
                       </a>
                     </div>
                   </Col>
@@ -397,12 +403,24 @@ class BottomNavbar extends React.Component {
 
                 <Row style={{ marginLeft: "12px" }}>
                   <Col style={{ color: "#FFFFFF" }}>
-                    <Input type="checkbox" />
-
+                    <Input
+                      type="checkbox"
+                      checked={this.state.checked}
+                      onChange={e =>
+                        this.setState({ checked: e.target.checked })
+                      }
+                    />
+                    {console.log(this.state.checked, "asdasc")}
                     {this.props.pageStore.Landing.BottomNavbar.form[0].leftTick}
                   </Col>
                   <Col style={{ color: "#FFFFFF" }}>
-                    <Input type="checkbox" />
+                    <Input
+                      type="checkbox"
+                      checked={this.state.checked2}
+                      onChange={e =>
+                        this.setState({ checked2: e.target.checked })
+                      }
+                    />
                     {
                       this.props.pageStore.Landing.BottomNavbar.form[0]
                         .rightTick
