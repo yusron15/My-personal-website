@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { isMobile } from "react-device-detect";
+import { connect } from "react-redux";
 
 // reactstrap components
 import {
@@ -25,15 +26,37 @@ import ReactHtmlParser, {
 
 import logo from "../../assets/img/logo-topgrowth.png";
 
+import { getKarirById } from "../../redux/ducks/actions";
+
 class KarirDetail extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      loading: true
+    };
   }
 
-  render() {
-    console.log(this.props);
-    const { state } = this.props.location;
+  componentDidMount = async () => {
+    try {
+      await this.props.getKarirById(this.props.match.params.id);
 
+      await this.setState({
+        loading: false
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  render() {
+    const { loading } = this.state;
+    if (loading) return null;
+
+    const { karir } = this.props;
+
+    const state = karir;
+
+    console.log(karir, "adasdas");
     return (
       <div style={{ backgroundColor: "white", minHeight: "100vh" }}>
         <Container style={{ backgroundColor: "transparent" }}>
@@ -87,4 +110,12 @@ class KarirDetail extends Component {
   }
 }
 
-export default KarirDetail;
+const mapStateToProps = state => ({
+  karir: state.karirStore.karir
+});
+
+const mapDispatchToProps = dispatch => ({
+  getKarirById: id => dispatch(getKarirById(id))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(KarirDetail);

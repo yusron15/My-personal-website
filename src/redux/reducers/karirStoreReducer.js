@@ -49,7 +49,8 @@ const defaultState = {
         ]
       }
     ]
-  }
+  },
+  karir: {}
 };
 
 export default (state = defaultState, action = {}) => {
@@ -58,6 +59,13 @@ export default (state = defaultState, action = {}) => {
       return {
         ...state,
         karirList: action.payload
+      };
+    }
+
+    case "GET_DETAIL_KARIR": {
+      return {
+        ...state,
+        karir: action.payload
       };
     }
     default:

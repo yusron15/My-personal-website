@@ -273,7 +273,7 @@ class App extends Component {
                   render={props => <Karir {...props} />}
                 />
                 <Route
-                  path="/karir/:name"
+                  path="/karir/:id/:name"
                   render={props => <KarirDetail {...props} />}
                 />
 
