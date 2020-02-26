@@ -154,7 +154,7 @@ class Blogs extends Component {
                   {this.props.pageStore.stockIndex.Header}
                 </div>
                 <div
-                  style={{ textAlign: "center", marginBottom: "8%" }}
+                  style={{ textAlign: "center", marginBottom: "5%" }}
                   className="subheader font-white"
                 >
                   {ReactHtmlParser(this.props.pageStore.stockIndex.subheader)}

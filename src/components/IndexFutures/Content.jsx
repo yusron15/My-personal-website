@@ -325,6 +325,13 @@ class Content extends React.Component {
               </Container>
             </div>
             <div>
+              <Container>
+                <div className="font-black" style={textTitle}>
+                  {ReactHtmlParser(
+                    this.props.pageStore.indexfutures.title_slide
+                  )}
+                </div>
+              </Container>
               <div
                 className="team-1"
                 style={{
@@ -513,6 +520,14 @@ class Content extends React.Component {
                   </Container>
                 </div>
                 <div>
+                  <Container>
+                    <div className="font-black" style={textTitle}>
+                      {ReactHtmlParser(
+                        this.props.pageStore.indexfutures.title_slide
+                      )}
+                    </div>
+                  </Container>
+
                   <div
                     className="team-1"
                     style={{

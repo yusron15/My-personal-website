@@ -224,7 +224,7 @@ class EconomicCalendar extends React.Component {
                   {this.props.pageStore.economicCalender.Header}
                 </div>
                 <div
-                  style={{ textAlign: "center", marginBottom: "8%" }}
+                  style={{ textAlign: "center", marginBottom: "5%" }}
                   className="subheader font-white"
                 >
                   {ReactHtmlParser(

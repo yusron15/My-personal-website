@@ -977,8 +977,8 @@ const defaultState = {
             prefix4: "Denominasi",
             prefix5: "Besaran Kontrak",
             prefix6: "Tick Size",
-            prefix7: null,
-            prefix8: null,
+            prefix7: "Bulan Kontrak",
+            prefix8: "Jam Perdagangan",
             SectionId: 577,
             tableData: [
               {
@@ -1020,8 +1020,8 @@ const defaultState = {
             prefix4: "Denominasi",
             prefix5: "Besaran Kontrak",
             prefix6: "Tick Size",
-            prefix7: null,
-            prefix8: null,
+            prefix7: "Bulan Kontrak",
+            prefix8: "Jam Perdagangan",
             SectionId: 581,
             tableData: [
               {
@@ -1075,10 +1075,11 @@ const defaultState = {
           "<p>Kontrak Berjangka Index Futures biasanya diperdagangkan dengan menggunakan leverage sekitar 3-10% dari nilai kontraknya.&nbsp; Penggunaan leverage ini memungkinkan investor untuk meningkatkan rasio keuntungannya sehingga tingkat ROI (Return Of Investment) yang dihasilkan sangat besar.</p><p>Di sisi lain juga akan meningkatkan rasio resiko yang mungkin terjadi.</p>"
       }
     ],
+    title_slide: "Beberapa Ragam Index Futures",
     slide: [
       {
-        title: "Beberapa Ragam Index Futuresss",
-        subtitle: "Index Berjangka Jepang (NIKKEI 225)ss",
+        title: "Beberapa Ragam Index Futures",
+        subtitle: "Index Berjangka Jepang (NIKKEI 225)",
         content:
           "<p>Indeks Nikkei 225, yang sering disebut sebagai Nikkei, indeks Nikkei, atau Nikkei Stock Average, merupakan indeks pasar saham untuk Bursa Saham Tokyo (TSE) yang dihitung setiap hari menggunakan metode perhitungan rata-rata harga tertimbang dalam yen dan ditinjau setahun sekali oleh surat kabar Nihon Keizai Shimbun (Nikkei) sejak tahun 1950. Saat ini, indeks Nikkei paling banyak digunakan untuk menggambarkan kondisi dari saham Jepang; mirip dengan Dow Jones Industrial Average hingga bahkan sempat dijuluki sebagai “Indeks Nikkei Dow Jones” pada era 1975-1985. Nikkei 225 Futures diperkenalkan di Singapore Exchange (SGX) pada tahun 1986, di Osaka Securities Exchange (OSE) pada tahun 1988, dan di Chicago Mercantile Exchange (CME) pada tahun 1990. Hari ini, indeks Nikkei telah menjadi indeks berjangka yang diakui secara internasional dan diperbarui setiap 15 detik selama sesi perdagangan sejak tahun 2010.ss</p>"
       },
