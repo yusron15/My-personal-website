@@ -104,12 +104,13 @@ class Content extends React.Component {
                         this.props.pageStore.Komoditi.contentList4.title
                       )}
                     </div>
-                    <div style={textDesc}>
+                    <div className="font-black" style={textDesc}>
                       {ReactHtmlParser(
                         this.props.pageStore.Komoditi.contentList4.content
                       )}
                     </div>
                     <div className="space-50" />
+                    <div style={textTitle}>Bursa ICDX</div>
                     <div style={{ overflow: "scroll" }}>
                       <Table
                         className="table-shopping"
