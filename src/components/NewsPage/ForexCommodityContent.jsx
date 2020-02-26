@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { getNews } from "../../redux/ducks/actions";
+import { getNews, getContent } from "../../redux/ducks/actions";
 
 import moment from "moment";
 // reactstrap components
@@ -27,48 +27,16 @@ import NewsTicker from "./NewsTicker";
 import BreakingNews from "../../components/Landing/BreakingNews";
 import { isMobile } from "react-device-detect";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import fc1 from "../../assets/img/fc1.png";
 import fc2 from "../../assets/img/fc2.png";
 import fc5 from "../../assets/img/fc5.png";
 import fc3 from "../../assets/img/fc3.png";
 import fc4 from "../../assets/img/fc4.png";
-
-class HeaderContent extends React.Component {
-  render() {
-    return (
-      <div
-        className="team-1"
-        style={{
-          padding: 0
-        }}
-      >
-        <BlurryNavbar />
-        <ColoredNavbar location={{ ...this.props.location }} />
-        <div className="title title-header" style={{ marginBottom: "8%" }}>
-          Forex Commodity
-        </div>
-      </div>
-    );
-  }
-}
-
-class HeaderContentMobile extends React.Component {
-  render() {
-    return (
-      <>
-        <div
-          className=" background-header-mobile"
-          style={{
-            padding: 0
-          }}
-        >
-          <SidebarMobile />
-          <div className="title title-header-mobile">Forex Commodity</div>
-        </div>
-      </>
-    );
-  }
-}
 
 class Blogs extends React.Component {
   state = {
@@ -78,6 +46,7 @@ class Blogs extends React.Component {
   componentDidMount = async () => {
     try {
       window.scroll(0, 0);
+      await this.props.getContent("Berita", this.props.currentLang, true);
       await this.props.getNews("forex");
     } catch (error) {
       console.log(error);
@@ -94,11 +63,32 @@ class Blogs extends React.Component {
             <div>
               <div
                 style={{
-                  backgroundImage: `url(${bg})`,
+                  backgroundImage:
+                    "url(" +
+                    this.props.pageStore.forexComodity.image_background_mobile +
+                    ")",
                   padding: 0
                 }}
               >
-                <HeaderContentMobile />
+                <div
+                  className=" background-header-mobile"
+                  style={{
+                    padding: 0
+                  }}
+                >
+                  <SidebarMobile />
+                  <div className="title title-header-mobile">
+                    {this.props.pageStore.forexComodity.Header}
+                  </div>
+                  <div
+                    style={{ textAlign: "center" }}
+                    className="subheader font-white"
+                  >
+                    {ReactHtmlParser(
+                      this.props.pageStore.forexComodity.subheader
+                    )}
+                  </div>
+                </div>
                 <BreakingNews />
               </div>
 
@@ -146,11 +136,33 @@ class Blogs extends React.Component {
             <div
               className="team-1"
               style={{
-                backgroundImage: `url(${bg})`,
+                backgroundImage:
+                  "url(" +
+                  this.props.pageStore.forexComodity.background_image +
+                  ")",
                 padding: 0
               }}
             >
-              <HeaderContent location={{ ...this.props.location }} />
+              <div
+                className="team-1"
+                style={{
+                  padding: 0
+                }}
+              >
+                <BlurryNavbar />
+                <ColoredNavbar location={{ ...this.props.location }} />
+                <div className="title title-header">
+                  {this.props.pageStore.forexComodity.Header}
+                </div>
+                <div
+                  style={{ textAlign: "center", marginBottom: "8%" }}
+                  className="subheader font-white"
+                >
+                  {ReactHtmlParser(
+                    this.props.pageStore.forexComodity.subheader
+                  )}
+                </div>
+              </div>
               <BreakingNews />
             </div>
 
@@ -201,11 +213,14 @@ class Blogs extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  news: state.newsStore.news
+  news: state.newsStore.news,
+  pageStore: state.pageStore
 });
 
 const mapDispatchToProps = dispatch => ({
-  getNews: type => dispatch(getNews(type))
+  getNews: type => dispatch(getNews(type)),
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Blogs);

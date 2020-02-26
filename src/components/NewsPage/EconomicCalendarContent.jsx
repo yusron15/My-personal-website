@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
 import Iframe from "react-iframe";
+import { connect } from "react-redux";
 
 // reactstrap components
 import {
@@ -30,60 +31,19 @@ import Content from "../RelatedPost/Layout";
 import NewsTicker from "./NewsTicker";
 import BreakingNews from "../../components/Landing/BreakingNews";
 import { isMobile } from "react-device-detect";
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import canada from "../../assets/img/flag-canada.png";
 import germany from "../../assets/img/flag-germany.png";
 import span from "../../assets/img/flag-span.png";
 import japan from "../../assets/img/flag-japan.png";
 import singapore from "../../assets/img/flag-singapore.png";
+import { getNews, getContent } from "../../redux/ducks/actions";
 
 import DatePicker from "react-datepicker";
-
-class HeaderContent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      dataTabel: [],
-      date: "",
-      time: ""
-    };
-  }
-
-  render() {
-    return (
-      <div
-        className="team-1"
-        style={{
-          padding: 0
-        }}
-      >
-        <BlurryNavbar />
-        <ColoredNavbar location={{ ...this.props.location }} />
-        <div className="title title-header" style={{ marginBottom: "8%" }}>
-          Economic Calendar
-        </div>
-      </div>
-    );
-  }
-}
-
-class HeaderContentMobile extends React.Component {
-  render() {
-    return (
-      <>
-        <div
-          className=" background-header-mobile"
-          style={{
-            padding: 0
-          }}
-        >
-          <SidebarMobile />
-          <div className="title title-header-mobile">Economic Calendar</div>
-        </div>
-      </>
-    );
-  }
-}
 
 class EconomicCalendar extends React.Component {
   state = {
@@ -150,6 +110,7 @@ class EconomicCalendar extends React.Component {
     try {
       let date = moment(this.state.selectedDate).format("YYYY-MM-DD");
       await this.fetchDataEconomicCalendar(date);
+      await this.props.getContent("Berita", this.props.currentLang, true);
     } catch (error) {
       console.log(error);
     }
@@ -169,11 +130,33 @@ class EconomicCalendar extends React.Component {
             <div>
               <div
                 style={{
-                  backgroundImage: `url(${bg})`,
+                  backgroundImage:
+                    "url(" +
+                    this.props.pageStore.economicCalender
+                      .image_background_mobile +
+                    ")",
                   padding: 0
                 }}
               >
-                <HeaderContentMobile />
+                <div
+                  className=" background-header-mobile"
+                  style={{
+                    padding: 0
+                  }}
+                >
+                  <SidebarMobile />
+                  <div className="title title-header-mobile">
+                    {this.props.pageStore.economicCalender.Header}
+                  </div>
+                  <div
+                    style={{ textAlign: "center" }}
+                    className="subheader font-white"
+                  >
+                    {ReactHtmlParser(
+                      this.props.pageStore.economicCalender.subheader
+                    )}
+                  </div>
+                </div>
                 <BreakingNews />
               </div>
 
@@ -222,11 +205,33 @@ class EconomicCalendar extends React.Component {
             <div
               className="team-1"
               style={{
-                backgroundImage: `url(${bg})`,
+                backgroundImage:
+                  "url(" +
+                  this.props.pageStore.economicCalender.background_image +
+                  ")",
                 padding: 0
               }}
             >
-              <HeaderContent location={{ ...this.props.location }} />
+              <div
+                className="team-1"
+                style={{
+                  padding: 0
+                }}
+              >
+                <BlurryNavbar />
+                <ColoredNavbar location={{ ...this.props.location }} />
+                <div className="title title-header">
+                  {this.props.pageStore.economicCalender.Header}
+                </div>
+                <div
+                  style={{ textAlign: "center", marginBottom: "8%" }}
+                  className="subheader font-white"
+                >
+                  {ReactHtmlParser(
+                    this.props.pageStore.economicCalender.subheader
+                  )}
+                </div>
+              </div>
               <BreakingNews />
             </div>
 
@@ -269,4 +274,15 @@ class EconomicCalendar extends React.Component {
   }
 }
 
-export default EconomicCalendar;
+const mapStateToProps = state => ({
+  news: state.newsStore.news,
+  pageStore: state.pageStore
+});
+
+const mapDispatchToProps = dispatch => ({
+  getNews: type => dispatch(getNews(type)),
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(EconomicCalendar);

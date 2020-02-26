@@ -4,8 +4,12 @@ import { connect } from "react-redux";
 import moment from "moment";
 import { isMobile } from "react-device-detect";
 
-import { getNews } from "../../redux/ducks/actions";
-
+import { getNews, getContent } from "../../redux/ducks/actions";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 // reactstrap components
 import {
   Button,
@@ -35,43 +39,6 @@ import news4 from "../../assets/img/marketoutlook4.png";
 import news5 from "../../assets/img/makretoutlook5.png";
 import Header from "components/Contact/Header";
 
-class HeaderContent extends React.Component {
-  render() {
-    return (
-      <div
-        className="team-1"
-        style={{
-          padding: 0
-        }}
-      >
-        <BlurryNavbar />
-        <ColoredNavbar location={{ ...this.props.location }} />
-        <div className="title title-header" style={{ marginBottom: "8%" }}>
-          Market Outlook
-        </div>
-      </div>
-    );
-  }
-}
-
-class HeaderContentMobile extends React.Component {
-  render() {
-    return (
-      <>
-        <div
-          className=" background-header-mobile"
-          style={{
-            padding: 0
-          }}
-        >
-          <SidebarMobile />
-          <div className="title title-header-mobile">Market Outlook</div>
-        </div>
-      </>
-    );
-  }
-}
-
 class Blogs extends React.Component {
   state = {
     dataSelect: ""
@@ -80,6 +47,7 @@ class Blogs extends React.Component {
   componentDidMount = async () => {
     try {
       window.scroll(0, 0);
+      await this.props.getContent("Berita", this.props.currentLang, true);
       await this.props.getNews("market");
     } catch (error) {
       console.log(error);
@@ -96,11 +64,32 @@ class Blogs extends React.Component {
             <div>
               <div
                 style={{
-                  backgroundImage: `url(${bg})`,
+                  backgroundImage:
+                    "url(" +
+                    this.props.pageStore.marketOutlock.image_background_mobile +
+                    ")",
                   padding: 0
                 }}
               >
-                <HeaderContentMobile />
+                <div
+                  className=" background-header-mobile"
+                  style={{
+                    padding: 0
+                  }}
+                >
+                  <SidebarMobile />
+                  <div className="title title-header-mobile">
+                    {this.props.pageStore.marketOutlock.Header}
+                  </div>
+                  <div
+                    style={{ textAlign: "center" }}
+                    className="subheader font-white"
+                  >
+                    {ReactHtmlParser(
+                      this.props.pageStore.marketOutlock.subheader
+                    )}
+                  </div>
+                </div>
                 <BreakingNews />
               </div>
 
@@ -149,11 +138,33 @@ class Blogs extends React.Component {
             <div
               className="team-1"
               style={{
-                backgroundImage: `url(${bg})`,
+                backgroundImage:
+                  "url(" +
+                  this.props.pageStore.marketOutlock.background_image +
+                  ")",
                 padding: 0
               }}
             >
-              <HeaderContent location={{ ...this.props.location }} />
+              <div
+                className="team-1"
+                style={{
+                  padding: 0
+                }}
+              >
+                <BlurryNavbar />
+                <ColoredNavbar location={{ ...this.props.location }} />
+                <div className="title title-header">
+                  {this.props.pageStore.marketOutlock.Header}
+                </div>
+                <div
+                  style={{ textAlign: "center", marginBottom: "8%" }}
+                  className="subheader font-white"
+                >
+                  {ReactHtmlParser(
+                    this.props.pageStore.marketOutlock.subheader
+                  )}
+                </div>
+              </div>
               <BreakingNews />
             </div>
 
@@ -201,11 +212,14 @@ class Blogs extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  news: state.newsStore.news
+  news: state.newsStore.news,
+  pageStore: state.pageStore
 });
 
 const mapDispatchToProps = dispatch => ({
-  getNews: type => dispatch(getNews(type))
+  getNews: type => dispatch(getNews(type)),
+  getContent: (section, lang, toggle) =>
+    dispatch(getContent(section, lang, toggle))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Blogs);
