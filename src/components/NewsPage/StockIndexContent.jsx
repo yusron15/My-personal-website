@@ -25,7 +25,11 @@ import NewsTicker from "./NewsTicker";
 import BreakingNews from "../../components/Landing/BreakingNews";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import { isMobile } from "react-device-detect";
-
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 import news1 from "../../assets/img/newscontent1.png";
 import news2 from "../../assets/img/newscontent2.png";
 import news3 from "../../assets/img/newscontent3.png";
@@ -33,44 +37,6 @@ import news4 from "../../assets/img/newscontent4.png";
 import news5 from "../../assets/img/newscontent5.png";
 
 import { getNews, getContent } from "../../redux/ducks/actions";
-
-class HeaderStockIndex extends Component {
-  render() {
-    return (
-      <div
-        className="team-1"
-        style={{
-          padding: 0
-        }}
-      >
-        <BlurryNavbar />
-        <ColoredNavbar location={{ ...this.props.location }} />
-        <div className="title title-header" style={{ marginBottom: "8%" }}>
-          Stock Index
-          {/* {this.props.pageStore.stockIndex.Header} */}
-        </div>
-      </div>
-    );
-  }
-}
-
-class HeaderContentMobile extends Component {
-  render() {
-    return (
-      <>
-        <div
-          className=" background-header-mobile"
-          style={{
-            padding: 0
-          }}
-        >
-          <SidebarMobile />
-          <div className="title title-header-mobile">Stock Index</div>
-        </div>
-      </>
-    );
-  }
-}
 
 class Blogs extends Component {
   state = {
@@ -80,6 +46,7 @@ class Blogs extends Component {
   componentDidMount = async () => {
     try {
       window.scroll(0, 0);
+      await this.props.getContent("Berita", this.props.currentLang, true);
       await this.props.getNews("stock");
     } catch (error) {
       console.log(error);
@@ -96,11 +63,30 @@ class Blogs extends Component {
             <div>
               <div
                 style={{
-                  backgroundImage: `url(${bg})`,
+                  backgroundImage:
+                    "url(" +
+                    this.props.pageStore.stockIndex.image_background_mobile +
+                    ")",
                   padding: 0
                 }}
               >
-                <HeaderContentMobile />
+                <div
+                  className=" background-header-mobile"
+                  style={{
+                    padding: 0
+                  }}
+                >
+                  <SidebarMobile />
+                  <div className="title title-header-mobile">
+                    {this.props.pageStore.stockIndex.Header}
+                  </div>
+                  <div
+                    style={{ textAlign: "center" }}
+                    className="subheader font-white"
+                  >
+                    {ReactHtmlParser(this.props.pageStore.stockIndex.subheader)}
+                  </div>
+                </div>
                 <BreakingNews />
               </div>
 
@@ -149,14 +135,32 @@ class Blogs extends Component {
             <div
               className="team-1"
               style={{
-                backgroundImage: `url(${bg})`,
+                backgroundImage:
+                  "url(" +
+                  this.props.pageStore.stockIndex.background_image +
+                  ")",
                 padding: 0
               }}
             >
-              {/* <BlurryNavbar />
-              <ColoredNavbar location={{ ...this.props.location }} />
-              <div className="title title-header">Stock Index</div> */}
-              <HeaderStockIndex location={{ ...this.props.location }} />
+              <div
+                className="team-1"
+                style={{
+                  padding: 0
+                }}
+              >
+                <BlurryNavbar />
+                <ColoredNavbar location={{ ...this.props.location }} />
+                <div className="title title-header">
+                  {this.props.pageStore.stockIndex.Header}
+                </div>
+                <div
+                  style={{ textAlign: "center", marginBottom: "8%" }}
+                  className="subheader font-white"
+                >
+                  {ReactHtmlParser(this.props.pageStore.stockIndex.subheader)}
+                </div>
+              </div>
+              {/* <HeaderStockIndex location={{ ...this.props.location }} /> */}
               <BreakingNews />
             </div>
 

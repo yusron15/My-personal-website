@@ -962,7 +962,8 @@ const defaultState = {
     },
     contentList4: {
       title: "Cpo & Olein",
-      content: "CPO dan Olein berasal dari tanaman yang sama yaitu spesies palem yang dikenal sebagai E. Guineesis. Tanaman ini tumbuh di Asia Tenggara, Afrika dan Amerika Latin, dan telah dikonsumsi selama lebih dari 5.000 tahun.\nCPO (Minyak kelapa sawit) yang diekstrak dari daging buah E. Guineesis dengan menggunakan tekanan berwarna oranye terang karena tingginya kandungan pigmen karoten.   Minyak sawit secara luas digunakan dalam mentega dan margarin.\nOlein, minyak sawit yang diproses lebih lanjut menghasilkan Olein dan Stearin.  Olein berbentuk cair pada suhu kamar dan sangat tahan panas.  Olein dengan warna keemasan digunakan sebagai minyak untuk menggoreng."
+      content:
+        "CPO dan Olein berasal dari tanaman yang sama yaitu spesies palem yang dikenal sebagai E. Guineesis. Tanaman ini tumbuh di Asia Tenggara, Afrika dan Amerika Latin, dan telah dikonsumsi selama lebih dari 5.000 tahun.\nCPO (Minyak kelapa sawit) yang diekstrak dari daging buah E. Guineesis dengan menggunakan tekanan berwarna oranye terang karena tingginya kandungan pigmen karoten.   Minyak sawit secara luas digunakan dalam mentega dan margarin.\nOlein, minyak sawit yang diproses lebih lanjut menghasilkan Olein dan Stearin.  Olein berbentuk cair pada suhu kamar dan sangat tahan panas.  Olein dengan warna keemasan digunakan sebagai minyak untuk menggoreng."
     },
     tableList: [
       {
@@ -1344,42 +1345,48 @@ const defaultState = {
   berita: {
     Header: "Berita",
     subheader: "",
-    backgroun_image:
+    background_image:
       "https://topgrowth.sgp1.digitaloceanspaces.com/-1581924564385.png",
+    image_background_mobile: null,
     berita: {
-      terkini: "Berita Terkini",
-      terpopuler: "Berita Terpopuler",
-      outlook: "Market Outlook",
-      forex: "Forex & Commodity News",
-      stock: "Stock Index News",
-      button: "Indeks Berita"
+      terkini: "Berita Terkini",
+      terpopuler: "Berita Terpopuler",
+      outlook: "Market Outlook",
+      forex: "Forex & Commodity News",
+      stock: "Stock Index News",
+      button: "Indeks Berita"
     }
   },
   stockIndex: {
     Header: "Stock Index",
     subheader: "",
-    backgroun_image:
-      "https://topgrowth.sgp1.digitaloceanspaces.com/-1582480790683.jpeg"
+    background_image:
+      "https://topgrowth.sgp1.digitaloceanspaces.com/-1582531976217.png",
+    image_background_mobile: null
   },
   forexComodity: {
     Header: "Forex & Commodity",
     subheader: "",
-    backgroun_image: ""
+    background_image: "",
+    image_background_mobile: null
   },
   economicCalender: {
     Header: "Economic Calender",
     subheader: "",
-    backgroun_image: ""
+    background_image: "",
+    image_background_mobile: null
   },
   marketOutlock: {
     Header: "MArket Outlook",
     subheader: "",
-    backgroun_image: ""
+    background_image: "",
+    image_background_mobile: null
   },
   Video: {
     Header: "Video",
     subheader: "",
-    backgroun_image: ""
+    background_image: "",
+    image_background_mobile: null
   },
   edukasi: {
     Header: "Edukasi",
