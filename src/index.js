@@ -25,6 +25,7 @@ import Presentation from "views/Presentation.jsx";
 import Sections from "views/Sections.jsx";
 
 // example pages
+
 import AboutUs from "views/examples/AboutUs.jsx";
 import BlogPost from "views/examples/BlogPost.jsx";
 import BlogPosts from "views/examples/BlogPosts.jsx";
@@ -70,12 +71,14 @@ import Login from "views/layout/Login.jsx";
 import Register from "views/layout/Register.jsx";
 import News from "views/layout/News.jsx";
 import Edukasi from "views/layout/Edukasi.jsx";
+import PrivacyPolicy from "views/layout/PrivacyPolicy";
 import NewsMarketOutlook from "./components/NewsContent/NewsMarketOutlook";
 import StockIndex from "./components/NewsPage/StockIndexContent";
 import ForexCommodity from "./components/NewsPage/ForexCommodityContent";
 import VideoContent from "./components/NewsPage/VideoContent";
 import EconomicCalendar from "./components/NewsPage/EconomicCalendarContent";
 import MarketOutlook from "./components/NewsPage/MarketOutlookContent";
+
 import StockIndexInside from "./components/NewsPage/StockIndexInside";
 import ForexCommodityInside from "./components/NewsPage/ForexCommodityInside";
 import MarketOutlookInside from "./components/NewsPage/MarketOutlookInside";
@@ -366,6 +369,12 @@ class App extends Component {
                   path="/chat-page"
                   render={props => <ChatPage {...props} />}
                 />
+
+                <Route
+                  path="/privacy-policy"
+                  render={props => <PrivacyPolicy {...props} />}
+                />
+
                 <Redirect from="/" to="/" />
               </Switch>
             </LangContext.Provider>
