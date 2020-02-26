@@ -26,6 +26,11 @@ import {
 } from "reactstrap";
 import { isMobile } from "react-device-detect";
 import { LangContext } from "../MyContext";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2
+} from "react-html-parser";
 
 // core components
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
@@ -69,10 +74,14 @@ class ContactUs extends React.Component {
                     style={{ paddingTop: "7vh" }}
                   >
                     <h1 className="title">
-                      {this.props.pageStore.hubungikami.header.title}
+                      {ReactHtmlParser(
+                        this.props.pageStore.hubungikami.header.title
+                      )}
                     </h1>
                     <h4 className="desc">
-                      {this.props.pageStore.hubungikami.header.subtitle}
+                      {ReactHtmlParser(
+                        this.props.pageStore.hubungikami.header.subtitle
+                      )}
                     </h4>
                   </Col>
                 </Row>
@@ -107,7 +116,9 @@ class ContactUs extends React.Component {
                     <Row>
                       <Col className="text-center vertical-center" md="12">
                         <h1 className="title">
-                          {this.props.pageStore.hubungikami.header.title}
+                          {ReactHtmlParser(
+                            this.props.pageStore.hubungikami.header.title
+                          )}
                         </h1>
                         <h4 className="desc">
                           {this.props.pageStore.hubungikami.header.subtitle}

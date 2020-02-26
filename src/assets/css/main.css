@@ -999,3 +999,7 @@ h6 {
 body {
   padding: 0 !important;
 }
+
+.desc {
+  color: white;
+}

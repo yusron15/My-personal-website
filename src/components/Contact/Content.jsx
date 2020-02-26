@@ -87,7 +87,6 @@ class Content extends React.Component {
     });
   };
   render() {
-    console.log(this.state.form, "asdasdasdasda");
     return (
       // <LangContext.Consumer>
       //   {({ lang }) => {
