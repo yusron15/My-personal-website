@@ -108,15 +108,20 @@ class ColorNavbar extends React.Component {
   };
 
   async componentDidMount() {
-    await this.props.getContent("Header", this.props.currentLang, true);
-
     window.addEventListener("scroll", this.changeNavbarColor);
+    try {
+      await this.props.getContent("Header", this.props.currentLang, true);
+    } catch (error) {
+      console.log(error);
+    }
   }
+
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeNavbarTop);
   }
 
   changeNavbarColor = () => {
+    console.log(document);
     if (
       document.documentElement.scrollTop > 30 ||
       document.body.scrollTop > 30
@@ -290,7 +295,7 @@ class ColorNavbar extends React.Component {
                         <button
                           className="dropdown dropbtn"
                           style={{
-                            color: this.coloringNav("/landing")
+                            color: this.coloringNav("/")
                           }}
                         >
                           {this.props.pageStore.Header.m1.title}
