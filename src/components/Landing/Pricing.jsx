@@ -384,9 +384,9 @@ class Pricing extends React.Component {
                                 >
                                   {/* Daftar */}
                                   {ReactHtmlParser(
-                                    this.props.pageStore.Landing.Pricing
-                                      .card[1][5]
-                                  )}
+                                        this.props.pageStore.Landing.Pricing
+                                          .card[1][6]
+                                      )}
                                 </Button>
                               </a>
                             </CardBody>

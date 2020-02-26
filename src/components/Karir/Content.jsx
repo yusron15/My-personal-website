@@ -428,6 +428,7 @@ class Blogs extends React.Component {
                                       pathname: `/karir/${item.jobTitle}`,
                                       state: { ...item }
                                     }}
+                                    target="_blank"
                                   >
                                     <div>
                                       <Button color="info">Details</Button>
