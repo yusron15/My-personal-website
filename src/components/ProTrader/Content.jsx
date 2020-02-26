@@ -322,9 +322,7 @@ class Content extends React.Component {
                   style={{ textAlign: "center" }}
                   className="subheader font-white"
                 >
-                  {ReactHtmlParser(
-                    this.props.pageStore.protrader.sub_header
-                  )}
+                  {ReactHtmlParser(this.props.pageStore.protrader.sub_header)}
                 </div>
               </Container>
             </div>
@@ -333,7 +331,7 @@ class Content extends React.Component {
                 <Row>
                   <Col md="12">
                     <div className="description font-black" style={textDesc}>
-                      {this.props.pageStore.protrader.top}
+                      {ReactHtmlParser(this.props.pageStore.protrader.top)}
                     </div>
                   </Col>
                 </Row>
@@ -369,7 +367,9 @@ class Content extends React.Component {
                         src={this.state.rating}
                       />
                       <div style={{ margin: "0 50px 0 50px" }}>
-                        {this.props.pageStore.protrader.content[0].content}
+                        {ReactHtmlParser(
+                          this.props.pageStore.protrader.content[0].content
+                        )}
                       </div>
                     </div>
                   </Col>
@@ -389,7 +389,9 @@ class Content extends React.Component {
                         src={this.state.report}
                       />
                       <div style={{ margin: "0 50px 0 50px" }}>
-                        {this.props.pageStore.protrader.content[1].content}
+                        {ReactHtmlParser(
+                          this.props.pageStore.protrader.content[1].content
+                        )}
                       </div>
                     </div>
                   </Col>
@@ -409,7 +411,9 @@ class Content extends React.Component {
                         src={this.state.demand}
                       />
                       <div style={{ margin: "0 50px 0 50px" }}>
-                        {this.props.pageStore.protrader.content[2].content}
+                        {ReactHtmlParser(
+                          this.props.pageStore.protrader.content[2].content
+                        )}
                       </div>
                     </div>
                   </Col>
@@ -470,7 +474,9 @@ class Content extends React.Component {
                         src={this.state.submit}
                       />
                       <div style={{ margin: "0 50px 0 50px" }}>
-                        {this.props.pageStore.protrader.content[5].content}
+                        {ReactHtmlParser(
+                          this.props.pageStore.protrader.content[5].content
+                        )}
                       </div>
                     </div>
                   </Col>
@@ -478,7 +484,7 @@ class Content extends React.Component {
               </div>
             </div>
             {/* ********* END TEAM 1 ********* */}
-          </div>{" "}
+          </div>
         </>
       );
     }
