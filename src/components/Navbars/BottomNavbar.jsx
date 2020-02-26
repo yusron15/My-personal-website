@@ -236,7 +236,6 @@ class BottomNavbar extends React.Component {
                       <Col style={{ color: "#FFFFFF" }}>
                         <Input
                           type="checkbox"
-                          ß
                           checked={this.state.checked2}
                           onChange={e =>
                             this.setState({ checked2: e.target.checked })
@@ -248,7 +247,7 @@ class BottomNavbar extends React.Component {
                         }
                       </Col>
                       <Col>
-                        <Button
+                        {/* <Button
                           color="info"
                           type="button"
                           style={{ minWidth: "260px" }}
@@ -257,7 +256,43 @@ class BottomNavbar extends React.Component {
                             this.props.pageStore.Landing.BottomNavbar.form[0]
                               .button
                           }
-                        </Button>
+                        </Button> */}
+                        <a
+                          target="_blank"
+                          style={{ backgroundColor: "transparent", padding: 0 }}
+                          href={
+                            this.state.checked && this.state.checked2 === true
+                              ? this.props.pageStore.Landing.BottomNavbar
+                                  .form[0].button_link
+                              : null
+                          }
+                        >
+                          {this.state.checked &&
+                          this.state.checked2 === true ? (
+                            <Button
+                              color="info"
+                              style={{ minWidth: "270px" }}
+                              type="button"
+                            >
+                              {
+                                this.props.pageStore.Landing.BottomNavbar
+                                  .form[0].button
+                              }
+                            </Button>
+                          ) : (
+                            <Button
+                              color="info"
+                              style={{ minWidth: "270px" }}
+                              type="button"
+                              disabled
+                            >
+                              {
+                                this.props.pageStore.Landing.BottomNavbar
+                                  .form[0].button
+                              }
+                            </Button>
+                          )}
+                        </a>
                       </Col>
                     </Row>
                   </Col>

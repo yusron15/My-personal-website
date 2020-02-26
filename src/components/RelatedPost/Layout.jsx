@@ -85,19 +85,13 @@ class Content extends React.Component {
                   <p className="font-black">
                     {`${description.substring(0, 190)} `}
                     <br />
-                    <Link
-                      // to={`/newspage/${title}`}
-                      to="/stock-index-inside"
-                      state={{
-                        data: {
-                          title,
-                          posted,
-                          description
-                        }
-                      }}
+                    <a
+                      href={link}
+                      target="_blank"
+                      style={{ color: "#dba1f6", cursor: "pointer" }}
                     >
                       Read More
-                    </Link>
+                    </a>
                   </p>
                 </Col>
               </div>
@@ -150,6 +144,7 @@ class Content extends React.Component {
                       <br />
                       <a
                         href={link}
+                        target="_blank"
                         style={{ color: "#dba1f6", cursor: "pointer" }}
                       >
                         Read More

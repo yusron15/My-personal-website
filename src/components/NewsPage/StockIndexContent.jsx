@@ -100,7 +100,7 @@ class Blogs extends Component {
                   <div>
                     {this.props.news.stock.map((item, index) => {
                       return (
-                        <a href={item.link}>
+                        <a href={item.link} target="_blank">
                           <Content
                             image={item.featured_image_src}
                             title={item.title.rendered}
@@ -174,7 +174,7 @@ class Blogs extends Component {
                 <div>
                   {this.props.news.stock.map((item, index) => {
                     return (
-                      <a href={item.link}>
+                      <a href={item.link} target="_blank">
                         <Content
                           image={item.featured_image_src}
                           title={item.title.rendered}

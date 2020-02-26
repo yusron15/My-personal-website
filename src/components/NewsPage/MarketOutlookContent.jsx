@@ -103,7 +103,7 @@ class Blogs extends React.Component {
                   <div>
                     {this.props.news.market.map((item, index) => {
                       return (
-                        <a href={item.link}>
+                        <a href={item.link} target="_blank">
                           <Content
                             image={item.featured_image_src}
                             title={item.title.rendered}
@@ -178,7 +178,7 @@ class Blogs extends React.Component {
                 <div>
                   {this.props.news.market.map((item, index) => {
                     return (
-                      <a href={item.link}>
+                      <a href={item.link} target="_blank">
                         <Content
                           image={item.featured_image_src}
                           title={item.title.rendered}

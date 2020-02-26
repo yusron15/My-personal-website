@@ -49,6 +49,13 @@ const textTitle = {
   fontSize: "1.7rem"
 };
 
+const textTitleSlider = {
+  fontWeight: "bold",
+  color: "white",
+  fontSize: "1.7rem",
+  marginBottom: "10px"
+};
+
 const textTitleSlide = {
   fontWeight: "bold",
   color: "White",
@@ -325,13 +332,6 @@ class Content extends React.Component {
               </Container>
             </div>
             <div>
-              <Container>
-                <div className="font-black" style={textTitle}>
-                  {ReactHtmlParser(
-                    this.props.pageStore.indexfutures.title_slide
-                  )}
-                </div>
-              </Container>
               <div
                 className="team-1"
                 style={{
@@ -340,6 +340,13 @@ class Content extends React.Component {
                   backgroundSize: "cover"
                 }}
               >
+                <Container>
+                  <div className="font-black" style={textTitleSlider}>
+                    {ReactHtmlParser(
+                      this.props.pageStore.indexfutures.title_slide
+                    )}
+                  </div>
+                </Container>
                 <ScrollAnimation animateIn="fadeInRight" animateOut="fadeOut">
                   <Carousel
                     activeIndex={this.state.activeIndex}
@@ -520,14 +527,6 @@ class Content extends React.Component {
                   </Container>
                 </div>
                 <div>
-                  <Container>
-                    <div className="font-black" style={textTitle}>
-                      {ReactHtmlParser(
-                        this.props.pageStore.indexfutures.title_slide
-                      )}
-                    </div>
-                  </Container>
-
                   <div
                     className="team-1"
                     style={{
@@ -537,6 +536,13 @@ class Content extends React.Component {
                       minHeight: "600px"
                     }}
                   >
+                    <Container>
+                      <div style={textTitleSlider}>
+                        {ReactHtmlParser(
+                          this.props.pageStore.indexfutures.title_slide
+                        )}
+                      </div>
+                    </Container>
                     <ScrollAnimation
                       animateIn="fadeInRight"
                       animateOut="fadeOut"
