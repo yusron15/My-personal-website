@@ -110,6 +110,15 @@ class Footers extends React.Component {
                             this.props.pageStore.Footer[2].content[0]
                           )}
                         </Link>
+                        <p style={{ cursor: "auto" }}>
+                          <Link
+                            to="/privacy-policy"
+                            target="_blank"
+                            style={{ color: "white" }}
+                          >
+                            Privacy Policy
+                          </Link>
+                        </p>
                       </Col>
                       <Col md="4">
                         <h4 style={{ cursor: "default", color: "white" }}>
@@ -158,16 +167,6 @@ class Footers extends React.Component {
                           {ReactHtmlParser(
                             this.props.pageStore.Footer[3].content[6]
                           )}
-                        </p>
-
-                        <p style={{ cursor: "auto" }}>
-                          <Link
-                            to="/privacy-policy"
-                            target="_blank"
-                            style={{ color: "white" }}
-                          >
-                            Privacy Policy
-                          </Link>
                         </p>
 
                         {/* Sudirman Kav 86 Jakarta 10220 Indonesia Email:
