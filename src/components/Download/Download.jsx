@@ -307,7 +307,7 @@ class Features extends React.Component {
                             alt="..."
                             className="bg-blob"
                             style={{
-                              width: "15vw",
+                              width: "20vw",
                               height: "auto"
                             }}
                             src={ios}
@@ -331,7 +331,7 @@ class Features extends React.Component {
                             alt="..."
                             className="bg-blob"
                             style={{
-                              width: "15vw",
+                              width: "20vw",
                               height: "auto"
                             }}
                             src={pc}
@@ -361,7 +361,7 @@ class Features extends React.Component {
                             alt="..."
                             className="bg-blob"
                             style={{
-                              width: "15vw",
+                              width: "20vw",
                               height: "auto"
                             }}
                             src={mac}
@@ -385,7 +385,7 @@ class Features extends React.Component {
                             alt="..."
                             className="bg-blob"
                             style={{
-                              width: "15vw",
+                              width: "20vw",
                               height: "auto"
                             }}
                             src={android}
@@ -415,7 +415,7 @@ class Features extends React.Component {
                             alt="..."
                             className="bg-blob"
                             style={{
-                              width: "15vw",
+                              width: "20vw",
                               height: "auto"
                             }}
                             src={mobilese}
@@ -439,7 +439,7 @@ class Features extends React.Component {
                             alt="..."
                             className="bg-blob"
                             style={{
-                              width: "15vw",
+                              width: "20vw",
                               height: "auto"
                             }}
                             src={mobile}
