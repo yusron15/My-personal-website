@@ -47,13 +47,18 @@ class Footers extends React.Component {
                     <Row>
                       <Col md="3">
                         <div style={{ cursor: "default" }}>
-                          <h4>
+                          {/* <h4>
                             <b style={{ cursor: "default", color: "white" }}>
                               {ReactHtmlParser(
                                 this.props.pageStore.Footer[0].title
                               )}
                             </b>
-                          </h4>
+                          </h4> */}
+                          <span style={{ cursor: "default", color: "white" }}>
+                            {ReactHtmlParser(
+                              this.props.pageStore.Footer[0].title
+                            )}
+                          </span>
                           <span
                             style={{
                               fontSize: "0.3rem",

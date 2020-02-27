@@ -41,7 +41,7 @@ class CardRegister extends React.Component {
       <Card
         style={{
           backgroundColor: "rgba(14,14,14,0.7)",
-          minHeight: "37vh",
+          // maxHeight: "37vh",
           // minWidth: "38vw",
           padding: 10
         }}
