@@ -36,6 +36,12 @@ const text = {
   textAlign: "center",
   fontSize: "1rem"
 };
+
+const textLeft = {
+  color: "black",
+  textAlign: "left",
+  fontSize: "1rem"
+};
 class Content extends React.Component {
   async componentDidMount() {
     await this.props.getContent("Komoditi", "id");
@@ -197,30 +203,36 @@ class Content extends React.Component {
                       >
                         <thead>
                           <tr style={{ backgroundColor: "#1565ff" }}>
-                            <td className="text-white text-center">
+                            <td className="text-white">
                               <b>O L E I N</b>
                             </td>
-                            <td className="text-white text-center">
+                            <td className="text-white" colspan="2">
                               <b>BBJ</b>
                             </td>
-                            <td className="text-white text-center">
+                            <td className="text-white">
                               <b>ICDX</b>
                             </td>
                           </tr>
                         </thead>
                         <tbody style={{ backgroundColor: "#d1d1d1" }}>
-                          <tr>
-                            <td style={text}>
+                          <tr width="100%">
+                            <td width="25%" style={textLeft}>
                               {this.props.currentLang === "ID"
                                 ? "Satuan Kontrak"
                                 : "Contract Unit "}
                             </td>
-                            <td style={text}>OLEJFX</td>
-                            <td style={text}>OLE10</td>
-                            <td style={text}>OLEINTR</td>
+                            <td width="25%" style={text}>
+                              OLEJFX
+                            </td>
+                            <td width="25%" style={text}>
+                              OLE10
+                            </td>
+                            <td width="25%" style={text}>
+                              OLEINTR
+                            </td>
                           </tr>
                           <tr>
-                            <td style={text}>
+                            <td style={textLeft}>
                               {this.props.currentLang === "ID"
                                 ? "Kode Kontrak"
                                 : "Code Contract"}
@@ -229,31 +241,37 @@ class Content extends React.Component {
                             <td style={text}>10 Ton (10.000 Kg)</td>
                             <td style={text}>10 Ton (10.000 Kg)</td>
                           </tr>
-                          <tr>
-                            <td colspan="2" style={text}>
+                          <tr width="100%">
+                            <td width="33%" style={textLeft}>
                               {this.props.currentLang === "ID"
                                 ? "Denominasi"
                                 : "Denomination"}
                             </td>
-                            <td style={text}>IDR</td>
-                            <td style={text}>IDR</td>
+                            <td width="33%" colspan="2" style={text}>
+                              IDR
+                            </td>
+                            <td width="33%" style={text}>
+                              IDR
+                            </td>
                           </tr>
                           <tr>
-                            <td colspan="2" style={text}>
+                            <td style={textLeft}>
                               {this.props.currentLang === "ID"
                                 ? "Minimum Perubahan Harga (Tick Size)"
                                 : "Minimum Price Change (Tick Size) "}
                             </td>
-                            <td style={text}>Rp. 5/Kg</td>
+                            <td style={text} colspan="2">
+                              Rp. 5/Kg
+                            </td>
                             <td style={text}>Rp. 5/Kg</td>
                           </tr>
                           <tr>
-                            <td colspan="2" style={text}>
+                            <td style={textLeft}>
                               {this.props.currentLang === "ID"
                                 ? "Bulan Kontrak"
                                 : "Contract Term"}
                             </td>
-                            <td style={text}>
+                            <td style={text} colspan="2">
                               {this.props.currentLang === "ID"
                                 ? "6 bulan berturut-turut"
                                 : "6 months in a row"}
@@ -265,23 +283,25 @@ class Content extends React.Component {
                             </td>
                           </tr>
                           <tr>
-                            <td colspan="2" style={text}>
+                            <td style={textLeft}>
                               {this.props.currentLang === "ID"
                                 ? "Waktu Perdagangan"
                                 : "Trading Hours"}
                             </td>
-                            <td style={text}>09:30 – 17:30</td>
+                            <td style={text} colspan="2">
+                              09:30 – 17:30
+                            </td>
                             <td style={text}>09.30 – 17.00</td>
                           </tr>
                           <tr>
-                            <td colspan="4" style={text}>
+                            <td colspan="4" style={textLeft}>
                               {this.props.currentLang === "ID"
                                 ? "Mutu Standar Pasar"
                                 : "Quality Standards"}
                             </td>
                           </tr>
                           <tr>
-                            <td style={text}>Free Fatty Acids (FFA)</td>
+                            <td style={textLeft}>Free Fatty Acids (FFA)</td>
                             <td style={text}>≤ 0.15%</td>
                             <td style={text}>AOCS Method Ca 5a-40</td>
                             <td style={text}>
@@ -291,7 +311,7 @@ class Content extends React.Component {
                             </td>
                           </tr>
                           <tr>
-                            <td style={text}>Moisture & Impurities</td>
+                            <td style={textLeft}>Moisture & Impurities</td>
                             <td style={text}>≤ 0.1%</td>
                             <td style={text}>
                               AOCS Method Ca 2b-38 AOCS Method Ca 3a-46
@@ -299,13 +319,13 @@ class Content extends React.Component {
                             <td style={text}>maks. 0,1%</td>
                           </tr>
                           <tr>
-                            <td style={text}>Iodine Value (WIJS)</td>
+                            <td style={textLeft}>Iodine Value (WIJS)</td>
                             <td style={text}>≥ 56</td>
                             <td style={text}>AOCS Method Cd 1d-92</td>
                             <td style={text}>Min. 56</td>
                           </tr>
                           <tr>
-                            <td style={text}>
+                            <td style={textLeft}>
                               {" "}
                               {this.props.currentLang === "ID"
                                 ? "Warna Merah"
@@ -326,7 +346,7 @@ class Content extends React.Component {
                             </td>
                           </tr>
                           <tr>
-                            <td style={text}>Slip Melt Point</td>
+                            <td style={textLeft}>Slip Melt Point</td>
                             <td style={text}>≤ 24°C</td>
                             <td style={text}>AOCS Method Cc 1-25</td>
                             <td style={text}>
@@ -336,19 +356,19 @@ class Content extends React.Component {
                             </td>
                           </tr>
                           <tr>
-                            <td style={text}>Cloud Point</td>
+                            <td style={textLeft}>Cloud Point</td>
                             <td style={text}>10.75°C</td>
                             <td style={text}></td>
                             <td style={text}></td>
                           </tr>
                           <tr>
-                            <td style={text}>
+                            <td style={textLeft}>
                               {this.props.currentLang === "ID"
                                 ? "Satuan Penyerahan Minimum"
                                 : "Minimum Submission Unit "}{" "}
                             </td>
                             <td style={text}></td>
-                            <td colspan="2" style={text}>
+                            <td style={text} colspan="2">
                               {this.props.currentLang === "ID"
                                 ? " 2 lot (20 Metric Ton) dengan toleransi +/- 2%"
                                 : "2 lots (20 Metric Ton) with a +/- 2% tolerance"}
