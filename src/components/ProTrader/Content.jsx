@@ -31,6 +31,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import SidebarMobile from "components/Navbars/SidebarMobile";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import Download from "../../components/Download/DownloadProTrader.jsx";
 import bg from "../../assets/img/header-trader.png";
 import rating from "../../assets/img/rating.png";
 import report from "../../assets/img/report.png";
@@ -40,6 +41,7 @@ import demand from "../../assets/img/demand.png";
 import sorting from "../../assets/img/sorting.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
+import bgDownload from "../../assets/img/download-bg.png";
 
 import "../../assets/css/main.css";
 
@@ -503,16 +505,21 @@ class Content extends React.Component {
                 <div
                   className="team-1 background-header"
                   style={{
-                    backgroundImage:
-                      "url(" +
-                      this.props.pageStore.protrader.image_background +
-                      ")",
+                    // backgroundImage:
+                    //   "url(" +
+                    //   this.props.pageStore.protrader.image_background +
+                    //   ")",
+                    backgroundImage: `url(${bgDownload})`,
+
                     padding: 0
                   }}
                 >
                   <BlurryNavbar />
                   <ColoredNavbar location={{ ...this.props.location }} />
-                  <div className="title title-header">
+                  <div className="space-50" />
+                  <Download />
+
+                  {/* <div className="title title-header">
                     {this.props.pageStore.protrader.header}
                   </div>
                   <Container>
@@ -524,7 +531,7 @@ class Content extends React.Component {
                         this.props.pageStore.protrader.sub_header
                       )}
                     </div>
-                  </Container>
+                  </Container> */}
                 </div>
                 <div className="team-1 broken-white">
                   <Container>

@@ -24,7 +24,7 @@ class TopgrowthTrader extends React.Component {
       <>
         {/* <Navbar /> */}
         <Content location={{ ...this.props.location }} />
-        <Download />
+        {/* <Download /> */}
         <Footer />
       </>
     );

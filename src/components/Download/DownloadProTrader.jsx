@@ -166,11 +166,12 @@ class Features extends React.Component {
         <div className="cd-section" id="features">
           {/* ********* FEATURES 3 ********* */}
           <div
-            className="features-3 broken-white"
+            // className="features-3 broken-white"
+            className="features-3 "
             style={{
               padding: "50px",
-              paddingTop: "20px",
-              backgroundImage: `url(${bg})`
+              paddingTop: "20px"
+              // backgroundImage: `url(${bg})`
             }}
           >
             <Container fluid>
@@ -184,17 +185,19 @@ class Features extends React.Component {
 
               <Row>
                 <Col className="mr-auto ml-auto" md="10">
-                  <h1
+                  {/* <h1
                     className="title"
                     style={{ color: "white", textAlign: "left" }}
                   >
                     Download
-                  </h1>
+                  </h1> */}
                 </Col>
               </Row>
               <Row>
                 <Col md="6">
                   <Col>
+                    <div className="space-50" />
+
                     <ScrollAnimation
                       animateIn="fadeInLeft"
                       animateOut="fadeOut"
@@ -205,7 +208,20 @@ class Features extends React.Component {
                 </Col>
                 <Col md="6">
                   <Row>
-                    <Col md="4">
+                    <Col md="5">
+                      <h1
+                        className="title"
+                        style={{
+                          color: "white",
+                          textAlign: "left"
+                        }}
+                      >
+                        Download
+                      </h1>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md="5">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -223,7 +239,7 @@ class Features extends React.Component {
                             alt="..."
                             md="12"
                             style={{
-                              width: "50vw",
+                              width: "70vw",
                               margin: "20px 2px 0 2px",
                               height: "auto"
                             }}
@@ -232,7 +248,7 @@ class Features extends React.Component {
                         </a>
                       </ScrollAnimation>
                     </Col>
-                    <Col md="4">
+                    <Col md="5">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -249,7 +265,7 @@ class Features extends React.Component {
                           <img
                             alt="..."
                             style={{
-                              width: "50vw",
+                              width: "70vw",
                               margin: "20px 2px 0 2px",
                               height: "auto"
                             }}
@@ -264,7 +280,7 @@ class Features extends React.Component {
                       marginTop: "20px"
                     }}
                   >
-                    <Col md="4">
+                    <Col md="5">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -281,7 +297,7 @@ class Features extends React.Component {
                           <img
                             alt="..."
                             style={{
-                              width: "50vw",
+                              width: "70vw",
                               marginTop: "20px",
                               height: "auto"
                             }}
@@ -290,7 +306,7 @@ class Features extends React.Component {
                         </a>
                       </ScrollAnimation>
                     </Col>
-                    <Col md="4">
+                    <Col md="5">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -307,7 +323,7 @@ class Features extends React.Component {
                           <img
                             alt="..."
                             style={{
-                              width: "50vw",
+                              width: "70vw",
                               margin: "20px 2px 0 2px",
                               height: "auto"
                             }}

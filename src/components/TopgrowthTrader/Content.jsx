@@ -31,6 +31,9 @@ import ScrollAnimation from "react-animate-on-scroll";
 import SidebarMobile from "components/Navbars/SidebarMobile";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar.jsx";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
+import Download from "../../components/Download/Download.jsx";
+import bgDownload from "../../assets/img/download-bg.png";
+
 import bg from "../../assets/img/header-trader.png";
 import rating from "../../assets/img/rating.png";
 import report from "../../assets/img/report.png";
@@ -496,16 +499,20 @@ class Content extends React.Component {
                 <div
                   className="team-1 background-header"
                   style={{
-                    backgroundImage:
-                      "url(" +
-                      this.props.pageStore.topgrowthtrader.image_background +
-                      ")",
+                    // backgroundImage:
+                    //   "url(" +
+                    //   this.props.pageStore.topgrowthtrader.image_background +
+                    //   ")",
+                    backgroundImage: `url(${bgDownload})`,
                     padding: 0
                   }}
                 >
                   <BlurryNavbar />
                   <ColoredNavbar location={{ ...this.props.location }} />
-                  <div className="title title-header">
+                  <div className="space-50" />
+                  <Download />
+
+                  {/* <div className="title title-header">
                     {ReactHtmlParser(
                       this.props.pageStore.topgrowthtrader.header
                     )}
@@ -519,7 +526,7 @@ class Content extends React.Component {
                         this.props.pageStore.topgrowthtrader.sub_header
                       )}
                     </div>
-                  </Container>
+                  </Container> */}
                 </div>
                 <div className="team-1 broken-white">
                   <Container>

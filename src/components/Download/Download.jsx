@@ -236,11 +236,12 @@ class Features extends React.Component {
         <div className="cd-section" id="features">
           {/* ********* FEATURES 3 ********* */}
           <div
-            className="features-3 broken-white"
+            // className="features-3 broken-white"
+            className="features-3"
             style={{
               padding: "50px",
-              paddingTop: "20px",
-              backgroundImage: `url(${bg})`
+              paddingTop: "20px"
+              // backgroundImage: `url(${bg})`
             }}
           >
             <Container fluid>
@@ -253,29 +254,45 @@ class Features extends React.Component {
               </Parallax> */}
 
               <Row>
-                <Col className="mr-auto ml-auto" md="10">
-                  <h1
+                <Col md="6">
+                  {/* <h1
                     className="title"
                     style={{ color: "white", textAlign: "left" }}
                   >
                     Download
-                  </h1>
+                  </h1> */}
                 </Col>
               </Row>
               <Row>
                 <Col md="6">
                   <Col>
+                    <div className="space-50" />
                     <ScrollAnimation
                       animateIn="fadeInLeft"
                       animateOut="fadeOut"
                     >
-                      <img src={laptop} height="250" width="auto" />
+                      <img src={laptop} height="270" width="auto" />
                     </ScrollAnimation>
                   </Col>
                 </Col>
                 <Col md="6">
                   <Row>
-                    <Col md="4">
+                    <Col md="5">
+                      <h1
+                        className="title"
+                        style={{
+                          color: "white",
+                          textAlign: "left",
+                          marginLeft: "20px",
+                          marginTop: "50px"
+                        }}
+                      >
+                        Download
+                      </h1>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md="5">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -298,7 +315,7 @@ class Features extends React.Component {
                         </a>
                       </ScrollAnimation>
                     </Col>
-                    <Col md="4">
+                    <Col md="5">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -328,7 +345,7 @@ class Features extends React.Component {
                       marginTop: "20px"
                     }}
                   >
-                    <Col md="4">
+                    <Col md="5">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -352,7 +369,7 @@ class Features extends React.Component {
                         </a>
                       </ScrollAnimation>
                     </Col>
-                    <Col md="4">
+                    <Col md="5">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -382,7 +399,7 @@ class Features extends React.Component {
                       marginTop: "20px"
                     }}
                   >
-                    <Col md="4">
+                    <Col md="5">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -406,7 +423,7 @@ class Features extends React.Component {
                         </a>
                       </ScrollAnimation>
                     </Col>
-                    <Col md="4">
+                    <Col md="5">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
