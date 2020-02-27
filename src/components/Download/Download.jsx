@@ -292,7 +292,7 @@ class Features extends React.Component {
                     </Col>
                   </Row>
                   <Row>
-                    <Col md="5">
+                    <Col md="6">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -315,7 +315,7 @@ class Features extends React.Component {
                         </a>
                       </ScrollAnimation>
                     </Col>
-                    <Col md="5">
+                    <Col md="6">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -345,7 +345,7 @@ class Features extends React.Component {
                       marginTop: "20px"
                     }}
                   >
-                    <Col md="5">
+                    <Col md="6">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -369,7 +369,7 @@ class Features extends React.Component {
                         </a>
                       </ScrollAnimation>
                     </Col>
-                    <Col md="5">
+                    <Col md="6">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -399,7 +399,7 @@ class Features extends React.Component {
                       marginTop: "20px"
                     }}
                   >
-                    <Col md="5">
+                    <Col md="6">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
@@ -423,7 +423,7 @@ class Features extends React.Component {
                         </a>
                       </ScrollAnimation>
                     </Col>
-                    <Col md="5">
+                    <Col md="6">
                       <ScrollAnimation
                         animateIn="fadeInUp"
                         animateOut="fadeOut"
