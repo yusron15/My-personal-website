@@ -61,7 +61,7 @@ class Footers extends React.Component {
                           </span>
                           <span
                             style={{
-                              fontSize: "0.3rem",
+                              fontSize: "0.7rem",
                               color: "white",
                               lineHeight: 1
                             }}
