@@ -278,7 +278,14 @@ class HeaderLanding extends React.Component {
                   <BlurryNavbar newsletterLink={this.props.newsletterLink} />
 
                   {/* <div className="space-50" /> */}
-                  <Col md="12" style={{ paddingRight: 0, paddingLeft: 0 }}>
+                  <Col
+                    md="12"
+                    style={{
+                      paddingRight: 0,
+                      paddingLeft: 0
+                      // marginTop: "10vh"
+                    }}
+                  >
                     <Carousel
                       indicators={true}
                       controls={false}
@@ -291,18 +298,19 @@ class HeaderLanding extends React.Component {
                         <div
                           className="page-header minHeight header-filter"
                           style={{
-                            minHeight: "calc(100vh - 50px)",
-                            backgroundImage:
-                              "url(" +
-                              this.props.pageStore.Landing.HeaderLanding
-                                .slide[0].image_web +
-                              // == null ? :  this.props.pageStore.Landing.HeaderLanding
-                              // .slide[0].image
-                              ")",
-                            backgroundSize: "cover"
+                            minHeight: "calc(100vh - 50px)"
                           }}
                         >
-                          {/* here */}
+                          <img
+                            src={
+                              this.props.pageStore.Landing.HeaderLanding
+                                .slide[0].image_web
+                            }
+                            style={{
+                              height: "calc(100vh - 50px)",
+                              position: "absolute"
+                            }}
+                          />
                           <Container style={{ paddingTop: 0 }}>
                             <Row>
                               {/* <Navbar /> */}
@@ -335,15 +343,19 @@ class HeaderLanding extends React.Component {
                         <div
                           className="page-header minHeight"
                           style={{
-                            minHeight: "calc(100vh - 50px)",
-                            backgroundImage:
-                              "url(" +
-                              this.props.pageStore.Landing.HeaderLanding
-                                .slide[1].image_web +
-                              ")",
-                            backgroundSize: "cover"
+                            minHeight: "calc(100vh - 50px)"
                           }}
                         >
+                          <img
+                            src={
+                              this.props.pageStore.Landing.HeaderLanding
+                                .slide[1].image_web
+                            }
+                            style={{
+                              height: "calc(100vh - 50px)",
+                              position: "absolute"
+                            }}
+                          />
                           <Container style={{ paddingTop: 0 }}>
                             <Row>
                               <Col md="8">
@@ -376,15 +388,25 @@ class HeaderLanding extends React.Component {
                         <div
                           className="page-header minHeight"
                           style={{
-                            minHeight: "calc(100vh - 50px)",
-                            backgroundImage:
-                              "url(" +
-                              this.props.pageStore.Landing.HeaderLanding
-                                .slide[2].image_web +
-                              ")",
-                            backgroundSize: "cover"
+                            minHeight: "calc(100vh - 50px)"
+                            // backgroundImage:
+                            //   "url(" +
+                            //   this.props.pageStore.Landing.HeaderLanding
+                            //     .slide[2].image_web +
+                            //   ")",
+                            // backgroundSize: "cover"
                           }}
                         >
+                          <img
+                            src={
+                              this.props.pageStore.Landing.HeaderLanding
+                                .slide[2].image_web
+                            }
+                            style={{
+                              height: "calc(100vh - 50px)",
+                              position: "absolute"
+                            }}
+                          />
                           <Container style={{ paddingTop: 0 }}>
                             <Row>
                               <Col md="8">
@@ -440,20 +462,24 @@ class HeaderLanding extends React.Component {
                       </Carousel.Item>
                     </Carousel>
                   </Col>
-                  <Col
+
+                  <div style={{ position: "absolute", top: "40vh", right: 10 }}>
+                    <CardRegister />
+                  </div>
+                  {/* <Col
                     // md="5 offset-md-7"
                     md={{
                       size: 4,
                       offset: 8
                     }}
                     style={{
-                      top: "1%",
+                      top: "50%",
                       position: "absolute",
                       zIndex: 99
                     }}
                   >
                     <CardRegister />
-                  </Col>
+                  </Col> */}
                 </div>
                 <Col
                   md="12"

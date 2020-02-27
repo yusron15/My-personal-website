@@ -205,87 +205,6 @@ class BreakingNews extends Component {
     return (
       <>
         <div style={{ display: "flex" }}>
-          {/* <div
-            style={{
-              display: "flex",
-              width: "15%"
-            }}
-          >
-            <div style={{ flex: 1 }}>
-              <Nav tabs vertical pills style={{ padding: 0 }}>
-                <NavItem>
-                  <div
-                    onClick={() => {
-                      this.toggle("1");
-                    }}
-                  >
-                    <div
-                      style={{
-                        ...tabItem,
-                        color: this.state.activeTab === "1" ? "white" : "white",
-                        backgroundColor:
-                          this.state.activeTab === "1" ? "grey" : "black",
-                        cursor: "pointer"
-                      }}
-                    >
-                      FX
-                    </div>
-                  </div>
-                </NavItem>
-                <NavItem>
-                  <div
-                    onClick={() => {
-                      this.toggle("2");
-                    }}
-                  >
-                    <div
-                      style={{
-                        ...tabItem,
-                        color: this.state.activeTab === "2" ? "white" : "white",
-                        backgroundColor:
-                          this.state.activeTab === "2" ? "grey" : "black",
-                        cursor: "pointer"
-                      }}
-                    >
-                      Index
-                    </div>
-                  </div>
-                </NavItem>
-                <NavItem>
-                  <div
-                    onClick={() => {
-                      this.toggle("3");
-                    }}
-                  >
-                    <div
-                      style={{
-                        ...tabItem,
-                        color: this.state.activeTab === "3" ? "white" : "white",
-                        backgroundColor:
-                          this.state.activeTab === "3" ? "grey" : "black",
-                        cursor: "pointer"
-                      }}
-                    >
-                      Komoditi
-                    </div>
-                  </div>
-                </NavItem>
-              </Nav>
-            </div>
-            <div style={{ flex: 1 }}>
-              <TabContent activeTab={this.state.activeTab}>
-                <TabPane tabId="1">
-                  <div style={tabContent}>FX</div>
-                </TabPane>
-                <TabPane tabId="2">
-                  <div style={tabContent}>Index</div>
-                </TabPane>
-                <TabPane tabId="3">
-                  <div style={tabContent}>Komoditi</div>
-                </TabPane>
-              </TabContent>
-            </div>
-          </div> */}
           <div style={{ flex: 1 }}>
             <Iframe
               url="https://prolindo.pro-itrading.com:10443/Livefeed/quote_running.asp"
@@ -294,31 +213,6 @@ class BreakingNews extends Component {
               height="37"
               width="100%"
             />
-            {/* <marquee scrollamount="5">
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <div style={{ marginLeft: 20 }}>
-                  <img src={Up} />
-                  {` Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit`}
-                </div>
-                <div style={{ marginLeft: 8 }}>
-                  <img src={Down} />
-                  {` Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit`}
-                </div>
-                <div style={{ marginLeft: 20 }}>
-                  <img src={Up} />
-                  {` Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit`}
-                </div>
-                <div style={{ marginLeft: 20 }}>
-                  <img src={Down} />
-                  {` Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit`}
-                </div>
-              </div>
-            </marquee>
-           */}
           </div>
         </div>
       </>
