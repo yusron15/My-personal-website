@@ -54,11 +54,17 @@ class Footers extends React.Component {
                               )}
                             </b>
                           </h4>
-                          <p>
+                          <span
+                            style={{
+                              fontSize: "0.3rem",
+                              color: "white",
+                              lineHeight: 1
+                            }}
+                          >
                             {ReactHtmlParser(
                               this.props.pageStore.Footer[0].content[0]
                             )}
-                          </p>
+                          </span>
                         </div>
                       </Col>
                       <Col md="3">
