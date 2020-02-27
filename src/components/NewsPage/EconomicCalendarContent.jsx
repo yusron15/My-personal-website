@@ -55,7 +55,7 @@ class EconomicCalendar extends React.Component {
   fetchDataEconomicCalendar = async date => {
     try {
       let countriesUrl =
-        "http://restcountries.eu/rest/v2/all?fields=currencies;name;alpha2Code";
+        "https://restcountries.eu/rest/v2/all?fields=currencies;name;alpha2Code";
       // let url = `https://api.tradingeconomics.com/calendar/country/All/${date}/${date}?c=guest:guest&format=json`;
       let url = `https://api.tradingeconomics.com/calendar/country/All/${date}/${date}?c=guest:guest&format=json`;
 
