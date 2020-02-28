@@ -142,6 +142,7 @@ class Blogs extends React.Component {
                   "url(" +
                   this.props.pageStore.marketOutlock.background_image +
                   ")",
+                backgroundSize: "cover",
                 padding: 0
               }}
             >

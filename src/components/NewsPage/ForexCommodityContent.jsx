@@ -140,6 +140,7 @@ class Blogs extends React.Component {
                   "url(" +
                   this.props.pageStore.forexComodity.background_image +
                   ")",
+                backgroundSize: "cover",
                 padding: 0
               }}
             >
