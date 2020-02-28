@@ -179,7 +179,7 @@ class Blogs extends React.Component {
                 <div>
                   {this.props.news.forex.map((item, index) => {
                     return (
-                      <a href={item.link}>
+                      <a href={item.link} target="_blank">
                         <Content
                           link={item.link}
                           image={item.featured_image_src}

@@ -111,7 +111,7 @@ class Content extends React.Component {
               <Row>
                 <Col lg="4">
                   <div className="card-image">
-                    <a href={link}>
+                    <a href={link} target="_blank">
                       <img
                         alt="..."
                         style={{
