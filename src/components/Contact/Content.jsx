@@ -339,7 +339,7 @@ class Content extends React.Component {
                               {this.state.showAlert === true ? (
                                 <Alert color="success">
                                   {this.props.currentLang === "ID"
-                                    ? "Pesan Terirkirim"
+                                    ? "Pesan Terkirim"
                                     : "Message sent!"}
                                 </Alert>
                               ) : null}
