@@ -66,7 +66,9 @@ class NewsLetter extends Component {
                             </InputGroupText>
                           </InputGroupAddon>
                           <Input
-                            placeholder="Your Email..."
+                            placeholder={
+                              this.props.pageStore.Landing.NewsLetter.form.email
+                            }
                             type="email"
                             onFocus={e => this.setState({ emailFocus: true })}
                             onBlur={e => this.setState({ emailFocus: false })}
@@ -83,8 +85,10 @@ class NewsLetter extends Component {
                           }
                         >
                           <Button block color="info" type="button">
-                            {/* {this.props.pageStore.Landing.NewsLetter.button} */}
-                            Subscribe
+                            {
+                              this.props.pageStore.Landing.NewsLetter.form
+                                .button
+                            }
                           </Button>
                         </a>
                       </Col>
