@@ -206,6 +206,7 @@ class BottomNavbar extends React.Component {
                             this.setState({ checked: e.target.checked })
                           }
                         />
+
                         {
                           this.props.pageStore.Landing.BottomNavbar.form[0]
                             .leftTick
