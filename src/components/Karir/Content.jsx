@@ -154,7 +154,7 @@ class Blogs extends React.Component {
                       className="description font-black"
                       style={{ marginTop: "10%", marginBottom: "2%" }}
                     >
-                      {ReactHtmlParser(this.props.karirList.description)}
+                      {ReactHtmlParser(this.props.karirList.dedscription)}
                     </p>
                     <Row style={{ marginBottom: "10%" }}>
                       <Col sm={12}>
@@ -310,7 +310,7 @@ class Blogs extends React.Component {
                     className="description font-black"
                     style={{ marginTop: "10%", marginBottom: "2%" }}
                   >
-                    {ReactHtmlParser(this.props.pageStore.karir.description)}
+                    {ReactHtmlParser(this.props.pageStore.karir.dedscription)}
                   </p>
                   <Row style={{ marginBottom: 30 }}>
                     <Col
