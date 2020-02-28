@@ -140,6 +140,9 @@ class App extends Component {
       lang: window.sessionStorage.getItem("language"),
       toggleLang: this.toggleLang
     };
+
+    document.cookie = "same-site-cookie=foo; SameSite=Lax";
+    document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
   }
 
   initLang = async () => {
