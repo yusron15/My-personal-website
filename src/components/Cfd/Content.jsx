@@ -136,43 +136,45 @@ class Content extends React.Component {
                         <>
                           <Col md="12">
                             {item.table.map((itemTable, indexTable) => (
-                              <Table
-                                className="table-shopping"
-                                style={{
-                                  backgroundColor: "#1565ff",
-                                  borderRadius: "5px",
-                                  borderCollapse: "inherit"
-                                }}
-                              >
-                                <thead>
-                                  <tr style={{ backgroundColor: "#1565ff" }}>
-                                    <td className="text-white text-center">
-                                      <b>{itemTable.prefix1}</b>
-                                    </td>
-                                    <td className="text-white text-center">
-                                      <b>{itemTable.prefix2}</b>
-                                    </td>
-                                    <td className="text-white text-center">
-                                      <b>{itemTable.prefix3}</b>
-                                    </td>
-                                    <td className="text-white text-center">
-                                      <b>{itemTable.prefix4}</b>
-                                    </td>
-                                  </tr>
-                                </thead>
-                                {itemTable.tableData.map(
-                                  (itemTableData, itemTableDataIndex) => {
-                                    return (
-                                      <TableContent4
-                                        prefix1={itemTableData.prefix1}
-                                        prefix2={itemTableData.prefix2}
-                                        prefix3={itemTableData.prefix3}
-                                        prefix4={itemTableData.prefix4}
-                                      />
-                                    );
-                                  }
-                                )}
-                              </Table>
+                              <div style={{ overflow: "scroll" }}>
+                                <Table
+                                  className="table-shopping"
+                                  style={{
+                                    backgroundColor: "#1565ff",
+                                    borderRadius: "5px",
+                                    borderCollapse: "inherit"
+                                  }}
+                                >
+                                  <thead>
+                                    <tr style={{ backgroundColor: "#1565ff" }}>
+                                      <td className="text-white text-center">
+                                        <b>{itemTable.prefix1}</b>
+                                      </td>
+                                      <td className="text-white text-center">
+                                        <b>{itemTable.prefix2}</b>
+                                      </td>
+                                      <td className="text-white text-center">
+                                        <b>{itemTable.prefix3}</b>
+                                      </td>
+                                      <td className="text-white text-center">
+                                        <b>{itemTable.prefix4}</b>
+                                      </td>
+                                    </tr>
+                                  </thead>
+                                  {itemTable.tableData.map(
+                                    (itemTableData, itemTableDataIndex) => {
+                                      return (
+                                        <TableContent4
+                                          prefix1={itemTableData.prefix1}
+                                          prefix2={itemTableData.prefix2}
+                                          prefix3={itemTableData.prefix3}
+                                          prefix4={itemTableData.prefix4}
+                                        />
+                                      );
+                                    }
+                                  )}
+                                </Table>
+                              </div>
                             ))}
                           </Col>
                         </>

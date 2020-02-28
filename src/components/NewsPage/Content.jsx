@@ -364,7 +364,7 @@ class Carding extends React.Component {
                                       borderRadius={10}
                                       maxWidth={500}
                                       animationSpeed={500}
-                                      height={150}
+                                      height={135}
                                       front={
                                         <div>
                                           <img

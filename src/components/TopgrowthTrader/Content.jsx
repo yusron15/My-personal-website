@@ -482,6 +482,7 @@ class Content extends React.Component {
             </div>
             {/* ********* END TEAM 1 ********* */}
           </div>
+          <Download />
         </>
       );
     }
