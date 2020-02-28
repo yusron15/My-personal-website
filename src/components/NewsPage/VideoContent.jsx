@@ -289,7 +289,8 @@ class VideoContent extends React.Component {
               style={{
                 backgroundImage:
                   "url(" + this.props.pageStore.Video.background_image + ")",
-                padding: 0
+                padding: 0,
+                backgroundSize: "cover"
               }}
             >
               <div

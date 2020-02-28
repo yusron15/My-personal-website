@@ -139,6 +139,7 @@ class Blogs extends Component {
                   "url(" +
                   this.props.pageStore.stockIndex.background_image +
                   ")",
+                backgroundSize: "cover",
                 padding: 0
               }}
             >

@@ -209,6 +209,7 @@ class EconomicCalendar extends React.Component {
                   "url(" +
                   this.props.pageStore.economicCalender.background_image +
                   ")",
+                backgroundSize: "cover",
                 padding: 0
               }}
             >
