@@ -1,45 +1,13 @@
 import React from "react";
-import { slideInDown } from "react-animations";
 import { Link } from "react-router-dom";
 // reactstrap components
-import {
-  Button,
-  UncontrolledCollapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  NavbarBrand,
-  Navbar,
-  NavItem,
-  NavLink,
-  Nav,
-  Container,
-  Row,
-  Col,
-  UncontrolledTooltip,
-  Dropdown
-} from "reactstrap";
-import ScrollAnimation from "react-animate-on-scroll";
-import { isMobile } from "react-device-detect";
+import { Navbar, Container, Row, Col } from "reactstrap";
 import Sidebar from "react-sidebar";
 
-// import { Accordion, AccordionPanel, styles } from "react-accordion";
-import useCollapse from "react-collapsed";
-import DropdownTentangKami from "../DropdownContent/DropdownTentangKami";
-import DropdownTrading from "../DropdownContent/DropdownTrading";
-import DropdownBerita from "../DropdownContent/DropdownBerita";
-import { LangContext } from "../MyContext";
-import Collapsible from "react-collapsible";
 import logo from "../../assets/img/logo-topgrowth.png";
 import BurgerIcon from "../../assets/img/burger-icon.png";
-import caret from "../../assets/img/caret.png";
-import BlurryNavbar from "../../components/Navbars/BlurryNavbar.jsx";
-import BlurryNavbarHome from "../../components/Navbars/BlurryNavbarHome";
 import "../../assets/css/main.css";
 import LangTogglerButton from "../LangTogglerButton";
-import Radium, { StyleRoot } from "radium";
-import vl from "../../assets/img/vertical-line.png";
 import { connect } from "react-redux";
 import { getContent } from "../../redux/ducks/actions.js";
 
@@ -55,12 +23,6 @@ const subText = {
   fontSize: "15px",
   margin: "10px 0 10px 20px",
   color: "black"
-};
-
-const textTrigger = {
-  color: "black",
-  fontSize: "1rem",
-  marginLeft: "17px"
 };
 
 class SidebarMobile extends React.Component {

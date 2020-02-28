@@ -5,6 +5,7 @@ import { getNews, getAllNews } from "../actions/newsActions";
 import { getCabangs } from "../actions/cabangActions";
 import { getAllKarir, getKarirById } from "../actions/karirActions";
 import { postKontak } from "../actions/kontakActions";
+import { subscribeEbook } from "../actions/ebookActions";
 
 export {
   // page action
@@ -19,5 +20,7 @@ export {
   getAllKarir,
   getKarirById,
   // kontak
-  postKontak
+  postKontak,
+  // ebook
+  subscribeEbook
 };

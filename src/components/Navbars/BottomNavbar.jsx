@@ -1,5 +1,5 @@
 import React from "react";
-import { slideInDown } from "react-animations";
+import { bounce, bounceInUp } from "react-animations";
 import { Link } from "react-router-dom";
 import Fade from "react-fade-opacity";
 // reactstrap components
@@ -36,12 +36,16 @@ import Radium, { StyleRoot } from "radium";
 import { isMobile } from "react-device-detect";
 
 import { connect } from "react-redux";
-import { fetchPage } from "../../redux/ducks/actions.js";
+import { subscribeEbook } from "../../redux/ducks/actions.js";
 
 const stylesAnimation = {
-  slideInDown: {
-    animation: "x 1s",
-    animationName: Radium.keyframes(slideInDown, "bounce")
+  bounce: {
+    animation: "x 2s",
+    animationName: Radium.keyframes(bounce, "bounce")
+  },
+  bounceInUp: {
+    animation: "x 3s",
+    animationName: Radium.keyframes(bounceInUp, "bounceInUp")
   }
 };
 
@@ -49,6 +53,11 @@ class BottomNavbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      form: {
+        email: "",
+        fullName: "",
+        phoneNumber: ""
+      },
       checked: false,
       checked2: false
     };
@@ -131,8 +140,8 @@ class BottomNavbar extends React.Component {
                           <div>
                             <Input
                               style={{
-                                backgroundColor: "rgba(10, 10, 10, 0.49)",
-                                color: "white",
+                                backgroundColor: "rgba(255, 255, 255, 0.89)",
+                                color: "black",
                                 border: "none",
                                 marginBottom: "10px"
                               }}
@@ -145,8 +154,8 @@ class BottomNavbar extends React.Component {
                           <div>
                             <Input
                               style={{
-                                backgroundColor: "rgba(10, 10, 10, 0.49)",
-                                color: "white",
+                                backgroundColor: "rgba(255, 255, 255, 0.89)",
+                                color: "black",
                                 border: "none"
                               }}
                               placeholder="Email"
@@ -160,8 +169,8 @@ class BottomNavbar extends React.Component {
                           <div>
                             <Input
                               style={{
-                                backgroundColor: "rgba(10, 10, 10, 0.49)",
-                                color: "white",
+                                backgroundColor: "rgba(255, 255, 255, 0.89)",
+                                color: "black",
                                 border: "none",
                                 marginBottom: "10px"
                               }}
@@ -175,8 +184,8 @@ class BottomNavbar extends React.Component {
                           <div>
                             <Input
                               style={{
-                                backgroundColor: "rgba(10, 10, 10, 0.49)",
-                                color: "white",
+                                backgroundColor: "rgba(255, 255, 255, 0.89)",
+                                color: "black",
                                 border: "none"
                               }}
                               placeholder="Telepon"
@@ -187,37 +196,6 @@ class BottomNavbar extends React.Component {
                           </div>
                         </Col>
                       </Row>
-                    </div>
-                    <div>
-                      {/* <div>
-                        <a
-                          target="_blank"
-                          style={{ backgroundColor: "transparent" }}
-                          href={
-                            this.state.checked && this.state.checked2 === true
-                              ? this.props.pageStore.Landing.BottomNavbar
-                                  .form[0].button_link
-                              : null
-                          }
-                        >
-                          {this.state.checked &&
-                          this.state.checked2 === true ? (
-                            <Button  color="info" type="button">
-                              {
-                                this.props.pageStore.Landing.BottomNavbar
-                                  .form[0].button
-                              }
-                            </Button>
-                          ) : (
-                            <Button  color="info" type="button" disabled>
-                              {
-                                this.props.pageStore.Landing.BottomNavbar
-                                  .form[0].button
-                              }
-                            </Button>
-                          )}
-                        </a>
-                      </div> */}
                     </div>
                     <Row style={{ marginLeft: "12px", marginRight: "12px" }}>
                       <Col style={{ color: "#FFFFFF" }}>
@@ -304,8 +282,11 @@ class BottomNavbar extends React.Component {
       );
     }
     return (
-      <>
-        <div class="navbar-bottom" style={styles.containerStyle}>
+      <StyleRoot>
+        <div
+          className="navbar-bottom"
+          style={{ ...styles.containerStyle, ...stylesAnimation.bounceInUp }}
+        >
           {/* <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut"> */}
           {/* <Fade> */}
           <div
@@ -321,118 +302,119 @@ class BottomNavbar extends React.Component {
               }}
             >
               <Col className="ml-auto mr-auto" md="12">
+                <img
+                  onClick={() => {
+                    this.removeButton();
+                  }}
+                  style={{
+                    justifyContent: "flex-end",
+                    margin: "5px 5px 5px 0",
+                    height: "25px",
+                    width: "25px"
+                  }}
+                  src={close}
+                />
                 <Row>
-                  <img
-                    onClick={() => {
-                      this.removeButton();
-                    }}
-                    style={{
-                      justifyContent: "flex-end",
-                      margin: "5px 5px 5px 0",
-                      height: "25px",
-                      width: "25px"
-                    }}
-                    src={close}
-                  />
-                  <Col md="2">
+                  <Col md="2" style={{ display: "flex", alignItems: "center" }}>
                     <div
                       style={{
                         fontWeight: "bold",
                         textAlign: "center",
                         fontSize: "1.2rem",
-                        color: "white",
-                        marginTop: "5px"
+                        color: "white"
                       }}
                     >
                       {this.props.pageStore.Landing.BottomNavbar.title}
                     </div>
                   </Col>
-                  <Col md="3">
+                  <Col md="3" style={{ display: "flex", alignItems: "center" }}>
                     <Input
                       style={{
-                        backgroundColor: "rgba(10, 10, 10, 0.49)",
-                        color: "white",
-                        border: "none",
-                        marginTop: "10px"
+                        backgroundColor: "rgba(255, 255, 255, 0.89)",
+                        color: "black",
+                        border: "none"
                       }}
                       placeholder="Full Name"
                       type="text"
-                      onFocus={e => this.setState({ emailFocus: true })}
-                      onBlur={e => this.setState({ emailFocus: false })}
+                      onChange={async e => {
+                        await this.setState({
+                          form: {
+                            ...this.state.form,
+                            fullName: e.target.value
+                          }
+                        });
+                      }}
                     />
                   </Col>
-                  <Col md="2">
+                  <Col md="3" style={{ display: "flex", alignItems: "center" }}>
                     <Input
                       style={{
-                        backgroundColor: "rgba(10, 10, 10, 0.49)",
-                        color: "white",
-                        border: "none",
-                        marginTop: "10px"
+                        backgroundColor: "rgba(255, 255, 255, 0.89)",
+                        color: "black",
+                        border: "none"
                       }}
                       placeholder="Email"
                       type="text"
-                      onFocus={e => this.setState({ emailFocus: true })}
-                      onBlur={e => this.setState({ emailFocus: false })}
-                    />
-                  </Col>
-                  <Col md="1">
-                    <Input
-                      style={{
-                        backgroundColor: "rgba(10, 10, 10, 0.49)",
-                        color: "white",
-                        border: "none",
-                        marginTop: "10px"
+                      onChange={async e => {
+                        await this.setState({
+                          form: {
+                            ...this.state.form,
+                            email: e.target.value
+                          }
+                        });
                       }}
-                      color="white"
-                      placeholder="+62"
-                      type="text"
-                      onFocus={e => this.setState({ emailFocus: true })}
-                      onBlur={e => this.setState({ emailFocus: false })}
                     />
                   </Col>
-                  <Col md="2">
+                  <Col md="2" style={{ display: "flex", alignItems: "center" }}>
                     <Input
                       style={{
-                        backgroundColor: "rgba(10, 10, 10, 0.49)",
-                        color: "white",
-                        border: "none",
-                        marginTop: "10px"
+                        backgroundColor: "rgba(255, 255, 255, 0.89)",
+                        color: "black",
+                        border: "none"
                       }}
                       placeholder="Telepon"
                       type="text"
-                      onFocus={e => this.setState({ emailFocus: true })}
-                      onBlur={e => this.setState({ emailFocus: false })}
+                      onChange={async e => {
+                        await this.setState({
+                          form: {
+                            ...this.state.form,
+                            phoneNumber: e.target.value
+                          }
+                        });
+                      }}
                     />
                   </Col>
-                  <Col md="1">
-                    <div className="vertical-center">
-                      <a
-                        target="_blank"
-                        style={{ backgroundColor: "transparent" }}
-                        href={
-                          this.state.checked && this.state.checked2 === true
-                            ? this.props.pageStore.Landing.BottomNavbar.form[0]
-                                .button_link
-                            : null
+                  <Col md="2" style={{ display: "flex", alignItems: "center" }}>
+                    <Button
+                      block
+                      color="info"
+                      type="button"
+                      disabled={
+                        !(
+                          this.state.form.email !== "" &&
+                          this.state.form.fullName !== "" &&
+                          this.state.form.phoneNumber !== "" &&
+                          this.state.checked &&
+                          this.state.checked2
+                        )
+                      }
+                      onClick={async () => {
+                        let data = {
+                          ...this.state.form,
+                          type: "ebook"
+                        };
+                        try {
+                          let result = await this.props.subscribeEbook(data);
+
+                          window.open(result.fileUrl, "_blank");
+                        } catch (error) {
+                          console.log(error);
                         }
-                      >
-                        {this.state.checked && this.state.checked2 === true ? (
-                          <Button block color="info" type="button">
-                            {
-                              this.props.pageStore.Landing.BottomNavbar.form[0]
-                                .button
-                            }
-                          </Button>
-                        ) : (
-                          <Button block color="info" type="button" disabled>
-                            {
-                              this.props.pageStore.Landing.BottomNavbar.form[0]
-                                .button
-                            }
-                          </Button>
-                        )}
-                      </a>
-                    </div>
+                      }}
+                    >
+                      {this.props.pageStore.Landing.BottomNavbar.form[0].button}
+                    </Button>
+                    )}
                   </Col>
                 </Row>
 
@@ -445,39 +427,46 @@ class BottomNavbar extends React.Component {
                         this.setState({ checked: e.target.checked })
                       }
                     />
-                    {console.log(this.state.checked, "asdasc")}
-                    {this.props.pageStore.Landing.BottomNavbar.form[0].leftTick}
+                    <span
+                      onClick={() =>
+                        this.setState({ checked: !this.state.checked })
+                      }
+                    >
+                      {
+                        this.props.pageStore.Landing.BottomNavbar.form[0]
+                          .leftTick
+                      }
+                    </span>
                   </Col>
                   <Col style={{ color: "#FFFFFF" }}>
                     <Input
                       type="checkbox"
                       checked={this.state.checked2}
                       onChange={e =>
-                        this.setState({ checked2: e.target.checked })
+                        this.setState({ checked2: e.target.checked2 })
                       }
                     />
-                    {
-                      this.props.pageStore.Landing.BottomNavbar.form[0]
-                        .rightTick
-                    }
+                    <span
+                      onClick={() =>
+                        this.setState({ checked2: !this.state.checked2 })
+                      }
+                    >
+                      {
+                        this.props.pageStore.Landing.BottomNavbar.form[0]
+                          .rightTick
+                      }
+                    </span>
                   </Col>
                 </Row>
               </Col>
             </div>
           </div>
-          {/* </Fade> */}
-
-          {/* </ScrollAnimation> */}
         </div>
-      </>
+      </StyleRoot>
     );
   };
 
   render() {
-    console.log(
-      this.props.pageStore.Landing.BottomNavbar.form.leftTick,
-      "adsfasdf"
-    );
     return this.renderContent();
   }
 }
@@ -487,7 +476,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPage: (section, lang) => dispatch(fetchPage(section, lang))
+  subscribeEbook: data => dispatch(subscribeEbook(data))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BottomNavbar);

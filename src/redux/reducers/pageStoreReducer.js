@@ -224,18 +224,20 @@ const defaultState = {
     ],
     BottomNavbar: {
       title: "Download E-Book",
-      form: {
-        fullname: "Full Name",
-        email: "email",
-        code: "+62",
-        handphone: "Telepon",
-        leftTick:
-          "Saya setuju untuk menerima berita dan email promosi dari Topgrowth Futures",
-        rightTick:
-          "Saya telah membaca dan setuju kebijakan privasi kebijakan privasi",
-        button: "Download E-Book",
-        button_link: null
-      }
+      form: [
+        {
+          fullname: "Full Name",
+          email: "email",
+          code: "+62",
+          handphone: "Telepon",
+          leftTick:
+            "Saya setuju untuk menerima berita dan email promosi dari Topgrowth Futures",
+          rightTick:
+            "Saya telah membaca dan setuju kebijakan privasi kebijakan privasi",
+          button: "Download E-Book",
+          button_link: null
+        }
+      ]
     }
   },
   tentangkami: {

@@ -162,11 +162,11 @@ class NewsInverted extends React.Component {
   next = async (carousel, items, tab) => {
     if (this["carousel" + carousel + "Animating"]) return;
 
-    console.log(
-      this.state["carousel" + carousel + "Index"],
-      items.length,
-      'this.state["carousel" + carousel + "Index"]'
-    );
+    // console.log(
+    //   this.state["carousel" + carousel + "Index"],
+    //   items.length,
+    //   'this.state["carousel" + carousel + "Index"]'
+    // );
     const nextIndex =
       this.state["carousel" + carousel + "Index"] === items.length - 1
         ? 0
@@ -178,7 +178,7 @@ class NewsInverted extends React.Component {
   };
 
   previous = (carousel, items) => {
-    console.log(this.state["carousel" + carousel + "Index"]);
+    // console.log(this.state["carousel" + carousel + "Index"]);
     if (this["carousel" + carousel + "Animating"]) return;
     const nextIndex =
       this.state["carousel" + carousel + "Index"] === 0
@@ -191,7 +191,7 @@ class NewsInverted extends React.Component {
   };
 
   goToIndex = (newIndex, carousel) => {
-    console.log(this.state["carousel" + carousel + "Index"]);
+    // console.log(this.state["carousel" + carousel + "Index"]);
     if (this["carousel" + carousel + "Animating"]) return;
     this.setState({
       ["carousel" + carousel + "Index"]: newIndex,
