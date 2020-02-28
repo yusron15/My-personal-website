@@ -423,17 +423,17 @@ class Content extends React.Component {
                                   margin: "30px 0 30px 10px"
                                 }}
                               >
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Komoditi.contentList1
                                     .content[1].title
-                                }
+                                )}
                               </div>
 
                               <div style={{ marginLeft: "10px" }}>
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Komoditi.contentList1
                                     .content[0].content
-                                }
+                                )}
                               </div>
                               <div className="author"></div>
                             </div>
@@ -474,16 +474,16 @@ class Content extends React.Component {
                                   margin: "30px 0 30px 10px"
                                 }}
                               >
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Komoditi.contentList1
                                     .content[1].title
-                                }
+                                )}
                               </div>
                               <div style={{ marginLeft: "10px" }}>
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Komoditi.contentList1
                                     .content[1].content
-                                }
+                                )}
                               </div>
                               <div className="author"></div>
                             </div>
@@ -524,16 +524,16 @@ class Content extends React.Component {
                                   margin: "30px 0 30px 10px"
                                 }}
                               >
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Komoditi.contentList1
                                     .content[2].title
-                                }
+                                )}
                               </div>
                               <div style={{ marginLeft: "10px" }}>
-                                {
+                                {ReactHtmlParser(
                                   this.props.pageStore.Komoditi.contentList1
                                     .content[2].content
-                                }
+                                )}
                               </div>
                               <div className="author"></div>
                             </div>
