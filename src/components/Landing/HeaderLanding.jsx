@@ -327,7 +327,7 @@ class HeaderLanding extends React.Component {
                                       .slide[0].title
                                   )}
                                 </div>
-                                <h4>
+                                <h4 className="font-white">
                                   {ReactHtmlParser(
                                     this.props.pageStore.Landing.HeaderLanding
                                       .slide[0].subtitle
@@ -372,7 +372,7 @@ class HeaderLanding extends React.Component {
                                         .slide[1].title
                                     )}
                                   </div>
-                                  <h4>
+                                  <h4 className="font-white">
                                     {ReactHtmlParser(
                                       this.props.pageStore.Landing.HeaderLanding
                                         .slide[1].subtitle
@@ -424,7 +424,7 @@ class HeaderLanding extends React.Component {
                                     )}
                                   </div>
 
-                                  <h4>
+                                  <h4 className="font-white">
                                     {ReactHtmlParser(
                                       this.props.pageStore.Landing.HeaderLanding
                                         .slide[2].subtitle
