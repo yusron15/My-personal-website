@@ -10,17 +10,7 @@ import ReactHtmlParser, {
   convertNodeToElement,
   htmlparser2
 } from "react-html-parser";
-// reactstrap components
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardTitle,
-  Container,
-  Row,
-  Col
-} from "reactstrap";
+import { Button } from "reactstrap";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import NewsTicker from "./NewsTicker";
 import BreakingNews from "../../components/Landing/BreakingNews";
@@ -30,26 +20,43 @@ import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
 import bg from "../../assets/img/header-marketoutlook.png";
 import Footer from "../Footers/Footer";
 import "../../assets/css/main.css";
-// import Content from "../RelatedPost/LayoutMarketOutlook";
 import Content from "../RelatedPost/Layout";
-import news1 from "../../assets/img/marketoutlook1.png";
-import news2 from "../../assets/img/marketoutlook2.png";
-import news3 from "../../assets/img/marketoutlook3.png";
-import news4 from "../../assets/img/marketoutlook4.png";
-import news5 from "../../assets/img/makretoutlook5.png";
-import Header from "components/Contact/Header";
-
 class Blogs extends React.Component {
   state = {
-    dataSelect: ""
+    dataSelect: "",
+    page: 1,
+    showLoadMore: false,
+    loading: false
   };
 
   componentDidMount = async () => {
     try {
       window.scroll(0, 0);
       await this.props.getContent("Berita", this.props.currentLang, true);
-      await this.props.getNews("market");
+      await this.props.getNews("market", 1);
+      await this.setState({
+        showLoadMore: true
+      });
     } catch (error) {
+      console.log(error);
+    }
+  };
+
+  handleLoadMore = async () => {
+    const { page } = this.state;
+    try {
+      await this.setState({
+        loading: true
+      });
+      await this.props.getNews("market", page + 1);
+      await this.setState({
+        page: this.state.page + 1,
+        loading: false
+      });
+    } catch (error) {
+      await this.setState({
+        showLoadMore: false
+      });
       console.log(error);
     }
   };
@@ -117,6 +124,14 @@ class Blogs extends React.Component {
                         </a>
                       );
                     })}
+                    {this.state.showLoadMore && (
+                      <Button
+                        onClick={this.handleLoadMore}
+                        disabled={this.state.loading}
+                      >
+                        Load More
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -125,7 +140,7 @@ class Blogs extends React.Component {
             <NewsLetter />
             <Footer />
             {/* ********* END BLOGS 5 ********* */}
-          </div>{" "}
+          </div>
         </>
       );
     }
@@ -193,6 +208,14 @@ class Blogs extends React.Component {
                       </a>
                     );
                   })}
+                  {this.state.showLoadMore && (
+                    <Button
+                      onClick={this.handleLoadMore}
+                      disabled={this.state.loading}
+                    >
+                      Load More
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
@@ -201,7 +224,7 @@ class Blogs extends React.Component {
           <NewsLetter />
           <Footer />
           {/* ********* END BLOGS 5 ********* */}
-        </div>{" "}
+        </div>
       </>
     );
   };
@@ -218,7 +241,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getNews: type => dispatch(getNews(type)),
+  getNews: (type, page) => dispatch(getNews(type, page)),
   getContent: (section, lang, toggle) =>
     dispatch(getContent(section, lang, toggle))
 });

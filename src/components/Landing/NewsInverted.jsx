@@ -266,7 +266,7 @@ class NewsInverted extends React.Component {
                           key={key}
                           className="justify-content-center"
                         >
-                          <a href={item.link}>
+                          <a href={item.link} target="_blank">
                             <div
                               className="info info-warning broken-white"
                               style={{
@@ -367,7 +367,7 @@ class NewsInverted extends React.Component {
                   <Slick {...slickSettings}>
                     {this.props.news.market.map(item => (
                       <div>
-                        <a href={item.link}>
+                        <a href={item.link} target="_blank">
                           <NavLink
                             // className={this.state.activeSlide === 0 ? "scaled" : ""}
                             style={{
@@ -401,7 +401,7 @@ class NewsInverted extends React.Component {
                     <TabContent activeTab={"project" + this.state.activeSlide}>
                       {this.props.news.market.map((item, index) => (
                         <TabPane tabId={`project${index}`}>
-                          <a href={item.link}>
+                          <a href={item.link} target="_blank">
                             <p className="description mb-5">
                               {`${item.title.rendered
                                 .replace(/(<([^>]+)>)/gi, "")

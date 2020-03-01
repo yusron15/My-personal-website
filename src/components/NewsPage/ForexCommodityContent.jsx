@@ -40,15 +40,40 @@ import fc4 from "../../assets/img/fc4.png";
 
 class Blogs extends React.Component {
   state = {
-    dataSelect: ""
+    dataSelect: "",
+    page: 1,
+    showLoadMore: false,
+    loading: false
   };
 
   componentDidMount = async () => {
     try {
       window.scroll(0, 0);
       await this.props.getContent("Berita", this.props.currentLang, true);
-      await this.props.getNews("forex");
+      await this.props.getNews("forex", 1);
+      await this.setState({
+        showLoadMore: true
+      });
     } catch (error) {
+      console.log(error);
+    }
+  };
+
+  handleLoadMore = async () => {
+    const { page } = this.state;
+    try {
+      await this.setState({
+        loading: true
+      });
+      await this.props.getNews("forex", page + 1);
+      await this.setState({
+        page: this.state.page + 1,
+        loading: false
+      });
+    } catch (error) {
+      await this.setState({
+        showLoadMore: false
+      });
       console.log(error);
     }
   };
@@ -115,6 +140,14 @@ class Blogs extends React.Component {
                         />
                       );
                     })}
+                    {this.state.showLoadMore && (
+                      <Button
+                        onClick={this.handleLoadMore}
+                        disabled={this.state.loading}
+                      >
+                        Load More
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -195,6 +228,14 @@ class Blogs extends React.Component {
                       </a>
                     );
                   })}
+                  {this.state.showLoadMore && (
+                    <Button
+                      onClick={this.handleLoadMore}
+                      disabled={this.state.loading}
+                    >
+                      Load More
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
@@ -219,7 +260,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getNews: type => dispatch(getNews(type)),
+  getNews: (type, page) => dispatch(getNews(type, page)),
   getContent: (section, lang, toggle) =>
     dispatch(getContent(section, lang, toggle))
 });

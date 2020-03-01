@@ -252,7 +252,7 @@ class News extends React.Component {
                           key={key}
                           className="justify-content-center"
                         >
-                          <a href={item.link}>
+                          <a href={item.link} target="_blank">
                             <div
                               className="info info-warning broken-white"
                               style={{
@@ -345,7 +345,7 @@ class News extends React.Component {
                   <Slick {...slickSettings}>
                     {this.props.news.stock.map(item => (
                       <div>
-                        <a href={item.link}>
+                        <a href={item.link} target="_blank">
                           <NavLink
                             // className={this.state.activeSlide === 0 ? "scaled" : ""}
                             style={{
@@ -383,7 +383,7 @@ class News extends React.Component {
                     <TabContent activeTab={"project" + this.state.activeSlide}>
                       {this.props.news.stock.map((item, index) => (
                         <TabPane tabId={`project${index}`}>
-                          <a href={item.link}>
+                          <a href={item.link} target="_blank">
                             {/* <Col> */}
                             <p className="description font-black">
                               {`${item.title.rendered

@@ -1,11 +1,12 @@
 import { GetNews, GetAllNews } from "../api/news";
 
-export function getNews(type) {
+export function getNews(type, page = 1) {
   return async dispatch => {
-    let result = await GetNews(type);
+    let result = await GetNews(type, page);
     dispatch({
-      type: `GET_NEWS_${type.toUpperCase()}`,
-      payload: result
+      type: `GET_NEWS_TYPE`,
+      payload: result,
+      typeNews: type
     });
   };
 }

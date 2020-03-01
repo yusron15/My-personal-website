@@ -11,8 +11,8 @@ import { fetchPage, getContent, getNews } from "../../redux/ducks/actions.js";
 class ProTrader extends React.Component {
   state = {};
   componentDidMount = async () => {
-    await this.props.getContent("protrader", this.props.currentLang, true);
     window.scroll(0, 0);
+    await this.props.getContent("protrader", this.props.currentLang, true);
   };
   render() {
     return (

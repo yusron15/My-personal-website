@@ -4,24 +4,13 @@ import { connect } from "react-redux";
 import moment from "moment";
 
 // reactstrap components
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardTitle,
-  Container,
-  Row,
-  Col
-} from "reactstrap";
+import { Button } from "reactstrap";
 import NewsLetter from "../NewsLetter/NewsLetter";
 import ColoredNavbar from "../../components/Navbars/ColoredNavbar";
 import BlurryNavbar from "../../components/Navbars/BlurryNavbar";
-import bg from "../../assets/img/header-stockindex.png";
 import Footer from "../Footers/Footer";
 import "../../assets/css/main.css";
 import Content from "../RelatedPost/Layout";
-import NewsTicker from "./NewsTicker";
 import BreakingNews from "../../components/Landing/BreakingNews";
 import SidebarMobile from "../../components/Navbars/SidebarMobile";
 import { isMobile } from "react-device-detect";
@@ -30,24 +19,44 @@ import ReactHtmlParser, {
   convertNodeToElement,
   htmlparser2
 } from "react-html-parser";
-import news1 from "../../assets/img/newscontent1.png";
-import news2 from "../../assets/img/newscontent2.png";
-import news3 from "../../assets/img/newscontent3.png";
-import news4 from "../../assets/img/newscontent4.png";
-import news5 from "../../assets/img/newscontent5.png";
 
 import { getNews, getContent } from "../../redux/ducks/actions";
 
 class Blogs extends Component {
   state = {
-    dataSelect: ""
+    dataSelect: "",
+    page: 1,
+    showLoadMore: false,
+    loading: false
+  };
+
+  handleLoadMore = async () => {
+    const { page } = this.state;
+    try {
+      await this.setState({
+        loading: true
+      });
+      await this.props.getNews("stock", page + 1);
+      await this.setState({
+        page: this.state.page + 1,
+        loading: false
+      });
+    } catch (error) {
+      await this.setState({
+        showLoadMore: false
+      });
+      console.log(error);
+    }
   };
 
   componentDidMount = async () => {
     try {
       window.scroll(0, 0);
       await this.props.getContent("Berita", this.props.currentLang, true);
-      await this.props.getNews("stock");
+      await this.props.getNews("stock", 1);
+      await this.setState({
+        showLoadMore: true
+      });
     } catch (error) {
       console.log(error);
     }
@@ -114,6 +123,14 @@ class Blogs extends Component {
                         </a>
                       );
                     })}
+                    {this.state.showLoadMore && (
+                      <Button
+                        onClick={this.handleLoadMore}
+                        disabled={this.state.loading}
+                      >
+                        Load More
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -189,6 +206,14 @@ class Blogs extends Component {
                       </a>
                     );
                   })}
+                  {this.state.showLoadMore && (
+                    <Button
+                      onClick={this.handleLoadMore}
+                      disabled={this.state.loading}
+                    >
+                      Load More
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
@@ -212,7 +237,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getNews: type => dispatch(getNews(type)),
+  getNews: (type, page) => dispatch(getNews(type, page)),
   getContent: (section, lang, toggle) =>
     dispatch(getContent(section, lang, toggle))
 });
