@@ -86,6 +86,7 @@ class Content extends React.Component {
       }
     });
   };
+
   render() {
     return (
       // <LangContext.Consumer>
@@ -153,12 +154,6 @@ class Content extends React.Component {
                         <CardBody>
                           <Row>
                             <Col md="6">
-                              <label style={{ color: "black" }}>
-                                {
-                                  this.props.pageStore.hubungikami.form
-                                    .firstname
-                                }
-                              </label>
                               <InputGroup
                                 className={classnames({
                                   "input-group-focus": this.state.firstNameFocus
@@ -173,10 +168,12 @@ class Content extends React.Component {
                                   </InputGroupText>
                                 </InputGroupAddon>
                                 <Input
-                                  style={{ color: "black" }}
                                   aria-label="First Name..."
                                   name="firstName"
-                                  placeholder="First Name ..."
+                                  placeholder={
+                                    this.props.pageStore.hubungikami.form[0]
+                                      .firstname
+                                  }
                                   type="text"
                                   onFocus={e =>
                                     this.setState({
@@ -194,12 +191,6 @@ class Content extends React.Component {
                             </Col>
                             <Col md="6">
                               <FormGroup>
-                                <label style={{ color: "black" }}>
-                                  {
-                                    this.props.pageStore.hubungikami.form
-                                      .lastname
-                                  }
-                                </label>
                                 <InputGroup
                                   className={classnames({
                                     "input-group-focus": this.state
@@ -221,11 +212,10 @@ class Content extends React.Component {
                                     name="lastName"
                                     style={{ color: "black" }}
                                     aria-label="Last Name..."
-                                    // placeholder={
-                                    //   this.props.pageStore.hubungikami.form
-                                    //     .lastname
-                                    // }
-                                    placeholder="Last Name ..."
+                                    placeholder={
+                                      this.props.pageStore.hubungikami.form[0]
+                                        .lastname
+                                    }
                                     onChange={this.handleTextChange}
                                     type="text"
                                     onFocus={e =>
@@ -244,12 +234,6 @@ class Content extends React.Component {
                             </Col>
                           </Row>
                           <FormGroup>
-                            <label style={{ color: "black" }}>
-                              {
-                                this.props.pageStore.hubungikami.form
-                                  .emailaddress
-                              }
-                            </label>
                             <InputGroup
                               className={classnames({
                                 "input-group-focus": this.state.emailFocus
@@ -271,7 +255,10 @@ class Content extends React.Component {
                                 // }
                                 onChange={this.handleTextChange}
                                 name="email"
-                                placeholder="Email..."
+                                placeholder={
+                                  this.props.pageStore.hubungikami.form[0]
+                                    .emailaddress
+                                }
                                 type="text"
                                 onFocus={e =>
                                   this.setState({ emailFocus: true })
@@ -283,12 +270,6 @@ class Content extends React.Component {
                             </InputGroup>
                           </FormGroup>
                           <FormGroup>
-                            <label style={{ color: "black" }}>
-                              {
-                                this.props.pageStore.hubungikami.form
-                                  .emailaddress
-                              }
-                            </label>
                             <InputGroup
                               className={classnames({
                                 "input-group-focus": this.state.emailFocus
@@ -318,18 +299,15 @@ class Content extends React.Component {
                             </InputGroup>
                           </FormGroup>
                           <FormGroup>
-                            <label style={{ color: "black" }}>
-                              {
-                                this.props.pageStore.hubungikami.form
-                                  .yourmessage
-                              }
-                            </label>
                             <Input
                               style={{ color: "black" }}
                               id="message"
                               name="message"
                               onChange={this.handleTextChange}
-                              placeholder="message"
+                              placeholder={
+                                this.props.pageStore.hubungikami.form[0]
+                                  .yourmessage
+                              }
                               rows="6"
                               type="textarea"
                             />
