@@ -9,8 +9,8 @@ import { getContent } from "../../redux/ducks/actions.js";
 class Contact extends React.Component {
   state = {};
   async componentDidMount() {
-    await this.props.getContent("hubungikami", this.props.currentLang, true);
     window.scroll(0, 0);
+    await this.props.getContent("hubungikami", this.props.currentLang, true);
   }
 
   render() {
