@@ -135,76 +135,112 @@ class BottomNavbar extends React.Component {
                     </div>
 
                     <div>
-                      <Row>
-                        <Col>
-                          <div>
-                            <Input
-                              style={{
-                                backgroundColor: "rgba(255, 255, 255, 0.89)",
-                                color: "black",
-                                border: "none",
-                                marginBottom: "10px"
-                              }}
-                              placeholder="Full Name"
-                              type="text"
-                              onFocus={e => this.setState({ emailFocus: true })}
-                              onBlur={e => this.setState({ emailFocus: false })}
-                            />
-                          </div>
-                          <div>
-                            <Input
-                              style={{
-                                backgroundColor: "rgba(255, 255, 255, 0.89)",
-                                color: "black",
-                                border: "none"
-                              }}
-                              placeholder="Email"
-                              type="text"
-                              onFocus={e => this.setState({ emailFocus: true })}
-                              onBlur={e => this.setState({ emailFocus: false })}
-                            />
-                          </div>
-                        </Col>
-                        <Col>
-                          <div>
-                            <Input
-                              style={{
-                                backgroundColor: "rgba(255, 255, 255, 0.89)",
-                                color: "black",
-                                border: "none",
-                                marginBottom: "10px"
-                              }}
-                              color="white"
-                              placeholder="+62"
-                              type="text"
-                              onFocus={e => this.setState({ emailFocus: true })}
-                              onBlur={e => this.setState({ emailFocus: false })}
-                            />
-                          </div>
-                          <div>
-                            <Input
-                              style={{
-                                backgroundColor: "rgba(255, 255, 255, 0.89)",
-                                color: "black",
-                                border: "none"
-                              }}
-                              placeholder="Telepon"
-                              type="text"
-                              onFocus={e => this.setState({ emailFocus: true })}
-                              onBlur={e => this.setState({ emailFocus: false })}
-                            />
-                          </div>
-                        </Col>
-                      </Row>
+                      <Col>
+                        {/* <Col> */}
+                        <div>
+                          <Input
+                            style={{
+                              backgroundColor: "rgba(255, 255, 255, 0.89)",
+                              color: "black",
+                              border: "none"
+                            }}
+                            placeholder={
+                              this.props.pageStore.Landing.BottomNavbar.form[0]
+                                .email
+                            }
+                            type="text"
+                            onChange={async e => {
+                              await this.setState({
+                                form: {
+                                  ...this.state.form,
+                                  email: e.target.value
+                                }
+                              });
+                            }}
+                            onFocus={e => this.setState({ emailFocus: true })}
+                            onBlur={e => this.setState({ emailFocus: false })}
+                          />
+                        </div>
+                        {/* </Col> */}
+                        {/* <Col> */}
+                        <div style={{ marginTop: "10px" }}>
+                          <Row>
+                            <Col>
+                              <div>
+                                <Input
+                                  style={{
+                                    backgroundColor:
+                                      "rgba(255, 255, 255, 0.89)",
+                                    color: "black",
+                                    border: "none",
+                                    marginBottom: "10px"
+                                  }}
+                                  color="white"
+                                  placeholder={
+                                    this.props.pageStore.Landing.BottomNavbar
+                                      .form[0].handphone
+                                  }
+                                  type="text"
+                                  onChange={async e => {
+                                    await this.setState({
+                                      form: {
+                                        ...this.state.form,
+                                        phoneNumber: e.target.value
+                                      }
+                                    });
+                                  }}
+                                  onFocus={e =>
+                                    this.setState({ emailFocus: true })
+                                  }
+                                  onBlur={e =>
+                                    this.setState({ emailFocus: false })
+                                  }
+                                />
+                              </div>
+                            </Col>
+
+                            <Col>
+                              <div>
+                                <Input
+                                  style={{
+                                    backgroundColor:
+                                      "rgba(255, 255, 255, 0.89)",
+                                    color: "black",
+                                    border: "none"
+                                  }}
+                                  placeholder={
+                                    this.props.pageStore.Landing.BottomNavbar
+                                      .form[0].fullname
+                                  }
+                                  onChange={async e => {
+                                    await this.setState({
+                                      form: {
+                                        ...this.state.form,
+                                        fullName: e.target.value
+                                      }
+                                    });
+                                  }}
+                                  type="text"
+                                  onFocus={e =>
+                                    this.setState({ emailFocus: true })
+                                  }
+                                  onBlur={e =>
+                                    this.setState({ emailFocus: false })
+                                  }
+                                />
+                              </div>
+                            </Col>
+                          </Row>
+                        </div>
+                        {/* </Col> */}
+                      </Col>
                     </div>
                     <Row style={{ marginLeft: "12px", marginRight: "12px" }}>
                       <Col style={{ color: "#FFFFFF" }}>
                         <Input
                           type="checkbox"
                           checked={this.state.checked}
-                          onChange={e =>
-                            this.setState({ checked: e.target.checked })
-                          }
+                          onChange={e => this.setState({ checked: true })}
                         />
 
                         {
@@ -216,9 +252,7 @@ class BottomNavbar extends React.Component {
                         <Input
                           type="checkbox"
                           checked={this.state.checked2}
-                          onChange={e =>
-                            this.setState({ checked2: e.target.checked })
-                          }
+                          onChange={e => this.setState({ checked2: true })}
                         />
                         {
                           this.props.pageStore.Landing.BottomNavbar.form[0]
@@ -240,13 +274,17 @@ class BottomNavbar extends React.Component {
                           target="_blank"
                           style={{ backgroundColor: "transparent", padding: 0 }}
                           href={
-                            this.state.checked && this.state.checked2 === true
+                            this.state.form.email !== "" &&
+                            this.state.form.fullName !== "" &&
+                            this.state.form.phoneNumber !== "" &&
+                            this.state.checked &&
+                            this.state.checked2 === true
                               ? this.props.pageStore.Landing.BottomNavbar
                                   .form[0].button_link
                               : null
                           }
                         >
-                          {this.state.checked &&
+                          {/* {this.state.checked &&
                           this.state.checked2 === true ? (
                             <Button
                               color="info"
@@ -263,6 +301,59 @@ class BottomNavbar extends React.Component {
                               color="info"
                               style={{ minWidth: "270px" }}
                               type="button"
+                              disabled
+                            >
+                              {
+                                this.props.pageStore.Landing.BottomNavbar
+                                  .form[0].button
+                              }
+                            </Button>
+                          )} */}
+                          {this.state.form.email !== "" &&
+                          this.state.form.fullName !== "" &&
+                          this.state.form.phoneNumber !== "" &&
+                          this.state.checked &&
+                          this.state.checked2 === true ? (
+                            <Button
+                              block
+                              style={{ minWidth: "270px" }}
+                              color="info"
+                              type="button"
+                              data={
+                                !(
+                                  this.state.form.email !== "" &&
+                                  this.state.form.fullName !== "" &&
+                                  this.state.form.phoneNumber !== "" &&
+                                  this.state.checked &&
+                                  this.state.checked2
+                                )
+                              }
+                              onClick={async () => {
+                                let data = {
+                                  ...this.state.form,
+                                  type: "ebook"
+                                };
+                                try {
+                                  let result = await this.props.subscribeEbook(
+                                    data
+                                  );
+
+                                  window.open(result.fileUrl, "_blank");
+                                } catch (error) {
+                                  console.log(error);
+                                }
+                              }}
+                            >
+                              {
+                                this.props.pageStore.Landing.BottomNavbar
+                                  .form[0].button
+                              }
+                            </Button>
+                          ) : (
+                            <Button
+                              block
+                              color="info"
+                              style={{ minWidth: "270px" }}
                               disabled
                             >
                               {
@@ -335,7 +426,10 @@ class BottomNavbar extends React.Component {
                         color: "black",
                         border: "none"
                       }}
-                      placeholder="Full Name"
+                      placeholder={
+                        this.props.pageStore.Landing.BottomNavbar.form[0]
+                          .fullname
+                      }
                       type="text"
                       onChange={async e => {
                         await this.setState({
@@ -354,7 +448,9 @@ class BottomNavbar extends React.Component {
                         color: "black",
                         border: "none"
                       }}
-                      placeholder="Email"
+                      placeholder={
+                        this.props.pageStore.Landing.BottomNavbar.form[0].email
+                      }
                       type="text"
                       onChange={async e => {
                         await this.setState({
@@ -373,7 +469,10 @@ class BottomNavbar extends React.Component {
                         color: "black",
                         border: "none"
                       }}
-                      placeholder="Telepon"
+                      placeholder={
+                        this.props.pageStore.Landing.BottomNavbar.form[0]
+                          .handphone
+                      }
                       type="text"
                       onChange={async e => {
                         await this.setState({
@@ -386,35 +485,51 @@ class BottomNavbar extends React.Component {
                     />
                   </Col>
                   <Col md="2" style={{ display: "flex", alignItems: "center" }}>
-                    <Button
-                      block
-                      color="info"
-                      type="button"
-                      disabled={
-                        !(
-                          this.state.form.email !== "" &&
-                          this.state.form.fullName !== "" &&
-                          this.state.form.phoneNumber !== "" &&
-                          this.state.checked &&
-                          this.state.checked2
-                        )
-                      }
-                      onClick={async () => {
-                        let data = {
-                          ...this.state.form,
-                          type: "ebook"
-                        };
-                        try {
-                          let result = await this.props.subscribeEbook(data);
-
-                          window.open(result.fileUrl, "_blank");
-                        } catch (error) {
-                          console.log(error);
+                    {this.state.form.email !== "" &&
+                    this.state.form.fullName !== "" &&
+                    this.state.form.phoneNumber !== "" &&
+                    this.state.checked &&
+                    this.state.checked2 === true ? (
+                      <Button
+                        block
+                        color="info"
+                        type="button"
+                        data={
+                          !(
+                            this.state.form.email !== "" &&
+                            this.state.form.fullName !== "" &&
+                            this.state.form.phoneNumber !== "" &&
+                            this.state.checked &&
+                            this.state.checked2
+                          )
                         }
-                      }}
-                    >
-                      {this.props.pageStore.Landing.BottomNavbar.form[0].button}
-                    </Button>
+                        onClick={async () => {
+                          let data = {
+                            ...this.state.form,
+                            type: "ebook"
+                          };
+                          try {
+                            let result = await this.props.subscribeEbook(data);
+
+                            window.open(result.fileUrl, "_blank");
+                          } catch (error) {
+                            console.log(error);
+                          }
+                        }}
+                      >
+                        {
+                          this.props.pageStore.Landing.BottomNavbar.form[0]
+                            .button
+                        }
+                      </Button>
+                    ) : (
+                      <Button block color="info" disabled>
+                        {
+                          this.props.pageStore.Landing.BottomNavbar.form[0]
+                            .button
+                        }
+                      </Button>
+                    )}
                     )}
                   </Col>
                 </Row>
@@ -424,9 +539,7 @@ class BottomNavbar extends React.Component {
                     <Input
                       type="checkbox"
                       checked={this.state.checked}
-                      onChange={e =>
-                        this.setState({ checked: !this.state.checked })
-                      }
+                      onChange={e => this.setState({ checked: true })}
                     />
                     <span
                       onClick={() =>
@@ -443,9 +556,7 @@ class BottomNavbar extends React.Component {
                     <Input
                       type="checkbox"
                       checked={this.state.checked2}
-                      onChange={e =>
-                        this.setState({ checked2: !this.state.checked2 })
-                      }
+                      onChange={e => this.setState({ checked2: true })}
                     />
                     <span
                       onClick={() =>
