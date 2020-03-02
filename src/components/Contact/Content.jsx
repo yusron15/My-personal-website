@@ -33,6 +33,7 @@ import ColorNavbar from "components/Navbars/ColorNavbar.jsx";
 import DemoFooter from "components/Footers/DemoFooter.jsx";
 import subscribe from "../../assets/img/black-icon-email.png";
 import texticon from "../../assets/img/text-icon.png";
+import phone from "../../assets/img/phoneicon.png";
 
 import map from "../../assets/img/map-contact.png";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -249,10 +250,6 @@ class Content extends React.Component {
                               </InputGroupAddon>
                               <Input
                                 style={{ color: "black" }}
-                                // placeholder={
-                                //   this.props.pageStore.hubungikami.form
-                                //     .emailaddress
-                                // }
                                 onChange={this.handleTextChange}
                                 name="email"
                                 placeholder={
@@ -278,14 +275,17 @@ class Content extends React.Component {
                               <InputGroupAddon addonType="prepend">
                                 <InputGroupText>
                                   <img
-                                    src={subscribe}
+                                    src={phone}
                                     style={{ height: "15px", width: "auto" }}
                                   />
                                 </InputGroupText>
                               </InputGroupAddon>
                               <Input
                                 style={{ color: "black" }}
-                                placeholder="Phone..."
+                                placeholder={
+                                  this.props.pageStore.hubungikami.form[0]
+                                    .phoneNumber
+                                }
                                 onChange={this.handleTextChange}
                                 name="phoneNumber"
                                 type="text"
@@ -360,9 +360,6 @@ class Content extends React.Component {
           </div>
         </div>
       </>
-      //     );
-      //   }}
-      // </LangContext.Consumer>
     );
   }
 }
