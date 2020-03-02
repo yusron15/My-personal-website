@@ -500,11 +500,11 @@ class Content extends React.Component {
                 <div
                   className="team-1 background-header"
                   style={{
-                    // backgroundImage:
-                    //   "url(" +
-                    //   this.props.pageStore.topgrowthtrader.image_background +
-                    //   ")",
-                    backgroundImage: `url(${bgDownload})`,
+                    backgroundImage:
+                      "url(" +
+                      this.props.pageStore.topgrowthtrader.image_background +
+                      ")",
+                    // backgroundImage: `url(${bgDownload})`,
                     padding: 0
                   }}
                 >
