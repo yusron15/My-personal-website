@@ -425,7 +425,7 @@ class BottomNavbar extends React.Component {
                       type="checkbox"
                       checked={this.state.checked}
                       onChange={e =>
-                        this.setState({ checked: e.target.checked })
+                        this.setState({ checked: !this.state.checked })
                       }
                     />
                     <span
@@ -444,7 +444,7 @@ class BottomNavbar extends React.Component {
                       type="checkbox"
                       checked={this.state.checked2}
                       onChange={e =>
-                        this.setState({ checked2: e.target.checked2 })
+                        this.setState({ checked2: !this.state.checked2 })
                       }
                     />
                     <span
