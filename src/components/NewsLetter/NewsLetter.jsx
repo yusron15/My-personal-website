@@ -97,12 +97,13 @@ class NewsLetter extends Component {
                           type="button"
                           onClick={async () => {
                             try {
-                              await fetch(mailChimpPostUrl, {
+                              let result = await fetch(mailChimpPostUrl, {
                                 method: "POST",
+                                // mode: "no-cors",
                                 headers: {
                                   Accept: "application/json",
                                   "Access-Control-Allow-Origin": "*",
-                                  Authorization: `apikey ${mailChimpApiKey}`,
+                                  Authorization: `apikey ea18025b462e8bef8a102ecfbcd8a856-us4`,
                                   "Content-Type": "application/json"
                                 },
                                 body: JSON.stringify({
@@ -110,6 +111,7 @@ class NewsLetter extends Component {
                                   status: "subscribed"
                                 })
                               });
+                              console.log(result);
                               await this.setState({
                                 successAlert: true
                               });
