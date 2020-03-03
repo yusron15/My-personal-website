@@ -15,6 +15,11 @@ import {
 import { getContent } from "../../redux/ducks/actions.js";
 import { connect } from "react-redux";
 import "../../assets/css/main.css";
+
+let mailChimpApiKey = "ea18025b462e8bef8a102ecfbcd8a856-us4";
+let mailChimpPostUrl =
+  "https://us4.api.mailchimp.com/3.0/lists/e2880ae15c/members/";
+
 class NewsLetter extends Component {
   async componentDidMount() {
     await this.props.getContent("landing", this.props.currentLang, true);
@@ -65,21 +70,23 @@ class NewsLetter extends Component {
                         </InputGroup>
                       </Col>
                       <Col sm="4">
-                        <a
+                        {/* <a
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
                           href={
                             this.props.pageStore.Landing.NewsLetter.form
                               .button_link
                           }
+                        > */}
+                        <Button
+                          block
+                          color="info"
+                          type="button"
+                          onClick={() => {}}
                         >
-                          <Button block color="info" type="button">
-                            {
-                              this.props.pageStore.Landing.NewsLetter.form
-                                .button
-                            }
-                          </Button>
-                        </a>
+                          {this.props.pageStore.Landing.NewsLetter.form.button}
+                        </Button>
+                        {/* </a> */}
                       </Col>
                     </Row>
                   </Form>

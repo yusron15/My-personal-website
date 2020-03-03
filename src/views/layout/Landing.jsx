@@ -16,6 +16,7 @@ import { connect } from "react-redux";
 
 import { getContent, getNews } from "../../redux/ducks/actions.js";
 
+let mailId = "e2880ae15c";
 class Landing extends React.Component {
   constructor(props) {
     super(props);
