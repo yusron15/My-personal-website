@@ -839,7 +839,6 @@ span > .arrow-down {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
   .accordion:after {
     content: "\002B";
     color: #444;
@@ -847,7 +846,6 @@ span > .arrow-down {
     float: right;
     margin-left: 5px;
   }
-  
 }
 
 .active:after {
@@ -1016,4 +1014,17 @@ body {
   color: white;
 }
 
-.file-viewer * {color:unset} 
+.file-viewer * {
+  color: unset;
+}
+
+.file-viewer > canvas {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#pg-viewer > div > div > div > canvas {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
