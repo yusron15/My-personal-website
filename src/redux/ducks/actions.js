@@ -5,6 +5,7 @@ import { getNews, getAllNews } from "../actions/newsActions";
 import { getCabangs } from "../actions/cabangActions";
 import { getAllKarir, getKarirById } from "../actions/karirActions";
 import { postKontak } from "../actions/kontakActions";
+import { postSubscribe } from "../actions/subscribeActions";
 import { subscribeEbook } from "../actions/ebookActions";
 
 export {
@@ -21,6 +22,8 @@ export {
   getKarirById,
   // kontak
   postKontak,
+  // subscibe
+  postSubscribe,
   // ebook
   subscribeEbook
 };

@@ -85,6 +85,7 @@ class Features extends React.Component {
                           style={{ backgroundColor: "transparent" }}
                           href={
                             this.props.pageStore.topgrowthtrader.download[0]
+                              .link_windows
                           }
                         >
                           <img
@@ -107,7 +108,8 @@ class Features extends React.Component {
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
                           href={
-                            this.props.pageStore.topgrowthtrader.download[1]
+                            this.props.pageStore.topgrowthtrader.download[0]
+                              .link_mac
                           }
                         >
                           <img
@@ -133,7 +135,8 @@ class Features extends React.Component {
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
                           href={
-                            this.props.pageStore.topgrowthtrader.download[2]
+                            this.props.pageStore.topgrowthtrader.download[0]
+                              .link_android
                           }
                         >
                           <img
@@ -157,7 +160,8 @@ class Features extends React.Component {
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
                           href={
-                            this.props.pageStore.topgrowthtrader.download[3]
+                            this.props.pageStore.topgrowthtrader.download[0]
+                              .link_ios
                           }
                         >
                           <img
@@ -183,7 +187,8 @@ class Features extends React.Component {
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
                           href={
-                            this.props.pageStore.topgrowthtrader.download[4]
+                            this.props.pageStore.topgrowthtrader.download[0]
+                              .link_mobile
                           }
                         >
                           <img
@@ -207,7 +212,8 @@ class Features extends React.Component {
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
                           href={
-                            this.props.pageStore.topgrowthtrader.download[5]
+                            this.props.pageStore.topgrowthtrader.download[0]
+                              .link_mobile_se
                           }
                         >
                           <img
@@ -300,6 +306,7 @@ class Features extends React.Component {
                         <a
                           href={
                             this.props.pageStore.topgrowthtrader.download[0]
+                              .link_ios
                           }
                           target="_blank"
                         >
@@ -324,7 +331,8 @@ class Features extends React.Component {
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
                           href={
-                            this.props.pageStore.topgrowthtrader.download[1]
+                            this.props.pageStore.topgrowthtrader.download[0]
+                              .link_windows
                           }
                         >
                           <img
@@ -354,7 +362,8 @@ class Features extends React.Component {
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
                           href={
-                            this.props.pageStore.topgrowthtrader.download[2]
+                            this.props.pageStore.topgrowthtrader.download[0]
+                              .link_mac
                           }
                         >
                           <img
@@ -378,7 +387,8 @@ class Features extends React.Component {
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
                           href={
-                            this.props.pageStore.topgrowthtrader.download[3]
+                            this.props.pageStore.topgrowthtrader.download[0]
+                              .link_android
                           }
                         >
                           <img
@@ -408,7 +418,8 @@ class Features extends React.Component {
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
                           href={
-                            this.props.pageStore.topgrowthtrader.download[4]
+                            this.props.pageStore.topgrowthtrader.download[0]
+                              .link_mobile_se
                           }
                         >
                           <img
@@ -432,7 +443,8 @@ class Features extends React.Component {
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
                           href={
-                            this.props.pageStore.topgrowthtrader.download[5]
+                            this.props.pageStore.topgrowthtrader.download[0]
+                              .link_mobile
                           }
                         >
                           <img

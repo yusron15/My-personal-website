@@ -14,11 +14,17 @@ import {
 } from "reactstrap";
 import { getContent } from "../../redux/ducks/actions.js";
 import { connect } from "react-redux";
+import { postSubscribe } from "../../redux/ducks/actions.js";
+
 import "../../assets/css/main.css";
 class NewsLetter extends Component {
+  state = {
+    email: ""
+  };
   async componentDidMount() {
     await this.props.getContent("landing", this.props.currentLang, true);
   }
+
   render() {
     return (
       <div style={{ backgroundColor: "#1D1E1F" }}>
@@ -99,7 +105,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getContent: (section, lang) => dispatch(getContent(section, lang))
+  getContent: (section, lang) => dispatch(getContent(section, lang)),
+  postSubscribe: data => dispatch(postSubscribe(data))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewsLetter);
