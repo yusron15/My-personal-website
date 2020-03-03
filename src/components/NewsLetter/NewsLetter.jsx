@@ -10,7 +10,8 @@ import {
   Input,
   InputGroupAddon,
   InputGroupText,
-  InputGroup
+  InputGroup,
+  Alert
 } from "reactstrap";
 import { getContent } from "../../redux/ducks/actions.js";
 import { connect } from "react-redux";
@@ -22,8 +23,12 @@ let mailChimpPostUrl =
   "https://us4.api.mailchimp.com/3.0/lists/e2880ae15c/members/";
 
 class NewsLetter extends Component {
-  async componentDidMount() {
-    await this.props.getContent("landing", this.props.currentLang, true);
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      successAlert: false
+    };
   }
 
   render() {
@@ -66,6 +71,12 @@ class NewsLetter extends Component {
                               this.props.pageStore.Landing.NewsLetter.form.email
                             }
                             type="email"
+                            value={this.state.email}
+                            onChange={async e => {
+                              await this.setState({
+                                email: e.target.value
+                              });
+                            }}
                             onFocus={e => this.setState({ emailFocus: true })}
                             onBlur={e => this.setState({ emailFocus: false })}
                           />
@@ -84,11 +95,49 @@ class NewsLetter extends Component {
                           block
                           color="info"
                           type="button"
-                          onClick={() => {}}
+                          onClick={async () => {
+                            try {
+                              await fetch(mailChimpPostUrl, {
+                                method: "POST",
+                                headers: {
+                                  Accept: "application/json",
+                                  "Access-Control-Allow-Origin": "*",
+                                  Authorization: `apikey ${mailChimpApiKey}`,
+                                  "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify({
+                                  email_address: this.state.email,
+                                  status: "subscribed"
+                                })
+                              });
+                              await this.setState({
+                                successAlert: true
+                              });
+                            } catch (error) {
+                              console.log(error);
+                            }
+                          }}
                         >
                           {this.props.pageStore.Landing.NewsLetter.form.button}
                         </Button>
                         {/* </a> */}
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col>
+                        <Alert
+                          color="success"
+                          isOpen={this.state.successAlert}
+                          toggle={() =>
+                            this.setState({
+                              successAlert: false
+                            })
+                          }
+                        >
+                          {this.props.currentLang === "ID"
+                            ? "Email Sukses Berlangganan"
+                            : "Email Subscribed"}
+                        </Alert>
                       </Col>
                     </Row>
                   </Form>

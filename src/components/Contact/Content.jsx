@@ -39,7 +39,6 @@ import subscribe from "../../assets/img/black-icon-email.png";
 import texticon from "../../assets/img/text-icon.png";
 import phone from "../../assets/img/phoneicon.png";
 
-
 import map from "../../assets/img/map-contact.png";
 import ScrollAnimation from "react-animate-on-scroll";
 
