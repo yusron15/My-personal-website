@@ -13,6 +13,8 @@ import {
   InputGroup,
   Alert
 } from "reactstrap";
+import axios from "axios";
+
 import { getContent } from "../../redux/ducks/actions.js";
 import { connect } from "react-redux";
 
@@ -57,16 +59,24 @@ class NewsLetter extends Component {
                     <Row>
                       <Col sm="8" style={{ marginTop: "5px" }}>
                         <InputGroup
-                        // className={classnames({
-                        //   "input-group-focus": this.state.emailFocus
-                        // })}
+                          invalid
+                          className={
+                            this.state.emailFocus ? "input-group-focus" : ""
+                          }
                         >
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
+                          <InputGroupAddon addonType="prepend" invalid>
+                            <InputGroupText
+                              style={{
+                                borderColor: this.state.errMessage
+                                  ? "#ff8d72"
+                                  : ""
+                              }}
+                            >
                               <i className="tim-icons icon-email-85" />
                             </InputGroupText>
                           </InputGroupAddon>
                           <Input
+                            invalid={this.state.errMessage}
                             placeholder={
                               this.props.pageStore.Landing.NewsLetter.form.email
                             }
@@ -97,25 +107,32 @@ class NewsLetter extends Component {
                           type="button"
                           onClick={async () => {
                             try {
-                              let result = await fetch(mailChimpPostUrl, {
-                                method: "POST",
-                                // mode: "no-cors",
-                                headers: {
-                                  Accept: "application/json",
-                                  "Access-Control-Allow-Origin": "*",
-                                  Authorization: `apikey ea18025b462e8bef8a102ecfbcd8a856-us4`,
-                                  "Content-Type": "application/json"
-                                },
-                                body: JSON.stringify({
-                                  email_address: this.state.email,
-                                  status: "subscribed"
-                                })
-                              });
-                              console.log(result);
+                              let result = await fetch(
+                                "https://api-topgrowthfutures.kool.co.id/api/subscribers/subscribe",
+                                {
+                                  method: "post",
+                                  headers: {
+                                    "Content-Type": "application/json"
+                                  },
+                                  body: JSON.stringify({
+                                    email_address: this.state.email,
+                                    status: "subscribed"
+                                  })
+                                }
+                              );
+
+                              result = await result.json();
+
+                              if (result.status != "subscribed") throw result;
+
                               await this.setState({
-                                successAlert: true
+                                successAlert: true,
+                                errMessage: false
                               });
                             } catch (error) {
+                              await this.setState({
+                                errMessage: true
+                              });
                               console.log(error);
                             }
                           }}
