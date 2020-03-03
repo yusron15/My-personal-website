@@ -72,7 +72,10 @@ class Features extends React.Component {
                           <a
                             target="_blank"
                             style={{ backgroundColor: "transparent" }}
-                            href={this.props.pageStore.protrader.download[0]}
+                            href={
+                              this.props.pageStore.protrader.download[0]
+                                .link_windows
+                            }
                           >
                             <img
                               alt="..."
@@ -94,7 +97,10 @@ class Features extends React.Component {
                           <a
                             target="_blank"
                             style={{ backgroundColor: "transparent" }}
-                            href={this.props.pageStore.protrader.download[1]}
+                            href={
+                              this.props.pageStore.protrader.download[0]
+                                .link_mac
+                            }
                           >
                             <img
                               alt="..."
@@ -117,7 +123,10 @@ class Features extends React.Component {
                           <a
                             target="_blank"
                             style={{ backgroundColor: "transparent" }}
-                            href={this.props.pageStore.protrader.download[2]}
+                            href={
+                              this.props.pageStore.protrader.download[0]
+                                .link_android
+                            }
                           >
                             <img
                               alt="..."
@@ -138,7 +147,10 @@ class Features extends React.Component {
                           <a
                             target="_blank"
                             style={{ backgroundColor: "transparent" }}
-                            href={this.props.pageStore.protrader.download[3]}
+                            href={
+                              this.props.pageStore.protrader.download[0]
+                                .link_ios
+                            }
                           >
                             <img
                               alt="..."
@@ -233,7 +245,10 @@ class Features extends React.Component {
                         <a
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
-                          href={this.props.pageStore.protrader.download[0]}
+                          href={
+                            this.props.pageStore.protrader.download[0]
+                              .link_windows
+                          }
                         >
                           <img
                             alt="..."
@@ -260,7 +275,9 @@ class Features extends React.Component {
                         <a
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
-                          href={this.props.pageStore.protrader.download[1]}
+                          href={
+                            this.props.pageStore.protrader.download[0].link_mac
+                          }
                         >
                           <img
                             alt="..."
@@ -292,7 +309,10 @@ class Features extends React.Component {
                         <a
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
-                          href={this.props.pageStore.protrader.download[2]}
+                          href={
+                            this.props.pageStore.protrader.download[0]
+                              .link_android
+                          }
                         >
                           <img
                             alt="..."
@@ -318,7 +338,9 @@ class Features extends React.Component {
                         <a
                           target="_blank"
                           style={{ backgroundColor: "transparent" }}
-                          href={this.props.pageStore.protrader.download[3]}
+                          href={
+                            this.props.pageStore.protrader.download[0].link_ios
+                          }
                         >
                           <img
                             alt="..."

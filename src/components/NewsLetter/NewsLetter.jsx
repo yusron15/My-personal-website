@@ -14,6 +14,7 @@ import {
 } from "reactstrap";
 import { getContent } from "../../redux/ducks/actions.js";
 import { connect } from "react-redux";
+
 import "../../assets/css/main.css";
 
 let mailChimpApiKey = "ea18025b462e8bef8a102ecfbcd8a856-us4";
@@ -24,6 +25,7 @@ class NewsLetter extends Component {
   async componentDidMount() {
     await this.props.getContent("landing", this.props.currentLang, true);
   }
+
   render() {
     return (
       <div style={{ backgroundColor: "#1D1E1F" }}>
