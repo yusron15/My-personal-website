@@ -73,7 +73,7 @@ class CardRegister extends React.Component {
                 <Button
                   color="info"
                   type="button"
-                  style={{ width: "100%", marginRight: "35px" }}
+                  style={{ width: "100%", marginRight: "35px", zIndex: 99 }}
                 >
                   {/* {this.props.pageStore.register.form.leftButton} */}
                   {
@@ -90,7 +90,11 @@ class CardRegister extends React.Component {
                 target="_blank"
                 style={{ color: "white" }}
               >
-                <Button color="info" type="button" style={{ width: "100%" }}>
+                <Button
+                  color="info"
+                  type="button"
+                  style={{ width: "100%", zIndex: 99 }}
+                >
                   {/* {this.props.pageStore.register.form.rightButton} */}
                   {
                     this.props.pageStore.Landing.HeaderLanding.SignUp[0]
